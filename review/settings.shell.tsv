@@ -1,0 +1,15 @@
+namespace	key	en	ja	status
+settings.shell	title	Shell	シェル	ok
+settings.shell	description	Limit how long each command may run and how much it may output.	コマンド 1 つあたりの実行時間と出力量の上限を設定します。	ok
+settings.shell	timeoutMs	Command timeout (ms)	コマンドのタイムアウト (ミリ秒)	ok
+settings.shell	timeoutMsHint	How long one command may run before it is terminated.	コマンド 1 つが強制終了されるまで実行できる時間。	ok
+settings.shell	maxOutputBytes	Output cap per stream (bytes)	ストリームあたりの出力上限 (バイト)	ok
+settings.shell	maxOutputBytesHint	Output beyond this spills to a temporary file rather than being lost.	上限を超えた出力は失われず、一時ファイルに退避されます。	ok
+settings.shell	overridden	Overridden	上書き済み	ok
+settings.shell	reset	Reset to default	既定に戻す	ok
+settings.shell	readOnly	This deployment stores settings read-only.	この環境では設定は読み取り専用で保存されます。	ok
+settings.shell	unavailable	This plugin is not loaded, so it cannot be configured right now.	このプラグインは読み込まれていないため、現在は設定できません。	ok
+settings.shell	save	Save	保存	ok
+settings.shell	saving	Saving…	保存しています…	ok
+settings.shell	saveFailed	The deployment did not accept these values; they were left for you to correct.	この環境が値を受け付けませんでした。修正できるよう入力は残しています。	ok
+settings.shell	invalidNumber	Enter a number, or leave blank to use the default.	数値を入力してください。空欄のままにすると既定値を使います。	ok

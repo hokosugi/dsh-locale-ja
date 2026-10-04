@@ -1,0 +1,11 @@
+namespace	key	en	ja	status
+session-log-download	header.more	More actions	その他の操作	ok
+session-log-download	menu.download	Download session log	セッションログをダウンロード	ok
+session-log-download	menu.feedback	Feedback	フィードバック	ok
+session-log-download	dialog.preparingTitle	Exporting Session	セッションをエクスポート中	ok
+session-log-download	dialog.preparingDescription	Preparing a ZIP containing this Session, its sub-Sessions, and attachments.	このセッションと子セッション、添付ファイルを含む ZIP を準備しています。	ok
+session-log-download	dialog.successTitle	Session download started	セッションのダウンロードを開始しました	ok
+session-log-download	dialog.successDescription	The browser is downloading the Session ZIP.	ブラウザーがセッションの ZIP をダウンロードしています。	ok
+session-log-download	dialog.errorTitle	Session export failed	セッションのエクスポートに失敗しました	ok
+session-log-download	dialog.close	Close	閉じる	ok
+session-log-download	dialog.commandFailed	Could not start the Session export.	セッションのエクスポートを開始できませんでした。	ok

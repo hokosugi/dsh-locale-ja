@@ -1,0 +1,5 @@
+namespace	key	en	ja	status
+documentHtml	title	HTML	HTML	ok
+documentHtml	frame	HTML document preview	HTML ドキュメントのプレビュー	ok
+documentHtml	loading	Rendering document...	ドキュメントを描画中…	ok
+documentHtml	failed	This HTML document could not be previewed.	この HTML ドキュメントをプレビューできませんでした。	ok

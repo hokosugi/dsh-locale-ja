@@ -1,0 +1,19 @@
+{
+  "mode": "アクセスモード、現在: {name}",
+  "close": "閉じる",
+  "preset.readOnly": "読み取りのみ",
+  "preset.workspaceWrite": "ワークスペース内の書き込み",
+  "preset.fullAccess": "完全なアクセス",
+  "confirm.title": "完全なアクセスを有効にしますか？",
+  "confirm.description": "完全なアクセスを有効にすると、確認の手順が減り、Agent がより多くの操作を直接実行できるようになります。これには機微な操作、ファイルの変更、外部コマンドの実行が含まれます。現在のタスクを信頼できる場合にのみ使用してください。",
+  "confirm.acknowledge": "リスクを理解したうえで続けます",
+  "confirm.cancel": "キャンセル",
+  "confirm.enable": "完全なアクセスを有効にする",
+  "auto.label": "Auto review",
+  "auto.badge": "EXP",
+  "auto.description": "サンドボックスなしで実行します。ネイティブのツール呼び出しと PTC の内側の呼び出しのたびに、同じモデルによる実験的なレビューを行います。",
+  "auto.confirm.title": "Auto review (実験的) を有効にしますか？",
+  "auto.confirm.description": "Auto review はサンドボックスなしで実行されます。ネイティブのツール呼び出しと PTC の内側の呼び出しの前に、現在の Agent と同じモデルが許可するかどうかを審査し、拒否された呼び出しはあなたが承認または拒否します。この機能は実験的で、操作を誤って許可・拒否する可能性があり、追加のトークンを消費します。",
+  "auto.confirm.acknowledge": "これらのリスクを理解したうえで続けます",
+  "auto.confirm.enable": "Auto review を有効にする"
+}

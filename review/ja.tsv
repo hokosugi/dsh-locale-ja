@@ -1,0 +1,2422 @@
+namespace	key	en	ja	status
+conversation	shortcut.newline	New line	改行	ok
+conversation	shortcut.complementary	Use the complementary Queue / Steer action	もう一方のキュー / ステア操作を使う	ok
+conversation	shortcut.slash	Open command menu	コマンドメニューを開く	ok
+conversation	shortcut.mention	Open reference menu	参照メニューを開く	ok
+conversation	hint.plan	describe your task to generate plan	タスクを説明すると計画を生成します	ok
+conversation	hint.goal	describe the objective for a long-running task	長時間タスクの目的を説明してください	ok
+conversation	hint.goal.active	goal active — edit / pause / resume / clear	ゴール実行中 — 編集 / 一時停止 / 再開 / クリア	ok
+conversation	placeholder.plan	describe your task to generate plan	タスクを説明すると計画を生成します	ok
+conversation	placeholder.default	Message or run a task, / commands, @ files or sessions	メッセージを送るかタスクを実行。/ でコマンド、@ でファイルやセッション	ok
+conversation	placeholder.unavailable	Session unavailable	セッションを利用できません	ok
+conversation	placeholder.parentOffline	Parent session offline; sending is unavailable but you can still stop the run	親セッションがオフラインです。送信はできませんが、実行の停止は可能です	ok
+conversation	placeholder.hero	Describe what you want to build, / commands, @ files or sessions	作りたいものを説明してください。/ でコマンド、@ でファイルやセッション	ok
+conversation	placeholder.workspace	Choose a workspace to start	開始するワークスペースを選択	ok
+conversation	placeholder.steerQueue	Cmd/Ctrl+Enter steers all queued messages	Cmd/Ctrl+Enter でキュー内のメッセージをまとめてステア	ok
+conversation	input.commands	Add files or run commands	ファイルを追加またはコマンドを実行	ok
+conversation	input.file	File	ファイル	ok
+conversation	input.stop	Stop generating	生成を停止	ok
+conversation	input.send	Send message	メッセージを送信	ok
+conversation	input.send.queue	Queue message	メッセージをキューに追加	ok
+conversation	input.send.steer	Steer message	メッセージをステア	ok
+conversation	attachment.pending	Pending attachments	未送信の添付	ok
+conversation	attachment.scrollLeft	Scroll attachments left	添付を左へスクロール	ok
+conversation	attachment.scrollRight	Scroll attachments right	添付を右へスクロール	ok
+conversation	attachment.dropTitle	Drag files or images here to add them	ここにファイルや画像をドラッグして追加	ok
+conversation	attachment.dropDesc	Image limit: up to {count} images, {size} each	画像は最大 {count} 枚、1 枚あたり {size} まで	ok
+conversation	attachment.dropBlocked	Files and images cannot be added right now	現在はファイルや画像を追加できません	ok
+conversation	attachment.directoryDesktopOnly	Folders can only be added in the desktop app; add individual files in the browser	フォルダーを追加できるのはデスクトップアプリのみです。ブラウザーではファイルを個別に追加してください	ok
+conversation	attachment.pathUnavailable	Could not obtain the folder path; drag it in again	フォルダーのパスを取得できませんでした。もう一度ドラッグしてください	ok
+conversation	attachment.pathUnsupported	The path contains characters a reference cannot carry; rename it and try again	このパスには参照が扱えない文字が含まれています。名前を変更して再試行してください	ok
+conversation	image.pending	Pending images	未送信の画像	ok
+conversation	image.openOriginal	View original	元の画像を表示	ok
+conversation	image.openOriginalLabel	{label}, click to view original	{label}、クリックで元の画像を表示	ok
+conversation	image.remove	Remove image {name}	画像 {name} を削除	ok
+conversation	image.original	Original image	元の画像	ok
+conversation	image.label	Image	画像	ok
+conversation	image.loadFailed	Image failed to load; click to retry	画像を読み込めませんでした。クリックで再試行	ok
+conversation	image.loading	Loading image…	画像を読み込んでいます…	ok
+conversation	image.preview	Original image preview	元の画像のプレビュー	ok
+conversation	image.closePreview	Close original image preview	元の画像のプレビューを閉じる	ok
+conversation	image.unsupportedType	Only PNG, JPG, WebP, and GIF images are supported	対応している画像は PNG、JPG、WebP、GIF のみです	ok
+conversation	image.tooMany	A message can include up to {count} images	1 つのメッセージに追加できる画像は {count} 枚までです	ok
+conversation	image.fileTooLarge	Each image must be smaller than {size}	画像は 1 枚あたり {size} 未満にしてください	ok
+conversation	image.totalTooLarge	Images exceed {size} in total; remove some and try again	画像の合計が {size} を超えています。一部を削除して再試行してください	ok
+conversation	image.tooManyPixels	Image resolution is too high; compress it and try again	画像の解像度が高すぎます。圧縮して再試行してください	ok
+conversation	image.dimensionTooLarge	Image sides must be at most {size}px; downscale it and try again	画像の辺は {size}px 以下にしてください。縮小して再試行してください	ok
+conversation	image.modelUnsupported	The current model does not support images; switch to a model that does	現在のモデルは画像に対応していません。画像に対応したモデルに切り替えてください	ok
+conversation	image.sendFailed	Sending images failed ({reason}); re-add them and try again	画像の送信に失敗しました ({reason})。追加し直して再試行してください	ok
+conversation	file.pending	Pending files	未送信のファイル	ok
+conversation	file.remove	Remove file {name}	ファイル {name} を削除	ok
+conversation	file.uploading	Uploading…	アップロードしています…	ok
+conversation	file.uploadFailed	Upload failed; click to retry	アップロードに失敗しました。クリックで再試行	ok
+conversation	file.retry	Retry uploading {name}	{name} のアップロードを再試行	ok
+conversation	file.stillUploading	Files are still uploading; send after they finish	ファイルをアップロード中です。完了してから送信してください	ok
+conversation	file.sessionUnavailable	Session unavailable; files cannot be uploaded	セッションを利用できないため、ファイルをアップロードできません	ok
+conversation	file.notStaged	The file has not finished uploading; re-add it and try again	ファイルのアップロードが完了していません。追加し直して再試行してください	ok
+conversation	file.label	File	ファイル	ok
+conversation	context.aria	{percent} of context used	コンテキストの {percent} を使用	ok
+conversation	context.used	of context used	コンテキスト使用	ok
+conversation	context.system	System prompt	システムプロンプト	ok
+conversation	context.tools	Tool definitions	ツール定義	ok
+conversation	context.messages	Messages	メッセージ	ok
+conversation	settings.enter.title	Send behavior while busy	実行中の送信動作	ok
+conversation	settings.enter.description	What Enter and the Send button do while the agent is running; Cmd/Ctrl+Enter uses the other behavior	Agent の実行中に Enter と送信ボタンが行う動作。Cmd/Ctrl+Enter はもう一方の動作になります	ok
+conversation	settings.enter.queue	Queue	キュー	ok
+conversation	settings.enter.steer	Steer	ステア	ok
+conversation	hero.headline	Into the Unknown	未知へ	ok
+conversation	hero.preview	Preview	プレビュー	ok
+conversation	hero.chooseWorkspace	Choose workspace	ワークスペースを選択	ok
+conversation	session.hierarchy	Session hierarchy	セッション階層	ok
+conversation	todo.title	To-dos	ToDo	ok
+conversation	todo.progress.done	{done} completed	{done} 件完了	ok
+conversation	todo.progress.active	{active} in progress	{active} 件進行中	ok
+conversation	todo.progress.pending	{pending} pending	{pending} 件未着手	ok
+conversation	todo.status.completed	Completed	完了	ok
+conversation	todo.status.inProgress	In progress	進行中	ok
+conversation	todo.status.pending	Pending	未着手	ok
+conversation	todo.rowTitle	Update to-do list	ToDo リストを更新	ok
+conversation	tool.title.createGoal	Create goal	ゴールを作成	ok
+conversation	tool.title.getGoal	View goal	ゴールを表示	ok
+conversation	tool.title.updateGoal	Update goal	ゴールを更新	ok
+conversation	tool.preparing.content	Preparing content {kilobytes}KB	コンテンツを準備しています {kilobytes}KB	ok
+conversation	tool.title.createSchedule	Create reminder	リマインダーを作成	ok
+conversation	tool.title.listSchedules	List reminders	リマインダー一覧	ok
+conversation	tool.title.deleteSchedule	Delete reminder	リマインダーを削除	ok
+conversation	tool.title.updateSchedule	Update reminder	リマインダーを更新	ok
+conversation	detail.state	Status	状態	ok
+conversation	detail.todo.completed	Completed	完了	ok
+conversation	detail.todo.in_progress	In progress	進行中	ok
+conversation	detail.todo.pending	Pending	未着手	ok
+conversation	detail.todo.empty	The to-do list is empty	ToDo リストは空です	ok
+conversation	todo.diff.initial	Initial list	初回のリスト	ok
+conversation	todo.diff.compare	Changes since the previous list	前回のリストからの変更	ok
+conversation	todo.diff.unavailable	Previous list unavailable	前回のリストがありません	ok
+conversation	todo.diff.noChanges	No changes to the list	リストに変更はありません	ok
+conversation	todo.diff.added	{count} added	{count} 件追加	ok
+conversation	todo.diff.updated	{count} updated	{count} 件更新	ok
+conversation	todo.diff.removed	{count} removed	{count} 件削除	ok
+conversation	todo.diff.unchanged	{count} unchanged	{count} 件変更なし	ok
+conversation	todo.diff.addedItem	Added	追加	ok
+conversation	todo.diff.updatedItem	Status changed	状態変更	ok
+conversation	todo.diff.movedItem	Reordered	並び替え	ok
+conversation	todo.diff.removedItem	Removed	削除	ok
+conversation	detail.goal.empty	No goal	ゴールなし	ok
+conversation	detail.goal.active	Active	実行中	ok
+conversation	detail.goal.disarmed	Awaiting continuation	継続待ち	ok
+conversation	detail.goal.paused	Paused	一時停止	ok
+conversation	detail.goal.blocked	Blocked	ブロック	ok
+conversation	detail.goal.complete	Completed	完了	ok
+conversation	detail.goal.rounds	Rounds	ラウンド	ok
+conversation	detail.goal.reason	Blocker	ブロック要因	ok
+conversation	detail.days	{count} d	{count} 日	ok
+conversation	detail.hours	{count} h	{count} 時間	ok
+conversation	detail.minutes	{count} min	{count} 分	ok
+conversation	detail.seconds	{count} s	{count} 秒	ok
+conversation	detail.schedule.once	Once	1 回のみ	ok
+conversation	detail.schedule.every	Every {interval}	{interval} ごと	ok
+conversation	detail.schedule.when	Scheduled for	実行予定	ok
+conversation	detail.schedule.frequency	Repeat	繰り返し	ok
+conversation	detail.schedule.scheduled	Scheduled	予約済み	ok
+conversation	detail.schedule.overdue	Overdue, awaiting session resume	期限超過。セッションの再開待ち	ok
+conversation	detail.schedule.empty	No reminders	リマインダーはありません	ok
+conversation	detail.schedule.deleted	Deleted	削除済み	ok
+conversation	detail.schedule.count	{count} reminders	リマインダー {count} 件	ok
+conversation	detail.schedule.daily	Every day at {time} ({zone})	毎日 {time} ({zone})	ok
+conversation	detail.schedule.weekly	Weekly on {days} at {time} ({zone})	毎週 {days} の {time} ({zone})	ok
+conversation	detail.schedule.cron	Cron {expression} ({zone})	Cron {expression} ({zone})	ok
+conversation	detail.weekday.1	Mon	月	ok
+conversation	detail.weekday.2	Tue	火	ok
+conversation	detail.weekday.3	Wed	水	ok
+conversation	detail.weekday.4	Thu	木	ok
+conversation	detail.weekday.5	Fri	金	ok
+conversation	detail.weekday.6	Sat	土	ok
+conversation	detail.weekday.7	Sun	日	ok
+conversation	detail.weekday.join	, 	・	ok
+conversation	tool.title.inspectProviders	Inspect providers	inspect プロバイダーを確認	ok
+conversation	tool.title.queryRuntime	Query runtime	ランタイムを照会	ok
+conversation	tool.title.inspectPlugins	Inspect plugins	プラグインを調査	ok
+conversation	tool.title.workflow	Run workflow	ワークフローを実行	ok
+conversation	tool.title.ralph	Run ralph loop	ralph ループを実行	ok
+conversation	tool.title.readEvent	Read event	イベントを読む	ok
+conversation	tool.title.searchEvents	Search events	イベントを検索	ok
+conversation	tool.title.traceEvent	Trace event	イベントを追跡	ok
+conversation	tool.title.searchSessions	Search sessions	セッションを検索	ok
+conversation	tool.title.traceSession	Trace session	セッションを追跡	ok
+conversation	tool.title.listModels	List models	モデル一覧	ok
+conversation	tool.title.subagent	Create subagent	サブエージェントを作成	ok
+conversation	tool.title.listAgents	List subagents	サブエージェント一覧	ok
+conversation	tool.title.sendMessage	Send message	メッセージを送信	ok
+conversation	tool.title.interruptAgent	Interrupt agent	Agent を中断	ok
+conversation	tool.title.listJobs	List background jobs	バックグラウンドジョブ一覧	ok
+conversation	tool.title.readJob	Read job output	ジョブ出力を読む	ok
+conversation	tool.title.killJob	Cancel background job	バックグラウンドジョブをキャンセル	ok
+conversation	tool.title.openTerminal	Open terminal	ターミナルを開く	ok
+conversation	tool.title.readTerminal	Read terminal	ターミナルを読む	ok
+conversation	tool.title.listTerminals	List terminals	ターミナル一覧	ok
+conversation	tool.title.signalTerminal	Signal terminal	ターミナルにシグナルを送る	ok
+conversation	tool.title.closeTerminal	Close terminal	ターミナルを閉じる	ok
+conversation	tool.title.lsp	Query code symbols	コードシンボルを照会	ok
+conversation	tool.title.findDefinition	Find definition	定義を検索	ok
+conversation	tool.title.findReferences	Find references	参照を検索	ok
+conversation	tool.title.findImplementation	Find implementation	実装を検索	ok
+conversation	tool.title.hoverSymbol	Inspect symbol	シンボルを調べる	ok
+conversation	tool.title.spawnTeammate	Create teammate	チームメイトを作成	ok
+conversation	tool.title.createTeamTask	Create team task	チームタスクを作成	ok
+conversation	tool.title.getTeamTask	Read team task	チームタスクを読む	ok
+conversation	tool.title.updateTeamTask	Update team task	チームタスクを更新	ok
+conversation	tool.title.listTeamTasks	List team tasks	チームタスク一覧	ok
+conversation	tool.title.waitAgent	Wait for subagent	サブエージェントを待機	ok
+conversation	detail.recordedResult	Recorded result	記録された結果	ok
+conversation	detail.empty	No results	結果はありません	ok
+conversation	detail.none	None	なし	ok
+conversation	detail.yes	Yes	はい	ok
+conversation	detail.no	No	いいえ	ok
+conversation	detail.moreInInspect	{count} more items available in Inspect	Inspect でさらに {count} 件を確認できます	ok
+conversation	detail.status.running	Running	実行中	ok
+conversation	detail.status.idle	Idle	待機中	ok
+conversation	detail.status.ready	Ready	準備完了	ok
+conversation	detail.status.inactive	Inactive	非アクティブ	ok
+conversation	detail.status.provisioning	Provisioning	準備中	ok
+conversation	detail.status.failed	Failed	失敗	ok
+conversation	detail.status.completed	Completed	完了	ok
+conversation	detail.status.deleted	Deleted	削除済み	ok
+conversation	detail.status.killed	Cancelled	キャンセル済み	ok
+conversation	detail.status.accepted	Accepted	受理済み	ok
+conversation	detail.status.queued	Queued	キュー内	ok
+conversation	detail.status.exited	Exited	終了	ok
+conversation	detail.field.id	ID	ID	ok
+conversation	detail.field.revision	Revision	リビジョン	ok
+conversation	detail.field.platform	Platform	プラットフォーム	ok
+conversation	detail.field.provider	Provider	プロバイダー	ok
+conversation	detail.field.model	Model	モデル	ok
+conversation	detail.field.role	Role	ロール	ok
+conversation	detail.field.context	Context	コンテキスト	ok
+conversation	detail.field.owner	Owner	オーナー	ok
+conversation	detail.field.ready	Ready	準備完了	ok
+conversation	detail.field.dependencies	Dependencies	依存関係	ok
+conversation	detail.field.writeScopes	Write scopes	書き込み範囲	ok
+conversation	detail.field.warnings	Warnings	警告	ok
+conversation	detail.field.diagnostics	Diagnostics	診断	ok
+conversation	detail.field.methods	Methods	メソッド	ok
+conversation	detail.field.inputSchema	Input schema	入力スキーマ	ok
+conversation	detail.field.outputSchema	Output schema	出力スキーマ	ok
+conversation	detail.field.currentPackage	Current package	現在のパッケージ	ok
+conversation	detail.field.nextPackage	Next package	次のパッケージ	ok
+conversation	detail.field.latestRun	Latest run	最新の実行	ok
+conversation	detail.field.packages	Packages	パッケージ	ok
+conversation	detail.field.registrations	Registrations	登録	ok
+conversation	detail.field.props	Props	props	ok
+conversation	detail.field.data	Data	データ	ok
+conversation	detail.field.source	Source	ソース	ok
+conversation	detail.field.content	Content	内容	ok
+conversation	detail.field.message	Message	メッセージ	ok
+conversation	detail.field.messageId	Message ID	メッセージ ID	ok
+conversation	detail.field.root	Root	ルート	ok
+conversation	detail.field.pid	Process ID	プロセス ID	ok
+conversation	detail.field.type	Type	種類	ok
+conversation	detail.field.time	Time	時刻	ok
+conversation	detail.field.seq	Event sequence	イベント連番	ok
+conversation	detail.field.turn	Turn	ターン	ok
+conversation	detail.field.step	Step	ステップ	ok
+conversation	detail.field.callId	Call ID	呼び出し ID	ok
+conversation	detail.field.agents	Agents started	起動した Agent	ok
+conversation	detail.field.result	Result	結果	ok
+conversation	detail.field.parent	Parent	親	ok
+conversation	detail.field.depth	Depth	深さ	ok
+conversation	detail.field.exitCode	Exit code	終了コード	ok
+conversation	detail.field.signal	Signal	シグナル	ok
+conversation	detail.field.previousStatus	Previous status	以前の状態	ok
+conversation	detail.field.agent	Agent ID	Agent ID	ok
+conversation	detail.field.job	Job ID	ジョブ ID	ok
+conversation	detail.field.task	Task	タスク	ok
+conversation	detail.field.processGroup	Process group	プロセスグループ	ok
+conversation	detail.field.availability	Availability	可用性	ok
+conversation	detail.field.bestMatch	Best match	最良一致	ok
+conversation	detail.field.target	Target event	対象イベント	ok
+conversation	detail.field.surface	Record status	レコードの状態	ok
+conversation	detail.agents.count	{count} agents	Agent {count} 件	ok
+conversation	detail.jobs.count	{count} background jobs	バックグラウンドジョブ {count} 件	ok
+conversation	detail.terminals.count	{count} terminals	ターミナル {count} 件	ok
+conversation	detail.tasks.count	{count} team tasks	チームタスク {count} 件	ok
+conversation	detail.tasks.nextPage	More tasks available; next cursor is {cursor}	さらにタスクがあります。次のカーソル: {cursor}	ok
+conversation	detail.locations.count	{count} locations	{count} 箇所	ok
+conversation	detail.location	Line {line}, column {column}	{line} 行 {column} 列	ok
+conversation	detail.receipt.delivered	Message delivered	メッセージを配信しました	ok
+conversation	detail.receipt.interrupt	Interrupt requested	中断を要求しました	ok
+conversation	detail.receipt.started	Started	開始しました	ok
+conversation	detail.receipt.cancel	Cancellation requested	キャンセルを要求しました	ok
+conversation	detail.receipt.alreadyFinished	Already finished	すでに完了しています	ok
+conversation	detail.receipt.signal	Signal delivered	シグナルを送信しました	ok
+conversation	detail.receipt.closed	Closed	閉じました	ok
+conversation	detail.receipt.closing	Closing	閉じています	ok
+conversation	detail.wait.noProgress	No active subagents	稼働中のサブエージェントはありません	ok
+conversation	detail.wait.title	Subagent activity	サブエージェントの動き	ok
+conversation	detail.wait.timeout	Wait timed out	待機がタイムアウトしました	ok
+conversation	detail.wait.changed	Change detected	変更を検出しました	ok
+conversation	detail.agent.reply	Agent response	Agent の応答	ok
+conversation	detail.models.title	Available models	利用可能なモデル	ok
+conversation	detail.output.lines	Lines {begin}–{end} of {total}	{total} 行中 {begin}–{end} 行	ok
+conversation	detail.output.truncated	Output truncated	出力を省略しました	ok
+conversation	detail.providers.count	{count} inspect providers	inspect プロバイダー {count} 件	ok
+conversation	detail.plugins.count	{count} dynamic plugins	動的プラグイン {count} 件	ok
+conversation	detail.workflow.script	Workflow script	ワークフロースクリプト	ok
+conversation	detail.ralph.reportedComplete	Worker reported completion	ワーカーが完了を報告しました	ok
+conversation	detail.ralph.reportedBlocker	Worker reported a blocker	ワーカーがブロックを報告しました	ok
+conversation	detail.ralph.limit	Round limit reached	ラウンドの上限に達しました	ok
+conversation	detail.report.nextSteps	Remaining work	残りの作業	ok
+conversation	detail.trace.replacedBy	Replaced by	置き換え先	ok
+conversation	detail.trace.replacementChain	Replacement chain	置き換えの連鎖	ok
+conversation	detail.trace.replaces	Replaced events	置き換え元のイベント	ok
+conversation	detail.trace.sources	Source events	ソースイベント	ok
+conversation	detail.trace.derived	Derived events	派生イベント	ok
+conversation	detail.trace.ancestors	Ancestor sessions	祖先セッション	ok
+conversation	detail.trace.descendants	Descendant sessions	子孫セッション	ok
+conversation	detail.matches.count	{count} matches	{count} 件一致	ok
+conversation	detail.matches.capped	Result limit reached; narrow the search for more	結果の上限に達しました。さらに絞り込んで検索してください	ok
+conversation	detail.event.neighbors	Surrounding events	前後のイベント	ok
+conversation	todo.completed	{done}/{total} completed	{done}/{total} 完了	ok
+conversation	command.attachmentsUnsupported	/{command} does not accept attachments; remove them first	/{command} は添付を受け付けません。先に削除してください	ok
+conversation	ask.rowTitle	Ask question	質問する	ok
+conversation	ask.waiting	waiting	回答待ち	ok
+conversation	ask.pending	continued; answer still available	続行済み。まだ回答できます	ok
+conversation	ask.pendingDetail	These pending questions remain answerable from the composer.	未回答の質問には、入力欄から引き続き回答できます。	ok
+conversation	ask.reopen	Answer	回答する	ok
+conversation	ask.review	View answers	回答を見る	ok
+conversation	ask.closed	closed	終了	ok
+conversation	ask.closedDetail	This question is closed; its outcome is in the conversation below.	この質問は終了しています。結果は下の会話にあります。	ok
+conversation	ask.cancelled	cancelled	キャンセル済み	ok
+conversation	ask.cancelledDetail	This question set was cancelled before answers were submitted.	この質問は回答が送信される前にキャンセルされました。	ok
+conversation	ask.interrupted	interrupted	中断済み	ok
+conversation	ask.interruptedDetail	This question set was interrupted before answers were submitted.	この質問は回答が送信される前に中断されました。	ok
+conversation	ask.answered	{answered}/{total} answered	{answered}/{total} 回答済み	ok
+conversation	ask.skipped	Not answered	未回答	ok
+conversation	bash.running	Running	実行中	ok
+conversation	bash.failed	Failed	失敗	ok
+conversation	bash.stopped	Stopped	停止	ok
+conversation	row.running	Running	実行中	ok
+conversation	row.preparing	Preparing tool call	ツール呼び出しを準備しています	ok
+conversation	row.failed	Failed	失敗	ok
+conversation	row.stopped	Stopped	停止	ok
+conversation	row.input	IN	入力	ok
+conversation	row.output	OUT	出力	ok
+conversation	row.inspect	Inspect	呼び出しを確認	ok
+conversation	tool.title.search	Search	検索	ok
+conversation	tool.title.read	Read	読み取り	ok
+conversation	tool.title.bash	Bash	Bash	ok
+conversation	tool.title.write	Write	書き込み	ok
+conversation	tool.title.edit	Edit	編集	ok
+conversation	tool.title.code	Code	コード	ok
+conversation	tool.title.generic	Tool call	ツール呼び出し	ok
+conversation	tool.title.inspect	Query Cordis environment	Cordis 環境を照会	ok
+conversation	tool.title.runCordis	Run Cordis Plugin	Cordis プラグインを実行	ok
+conversation	tool.title.stopCordis	Stop Cordis Plugin	Cordis プラグインを停止	ok
+conversation	tool.title.removeCordis	Remove Cordis Plugin	Cordis プラグインを削除	ok
+conversation	tool.title.pwsh	Pwsh	Pwsh	ok
+conversation	tool.title.readImage	Read image	画像を読み取る	ok
+conversation	tool.title.grep	Grep	Grep	ok
+conversation	tool.title.glob	Glob	Glob	ok
+conversation	tool.title.webSearch	Search	検索	ok
+conversation	tool.title.webFetch	Fetch	取得	ok
+conversation	tool.autoReviewRejected	Rejected by Auto review	自動レビューで拒否されました	ok
+conversation	tool.autoReviewNotExecuted	Tool was not executed. Reason: {reason}	ツールは実行されませんでした。理由: {reason}	ok
+conversation	tool.autoReviewReasonFallback	Auto review did not authorize this action	自動レビューがこの操作を許可しませんでした	ok
+conversation	diff.collapseAria	Collapse diff	差分を折りたたむ	ok
+conversation	diff.expandAria	Expand {count} more diff lines	差分の残り {count} 行を展開	ok
+conversation	diff.expandRest	… {count} more lines	… 残り {count} 行	ok
+conversation	read.window	Showing {shown} of {total} lines	{total} 行中 {shown} 行を表示	ok
+conversation	read.collapseAria	Collapse content	内容を折りたたむ	ok
+conversation	read.expandAria	Expand {count} more lines	残り {count} 行を展開	ok
+conversation	read.expandRest	… {count} more lines	… 残り {count} 行	ok
+conversation	search.paths	{shown} paths	{shown} 件のパス	ok
+conversation	search.paths.truncated	Showing {shown} of {total} paths	{total} 件中 {shown} 件のパスを表示	ok
+conversation	search.matches	{shown} matches · {files} files	{shown} 件一致 · {files} ファイル	ok
+conversation	search.matches.truncated	Showing {shown} of {total} matches · {files} files	{total} 件中 {shown} 件の一致 · {files} ファイル	ok
+conversation	search.noResults	No results	結果なし	ok
+conversation	search.collapseAria	Collapse results	結果を折りたたむ	ok
+conversation	search.expandAria	Expand {count} more result lines	結果の残り {count} 行を展開	ok
+conversation	search.expandRest	… {count} more lines	… 残り {count} 行	ok
+conversation	web.noResults	No results found	結果が見つかりません	ok
+conversation	web.sourcesTruncated	Source list truncated	ソース一覧を省略しました	ok
+conversation	web.http	HTTP	HTTP	ok
+conversation	web.contentTruncated	Content truncated	内容を省略しました	ok
+conversation	details.running	Running…	実行中…	ok
+conversation	queue.count	{n} queued messages	キュー内のメッセージ {n} 件	ok
+conversation	queue.sending	Sending…	送信中…	ok
+conversation	queue.image	Queued message image	キュー内メッセージの画像	ok
+conversation	queue.file	Queued file {name}	キュー内のファイル {name}	ok
+conversation	queue.edit	Edit queued message	キュー内メッセージを編集	ok
+conversation	queue.edit.unsupported	Contains non-text content; editing is not supported yet	テキスト以外の内容を含むため、まだ編集できません	ok
+conversation	queue.save	Save queued message	キュー内メッセージを保存	ok
+conversation	queue.cancelEdit	Cancel editing	編集をキャンセル	ok
+conversation	queue.remove	Remove queued message	キューから削除	ok
+conversation	queue.steer	Steer queued message	キュー内メッセージをステア	ok
+conversation	queue.steer.unavailable	Steering is available only while the agent is running	ステアは Agent の実行中のみ利用できます	ok
+conversation	error.sessionInUse	This session is already in use, possibly by another running DSH instance (such as dsh web or the desktop app). Quit other running DSH instances and try again.	このセッションはすでに使用中です。別の DSH インスタンス (dsh web やデスクトップアプリなど) が使用している可能性があります。他の DSH を終了して再試行してください。	ok
+conversation	queue.editFailed	Edit failed: this message may have already started sending.	編集に失敗しました。このメッセージはすでに送信が始まっている可能性があります。	ok
+conversation	queue.removeFailed	Removal failed: this message may have already started sending.	削除に失敗しました。このメッセージはすでに送信が始まっている可能性があります。	ok
+conversation	queue.steerFailed	Steering failed. Try again.	ステアに失敗しました。再試行してください。	ok
+conversation	terminal.signal	signal {signal}	シグナル {signal}	ok
+conversation	terminal.exitCode	exit code {code}	終了コード {code}	ok
+conversation	terminal.noExitCode	no exit code	終了コードなし	ok
+conversation	terminal.running	Running	実行中	ok
+conversation	terminal.failed	Failed	失敗	ok
+conversation	terminal.done	Done	完了	ok
+conversation	terminal.noOutput	No output	出力なし	ok
+conversation	terminal.collapseAria	Collapse output	出力を折りたたむ	ok
+conversation	terminal.expandAria	Expand the remaining {n} output lines	出力の残り {n} 行を展開	ok
+conversation	terminal.expandRest	… {n} more lines	… 残り {n} 行	ok
+conversation	terminal.sendInput	(send input)	(入力を送信)	ok
+conversation	terminal.session	Terminal {sessionId}	ターミナル {sessionId}	ok
+trajectory	view.trajectory	Trajectory	軌跡	ok
+trajectory	toolbar.aria	Trajectory toolbar	軌跡ツールバー	ok
+trajectory	toolbar.duration	Duration	期間	ok
+trajectory	toolbar.useActualDuration	Use actual duration	実際の所要時間で表示	ok
+trajectory	toolbar.useEqualWidth	Use equal-width operations	操作を等幅で表示	ok
+trajectory	toolbar.actualTime	Actual time	実時間	ok
+trajectory	toolbar.turns	Turns	ターン	ok
+trajectory	toolbar.expandTurns	Expand turns	ターンを展開	ok
+trajectory	toolbar.collapseTurns	Collapse turns	ターンを折りたたむ	ok
+trajectory	toolbar.calls	Calls	呼び出し	ok
+trajectory	toolbar.expandCalls	Expand calls	呼び出しを展開	ok
+trajectory	toolbar.collapseCalls	Collapse calls	呼び出しを折りたたむ	ok
+trajectory	toolbar.search	Search trajectory	軌跡を検索	ok
+trajectory	toolbar.searchPlaceholder	Search	検索	ok
+trajectory	kind.system	SYSTEM	システム	ok
+trajectory	kind.user	USER	ユーザー	ok
+trajectory	kind.context	CONTEXT	コンテキスト	ok
+trajectory	kind.compacted	COMPACTED	圧縮済み	ok
+trajectory	kind.message	Message	メッセージ	ok
+trajectory	kind.assistant	ASSISTANT	アシスタント	ok
+trajectory	kind.tool	TOOL	ツール	ok
+trajectory	kind.subtool	SUBTOOL	サブツール	ok
+trajectory	kind.sub	Sub	サブ	ok
+trajectory	column.input	Input	入力	ok
+trajectory	column.output	Output	出力	ok
+trajectory	column.think	Think	思考	ok
+trajectory	column.time	Time	時刻	ok
+trajectory	column.model	Model	生成	ok
+trajectory	column.tools	Tools	実行	ok
+trajectory	turn.label	Turn {turn}	ターン {turn}	ok
+trajectory	section.betweenTurns	Between turns	ターン間	ok
+trajectory	group.message	Message	メッセージ	ok
+trajectory	group.step	Step {step}	ステップ {step}	ok
+trajectory	group.compaction	Compaction {seq}	圧縮 {seq}	ok
+trajectory	status.failed	Failed	失敗	ok
+trajectory	status.pending	Pending	未着手	ok
+trajectory	status.completed	Completed	完了	ok
+trajectory	timing.notAvailable	Not available	利用できません	ok
+trajectory	timing.notRecorded	Not recorded	記録なし	ok
+trajectory	timing.stepStartUnavailable	Step start unavailable	ステップの開始時刻なし	ok
+trajectory	timing.firstTokenUnavailable	First token unavailable	初回トークンの時刻なし	ok
+trajectory	timing.usageUnavailable	Usage unavailable	使用量なし	ok
+trajectory	timing.outputTokensUnavailable	Output tokens unavailable	出力トークン数なし	ok
+trajectory	timing.durationTooShort	Duration too short	所要時間が短すぎます	ok
+trajectory	timing.showLocalTime	Show local time	ローカル時刻で表示	ok
+trajectory	timing.showUnixTimestamp	Show Unix timestamp	Unix タイムスタンプで表示	ok
+trajectory	timing.started	Started	開始	ok
+trajectory	timing.totalDuration	Total duration	合計時間	ok
+trajectory	timing.ttft	TTFT	TTFT	ok
+trajectory	timing.generation	Generation	生成	ok
+trajectory	timing.throughput	Throughput	スループット	ok
+trajectory	timing.duration	Duration	所要時間	ok
+trajectory	timing.source	Timing source	計測の出所	ok
+trajectory	timing.sessionTimestamps	Session timestamps	セッションのタイムスタンプ	ok
+trajectory	timing.sessionTimestampsRunning	Session timestamps (running)	セッションのタイムスタンプ (実行中)	ok
+trajectory	timing.request	Request Timing	リクエストの計測	ok
+trajectory	unit.milliseconds	{value} ms	{value} ms	ok
+trajectory	unit.seconds	{value} s	{value} 秒	ok
+trajectory	unit.tokens	{value} tok	{value} tok	ok
+trajectory	unit.tokensPerSecond	{value} tok/s	{value} tok/s	ok
+trajectory	usage.tokens	Tokens	トークン	ok
+trajectory	usage.reasoning	Reasoning	推論	ok
+trajectory	usage.content	Content	内容	ok
+trajectory	usage.notReported	Usage not reported	使用量は報告されていません	ok
+trajectory	usage.input	Input	入力	ok
+trajectory	usage.cached	Cached	キャッシュ済み	ok
+trajectory	usage.cacheCreated	Cache created	キャッシュ作成	ok
+trajectory	usage.other	Other	その他	ok
+trajectory	usage.output	Output	出力	ok
+trajectory	usage.thisRequest	This request	このリクエスト	ok
+trajectory	usage.sessionCumulative	Session cumulative	セッション累計	ok
+trajectory	options.notRecorded	Options not recorded	オプションは記録されていません	ok
+trajectory	options.json	Request options JSON	リクエストオプションの JSON	ok
+trajectory	source.unknown	Unknown	不明	ok
+trajectory	source.user	User	ユーザー	ok
+trajectory	source.plugin	Plugin	プラグイン	ok
+trajectory	source.pluginNamed	Plugin · {plugin}	プラグイン · {plugin}	ok
+trajectory	source.goal	Goal	ゴール	ok
+trajectory	source.goalRound	Goal · Round {round}	ゴール · ラウンド {round}	ok
+trajectory	source.notRecorded	Source not recorded	出所は記録されていません	ok
+trajectory	source.messageJson	Message source JSON	メッセージ出所の JSON	ok
+trajectory	tab.summary	Summary	要約	ok
+trajectory	tab.rawOutput	Raw Output	生の出力	ok
+trajectory	tab.preview	Preview	プレビュー	ok
+trajectory	tab.raw	Raw	生データ	ok
+trajectory	tab.source	Source	ソース	ok
+trajectory	tab.payload	Payload	ペイロード	ok
+trajectory	tab.result	Result	結果	ok
+trajectory	tab.schema	Schema	スキーマ	ok
+trajectory	tab.timing	Timing	計測	ok
+trajectory	tab.diff	Diff	差分	ok
+trajectory	tab.systemPrompt	System Prompt	システムプロンプト	ok
+trajectory	tab.tools	Tools	ツール	ok
+trajectory	tab.options	Options	オプション	ok
+trajectory	tab.usage	Usage	使用量	ok
+trajectory	record.toolCallOnly	(tool call only)	(ツール呼び出しのみ)	ok
+trajectory	record.noContent	No content	内容なし	ok
+trajectory	record.noPayload	No payload captured	ペイロードは取得されていません	ok
+trajectory	record.noResult	No result captured	結果は取得されていません	ok
+trajectory	record.noOutput	No output	出力なし	ok
+trajectory	record.schemaUnavailable	Schema unavailable	スキーマはありません	ok
+trajectory	record.parameters	Parameters	パラメーター	ok
+trajectory	record.resultJson	Result JSON	結果の JSON	ok
+trajectory	record.json	JSON	JSON	ok
+trajectory	record.parametersJson	parameters JSON	parameters の JSON	ok
+trajectory	record.namedParametersJson	{name} parameters JSON	{name} の parameters JSON	ok
+trajectory	record.payloadJson	Payload JSON	ペイロードの JSON	ok
+trajectory	record.outputJson	Result JSON	結果の JSON	ok
+trajectory	record.thinking	Thinking	思考	ok
+trajectory	record.wrapLines	Wrap lines	行を折り返す	ok
+trajectory	code.source	Code	コード	ok
+trajectory	code.output	Output	出力	ok
+trajectory	code.copySource	Copy code	コードをコピー	ok
+trajectory	code.copyOutput	Copy output	出力をコピー	ok
+trajectory	code.originalJson	Original JSON	元の JSON	ok
+trajectory	code.running	Running…	実行中…	ok
+trajectory	record.systemPromptMissing	No system prompt in this request	このリクエストにシステムプロンプトはありません	ok
+trajectory	record.toolsMissing	No tools in this request	このリクエストにツールはありません	ok
+trajectory	record.systemPrompt	System Prompt	システムプロンプト	ok
+trajectory	record.tools	Tools	ツール	ok
+trajectory	block.openSummary	Open Block #{index} tool call summary	ブロック #{index} のツール呼び出し要約を開く	ok
+trajectory	block.openSummaryTitle	Open tool call summary	ツール呼び出しの要約を開く	ok
+trajectory	block.label	Block #{index} {type}	ブロック #{index} {type}	ok
+trajectory	history.loadingTrajectory	Loading trajectory…	軌跡を読み込んでいます…	ok
+trajectory	history.loadingEarlier	Loading earlier history…	以前の履歴を読み込んでいます…	ok
+trajectory	history.loadingEarlierAria	Loading earlier history…	以前の履歴を読み込んでいます…	ok
+trajectory	history.loadEarlier	Load earlier history	以前の履歴を読み込む	ok
+trajectory	history.clickToLoadEarlier	Click to load earlier history	クリックで以前の履歴を読み込む	ok
+trajectory	request.label	Request #{request}	リクエスト #{request}	ok
+trajectory	request.labelCompaction	Request #{request} · Compaction	リクエスト #{request} · 圧縮	ok
+trajectory	request.compaction	Compaction · {section}	圧縮 · {section}	ok
+trajectory	request.compactionPurpose	Compaction	圧縮	ok
+trajectory	request.retryProgress	{retry} of {maximum}	{retry} / {maximum}	ok
+trajectory	request.collapsedSummary	Collapsed {kind} summary, {summary}	折りたたまれた {kind} の要約、{summary}	ok
+trajectory	request.collapsedTurn	turn	ターン	ok
+trajectory	request.collapsedAssistant	assistant	アシスタント	ok
+trajectory	request.rowAria	{request}{kind}, {content}	{request}{kind}、{content}	ok
+trajectory	request.rowPrefix	Request {request}, 	リクエスト {request}、	ok
+trajectory	request.rowAriaCompaction	Request {request}, compaction	リクエスト {request}、圧縮	ok
+trajectory	request.noContent	no content	内容なし	ok
+trajectory	summary.toolCalls.one	{count} tool call	ツール呼び出し {count} 回	ok
+trajectory	summary.toolCalls.other	{count} tool calls	ツール呼び出し {count} 回	ok
+trajectory	summary.steps.one	{count} step	ステップ {count}	ok
+trajectory	summary.steps.other	{count} steps	ステップ {count}	ok
+trajectory	details.event	Event details	イベントの詳細	ok
+trajectory	details.resize	Resize event details	イベント詳細のサイズを変更	ok
+trajectory	details.resizeTitle	Drag to resize. Double-click to reset.	ドラッグでサイズ変更。ダブルクリックでリセット。	ok
+trajectory	details.close	Close details	詳細を閉じる	ok
+trajectory	details.status	Status	状態	ok
+trajectory	details.purpose	Purpose	目的	ok
+trajectory	details.provider	Provider	プロバイダー	ok
+trajectory	details.model	Model	モデル	ok
+trajectory	details.toolCalls	Tool calls	ツール呼び出し	ok
+trajectory	details.subtoolCalls	Subtool calls	サブツール呼び出し	ok
+trajectory	details.error	Error	エラー	ok
+trajectory	details.failure.auth	API key is invalid	API キーが正しくありません	ok
+trajectory	details.retry	Retry	再試行	ok
+trajectory	details.scheduled	Scheduled	予約済み	ok
+trajectory	details.retryDelay	Retry delay	再試行まで	ok
+trajectory	details.result	Result	結果	ok
+trajectory	details.compacted	Compacted	圧縮済み	ok
+trajectory	details.assistantMessage	Assistant Message	アシスタントのメッセージ	ok
+trajectory	details.source	Source	ソース	ok
+trajectory	details.hierarchy	Hierarchy	階層	ok
+trajectory	details.toolCall	Tool Call	ツール呼び出し	ok
+trajectory	timeline.aria	Trajectory timeline	軌跡のタイムライン	ok
+trajectory	timeline.overviewAria	Timeline overview; drag horizontally to focus events	タイムラインの概観。横にドラッグするとイベントに注目できます	ok
+trajectory	timeline.noTimingData	No timing data	計測データなし	ok
+trajectory	timeline.total	Total {duration}	合計 {duration}	ok
+trajectory	timeline.started	Started {time}	開始 {time}	ok
+trajectory	timeline.ttftDecoding	TTFT {ttft} · Decoding {decoding}	TTFT {ttft} · デコード {decoding}	ok
+trajectory	layout.compacting	Compacting context…	コンテキストを圧縮しています…	ok
+trajectory	layout.compactionFailed	Compaction failed	圧縮に失敗しました	ok
+trajectory	layout.compacted	Context compacted	コンテキストを圧縮しました	ok
+trajectory	layout.toolCallOnly	Tool call only	ツール呼び出しのみ	ok
+trajectory	attachment.list	Attachments	添付	ok
+trajectory	attachment.imageName	Image {index}	画像 {index}	ok
+trajectory	layout.imageCount	Images ×{count}	画像 ×{count}	ok
+trajectory	layout.fileAttachments	Files ×{count}	ファイル ×{count}	ok
+trajectory	layout.initialSystemPrompt	Initial System Prompt	初期システムプロンプト	ok
+trajectory	layout.systemPromptUpdated	System Prompt Updated	システムプロンプトを更新	ok
+trajectory	layout.toolsUpdated	Tools Updated	ツールを更新	ok
+trajectory	layout.toolAdded	Tool added: {name}	ツールを追加: {name}	ok
+trajectory	layout.toolRemoved	Tool removed: {name}	ツールを削除: {name}	ok
+trajectory	layout.toolUpdateNotice	Tools updated	ツールを更新	ok
+trajectory	layout.toolsAdded	Added: {names}	追加: {names}	ok
+trajectory	layout.toolsAddedCount	{count} added	{count} 件追加	ok
+trajectory	layout.toolsChanged	{added} added, {removed} removed	{added} 件追加、{removed} 件削除	ok
+trajectory	layout.toolsRemoved	Removed: {names}	削除: {names}	ok
+trajectory	layout.toolsRemovedCount	{count} removed	{count} 件削除	ok
+trajectory	layout.systemPromptAndToolsUpdated	System Prompt and Tools Updated	システムプロンプトとツールを更新	ok
+trajectory	layout.compactionInterrupted	Compaction was interrupted before completion.	圧縮は完了する前に中断されました。	ok
+pluginManager	panel	Plugins	プラグイン	ok
+pluginManager	title	Plugins	プラグイン	ok
+pluginManager	intro	Install, enable, and configure plugins	プラグインのインストール・有効化・設定	ok
+pluginManager	infoLabel	About plugins	プラグインについて	ok
+pluginManager	infoDescription	Configure official plugins and install or manage other plugins here. View the built-in plugin list and runtime status in Settings → Built-in plugins.	公式プラグインの設定と、その他のプラグインのインストール・管理はここで行います。組み込みプラグインの一覧と実行状態は「設定 → 組み込みプラグイン」で確認できます。	ok
+pluginManager	loading	Reading plugins…	プラグインを読み込み中…	ok
+pluginManager	error	Could not read all plugins, possibly due to a network problem	一部のプラグインを読み込めませんでした。ネットワークの問題が考えられます	ok
+pluginManager	unavailable	This deployment runs without a manageable profile, so plugins cannot be installed or switched here.	この環境には管理できるプロファイルがないため、ここではプラグインをインストールしたり切り替えたりできません。	ok
+pluginManager	retry	Retry	再試行	ok
+pluginManager	refresh	Refresh	更新	ok
+pluginManager	refreshError	Refresh failed. Please try again.	更新に失敗しました。もう一度お試しください。	ok
+pluginManager	empty	No plugins are installed yet.	プラグインがまだインストールされていません。	ok
+pluginManager	addPlugin	Add plugin	プラグインを追加	ok
+pluginManager	restartNotice	The change takes effect at the next start	変更は次回の起動時に反映されます	ok
+pluginManager	overriddenNotice	{name} was saved, but a higher-priority configuration overrides it, so it is not in effect	{name} は保存されましたが、より優先度の高い設定に上書きされるため反映されていません	ok
+pluginManager	bundlesTitle	Installed	インストール済み	ok
+pluginManager	officialTitle	Official	公式	ok
+pluginManager	statusProblem	Problem	問題	ok
+pluginManager	statusBeta	Experimental	実験的	ok
+pluginManager	reasonLabel	Reason	理由	ok
+pluginManager	metadataError	Package metadata error: {error}	パッケージメタデータのエラー: {error}	ok
+pluginManager	versionTag	v{version}	v{version}	ok
+pluginManager	partsLabel	Components	コンポーネント	ok
+pluginManager	partsEmpty	This plugin pack contains no components.	このプラグインパックにはコンポーネントが含まれていません。	ok
+pluginManager	partsCountTotal	{count} total	合計 {count}	ok
+pluginManager	partsCountRunning	{count} running	{count} 実行中	ok
+pluginManager	partsCountOff	{count} off	{count} オフ	ok
+pluginManager	partOff	Off	オフ	ok
+pluginManager	partsCountFailed	{count} failed	{count} 失敗	ok
+pluginManager	partsFilter	Filter components	コンポーネントを絞り込む	ok
+pluginManager	partsFilterEmpty	No component matches.	一致するコンポーネントがありません。	ok
+pluginManager	partToggle	Enable component {name}	コンポーネント {name} を有効にする	ok
+pluginManager	rowPhasePending	Waiting for dependencies	依存関係を待機中	ok
+pluginManager	rowPhaseLoading	Loading	読み込み中	ok
+pluginManager	rowPhaseActive	Running	実行中	ok
+pluginManager	rowPhaseFailed	Problem	問題	ok
+pluginManager	rowPhaseUnloading	Unloading	アンロード中	ok
+pluginManager	enableToggle	Enable {name}	{name} を有効にする	ok
+pluginManager	openDetail	View {name}	{name} を表示	ok
+pluginManager	backToList	Back to plugins	プラグイン一覧に戻る	ok
+pluginManager	crumbRoot	Plugins	プラグイン	ok
+pluginManager	backToPackage	Back to {name}	{name} に戻る	ok
+pluginManager	configureRow	Configure {name}	{name} を設定	ok
+pluginManager	rowStateIdle	Not running	未実行	ok
+pluginManager	uninstall	Uninstall	アンインストール	ok
+pluginManager	uninstallLabel	Uninstall {name}	{name} をアンインストール	ok
+pluginManager	installTitle	Add plugin	プラグインを追加	ok
+pluginManager	installDescription	Enter the plugin's package name, GitHub repository address, or local directory path.	プラグインのパッケージ名、GitHub リポジトリのアドレス、またはローカルディレクトリのパスを入力してください。	ok
+pluginManager	installSpecLabel	Package name or address	パッケージ名またはアドレス	ok
+pluginManager	installSpecPlaceholder	for example dsh-plugin-whale-pet	例: dsh-plugin-whale-pet	ok
+pluginManager	installGuideToggle	Install guide and examples	インストールのガイドと例	ok
+pluginManager	installGuideHide	Hide the guide	ガイドを閉じる	ok
+pluginManager	installGuideIdTitle	Enter the plugin's npm package name	プラグインの npm パッケージ名を入力	ok
+pluginManager	installGuideIdExample	dsh-plugin-whale-pet	dsh-plugin-whale-pet	ok
+pluginManager	installGuideIdHint	The plugin package name is the npm package name (like dsh-xxx or @author/plugin): the part after dsh plugin add or pnpm add in a community plugin's README install command.	プラグインのパッケージ名は npm のパッケージ名です (dsh-xxx や @作者/プラグイン名 のような形式)。コミュニティプラグインの README にあるインストール手順の、dsh plugin add または pnpm add の後ろの部分です。	ok
+pluginManager	installGuideExampleLabel	Example: 	例: 	ok
+pluginManager	installGitTemplateHint	Replace this with the actual Git repository address.	実際の Git リポジトリのアドレスに置き換えてください。	ok
+pluginManager	installPathTemplateHint	Replace this with the actual path to your local plugin directory.	ローカルのプラグインディレクトリの実際のパスに置き換えてください。	ok
+pluginManager	installGuideFill	Use example	例を入力	ok
+pluginManager	installGuideFillAria	Use the example {example}	例 {example} を入力	ok
+pluginManager	installGuideSafety	Install only plugins you trust: they run with your permissions and can damage DeepSeek Harness or leak your data.	信頼できるプラグインだけをインストールしてください。プラグインはあなたの権限で動作し、DeepSeek Harness を壊したり、データを外部に漏らしたりする可能性があります。	ok
+pluginManager	installUpgradeNotice	Installed plugins do not update automatically yet. To upgrade a plugin, uninstall it and install the new version. Later releases will keep improving the upgrade experience.	インストールしたプラグインはまだ自動更新されません。アップグレードするにはアンインストールしてから新しいバージョンをインストールしてください。今後のリリースで改善していきます。	ok
+pluginManager	registryToggle	Registry	レジストリ	ok
+pluginManager	registryLegend	The npm registry the plugin is downloaded from	プラグインのダウンロード元になる npm レジストリ	ok
+pluginManager	registryDefault	Default registry	既定のレジストリ	ok
+pluginManager	registryOfficial	Official npm registry	npm 公式レジストリ	ok
+pluginManager	registryNpmmirror	Mainland China mirror	中国本土のミラー	ok
+pluginManager	registryCustom	Custom address	カスタムアドレス	ok
+pluginManager	registryCustomPlaceholder	https://npm.example.com/	https://npm.example.com/	ok
+pluginManager	registryCustomHint	Enter an internal or private npm registry address starting with http:// or https://. If it requires a login, store the credentials in ~/.npmrc on this machine.	http:// または https:// で始まる、社内・プライベートな npm レジストリのアドレスを入力してください。ログインが必要な場合は、このマシンの ~/.npmrc に認証情報を保存してください。	ok
+pluginManager	registryCustomInvalid	Enter an address starting with http:// or https://	http:// または https:// で始まるアドレスを入力してください	ok
+pluginManager	registryListSeparator	, 	、	ok
+pluginManager	sentenceSeparator	 	 	ok
+pluginManager	installRun	Install	インストール	ok
+pluginManager	installChecking	Checking…	確認中…	ok
+pluginManager	installProblemInvalid	This is not a package name or address that can be installed: {reason}	インストールできるパッケージ名またはアドレスではありません: {reason}	ok
+pluginManager	installProblemInstalled	This plugin is already installed. To upgrade it, uninstall it and install it again	このプラグインはすでにインストールされています。アップグレードするにはアンインストールしてから再インストールしてください	ok
+pluginManager	installProblemShipped	This plugin ships with DSH; upgrading DSH updates it	このプラグインは DSH に同梱されています。DSH をアップグレードすると更新されます	ok
+pluginManager	installProblemNotFound	No such plugin was found	該当するプラグインが見つかりません	ok
+pluginManager	installProblemNotPackage	The path does not exist or is not a valid plugin package	そのパスが存在しないか、有効なプラグインパッケージではありません	ok
+pluginManager	installProblemNotBundle	This package declares no bundle, so it cannot be installed as a plugin: {reason}	このパッケージはバンドルを宣言していないため、プラグインとしてインストールできません: {reason}	ok
+pluginManager	installProblemNetwork	The plugin registry could not be reached; check the network and try again	プラグインのレジストリに接続できませんでした。ネットワークを確認してからもう一度お試しください	ok
+pluginManager	installProblemNetworkAll	No registry could be reached (tried: {registries}); check the network or proxy settings, or change the registry	どのレジストリにも接続できませんでした (試行: {registries})。ネットワークまたはプロキシの設定を確認するか、レジストリを変更してください	ok
+pluginManager	installProblemUnknown	The plugin could not be looked up: {reason}	プラグインの情報を取得できませんでした: {reason}	ok
+pluginManager	installingTitle	Installing the plugin…	プラグインをインストール中…	ok
+pluginManager	installedTitle	Installed	インストール済み	ok
+pluginManager	installFailedTitle	The plugin could not be installed	プラグインをインストールできませんでした	ok
+pluginManager	installGithubFailedTitle	Cannot access GitHub	GitHub にアクセスできません	ok
+pluginManager	installGithubTimeoutTitle	GitHub connection timed out	GitHub への接続がタイムアウトしました	ok
+pluginManager	installGithubFailedDescription	Try another installation source.	別のインストール元を試してください。	ok
+pluginManager	installUseGithubMirror	Use mainland China mirror	中国本土のミラーを使う	ok
+pluginManager	installTryAnotherWay	Try another way	別の方法を試す	ok
+pluginManager	installPackageLabel	Plugin package name	プラグインのパッケージ名	ok
+pluginManager	installEdit	Edit	編集	ok
+pluginManager	installEditAria	Back to editing	編集に戻る	ok
+pluginManager	installCancelAndEdit	Cancel installation and return to editing	インストールをキャンセルして編集に戻る	ok
+pluginManager	installApplyingCancellationError	Cancellation was not confirmed. Installation is being applied; wait for its result. {reason}	キャンセルを確認できませんでした。インストールは最終処理に入っているため、結果を待ってください。{reason}	ok
+pluginManager	installReconcile	Check installation status	インストール状態を確認	ok
+pluginManager	installUnknownTitle	Installation result unavailable	インストール結果を取得できません	ok
+pluginManager	installUnknownDescription	The Host has no active installation with this request id. Check the plugin list before trying again.	ホストにこの要求 ID のインストールがありません。プラグイン一覧を確認してからもう一度お試しください。	ok
+pluginManager	installResultUnconfirmed	The installation result was not received. Check installation status. {reason}	インストール結果を受信できませんでした。インストール状態を確認してください。{reason}	ok
+pluginManager	installAwaitingAcceptance	Waiting for the Host to accept installation. Cancellation will retry automatically after confirmation.	ホストがインストールを受け付けるのを待っています。確認後にキャンセルを自動で再試行します。	ok
+pluginManager	installBackgroundUnknown	Installation result unavailable. Check the plugin list.	インストール結果を取得できません。プラグイン一覧を確認してください。	ok
+pluginManager	installCancel	Cancel install	インストールをキャンセル	ok
+pluginManager	installCloseCancels	Cancel install and close	インストールをキャンセルして閉じる	ok
+pluginManager	installViewTask	View installation	インストールを表示	ok
+pluginManager	installUnconfirmedTitle	Installation status unconfirmed	インストール状態が未確認です	ok
+pluginManager	installBackgroundDone	Installation finished. View installation details.	インストールが完了しました。詳細を確認できます。	ok
+pluginManager	installBackgroundFailed	Installation failed. View installation details.	インストールに失敗しました。詳細を確認できます。	ok
+pluginManager	installBackgroundUnconfirmed	Installation status is unconfirmed. View the installation for details.	インストール状態が未確認です。詳細はインストールを開いて確認してください。	ok
+pluginManager	installBackgroundApplying	Installation is being applied and cannot be cancelled. View installation progress.	インストールは最終処理に入っていてキャンセルできません。進行状況を確認できます。	ok
+pluginManager	installStarting	Preparing installation…	インストールを準備中…	ok
+pluginManager	installCancelling	Stopping installation…	インストールを停止中…	ok
+pluginManager	installApplying	Applying configuration, please wait…	設定を反映しています。しばらくお待ちください…	ok
+pluginManager	installCancelledShort	Cancelled	キャンセル済み	ok
+pluginManager	installCancelled	Installation cancelled; the plugin is not enabled, and downloaded files may remain	インストールをキャンセルしました。プラグインは有効になっておらず、ダウンロードされたファイルが残っている場合があります	ok
+pluginManager	installCancelUnconfirmed	Installation has not been confirmed stopped. Retry cancellation or wait for the installation result. {reason}	インストールの停止を確認できませんでした。キャンセルを再試行するか、インストールの結果を待ってください。{reason}	ok
+pluginManager	installEnableNow	Enable now	今すぐ有効にする	ok
+pluginManager	installDetailsShow	Show install details	インストールの詳細を表示	ok
+pluginManager	installDetailsHide	Hide install details	インストールの詳細を隠す	ok
+pluginManager	installVersion	Version {version}	バージョン {version}	ok
+pluginManager	installSubjectPath	Local directory	ローカルディレクトリ	ok
+pluginManager	installSubjectGit	Git repository	Git リポジトリ	ok
+pluginManager	installSubjectTarball	Tarball	tarball	ok
+pluginManager	installLocation	Installs into {dir}	{dir} にインストールされます	ok
+pluginManager	installRetry	Retry	再試行	ok
+pluginManager	installChangeRegistry	Change registry	レジストリを変更	ok
+pluginManager	installAttempt	{previous} could not serve the package; retrying through {registry} (registry {index} of {total})	{previous} からパッケージを取得できなかったため、{registry} で再試行します ({total} 件中 {index} 件目のレジストリ)	ok
+pluginManager	installAttemptBadge	Attempt {index} · {registry}	第 {index} 回 · {registry}	ok
+pluginManager	installFailureNetwork	The network connection failed	ネットワーク接続に失敗しました	ok
+pluginManager	installFailureNetworkAll	No registry could be reached (tried: {registries}). Check the network or proxy settings, or change the registry and retry.	どのレジストリにも接続できませんでした (試行: {registries})。ネットワークまたはプロキシの設定を確認するか、レジストリを変更して再試行してください。	ok
+pluginManager	installFailureNetworkHost	{host} could not be reached. A GitHub address or a .tgz link is not fetched through the registry: this machine must reach it directly or through a proxy. If the plugin is also published to npm, enter its package name instead.	{host} に接続できませんでした。GitHub のアドレスや .tgz への直リンクはレジストリを経由しないため、このマシンから直接またはプロキシ経由で接続できる必要があります。プラグインが npm にも公開されている場合は、パッケージ名を入力してください。	ok
+pluginManager	installFailureNotFound	No such plugin was found	該当するプラグインが見つかりません	ok
+pluginManager	installFailureNoMatchingVersion	No version matches the request	条件に一致するバージョンがありません	ok
+pluginManager	installFailureDiskFull	The disk is full; the install stopped	ディスクの空き容量が足りないため、インストールを中止しました	ok
+pluginManager	installFailurePermission	No write permission; the plugin cannot be installed	書き込み権限がないため、プラグインをインストールできません	ok
+pluginManager	installFailureBuildBlocked	A dependency's install scripts need your permission before the install can continue	依存パッケージのインストールスクリプトを許可するまで、インストールを続行できません	ok
+pluginManager	installFailureBuildBlockedManual	pnpm blocked install scripts; allow them under allowBuilds in pnpm-workspace.yaml and retry	pnpm がインストールスクリプトをブロックしました。pnpm-workspace.yaml の allowBuilds で許可してから再試行してください	ok
+pluginManager	installFailureIntegrity	The downloaded package failed its integrity check	ダウンロードしたパッケージの整合性チェックに失敗しました	ok
+pluginManager	installFailureTimeout	The install timed out	インストールがタイムアウトしました	ok
+pluginManager	installFailurePnpmMissing	pnpm was not found, so nothing can be installed	pnpm が見つからないため、インストールできません	ok
+pluginManager	installFailureGeneric	Something went wrong during the install; the details say what	インストール中に問題が発生しました。詳細に原因が表示されます	ok
+pluginManager	terminalRunning	Running	実行中	ok
+pluginManager	terminalFailed	Failed	失敗	ok
+pluginManager	terminalDone	Done	完了	ok
+pluginManager	terminalCopy	Copy	コピー	ok
+pluginManager	terminalCopied	Copied	コピーしました	ok
+pluginManager	terminalNoOutput	No output	出力なし	ok
+pluginManager	terminalCollapseAria	Collapse output	出力を折りたたむ	ok
+pluginManager	terminalCollapse	Collapse	折りたたむ	ok
+pluginManager	terminalExpandAria	Expand the remaining {n} output lines	出力の残り {n} 行を展開	ok
+pluginManager	terminalExpand	… {n} more lines	… 残り {n} 行	ok
+pluginManager	terminalExitCode	exit code {code}	終了コード {code}	ok
+pluginManager	terminalSignal	signal {signal}	シグナル {signal}	ok
+pluginManager	terminalNoExitCode	no exit code	終了コードなし	ok
+pluginManager	installDoneNothing	Install finished with no new dependency.	インストールが完了しました。新しい依存パッケージはありません。	ok
+pluginManager	installDoneRestart	Installed; it loads at the next start.	インストールしました。次回の起動時に読み込まれます。	ok
+pluginManager	installDoneApproved	Install scripts allowed for {names}	{names} のインストールスクリプトを許可しました	ok
+pluginManager	installApprovalTitle	Install scripts need permission	インストールスクリプトの許可が必要です	ok
+pluginManager	installApprovalDescription	These packages have install scripts that pnpm did not run.	以下のパッケージには、pnpm が実行しなかったインストールスクリプトがあります。	ok
+pluginManager	installApprovalConsequence	Once allowed, the scripts run here with your permissions, and the permission is saved in this profile.	許可すると、スクリプトはこの環境であなたの権限で実行され、許可はこのプロファイルに保存されます。	ok
+pluginManager	installApprovalCaution	Allow only packages you trust.	信頼できるパッケージだけを許可してください。	ok
+pluginManager	installApproveAndRetry	Allow these scripts and retry	これらのスクリプトを許可して再試行	ok
+pluginManager	installClose	Done	完了	ok
+pluginManager	close	Close	閉じる	ok
+pluginManager	cancel	Cancel	キャンセル	ok
+pluginManager	confirmUninstallTitle	Uninstall "{name}"?	「{name}」をアンインストールしますか？	ok
+pluginManager	confirmUninstallDescription	What it provides goes away once it is uninstalled.	アンインストールすると、それが提供している機能は使えなくなります。	ok
+pluginManager	confirmUninstall	Uninstall	アンインストール	ok
+pluginManager	failedEnable	Could not enable: {reason}	有効にできませんでした: {reason}	ok
+pluginManager	failedDisable	Could not disable: {reason}	無効にできませんでした: {reason}	ok
+pluginManager	failedUninstall	Could not uninstall: {reason}	アンインストールできませんでした: {reason}	ok
+pluginManager	failedRowEnable	Could not enable the component: {reason}	コンポーネントを有効にできませんでした: {reason}	ok
+pluginManager	failedRowDisable	Could not disable the component: {reason}	コンポーネントを無効にできませんでした: {reason}	ok
+pluginManager	reasonManagementRequired	Plugin management needs it; it cannot be switched off or uninstalled.	プラグイン管理に必要なため、無効化もアンインストールもできません。	ok
+pluginManager	reasonUnaddressable	The profile patch cannot address this one uniquely.	プロファイルのパッチではこれを一意に指定できません。	ok
+pluginManager	reasonUnknownPlugin	No such plugin.	該当するプラグインがありません。	ok
+pluginManager	reasonInvalidSpec	Enter a valid package name or address.	有効なパッケージ名またはアドレスを入力してください。	ok
+pluginManager	reasonAmbiguousInstall	Which package was installed cannot be told from the dependency change.	依存関係の変化から、どのパッケージがインストールされたか判断できません。	ok
+pluginManager	reasonNotBundle	This package declares no bundle, so it cannot be managed as a plugin.	このパッケージはバンドルを宣言していないため、プラグインとして管理できません。	ok
+pluginManager	reasonNotRemovable	This package is not owned by the profile, or plugin management needs it.	このパッケージはプロファイルが所有していないか、プラグイン管理に必要です。	ok
+pluginManager	reasonStopProfile	This profile runs without HMR; stop it and uninstall the package with dsh plugin.	このプロファイルは HMR なしで動作しています。停止してから dsh plugin でアンインストールしてください。	ok
+pluginManager	reasonBundleInUse	Other configuration still uses this bundle's components; switch them off first.	ほかの設定がこのバンドルのコンポーネントをまだ使用しています。先にそれらを無効にしてください。	ok
+pluginManager	reasonStaleApproval	The pending script approvals changed; install again to refresh them.	許可待ちのインストールスクリプトが変わったため、再インストールして更新してください。	ok
+pluginManager	reasonIncompatibleVersion	{plugin} is incompatible with DSH {runtime} (requires {peers}); running it may cause crashes or data loss.	{plugin} は DSH {runtime} と互換性がありません (必要なバージョン: {peers})。実行するとクラッシュやデータ損失が起きる可能性があります。	ok
+pluginManager	reasonIncompatibleVersionUnnamed	This plugin is incompatible with the running DSH version; running it may cause crashes or data loss.	このプラグインは実行中の DSH のバージョンと互換性がありません。実行するとクラッシュやデータ損失が起きる可能性があります。	ok
+pluginManager	reasonIncompatibleInstall	Install a plugin version compatible with this DSH.	この DSH と互換性のあるバージョンのプラグインをインストールしてください。	ok
+pluginManager	reasonIncompatibleInstalled	Uninstall it and install a version compatible with this DSH.	アンインストールして、この DSH と互換性のあるバージョンをインストールしてください。	ok
+pluginManager	reasonOperationError	The Host reported an error.	ホストがエラーを報告しました。	ok
+schedule.manager	panel	Automation tasks	自動化タスク	ok
+schedule.manager	title	Automation tasks	自動化タスク	ok
+schedule.manager	new.action	New	新規	ok
+schedule.manager	list.label	Task catalog	タスク一覧	ok
+schedule.manager	list.nextPrefix	Next scheduled time: 	次回の実行予定: 	ok
+schedule.manager	list.loading	Loading tasks…	タスクを読み込み中…	ok
+schedule.manager	list.error	Could not load tasks.	タスクを読み込めませんでした。	ok
+schedule.manager	list.retry	Retry	再試行	ok
+schedule.manager	list.empty	No tasks yet. Tasks created in your sessions appear here.	タスクはまだありません。セッションで作成したタスクがここに表示されます。	ok
+schedule.manager	list.emptyInactive	No inactive automation tasks	終了した自動化タスクはありません	ok
+schedule.manager	list.noMatches	No matching tasks	一致するタスクがありません	ok
+schedule.manager	search.label	Search tasks	タスクを検索	ok
+schedule.manager	search.placeholder	Search automation tasks	自動化タスクを検索	ok
+schedule.manager	search.clear	Clear search	検索をクリア	ok
+schedule.manager	empty.action	New automation task	自動化タスクを作成	ok
+schedule.manager	statusFilter.label	Task status	タスクの状態	ok
+schedule.manager	statusFilter.all	All	すべて	ok
+schedule.manager	status.active	Enabled	有効	ok
+schedule.manager	status.inactive	Inactive	終了	ok
+schedule.manager	detail.label	Task details	タスクの詳細	ok
+schedule.manager	detail.close	Close details	詳細を閉じる	ok
+schedule.manager	detail.more	Automation task actions	自動化タスクの操作	ok
+schedule.manager	detail.nextRun	Next run	次回の実行	ok
+schedule.manager	detail.tabs	Task detail views	タスク詳細の表示	ok
+schedule.manager	detail.rule	Rules	ルール	ok
+schedule.manager	detail.records	Delivery records	実行記録	ok
+schedule.manager	delivery.empty	No delivery record available	実行記録がありません	ok
+schedule.manager	delivery.loading	Loading delivery records…	実行記録を読み込み中…	ok
+schedule.manager	delivery.error	Could not load delivery records.	実行記録を読み込めませんでした。	ok
+schedule.manager	delivery.notFound	This task is no longer available.	このタスクは利用できません。	ok
+schedule.manager	delivery.cursorError	Records were updated.	記録が更新されました。	ok
+schedule.manager	delivery.retry	Retry	再試行	ok
+schedule.manager	delivery.refresh	Refresh	更新	ok
+schedule.manager	delivery.loadMore	Load more	さらに読み込む	ok
+schedule.manager	delivery.expand	Expand	展開する	ok
+schedule.manager	delivery.collapse	Collapse	折りたたむ	ok
+schedule.manager	delivery.pruned	Earlier delivery records have been cleared	以前の実行記録は削除されました	ok
+schedule.manager	delivery.retention	Retention rules	保存期間のルール	ok
+schedule.manager	delivery.retentionBounds	Each task keeps up to {records} delivery records from the last {days} days.	各タスクは直近 {days} 日間の実行記録を最大 {records} 件保持します。	ok
+schedule.manager	delivery.retentionExplanation	When a new record is saved, older records outside these limits are cleared automatically. Clearing records does not stop the task.	新しい記録が保存されると、この範囲を超えた古い記録は自動的に削除されます。記録を削除してもタスクは停止しません。	ok
+schedule.manager	detail.name	Automation task name	自動化タスクの名前	ok
+schedule.manager	detail.instruction	Automation task instruction	自動化タスクの内容	ok
+schedule.manager	detail.status	Status	状態	ok
+schedule.manager	detail.next	Next scheduled time	次回の実行予定	ok
+schedule.manager	detail.frequency	Frequency	実行頻度	ok
+schedule.manager	detail.id	Task ID	タスク ID	ok
+schedule.manager	detail.session	Linked session	リンクされたセッション	ok
+schedule.manager	detail.openSession	Linked session: open original session	リンクされたセッション: 元のセッションを開く	ok
+schedule.manager	detail.openSessionTitle	Linked session {title}: open original session	リンクされたセッション {title}: 元のセッションを開く	ok
+schedule.manager	detail.sessionLoading	Loading original session information.	元のセッションの情報を読み込み中です。	ok
+schedule.manager	detail.sessionArchived	The original session is archived.	元のセッションはアーカイブされています。	ok
+schedule.manager	detail.sessionUnavailable	The original session is unavailable.	元のセッションは利用できません。	ok
+schedule.manager	detail.missing	Task unavailable. It may have been deleted.	タスクを利用できません。削除された可能性があります。	ok
+schedule.manager	delivery.label	Saved delivery record	保存された実行記録	ok
+schedule.manager	frequency.once	Once	1 回のみ	ok
+schedule.manager	frequency.every	Every {value} {unit}	{value} {unit}ごと	ok
+schedule.manager	time.locale	en	ja	ok
+schedule.manager	time.utcPrefix	UTC	UTC	ok
+schedule.manager	frequency.daily	Daily at {time} ({timeZone})	毎日 {time} ({timeZone})	ok
+schedule.manager	frequency.dailyLocal	Daily at {time}	毎日 {time}	ok
+schedule.manager	frequency.weekly	Weekly on {weekdays} at {time} ({timeZone})	毎週 {weekdays} の {time} ({timeZone})	ok
+schedule.manager	frequency.weeklyLocal	Weekly on {weekdays} at {time}	毎週 {weekdays} の {time}	ok
+schedule.manager	frequency.cron	Cron {expression} ({timeZone})	Cron {expression} ({timeZone})	ok
+schedule.manager	frequency.cronLocal	Cron {expression}	Cron {expression}	ok
+schedule.manager	frequency.cronRule	{rule} ({timeZone})	{rule} ({timeZone})	ok
+schedule.manager	cron.list.join	, 	、	ok
+schedule.manager	cron.part.join	 	 	ok
+schedule.manager	cron.weekday.name	{weekday}	{weekday}曜日	ok
+schedule.manager	cron.weekday.range	{from}–{to}	{from}〜{to}	ok
+schedule.manager	cron.months	 in {months}	 ({months})	ok
+schedule.manager	cron.day.every	Every day{months}	毎日{months}	ok
+schedule.manager	cron.day.weekdays	{weekdays}{months}	{weekdays}{months}	ok
+schedule.manager	cron.day.monthDays	Day {days} of every month{months}	毎月 {days} 日{months}	ok
+schedule.manager	cron.day.both	Day {days} of every month or {weekdays}{months}	毎月 {days} 日または{weekdays}{months}	ok
+schedule.manager	cron.day.bothStarred	Day {days} of every month and {weekdays}{months}	毎月 {days} 日かつ{weekdays}{months}	ok
+schedule.manager	cron.hours.range	{from}–{to}	{from}〜{to}	ok
+schedule.manager	cron.hours.list	{hours}	{hours}	ok
+schedule.manager	cron.time.everyMinute	Every minute	毎分	ok
+schedule.manager	cron.time.everyMinutes	Every {step} minutes	{step} 分ごと	ok
+schedule.manager	cron.time.joinedEveryMinute	every minute	毎分	ok
+schedule.manager	cron.time.joinedEveryMinutes	every {step} minutes	{step} 分ごと	ok
+schedule.manager	cron.time.everyHour	Every hour	毎時	ok
+schedule.manager	cron.time.joinedEveryHour	every hour	毎時	ok
+schedule.manager	cron.time.everyNHours	Every {count} hours	{count} 時間ごと	ok
+schedule.manager	cron.time.joinedEveryNHours	every {count} hours	{count} 時間ごと	ok
+schedule.manager	cron.time.hourlyAt	Every hour at minute {minutes}	毎時 {minutes} 分	ok
+schedule.manager	cron.time.joinedHourlyAt	every hour at minute {minutes}	毎時 {minutes} 分	ok
+schedule.manager	cron.time.hoursEveryMinute	every minute during hours {hours}	{hours} 時の間は毎分	ok
+schedule.manager	cron.time.hoursEveryMinutes	every {step} minutes during hours {hours}	{hours} 時の間は {step} 分ごと	ok
+schedule.manager	cron.time.at	at {times}	{times} に	ok
+schedule.manager	cron.time.hoursAt	at minute {minutes} of hours {hours}	{hours} 時の {minutes} 分に	ok
+schedule.manager	frequency.weekday.join	, 	、	ok
+schedule.manager	frequency.weekday.1	Mon	月	ok
+schedule.manager	frequency.weekday.2	Tue	火	ok
+schedule.manager	frequency.weekday.3	Wed	水	ok
+schedule.manager	frequency.weekday.4	Thu	木	ok
+schedule.manager	frequency.weekday.5	Fri	金	ok
+schedule.manager	frequency.weekday.6	Sat	土	ok
+schedule.manager	frequency.weekday.7	Sun	日	ok
+schedule.manager	unit.day.one	day	日	ok
+schedule.manager	unit.day.other	days	日	ok
+schedule.manager	unit.hour.one	hour	時間	ok
+schedule.manager	unit.hour.other	hours	時間	ok
+schedule.manager	unit.minute.one	minute	分	ok
+schedule.manager	unit.minute.other	minutes	分	ok
+schedule.manager	unit.second.one	second	秒	ok
+schedule.manager	unit.second.other	seconds	秒	ok
+schedule.manager	relative.now	Due now	まもなく実行	ok
+schedule.manager	relative.future	in {value} {unit}	{value} {unit}後	ok
+schedule.manager	relative.overdue	{value} {unit} overdue	{value} {unit}超過	ok
+schedule.manager	timing.date	Date	日付	ok
+schedule.manager	timing.time	Time	時刻	ok
+schedule.manager	timing.hour	Hour	時	ok
+schedule.manager	timing.minute	Minute	分	ok
+schedule.manager	timing.second	Second	秒	ok
+schedule.manager	timing.prevMonth	Previous month	前の月	ok
+schedule.manager	timing.nextMonth	Next month	次の月	ok
+schedule.manager	timing.zone	Time zone	タイムゾーン	ok
+schedule.manager	timing.zoneSearch	Search by UTC offset, IANA ID, or city	UTC オフセット、IANA ID、都市名で検索	ok
+schedule.manager	timing.zoneNoResults	No matching time zones	一致するタイムゾーンがありません	ok
+schedule.manager	timing.interval	Repeat every	繰り返し間隔	ok
+schedule.manager	timing.intervalIncrease	Increase interval	間隔を増やす	ok
+schedule.manager	timing.intervalDecrease	Decrease interval	間隔を減らす	ok
+schedule.manager	timing.unit.hour	hours	時間	ok
+schedule.manager	timing.unit.minute	minutes	分	ok
+schedule.manager	timing.unit.second	seconds	秒	ok
+schedule.manager	timing.intervalHint.hour	At least 1 hour. The interval counts from task creation or the last rule change and is independent of time zones.	1 時間以上。間隔はタスクの作成時または最後のルール変更時から数え、タイムゾーンには依存しません。	ok
+schedule.manager	timing.intervalHint.minute	At least 1 minute. The interval counts from task creation or the last rule change and is independent of time zones.	1 分以上。間隔はタスクの作成時または最後のルール変更時から数え、タイムゾーンには依存しません。	ok
+schedule.manager	timing.intervalHint.second	At least 60 seconds. The interval counts from task creation or the last rule change and is independent of time zones.	60 秒以上。間隔はタスクの作成時または最後のルール変更時から数え、タイムゾーンには依存しません。	ok
+schedule.manager	timing.zoneNoStored	A one-time task stores only its target moment, not a time zone. The date and time are interpreted in the selected time zone.	1 回だけのタスクは実行する時刻だけを保存し、タイムゾーンは保存しません。日付と時刻は選択したタイムゾーンで解釈されます。	ok
+schedule.manager	timing.inactive	Inactive tasks are read-only. Their timing cannot be edited.	終了したタスクは読み取り専用です。実行時刻は編集できません。	ok
+schedule.manager	timing.conflict	This task changed while you were editing. Your draft is retained. Cancel and reopen after refresh to edit the latest rule.	編集中にタスクが変更されました。下書きは保持されています。最新のルールを編集するには、更新後にキャンセルして開き直してください。	ok
+schedule.manager	timing.notFound	This task is no longer available. Your draft is retained; cancel to close the editor.	このタスクは利用できません。下書きは保持されています。キャンセルすると編集画面を閉じます。	ok
+schedule.manager	timing.invalid	Enter a valid date and time, or check the timing fields.	有効な日付と時刻を入力するか、時間の項目を確認してください。	ok
+schedule.manager	timing.invalidZone	Enter a valid IANA time zone, for example Asia/Shanghai.	有効な IANA タイムゾーンを入力してください (例: Asia/Tokyo)。	ok
+schedule.manager	timing.notFuture	Choose a date and time in the future.	未来の日付と時刻を指定してください。	ok
+schedule.manager	timing.invalidInterval	Enter an interval of at least 1 minute.	1 分以上の間隔を入力してください。	ok
+schedule.manager	timing.invalidInterval.hour	Enter an interval of at least 1 hour.	1 時間以上の間隔を入力してください。	ok
+schedule.manager	timing.invalidInterval.minute	Enter an interval of at least 1 minute.	1 分以上の間隔を入力してください。	ok
+schedule.manager	timing.invalidInterval.second	Enter an interval of at least 60 seconds.	60 秒以上の間隔を入力してください。	ok
+schedule.manager	timing.error	Could not confirm the timing update. Your draft is retained. Check the task before retrying.	時間の更新を確認できませんでした。下書きは保持されています。再試行する前にタスクを確認してください。	ok
+schedule.manager	rule.title	Run time	実行時刻	ok
+schedule.manager	rule.repeat	Repeat	繰り返し	ok
+schedule.manager	rule.weekday	Weekday	曜日	ok
+schedule.manager	rule.weekdayOption	Weekday {weekday}	{weekday}曜日	ok
+schedule.manager	rule.unsaved	Unsaved changes	未保存の変更	ok
+schedule.manager	rule.save	Save changes	変更を保存	ok
+schedule.manager	rule.saving	Saving…	保存しています…	ok
+schedule.manager	rule.cancel	Cancel	キャンセル	ok
+schedule.manager	rule.invalidTitle	Enter a task name of at most 120 characters.	タスク名は 120 文字以内で入力してください。	ok
+schedule.manager	rule.invalidPrompt	Enter a task instruction.	タスクの内容を入力してください。	ok
+schedule.manager	rule.once	Once	1 回	ok
+schedule.manager	rule.everyMinutes	Every N minutes	N 分ごと	ok
+schedule.manager	rule.everyHours	Every N hours	N 時間ごと	ok
+schedule.manager	rule.everySeconds	Every N seconds	N 秒ごと	ok
+schedule.manager	rule.daily	Every day	毎日	ok
+schedule.manager	rule.weekdays	Monday to Friday	月曜日から金曜日	ok
+schedule.manager	rule.weekly	Weekly	毎週	ok
+schedule.manager	rule.cron	Custom	カスタム	ok
+schedule.manager	rule.cronLabel	Cron expression	Cron 式	ok
+schedule.manager	rule.cronInvalid	Enter a five-field cron expression, for example 0 9 * * 1-5.	5 フィールドの Cron 式を入力してください (例: 0 9 * * 1-5)。	ok
+schedule.manager	cronForm.frequency	Frequency	頻度	ok
+schedule.manager	cronForm.monthly	Monthly	毎月	ok
+schedule.manager	cronForm.weekly	Weekly	毎週	ok
+schedule.manager	cronForm.daily	Every day	毎日	ok
+schedule.manager	cronForm.dates	On dates	日付で指定	ok
+schedule.manager	cronForm.dateOption	Day {day}	{day} 日	ok
+schedule.manager	cronForm.atMinute	At minute	毎時の分	ok
+schedule.manager	cronForm.minuteIncrease	Increase minute	分を増やす	ok
+schedule.manager	cronForm.minuteDecrease	Decrease minute	分を減らす	ok
+schedule.manager	rule.zone.system	 (system)	 (システム)	ok
+schedule.manager	rule.error.conflict	This task changed before the update was saved. The row shows the saved rule; try again.	更新が保存される前にタスクが変更されました。表示されているのは保存済みのルールです。もう一度お試しください。	ok
+schedule.manager	rule.error.notFound	This task is no longer available.	このタスクは利用できません。	ok
+schedule.manager	rule.error.unknown	Could not confirm the rule update. The row shows the saved rule.	ルールの更新を確認できませんでした。表示されているのは保存済みのルールです。	ok
+schedule.manager	delete.action	Delete task	タスクを削除	ok
+schedule.manager	delete.title	Delete this task?	このタスクを削除しますか？	ok
+schedule.manager	delete.description	This stops the task from triggering and deletes it together with its saved delivery records. The original session and its messages remain; queued messages are not withdrawn.	タスクの実行を停止し、保存された実行記録とともに削除します。元のセッションとそのメッセージは残ります。キューに入っているメッセージは取り消されません。	ok
+schedule.manager	delete.confirm	Confirm deletion	削除を確定	ok
+schedule.manager	delete.cancel	Cancel	キャンセル	ok
+schedule.manager	delete.close	Close deletion confirmation	削除の確認を閉じる	ok
+schedule.manager	delete.pending	Deleting…	削除中…	ok
+schedule.manager	toast.deleted	Task deleted.	タスクを削除しました。	ok
+schedule.manager	toast.deleteFailed	Could not delete the task.	タスクを削除できませんでした。	ok
+schedule.manager	card.open	Open	開く	ok
+schedule.manager	card.openLabel	Open task details: {title}	タスクの詳細を開く: {title}	ok
+schedule.manager	card.deleted	Deleted	削除済み	ok
+schedule.manager	tool.invoked	Invoked {name}	{name} を呼び出しました	ok
+chat	message.stepProcess.thinking	Analyzing the request	リクエストを解析中	ok
+chat	message.stepProcess.read	Reading files	ファイルを読み取り中	ok
+chat	message.stepProcess.readImage	Reading images	画像を読み取り中	ok
+chat	message.stepProcess.write	Writing files	ファイルを書き込み中	ok
+chat	message.stepProcess.search	Searching code	コードを検索中	ok
+chat	message.stepProcess.edit	Editing files	ファイルを編集中	ok
+chat	message.stepProcess.commands	Running commands	コマンドを実行中	ok
+chat	message.stepProcess.code	Running code	コードを実行中	ok
+chat	message.stepProcess.webSearch	Searching the web	Web を検索中	ok
+chat	message.stepProcess.webFetch	Visiting web pages	Web ページを閲覧中	ok
+chat	message.stepProcess.subagents	Coordinating subagents	サブエージェントを調整中	ok
+chat	message.stepProcess.plan	Updating the plan	計画を更新中	ok
+chat	message.stepProcess.questions	Waiting for your action	操作を待っています	ok
+chat	message.stepProcess.tools	Calling tools	ツールを呼び出し中	ok
+chat	message.stepProcess.prepare.read	Preparing to read files	ファイルの読み取りを準備中	ok
+chat	message.stepProcess.prepare.readImage	Preparing to read images	画像の読み取りを準備中	ok
+chat	message.stepProcess.prepare.write	Preparing to write files	ファイルの書き込みを準備中	ok
+chat	message.stepProcess.prepare.search	Preparing to search code	コードの検索を準備中	ok
+chat	message.stepProcess.prepare.edit	Preparing to edit files	ファイルの編集を準備中	ok
+chat	message.stepProcess.prepare.commands	Preparing to run commands	コマンドの実行を準備中	ok
+chat	message.stepProcess.prepare.code	Preparing to run code	コードの実行を準備中	ok
+chat	message.stepProcess.prepare.webSearch	Preparing to search the web	Web 検索を準備中	ok
+chat	message.stepProcess.prepare.webFetch	Preparing to visit web pages	Web ページの閲覧を準備中	ok
+chat	message.stepProcess.prepare.subagents	Preparing to coordinate subagents	サブエージェントの調整を準備中	ok
+chat	message.stepProcess.prepare.plan	Preparing to update the plan	計画の更新を準備中	ok
+chat	message.stepProcess.prepare.questions	Preparing questions	質問を準備中	ok
+chat	message.stepProcess.prepare.tools	Preparing tool calls	ツール呼び出しを準備中	ok
+chat	message.stepProcess.done.thinking	Analysis completed	解析が完了しました	ok
+chat	message.stepProcess.done.read	Read files	ファイルを読み取りました	ok
+chat	message.stepProcess.done.readImage	Read images	画像を読み取りました	ok
+chat	message.stepProcess.done.write	Wrote files	ファイルを書き込みました	ok
+chat	message.stepProcess.done.search	Searched code	コードを検索しました	ok
+chat	message.stepProcess.done.edit	Edited files	ファイルを編集しました	ok
+chat	message.stepProcess.done.commands	Ran commands	コマンドを実行しました	ok
+chat	message.stepProcess.done.code	Ran code	コードを実行しました	ok
+chat	message.stepProcess.done.webSearch	Searched the web	Web を検索しました	ok
+chat	message.stepProcess.done.webFetch	Visited web pages	Web ページを閲覧しました	ok
+chat	message.stepProcess.done.subagents	Coordinated subagents	サブエージェントを調整しました	ok
+chat	message.stepProcess.done.plan	Updated the plan	計画を更新しました	ok
+chat	message.stepProcess.done.questions	Asked questions	質問しました	ok
+chat	message.stepProcess.done.tools	Called tools	ツールを呼び出しました	ok
+chat	message.stepProcess.joinTwo	{first} and {second}	{first}、{second}	ok
+chat	message.stepProcess.comma	, 	、	ok
+chat	message.stepProcess.sharedPrefix			ok
+chat	message.stepProcess.more	{title}, etc.	{title} など	ok
+chat	message.trigger.request	Execution requested	実行を要求	ok
+chat	message.trigger.goal	Continuing goal	ゴールを継続	ok
+chat	message.trigger.agent	Task message received	タスクメッセージを受信	ok
+chat	message.trigger.team	Team message received	チームメッセージを受信	ok
+chat	message.trigger.subagent	Subtask status updated	サブタスクの状態が更新	ok
+chat	message.trigger.github	GitHub event received	GitHub イベントを受信	ok
+chat	message.trigger.webhook	External event received	外部イベントを受信	ok
+chat	message.trigger.schedule	Automation task	自動化タスク	ok
+chat	message.trigger.job	Background task updated	バックグラウンドタスクが更新	ok
+chat	message.trigger.plugin	Plugin status updated	プラグインの状態が更新	ok
+chat	message.trigger.explanation	This notification triggered this response.	この通知がこの応答のきっかけです。	ok
+chat	message.turnProcess.worked	Completed	完了	ok
+chat	message.turnProcess.took	Completed in 	所要時間 	ok
+chat	message.turnProcess.failed	Failed	失敗	ok
+chat	view.chat	Chat	チャット	ok
+chat	image.open	View full image	画像全体を表示	ok
+chat	image.loading	Loading image…	画像を読み込んでいます…	ok
+chat	image.failed	Image preview unavailable	画像をプレビューできません	ok
+chat	image.dialog	Image preview	画像のプレビュー	ok
+chat	image.close	Close image preview	画像のプレビューを閉じる	ok
+chat	number.groupSeparator	,	,	ok
+chat	duration.compactSeconds	{seconds}s	{seconds} 秒	ok
+chat	duration.compactMinutes	{minutes}m{seconds}s	{minutes} 分 {seconds} 秒	ok
+chat	duration.milliseconds	{milliseconds}ms	{milliseconds}ms	ok
+chat	stats.counts	{turns} turns {steps} steps	{turns} ターン {steps} ステップ	ok
+chat	stats.cacheHit	Cache hit {percent}%	キャッシュヒット {percent}%	ok
+chat	stats.dialog.title	Session statistics	セッション統計	ok
+chat	stats.dialog.usageTitle	Token usage	トークン使用量	ok
+chat	stats.dialog.llmTime	LLM time	LLM の時間	ok
+chat	stats.dialog.toolTime	Tool time	ツールの時間	ok
+chat	stats.dialog.ttft	Avg time to first token (TTFT)	初回トークンまでの平均時間 (TTFT)	ok
+chat	stats.dialog.speed	Tokens per second (TPS)	1 秒あたりのトークン数 (TPS)	ok
+chat	chat.loadingHistory	Loading history…	履歴を読み込んでいます…	ok
+chat	chat.loadError	Failed to load history: {message} ({code})	履歴を読み込めませんでした: {message} ({code})	ok
+chat	chat.loadOlder	Load earlier	以前を読み込む	ok
+chat	chat.toBottom	Back to bottom	最下部へ戻る	ok
+chat	chat.deepDiving	Deep diving	深掘り中	ok
+chat	chat.deepDivingFor	Deep diving for {duration} ···	{duration} 深掘り中 ···	ok
+chat	chat.turnNavigation.label	Turn navigation	ターン移動	ok
+chat	chat.turnNavigation.jump	Jump to turn {turn}	ターン {turn} へ移動	ok
+chat	chat.turnNavigation.jumpLoad	Load and jump to turn {turn}	読み込んでターン {turn} へ移動	ok
+chat	chat.turnNavigation.turn	Turn {turn}	ターン {turn}	ok
+chat	settings.performance.title	Performance & usage	パフォーマンスと使用状況	ok
+chat	settings.performance.description	Choose how much performance and usage information to show	表示するパフォーマンスと使用状況の情報量を選択します	ok
+chat	settings.performance.compact	Compact	コンパクト	ok
+chat	settings.performance.detailed	Detailed	詳細	ok
+chat	settings.links.title	Open chat links in	チャットのリンクを開く場所	ok
+chat	settings.links.description	Choose where to open web links	Web リンクを開く場所を選択します	ok
+chat	settings.links.sidebar	In-App Sidebar	アプリ内サイドバー	ok
+chat	settings.links.newTab	Default Browser	既定のブラウザー	ok
+chat	settings.transcript.title	Work details	作業の詳細	ok
+chat	settings.transcript.description	Choose how much detail to show for tool calls	ツール呼び出しをどこまで詳しく表示するかを選択します	ok
+chat	settings.transcript.compact	Compact	コンパクト	ok
+chat	settings.transcript.standard	Standard	標準	ok
+chat	settings.transcript.detailed	Detailed	詳細	ok
+chat	settings.transcript.verbose	Verbose	とても詳細	ok
+chat	fileOpen.title	Couldn’t open file	ファイルを開けませんでした	ok
+chat	fileOpen.unknown	Couldn’t open this file	このファイルを開けませんでした	ok
+chat	message.extraBlock	Extra content block	追加のコンテンツブロック	ok
+chat	message.systemPrompt	System prompt	システムプロンプト	ok
+chat	message.systemPromptUpdate	System prompt update	システムプロンプトの更新	ok
+chat	message.toolAdded	Tool added: {name}	ツールを追加: {name}	ok
+chat	message.toolRemoved	Tool removed: {name}	ツールを削除: {name}	ok
+chat	message.toolsAdded	Added: {names}	追加: {names}	ok
+chat	message.toolsAddedCount	{count} added	{count} 件追加	ok
+chat	message.toolsChanged	{added} added, {removed} removed	{added} 件追加、{removed} 件削除	ok
+chat	message.toolsRemoved	Removed: {names}	削除: {names}	ok
+chat	message.toolsRemovedCount	{count} removed	{count} 件削除	ok
+chat	message.toolsUpdated	Tools updated	ツールを更新	ok
+chat	message.contextInjection	Context injection	コンテキストの注入	ok
+chat	message.contextRecall	Session recall	セッションの呼び戻し	ok
+chat	message.referenceSummary	Referenced session · {labels}	参照したセッション · {labels}	ok
+chat	message.referenceSeparator	, 	、	ok
+chat	message.context.instructions.loaded	loaded	読み込み	ok
+chat	message.context.instructions.added	added	追加	ok
+chat	message.context.instructions.updated	updated	更新	ok
+chat	message.context.instructions.removed	removed	削除	ok
+chat	message.context.catalog.replaced	Replacement catalog	置き換え後のカタログ	ok
+chat	message.context.catalog.more	… {count} more	… 他 {count} 件	ok
+chat	message.context.snapshot.supersedes	Supersedes earlier snapshots	以前のスナップショットを置き換えます	ok
+chat	message.context.relay.from	From session {session}	セッション {session} から	ok
+chat	message.context.recall.counts	{retained} kept · {omitted} omitted	{retained} 件保持 · {omitted} 件省略	ok
+chat	message.context.recall.truncated	truncated	省略	ok
+chat	message.compaction	Context compacted	コンテキストを圧縮しました	ok
+chat	message.compaction.running	Compacting context…	コンテキストを圧縮しています…	ok
+chat	message.compaction.completed	Compacted {items} history items (~{tokens} tokens)	履歴 {items} 件を圧縮しました (約 {tokens} トークン)	ok
+chat	message.compaction.expand	View compaction summary	圧縮の要約を表示	ok
+chat	message.compaction.unavailable	Compaction summary unavailable	圧縮の要約はありません	ok
+chat	message.compaction.commandTitle	compact	compact	ok
+chat	message.think	Think	思考	ok
+chat	message.unknownSurface	Unknown surface event: {type}	不明なイベント: {type}	ok
+chat	message.unknownBlock	Unknown content block	不明なコンテンツブロック	ok
+chat	message.turnProcess.toolCalls.one	{count} tool call	ツール呼び出し {count} 回	ok
+chat	message.turnProcess.toolCalls.other	{count} tool calls	ツール呼び出し {count} 回	ok
+chat	message.turnProcess.messages.one	{count} message	メッセージ {count} 件	ok
+chat	message.turnProcess.messages.other	{count} messages	メッセージ {count} 件	ok
+chat	message.turnProcess.subagents.one	{count} subagent	サブエージェント {count} 件	ok
+chat	message.turnProcess.subagents.other	{count} subagents	サブエージェント {count} 件	ok
+chat	message.turnProcess.thoughtForAWhile	Thought for a while	しばらく思考しました	ok
+chat	message.turnProcess.separator	 · 	 · 	ok
+chat	message.stopped	Stopped	停止しました	ok
+chat	message.branch	Branch into a new conversation	新しい会話に分岐	ok
+chat	message.branchUnavailable	Available only on the last message of a completed turn	完了したターンの最後のメッセージでのみ利用できます	ok
+chat	message.retry.active	Retrying model request	モデルリクエストを再試行しています	ok
+chat	message.retry.cancelled	Model request retry cancelled	モデルリクエストの再試行をキャンセルしました	ok
+chat	message.retry.started	Retried model request	モデルリクエストを再試行しました	ok
+chat	message.retry.scheduled	Waiting to retry model request	モデルリクエストの再試行を待機中	ok
+chat	message.retry.status	{label} ({retry}/{maximum}) · {seconds}s	{label} ({retry}/{maximum}) · {seconds} 秒	ok
+chat	message.retry.delay	Retry delay: 	再試行まで: 	ok
+chat	message.retry.failure	Failure reason: 	失敗の理由: 	ok
+chat	message.failure.auth	API key is invalid	API キーが正しくありません	ok
+chat	message.accountStopped	Task stopped	タスクを停止しました	ok
+chat	message.failure.accountSignedOut	Stopped because you signed out of DeepSeek.	DeepSeek からサインアウトしたため停止しました。	ok
+chat	message.failure.accountSignInRequired	Sign in to DeepSeek and ensure the request destination supports account authentication.	DeepSeek にサインインし、リクエスト先がアカウント認証に対応していることを確認してください。	ok
+chat	message.failure.quota	Request quota exhausted.	リクエストの上限に達しました。	ok
+chat	message.turnError	This turn failed	このターンは失敗しました	ok
+chat	message.maxTokens	Output token limit reached	出力トークンの上限に達しました	ok
+chat	message.maxTokens.hint	The reply was cut off; earlier output is preserved in the conversation. Send "continue" to let the model resume.	返答が途中で切れました。ここまでの出力は会話に残っています。「続けて」と送るとモデルが再開します。	ok
+chat	message.tokensPerSecond	{tps} tok/s	{tps} tok/s	ok
+chat	message.turnUsage.title	Turn usage	ターンの使用量	ok
+chat	message.turnUsage.consumed	Usage {total}	使用量 {total}	ok
+chat	message.turnUsage.model	Provider / model	プロバイダー / モデル	ok
+chat	message.turnUsage.cacheHit	Cache hit	キャッシュヒット	ok
+chat	message.turnUsage.input	Uncached input	未キャッシュの入力	ok
+chat	message.turnUsage.cacheRead	Cached input	キャッシュの読み取り	ok
+chat	message.turnUsage.cacheWrite	Cache write	キャッシュの書き込み	ok
+chat	message.turnUsage.output	Output	出力	ok
+chat	message.turnUsage.reasoning	 ({tokens} reasoning)	 (推論 {tokens})	ok
+chat	message.turnUsage.count	{count} tok	{count} tok	ok
+chat	duration.secondUnit	s	秒	ok
+chat	duration.minuteUnit	m 	分 	ok
+chat	duration.hourUnit	h 	時間 	ok
+chat	command.running	Running…	実行中…	ok
+chat	command.failed	Command failed	コマンドが失敗しました	ok
+chat	command.done	Completed	完了	ok
+chat	command.title	Command	コマンド	ok
+chat	row.running	Running	実行中	ok
+chat	row.failed	Failed	失敗	ok
+chat	json.truncated	… truncated, {total} characters total	… 全 {total} 文字で省略	ok
+chat	clock.md	{m}/{d}	{m}/{d}	ok
+chat	clock.ymd	{y}-{m}-{d}	{y}-{m}-{d}	ok
+settings.models	nav	Models	モデル	ok
+settings.models	deepSeekAccount	DeepSeek Account	DeepSeek アカウント	ok
+settings.models	title	Models	モデル	ok
+settings.models	intro	Enter your API keys to use models from the following providers.	次のプロバイダーの API キーを入力すると、そのモデルを利用できます。	ok
+settings.models	edit	Edit	編集	ok
+settings.models	editProvider	Edit {provider}	{provider} を編集	ok
+settings.models	remove	Delete	削除	ok
+settings.models	removeProvider	Delete {provider}	{provider} を削除	ok
+settings.models	deleteTitle	Delete {provider}?	{provider} を削除しますか？	ok
+settings.models	deleteDescription	Deleting {provider} removes its configuration. Any credential it uses is managed elsewhere and will be kept.	{provider} を削除すると、その設定が消えます。使用している認証情報は別の場所で管理されているため保持されます。	ok
+settings.models	deleteDescriptionWithCredential	Deleting {provider} removes its configuration and stored API key.	{provider} を削除すると、その設定と保存済みの API キーが消えます。	ok
+settings.models	deleteConfirm	Delete {provider}	{provider} を削除	ok
+settings.models	deleting	Deleting {provider}…	{provider} を削除しています…	ok
+settings.models	add	Add model provider	モデルプロバイダーを追加	ok
+settings.models	addMode	How to add	追加方法	ok
+settings.models	addCatalog	Third-party model provider	サードパーティのモデルプロバイダー	ok
+settings.models	addCustom	Custom model API	カスタムモデル API	ok
+settings.models	addCatalogHint	Pick OpenAI, Anthropic, Kimi, or another provider from the built-in catalog and enter its API key.	内蔵カタログから OpenAI、Anthropic、Kimi などのプロバイダーを選び、API キーを入力します。	ok
+settings.models	addCustomHint	Connect a relay, a self-hosted server, or any other OpenAI- or Anthropic-compatible endpoint by its base URL, protocol, and models.	中継サーバー、自前のサーバー、その他 OpenAI / Anthropic 互換のエンドポイントを、ベース URL・プロトコル・モデルを指定して接続します。	ok
+settings.models	addCatalogExhausted	Every catalog provider is already configured.	カタログ内のプロバイダーはすべて追加済みです。	ok
+settings.models	addCustomUnavailable	No API protocol is available to declare.	宣言できる API プロトコルがありません。	ok
+settings.models	provider	Provider	プロバイダー	ok
+settings.models	close	Close	閉じる	ok
+settings.models	cancel	Cancel	キャンセル	ok
+settings.models	apply	Apply	適用	ok
+settings.models	applying	Applying…	適用しています…	ok
+settings.models	savedProvider	Saved {provider}.	{provider} を保存しました。	ok
+settings.models	credentialConfigured	API key configured	API キー設定済み	ok
+settings.models	credentialMissing	API key missing	API キー未設定	ok
+settings.models	readOnly	The settings document is read-only in this deployment.	この環境では設定ファイルは読み取り専用です。	ok
+settings.models	loadFailed	Loading the provider directory failed	プロバイダー一覧の読み込みに失敗しました	ok
+settings.models	conflict	Someone else changed these settings while this card was open. Close it and reopen to edit the current values.	このカードを開いている間に、ほかの場所で設定が変更されました。閉じて開き直し、最新の値で編集してください。	ok
+settings.models	retry	Retry	再試行	ok
+settings.models	keyInput	API key	API キー	ok
+settings.models	keyPlaceholder	Enter your API key	API キーを入力	ok
+settings.models	keyPlaceholderNative	Enter an API key, or leave blank to use environment authentication	API キーを入力するか、空欄のまま環境の認証を使います	ok
+settings.models	keyStored	Configured — enter a new value to replace	設定済み — 変更するには新しい値を入力	ok
+settings.models	keyEnvLocked	Provided by the launch environment (read-only)	起動環境から提供されています (読み取り専用)	ok
+settings.models	customized	Customized settings	カスタム設定	ok
+settings.models	baseUrl	Base URL	ベース URL	ok
+settings.models	baseUrlDefault	Provider default	プロバイダーの既定値	ok
+settings.models	deepSeekBaseUrl	https://api.deepseek.com/anthropic	https://api.deepseek.com/anthropic	ok
+settings.models	deepSeekEndpointHint	Use an API endpoint compatible with Anthropic Messages.	Anthropic Messages 互換の API エンドポイントを指定してください。	ok
+settings.models	models	Models	モデル	ok
+settings.models	modelsInherited	Using the adapter defaults	アダプターの既定モデルを使用中	ok
+settings.models	modelsCustomized	Customized model catalog	モデルカタログをカスタマイズ済み	ok
+settings.models	resetModels	Restore defaults	既定のモデルに戻す	ok
+settings.models	model	Model	モデル	ok
+settings.models	modelId	Model ID	モデル ID	ok
+settings.models	modelName	Display name	表示名	ok
+settings.models	modelNamePlaceholder	Uses the model ID when empty	空欄のときはモデル ID を使用	ok
+settings.models	contextWindow	Context window	コンテキストウィンドウ	ok
+settings.models	contextWindowPlaceholder	Uses the provider default	プロバイダーの既定値を使用	ok
+settings.models	maxTokens	Max output tokens	最大出力トークン数	ok
+settings.models	maxTokensPlaceholder	Uses the provider default	プロバイダーの既定値を使用	ok
+settings.models	modelAdvanced	Model options	モデルのオプション	ok
+settings.models	modelInputTypes	Input types	入力の種類	ok
+settings.models	modelInputText	Text	テキスト	ok
+settings.models	modelInputImage	Image	画像	ok
+settings.models	addModel	Add model	モデルを追加	ok
+settings.models	removeModel	Delete model	モデルを削除	ok
+settings.models	modelsEmpty	No models will be shown in the selector. Unlisted IDs can still be sent directly.	モデル選択には何も表示されません。一覧にない ID も直接送信できます。	ok
+settings.models	keyBlank	Enter the API key, or leave the field empty to keep the stored one.	API キーを入力してください。空欄のままにすると保存済みのキーを維持します。	ok
+settings.models	keyBlankNew	Enter the API key, or leave the field empty if this provider authenticates another way.	API キーを入力してください。このプロバイダーが別の方法で認証する場合は空欄のままにできます。	ok
+settings.models	keyIllegalCharacters	This API key is not in a valid format. Please check it.	この API キーは形式が正しくありません。確認してください。	ok
+settings.models	modelIdRequired	Model ID is required.	モデル ID は必須です。	ok
+settings.models	modelIdDuplicate	Model ID must be unique.	モデル ID は重複できません。	ok
+settings.models	modelNameInvalid	Display name cannot be empty.	表示名は空にできません。	ok
+settings.models	modelContextInvalid	Context window must be a positive count, like 131072, 256K, or 1M.	コンテキストウィンドウは正の数値で指定してください (例: 131072、256K、1M)。	ok
+settings.models	modelMaxTokensInvalid	Max output tokens must be a positive count, like 8192, 64K, or 1M.	最大出力トークン数は正の数値で指定してください (例: 8192、64K、1M)。	ok
+settings.models	advancedHint	Other fields live in cordis.patch.yml; edit that section directly.	その他の項目は cordis.patch.yml にあります。該当箇所を直接編集してください。	ok
+settings.models	modelCapacityInvalid	A capacity must be a number, optionally suffixed K or M.	容量は数値で指定します。任意で K または M を付けられます。	ok
+settings.models	modelDuplicate	Each model ID may appear once.	同じモデル ID は 1 回だけ指定できます。	ok
+settings.models	fetchModels	Fetch available models	利用可能なモデルを取得	ok
+settings.models	fetching	Asking the provider…	プロバイダーに問い合わせています…	ok
+settings.models	fetchNeedsBaseUrl	Enter the base URL first, then fetch.	先にベース URL を入力してから取得してください。	ok
+settings.models	fetchEmpty	The provider listed no models. Add them by hand.	プロバイダーはモデルを 1 つも公開していません。手動で追加してください。	ok
+settings.models	fetchTitle	Choose models to add	追加するモデルを選択	ok
+settings.models	fetchDescription	These are the models this provider has available. Choose the ones to add.	このプロバイダーで利用可能なモデルです。追加するものを選んでください。	ok
+settings.models	fetchSearch	Search models	モデルを検索	ok
+settings.models	fetchNoMatches	No matching models.	一致するモデルがありません。	ok
+settings.models	fetchSelectAll	Select all	すべて選択	ok
+settings.models	fetchDeselectAll	Deselect all	選択を解除	ok
+settings.models	fetchAdopt	Add selected	選択したものを追加	ok
+settings.models	customTag	Custom	カスタム	ok
+settings.models	customRoute	Provider ID	プロバイダー ID	ok
+settings.models	customRouteHint	Lowercase identifier, starting with a letter, that uniquely names this provider in requests and as its credential name.	英小文字で始まる識別子です。リクエスト内でこのプロバイダーを一意に示し、認証情報の名前の元にもなります。	ok
+settings.models	customRouteInvalid	Start with a lowercase letter; then lowercase letters, digits, and dashes.	英小文字で始め、以降は英小文字・数字・ハイフンを使用してください。	ok
+settings.models	customRouteTaken	A provider already uses this ID.	この ID は既に別のプロバイダーが使用しています。	ok
+settings.models	customDisplayName	Display name	表示名	ok
+settings.models	customApi	API protocol	API プロトコル	ok
+settings.models	customApiUnset	Not selected	未選択	ok
+settings.models	protocolOpenAiCompletions	OpenAI Chat Completions	OpenAI Chat Completions	ok
+settings.models	protocolOpenAiResponses	OpenAI Responses	OpenAI Responses	ok
+settings.models	protocolAnthropicMessages	Anthropic Messages	Anthropic Messages	ok
+settings.models	customNeedsBaseUrl	A custom provider needs a base URL.	カスタムプロバイダーにはベース URL が必要です。	ok
+settings.models	customBaseUrlInvalid	Enter a valid HTTP or HTTPS URL.	有効な HTTP または HTTPS の URL を入力してください。	ok
+settings.models	customNeedsModels	A custom provider needs at least one model.	カスタムプロバイダーには少なくとも 1 つのモデルが必要です。	ok
+settings.models	customBaseUrlPlaceholder	https://gateway.example/v1	https://gateway.example/v1	ok
+settings.models	customAnthropicBaseUrlPlaceholder	https://gateway.example	https://gateway.example	ok
+settings.models	settingsPathUnresolvable	unresolvable settings path	設定パスを解決できません	ok
+settings.models	create	Create provider	プロバイダーを作成	ok
+settings.models	creating	Creating…	作成しています…	ok
+settings.models	welcomeTitle	Preview Notice	プレビュー版について	ok
+settings.models	welcomeBody	DeepSeek Harness 0.2 is still in preview, and many areas need continued improvement and refinement. We welcome feedback and suggestions from all developers and users. The new desktop app now targets a broad range of users, while developer-related advanced features can be enabled in the settings. DeepSeek Harness’s product features and plugin APIs are expected to continue rapid iteration and evolution, and will gradually stabilize over time.\n\nWe look forward to exploring the limits of intelligence together with users and developers around the world, building on open-source, reusable, and composable infrastructure. We welcome everyone to bring their ideas to life with DeepSeek Harness and participate in the community to enrich the plugin ecosystem.	DeepSeek Harness の 0.2 はまだプレビュー段階にあり、改善と作り込みが必要な箇所が数多く残っています。開発者と利用者のみなさまからのフィードバックや提案をお待ちしています。新しいデスクトップアプリは幅広い利用者を対象とし、開発者向けの高度な機能は設定から有効にできます。DeepSeek Harness の製品機能とプラグイン API は今後も速いペースで反復・進化し、時間をかけて安定していく見込みです。\n\nオープンで再利用可能、そして組み合わせ可能な基盤の上で、世界中の利用者と開発者とともに知能の限界を探っていきたいと考えています。DeepSeek Harness でアイデアを形にし、コミュニティと一緒にプラグインエコシステムを育てていってください。	ok
+settings.models	welcomeContinue	Continue	続ける	ok
+settings.models	welcomeError	The acknowledgement could not be saved. Please try again.	確認状態を保存できませんでした。再試行してください。	ok
+settings.models	onboardingTitle	Add an API key to get started	API キーを追加して始める	ok
+settings.models	onboardingDescription	Configure the official DeepSeek provider to start building.	公式の DeepSeek プロバイダーを設定すると、すぐに使い始められます。	ok
+settings.models	onboardingLater	Configure later	あとで設定する	ok
+settings.models	onboardingSave	Save and continue	保存して続ける	ok
+settings.models	onboardingSaving	Saving…	保存しています…	ok
+settings.models	keyRequired	Enter an API key to continue.	続けるには API キーを入力してください。	ok
+workspace	defaultWorkspace.failed	Unable to create default workspace. Use Choose workspace to select a folder.	既定のワークスペースを作成できませんでした。「ワークスペースを選択」でフォルダーを選んでください。	ok
+workspace	group.ungrouped	Ungrouped	未分類	ok
+workspace	session.new	New Session	新しいセッション	ok
+workspace	session.untitled	Untitled	無題	ok
+workspace	shortcut.noSession	Select a session first	先にセッションを選択してください	ok
+workspace	shortcut.noPicker	Directory picker unavailable	ディレクトリの選択機能を利用できません	ok
+workspace	shortcut.directoryBusy	Selecting or adding a workspace	ワークスペースを選択または追加しています	ok
+workspace	shortcut.noCompletedTurn	This session has no completed turn	このセッションには完了したターンがありません	ok
+workspace	shortcut.forkFailed	Could not fork the session. Try again.	セッションを分岐できませんでした。もう一度お試しください。	ok
+workspace	section.workspaces	Workspaces	ワークスペース	ok
+workspace	section.sessions	Sessions	セッション	ok
+workspace	viewOptions.label	View options	表示オプション	ok
+workspace	groupBy.label	Group by	グループ化	ok
+workspace	groupBy.workspace	WorkSpace	ワークスペース	ok
+workspace	groupBy.workspaceTree	Workspace Tree	ワークスペースツリー	ok
+workspace	groupBy.flat	In one list	1 つのリスト	ok
+workspace	orderBy.label	Order by	並べ替え	ok
+workspace	orderBy.manual	Manual	手動	ok
+workspace	orderBy.updated	Last updated	最終更新	ok
+workspace	filterBy.label	Filter sessions	セッションを絞り込む	ok
+workspace	viewOptions.hideArchived	Hide archived	アーカイブ済みを隠す	ok
+workspace	viewOptions.showArchived	All conversations (show archived)	すべての会話 (アーカイブ済みも表示)	ok
+workspace	viewOptions.onlyArchived	Archived only	アーカイブ済みのみ	ok
+workspace	sessions.expand	Show {n} more sessions	残り {n} 件のセッションを表示	ok
+workspace	sessions.collapse	Show less	表示を減らす	ok
+workspace	empty.none	No sessions yet	セッションはまだありません	ok
+workspace	empty.noneArchived	No archived sessions yet	アーカイブ済みのセッションはまだありません	ok
+workspace	empty.viewOthers	View other sessions	ほかのセッションを表示	ok
+workspace	empty.noMatches	No matches	一致するものがありません	ok
+workspace	workspace.add	Add workspace	ワークスペースを追加	ok
+workspace	search.sessions.aria	Search sessions	セッションを検索	ok
+workspace	search.placeholder	Search session names	セッション名を検索	ok
+workspace	search.clear	Clear search	検索をクリア	ok
+workspace	search.results.aria	Search results	検索結果	ok
+workspace	search.pending	Searching session history…	セッションの履歴を検索中…	ok
+workspace	search.noMatches	No matching sessions	一致するセッションがありません	ok
+workspace	search.hasMore	Showing the first {n} results. Narrow your search.	最初の {n} 件の結果を表示しています。検索条件を絞ってください。	ok
+workspace	menu.addWorkspace	Add workspace…	ワークスペースを追加…	ok
+workspace	picker.loading	Loading workspaces…	ワークスペースを読み込み中…	ok
+workspace	conflict.named	A workspace named “{name}” already exists.	「{name}」という名前のワークスペースはすでにあります。	ok
+workspace	folderError.title	Couldn’t open folder	フォルダーを開けませんでした	ok
+workspace	folderError.retry	Choose again	選び直す	ok
+workspace	rename	Rename	名前を変更	ok
+workspace	rename.workspace.title	Rename workspace	ワークスペースの名前を変更	ok
+workspace	rename.session.title	Rename session	セッションの名前を変更	ok
+workspace	field.workspaceName	Workspace name	ワークスペース名	ok
+workspace	field.sessionName	Session name	セッション名	ok
+workspace	delete.workspace	Delete workspace	ワークスペースを削除	ok
+workspace	delete.desc	This removes “{name}” from the workspace list. The folder and session logs will be kept. Its sessions will appear under Ungrouped.	「{name}」をワークスペース一覧から削除します。フォルダーとセッションのログは残ります。そのセッションは「未分類」に表示されます。	ok
+workspace	delete.pending	Deleting workspace…	ワークスペースを削除中…	ok
+workspace	menu.fork	Fork session	セッションを分岐	ok
+workspace	menu.archiveSession	Archive session	セッションをアーカイブ	ok
+workspace	menu.unarchiveSession	Unarchive session	セッションのアーカイブを解除	ok
+workspace	menu.pinSession	Pin session	セッションをピン留め	ok
+workspace	menu.unpinSession	Unpin session	セッションのピン留めを解除	ok
+workspace	row.archived	Archived	アーカイブ済み	ok
+workspace	row.pinned	Pinned	ピン留め済み	ok
+workspace	toast.archivedNotOpenable	Archived sessions cannot be opened. Unarchive it to view.	アーカイブ済みのセッションは開けません。表示するにはアーカイブを解除してください。	ok
+workspace	toast.archived	Session archived. You can 	セッションをアーカイブしました。	ok
+workspace	toast.stoppedAndArchived	Session stopped and archived. You can 	セッションを停止してアーカイブしました。	ok
+workspace	archive.confirm.title	Stop and archive this session?	このセッションを停止してアーカイブしますか？	ok
+workspace	archive.confirm.desc	“{title}” still has work in progress. Archiving stops it first; you can restore the session later from the “All conversations (show archived)” filter in the sidebar, and the stopped work will not resume on its own.	「{title}」にはまだ進行中の作業があります。アーカイブすると先にそれを停止します。セッションは後からサイドバーの「すべての会話 (アーカイブ済みも表示)」で復元できますが、停止した作業は自動では再開しません。	ok
+workspace	archive.confirm.activity	Work that will be stopped	停止される作業	ok
+workspace	archive.confirm.turn	The turn in progress	進行中のターン	ok
+workspace	archive.confirm.subagents.one	{n} running subagent: {names}	実行中のサブエージェント {n} 件: {names}	ok
+workspace	archive.confirm.subagents.other	{n} running subagents: {names}	実行中のサブエージェント {n} 件: {names}	ok
+workspace	archive.confirm.jobs.one	{n} background job: {names}	バックグラウンドジョブ {n} 件: {names}	ok
+workspace	archive.confirm.jobs.other	{n} background jobs: {names}	バックグラウンドジョブ {n} 件: {names}	ok
+workspace	archive.confirm.schedules.one	{n} scheduled reminder: {names}	スケジュールされたリマインダー {n} 件: {names}	ok
+workspace	archive.confirm.schedules.other	{n} scheduled reminders: {names}	スケジュールされたリマインダー {n} 件: {names}	ok
+workspace	archive.confirm.other.one	{n} other item of work ({kind})	その他の作業 {n} 件 ({kind})	ok
+workspace	archive.confirm.other.other	{n} other items of work ({kind})	その他の作業 {n} 件 ({kind})	ok
+workspace	archive.confirm.listSeparator	, 	、	ok
+workspace	archive.confirm.action	Stop and archive	停止してアーカイブ	ok
+workspace	archive.confirm.pending	Stopping and archiving…	停止してアーカイブ中…	ok
+workspace	toast.archivedUndo	undo	元に戻す	ok
+workspace	toast.archivedOr	 or 	 または 	ok
+workspace	toast.archivedFilter	filter archived sessions	アーカイブ済みセッションを絞り込む	ok
+workspace	toast.pinFailed	Pin failed. Try again later.	ピン留めに失敗しました。しばらくしてからもう一度お試しください。	ok
+workspace	toast.unpinFailed	Unpin failed. Try again later.	ピン留めの解除に失敗しました。しばらくしてからもう一度お試しください。	ok
+workspace	toast.createFailed	New session failed: {message}	新しいセッションを作成できませんでした: {message}	ok
+workspace	sessions.count.one	{n} session	{n} 件のセッション	ok
+workspace	sessions.count.other	{n} sessions	{n} 件のセッション	ok
+workspace	actions.workspace.aria	Workspace actions for {name}	{name} のワークスペース操作	ok
+workspace	actions.session.aria	Session actions for {name}	{name} のセッション操作	ok
+workspace	actions.archive	Archive	アーカイブ	ok
+workspace	actions.unarchive	Unarchive	アーカイブを解除	ok
+workspace	actions.pin	Pin	ピン留め	ok
+workspace	actions.unpin	Unpin	ピン留めを解除	ok
+workspace	actions.newSession	New session	新しいセッション	ok
+workspace	actions.newSession.aria	New session in {name}	{name} で新しいセッション	ok
+workspace	status.running	Running	実行中	ok
+workspace	status.subagentsRunning.one	{n} subagent running	サブエージェント {n} 件が実行中	ok
+workspace	status.subagentsRunning.other	{n} subagents running	サブエージェント {n} 件が実行中	ok
+workspace	status.idle	Idle	待機中	ok
+workspace	status.waitingApproval	Waiting for approval	承認待ち	ok
+workspace	status.planReview	Plan awaiting review	計画のレビュー待ち	ok
+workspace	status.waitingAnswer	Waiting for answer	回答待ち	ok
+workspace	status.compact.approval	Approval	承認	ok
+workspace	status.compact.planReview	Plan review	計画	ok
+workspace	status.compact.answer	Answer	回答	ok
+workspace	status.completed	Completed	完了	ok
+workspace	hover.created	Created {time}	{time} に作成	ok
+workspace	hover.copied	Copied	コピーしました	ok
+workspace	date.ymd	{y}-{m}-{d}	{y}年{m}月{d}日	ok
+workspace	time.now	now	たった今	ok
+workspace	time.minutes	{n}min	{n} 分	ok
+workspace	time.hours	{n}h	{n} 時間	ok
+workspace	time.days	{n}d	{n} 日	ok
+workspace	time.months	{n}mo	{n} か月	ok
+workspace	time.years	{n}y	{n} 年	ok
+workspace	time.ago	{t} ago	{t}前	ok
+schedule.catalog	trigger.label	Reminders	リマインダー	ok
+schedule.catalog	list.loading	Loading reminders…	リマインダーを読み込み中…	ok
+schedule.catalog	list.error	Could not load reminders.	リマインダーを読み込めませんでした。	ok
+schedule.catalog	list.retry	Retry	再試行	ok
+schedule.catalog	delete.action	Delete	削除	ok
+schedule.catalog	delete.pending	Deleting…	削除中…	ok
+schedule.catalog	delete.label	Delete reminder: {title}	リマインダーを削除: {title}	ok
+schedule.catalog	list.open	Open reminder details: {title}	リマインダーの詳細を開く: {title}	ok
+schedule.catalog	trigger.one	{count} reminder	リマインダー {count} 件	ok
+schedule.catalog	trigger.other	{count} reminders	リマインダー {count} 件	ok
+schedule.catalog	list.aria	Active reminders	有効なリマインダー	ok
+schedule.catalog	list.nextRun	Next run	次回の実行	ok
+schedule.catalog	frequency.once	Once	1 回のみ	ok
+schedule.catalog	frequency.every	Every {value} {unit}	{value} {unit}ごと	ok
+schedule.catalog	time.locale	en	ja	ok
+schedule.catalog	time.utcPrefix	UTC	UTC	ok
+schedule.catalog	frequency.daily	Daily at {time} ({timeZone})	毎日 {time} ({timeZone})	ok
+schedule.catalog	frequency.dailyLocal	Daily at {time}	毎日 {time}	ok
+schedule.catalog	frequency.weekly	Weekly on {weekdays} at {time} ({timeZone})	毎週 {weekdays} の {time} ({timeZone})	ok
+schedule.catalog	frequency.weeklyLocal	Weekly on {weekdays} at {time}	毎週 {weekdays} の {time}	ok
+schedule.catalog	frequency.cron	Cron {expression} ({timeZone})	Cron {expression} ({timeZone})	ok
+schedule.catalog	frequency.cronLocal	Cron {expression}	Cron {expression}	ok
+schedule.catalog	frequency.cronRule	{rule} ({timeZone})	{rule} ({timeZone})	ok
+schedule.catalog	cron.list.join	, 	、	ok
+schedule.catalog	cron.part.join	 	 	ok
+schedule.catalog	cron.weekday.name	{weekday}	{weekday}曜日	ok
+schedule.catalog	cron.weekday.range	{from}–{to}	{from}〜{to}	ok
+schedule.catalog	cron.months	 in {months}	 ({months})	ok
+schedule.catalog	cron.day.every	Every day{months}	毎日{months}	ok
+schedule.catalog	cron.day.weekdays	{weekdays}{months}	{weekdays}{months}	ok
+schedule.catalog	cron.day.monthDays	Day {days} of every month{months}	毎月 {days} 日{months}	ok
+schedule.catalog	cron.day.both	Day {days} of every month or {weekdays}{months}	毎月 {days} 日または{weekdays}{months}	ok
+schedule.catalog	cron.day.bothStarred	Day {days} of every month and {weekdays}{months}	毎月 {days} 日かつ{weekdays}{months}	ok
+schedule.catalog	cron.hours.range	{from}–{to}	{from}〜{to}	ok
+schedule.catalog	cron.hours.list	{hours}	{hours}	ok
+schedule.catalog	cron.time.everyMinute	Every minute	毎分	ok
+schedule.catalog	cron.time.everyMinutes	Every {step} minutes	{step} 分ごと	ok
+schedule.catalog	cron.time.joinedEveryMinute	every minute	毎分	ok
+schedule.catalog	cron.time.joinedEveryMinutes	every {step} minutes	{step} 分ごと	ok
+schedule.catalog	cron.time.everyHour	Every hour	毎時	ok
+schedule.catalog	cron.time.joinedEveryHour	every hour	毎時	ok
+schedule.catalog	cron.time.everyNHours	Every {count} hours	{count} 時間ごと	ok
+schedule.catalog	cron.time.joinedEveryNHours	every {count} hours	{count} 時間ごと	ok
+schedule.catalog	cron.time.hourlyAt	Every hour at minute {minutes}	毎時 {minutes} 分	ok
+schedule.catalog	cron.time.joinedHourlyAt	every hour at minute {minutes}	毎時 {minutes} 分	ok
+schedule.catalog	cron.time.hoursEveryMinute	every minute during hours {hours}	{hours} 時の間は毎分	ok
+schedule.catalog	cron.time.hoursEveryMinutes	every {step} minutes during hours {hours}	{hours} 時の間は {step} 分ごと	ok
+schedule.catalog	cron.time.at	at {times}	{times} に	ok
+schedule.catalog	cron.time.hoursAt	at minute {minutes} of hours {hours}	{hours} 時の {minutes} 分に	ok
+schedule.catalog	frequency.weekday.join	, 	、	ok
+schedule.catalog	frequency.weekday.1	Mon	月	ok
+schedule.catalog	frequency.weekday.2	Tue	火	ok
+schedule.catalog	frequency.weekday.3	Wed	水	ok
+schedule.catalog	frequency.weekday.4	Thu	木	ok
+schedule.catalog	frequency.weekday.5	Fri	金	ok
+schedule.catalog	frequency.weekday.6	Sat	土	ok
+schedule.catalog	frequency.weekday.7	Sun	日	ok
+schedule.catalog	unit.day.one	day	日	ok
+schedule.catalog	unit.day.other	days	日	ok
+schedule.catalog	unit.hour.one	hour	時間	ok
+schedule.catalog	unit.hour.other	hours	時間	ok
+schedule.catalog	unit.minute.one	minute	分	ok
+schedule.catalog	unit.minute.other	minutes	分	ok
+schedule.catalog	unit.second.one	second	秒	ok
+schedule.catalog	unit.second.other	seconds	秒	ok
+schedule.catalog	relative.now	Due now	まもなく実行	ok
+schedule.catalog	relative.future	in {value} {unit}	{value} {unit}後	ok
+schedule.catalog	relative.overdue	{value} {unit} overdue	{value} {unit}超過	ok
+schedule.catalog	mark.aria	{count} scheduled tasks	スケジュールされたタスク {count} 件	ok
+schedule.catalog	hover.more	{count} more	ほか {count} 件	ok
+deliverables	presented.nativeUnavailable	This file has no available Host path. Preview it in the sidebar.	このファイルには利用できるホスト側のパスがありません。サイドバーでプレビューしてください。	ok
+deliverables	presented.revealError	Could not show in file manager. Try again.	ファイルマネージャーに表示できませんでした。もう一度お試しください。	ok
+deliverables	presented.directoryError	Could not open containing folder. Try again.	ファイルのあるフォルダーを開けませんでした。もう一度お試しください。	ok
+deliverables	presented.directoryOpening	Opening containing folder…	フォルダーを開いています…	ok
+deliverables	presented.directoryOpened	Requested opening containing folder	フォルダーを開くよう要求しました	ok
+deliverables	presented.revealed	Requested display in file manager	ファイルマネージャーでの表示を要求しました	ok
+deliverables	presented.revealing	Showing in file manager…	ファイルマネージャーに表示しています…	ok
+deliverables	presented.unavailable	This Host has no desktop available to open files or folders in external apps. Files can still be previewed in the sidebar.	このホストにはデスクトップがないため、外部アプリでファイルやフォルダーを開けません。ファイルはサイドバーでプレビューできます。	ok
+deliverables	presented.retry	Retry	再試行	ok
+deliverables	presented.hostError	Could not read the Host desktop information	ホストのデスクトップ情報を読み取れませんでした	ok
+deliverables	presented.preview	Preview in sidebar	サイドバーでプレビュー	ok
+deliverables	presented.previewButton	Open {name} in sidebar	{name} をサイドバーで開く	ok
+deliverables	presented.previewCard	Preview {name} in sidebar	{name} をサイドバーでプレビュー	ok
+deliverables	presented.all	All {count} files	{count} ファイルすべて	ok
+deliverables	presented.expandAria	Show all {count} delivered files	提示された {count} 件のファイルをすべて表示	ok
+deliverables	presented.collapse	Collapse	折りたたむ	ok
+deliverables	presented.collapseAria	Collapse delivered files	提示されたファイルを折りたたむ	ok
+deliverables	presented.opening	Opening…	開いています…	ok
+deliverables	presented.opened	Open requested	開くよう要求しました	ok
+deliverables	presented.error	Could not open. Click to retry.	開けませんでした。クリックして再試行してください。	ok
+deliverables	presented.file	File	ファイル	ok
+deliverables	row.title	Present files	ファイルを提示	ok
+deliverables	row.running	Delivering	提示中	ok
+deliverables	row.preparing	Preparing deliverables	成果物を準備しています	ok
+deliverables	row.ok	Delivered	提示済み	ok
+deliverables	row.error	Delivery failed	提示に失敗	ok
+deliverables	row.stopped	Interrupted	中断	ok
+deliverables	row.inspect	Inspect call	呼び出しを確認	ok
+deliverables	changes.title	Edited {count} files	{count} 件のファイルを編集	ok
+deliverables	changes.singleTitle	Edited {name}	{name} を編集	ok
+deliverables	changes.added	+{count}	+{count}	ok
+deliverables	changes.deleted	-{count}	-{count}	ok
+deliverables	changes.binary	binary	バイナリ	ok
+deliverables	changes.openReview	Review this turn’s changes in the sidebar	このターンの変更をサイドバーで確認	ok
+deliverables	changes.all	All {count} files	{count} ファイルすべて	ok
+deliverables	changes.expandAria	Show all {count} changed files	変更された {count} 件のファイルをすべて表示	ok
+deliverables	changes.collapse	Collapse	折りたたむ	ok
+deliverables	changes.collapseAria	Collapse changed files	変更されたファイルを折りたたむ	ok
+deliverables	changes.oversized	too large	大きすぎます	ok
+deliverables	changes.viewDiff	View changes to {name}	{name} の変更を表示	ok
+deliverables	review.title	Review · turn {turn}	レビュー · ターン {turn}	ok
+deliverables	review.selectFile	Choose the file to review	レビューするファイルを選択	ok
+deliverables	review.split	Switch to split view	分割表示に切り替え	ok
+deliverables	review.unified	Switch to unified view	統合表示に切り替え	ok
+deliverables	review.splitAria	Split view	分割表示	ok
+deliverables	review.wrap	Enable line wrap	行を折り返す	ok
+deliverables	review.nowrap	Disable line wrap	行を折り返さない	ok
+deliverables	review.wrapAria	Line wrap	行の折り返し	ok
+deliverables	review.openFile	Open the whole file in the sidebar	ファイル全体をサイドバーで開く	ok
+deliverables	review.openFileAria	Open {name} in sidebar	{name} をサイドバーで開く	ok
+deliverables	diff.loading	Reading changes…	変更を読み込んでいます…	ok
+deliverables	diff.missing	The contents of this turn’s changes are no longer available	このターンの変更内容は利用できなくなりました	ok
+deliverables	diff.error	Could not read the changes	変更を読み取れませんでした	ok
+deliverables	diff.binary	Binary file; changes cannot be shown	バイナリファイルのため、変更を表示できません	ok
+deliverables	diff.oversized	File too large; changes cannot be shown	ファイルが大きすぎるため、変更を表示できません	ok
+deliverables	diff.created	Created in this turn	このターンで作成されました	ok
+deliverables	diff.deleted	Deleted in this turn	このターンで削除されました	ok
+deliverables	diff.unchanged	Both sides hold the same lines	変更前と変更後で行が同じです	ok
+deliverables	diff.coarse	Line comparison timed out; shown as a whole-file replacement	行単位の比較がタイムアウトしたため、ファイル全体の置き換えとして表示しています	ok
+deliverables	diff.truncated	Showing the first {count} lines	最初の {count} 行を表示しています	ok
+shortcuts	edit-label	Edit shortcut for {command}	{command} のショートカットを編集	ok
+shortcuts	record	Press a shortcut	ショートカットを押してください	ok
+shortcuts	record-help	Release the keys to save. Tab moves between actions; Esc cancels.	キーを離すと保存します。Tab で操作を移動、Esc でキャンセルします。	ok
+shortcuts	web-help	Browser combinations: Mod+/, Mod+Shift+,, Mod+Shift+.. Mod is Command on Mac and Ctrl elsewhere.	ブラウザーでの組み合わせ: Mod+/、Mod+Shift+,、Mod+Shift+.。Mod は Mac では Command、それ以外では Ctrl です。	ok
+shortcuts	unsupported-key	This key is not supported.	このキーは対応していません。	ok
+shortcuts	reserved	This combination is reserved for system or text editing actions.	この組み合わせはシステムまたはテキスト編集の操作に予約されています。	ok
+shortcuts	modifier-required	Include Command, Ctrl, or Alt in the combination.	組み合わせに Command、Ctrl、Alt のいずれかを含めてください。	ok
+shortcuts	too-many-keys	Hold at most two non-modifier keys. Release the keys to try again.	修飾キー以外は最大 2 つまでです。キーを離してやり直してください。	ok
+shortcuts	macos-web-help	Use Command+/, Command+,, Command+Backslash, Control+Backquote, Command+Option+key, or Command+Shift+key. Combinations with three or four distinct modifiers are also supported. Browser or system shortcuts may not reach the page.	Command+/、Command+,、Command+Backslash、Control+Backquote、Command+Option+キー、Command+Shift+キーが使えます。修飾キーを 3 つまたは 4 つ組み合わせた指定にも対応します。ブラウザーやシステムのショートカットはページに届かないことがあります。	ok
+shortcuts	windows-web-help	Use Ctrl+/, Ctrl+,, Ctrl+Alt+key, or Ctrl+Shift+key. Combinations with three or four distinct modifiers are also supported. Browser or system shortcuts may not reach the page.	Ctrl+/、Ctrl+,、Ctrl+Alt+キー、Ctrl+Shift+キーが使えます。修飾キーを 3 つまたは 4 つ組み合わせた指定にも対応します。ブラウザーやシステムのショートカットはページに届かないことがあります。	ok
+shortcuts	unsupported-browser	This browser does not support this combination yet.	このブラウザーはまだこの組み合わせに対応していません。	ok
+shortcuts	conflict	Already used by “{commands}”	「{commands}」で既に使用されています	ok
+shortcuts	saved	Modified	変更済み	ok
+shortcuts	clear	Remove	削除	ok
+shortcuts	retry-save	Retry save	保存を再試行	ok
+shortcuts	reset	Restore default	既定に戻す	ok
+shortcuts	reset-all	Restore all defaults	すべて既定に戻す	ok
+shortcuts	modified-count	{count} customized	{count} 件を変更	ok
+shortcuts	reset-title	Restore all default shortcuts?	すべてのショートカットを既定に戻しますか？	ok
+shortcuts	reset-description	Restore the default shortcuts for this platform. All modified or removed shortcuts will be restored. Other platforms are unaffected.	このプラットフォームの既定のショートカットに戻します。変更または削除したショートカットはすべて復元されます。ほかのプラットフォームには影響しません。	ok
+shortcuts	cancel	Cancel	キャンセル	ok
+shortcuts	reset-saved	Default shortcuts restored	既定のショートカットに戻しました	ok
+shortcuts	close-confirmation	Close confirmation	確認を閉じる	ok
+shortcuts	reset-failed	Could not restore defaults. Your shortcuts are unchanged. Please retry.	既定に戻せませんでした。ショートカットは変更されていません。再試行してください。	ok
+shortcuts	review	I have reviewed the latest configuration	最新の設定を確認しました	ok
+shortcuts	stale	Shortcut configuration or available commands changed. Review the latest bindings before saving.	ショートカット設定または利用できるコマンドが変わりました。保存する前に最新の割り当てを確認してください。	ok
+shortcuts	write-failed	Could not save. Your previous shortcuts and current draft are preserved. Please retry.	保存できませんでした。以前のショートカットと現在の下書きは保持されています。再試行してください。	ok
+shortcuts	not-ready	Shortcuts are not ready. Please try again.	ショートカットの準備ができていません。再試行してください。	ok
+shortcuts	read	Could not read {location}. Check access permissions, then {reload}.	{location} を読み込めませんでした。アクセス権を確認してから {reload} してください。	ok
+shortcuts	invalid	Shortcut configuration in {location} is damaged. Back up and repair this configuration, then {reload}.	{location} のショートカット設定が壊れています。この設定をバックアップして修復し、{reload} してください。	ok
+shortcuts	future	Shortcut configuration in {location} was created by a newer version. Upgrade Harness and try again.	{location} のショートカット設定は新しいバージョンで作成されたものです。Harness をアップグレードして再試行してください。	ok
+shortcuts	web-document	this site’s localStorage entry dsh.keybindings.v1	このサイトの localStorage の dsh.keybindings.v1	ok
+shortcuts	desktop-document	userData/keybindings.json	userData/keybindings.json	ok
+shortcuts	web-reload	reload the page	ページを再読み込み	ok
+shortcuts	desktop-reload	restart Harness	Harness を再起動	ok
+shortcuts	using-defaults	Default bindings are active.	既定の割り当てが有効です。	ok
+shortcuts	using-accepted	The last successfully read bindings remain active.	最後に正常に読み込めた割り当てが有効なままです。	ok
+shortcuts	native-failed	Could not protect desktop key recording. Exit recording and try again.	デスクトップでのキー記録を保護できませんでした。記録を終了して再試行してください。	ok
+shortcuts	global-hint	Open from anywhere	どこからでも開く	ok
+shortcuts	clear-search	Clear search	検索をクリア	ok
+shortcuts	title	Keyboard shortcuts	キーボードショートカット	ok
+shortcuts	open	Open keyboard shortcuts	キーボードショートカットを開く	ok
+shortcuts	settings	Keyboard shortcuts	キーボードショートカット	ok
+shortcuts	view	Edit shortcuts	ショートカットを編集	ok
+shortcuts	description	View and edit available shortcuts and input actions	利用できるショートカットと入力操作を確認・編集します	ok
+shortcuts	search	Search shortcuts	ショートカットを検索	ok
+shortcuts	close	Close keyboard shortcuts	キーボードショートカットを閉じる	ok
+shortcuts	application	Application	アプリケーション	ok
+shortcuts	input	Message input	メッセージ入力	ok
+shortcuts	menus	Menus and dialogs	メニューとダイアログ	ok
+shortcuts	approval	Approval area	承認エリア	ok
+shortcuts	unbound	No shortcut	ショートカットなし	ok
+shortcuts	empty	No matching shortcuts	一致するショートカットはありません	ok
+shortcuts	move	Move menu selection	メニューの選択を移動	ok
+shortcuts	select	Select menu item	メニュー項目を選択	ok
+shortcuts	dismiss	Close menu or top dialog	メニューまたは最前面のダイアログを閉じる	ok
+cordis	row.defineTitle	Register Cordis Plugin	Cordis プラグインを登録	ok
+cordis	a11y.preparing	Preparing a Cordis tool call	Cordis ツール呼び出しを準備しています	ok
+cordis	row.runTitle	Run Cordis Plugin	Cordis プラグインを実行	ok
+cordis	row.updateTitle	Update Cordis Plugin	Cordis プラグインを更新	ok
+cordis	row.stopTitle	Stop Cordis Plugin	Cordis プラグインを停止	ok
+cordis	row.removeTitle	Remove Cordis Plugin	Cordis プラグインを削除	ok
+cordis	purpose.missing	(no purpose given)	(用途の記載なし)	ok
+cordis	status.idle	Ready	準備完了	ok
+cordis	status.awaitingApproval	Awaiting approval	承認待ち	ok
+cordis	status.failed	Run failed	実行に失敗	ok
+cordis	status.clientPending	Client ready to activate	クライアントの有効化待ち	ok
+cordis	status.running	Running	実行中	ok
+cordis	status.removed	Removed	削除済み	ok
+cordis	status.superseded	Newer run available	新しい実行あり	ok
+cordis	run.removed	This package no longer exists	このパッケージは存在しません	ok
+cordis	run.superseded	A newer run card is available below	下に新しい実行カードがあります	ok
+cordis	panel.hint	Run controls live in the Cordis panel above Settings	実行の操作は設定の上にある Cordis パネルにあります	ok
+cordis	panel.plugins.aria	Cordis plugins	Cordis プラグイン	ok
+cordis	panel.approvals.aria	Cordis approvals	Cordis の承認	ok
+cordis	panel.trigger	Cordis Plugin	Cordis プラグイン	ok
+cordis	panel.runningCount	{count} running	{count} 実行中	ok
+cordis	panel.title	Cordis plugins	Cordis プラグイン	ok
+cordis	panel.empty	No plugins defined yet	まだプラグインが定義されていません	ok
+cordis	panel.loading	Reading…	読み込み中…	ok
+cordis	panel.readFailed	Reading the plugin inventory failed: {message}	プラグインの一覧を読み込めませんでした: {message}	ok
+cordis	panel.group.current	This session	このセッション	ok
+cordis	panel.group.others	Other sessions	ほかのセッション	ok
+cordis	panel.version	Version	バージョン	ok
+cordis	panel.current	Current: {packageId}	現在: {packageId}	ok
+cordis	panel.next	Next: {packageId}	次: {packageId}	ok
+cordis	action.approve	Allow	許可	ok
+cordis	action.approveOnce	Allow this version only	このバージョンだけ許可	ok
+cordis	action.approvePlugin	Allow future versions of this plugin	このプラグインの今後のバージョンも許可	ok
+cordis	action.decline	Decline	拒否	ok
+cordis	action.run	Run	実行	ok
+cordis	action.stop	Stop	停止	ok
+cordis	action.remove	Remove	削除	ok
+cordis	action.retry	Retry	再試行	ok
+cordis	action.rollback	Roll back	ロールバック	ok
+cordis	action.inspect	Inspect	詳細を表示	ok
+cordis	render.failedAbdicated	Rendering failed in {slot}; the default UI was restored:	{slot} の描画に失敗したため、既定の UI に戻しました:	ok
+cordis	render.failedHeld	Rendering failed in {slot}:	{slot} の描画に失敗しました:	ok
+cordis	a11y.defining	Defining the plugin	プラグインを定義しています	ok
+cordis	a11y.failed	Definition failed	定義に失敗	ok
+cordis	a11y.stopped	Definition interrupted	定義が中断されました	ok
+cordis	body.source	Plugin source	プラグインのソース	ok
+cordis	body.hostCode	Host	ホスト	ok
+cordis	body.clientCode	Client	クライアント	ok
+cordis	body.output	Result	結果	ok
+cordis	body.copy	Copy	コピー	ok
+cordis	body.copied	Copied	コピーしました	ok
+open-in-app	open.title	Open in {app}	{app} で開く	ok
+open-in-app	path.appDefault	{app} (default)	{app} (既定)	ok
+open-in-app	path.appsError	Could not load applications	アプリの一覧を読み込めませんでした	ok
+open-in-app	shortcut.busy	Opening workspace	ワークスペースを開いています	ok
+open-in-app	shortcut.unavailable	Current workspace or local application unavailable	現在のワークスペースまたはローカルアプリを利用できません	ok
+open-in-app	open.tooltip	Open locally	ローカルで開く	ok
+open-in-app	path.open	Open	開く	ok
+open-in-app	path.more	More ways to open	ほかの開き方	ok
+open-in-app	path.reveal	Show file location	ファイルの場所を表示	ok
+open-in-app	path.openError	Could not open. Try again.	開けませんでした。もう一度お試しください。	ok
+open-in-app	path.revealError	Could not show the file location. Try again.	ファイルの場所を表示できませんでした。もう一度お試しください。	ok
+open-in-app	app.cursor	Cursor	Cursor	ok
+open-in-app	app.vscode	VS Code	VS Code	ok
+open-in-app	app.vscodeinsiders	VS Code Insiders	VS Code Insiders	ok
+open-in-app	app.windsurf	Windsurf	Windsurf	ok
+open-in-app	app.zed	Zed	Zed	ok
+open-in-app	app.sublimetext	Sublime Text	Sublime Text	ok
+open-in-app	app.xcode	Xcode	Xcode	ok
+open-in-app	app.androidstudio	Android Studio	Android Studio	ok
+open-in-app	app.intellij	IntelliJ IDEA	IntelliJ IDEA	ok
+open-in-app	app.pycharm	PyCharm	PyCharm	ok
+open-in-app	app.webstorm	WebStorm	WebStorm	ok
+open-in-app	app.phpstorm	PhpStorm	PhpStorm	ok
+open-in-app	app.goland	GoLand	GoLand	ok
+open-in-app	app.rider	Rider	Rider	ok
+open-in-app	app.rustrover	RustRover	RustRover	ok
+open-in-app	app.fork	Fork	Fork	ok
+open-in-app	app.sourcetree	Sourcetree	Sourcetree	ok
+open-in-app	app.github	GitHub Desktop	GitHub Desktop	ok
+open-in-app	app.tower	Tower	Tower	ok
+open-in-app	app.gitkraken	GitKraken	GitKraken	ok
+open-in-app	app.smartgit	SmartGit	SmartGit	ok
+open-in-app	app.sublimemerge	Sublime Merge	Sublime Merge	ok
+open-in-app	app.ghostty	Ghostty	Ghostty	ok
+open-in-app	app.warp	Warp	Warp	ok
+open-in-app	app.iterm	iTerm2	iTerm2	ok
+open-in-app	app.kitty	kitty	kitty	ok
+open-in-app	app.windowsterminal	Windows Terminal	Windows Terminal	ok
+open-in-app	app.gitbash	Git Bash	Git Bash	ok
+open-in-app	app.gnometerminal	GNOME Terminal	GNOME Terminal	ok
+open-in-app	app.konsole	Konsole	Konsole	ok
+open-in-app	app.finder	Finder	Finder	ok
+open-in-app	app.explorer	File Explorer	エクスプローラー	ok
+open-in-app	app.filemanager	Files	ファイル	ok
+open-in-app	app.terminal	Terminal	ターミナル	ok
+settings.agentPreset	modeExplanation	Mode details	モードの説明	ok
+settings.agentPreset	howToUse	How to use	使い方	ok
+settings.agentPreset	guideSections	Guide sections	ガイドの内容	ok
+settings.agentPreset	guideExampleTask	Example task	タスク例	ok
+settings.agentPreset	guideCopy	Copy	コピー	ok
+settings.agentPreset	guideCopied	Copied	コピーしました	ok
+settings.agentPreset	guideFootnotes	Footnotes	脚注	ok
+settings.agentPreset	guideStandardIntro	Choose Standard mode when starting a new task. Describe what you want to accomplish, point to the relevant files, and explain how to check the result.	新しいタスクを始めるときは標準モードを選びます。達成したいことを説明し、関連するファイルを示し、結果の確認方法を伝えてください。	ok
+settings.agentPreset	guideStandardExplanation	### How it works\n\nThe agent calls tools directly to read and edit files, search, and run terminal commands. It includes Skills, planning, goals, subagents, workflows, and context compaction.\n\n### When to choose it\n\nStart here for everyday coding, file work, and research. Standard mode can also write scripts and process files in batches. PTC changes how tool calls are organized; it is not required for batch tasks.	### 仕組み\n\nAgent はツールを直接呼び出して、ファイルの読み書き・検索・ターミナルコマンドの実行を行います。スキル、計画、ゴール、サブエージェント、ワークフロー、コンテキスト圧縮を利用できます。\n\n### どんなときに選ぶか\n\n日々のコーディング、ファイル作業、調査はここから始めるとよいでしょう。標準モードでもスクリプトを書いてファイルを一括処理できます。PTC が変えるのはツール呼び出しの組み立て方であり、一括処理に必須のものではありません。	ok
+settings.agentPreset	guideStandardUsage	### Fix a bug\n\n> Find out why submitting the search form twice makes the results disappear. Fix it and run the relevant tests. Explain the cause and what changed.\n\nExpected output: a code change, the relevant test results, and an explanation of the cause.\n\n### Organize project notes\n\n> Read the Markdown notes in this project. Summarize the agreed decisions and open questions, with links to the source files.\n\nExpected output: a summary with references that you can check against the original notes.	### バグを修正する\n\n> 検索フォームを続けて 2 回送信すると結果が消える原因を突き止めて修正し、関連するテストを実行してください。原因と変更内容も説明してください。\n\n期待する成果: コードの変更、関連テストの結果、原因の説明。\n\n### プロジェクトの記録を整理する\n\n> このプロジェクトの Markdown の記録を読み、合意済みの決定事項と未解決の論点を、参照元ファイルへのリンク付きでまとめてください。\n\n期待する成果: 元の記録と突き合わせられる、出典付きの要約。	ok
+settings.agentPreset	guidePtcIntro	Choose PTC mode when starting a new task. Specify the input files, processing rules, and output format. The agent writes the code.	新しいタスクを始めるときは PTC モードを選びます。入力ファイル、処理ルール、出力形式を指定してください。コードは Agent が書きます。	ok
+settings.agentPreset	guidePtcExplanation	### How tools are called\n\nPTC means Programmatic Tool Calling. In this built-in preset, the agent uses run_code to write a TypeScript program that calls tools through a generated SDK. The program can use loops, conditions, error handling, and concurrent calls where appropriate.\n\n### What reaches the model\n\nTool results first reach the program, which can filter and combine them. The model receives what the program prints or returns; image results are attached separately. Nested tool calls are still recorded and remain subject to tool permissions.\n\n### Compared with Standard mode\n\nBoth modes can handle coding and batch tasks. Standard mode exposes individual tools directly; PTC organizes tool calls in code. The current PTC preset leaves the workflow tool disabled. Speed and token use depend on the task and how the program handles its results.	### ツールの呼び出され方\n\nPTC は Programmatic Tool Calling、つまりプログラムからツールを呼び出す方式です。この内蔵プリセットでは、Agent が run_code で TypeScript プログラムを書き、生成された SDK を通してツールを呼び出します。プログラムではループ、条件分岐、エラー処理、並行呼び出しを適切に使えます。\n\n### モデルに届くもの\n\nツールの結果はいったんプログラムに渡り、そこで絞り込みや合成ができます。モデルが受け取るのは、プログラムが出力または返した内容です。画像の結果は別途添付されます。プログラム内のツール呼び出しも記録され、ツールの権限設定に従います。\n\n### 標準モードとの違い\n\nどちらのモードもコーディングや一括処理を扱えます。標準モードは個々のツールをそのままモデルに渡し、PTC はツール呼び出しをコードで組み立てます。現在の PTC プリセットでは workflow ツールが無効になっています。速度とトークン消費は、タスクと結果の扱い方によって変わります。	ok
+settings.agentPreset	guidePtcUsage	### Check a set of configuration files\n\n> Check all JSON files in configs/. List missing required fields and invalid values against schema.json. Save a CSV with one row per issue. Include unreadable files in the report and keep checking the rest. Leave the original files unchanged.\n\nExpected output: an issue summary and a CSV report. The program can repeat the same checks, handle individual failures, and collect the results.\n\n### Summarize error logs\n\n> Analyze the log files in logs/. Group errors by service and error type. Show the ten most frequent groups and one example from each. Save the full counts to a CSV.\n\nExpected output: the top error groups and a complete count table. Intermediate data can be aggregated in the program before the summary reaches the model.	### 設定ファイルを一括で検査する\n\n> configs/ 配下の JSON をすべて検査し、schema.json と照らして不足している必須項目と不正な値を挙げてください。問題ごとに CSV の 1 行として保存してください。読めなかったファイルも報告に含め、残りの検査は続けてください。元のファイルは変更しないでください。\n\n期待する成果: 問題の要約と CSV レポート。同じ検査を繰り返し実行し、個々の失敗に対処して結果を集約できます。\n\n### エラーログを集計する\n\n> logs/ のログを解析し、サービスとエラー種別ごとに件数をまとめてください。出現回数の多い上位 10 グループと、それぞれ 1 件の例を示してください。完全な件数は CSV に保存してください。\n\n期待する成果: 頻出エラーの要約と完全な件数表。中間データはプログラム側で集約してから、要約だけをモデルに渡せます。	ok
+settings.agentPreset	guideMinimalIntro	Choose Minimal mode for a new task. For a comparison, hold the model, permissions, input, and starting workspace state constant across runs.	新しいタスクでは最小モードを選びます。比較実験をするときは、モデル・権限・入力・ワークスペースの初期状態を実行間でそろえてください。	ok
+settings.agentPreset	guideMinimalExplanation	### What is included\n\nOne persistent shell tool and a fixed system prompt. The built-in preset does not load Skills, planning, context compaction, or the standard runtime context.\n\n### When to choose it\n\nUse it as a baseline for experiments and comparisons. It can still read files and execute scripts through shell commands, but offers fewer built-in ways to manage a long task. Fewer tools does not necessarily make it easier for a beginner.	### 含まれるもの\n\n永続シェルツールが 1 つと、固定のシステムプロンプトだけです。この内蔵プリセットはスキル、計画、コンテキスト圧縮、標準のランタイムコンテキストを読み込みません。\n\n### どんなときに選ぶか\n\n実験や比較の基準として使います。シェルコマンドを通してファイルを読み、スクリプトを実行することはできますが、長いタスクを管理するための組み込みの手段は少なくなります。ツールが少ないことが、初心者にとって簡単という意味ではありません。	ok
+settings.agentPreset	guideMinimalUsage	### Compare performance on a small bug fix\n\n> Run the tests for this project, find the cause of the failure, and make the smallest fix. Run the relevant tests again and report the result.\n\nRun the same task separately in Standard and Minimal modes from the same starting state. Compare task completion, tool calls, and the resulting changes. Minimal mode performs the work through terminal commands.	### 小さな修正での性能を比較する\n\n> このプロジェクトのテストを実行し、失敗の原因を特定して最小限の修正を加えてください。関連するテストをもう一度実行し、結果を報告してください。\n\n同じ初期状態から、同じタスクを標準モードと最小モードで別々に実行します。完了状況、ツール呼び出し、最終的な変更を比較してください。最小モードはターミナルコマンドを通して作業します。	ok
+settings.agentPreset	guideCordisIntro	Choose Creator mode for a new task. Describe the capability you want, where it should appear, and how you will verify it.	新しいタスクを始めるときは創造モードを選びます。追加したい機能、それをどこから使うか、どう検証するかを説明してください。	ok
+settings.agentPreset	guideCordisExplanation	### What you can create\n\nCreator mode includes the standard task tools plus runtime inspection, persistent plugin management, and guidance for authoring Cordis plugins and agent presets. It can create a plugin that adds a capability or UI, or a preset that combines tools and prompts for a particular job.\n\n### Plugins and modes\n\nA plugin adds capabilities to DSH, such as a tool, a service connection, or a UI entry. A mode is an agent preset that selects tools and defines how the agent works in a task. A plugin can be included in a custom preset.\n\n### How the result takes effect\n\nAsk the agent to install and verify the result, not just generate source code. A plugin may load immediately or require a restart, depending on what it changes. A newly created preset is selected when starting a new task.	### 何を作れるか\n\n創造モードには標準のタスク用ツールに加えて、実行時の調査、プラグインの永続的な管理、Cordis プラグインと Agent プリセットを作るためのガイドが含まれます。機能や UI を追加するプラグインも、特定の作業向けにツールとプロンプトを組み合わせたプリセットも作れます。\n\n### プラグインとモード\n\nプラグインは DSH に機能を追加します (ツール、サービス接続、UI の入口など)。モードは Agent プリセットであり、タスクで使うツールを選び、Agent の動き方を決めます。自作のプラグインをカスタムプリセットに含めることもできます。\n\n### 成果を反映させるには\n\nソースコードを生成させるだけでなく、インストールと動作確認まで Agent に依頼してください。変更内容によっては即座に読み込まれる場合と再起動が必要な場合があります。新しく作ったプリセットは、新しいタスクを始めるときに選べます。	ok
+settings.agentPreset	guideCordisUsage	### Add a UI\n\n> Create a DSH plugin that adds a project notes entry to the sidebar. Let me browse the Markdown files in this workspace and preview a selected note. Install it and verify that the page opens.\n\nExpected output: an installed plugin with a working entry and preview page, plus any remaining activation steps.\n\n### Add a tool\n\n> Create a plugin with a tool that reads this project’s test report and summarizes the failed tests. Register it and verify it with a sample report.\n\nExpected output: a plugin with a callable tool and a verified sample call.\n\n### Create my own mode\n\n> Create a “Code review” mode based on Standard mode. Have it prioritize potential bugs and test gaps, cite file paths and lines, and ask before modifying files. Save it as a selectable preset.\n\nExpected output: a custom preset for new tasks. These review instructions guide the agent; permission settings determine which actions it can execute.	### UI を追加する\n\n> サイドバーに「プロジェクトノート」の入口を追加する DSH プラグインを作ってください。このワークスペースの Markdown ファイルを一覧でき、選んだノートをプレビューできるようにしてください。インストールまで行い、ページが開くことを確認してください。\n\n期待する成果: 動作する入口とプレビューページを備えた、インストール済みのプラグイン。残っている有効化手順があればそれも示します。\n\n### ツールを追加する\n\n> このプロジェクトのテストレポートを読み、失敗したテストを要約するツールを提供するプラグインを作ってください。登録し、サンプルのレポートで動作を確認してください。\n\n期待する成果: 呼び出せるツールを持つプラグインと、サンプル呼び出しの確認結果。\n\n### 自分のモードを作る\n\n> 標準モードを基に「コードレビュー」モードを作ってください。潜在的なバグとテストの不足を優先して確認し、ファイルパスと行番号を示し、ファイルを変更する前に確認するようにしてください。選択できるプリセットとして保存してください。\n\n期待する成果: 新しいタスクで選べるカスタムプリセット。レビューの指示は Agent を導くもので、実際に実行できる操作は権限設定で決まります。	ok
+settings.agentPreset	builtInGroup	Built-in	組み込み	ok
+settings.agentPreset	customGroup	Custom	カスタム	ok
+settings.agentPreset	sectionIntro	Choose the agent’s tools and how it works. Use Standard mode for everyday tasks, or Creator mode to add capabilities to DSH.	Agent が使うツールと動き方を選びます。日常的なタスクには標準モード、DSH に機能を足すなら創造モードです。	ok
+settings.agentPreset	seatHint	Choose the agent preset for your new task	新しいタスクで使う Agent プリセットを選択	ok
+settings.agentPreset	headerHint	The agent preset chosen when this task started	このタスクの Agent プリセット (タスク開始時に確定します)	ok
+settings.agentPreset	nav	Agent presets	Agent プリセット	ok
+settings.agentPreset	setDefault	Set as new task default	新しいタスクの既定にする	ok
+settings.agentPreset	view	View configuration	設定を見る	ok
+settings.agentPreset	presetStandardName	Standard mode	標準モード	ok
+settings.agentPreset	presetStandardDescription	Work with code, files, and information. Suitable for most tasks, with search, editing, terminal commands, and other tools available as needed.	コード、ファイル、資料を扱います。ほとんどのタスクに適しており、必要に応じて検索・編集・ターミナルなどのツールを使えます。	ok
+settings.agentPreset	presetPtcName	PTC mode	PTC モード	ok
+settings.agentPreset	presetPtcDescription	Includes all Standard mode capabilities. Better suited to tasks that call tools in batches and then filter, organize, deduplicate, count, or summarize the results.	標準モードのすべての機能を含みます。ツールをまとめて呼び出し、その結果を絞り込み・整理・重複排除・集計・要約するタスクに向いています。	ok
+settings.agentPreset	presetMinimalName	Minimal mode	最小モード	ok
+settings.agentPreset	presetMinimalDescription	The agent works using only a terminal tool. Useful for testing and comparing its basic performance.	Agent はターミナルツールだけを使って作業します。基本的な性能の測定や比較に適しています。	ok
+settings.agentPreset	presetCordisName	Creator mode	創造モード	ok
+settings.agentPreset	presetCordisDescription	Customize DSH through conversation. Let the agent write plugins that add features or UI, or combine tools and prompts to create your own mode.	会話を通して DSH をカスタマイズします。機能や UI を追加するプラグインを Agent に書かせたり、ツールとプロンプトを組み合わせて自分のモードを作ったりできます。	ok
+settings.agentPreset	inUse	New task default	既定	ok
+settings.agentPreset	noDescription	No description.	説明はありません。	ok
+settings.agentPreset	brokenBadge	Failed to load	読み込みに失敗	ok
+settings.agentPreset	switchRefused	Could not switch to {name}: {reason}	{name} に切り替えられませんでした: {reason}	ok
+settings.agentPreset	close	Close	閉じる	ok
+settings.agentPreset	creatorDraft	Let the agent help me create a preset	Agent にプリセット作成を手伝ってもらう	ok
+common	ok	OK	OK	ok
+common	cancel	Cancel	キャンセル	ok
+common	close	Close	閉じる	ok
+common	copy	Copy	コピー	ok
+common	copied	Copied	コピーしました	ok
+common	codeBlock.title	Code block	コードブロック	ok
+common	codeBlock.wrap	Wrap lines	行を折り返す	ok
+common	codeBlock.unwrap	Do not wrap lines	行を折り返さない	ok
+common	copy.failed	Copy failed	コピーに失敗しました	ok
+common	copy.value	Copy value	値をコピー	ok
+common	copy.json	Copy JSON	JSON をコピー	ok
+common	copy.path	Copy property path	プロパティパスをコピー	ok
+common	copy.prettyJson	Copy pretty JSON	整形した JSON をコピー	ok
+common	copy.compactJson	Copy compact JSON	圧縮した JSON をコピー	ok
+common	copy.optionsHint	{action}; right-click for copy options	{action}。右クリックでコピー方法を選べます	ok
+common	retry	Retry	再試行	ok
+common	loading	Loading…	読み込み中…	ok
+common	load.failed	Failed to load	読み込みに失敗しました	ok
+common	submit	Submit	送信	ok
+common	submitting	Submitting…	送信中…	ok
+common	next	Next	次へ	ok
+common	previous	Previous	前へ	ok
+common	skip	Skip	スキップ	ok
+common	delete	Delete	削除	ok
+common	edit	Edit	編集	ok
+common	save	Save	保存	ok
+common	search	Search	検索	ok
+common	more	More	もっと見る	ok
+common	collapse	Collapse	折りたたむ	ok
+common	expand	Expand	展開する	ok
+common	back	Back	戻る	ok
+common	brand.localBuild	DSH Local Build	DSH ローカルビルド	ok
+common	workspace.defaultName	Default workspace	既定のワークスペース	ok
+common	unknown	Unknown	不明	ok
+common	none	None	なし	ok
+common	truncated	Truncated	省略されました	ok
+common	json.label	JSON	JSON	ok
+common	markdown.footnotes	Footnotes	脚注	ok
+common	markdown.truncatedCharacters	… truncated at {total} characters	… 全 {total} 文字で省略	ok
+common	number.thousand	{value}K	{value}K	ok
+common	number.million	{value}M	{value}M	ok
+settings.pluginInventory	tab	Plugin list	プラグイン一覧	ok
+settings.pluginInventory	loading	Reading plugins…	プラグインを読み込み中…	ok
+settings.pluginInventory	clientSyncing	Syncing plugins on this page…	このページのプラグインを同期しています…	ok
+settings.pluginInventory	clientSyncFailed	Some plugins could not sync on this page. Host enablement is unchanged.	このページでは一部のプラグインを同期できませんでした。ホスト側の有効状態は変わっていません。	ok
+settings.pluginInventory	clientSyncRetry	Retry this page	このページを再同期	ok
+settings.pluginInventory	error	Plugins are temporarily unavailable.	プラグインを一時的に読み込めません。	ok
+settings.pluginInventory	metadataError	Package metadata error: {error}	パッケージメタデータのエラー: {error}	ok
+settings.pluginInventory	retry	Retry	再試行	ok
+settings.pluginInventory	search	Search plugins	プラグインを検索	ok
+settings.pluginInventory	empty	No plugins are available.	利用できるプラグインがありません。	ok
+settings.pluginInventory	emptySearch	No matching plugins.	一致するプラグインがありません。	ok
+settings.pluginInventory	presetTitle	Session plugins	セッションプラグイン	ok
+settings.pluginInventory	presetSubtitle	Composed per session by agent presets	Agent プリセットがセッションごとに構成します	ok
+settings.pluginInventory	countUnit	plugins	件	ok
+settings.pluginInventory	switcherLabel	Choose the agent preset to inspect	確認する Agent プリセットを選択	ok
+settings.pluginInventory	presetOptionDefault	{name} (default)	{name} (既定)	ok
+settings.pluginInventory	presetOptionBroken	{name} (failed to load)	{name} (読み込み失敗)	ok
+settings.pluginInventory	globalTitle	Global plugins	グローバルプラグイン	ok
+settings.pluginInventory	globalSubtitle	Shared by the system and every session	システムとすべてのセッションで共有されます	ok
+settings.pluginInventory	presetProvidedDetail	Disabled globally; agent presets provide it per session	グローバルでは無効です。Agent プリセットがセッションごとに提供します	ok
+settings.pluginInventory	enabledIn	Enabled in	有効な場所	ok
+settings.pluginInventory	viewInPreset	View in the preset group	プリセットのグループで見る	ok
+settings.pluginInventory	matchesInOtherPresets	{count} more matches in other presets: 	ほかのプリセットにも {count} 件一致します: 	ok
+settings.pluginInventory	failedCountLabel	failed	件失敗	ok
+settings.pluginInventory	enabledTag	Enabled	有効	ok
+settings.pluginInventory	disabledTag	Disabled	無効	ok
+settings.pluginInventory	conditionalTag	Conditional	条件付き	ok
+settings.pluginInventory	presetEnabledTag	Via presets	プリセット経由	ok
+settings.pluginInventory	failedTag	Failed	失敗	ok
+settings.pluginInventory	moduleLabel	Module	完全名	ok
+settings.pluginInventory	fromPreset	From	提供元	ok
+settings.pluginInventory	condition	Disabled when	無効になる条件	ok
+settings.pluginInventory	configuration	Configuration	設定状態	ok
+settings.pluginInventory	runtime	Status	状態	ok
+settings.pluginInventory	unobserved	Not running	未実行	ok
+settings.pluginInventory	pending	Waiting for dependencies	依存関係を待機中	ok
+settings.pluginInventory	loadingPhase	Loading	読み込み中	ok
+settings.pluginInventory	active	Running	実行中	ok
+settings.pluginInventory	failed	Failed to start	起動に失敗	ok
+settings.pluginInventory	unloading	Unloading	アンロード中	ok
+job	count.live.one	{count} background job running	{count} 件のジョブが実行中	ok
+job	count.live.other	{count} background jobs running	{count} 件のジョブが実行中	ok
+job	count.idle.one	{count} background job	{count} 件のジョブ	ok
+job	count.idle.other	{count} background jobs	{count} 件のジョブ	ok
+job	list.aria	Background jobs	バックグラウンドジョブ	ok
+job	section.live	Running	実行中	ok
+job	section.settledCount	Finished {count}	完了 {count} 件	ok
+job	section.clear	Clear	クリア	ok
+job	row.expandAria	Show live output of {label}	{label} のライブ出力を表示	ok
+job	row.collapseAria	Hide live output of {label}	{label} のライブ出力を隠す	ok
+job	kill.stop	Stop task {label}	タスク {label} を停止	ok
+job	kill.confirm	Click again to confirm	もう一度クリックして確定	ok
+job	kill.confirmAction	Confirm stop	停止を確定	ok
+job	kill.failed	Stop failed	停止に失敗	ok
+job	status.running	running	実行中	ok
+job	status.stopping	stopping	停止中	ok
+job	status.completed	completed	完了	ok
+job	status.killed	cancelled	キャンセル済み	ok
+job	status.failed	failed	失敗	ok
+job	duration.seconds	{seconds}s	{seconds} 秒	ok
+job	duration.minutes	{minutes}m {seconds}s	{minutes} 分 {seconds} 秒	ok
+job	duration.hours	{hours}h {minutes}m	{hours} 時間 {minutes} 分	ok
+job	duration.title.live	Running for {duration}	実行時間 {duration}	ok
+job	duration.title.done	Took {duration}	所要時間 {duration}	ok
+job	output.gap	… earlier output dropped …	… 以前の出力は破棄されました …	ok
+job	output.error	live output stream interrupted: {error}	ライブ出力が中断されました: {error}	ok
+job	terminal.signal	signal {signal}	シグナル {signal}	ok
+job	terminal.exitCode	exit {code}	終了コード {code}	ok
+job	terminal.noExitCode	no exit code	終了コードなし	ok
+job	terminal.running	running	実行中	ok
+job	terminal.failed	failed	失敗	ok
+job	terminal.done	done	完了	ok
+job	terminal.copy	Copy	コピー	ok
+job	terminal.copied	Copied	コピーしました	ok
+job	terminal.noOutput	(no output)	(出力なし)	ok
+job	terminal.collapse	Collapse	折りたたむ	ok
+job	terminal.collapseAria	Collapse output	出力を折りたたむ	ok
+job	terminal.expand	Show {n} more lines	残り {n} 行を表示	ok
+job	terminal.expandAria	Expand {n} collapsed output lines	折りたたまれた出力 {n} 行を展開	ok
+subagent	duration.seconds	{seconds}s	{seconds} 秒	ok
+subagent	duration.minutes	{minutes}m {seconds}s	{minutes} 分 {seconds} 秒	ok
+subagent	duration.hours	{hours}h {minutes}m {seconds}s	{hours} 時間 {minutes} 分 {seconds} 秒	ok
+subagent	duration.days	{days}d	{days} 日	ok
+subagent	duration.daysHours	{days}d {hours}h	{days} 日 {hours} 時間	ok
+subagent	duration.months	~{months}mo	約 {months} か月	ok
+subagent	duration.monthsDays	~{months}mo {days}d	約 {months} か月 {days} 日	ok
+subagent	duration.years	~{years}y	約 {years} 年	ok
+subagent	duration.yearsMonths	~{years}y {months}mo	約 {years} 年 {months} か月	ok
+subagent	duration.exactDays	{days}d {hours}h {minutes}m {seconds}s	{days} 日 {hours} 時間 {minutes} 分 {seconds} 秒	ok
+subagent	duration.exactTitle	Total active duration: {duration}	合計実行時間: {duration}	ok
+subagent	tokens.thousand	{value}K	{value}K	ok
+subagent	tokens.million	{value}M	{value}M	ok
+subagent	tokens.total	{value} tok	{value} tok	ok
+subagent	loading.label	Loading subagents…	サブエージェントを読み込み中…	ok
+subagent	load.error	Unable to load subagents	サブエージェントを読み込めませんでした	ok
+subagent	retry	Retry	再試行	ok
+subagent	mode.oneShot	one-shot	単発	ok
+subagent	mode.continuable	continuable	継続可	ok
+subagent	mode.unknown	unknown mode	不明なモード	ok
+subagent	readonly.unknown.body	Read the child session to determine whether it can be continued.	続行できるかどうかを判断するには、子セッションを読んでください。	ok
+subagent	activity.running	running	実行中	ok
+subagent	activity.completed	completed	完了	ok
+subagent	activity.inactive	not running	停止	ok
+subagent	branch.collapse	Collapse {label} descendants	{label} の子孫を折りたたむ	ok
+subagent	branch.expand	Expand {label} descendants	{label} の子孫を展開する	ok
+subagent	count.total.one	{count} subagent	サブエージェント {count} 件	ok
+subagent	count.total.other	{count} subagents	サブエージェント {count} 件	ok
+subagent	count.running.one	{count} subagent running	サブエージェント {count} 件が実行中	ok
+subagent	count.running.other	{count} subagents running	サブエージェント {count} 件が実行中	ok
+subagent	switcher.aria	Switch subagent: {title}	サブエージェントを切り替え: {title}	ok
+subagent	tree.aria	Subagent sessions	サブエージェントのセッション	ok
+subagent	open.sidebar	Open in sidebar	サイドバーで開く	ok
+subagent	open.sidebar.aria	Open {label} in sidebar	{label} をサイドバーで開く	ok
+subagent	sidebar.chat	Chat	チャット	ok
+subagent	readonly.oneShot.title	One-shot subagent record	単発サブエージェントの記録	ok
+subagent	readonly.title	This subagent is read-only for now	このサブエージェントは現在読み取り専用です	ok
+subagent	readonly.oneShot.body	One-shot tasks do not accept follow-ups; review the full execution record here.	単発のタスクには追加のメッセージを送れません。ここで実行記録の全体を確認してください。	ok
+subagent	readonly.body	The parent session is offline; reopen it to continue sending messages.	親セッションがオフラインです。再度開くと、メッセージを送信できます。	ok
+settings.subagent	overridden	Overridden	上書き済み	ok
+settings.subagent	reset	Reset to default	既定に戻す	ok
+settings.subagent	readOnly	This deployment stores settings read-only.	この環境では設定は読み取り専用で保存されます。	ok
+settings.subagent	unavailable	This plugin is not loaded, so it cannot be configured right now.	このプラグインは読み込まれていないため、現在は設定できません。	ok
+settings.subagent	save	Save	保存	ok
+settings.subagent	saving	Saving…	保存しています…	ok
+settings.subagent	saveFailed	The deployment did not accept these values; they were left for you to correct.	この環境が値を受け付けませんでした。修正できるよう入力は残しています。	ok
+settings.subagent	subagentTitle	Subagent	サブエージェント	ok
+settings.subagent	subagentDescription	Set Subagent recursion depth, count, and models.	サブエージェントの再帰の深さ、同時数、モデルを設定します。	ok
+settings.subagent	subagentLimitsTitle	Limits	実行の上限	ok
+settings.subagent	subagentMaxDepth	Maximum recursion depth	再帰の最大の深さ	ok
+settings.subagent	subagentDepthHelpLabel	About maximum recursion depth	再帰の最大の深さについて	ok
+settings.subagent	subagentDepthHelp	Limits how many levels of Subagents an Agent can create.	Agent がサブエージェントを作成できる階層の数を制限します。	ok
+settings.subagent	subagentDepthZero	Disable Subagents	サブエージェントを無効にする	ok
+settings.subagent	subagentDepthOne	Only the main Agent can create Subagents	メイン Agent だけがサブエージェントを作成できる	ok
+settings.subagent	subagentDepthOverride	If a tool defines its own maximum recursion depth, that setting takes precedence.	ツール側で再帰の最大の深さが定義されている場合は、そちらの設定が優先されます。	ok
+settings.subagent	subagentMaxActive	Subagent parallelism limit	サブエージェントの同時実行数の上限	ok
+settings.subagent	subagentCapacityHelpLabel	About the Subagent parallelism limit	サブエージェントの同時実行数の上限について	ok
+settings.subagent	subagentCapacityHelp	Total live Subagents under the same main Agent, across all recursion levels. The main Agent is excluded. New start requests are rejected when the limit is reached.	同じメイン Agent の下で、すべての階層を通じて同時に存在するサブエージェントの総数です。メイン Agent は含みません。上限に達すると、新たな起動要求は拒否されます。	ok
+settings.subagent	subagentDepthInvalid	Enter a whole number of 0 or more.	0 以上の整数を入力してください。	ok
+settings.subagent	subagentCapacityInvalid	Enter a whole number of 1 or more.	1 以上の整数を入力してください。	ok
+settings.subagent	subagentModelSelectionTitle	Model selection	モデルの選択	ok
+settings.subagent	subagentModelSelectionToggle	Allow agents to choose models for Subagents	Agent がサブエージェントのモデルを選べるようにする	ok
+settings.subagent	subagentModelSelectionChoose	When enabled, agents can choose a provider, model, and reasoning effort for each Subagent from the authorized models below. Applies only to new sessions.	有効にすると、Agent は下の許可済みモデルから、サブエージェントごとにプロバイダー・モデル・推論の強度を選べます。新しいセッションにのみ適用されます。	ok
+settings.subagent	subagentModelSelectionAllowed	Models agents may choose	Agent が選択できるモデル	ok
+settings.subagent	subagentModelSelectionLoading	Loading models…	モデルを読み込み中…	ok
+settings.subagent	subagentModelSelectionLoadFailed	Models could not be loaded.	モデルを読み込めませんでした。	ok
+settings.subagent	subagentModelSelectionRetry	Retry	再試行	ok
+settings.subagent	subagentModelSelectionPartial	Some model providers could not be loaded; saved choices remain removable.	一部のモデルプロバイダーを読み込めませんでした。保存済みの選択は引き続き削除できます。	ok
+settings.subagent	subagentModelSelectionUnavailable	Currently unavailable	現在は利用できません	ok
+settings.subagent	subagentModelSelectionUnavailableGroup	Saved but currently unavailable	保存済みですが現在は利用できません	ok
+settings.subagent	subagentModelSelectionEmpty	No model provider currently advertises a model.	現在、モデルを公開しているプロバイダーはありません。	ok
+settings.subagent	subagentModelSelectionRequired	Select at least one model before saving.	保存する前に、少なくとも 1 つのモデルを選んでください。	ok
+settings.subagent	subagentModelSelectionConflict	Settings changed elsewhere. Discard your draft and try again.	設定がほかの場所で更新されました。下書きを破棄してやり直してください。	ok
+settings.subagent	subagentModelSelectionOff	Subagents use configured defaults or inherit the parent agent's model. Saved model choices are retained.	オフの場合、サブエージェントは設定済みの既定モデルを使うか、親 Agent のモデルを継承します。選択済みのモデルは保持されます。	ok
+settings	trigger	Settings	設定	ok
+settings	shortcut.open	Open settings	設定を開く	ok
+settings	desktop.update.available	Update	更新	ok
+settings	desktop.update.checking	Checking for updates…	更新を確認しています…	ok
+settings	desktop.update.progress	{percent}%	{percent}%	ok
+settings	desktop.update.verifying	Verifying update files…	更新ファイルを検証しています…	ok
+settings	desktop.update.installing	Preparing to restart…	再起動の準備をしています…	ok
+settings	desktop.update.ready	Install and Restart	インストールして再起動	ok
+settings	desktop.update.retry	Retry update	更新を再試行	ok
+settings	desktop.update.versionDetail	{label}: {version}	{label}: {version}	ok
+settings	desktop.update.downloadDetail	Downloading update: {percent}%\nTarget version: {version}	更新をダウンロード中: {percent}%\n対象バージョン: {version}	ok
+settings	desktop.update.checkFailed	Could not check for updates. Please try again later.	更新を確認できませんでした。しばらくしてから再試行してください。	ok
+settings	desktop.update.downloadFailed	Could not download the update. Please try again.	更新をダウンロードできませんでした。再試行してください。	ok
+settings	desktop.update.installFailed	Could not install the update. Please try again later.	更新をインストールできませんでした。しばらくしてから再試行してください。	ok
+settings	desktop.update.checkNetworkFailed	Could not check for updates. Check your connection and try again.	更新を確認できませんでした。接続を確認して再試行してください。	ok
+settings	desktop.update.downloadNetworkFailed	Could not download the update. Check your connection and try again.	更新をダウンロードできませんでした。接続を確認して再試行してください。	ok
+settings	desktop.update.installNetworkFailed	Could not install the update. Check your connection and try again.	更新をインストールできませんでした。接続を確認して再試行してください。	ok
+settings	desktop.update.stopFailed	Could not safely stop the tasks. The update has not been installed. Please try again later.	タスクを安全に停止できなかったため、更新はインストールされていません。しばらくしてから再試行してください。	ok
+settings	desktop.update.tasksChanged	New tasks have started. Confirm again to stop the tasks and update.	新しいタスクが始まりました。タスクを停止して更新するか、もう一度確認してください。	ok
+settings	desktop.update.tasksUnavailable	Task status is unavailable. Try updating again when the workspace is ready.	タスクの状態を取得できません。ワークスペースが準備できてから更新を再試行してください。	ok
+settings	title	Settings	設定	ok
+settings	close	Close	閉じる	ok
+settings	openDocument	Open configuration file	設定ファイルを開く	ok
+settings	openDocument.error	Could not open configuration file	設定ファイルを開けませんでした	ok
+settings	general.nav	General	一般	ok
+settings	general.currentVersion	Current version: {version}	現在のバージョン: {version}	ok
+settings	developerTools.title	Show coding view	コーディングビューを表示	ok
+settings	developerTools.error	Could not save. Please try again.	保存できませんでした。再試行してください。	ok
+settings	developerTools.description	Shows trajectory, code diffs, and all Agent presets	軌跡、コード差分、すべての Agent プリセットを表示します	ok
+settings	connection.error	Disconnected	切断されました	ok
+settings	connection.connecting	Reconnecting	再接続しています	ok
+settings	connection.connected	Connected	接続済み	ok
+settings	connection.reconnect	Disconnected, reconnect now	切断されました。クリックで再接続	ok
+settings	connection.restart	Reconnecting, reconnect now	再接続しています。クリックで今すぐ再接続	ok
+sidebarRight	command.close	Close current page or window	現在のページまたはウィンドウを閉じる	ok
+sidebarRight	command.refresh	Refresh current page	現在のページを更新	ok
+sidebarRight	command.noRefresh	This page cannot be refreshed	このページは更新できません	ok
+sidebarRight	command.toggle	Toggle right sidebar	右サイドバーを切り替え	ok
+sidebarRight	command.fullscreen	Toggle panel fullscreen	パネルの全画面表示を切り替え	ok
+sidebarRight	command.noSession	Select a session first	先にセッションを選択してください	ok
+sidebarRight	command.noFocus	Focus a right sidebar pane first	先に右サイドバーのペインにフォーカスしてください	ok
+sidebarRight	command.stale	The page changed; focus it again	ページが変わったため、もう一度フォーカスしてください	ok
+sidebarRight	command.collapsed	Expand the right sidebar first	先に右サイドバーを展開してください	ok
+sidebarRight	command.float	This action is unavailable in a floating panel	フローティングパネルではこの操作はできません	ok
+sidebarRight	command.empty	Open a page first	先にページを開いてください	ok
+sidebarRight	command.budget	Two panes is the limit	ペインは 2 つまでです	ok
+sidebarRight	command.width	Not enough width to split, widen the sidebar	幅が足りないため分割できません。サイドバーを広げてください	ok
+sidebarRight	chrome.expand	Open sidebar	サイドバーを開く	ok
+sidebarRight	chrome.expandAria	Open right sidebar	右サイドバーを開く	ok
+sidebarRight	chrome.collapse	Collapse sidebar	サイドバーを折りたたむ	ok
+sidebarRight	chrome.collapseAria	Collapse right sidebar	右サイドバーを折りたたむ	ok
+sidebarRight	chrome.toFullscreen	Fullscreen	全画面表示	ok
+sidebarRight	chrome.exitFullscreen	Exit fullscreen	全画面表示を終了	ok
+sidebarRight	dock.emptyPane	Empty pane	空のペイン	ok
+sidebarRight	dock.splitPane	Split	分割	ok
+sidebarRight	dock.splitPaneDisabled	Two panes is the limit	ペインは 2 つまでです	ok
+sidebarRight	dock.splitPaneNarrow	Not enough width to split, widen the sidebar	幅が足りないため分割できません。サイドバーを広げてください	ok
+sidebarRight	dock.closeTab	Close	閉じる	ok
+sidebarRight	dock.addTab	New tab	新しいタブ	ok
+sidebarRight	dock.dockFloat	Send back to the sidebar	サイドバーに戻す	ok
+sidebarRight	dock.closeFloat	Close	閉じる	ok
+sidebarRight	dock.drop.center	Move here	ここに移動	ok
+sidebarRight	dock.drop.left	Add left split	左に分割	ok
+sidebarRight	dock.drop.right	Add right split	右に分割	ok
+sidebarRight	dock.drop.top	Add top split	上に分割	ok
+sidebarRight	dock.drop.bottom	Add bottom split	下に分割	ok
+sidebarRight	tab.guide.title	Start	スタート	ok
+sidebarRight	tab.unavailable	Nothing here can view this kind of content yet.	この種類の内容を表示できるものがまだありません。	ok
+question	error.incomplete	Please complete this question first.	先にこの質問に回答してください。	ok
+question	error.unanswered	Please select an option or enter a custom answer.	選択肢を選ぶか、自由入力で回答してください。	ok
+question	error.unavailable	Cannot submit right now; try again in a moment.	現在は送信できません。しばらくしてからもう一度お試しください。	ok
+question	error.resubmit	The answer did not arrive before work continued; submit it again.	回答が届かないまま作業が再開されました。もう一度送信してください。	ok
+question	status.sent	Reply sent; the panel could not close.	回答は送信されましたが、パネルを閉じられませんでした。	ok
+question	wait.takeTime	Take time	ゆっくり回答する	ok
+question	wait.countdown	Continuing in {seconds}s	{seconds} 秒後に続行します	ok
+question	wait.paused	Paused · {seconds}s remaining	一時停止中 · 残り {seconds} 秒	ok
+question	wait.held	Waiting until you answer	回答するまで待機します	ok
+question	wait.continued	Work continued — you can still answer	作業は続行されました — 回答はまだできます	ok
+question	review.status	Answered	回答済み	ok
+question	review.skipped	This question was skipped.	この質問はスキップされました。	ok
+question	reply.label	Reply to earlier pending questions	以前の未回答の質問に回答	ok
+question	reply.open	Open question details	質問の詳細を開く	ok
+question	reply.close	Close question details	質問の詳細を閉じる	ok
+question	reply.answerLabel	Answer: 	回答: 	ok
+question	reply.skipped	Skipped	スキップ	ok
+question	nav.prev	Previous question	前の質問	ok
+question	nav.next	Next question	次の質問	ok
+question	nav.minimize	Collapse the question card	質問カードを折りたたむ	ok
+question	nav.maximize	Expand the question card	質問カードを展開する	ok
+question	nav.cancel	Dismiss all questions	すべての質問をキャンセル	ok
+question	nav.close	Close the panel — reopen it from the tool call	パネルを閉じる — ツール呼び出しから再度開けます	ok
+question	option.recommended	Recommended	推奨	ok
+question	custom.placeholder	Type your answer	回答を入力	ok
+question	action.skip	Skip	スキップ	ok
+question	action.next	Next	次へ	ok
+question	plan.header	Plan review	計画のレビュー	ok
+question	plan.approve	Approve	承認	ok
+question	plan.decline	Refuse	拒否	ok
+question	plan.discuss	Request changes	変更を依頼	ok
+command	section.add	Add	追加	ok
+command	section.commands	Commands	コマンド	ok
+command	label.goal	Goal	ゴール	ok
+command	label.plan	Plan	計画	ok
+command	label.feedback	Feedback	フィードバック	ok
+command	label.compact	Compact	圧縮	ok
+command	label.permission	Permission	権限	ok
+command	label.export	Export	エクスポート	ok
+command	description.goal	Set or view the goal for a long-running task	長時間タスクの目的を設定・確認します	ok
+command	description.plan	Enter or leave plan mode	計画モードに入る / 抜ける	ok
+command	description.feedback	Record feedback about this session	このセッションについてのフィードバックを送る	ok
+command	description.compact	Compact older conversation history	以前の会話履歴を圧縮します	ok
+command	description.permission	Switch the permission preset (sandbox mode + approval policy)	権限プリセットを切り替えます (サンドボックスモードと承認ポリシー)	ok
+command	description.export	Download this Session log as a ZIP archive	このセッションログを ZIP でダウンロードします	ok
+command	token.goal	goal	goal	ok
+command	token.plan	plan	plan	ok
+command	token.feedback	feedback	feedback	ok
+command	token.compact	compact	compact	ok
+command	token.permission	permission	permission	ok
+command	token.export	export	export	ok
+command	search.placeholder	Search…	検索…	ok
+command	search.aria	Filter options	候補を絞り込む	ok
+command	status.loading	Loading options…	候補を読み込んでいます…	ok
+command	status.applying	Applying…	適用しています…	ok
+command	status.empty	No options	候補はありません	ok
+command	overlay.aria	/{command} options	/{command} の候補	ok
+command	listbox.aria	/{command} matches	/{command} の一致項目	ok
+command	notice.attachmentsUnsupported	/{command} does not accept attachments; remove them first	/{command} は添付を受け付けません。先に削除してください	ok
+sidebarTerminal	shortcut.noSession	Select a session first	先にセッションを選択してください	ok
+sidebarTerminal	recoveryFailed	Terminal recovery failed: {message}	ターミナルの復元に失敗しました: {message}	ok
+sidebarTerminal	retryRecovery	Retry terminal recovery	ターミナルの復元を再試行	ok
+sidebarTerminal	shell	Choose shell	シェルを選択	ok
+sidebarTerminal	shellLoading	Loading shells…	シェルを読み込み中…	ok
+sidebarTerminal	shellEmpty	No shells available	利用できるシェルがありません	ok
+sidebarTerminal	description	Run commands in the Session workspace	セッションのワークスペースでコマンドを実行できます	ok
+sidebarTerminal	title	Terminal	ターミナル	ok
+sidebarTerminal	new	New terminal	新しいターミナル	ok
+sidebarTerminal	loading	Reading terminal environment…	ターミナル環境を読み込み中…	ok
+sidebarTerminal	creating	Starting…	起動中…	ok
+sidebarTerminal	connecting	Connecting…	接続中…	ok
+sidebarTerminal	disconnected	Disconnected.	接続が切断されました。	ok
+sidebarTerminal	reconnect	Reconnect	再接続	ok
+sidebarTerminal	readonly	This view is read-only.	この表示は読み取り専用です。	ok
+sidebarTerminal	control	Take control	操作を引き継ぐ	ok
+sidebarTerminal	closed	Terminal closed.	ターミナルは閉じられました。	ok
+sidebarTerminal	exited	Process exited ({code})	プロセスが終了しました ({code})	ok
+sidebarTerminal	failed	Terminal error: {message}	ターミナルエラー: {message}	ok
+sidebarTerminal	rename	Terminal name	ターミナル名	ok
+sidebarTerminal	unavailable	Unavailable	利用できません	ok
+sidebarTerminal	retry	Retry	再試行	ok
+sidebarTerminal	cleanupFailed	Terminal “{title}” could not be ended: {message}	ターミナル「{title}」を終了できませんでした: {message}	ok
+sidebarTerminal	missingTerminal	This terminal no longer exists. Open a new terminal.	このターミナルは存在しません。新しいターミナルを開いてください。	ok
+sidebarTerminal	inputFull	The input buffer is full. Reconnect and try again.	入力バッファーが満杯です。再接続してから再試行してください。	ok
+sidebarTerminal	attachmentEnded	The terminal connection ended. Reconnect to continue.	ターミナルの接続が終了しました。続けるには再接続してください。	ok
+sidebarTerminal	invalidOutput	The terminal screen could not be received. Reconnect to recover it.	ターミナル画面を受信できませんでした。再接続して復元してください。	ok
+sidebarTerminal	terminalLimit	The terminal limit has been reached. Close unused terminals and try again. Exited terminals also count toward the limit.	ターミナルの上限に達しました。使っていないターミナルを閉じてから再試行してください。終了済みのターミナルも上限に含まれます。	ok
+sidebarBrowser	type.label	Browser	ブラウザー	ok
+sidebarBrowser	guide.title	Browser	ブラウザー	ok
+sidebarBrowser	guide.description	Browse web pages	Web ページを閲覧できます	ok
+sidebarBrowser	shortcut.noSession	Open a session first	先にセッションを開いてください	ok
+sidebarBrowser	address.placeholder	Enter an HTTP(S) address	HTTP(S) アドレスを入力	ok
+sidebarBrowser	address.changed	URL changed	URL が変更されました	ok
+sidebarBrowser	back	Back	戻る	ok
+sidebarBrowser	forward	Forward	進む	ok
+sidebarBrowser	reload	Reload	再読み込み	ok
+sidebarBrowser	go	Go	移動	ok
+sidebarBrowser	external	Open in system browser	システムのブラウザーで開く	ok
+sidebarBrowser	sandbox.disable	Disable sandbox restrictions	サンドボックスの制限を解除	ok
+sidebarBrowser	sandbox.enable	Restore sandbox restrictions	サンドボックスの制限を元に戻す	ok
+sidebarBrowser	sandbox.warning	Sandbox restrictions are disabled; the page can navigate the top-level app and use downloads, modal dialogs, and input locks.	サンドボックスの制限が解除されています。ページが最上位のアプリを遷移させたり、ダウンロード・モーダルダイアログ・入力ロックを使ったりできる状態です。	ok
+sidebarBrowser	start	Enter an HTTP(S) address to start browsing	HTTP(S) アドレスを入力して閲覧を開始	ok
+sidebarBrowser	loading	Opening…	開いています…	ok
+sidebarBrowser	restore.previous	Previously opened	以前開いたページ	ok
+sidebarBrowser	restore.action	Restore page	ページを復元	ok
+sidebarBrowser	error.empty	Enter an address.	アドレスを入力してください。	ok
+sidebarBrowser	error.invalid	That address is invalid or too long.	そのアドレスは無効か、長すぎます。	ok
+sidebarBrowser	error.protocol	Only HTTP and HTTPS addresses are supported; use Document Preview for local files.	対応しているのは HTTP と HTTPS のアドレスだけです。ローカルファイルはドキュメントプレビューを使ってください。	ok
+sidebarBrowser	error.credentials	Addresses cannot contain a username or password.	アドレスにユーザー名やパスワードは含められません。	ok
+sidebarBrowser	error.application-origin	The embedded browser cannot open the DSH application itself.	埋め込みブラウザーでは DSH アプリ自体を開けません。	ok
+sidebarBrowser	load.failed	The page could not load; reload or open it in the system browser.	ページを読み込めませんでした。再読み込みするか、システムのブラウザーで開いてください。	ok
+sidebarBrowser	load.failed.detail	Page load failed ({code}): {description}	ページの読み込みに失敗しました ({code}): {description}	ok
+sidebarBrowser	address.unknown	The page navigated; this carrier cannot read its new URL.	ページが遷移しました。この表示では新しい URL を読み取れません。	ok
+agent-team	trigger	Agent Team	Agent チーム	ok
+agent-team	loading	Loading Team…	チームを読み込み中…	ok
+agent-team	unavailable	Team is unavailable	チームを利用できません	ok
+agent-team	failure	Invalid persisted Team record: {message}	保存されたチームの記録が無効です: {message}	ok
+agent-team	empty	No shared tasks yet. Create them through the conversation.	共有タスクはまだありません。会話から作成してください。	ok
+agent-team	roster	Members	メンバー	ok
+agent-team	tasks	Shared tasks	共有タスク	ok
+agent-team	model	Model	モデル	ok
+agent-team	open	Open member conversation	メンバーの会話を開く	ok
+agent-team	current	Current chat	現在のチャット	ok
+agent-team	owner	Owner	オーナー	ok
+agent-team	unowned	Unowned	未割り当て	ok
+agent-team	blockedBy	Blocked by	依存元	ok
+agent-team	writeScopes	Write scopes	書き込み範囲	ok
+agent-team	ready	Ready	開始可能	ok
+agent-team	blocked	Blocked by dependencies	依存関係によりブロック中	ok
+agent-team	task.expand	Show more	もっと見る	ok
+agent-team	task.collapse	Show less	表示を減らす	ok
+agent-team	memberStatus.running	Running	実行中	ok
+agent-team	memberStatus.inactive	Inactive	停止	ok
+agent-team	memberStatus.provisioning	Provisioning	準備中	ok
+agent-team	memberStatus.failed	Failed	失敗	ok
+agent-team	status.pending	Pending	待機中	ok
+agent-team	status.in_progress	In progress	進行中	ok
+agent-team	status.completed	Completed	完了	ok
+model	provider.account	DeepSeek Account	DeepSeek アカウント	ok
+model	command.label	Model	モデル	ok
+model	command.description	Select the model for this conversation	この会話で使うモデルを選択	ok
+model	option.loadError	Catalog failed to load: {message}	カタログを読み込めませんでした: {message}	ok
+model	trigger.fallback	Select model	モデルを選択	ok
+model	trigger.loading	Loading models…	モデルを読み込み中…	ok
+model	trigger.selectAria	Select model	モデルを選択	ok
+model	trigger.aria	Select model, current {model}	モデルを選択 (現在: {model})	ok
+model	trigger.ariaEffort	Select model, current {model}, reasoning effort {effort}	モデルを選択 (現在: {model}、推論の強度: {effort})	ok
+model	menu.aria	Model and reasoning effort	モデルと推論の強度	ok
+model	menu.model	Model	モデル	ok
+model	menu.effort	Effort	推論の強度	ok
+model	effort.providerDefault	Default	既定	ok
+model	status.loading	Refreshing model list…	モデル一覧を更新中…	ok
+model	error.action	Model operation failed: {message}	モデルの操作に失敗しました: {message}	ok
+model	error.sessionInUse	This session is already in use, possibly by another running DSH instance (such as dsh web or the desktop app). Quit other running DSH instances and try again.	このセッションはすでに使用されています (別の dsh web やデスクトップアプリなど、実行中の DSH が原因の可能性があります)。ほかの DSH を終了してからもう一度お試しください。	ok
+model	action.reload	Reload	再読み込み	ok
+model	warning.groupLoad	{name} failed to load: {message}	{name} を読み込めませんでした: {message}	ok
+model	search.placeholder	Search models…	モデルを検索…	ok
+model	search.clear	Clear search	検索をクリア	ok
+model	search.empty	No matching models.	一致するモデルがありません。	ok
+model	empty.models	No models available.	利用できるモデルがありません。	ok
+model	empty.efforts	This model provides no reasoning effort levels.	このモデルには推論の強度の設定がありません。	ok
+sidebarDocumentPreview	loading	Rendering document...	ドキュメントを描画中…	ok
+sidebarDocumentPreview	loadMore	Load more	さらに読み込む	ok
+sidebarDocumentPreview	changed	The file has changed, showing the previous content.	ファイルが変更されました。以前の内容を表示しています。	ok
+sidebarDocumentPreview	reloadNow	Reload	再読み込み	ok
+sidebarDocumentPreview	reload	Read the file again	ファイルを読み込み直す	ok
+sidebarDocumentPreview	autoRefresh	Auto refresh	自動更新	ok
+sidebarDocumentPreview	autoRefresh.enable	Enable auto refresh	自動更新を有効にする	ok
+sidebarDocumentPreview	autoRefresh.disable	Disable auto refresh	自動更新を無効にする	ok
+sidebarDocumentPreview	wrap.enable	Turn on line wrap	行を折り返す	ok
+sidebarDocumentPreview	wrap.disable	Turn off line wrap	行を折り返さない	ok
+sidebarDocumentPreview	wrap.aria	Line wrap	行の折り返し	ok
+sidebarDocumentPreview	openWith	Open with	開き方	ok
+sidebarDocumentPreview	viewer.text	Plain text	プレーンテキスト	ok
+sidebarDocumentPreview	resourceUnavailable	The file resource service is unavailable.	ファイルリソースのサービスが利用できません。	ok
+sidebarDocumentPreview	rendererUnavailable	The {name} preview is unavailable.	{name} のプレビューを利用できません。	ok
+sidebarDocumentPreview	unsupportedFile	Preview is not available for this file type yet.	この形式のファイルはまだプレビューできません。	ok
+sidebarDocumentPreview	error.notFound	File not found. It may have been moved or deleted.	ファイルが見つかりません。移動または削除された可能性があります。	ok
+sidebarDocumentPreview	error.tooLarge	This page exceeds the {limit} limit and cannot be read.	このページは {limit} の上限を超えているため読み込めません。	ok
+sidebarDocumentPreview	error.notText	Preview is not available for this file type yet.	この形式のファイルはまだプレビューできません。	ok
+sidebarDocumentPreview	error.notRegularFile	Not a regular file, nothing to display.	通常のファイルではないため、表示できる内容がありません。	ok
+sidebarDocumentPreview	error.unavailable	Read failed: {message}	読み込みに失敗しました: {message}	ok
+sidebarDocumentPreview	retry	Retry	再試行	ok
+feedback	action.like	Good response	良い回答	ok
+feedback	action.likeActive	Remove rating	評価を取り消す	ok
+feedback	action.dislike	Bad response	問題のある回答	ok
+feedback	action.dislikeActive	Remove rating	評価を取り消す	ok
+feedback	dialog.title	Submit feedback	フィードバックを送信	ok
+feedback	dialog.categories	Feedback category	フィードバックの分類	ok
+feedback	dialog.detail	Feedback details	フィードバックの詳細	ok
+feedback	dialog.hint	Add details to help us improve. Your submission will include the current conversation log.	改善のために詳細を記入してください。送信内容には現在の会話ログが含まれます。	ok
+feedback	category.task-result	Task result	タスクの結果	ok
+feedback	category.instruction-following	Instruction understanding and following	指示の理解と遵守	ok
+feedback	category.product-interaction	Product features and interaction	製品の機能と操作感	ok
+feedback	category.service-stability	Stability and speed	安定性と速度	ok
+feedback	category.resource-cost	Resource usage and cost	リソース使用量とコスト	ok
+feedback	category.security-privacy-permission	Security, privacy, and permissions	セキュリティ・プライバシー・権限	ok
+feedback	category.other	Other	その他	ok
+feedback	toast.recorded	Thanks for your feedback	フィードバックをありがとうございます	ok
+feedback	error.conflict	This feedback changed elsewhere; the latest state is shown	このフィードバックは別の場所で変更されました。最新の状態を表示しています	ok
+feedback	error.load	Could not load feedback	フィードバックを読み込めませんでした	ok
+feedback	error.generic	Could not save feedback	フィードバックを保存できませんでした	ok
+feedback	error.noteTooLarge	The description is too long; shorten it and submit again	説明が長すぎます。短くしてからもう一度送信してください	ok
+settings.webSearch	title	Web search	Web 検索	ok
+settings.webSearch	description	Set up the DeepSeek search provider.	DeepSeek の検索プロバイダーを設定します。	ok
+settings.webSearch	apiKey	API key	API キー	ok
+settings.webSearch	apiKeyHint	Stored outside the settings file. Leave blank to keep the current key.	設定ファイルには保存されません。空欄のままにすると現在のキーを維持します。	ok
+settings.webSearch	apiKeySet	A key is configured.	キーは設定済みです。	ok
+settings.webSearch	apiKeyUnset	No key is configured; only conversations using a DeepSeek Account model can search, through the default endpoint.	キーが未設定です。DeepSeek アカウントのモデルを使う会話だけが、既定のエンドポイント経由で検索できます。	ok
+settings.webSearch	baseUrl	Endpoint	エンドポイント	ok
+settings.webSearch	baseUrlHint	Leave blank to use the provider default.	空欄のままにするとプロバイダーの既定値を使います。	ok
+settings.webSearch	maxUses	Max searches per request	1 リクエストあたりの最大検索回数	ok
+settings.webSearch	maxUsesHint	How many times one request may search before it must answer.	1 回のリクエストが、回答するまでに何回まで検索できるか。	ok
+settings.webSearch	overridden	Overridden	上書き済み	ok
+settings.webSearch	reset	Reset to default	既定に戻す	ok
+settings.webSearch	readOnly	This deployment stores settings read-only.	この環境では設定は読み取り専用で保存されます。	ok
+settings.webSearch	unavailable	This plugin is not loaded, so it cannot be configured right now.	このプラグインは読み込まれていないため、現在は設定できません。	ok
+settings.webSearch	save	Save	保存	ok
+settings.webSearch	saving	Saving…	保存しています…	ok
+settings.webSearch	saveFailed	The deployment did not accept these values; they were left for you to correct.	この環境が値を受け付けませんでした。修正できるよう入力は残しています。	ok
+settings.webSearch	invalidNumber	Enter a number, or leave blank to use the default.	数値を入力してください。空欄のままにすると既定値を使います。	ok
+workflowRun	run.title	{name}	{name}	ok
+workflowRun	run.members.one	{count} member	メンバー {count} 件	ok
+workflowRun	run.members.other	{count} members	メンバー {count} 件	ok
+workflowRun	run.empty	No members started	開始されたメンバーはありません	ok
+workflowRun	phase.unassigned	Unphased	フェーズなし	ok
+workflowRun	phase.empty	Empty phase name	フェーズ名が空です	ok
+workflowRun	statusCount.running	Running {count}	実行中 {count}	ok
+workflowRun	statusCount.completed	Completed {count}	完了 {count}	ok
+workflowRun	statusCount.failed	Failed {count}	失敗 {count}	ok
+workflowRun	statusCount.cancelled	Cancelled {count}	キャンセル済み {count}	ok
+workflowRun	statusCount.interrupted	Interrupted {count}	中断 {count}	ok
+workflowRun	member.empty	Empty member name	メンバー名が空です	ok
+workflowRun	member.open	Open {name}	{name} を開く	ok
+workflowRun	status.running	Running	実行中	ok
+workflowRun	status.completed	Completed	完了	ok
+workflowRun	status.failed	Failed	失敗	ok
+workflowRun	status.cancelled	Cancelled	キャンセル済み	ok
+workflowRun	status.interrupted	Interrupted	中断	ok
+permission.access	mode	Access mode, current: {name}	アクセスモード、現在: {name}	ok
+permission.access	close	Close	閉じる	ok
+permission.access	preset.readOnly	Read Only	読み取りのみ	ok
+permission.access	preset.workspaceWrite	Workspace Write	ワークスペース内の書き込み	ok
+permission.access	preset.fullAccess	Full access	完全なアクセス	ok
+permission.access	confirm.title	Enable Full access?	完全なアクセスを有効にしますか？	ok
+permission.access	confirm.description	Full access reduces confirmation steps and lets the agent perform more actions directly, including sensitive operations, file changes, or external commands. Only use it when you trust the current task.	完全なアクセスを有効にすると、確認の手順が減り、Agent がより多くの操作を直接実行できるようになります。これには機微な操作、ファイルの変更、外部コマンドの実行が含まれます。現在のタスクを信頼できる場合にのみ使用してください。	ok
+permission.access	confirm.acknowledge	I understand the risks and want to continue	リスクを理解したうえで続けます	ok
+permission.access	confirm.cancel	Cancel	キャンセル	ok
+permission.access	confirm.enable	Enable Full access	完全なアクセスを有効にする	ok
+permission.access	auto.label	Auto review	Auto review	ok
+permission.access	auto.badge	EXP	EXP	ok
+permission.access	auto.description	Run without a sandbox after an experimental same-model review of every native tool call and PTC inner call.	サンドボックスなしで実行します。ネイティブのツール呼び出しと PTC の内側の呼び出しのたびに、同じモデルによる実験的なレビューを行います。	ok
+permission.access	auto.confirm.title	Enable Auto review (experimental)?	Auto review (実験的) を有効にしますか？	ok
+permission.access	auto.confirm.description	Auto review runs without a sandbox. Before every native tool call and PTC inner call, the same model as the current agent reviews whether to allow it; you approve or reject each call it denies. This feature is experimental, can falsely allow or deny actions, and uses additional tokens.	Auto review はサンドボックスなしで実行されます。ネイティブのツール呼び出しと PTC の内側の呼び出しの前に、現在の Agent と同じモデルが許可するかどうかを審査し、拒否された呼び出しはあなたが承認または拒否します。この機能は実験的で、操作を誤って許可・拒否する可能性があり、追加のトークンを消費します。	ok
+permission.access	auto.confirm.acknowledge	I understand these risks and want to continue	これらのリスクを理解したうえで続けます	ok
+permission.access	auto.confirm.enable	Enable Auto review	Auto review を有効にする	ok
+plan	chip.label	Plan	計画	ok
+plan	preview.title	Plan	計画	ok
+plan	preview.document	Plan · Markdown	計画 · Markdown	ok
+plan	preview.action	Open	開く	ok
+plan	preview.open	Open plan in sidebar	計画をサイドバーで開く	ok
+plan	preview.full	View full plan	計画の全文を表示	ok
+plan	preview.openNamed	Open plan: {title}	計画を開く: {title}	ok
+plan	preview.loading	Loading plan…	計画を読み込み中…	ok
+plan	preview.failed	Could not load plan	計画を読み込めませんでした	ok
+plan	preview.invalidAddress	Invalid plan address	計画のアドレスが無効です	ok
+plan	preview.historyUnavailable	Session history is unavailable	セッションの履歴を利用できません	ok
+plan	preview.notFound	This plan was not found	この計画が見つかりません	ok
+plan	preview.unavailable	Plan preview is unavailable	計画のプレビューを利用できません	ok
+plan	preview.expired	This temporary plan preview has expired. Reopen it from the pending review card.	この一時的な計画プレビューは期限切れです。承認待ちのカードから開き直してください。	ok
+plan	chip.on.aria	Plan mode on, press to turn off	計画モードはオンです。押すとオフになります	ok
+plan	chip.on.title	Plan mode on — click to turn off (/plan off)	計画モードはオンです — クリックでオフ (/plan off)	ok
+plan	chip.exitFailed	Failed to exit plan mode	計画モードを終了できませんでした	ok
+sidebarFiles	shortcut.noSession	Select a session first	先にセッションを選択してください	ok
+sidebarFiles	type.label	Files	ファイル	ok
+sidebarFiles	guide.title	Workspace files	ワークスペースのファイル	ok
+sidebarFiles	guide.description	Browse files in this session's workspace	このセッションのワークスペースにあるファイルを閲覧できます	ok
+sidebarFiles	loading	Reading…	読み込み中…	ok
+sidebarFiles	empty	Empty directory	空のディレクトリ	ok
+sidebarFiles	truncated	Too many entries, showing only some of them.	項目が多すぎるため、一部のみ表示しています。	ok
+sidebarFiles	noWorkspace	This session has no workspace directory.	このセッションにはワークスペースのディレクトリがありません。	ok
+sidebarFiles	reload	Reload	再読み込み	ok
+sidebarFiles	autoRefresh	Auto refresh	自動更新	ok
+sidebarFiles	autoRefresh.enable	Enable auto refresh	自動更新を有効にする	ok
+sidebarFiles	autoRefresh.disable	Disable auto refresh	自動更新を無効にする	ok
+sidebarFiles	entry.other	Not a file or a directory, so it cannot be opened.	ファイルでもディレクトリでもないため、開けません。	ok
+sidebarFiles	error.notFound	That directory is gone. It may have been moved or deleted.	そのディレクトリは存在しません。移動または削除された可能性があります。	ok
+sidebarFiles	error.outsideWorkspace	That directory is outside the workspace, so the sidebar will not read it.	そのディレクトリはワークスペースの外にあるため、サイドバーでは読み込みません。	ok
+sidebarFiles	error.notDirectory	That is not a directory.	ディレクトリではありません。	ok
+sidebarFiles	error.unavailable	Read failed: {message}	読み込みに失敗しました: {message}	ok
+sidebarPdf	zoomControls	Zoom controls	ズーム操作	ok
+sidebarPdf	zoomMenu	Choose zoom	ズームを選択	ok
+sidebarPdf	zoomOut	Zoom out	縮小	ok
+sidebarPdf	zoomIn	Zoom in	拡大	ok
+sidebarPdf	zoomFitWidth	Fit width	幅に合わせる	ok
+sidebarPdf	zoomValue	{percent}%	{percent}%	ok
+sidebarPdf	title	PDF	PDF	ok
+sidebarPdf	pageImage	PDF page {page}	PDF {page} ページ	ok
+sidebarPdf	loading	Rendering document...	ドキュメントを描画中…	ok
+sidebarPdf	rendering	Rendering page…	ページを描画中…	ok
+sidebarPdf	failed	Cannot display PDF: {message}	PDF を表示できません: {message}	ok
+sidebarPdf	password	This PDF requires a password; password-protected previews are not supported.	この PDF にはパスワードが必要です。パスワード保護された PDF のプレビューには対応していません。	ok
+sidebarPdf	workerFailed	The PDF rendering process could not continue. Please retry.	PDF の描画処理を続行できませんでした。もう一度お試しください。	ok
+sidebarPdf	unsupported	PDF preview requires the complete file contents.	PDF のプレビューにはファイル全体の内容が必要です。	ok
+sidebarPdf	retry	Retry	再試行	ok
+sidebarOffice	title	Office document	Office ドキュメント	ok
+sidebarOffice	loading	Rendering document...	ドキュメントを描画中…	ok
+sidebarOffice	retry	Retry	再試行	ok
+sidebarOffice	viewMissingFonts	Missing fonts: {count}. Click to view.	不足しているフォント: {count} 件。クリックして表示。	ok
+sidebarOffice	missingFontsTitle	Missing fonts	不足しているフォント	ok
+sidebarOffice	missingFontsDescription	These fonts are unavailable for this preview. Text and layout may differ from the original document.	このプレビューでは以下のフォントを利用できないため、文字やレイアウトが元のドキュメントと異なる場合があります。	ok
+sidebarOffice	missingFontsCount	Fonts: {count}	フォント: {count} 件	ok
+sidebarOffice	closeDetails	Close font details	フォントの詳細を閉じる	ok
+sidebarOffice	unavailable	Office previews are unavailable. Enable the document preview service on the computer running DeepSeek Harness.	Office のプレビューを利用できません。DeepSeek Harness を実行しているコンピューターでドキュメントプレビューサービスを有効にしてください。	ok
+sidebarOffice	invalid	This Office file cannot be previewed. It may be damaged, password protected, or have the wrong extension.	この Office ファイルはプレビューできません。破損しているか、パスワードで保護されているか、拡張子が実際の形式と異なる可能性があります。	ok
+sidebarOffice	tooLarge	The Office file or converted PDF exceeds the preview size limit. Reduce the file size or adjust the preview configuration.	Office ファイルまたは変換後の PDF がプレビューのサイズ上限を超えています。ファイルを小さくするか、プレビューの設定を調整してください。	ok
+sidebarOffice	failed	Office conversion did not produce a usable PDF. Check the file and try again.	Office の変換で使用できる PDF が生成されませんでした。ファイルを確認してからもう一度お試しください。	ok
+sidebarOffice	timeout	Office conversion timed out. Try again.	Office の変換がタイムアウトしました。もう一度お試しください。	ok
+sidebarOffice	busy	Office preview is busy. Try again shortly.	Office のプレビューが混み合っています。しばらくしてからもう一度お試しください。	ok
+sidebarOffice	changed	The file changed while being read. Reopen the preview.	読み込み中にファイルが変更されました。プレビューを開き直してください。	ok
+sidebarExcel	title	Spreadsheet	スプレッドシート	ok
+sidebarExcel	language	en	ja	ok
+sidebarExcel	loading	Rendering document...	ドキュメントを描画中…	ok
+sidebarExcel	invalid	This spreadsheet could not be opened. Check its format, contents, or password protection.	このスプレッドシートを開けませんでした。形式・内容・パスワード保護を確認してください。	ok
+sidebarExcel	tooLarge	This workbook exceeds the preview size limit.	このブックはプレビューのサイズ上限を超えています。	ok
+sidebarExcel	timeout	Opening this workbook timed out. Try a smaller file.	ブックを開く処理がタイムアウトしました。より小さいファイルをお試しください。	ok
+sidebarExcel	encoding	This text encoding could not be read. Save the file as UTF-8 or UTF-16 with a BOM and retry.	この文字コードを読み取れませんでした。BOM 付きの UTF-8 または UTF-16 で保存し直してから再試行してください。	ok
+sidebarExcel	formulaWarning	This workbook contains formulas. Displayed results may be missing or inaccurate.	このブックには数式が含まれています。表示される結果が欠けていたり不正確だったりする場合があります。	ok
+sidebarExcel	unsupportedNotice	This preview does not support {features} in this workbook. Open it in a system application for the full experience.	このプレビューでは、このブックの {features} を表示できません。すべての内容を見るにはシステムのアプリで開いてください。	ok
+sidebarExcel	charts	charts	グラフ	ok
+sidebarExcel	images	images	画像	ok
+sidebarExcel	shapes	shapes	図形	ok
+sidebarExcel	conditionalFormatting	conditional formatting	条件付き書式	ok
+sidebarExcel	featureSeparator	, 	、	ok
+sidebarExcel	retry	Retry	再試行	ok
+settings.shell	title	Shell	シェル	ok
+settings.shell	description	Limit how long each command may run and how much it may output.	コマンド 1 つあたりの実行時間と出力量の上限を設定します。	ok
+settings.shell	timeoutMs	Command timeout (ms)	コマンドのタイムアウト (ミリ秒)	ok
+settings.shell	timeoutMsHint	How long one command may run before it is terminated.	コマンド 1 つが強制終了されるまで実行できる時間。	ok
+settings.shell	maxOutputBytes	Output cap per stream (bytes)	ストリームあたりの出力上限 (バイト)	ok
+settings.shell	maxOutputBytesHint	Output beyond this spills to a temporary file rather than being lost.	上限を超えた出力は失われず、一時ファイルに退避されます。	ok
+settings.shell	overridden	Overridden	上書き済み	ok
+settings.shell	reset	Reset to default	既定に戻す	ok
+settings.shell	readOnly	This deployment stores settings read-only.	この環境では設定は読み取り専用で保存されます。	ok
+settings.shell	unavailable	This plugin is not loaded, so it cannot be configured right now.	このプラグインは読み込まれていないため、現在は設定できません。	ok
+settings.shell	save	Save	保存	ok
+settings.shell	saving	Saving…	保存しています…	ok
+settings.shell	saveFailed	The deployment did not accept these values; they were left for you to correct.	この環境が値を受け付けませんでした。修正できるよう入力は残しています。	ok
+settings.shell	invalidNumber	Enter a number, or leave blank to use the default.	数値を入力してください。空欄のままにすると既定値を使います。	ok
+directory-browser	browser.title	Select Workspace Directory	ワークスペースのディレクトリを選択	ok
+directory-browser	browser.home	Home	ホーム	ok
+directory-browser	browser.newFolder	New folder	新しいフォルダー	ok
+directory-browser	browser.folderName	Folder name	フォルダー名	ok
+directory-browser	browser.createIn	New folder in "{name}"	「{name}」に新しいフォルダー	ok
+directory-browser	browser.untitledFolder	Untitled folder	名称未設定のフォルダー	ok
+directory-browser	browser.create	Create	作成	ok
+directory-browser	browser.cancel	Cancel	キャンセル	ok
+directory-browser	browser.open	Open	開く	ok
+directory-browser	browser.editPath	Edit path	パスを編集	ok
+directory-browser	browser.loading	Loading…	読み込み中…	ok
+directory-browser	browser.truncated	Too many folders to list; only the beginning is shown.	フォルダーが多すぎるため、先頭のみ表示しています。	ok
+directory-browser	browser.showHidden	Show hidden files	隠しファイルを表示	ok
+goal	phase.active	Ongoing Goal	実行中のゴール	ok
+goal	phase.active.disarmed	Inactive Goal	継続待ちのゴール	ok
+goal	phase.paused	Paused Goal	一時停止中のゴール	ok
+goal	phase.blocked	Blocked Goal	ブロック中のゴール	ok
+goal	objective.aria	Goal objective	ゴールの目的	ok
+goal	commandInput.aria	Command input	コマンド入力	ok
+goal	action.save	Save goal	ゴールを保存	ok
+goal	action.cancel	Cancel edit	編集をキャンセル	ok
+goal	action.pause	Pause goal	ゴールを一時停止	ok
+goal	action.resume	Resume goal	ゴールを再開	ok
+goal	action.edit	Edit goal	ゴールを編集	ok
+goal	action.clear	Clear goal	ゴールをクリア	ok
+settings.agentLoop	title	Agent loop	Agent ループ	ok
+settings.agentLoop	description	Control how the Agent dispatches tool calls.	Agent がツール呼び出しをどう捌くかを制御します。	ok
+settings.agentLoop	maxParallel	Parallel tool calls	並行するツール呼び出し	ok
+settings.agentLoop	maxParallelHint	Upper bound on parallel-safe calls running at once within one step.	1 ステップ内で同時に実行される、並行実行可能な呼び出しの上限。	ok
+settings.agentLoop	overridden	Overridden	上書き済み	ok
+settings.agentLoop	reset	Reset to default	既定に戻す	ok
+settings.agentLoop	readOnly	This deployment stores settings read-only.	この環境では設定は読み取り専用で保存されます。	ok
+settings.agentLoop	unavailable	This plugin is not loaded, so it cannot be configured right now.	このプラグインは読み込まれていないため、現在は設定できません。	ok
+settings.agentLoop	save	Save	保存	ok
+settings.agentLoop	saving	Saving…	保存しています…	ok
+settings.agentLoop	saveFailed	The deployment did not accept these values; they were left for you to correct.	この環境が値を受け付けませんでした。修正できるよう入力は残しています。	ok
+settings.agentLoop	invalidNumber	Enter a number, or leave blank to use the default.	数値を入力してください。空欄のままにすると既定値を使います。	ok
+settings.permission	title	Permission	権限	ok
+settings.permission	description	Choose the default permission mode for new sessions	新しいセッションの既定の権限モードを選択します	ok
+settings.permission	loading	Loading	読み込み中	ok
+settings.permission	unavailable	Unavailable	利用できません	ok
+settings.permission	preset.readOnly	Read Only	読み取りのみ	ok
+settings.permission	preset.workspaceWrite	Workspace Write	ワークスペース内の書き込み	ok
+settings.permission	preset.fullAccess	Full access	完全なアクセス	ok
+settings.permission	confirm.title	Enable Full access?	完全なアクセスを有効にしますか？	ok
+settings.permission	confirm.description	Full access lets new sessions reduce confirmation steps and perform more actions directly, including sensitive operations, file changes, or external commands. Only use it when you trust subsequent tasks.	完全なアクセスを有効にすると、新しいセッションで確認の手順が減り、より多くの操作を直接実行できるようになります。これには機微な操作、ファイルの変更、外部コマンドの実行が含まれます。後続のタスクを信頼できる場合にのみ使用してください。	ok
+settings.permission	confirm.acknowledge	I understand the risks and want to continue	リスクを理解したうえで続けます	ok
+settings.permission	confirm.cancel	Cancel	キャンセル	ok
+settings.permission	confirm.enable	Enable Full access	完全なアクセスを有効にする	ok
+reference	section.files	Files & folders	ファイルとフォルダー	ok
+reference	section.subagents	Subagents	サブエージェント	ok
+reference	section.sessions	Sessions	セッション	ok
+reference	candidate.noCwd	(no cwd)	(作業ディレクトリなし)	ok
+reference	crumb.root	Workspace	ワークスペース	ok
+reference	time.now	now	たった今	ok
+reference	time.minutes	{n}min	{n} 分	ok
+reference	time.hours	{n}h	{n} 時間	ok
+reference	time.days	{n}d	{n} 日	ok
+reference	time.months	{n}mo	{n} か月	ok
+reference	time.years	{n}y	{n} 年	ok
+sidebarImage	zoomControls	Zoom controls	ズーム操作	ok
+sidebarImage	zoomMenu	Choose zoom	ズームを選択	ok
+sidebarImage	zoomOut	Zoom out	縮小	ok
+sidebarImage	zoomIn	Zoom in	拡大	ok
+sidebarImage	zoomFitWidth	Fit width	幅に合わせる	ok
+sidebarImage	zoomValue	{percent}%	{percent}%	ok
+sidebarImage	title	Image	画像	ok
+sidebarImage	preview	Image preview: {name}	画像のプレビュー: {name}	ok
+sidebarImage	loading	Rendering document...	ドキュメントを描画中…	ok
+sidebarImage	failed	This image could not be displayed.	この画像を表示できませんでした。	ok
+sidebarImage	unsupported	Image preview requires the complete file contents.	画像のプレビューにはファイル全体の内容が必要です。	ok
+session-log-download	header.more	More actions	その他の操作	ok
+session-log-download	menu.download	Download session log	セッションログをダウンロード	ok
+session-log-download	menu.feedback	Feedback	フィードバック	ok
+session-log-download	dialog.preparingTitle	Exporting Session	セッションをエクスポート中	ok
+session-log-download	dialog.preparingDescription	Preparing a ZIP containing this Session, its sub-Sessions, and attachments.	このセッションと子セッション、添付ファイルを含む ZIP を準備しています。	ok
+session-log-download	dialog.successTitle	Session download started	セッションのダウンロードを開始しました	ok
+session-log-download	dialog.successDescription	The browser is downloading the Session ZIP.	ブラウザーがセッションの ZIP をダウンロードしています。	ok
+session-log-download	dialog.errorTitle	Session export failed	セッションのエクスポートに失敗しました	ok
+session-log-download	dialog.close	Close	閉じる	ok
+session-log-download	dialog.commandFailed	Could not start the Session export.	セッションのエクスポートを開始できませんでした。	ok
+slash.menu	command	Commands	コマンド	ok
+slash.menu	skill	Skills	スキル	ok
+slash.menu	subagent	Subagents	サブエージェント	ok
+slash.menu	loading	Loading…	読み込み中…	ok
+slash.menu	drill.aria	Browse folder	フォルダーを参照	ok
+slash.menu	drill.hint	Browse folder	フォルダーを参照	ok
+slash.menu	drill.key	Tab	Tab	ok
+slash.menu	crumbs.aria	Folder navigation	フォルダーの移動	ok
+slash.menu	suggestions.aria	Trigger suggestions	候補を表示	ok
+settings.theme	appearance.title	Appearance	外観	ok
+settings.theme	appearance.light	Light	ライト	ok
+settings.theme	appearance.dark	Dark	ダーク	ok
+settings.theme	appearance.system	System	システムに合わせる	ok
+settings.theme	fontSize.title	Font size	文字サイズ	ok
+settings.theme	fontSize.description	Only affects conversation content	会話の内容にのみ反映されます	ok
+settings.theme	fontSize.unit	px	px	ok
+settings.theme	fontSize.increase	Increase font size	文字サイズを大きく	ok
+settings.theme	fontSize.decrease	Decrease font size	文字サイズを小さく	ok
+skill	row.title	Skill	スキル	ok
+skill	row.running	Loading skill	スキルを読み込み中	ok
+skill	row.preparing	Preparing to load a skill	スキルを読み込む準備をしています	ok
+skill	row.failed	Skill load failed	スキルの読み込みに失敗	ok
+skill	row.stopped	Skill load stopped	スキルの読み込みを停止	ok
+skill	row.instructions	Instructions	指示	ok
+skill	row.inspect	Inspect	呼び出しを確認	ok
+skill	menu.userOnly	user-only	ユーザー専用	ok
+approval	waiting	Waiting for approval	承認待ち	ok
+approval	detail.aria	Approval details	承認の詳細	ok
+approval	escalation	Tool {toolName} requests privileged execution	ツール {toolName} が特権実行を要求しています	ok
+approval	reject	Reject	拒否	ok
+approval	allowOnce	Allow once	1 回だけ許可	ok
+settings.plugins	nav	Built-in plugins	組み込みプラグイン	ok
+settings.plugins	title	Built-in plugins	組み込みプラグイン	ok
+settings.plugins	intro	Inspect the plugins this deployment ships.	この環境に同梱されているプラグインを確認します。	ok
+settings.plugins	tabs	Plugin views	プラグインの表示	ok
+settings.plugins	empty	This deployment exposes no plugin views.	この環境は公開しているプラグイン表示がありません。	ok
+sidebar	session.new	New Session	新しいセッション	ok
+sidebar	session.new.label	New session	新しいセッション	ok
+sidebar	toggle.open	Open sidebar	サイドバーを開く	ok
+sidebar	toggle.collapse	Collapse sidebar	サイドバーを折りたたむ	ok
+sidebar	panels.label	Global panels	グローバルパネル	ok
+settings.sessionLog	title	Upload Session Log when using the official model API	公式のモデル API を使うときにセッションログをアップロードする	ok
+settings.sessionLog	description	Help improve DeepSeek models and products.	DeepSeek のモデルと製品の改善に役立てます。	ok
+settings.sessionLog	saved	Preference saved	設定を保存しました	ok
+settings.sessionLog	failed	Could not save preference	設定を保存できませんでした	ok
+documentMarkdown	viewer.label	Markdown	Markdown	ok
+documentMarkdown	code.copy	Copy	コピー	ok
+documentMarkdown	code.copied	Copied	コピーしました	ok
+documentMarkdown	footnotes	Footnotes	脚注	ok
+documentHtml	title	HTML	HTML	ok
+documentHtml	frame	HTML document preview	HTML ドキュメントのプレビュー	ok
+documentHtml	loading	Rendering document...	ドキュメントを描画中…	ok
+documentHtml	failed	This HTML document could not be previewed.	この HTML ドキュメントをプレビューできませんでした。	ok
+sidebarCodePreview	title	Code	コード	ok
+sidebarCodePreview	copy	Copy	コピー	ok
+sidebarCodePreview	copied	Copied	コピーしました	ok
+shortcuts.layout	toggle	Toggle left sidebar	左サイドバーを切り替え	ok
+settings.locale	language.title	Language	言語	ok

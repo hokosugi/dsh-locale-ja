@@ -1,0 +1,21 @@
+namespace	key	en	ja	status
+feedback	action.like	Good response	良い回答	ok
+feedback	action.likeActive	Remove rating	評価を取り消す	ok
+feedback	action.dislike	Bad response	問題のある回答	ok
+feedback	action.dislikeActive	Remove rating	評価を取り消す	ok
+feedback	dialog.title	Submit feedback	フィードバックを送信	ok
+feedback	dialog.categories	Feedback category	フィードバックの分類	ok
+feedback	dialog.detail	Feedback details	フィードバックの詳細	ok
+feedback	dialog.hint	Add details to help us improve. Your submission will include the current conversation log.	改善のために詳細を記入してください。送信内容には現在の会話ログが含まれます。	ok
+feedback	category.task-result	Task result	タスクの結果	ok
+feedback	category.instruction-following	Instruction understanding and following	指示の理解と遵守	ok
+feedback	category.product-interaction	Product features and interaction	製品の機能と操作感	ok
+feedback	category.service-stability	Stability and speed	安定性と速度	ok
+feedback	category.resource-cost	Resource usage and cost	リソース使用量とコスト	ok
+feedback	category.security-privacy-permission	Security, privacy, and permissions	セキュリティ・プライバシー・権限	ok
+feedback	category.other	Other	その他	ok
+feedback	toast.recorded	Thanks for your feedback	フィードバックをありがとうございます	ok
+feedback	error.conflict	This feedback changed elsewhere; the latest state is shown	このフィードバックは別の場所で変更されました。最新の状態を表示しています	ok
+feedback	error.load	Could not load feedback	フィードバックを読み込めませんでした	ok
+feedback	error.generic	Could not save feedback	フィードバックを保存できませんでした	ok
+feedback	error.noteTooLarge	The description is too long; shorten it and submit again	説明が長すぎます。短くしてからもう一度送信してください	ok

@@ -1,0 +1,26 @@
+namespace	key	en	ja	status
+agent-team	trigger	Agent Team	Agent チーム	ok
+agent-team	loading	Loading Team…	チームを読み込み中…	ok
+agent-team	unavailable	Team is unavailable	チームを利用できません	ok
+agent-team	failure	Invalid persisted Team record: {message}	保存されたチームの記録が無効です: {message}	ok
+agent-team	empty	No shared tasks yet. Create them through the conversation.	共有タスクはまだありません。会話から作成してください。	ok
+agent-team	roster	Members	メンバー	ok
+agent-team	tasks	Shared tasks	共有タスク	ok
+agent-team	model	Model	モデル	ok
+agent-team	open	Open member conversation	メンバーの会話を開く	ok
+agent-team	current	Current chat	現在のチャット	ok
+agent-team	owner	Owner	オーナー	ok
+agent-team	unowned	Unowned	未割り当て	ok
+agent-team	blockedBy	Blocked by	依存元	ok
+agent-team	writeScopes	Write scopes	書き込み範囲	ok
+agent-team	ready	Ready	開始可能	ok
+agent-team	blocked	Blocked by dependencies	依存関係によりブロック中	ok
+agent-team	task.expand	Show more	もっと見る	ok
+agent-team	task.collapse	Show less	表示を減らす	ok
+agent-team	memberStatus.running	Running	実行中	ok
+agent-team	memberStatus.inactive	Inactive	停止	ok
+agent-team	memberStatus.provisioning	Provisioning	準備中	ok
+agent-team	memberStatus.failed	Failed	失敗	ok
+agent-team	status.pending	Pending	待機中	ok
+agent-team	status.in_progress	In progress	進行中	ok
+agent-team	status.completed	Completed	完了	ok

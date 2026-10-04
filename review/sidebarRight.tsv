@@ -1,0 +1,35 @@
+namespace	key	en	ja	status
+sidebarRight	command.close	Close current page or window	現在のページまたはウィンドウを閉じる	ok
+sidebarRight	command.refresh	Refresh current page	現在のページを更新	ok
+sidebarRight	command.noRefresh	This page cannot be refreshed	このページは更新できません	ok
+sidebarRight	command.toggle	Toggle right sidebar	右サイドバーを切り替え	ok
+sidebarRight	command.fullscreen	Toggle panel fullscreen	パネルの全画面表示を切り替え	ok
+sidebarRight	command.noSession	Select a session first	先にセッションを選択してください	ok
+sidebarRight	command.noFocus	Focus a right sidebar pane first	先に右サイドバーのペインにフォーカスしてください	ok
+sidebarRight	command.stale	The page changed; focus it again	ページが変わったため、もう一度フォーカスしてください	ok
+sidebarRight	command.collapsed	Expand the right sidebar first	先に右サイドバーを展開してください	ok
+sidebarRight	command.float	This action is unavailable in a floating panel	フローティングパネルではこの操作はできません	ok
+sidebarRight	command.empty	Open a page first	先にページを開いてください	ok
+sidebarRight	command.budget	Two panes is the limit	ペインは 2 つまでです	ok
+sidebarRight	command.width	Not enough width to split, widen the sidebar	幅が足りないため分割できません。サイドバーを広げてください	ok
+sidebarRight	chrome.expand	Open sidebar	サイドバーを開く	ok
+sidebarRight	chrome.expandAria	Open right sidebar	右サイドバーを開く	ok
+sidebarRight	chrome.collapse	Collapse sidebar	サイドバーを折りたたむ	ok
+sidebarRight	chrome.collapseAria	Collapse right sidebar	右サイドバーを折りたたむ	ok
+sidebarRight	chrome.toFullscreen	Fullscreen	全画面表示	ok
+sidebarRight	chrome.exitFullscreen	Exit fullscreen	全画面表示を終了	ok
+sidebarRight	dock.emptyPane	Empty pane	空のペイン	ok
+sidebarRight	dock.splitPane	Split	分割	ok
+sidebarRight	dock.splitPaneDisabled	Two panes is the limit	ペインは 2 つまでです	ok
+sidebarRight	dock.splitPaneNarrow	Not enough width to split, widen the sidebar	幅が足りないため分割できません。サイドバーを広げてください	ok
+sidebarRight	dock.closeTab	Close	閉じる	ok
+sidebarRight	dock.addTab	New tab	新しいタブ	ok
+sidebarRight	dock.dockFloat	Send back to the sidebar	サイドバーに戻す	ok
+sidebarRight	dock.closeFloat	Close	閉じる	ok
+sidebarRight	dock.drop.center	Move here	ここに移動	ok
+sidebarRight	dock.drop.left	Add left split	左に分割	ok
+sidebarRight	dock.drop.right	Add right split	右に分割	ok
+sidebarRight	dock.drop.top	Add top split	上に分割	ok
+sidebarRight	dock.drop.bottom	Add bottom split	下に分割	ok
+sidebarRight	tab.guide.title	Start	スタート	ok
+sidebarRight	tab.unavailable	Nothing here can view this kind of content yet.	この種類の内容を表示できるものがまだありません。	ok

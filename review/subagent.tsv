@@ -1,0 +1,40 @@
+namespace	key	en	ja	status
+subagent	duration.seconds	{seconds}s	{seconds} 秒	ok
+subagent	duration.minutes	{minutes}m {seconds}s	{minutes} 分 {seconds} 秒	ok
+subagent	duration.hours	{hours}h {minutes}m {seconds}s	{hours} 時間 {minutes} 分 {seconds} 秒	ok
+subagent	duration.days	{days}d	{days} 日	ok
+subagent	duration.daysHours	{days}d {hours}h	{days} 日 {hours} 時間	ok
+subagent	duration.months	~{months}mo	約 {months} か月	ok
+subagent	duration.monthsDays	~{months}mo {days}d	約 {months} か月 {days} 日	ok
+subagent	duration.years	~{years}y	約 {years} 年	ok
+subagent	duration.yearsMonths	~{years}y {months}mo	約 {years} 年 {months} か月	ok
+subagent	duration.exactDays	{days}d {hours}h {minutes}m {seconds}s	{days} 日 {hours} 時間 {minutes} 分 {seconds} 秒	ok
+subagent	duration.exactTitle	Total active duration: {duration}	合計実行時間: {duration}	ok
+subagent	tokens.thousand	{value}K	{value}K	ok
+subagent	tokens.million	{value}M	{value}M	ok
+subagent	tokens.total	{value} tok	{value} tok	ok
+subagent	loading.label	Loading subagents…	サブエージェントを読み込み中…	ok
+subagent	load.error	Unable to load subagents	サブエージェントを読み込めませんでした	ok
+subagent	retry	Retry	再試行	ok
+subagent	mode.oneShot	one-shot	単発	ok
+subagent	mode.continuable	continuable	継続可	ok
+subagent	mode.unknown	unknown mode	不明なモード	ok
+subagent	readonly.unknown.body	Read the child session to determine whether it can be continued.	続行できるかどうかを判断するには、子セッションを読んでください。	ok
+subagent	activity.running	running	実行中	ok
+subagent	activity.completed	completed	完了	ok
+subagent	activity.inactive	not running	停止	ok
+subagent	branch.collapse	Collapse {label} descendants	{label} の子孫を折りたたむ	ok
+subagent	branch.expand	Expand {label} descendants	{label} の子孫を展開する	ok
+subagent	count.total.one	{count} subagent	サブエージェント {count} 件	ok
+subagent	count.total.other	{count} subagents	サブエージェント {count} 件	ok
+subagent	count.running.one	{count} subagent running	サブエージェント {count} 件が実行中	ok
+subagent	count.running.other	{count} subagents running	サブエージェント {count} 件が実行中	ok
+subagent	switcher.aria	Switch subagent: {title}	サブエージェントを切り替え: {title}	ok
+subagent	tree.aria	Subagent sessions	サブエージェントのセッション	ok
+subagent	open.sidebar	Open in sidebar	サイドバーで開く	ok
+subagent	open.sidebar.aria	Open {label} in sidebar	{label} をサイドバーで開く	ok
+subagent	sidebar.chat	Chat	チャット	ok
+subagent	readonly.oneShot.title	One-shot subagent record	単発サブエージェントの記録	ok
+subagent	readonly.title	This subagent is read-only for now	このサブエージェントは現在読み取り専用です	ok
+subagent	readonly.oneShot.body	One-shot tasks do not accept follow-ups; review the full execution record here.	単発のタスクには追加のメッセージを送れません。ここで実行記録の全体を確認してください。	ok
+subagent	readonly.body	The parent session is offline; reopen it to continue sending messages.	親セッションがオフラインです。再度開くと、メッセージを送信できます。	ok

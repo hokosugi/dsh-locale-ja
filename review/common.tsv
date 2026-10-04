@@ -1,0 +1,42 @@
+namespace	key	en	ja	status
+common	ok	OK	OK	ok
+common	cancel	Cancel	キャンセル	ok
+common	close	Close	閉じる	ok
+common	copy	Copy	コピー	ok
+common	copied	Copied	コピーしました	ok
+common	codeBlock.title	Code block	コードブロック	ok
+common	codeBlock.wrap	Wrap lines	行を折り返す	ok
+common	codeBlock.unwrap	Do not wrap lines	行を折り返さない	ok
+common	copy.failed	Copy failed	コピーに失敗しました	ok
+common	copy.value	Copy value	値をコピー	ok
+common	copy.json	Copy JSON	JSON をコピー	ok
+common	copy.path	Copy property path	プロパティパスをコピー	ok
+common	copy.prettyJson	Copy pretty JSON	整形した JSON をコピー	ok
+common	copy.compactJson	Copy compact JSON	圧縮した JSON をコピー	ok
+common	copy.optionsHint	{action}; right-click for copy options	{action}。右クリックでコピー方法を選べます	ok
+common	retry	Retry	再試行	ok
+common	loading	Loading…	読み込み中…	ok
+common	load.failed	Failed to load	読み込みに失敗しました	ok
+common	submit	Submit	送信	ok
+common	submitting	Submitting…	送信中…	ok
+common	next	Next	次へ	ok
+common	previous	Previous	前へ	ok
+common	skip	Skip	スキップ	ok
+common	delete	Delete	削除	ok
+common	edit	Edit	編集	ok
+common	save	Save	保存	ok
+common	search	Search	検索	ok
+common	more	More	もっと見る	ok
+common	collapse	Collapse	折りたたむ	ok
+common	expand	Expand	展開する	ok
+common	back	Back	戻る	ok
+common	brand.localBuild	DSH Local Build	DSH ローカルビルド	ok
+common	workspace.defaultName	Default workspace	既定のワークスペース	ok
+common	unknown	Unknown	不明	ok
+common	none	None	なし	ok
+common	truncated	Truncated	省略されました	ok
+common	json.label	JSON	JSON	ok
+common	markdown.footnotes	Footnotes	脚注	ok
+common	markdown.truncatedCharacters	… truncated at {total} characters	… 全 {total} 文字で省略	ok
+common	number.thousand	{value}K	{value}K	ok
+common	number.million	{value}M	{value}M	ok

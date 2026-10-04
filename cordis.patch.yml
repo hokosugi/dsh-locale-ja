@@ -1,0 +1,6 @@
+# dsh-locale-ja のバンドル層。
+# プロファイル側 (dsh.profile.bundles) にこのパッケージが入ると、この 1 行が
+# プラグインのローダーエントリとして合成される。name はパッケージ名と一致させる。
+- insert:
+    - id: dsh-locale-ja
+      name: dsh-locale-ja

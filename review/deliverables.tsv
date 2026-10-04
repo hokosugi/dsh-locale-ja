@@ -1,0 +1,61 @@
+namespace	key	en	ja	status
+deliverables	presented.nativeUnavailable	This file has no available Host path. Preview it in the sidebar.	このファイルには利用できるホスト側のパスがありません。サイドバーでプレビューしてください。	ok
+deliverables	presented.revealError	Could not show in file manager. Try again.	ファイルマネージャーに表示できませんでした。もう一度お試しください。	ok
+deliverables	presented.directoryError	Could not open containing folder. Try again.	ファイルのあるフォルダーを開けませんでした。もう一度お試しください。	ok
+deliverables	presented.directoryOpening	Opening containing folder…	フォルダーを開いています…	ok
+deliverables	presented.directoryOpened	Requested opening containing folder	フォルダーを開くよう要求しました	ok
+deliverables	presented.revealed	Requested display in file manager	ファイルマネージャーでの表示を要求しました	ok
+deliverables	presented.revealing	Showing in file manager…	ファイルマネージャーに表示しています…	ok
+deliverables	presented.unavailable	This Host has no desktop available to open files or folders in external apps. Files can still be previewed in the sidebar.	このホストにはデスクトップがないため、外部アプリでファイルやフォルダーを開けません。ファイルはサイドバーでプレビューできます。	ok
+deliverables	presented.retry	Retry	再試行	ok
+deliverables	presented.hostError	Could not read the Host desktop information	ホストのデスクトップ情報を読み取れませんでした	ok
+deliverables	presented.preview	Preview in sidebar	サイドバーでプレビュー	ok
+deliverables	presented.previewButton	Open {name} in sidebar	{name} をサイドバーで開く	ok
+deliverables	presented.previewCard	Preview {name} in sidebar	{name} をサイドバーでプレビュー	ok
+deliverables	presented.all	All {count} files	{count} ファイルすべて	ok
+deliverables	presented.expandAria	Show all {count} delivered files	提示された {count} 件のファイルをすべて表示	ok
+deliverables	presented.collapse	Collapse	折りたたむ	ok
+deliverables	presented.collapseAria	Collapse delivered files	提示されたファイルを折りたたむ	ok
+deliverables	presented.opening	Opening…	開いています…	ok
+deliverables	presented.opened	Open requested	開くよう要求しました	ok
+deliverables	presented.error	Could not open. Click to retry.	開けませんでした。クリックして再試行してください。	ok
+deliverables	presented.file	File	ファイル	ok
+deliverables	row.title	Present files	ファイルを提示	ok
+deliverables	row.running	Delivering	提示中	ok
+deliverables	row.preparing	Preparing deliverables	成果物を準備しています	ok
+deliverables	row.ok	Delivered	提示済み	ok
+deliverables	row.error	Delivery failed	提示に失敗	ok
+deliverables	row.stopped	Interrupted	中断	ok
+deliverables	row.inspect	Inspect call	呼び出しを確認	ok
+deliverables	changes.title	Edited {count} files	{count} 件のファイルを編集	ok
+deliverables	changes.singleTitle	Edited {name}	{name} を編集	ok
+deliverables	changes.added	+{count}	+{count}	ok
+deliverables	changes.deleted	-{count}	-{count}	ok
+deliverables	changes.binary	binary	バイナリ	ok
+deliverables	changes.openReview	Review this turn’s changes in the sidebar	このターンの変更をサイドバーで確認	ok
+deliverables	changes.all	All {count} files	{count} ファイルすべて	ok
+deliverables	changes.expandAria	Show all {count} changed files	変更された {count} 件のファイルをすべて表示	ok
+deliverables	changes.collapse	Collapse	折りたたむ	ok
+deliverables	changes.collapseAria	Collapse changed files	変更されたファイルを折りたたむ	ok
+deliverables	changes.oversized	too large	大きすぎます	ok
+deliverables	changes.viewDiff	View changes to {name}	{name} の変更を表示	ok
+deliverables	review.title	Review · turn {turn}	レビュー · ターン {turn}	ok
+deliverables	review.selectFile	Choose the file to review	レビューするファイルを選択	ok
+deliverables	review.split	Switch to split view	分割表示に切り替え	ok
+deliverables	review.unified	Switch to unified view	統合表示に切り替え	ok
+deliverables	review.splitAria	Split view	分割表示	ok
+deliverables	review.wrap	Enable line wrap	行を折り返す	ok
+deliverables	review.nowrap	Disable line wrap	行を折り返さない	ok
+deliverables	review.wrapAria	Line wrap	行の折り返し	ok
+deliverables	review.openFile	Open the whole file in the sidebar	ファイル全体をサイドバーで開く	ok
+deliverables	review.openFileAria	Open {name} in sidebar	{name} をサイドバーで開く	ok
+deliverables	diff.loading	Reading changes…	変更を読み込んでいます…	ok
+deliverables	diff.missing	The contents of this turn’s changes are no longer available	このターンの変更内容は利用できなくなりました	ok
+deliverables	diff.error	Could not read the changes	変更を読み取れませんでした	ok
+deliverables	diff.binary	Binary file; changes cannot be shown	バイナリファイルのため、変更を表示できません	ok
+deliverables	diff.oversized	File too large; changes cannot be shown	ファイルが大きすぎるため、変更を表示できません	ok
+deliverables	diff.created	Created in this turn	このターンで作成されました	ok
+deliverables	diff.deleted	Deleted in this turn	このターンで削除されました	ok
+deliverables	diff.unchanged	Both sides hold the same lines	変更前と変更後で行が同じです	ok
+deliverables	diff.coarse	Line comparison timed out; shown as a whole-file replacement	行単位の比較がタイムアウトしたため、ファイル全体の置き換えとして表示しています	ok
+deliverables	diff.truncated	Showing the first {count} lines	最初の {count} 行を表示しています	ok

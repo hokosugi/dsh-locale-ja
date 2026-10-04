@@ -1,0 +1,35 @@
+namespace	key	en	ja	status
+settings	trigger	Settings	設定	ok
+settings	shortcut.open	Open settings	設定を開く	ok
+settings	desktop.update.available	Update	更新	ok
+settings	desktop.update.checking	Checking for updates…	更新を確認しています…	ok
+settings	desktop.update.progress	{percent}%	{percent}%	ok
+settings	desktop.update.verifying	Verifying update files…	更新ファイルを検証しています…	ok
+settings	desktop.update.installing	Preparing to restart…	再起動の準備をしています…	ok
+settings	desktop.update.ready	Install and Restart	インストールして再起動	ok
+settings	desktop.update.retry	Retry update	更新を再試行	ok
+settings	desktop.update.versionDetail	{label}: {version}	{label}: {version}	ok
+settings	desktop.update.downloadDetail	Downloading update: {percent}%\nTarget version: {version}	更新をダウンロード中: {percent}%\n対象バージョン: {version}	ok
+settings	desktop.update.checkFailed	Could not check for updates. Please try again later.	更新を確認できませんでした。しばらくしてから再試行してください。	ok
+settings	desktop.update.downloadFailed	Could not download the update. Please try again.	更新をダウンロードできませんでした。再試行してください。	ok
+settings	desktop.update.installFailed	Could not install the update. Please try again later.	更新をインストールできませんでした。しばらくしてから再試行してください。	ok
+settings	desktop.update.checkNetworkFailed	Could not check for updates. Check your connection and try again.	更新を確認できませんでした。接続を確認して再試行してください。	ok
+settings	desktop.update.downloadNetworkFailed	Could not download the update. Check your connection and try again.	更新をダウンロードできませんでした。接続を確認して再試行してください。	ok
+settings	desktop.update.installNetworkFailed	Could not install the update. Check your connection and try again.	更新をインストールできませんでした。接続を確認して再試行してください。	ok
+settings	desktop.update.stopFailed	Could not safely stop the tasks. The update has not been installed. Please try again later.	タスクを安全に停止できなかったため、更新はインストールされていません。しばらくしてから再試行してください。	ok
+settings	desktop.update.tasksChanged	New tasks have started. Confirm again to stop the tasks and update.	新しいタスクが始まりました。タスクを停止して更新するか、もう一度確認してください。	ok
+settings	desktop.update.tasksUnavailable	Task status is unavailable. Try updating again when the workspace is ready.	タスクの状態を取得できません。ワークスペースが準備できてから更新を再試行してください。	ok
+settings	title	Settings	設定	ok
+settings	close	Close	閉じる	ok
+settings	openDocument	Open configuration file	設定ファイルを開く	ok
+settings	openDocument.error	Could not open configuration file	設定ファイルを開けませんでした	ok
+settings	general.nav	General	一般	ok
+settings	general.currentVersion	Current version: {version}	現在のバージョン: {version}	ok
+settings	developerTools.title	Show coding view	コーディングビューを表示	ok
+settings	developerTools.error	Could not save. Please try again.	保存できませんでした。再試行してください。	ok
+settings	developerTools.description	Shows trajectory, code diffs, and all Agent presets	軌跡、コード差分、すべての Agent プリセットを表示します	ok
+settings	connection.error	Disconnected	切断されました	ok
+settings	connection.connecting	Reconnecting	再接続しています	ok
+settings	connection.connected	Connected	接続済み	ok
+settings	connection.reconnect	Disconnected, reconnect now	切断されました。クリックで再接続	ok
+settings	connection.restart	Reconnecting, reconnect now	再接続しています。クリックで今すぐ再接続	ok

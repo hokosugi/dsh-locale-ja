@@ -1,0 +1,13 @@
+namespace	key	en	ja	status
+settings.agentLoop	title	Agent loop	Agent ループ	ok
+settings.agentLoop	description	Control how the Agent dispatches tool calls.	Agent がツール呼び出しをどう捌くかを制御します。	ok
+settings.agentLoop	maxParallel	Parallel tool calls	並行するツール呼び出し	ok
+settings.agentLoop	maxParallelHint	Upper bound on parallel-safe calls running at once within one step.	1 ステップ内で同時に実行される、並行実行可能な呼び出しの上限。	ok
+settings.agentLoop	overridden	Overridden	上書き済み	ok
+settings.agentLoop	reset	Reset to default	既定に戻す	ok
+settings.agentLoop	readOnly	This deployment stores settings read-only.	この環境では設定は読み取り専用で保存されます。	ok
+settings.agentLoop	unavailable	This plugin is not loaded, so it cannot be configured right now.	このプラグインは読み込まれていないため、現在は設定できません。	ok
+settings.agentLoop	save	Save	保存	ok
+settings.agentLoop	saving	Saving…	保存しています…	ok
+settings.agentLoop	saveFailed	The deployment did not accept these values; they were left for you to correct.	この環境が値を受け付けませんでした。修正できるよう入力は残しています。	ok
+settings.agentLoop	invalidNumber	Enter a number, or leave blank to use the default.	数値を入力してください。空欄のままにすると既定値を使います。	ok

@@ -1,0 +1,10 @@
+namespace	key	en	ja	status
+slash.menu	command	Commands	コマンド	ok
+slash.menu	skill	Skills	スキル	ok
+slash.menu	subagent	Subagents	サブエージェント	ok
+slash.menu	loading	Loading…	読み込み中…	ok
+slash.menu	drill.aria	Browse folder	フォルダーを参照	ok
+slash.menu	drill.hint	Browse folder	フォルダーを参照	ok
+slash.menu	drill.key	Tab	Tab	ok
+slash.menu	crumbs.aria	Folder navigation	フォルダーの移動	ok
+slash.menu	suggestions.aria	Trigger suggestions	候補を表示	ok

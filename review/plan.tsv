@@ -1,0 +1,18 @@
+namespace	key	en	ja	status
+plan	chip.label	Plan	計画	ok
+plan	preview.title	Plan	計画	ok
+plan	preview.document	Plan · Markdown	計画 · Markdown	ok
+plan	preview.action	Open	開く	ok
+plan	preview.open	Open plan in sidebar	計画をサイドバーで開く	ok
+plan	preview.full	View full plan	計画の全文を表示	ok
+plan	preview.openNamed	Open plan: {title}	計画を開く: {title}	ok
+plan	preview.loading	Loading plan…	計画を読み込み中…	ok
+plan	preview.failed	Could not load plan	計画を読み込めませんでした	ok
+plan	preview.invalidAddress	Invalid plan address	計画のアドレスが無効です	ok
+plan	preview.historyUnavailable	Session history is unavailable	セッションの履歴を利用できません	ok
+plan	preview.notFound	This plan was not found	この計画が見つかりません	ok
+plan	preview.unavailable	Plan preview is unavailable	計画のプレビューを利用できません	ok
+plan	preview.expired	This temporary plan preview has expired. Reopen it from the pending review card.	この一時的な計画プレビューは期限切れです。承認待ちのカードから開き直してください。	ok
+plan	chip.on.aria	Plan mode on, press to turn off	計画モードはオンです。押すとオフになります	ok
+plan	chip.on.title	Plan mode on — click to turn off (/plan off)	計画モードはオンです — クリックでオフ (/plan off)	ok
+plan	chip.exitFailed	Failed to exit plan mode	計画モードを終了できませんでした	ok

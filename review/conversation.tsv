@@ -1,0 +1,370 @@
+namespace	key	en	ja	status
+conversation	shortcut.newline	New line	改行	ok
+conversation	shortcut.complementary	Use the complementary Queue / Steer action	もう一方のキュー / ステア操作を使う	ok
+conversation	shortcut.slash	Open command menu	コマンドメニューを開く	ok
+conversation	shortcut.mention	Open reference menu	参照メニューを開く	ok
+conversation	hint.plan	describe your task to generate plan	タスクを説明すると計画を生成します	ok
+conversation	hint.goal	describe the objective for a long-running task	長時間タスクの目的を説明してください	ok
+conversation	hint.goal.active	goal active — edit / pause / resume / clear	ゴール実行中 — 編集 / 一時停止 / 再開 / クリア	ok
+conversation	placeholder.plan	describe your task to generate plan	タスクを説明すると計画を生成します	ok
+conversation	placeholder.default	Message or run a task, / commands, @ files or sessions	メッセージを送るかタスクを実行。/ でコマンド、@ でファイルやセッション	ok
+conversation	placeholder.unavailable	Session unavailable	セッションを利用できません	ok
+conversation	placeholder.parentOffline	Parent session offline; sending is unavailable but you can still stop the run	親セッションがオフラインです。送信はできませんが、実行の停止は可能です	ok
+conversation	placeholder.hero	Describe what you want to build, / commands, @ files or sessions	作りたいものを説明してください。/ でコマンド、@ でファイルやセッション	ok
+conversation	placeholder.workspace	Choose a workspace to start	開始するワークスペースを選択	ok
+conversation	placeholder.steerQueue	Cmd/Ctrl+Enter steers all queued messages	Cmd/Ctrl+Enter でキュー内のメッセージをまとめてステア	ok
+conversation	input.commands	Add files or run commands	ファイルを追加またはコマンドを実行	ok
+conversation	input.file	File	ファイル	ok
+conversation	input.stop	Stop generating	生成を停止	ok
+conversation	input.send	Send message	メッセージを送信	ok
+conversation	input.send.queue	Queue message	メッセージをキューに追加	ok
+conversation	input.send.steer	Steer message	メッセージをステア	ok
+conversation	attachment.pending	Pending attachments	未送信の添付	ok
+conversation	attachment.scrollLeft	Scroll attachments left	添付を左へスクロール	ok
+conversation	attachment.scrollRight	Scroll attachments right	添付を右へスクロール	ok
+conversation	attachment.dropTitle	Drag files or images here to add them	ここにファイルや画像をドラッグして追加	ok
+conversation	attachment.dropDesc	Image limit: up to {count} images, {size} each	画像は最大 {count} 枚、1 枚あたり {size} まで	ok
+conversation	attachment.dropBlocked	Files and images cannot be added right now	現在はファイルや画像を追加できません	ok
+conversation	attachment.directoryDesktopOnly	Folders can only be added in the desktop app; add individual files in the browser	フォルダーを追加できるのはデスクトップアプリのみです。ブラウザーではファイルを個別に追加してください	ok
+conversation	attachment.pathUnavailable	Could not obtain the folder path; drag it in again	フォルダーのパスを取得できませんでした。もう一度ドラッグしてください	ok
+conversation	attachment.pathUnsupported	The path contains characters a reference cannot carry; rename it and try again	このパスには参照が扱えない文字が含まれています。名前を変更して再試行してください	ok
+conversation	image.pending	Pending images	未送信の画像	ok
+conversation	image.openOriginal	View original	元の画像を表示	ok
+conversation	image.openOriginalLabel	{label}, click to view original	{label}、クリックで元の画像を表示	ok
+conversation	image.remove	Remove image {name}	画像 {name} を削除	ok
+conversation	image.original	Original image	元の画像	ok
+conversation	image.label	Image	画像	ok
+conversation	image.loadFailed	Image failed to load; click to retry	画像を読み込めませんでした。クリックで再試行	ok
+conversation	image.loading	Loading image…	画像を読み込んでいます…	ok
+conversation	image.preview	Original image preview	元の画像のプレビュー	ok
+conversation	image.closePreview	Close original image preview	元の画像のプレビューを閉じる	ok
+conversation	image.unsupportedType	Only PNG, JPG, WebP, and GIF images are supported	対応している画像は PNG、JPG、WebP、GIF のみです	ok
+conversation	image.tooMany	A message can include up to {count} images	1 つのメッセージに追加できる画像は {count} 枚までです	ok
+conversation	image.fileTooLarge	Each image must be smaller than {size}	画像は 1 枚あたり {size} 未満にしてください	ok
+conversation	image.totalTooLarge	Images exceed {size} in total; remove some and try again	画像の合計が {size} を超えています。一部を削除して再試行してください	ok
+conversation	image.tooManyPixels	Image resolution is too high; compress it and try again	画像の解像度が高すぎます。圧縮して再試行してください	ok
+conversation	image.dimensionTooLarge	Image sides must be at most {size}px; downscale it and try again	画像の辺は {size}px 以下にしてください。縮小して再試行してください	ok
+conversation	image.modelUnsupported	The current model does not support images; switch to a model that does	現在のモデルは画像に対応していません。画像に対応したモデルに切り替えてください	ok
+conversation	image.sendFailed	Sending images failed ({reason}); re-add them and try again	画像の送信に失敗しました ({reason})。追加し直して再試行してください	ok
+conversation	file.pending	Pending files	未送信のファイル	ok
+conversation	file.remove	Remove file {name}	ファイル {name} を削除	ok
+conversation	file.uploading	Uploading…	アップロードしています…	ok
+conversation	file.uploadFailed	Upload failed; click to retry	アップロードに失敗しました。クリックで再試行	ok
+conversation	file.retry	Retry uploading {name}	{name} のアップロードを再試行	ok
+conversation	file.stillUploading	Files are still uploading; send after they finish	ファイルをアップロード中です。完了してから送信してください	ok
+conversation	file.sessionUnavailable	Session unavailable; files cannot be uploaded	セッションを利用できないため、ファイルをアップロードできません	ok
+conversation	file.notStaged	The file has not finished uploading; re-add it and try again	ファイルのアップロードが完了していません。追加し直して再試行してください	ok
+conversation	file.label	File	ファイル	ok
+conversation	context.aria	{percent} of context used	コンテキストの {percent} を使用	ok
+conversation	context.used	of context used	コンテキスト使用	ok
+conversation	context.system	System prompt	システムプロンプト	ok
+conversation	context.tools	Tool definitions	ツール定義	ok
+conversation	context.messages	Messages	メッセージ	ok
+conversation	settings.enter.title	Send behavior while busy	実行中の送信動作	ok
+conversation	settings.enter.description	What Enter and the Send button do while the agent is running; Cmd/Ctrl+Enter uses the other behavior	Agent の実行中に Enter と送信ボタンが行う動作。Cmd/Ctrl+Enter はもう一方の動作になります	ok
+conversation	settings.enter.queue	Queue	キュー	ok
+conversation	settings.enter.steer	Steer	ステア	ok
+conversation	hero.headline	Into the Unknown	未知へ	ok
+conversation	hero.preview	Preview	プレビュー	ok
+conversation	hero.chooseWorkspace	Choose workspace	ワークスペースを選択	ok
+conversation	session.hierarchy	Session hierarchy	セッション階層	ok
+conversation	todo.title	To-dos	ToDo	ok
+conversation	todo.progress.done	{done} completed	{done} 件完了	ok
+conversation	todo.progress.active	{active} in progress	{active} 件進行中	ok
+conversation	todo.progress.pending	{pending} pending	{pending} 件未着手	ok
+conversation	todo.status.completed	Completed	完了	ok
+conversation	todo.status.inProgress	In progress	進行中	ok
+conversation	todo.status.pending	Pending	未着手	ok
+conversation	todo.rowTitle	Update to-do list	ToDo リストを更新	ok
+conversation	tool.title.createGoal	Create goal	ゴールを作成	ok
+conversation	tool.title.getGoal	View goal	ゴールを表示	ok
+conversation	tool.title.updateGoal	Update goal	ゴールを更新	ok
+conversation	tool.preparing.content	Preparing content {kilobytes}KB	コンテンツを準備しています {kilobytes}KB	ok
+conversation	tool.title.createSchedule	Create reminder	リマインダーを作成	ok
+conversation	tool.title.listSchedules	List reminders	リマインダー一覧	ok
+conversation	tool.title.deleteSchedule	Delete reminder	リマインダーを削除	ok
+conversation	tool.title.updateSchedule	Update reminder	リマインダーを更新	ok
+conversation	detail.state	Status	状態	ok
+conversation	detail.todo.completed	Completed	完了	ok
+conversation	detail.todo.in_progress	In progress	進行中	ok
+conversation	detail.todo.pending	Pending	未着手	ok
+conversation	detail.todo.empty	The to-do list is empty	ToDo リストは空です	ok
+conversation	todo.diff.initial	Initial list	初回のリスト	ok
+conversation	todo.diff.compare	Changes since the previous list	前回のリストからの変更	ok
+conversation	todo.diff.unavailable	Previous list unavailable	前回のリストがありません	ok
+conversation	todo.diff.noChanges	No changes to the list	リストに変更はありません	ok
+conversation	todo.diff.added	{count} added	{count} 件追加	ok
+conversation	todo.diff.updated	{count} updated	{count} 件更新	ok
+conversation	todo.diff.removed	{count} removed	{count} 件削除	ok
+conversation	todo.diff.unchanged	{count} unchanged	{count} 件変更なし	ok
+conversation	todo.diff.addedItem	Added	追加	ok
+conversation	todo.diff.updatedItem	Status changed	状態変更	ok
+conversation	todo.diff.movedItem	Reordered	並び替え	ok
+conversation	todo.diff.removedItem	Removed	削除	ok
+conversation	detail.goal.empty	No goal	ゴールなし	ok
+conversation	detail.goal.active	Active	実行中	ok
+conversation	detail.goal.disarmed	Awaiting continuation	継続待ち	ok
+conversation	detail.goal.paused	Paused	一時停止	ok
+conversation	detail.goal.blocked	Blocked	ブロック	ok
+conversation	detail.goal.complete	Completed	完了	ok
+conversation	detail.goal.rounds	Rounds	ラウンド	ok
+conversation	detail.goal.reason	Blocker	ブロック要因	ok
+conversation	detail.days	{count} d	{count} 日	ok
+conversation	detail.hours	{count} h	{count} 時間	ok
+conversation	detail.minutes	{count} min	{count} 分	ok
+conversation	detail.seconds	{count} s	{count} 秒	ok
+conversation	detail.schedule.once	Once	1 回のみ	ok
+conversation	detail.schedule.every	Every {interval}	{interval} ごと	ok
+conversation	detail.schedule.when	Scheduled for	実行予定	ok
+conversation	detail.schedule.frequency	Repeat	繰り返し	ok
+conversation	detail.schedule.scheduled	Scheduled	予約済み	ok
+conversation	detail.schedule.overdue	Overdue, awaiting session resume	期限超過。セッションの再開待ち	ok
+conversation	detail.schedule.empty	No reminders	リマインダーはありません	ok
+conversation	detail.schedule.deleted	Deleted	削除済み	ok
+conversation	detail.schedule.count	{count} reminders	リマインダー {count} 件	ok
+conversation	detail.schedule.daily	Every day at {time} ({zone})	毎日 {time} ({zone})	ok
+conversation	detail.schedule.weekly	Weekly on {days} at {time} ({zone})	毎週 {days} の {time} ({zone})	ok
+conversation	detail.schedule.cron	Cron {expression} ({zone})	Cron {expression} ({zone})	ok
+conversation	detail.weekday.1	Mon	月	ok
+conversation	detail.weekday.2	Tue	火	ok
+conversation	detail.weekday.3	Wed	水	ok
+conversation	detail.weekday.4	Thu	木	ok
+conversation	detail.weekday.5	Fri	金	ok
+conversation	detail.weekday.6	Sat	土	ok
+conversation	detail.weekday.7	Sun	日	ok
+conversation	detail.weekday.join	, 	・	ok
+conversation	tool.title.inspectProviders	Inspect providers	inspect プロバイダーを確認	ok
+conversation	tool.title.queryRuntime	Query runtime	ランタイムを照会	ok
+conversation	tool.title.inspectPlugins	Inspect plugins	プラグインを調査	ok
+conversation	tool.title.workflow	Run workflow	ワークフローを実行	ok
+conversation	tool.title.ralph	Run ralph loop	ralph ループを実行	ok
+conversation	tool.title.readEvent	Read event	イベントを読む	ok
+conversation	tool.title.searchEvents	Search events	イベントを検索	ok
+conversation	tool.title.traceEvent	Trace event	イベントを追跡	ok
+conversation	tool.title.searchSessions	Search sessions	セッションを検索	ok
+conversation	tool.title.traceSession	Trace session	セッションを追跡	ok
+conversation	tool.title.listModels	List models	モデル一覧	ok
+conversation	tool.title.subagent	Create subagent	サブエージェントを作成	ok
+conversation	tool.title.listAgents	List subagents	サブエージェント一覧	ok
+conversation	tool.title.sendMessage	Send message	メッセージを送信	ok
+conversation	tool.title.interruptAgent	Interrupt agent	Agent を中断	ok
+conversation	tool.title.listJobs	List background jobs	バックグラウンドジョブ一覧	ok
+conversation	tool.title.readJob	Read job output	ジョブ出力を読む	ok
+conversation	tool.title.killJob	Cancel background job	バックグラウンドジョブをキャンセル	ok
+conversation	tool.title.openTerminal	Open terminal	ターミナルを開く	ok
+conversation	tool.title.readTerminal	Read terminal	ターミナルを読む	ok
+conversation	tool.title.listTerminals	List terminals	ターミナル一覧	ok
+conversation	tool.title.signalTerminal	Signal terminal	ターミナルにシグナルを送る	ok
+conversation	tool.title.closeTerminal	Close terminal	ターミナルを閉じる	ok
+conversation	tool.title.lsp	Query code symbols	コードシンボルを照会	ok
+conversation	tool.title.findDefinition	Find definition	定義を検索	ok
+conversation	tool.title.findReferences	Find references	参照を検索	ok
+conversation	tool.title.findImplementation	Find implementation	実装を検索	ok
+conversation	tool.title.hoverSymbol	Inspect symbol	シンボルを調べる	ok
+conversation	tool.title.spawnTeammate	Create teammate	チームメイトを作成	ok
+conversation	tool.title.createTeamTask	Create team task	チームタスクを作成	ok
+conversation	tool.title.getTeamTask	Read team task	チームタスクを読む	ok
+conversation	tool.title.updateTeamTask	Update team task	チームタスクを更新	ok
+conversation	tool.title.listTeamTasks	List team tasks	チームタスク一覧	ok
+conversation	tool.title.waitAgent	Wait for subagent	サブエージェントを待機	ok
+conversation	detail.recordedResult	Recorded result	記録された結果	ok
+conversation	detail.empty	No results	結果はありません	ok
+conversation	detail.none	None	なし	ok
+conversation	detail.yes	Yes	はい	ok
+conversation	detail.no	No	いいえ	ok
+conversation	detail.moreInInspect	{count} more items available in Inspect	Inspect でさらに {count} 件を確認できます	ok
+conversation	detail.status.running	Running	実行中	ok
+conversation	detail.status.idle	Idle	待機中	ok
+conversation	detail.status.ready	Ready	準備完了	ok
+conversation	detail.status.inactive	Inactive	非アクティブ	ok
+conversation	detail.status.provisioning	Provisioning	準備中	ok
+conversation	detail.status.failed	Failed	失敗	ok
+conversation	detail.status.completed	Completed	完了	ok
+conversation	detail.status.deleted	Deleted	削除済み	ok
+conversation	detail.status.killed	Cancelled	キャンセル済み	ok
+conversation	detail.status.accepted	Accepted	受理済み	ok
+conversation	detail.status.queued	Queued	キュー内	ok
+conversation	detail.status.exited	Exited	終了	ok
+conversation	detail.field.id	ID	ID	ok
+conversation	detail.field.revision	Revision	リビジョン	ok
+conversation	detail.field.platform	Platform	プラットフォーム	ok
+conversation	detail.field.provider	Provider	プロバイダー	ok
+conversation	detail.field.model	Model	モデル	ok
+conversation	detail.field.role	Role	ロール	ok
+conversation	detail.field.context	Context	コンテキスト	ok
+conversation	detail.field.owner	Owner	オーナー	ok
+conversation	detail.field.ready	Ready	準備完了	ok
+conversation	detail.field.dependencies	Dependencies	依存関係	ok
+conversation	detail.field.writeScopes	Write scopes	書き込み範囲	ok
+conversation	detail.field.warnings	Warnings	警告	ok
+conversation	detail.field.diagnostics	Diagnostics	診断	ok
+conversation	detail.field.methods	Methods	メソッド	ok
+conversation	detail.field.inputSchema	Input schema	入力スキーマ	ok
+conversation	detail.field.outputSchema	Output schema	出力スキーマ	ok
+conversation	detail.field.currentPackage	Current package	現在のパッケージ	ok
+conversation	detail.field.nextPackage	Next package	次のパッケージ	ok
+conversation	detail.field.latestRun	Latest run	最新の実行	ok
+conversation	detail.field.packages	Packages	パッケージ	ok
+conversation	detail.field.registrations	Registrations	登録	ok
+conversation	detail.field.props	Props	props	ok
+conversation	detail.field.data	Data	データ	ok
+conversation	detail.field.source	Source	ソース	ok
+conversation	detail.field.content	Content	内容	ok
+conversation	detail.field.message	Message	メッセージ	ok
+conversation	detail.field.messageId	Message ID	メッセージ ID	ok
+conversation	detail.field.root	Root	ルート	ok
+conversation	detail.field.pid	Process ID	プロセス ID	ok
+conversation	detail.field.type	Type	種類	ok
+conversation	detail.field.time	Time	時刻	ok
+conversation	detail.field.seq	Event sequence	イベント連番	ok
+conversation	detail.field.turn	Turn	ターン	ok
+conversation	detail.field.step	Step	ステップ	ok
+conversation	detail.field.callId	Call ID	呼び出し ID	ok
+conversation	detail.field.agents	Agents started	起動した Agent	ok
+conversation	detail.field.result	Result	結果	ok
+conversation	detail.field.parent	Parent	親	ok
+conversation	detail.field.depth	Depth	深さ	ok
+conversation	detail.field.exitCode	Exit code	終了コード	ok
+conversation	detail.field.signal	Signal	シグナル	ok
+conversation	detail.field.previousStatus	Previous status	以前の状態	ok
+conversation	detail.field.agent	Agent ID	Agent ID	ok
+conversation	detail.field.job	Job ID	ジョブ ID	ok
+conversation	detail.field.task	Task	タスク	ok
+conversation	detail.field.processGroup	Process group	プロセスグループ	ok
+conversation	detail.field.availability	Availability	可用性	ok
+conversation	detail.field.bestMatch	Best match	最良一致	ok
+conversation	detail.field.target	Target event	対象イベント	ok
+conversation	detail.field.surface	Record status	レコードの状態	ok
+conversation	detail.agents.count	{count} agents	Agent {count} 件	ok
+conversation	detail.jobs.count	{count} background jobs	バックグラウンドジョブ {count} 件	ok
+conversation	detail.terminals.count	{count} terminals	ターミナル {count} 件	ok
+conversation	detail.tasks.count	{count} team tasks	チームタスク {count} 件	ok
+conversation	detail.tasks.nextPage	More tasks available; next cursor is {cursor}	さらにタスクがあります。次のカーソル: {cursor}	ok
+conversation	detail.locations.count	{count} locations	{count} 箇所	ok
+conversation	detail.location	Line {line}, column {column}	{line} 行 {column} 列	ok
+conversation	detail.receipt.delivered	Message delivered	メッセージを配信しました	ok
+conversation	detail.receipt.interrupt	Interrupt requested	中断を要求しました	ok
+conversation	detail.receipt.started	Started	開始しました	ok
+conversation	detail.receipt.cancel	Cancellation requested	キャンセルを要求しました	ok
+conversation	detail.receipt.alreadyFinished	Already finished	すでに完了しています	ok
+conversation	detail.receipt.signal	Signal delivered	シグナルを送信しました	ok
+conversation	detail.receipt.closed	Closed	閉じました	ok
+conversation	detail.receipt.closing	Closing	閉じています	ok
+conversation	detail.wait.noProgress	No active subagents	稼働中のサブエージェントはありません	ok
+conversation	detail.wait.title	Subagent activity	サブエージェントの動き	ok
+conversation	detail.wait.timeout	Wait timed out	待機がタイムアウトしました	ok
+conversation	detail.wait.changed	Change detected	変更を検出しました	ok
+conversation	detail.agent.reply	Agent response	Agent の応答	ok
+conversation	detail.models.title	Available models	利用可能なモデル	ok
+conversation	detail.output.lines	Lines {begin}–{end} of {total}	{total} 行中 {begin}–{end} 行	ok
+conversation	detail.output.truncated	Output truncated	出力を省略しました	ok
+conversation	detail.providers.count	{count} inspect providers	inspect プロバイダー {count} 件	ok
+conversation	detail.plugins.count	{count} dynamic plugins	動的プラグイン {count} 件	ok
+conversation	detail.workflow.script	Workflow script	ワークフロースクリプト	ok
+conversation	detail.ralph.reportedComplete	Worker reported completion	ワーカーが完了を報告しました	ok
+conversation	detail.ralph.reportedBlocker	Worker reported a blocker	ワーカーがブロックを報告しました	ok
+conversation	detail.ralph.limit	Round limit reached	ラウンドの上限に達しました	ok
+conversation	detail.report.nextSteps	Remaining work	残りの作業	ok
+conversation	detail.trace.replacedBy	Replaced by	置き換え先	ok
+conversation	detail.trace.replacementChain	Replacement chain	置き換えの連鎖	ok
+conversation	detail.trace.replaces	Replaced events	置き換え元のイベント	ok
+conversation	detail.trace.sources	Source events	ソースイベント	ok
+conversation	detail.trace.derived	Derived events	派生イベント	ok
+conversation	detail.trace.ancestors	Ancestor sessions	祖先セッション	ok
+conversation	detail.trace.descendants	Descendant sessions	子孫セッション	ok
+conversation	detail.matches.count	{count} matches	{count} 件一致	ok
+conversation	detail.matches.capped	Result limit reached; narrow the search for more	結果の上限に達しました。さらに絞り込んで検索してください	ok
+conversation	detail.event.neighbors	Surrounding events	前後のイベント	ok
+conversation	todo.completed	{done}/{total} completed	{done}/{total} 完了	ok
+conversation	command.attachmentsUnsupported	/{command} does not accept attachments; remove them first	/{command} は添付を受け付けません。先に削除してください	ok
+conversation	ask.rowTitle	Ask question	質問する	ok
+conversation	ask.waiting	waiting	回答待ち	ok
+conversation	ask.pending	continued; answer still available	続行済み。まだ回答できます	ok
+conversation	ask.pendingDetail	These pending questions remain answerable from the composer.	未回答の質問には、入力欄から引き続き回答できます。	ok
+conversation	ask.reopen	Answer	回答する	ok
+conversation	ask.review	View answers	回答を見る	ok
+conversation	ask.closed	closed	終了	ok
+conversation	ask.closedDetail	This question is closed; its outcome is in the conversation below.	この質問は終了しています。結果は下の会話にあります。	ok
+conversation	ask.cancelled	cancelled	キャンセル済み	ok
+conversation	ask.cancelledDetail	This question set was cancelled before answers were submitted.	この質問は回答が送信される前にキャンセルされました。	ok
+conversation	ask.interrupted	interrupted	中断済み	ok
+conversation	ask.interruptedDetail	This question set was interrupted before answers were submitted.	この質問は回答が送信される前に中断されました。	ok
+conversation	ask.answered	{answered}/{total} answered	{answered}/{total} 回答済み	ok
+conversation	ask.skipped	Not answered	未回答	ok
+conversation	bash.running	Running	実行中	ok
+conversation	bash.failed	Failed	失敗	ok
+conversation	bash.stopped	Stopped	停止	ok
+conversation	row.running	Running	実行中	ok
+conversation	row.preparing	Preparing tool call	ツール呼び出しを準備しています	ok
+conversation	row.failed	Failed	失敗	ok
+conversation	row.stopped	Stopped	停止	ok
+conversation	row.input	IN	入力	ok
+conversation	row.output	OUT	出力	ok
+conversation	row.inspect	Inspect	呼び出しを確認	ok
+conversation	tool.title.search	Search	検索	ok
+conversation	tool.title.read	Read	読み取り	ok
+conversation	tool.title.bash	Bash	Bash	ok
+conversation	tool.title.write	Write	書き込み	ok
+conversation	tool.title.edit	Edit	編集	ok
+conversation	tool.title.code	Code	コード	ok
+conversation	tool.title.generic	Tool call	ツール呼び出し	ok
+conversation	tool.title.inspect	Query Cordis environment	Cordis 環境を照会	ok
+conversation	tool.title.runCordis	Run Cordis Plugin	Cordis プラグインを実行	ok
+conversation	tool.title.stopCordis	Stop Cordis Plugin	Cordis プラグインを停止	ok
+conversation	tool.title.removeCordis	Remove Cordis Plugin	Cordis プラグインを削除	ok
+conversation	tool.title.pwsh	Pwsh	Pwsh	ok
+conversation	tool.title.readImage	Read image	画像を読み取る	ok
+conversation	tool.title.grep	Grep	Grep	ok
+conversation	tool.title.glob	Glob	Glob	ok
+conversation	tool.title.webSearch	Search	検索	ok
+conversation	tool.title.webFetch	Fetch	取得	ok
+conversation	tool.autoReviewRejected	Rejected by Auto review	自動レビューで拒否されました	ok
+conversation	tool.autoReviewNotExecuted	Tool was not executed. Reason: {reason}	ツールは実行されませんでした。理由: {reason}	ok
+conversation	tool.autoReviewReasonFallback	Auto review did not authorize this action	自動レビューがこの操作を許可しませんでした	ok
+conversation	diff.collapseAria	Collapse diff	差分を折りたたむ	ok
+conversation	diff.expandAria	Expand {count} more diff lines	差分の残り {count} 行を展開	ok
+conversation	diff.expandRest	… {count} more lines	… 残り {count} 行	ok
+conversation	read.window	Showing {shown} of {total} lines	{total} 行中 {shown} 行を表示	ok
+conversation	read.collapseAria	Collapse content	内容を折りたたむ	ok
+conversation	read.expandAria	Expand {count} more lines	残り {count} 行を展開	ok
+conversation	read.expandRest	… {count} more lines	… 残り {count} 行	ok
+conversation	search.paths	{shown} paths	{shown} 件のパス	ok
+conversation	search.paths.truncated	Showing {shown} of {total} paths	{total} 件中 {shown} 件のパスを表示	ok
+conversation	search.matches	{shown} matches · {files} files	{shown} 件一致 · {files} ファイル	ok
+conversation	search.matches.truncated	Showing {shown} of {total} matches · {files} files	{total} 件中 {shown} 件の一致 · {files} ファイル	ok
+conversation	search.noResults	No results	結果なし	ok
+conversation	search.collapseAria	Collapse results	結果を折りたたむ	ok
+conversation	search.expandAria	Expand {count} more result lines	結果の残り {count} 行を展開	ok
+conversation	search.expandRest	… {count} more lines	… 残り {count} 行	ok
+conversation	web.noResults	No results found	結果が見つかりません	ok
+conversation	web.sourcesTruncated	Source list truncated	ソース一覧を省略しました	ok
+conversation	web.http	HTTP	HTTP	ok
+conversation	web.contentTruncated	Content truncated	内容を省略しました	ok
+conversation	details.running	Running…	実行中…	ok
+conversation	queue.count	{n} queued messages	キュー内のメッセージ {n} 件	ok
+conversation	queue.sending	Sending…	送信中…	ok
+conversation	queue.image	Queued message image	キュー内メッセージの画像	ok
+conversation	queue.file	Queued file {name}	キュー内のファイル {name}	ok
+conversation	queue.edit	Edit queued message	キュー内メッセージを編集	ok
+conversation	queue.edit.unsupported	Contains non-text content; editing is not supported yet	テキスト以外の内容を含むため、まだ編集できません	ok
+conversation	queue.save	Save queued message	キュー内メッセージを保存	ok
+conversation	queue.cancelEdit	Cancel editing	編集をキャンセル	ok
+conversation	queue.remove	Remove queued message	キューから削除	ok
+conversation	queue.steer	Steer queued message	キュー内メッセージをステア	ok
+conversation	queue.steer.unavailable	Steering is available only while the agent is running	ステアは Agent の実行中のみ利用できます	ok
+conversation	error.sessionInUse	This session is already in use, possibly by another running DSH instance (such as dsh web or the desktop app). Quit other running DSH instances and try again.	このセッションはすでに使用中です。別の DSH インスタンス (dsh web やデスクトップアプリなど) が使用している可能性があります。他の DSH を終了して再試行してください。	ok
+conversation	queue.editFailed	Edit failed: this message may have already started sending.	編集に失敗しました。このメッセージはすでに送信が始まっている可能性があります。	ok
+conversation	queue.removeFailed	Removal failed: this message may have already started sending.	削除に失敗しました。このメッセージはすでに送信が始まっている可能性があります。	ok
+conversation	queue.steerFailed	Steering failed. Try again.	ステアに失敗しました。再試行してください。	ok
+conversation	terminal.signal	signal {signal}	シグナル {signal}	ok
+conversation	terminal.exitCode	exit code {code}	終了コード {code}	ok
+conversation	terminal.noExitCode	no exit code	終了コードなし	ok
+conversation	terminal.running	Running	実行中	ok
+conversation	terminal.failed	Failed	失敗	ok
+conversation	terminal.done	Done	完了	ok
+conversation	terminal.noOutput	No output	出力なし	ok
+conversation	terminal.collapseAria	Collapse output	出力を折りたたむ	ok
+conversation	terminal.expandAria	Expand the remaining {n} output lines	出力の残り {n} 行を展開	ok
+conversation	terminal.expandRest	… {n} more lines	… 残り {n} 行	ok
+conversation	terminal.sendInput	(send input)	(入力を送信)	ok
+conversation	terminal.session	Terminal {sessionId}	ターミナル {sessionId}	ok

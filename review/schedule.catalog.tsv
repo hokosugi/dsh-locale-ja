@@ -1,0 +1,71 @@
+namespace	key	en	ja	status
+schedule.catalog	trigger.label	Reminders	リマインダー	ok
+schedule.catalog	list.loading	Loading reminders…	リマインダーを読み込み中…	ok
+schedule.catalog	list.error	Could not load reminders.	リマインダーを読み込めませんでした。	ok
+schedule.catalog	list.retry	Retry	再試行	ok
+schedule.catalog	delete.action	Delete	削除	ok
+schedule.catalog	delete.pending	Deleting…	削除中…	ok
+schedule.catalog	delete.label	Delete reminder: {title}	リマインダーを削除: {title}	ok
+schedule.catalog	list.open	Open reminder details: {title}	リマインダーの詳細を開く: {title}	ok
+schedule.catalog	trigger.one	{count} reminder	リマインダー {count} 件	ok
+schedule.catalog	trigger.other	{count} reminders	リマインダー {count} 件	ok
+schedule.catalog	list.aria	Active reminders	有効なリマインダー	ok
+schedule.catalog	list.nextRun	Next run	次回の実行	ok
+schedule.catalog	frequency.once	Once	1 回のみ	ok
+schedule.catalog	frequency.every	Every {value} {unit}	{value} {unit}ごと	ok
+schedule.catalog	time.locale	en	ja	ok
+schedule.catalog	time.utcPrefix	UTC	UTC	ok
+schedule.catalog	frequency.daily	Daily at {time} ({timeZone})	毎日 {time} ({timeZone})	ok
+schedule.catalog	frequency.dailyLocal	Daily at {time}	毎日 {time}	ok
+schedule.catalog	frequency.weekly	Weekly on {weekdays} at {time} ({timeZone})	毎週 {weekdays} の {time} ({timeZone})	ok
+schedule.catalog	frequency.weeklyLocal	Weekly on {weekdays} at {time}	毎週 {weekdays} の {time}	ok
+schedule.catalog	frequency.cron	Cron {expression} ({timeZone})	Cron {expression} ({timeZone})	ok
+schedule.catalog	frequency.cronLocal	Cron {expression}	Cron {expression}	ok
+schedule.catalog	frequency.cronRule	{rule} ({timeZone})	{rule} ({timeZone})	ok
+schedule.catalog	cron.list.join	, 	、	ok
+schedule.catalog	cron.part.join	 	 	ok
+schedule.catalog	cron.weekday.name	{weekday}	{weekday}曜日	ok
+schedule.catalog	cron.weekday.range	{from}–{to}	{from}〜{to}	ok
+schedule.catalog	cron.months	 in {months}	 ({months})	ok
+schedule.catalog	cron.day.every	Every day{months}	毎日{months}	ok
+schedule.catalog	cron.day.weekdays	{weekdays}{months}	{weekdays}{months}	ok
+schedule.catalog	cron.day.monthDays	Day {days} of every month{months}	毎月 {days} 日{months}	ok
+schedule.catalog	cron.day.both	Day {days} of every month or {weekdays}{months}	毎月 {days} 日または{weekdays}{months}	ok
+schedule.catalog	cron.day.bothStarred	Day {days} of every month and {weekdays}{months}	毎月 {days} 日かつ{weekdays}{months}	ok
+schedule.catalog	cron.hours.range	{from}–{to}	{from}〜{to}	ok
+schedule.catalog	cron.hours.list	{hours}	{hours}	ok
+schedule.catalog	cron.time.everyMinute	Every minute	毎分	ok
+schedule.catalog	cron.time.everyMinutes	Every {step} minutes	{step} 分ごと	ok
+schedule.catalog	cron.time.joinedEveryMinute	every minute	毎分	ok
+schedule.catalog	cron.time.joinedEveryMinutes	every {step} minutes	{step} 分ごと	ok
+schedule.catalog	cron.time.everyHour	Every hour	毎時	ok
+schedule.catalog	cron.time.joinedEveryHour	every hour	毎時	ok
+schedule.catalog	cron.time.everyNHours	Every {count} hours	{count} 時間ごと	ok
+schedule.catalog	cron.time.joinedEveryNHours	every {count} hours	{count} 時間ごと	ok
+schedule.catalog	cron.time.hourlyAt	Every hour at minute {minutes}	毎時 {minutes} 分	ok
+schedule.catalog	cron.time.joinedHourlyAt	every hour at minute {minutes}	毎時 {minutes} 分	ok
+schedule.catalog	cron.time.hoursEveryMinute	every minute during hours {hours}	{hours} 時の間は毎分	ok
+schedule.catalog	cron.time.hoursEveryMinutes	every {step} minutes during hours {hours}	{hours} 時の間は {step} 分ごと	ok
+schedule.catalog	cron.time.at	at {times}	{times} に	ok
+schedule.catalog	cron.time.hoursAt	at minute {minutes} of hours {hours}	{hours} 時の {minutes} 分に	ok
+schedule.catalog	frequency.weekday.join	, 	、	ok
+schedule.catalog	frequency.weekday.1	Mon	月	ok
+schedule.catalog	frequency.weekday.2	Tue	火	ok
+schedule.catalog	frequency.weekday.3	Wed	水	ok
+schedule.catalog	frequency.weekday.4	Thu	木	ok
+schedule.catalog	frequency.weekday.5	Fri	金	ok
+schedule.catalog	frequency.weekday.6	Sat	土	ok
+schedule.catalog	frequency.weekday.7	Sun	日	ok
+schedule.catalog	unit.day.one	day	日	ok
+schedule.catalog	unit.day.other	days	日	ok
+schedule.catalog	unit.hour.one	hour	時間	ok
+schedule.catalog	unit.hour.other	hours	時間	ok
+schedule.catalog	unit.minute.one	minute	分	ok
+schedule.catalog	unit.minute.other	minutes	分	ok
+schedule.catalog	unit.second.one	second	秒	ok
+schedule.catalog	unit.second.other	seconds	秒	ok
+schedule.catalog	relative.now	Due now	まもなく実行	ok
+schedule.catalog	relative.future	in {value} {unit}	{value} {unit}後	ok
+schedule.catalog	relative.overdue	{value} {unit} overdue	{value} {unit}超過	ok
+schedule.catalog	mark.aria	{count} scheduled tasks	スケジュールされたタスク {count} 件	ok
+schedule.catalog	hover.more	{count} more	ほか {count} 件	ok

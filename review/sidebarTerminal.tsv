@@ -1,0 +1,29 @@
+namespace	key	en	ja	status
+sidebarTerminal	shortcut.noSession	Select a session first	先にセッションを選択してください	ok
+sidebarTerminal	recoveryFailed	Terminal recovery failed: {message}	ターミナルの復元に失敗しました: {message}	ok
+sidebarTerminal	retryRecovery	Retry terminal recovery	ターミナルの復元を再試行	ok
+sidebarTerminal	shell	Choose shell	シェルを選択	ok
+sidebarTerminal	shellLoading	Loading shells…	シェルを読み込み中…	ok
+sidebarTerminal	shellEmpty	No shells available	利用できるシェルがありません	ok
+sidebarTerminal	description	Run commands in the Session workspace	セッションのワークスペースでコマンドを実行できます	ok
+sidebarTerminal	title	Terminal	ターミナル	ok
+sidebarTerminal	new	New terminal	新しいターミナル	ok
+sidebarTerminal	loading	Reading terminal environment…	ターミナル環境を読み込み中…	ok
+sidebarTerminal	creating	Starting…	起動中…	ok
+sidebarTerminal	connecting	Connecting…	接続中…	ok
+sidebarTerminal	disconnected	Disconnected.	接続が切断されました。	ok
+sidebarTerminal	reconnect	Reconnect	再接続	ok
+sidebarTerminal	readonly	This view is read-only.	この表示は読み取り専用です。	ok
+sidebarTerminal	control	Take control	操作を引き継ぐ	ok
+sidebarTerminal	closed	Terminal closed.	ターミナルは閉じられました。	ok
+sidebarTerminal	exited	Process exited ({code})	プロセスが終了しました ({code})	ok
+sidebarTerminal	failed	Terminal error: {message}	ターミナルエラー: {message}	ok
+sidebarTerminal	rename	Terminal name	ターミナル名	ok
+sidebarTerminal	unavailable	Unavailable	利用できません	ok
+sidebarTerminal	retry	Retry	再試行	ok
+sidebarTerminal	cleanupFailed	Terminal “{title}” could not be ended: {message}	ターミナル「{title}」を終了できませんでした: {message}	ok
+sidebarTerminal	missingTerminal	This terminal no longer exists. Open a new terminal.	このターミナルは存在しません。新しいターミナルを開いてください。	ok
+sidebarTerminal	inputFull	The input buffer is full. Reconnect and try again.	入力バッファーが満杯です。再接続してから再試行してください。	ok
+sidebarTerminal	attachmentEnded	The terminal connection ended. Reconnect to continue.	ターミナルの接続が終了しました。続けるには再接続してください。	ok
+sidebarTerminal	invalidOutput	The terminal screen could not be received. Reconnect to recover it.	ターミナル画面を受信できませんでした。再接続して復元してください。	ok
+sidebarTerminal	terminalLimit	The terminal limit has been reached. Close unused terminals and try again. Exited terminals also count toward the limit.	ターミナルの上限に達しました。使っていないターミナルを閉じてから再試行してください。終了済みのターミナルも上限に含まれます。	ok

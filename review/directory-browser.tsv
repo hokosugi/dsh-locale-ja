@@ -1,0 +1,14 @@
+namespace	key	en	ja	status
+directory-browser	browser.title	Select Workspace Directory	ワークスペースのディレクトリを選択	ok
+directory-browser	browser.home	Home	ホーム	ok
+directory-browser	browser.newFolder	New folder	新しいフォルダー	ok
+directory-browser	browser.folderName	Folder name	フォルダー名	ok
+directory-browser	browser.createIn	New folder in "{name}"	「{name}」に新しいフォルダー	ok
+directory-browser	browser.untitledFolder	Untitled folder	名称未設定のフォルダー	ok
+directory-browser	browser.create	Create	作成	ok
+directory-browser	browser.cancel	Cancel	キャンセル	ok
+directory-browser	browser.open	Open	開く	ok
+directory-browser	browser.editPath	Edit path	パスを編集	ok
+directory-browser	browser.loading	Loading…	読み込み中…	ok
+directory-browser	browser.truncated	Too many folders to list; only the beginning is shown.	フォルダーが多すぎるため、先頭のみ表示しています。	ok
+directory-browser	browser.showHidden	Show hidden files	隠しファイルを表示	ok

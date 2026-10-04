@@ -1,0 +1,5 @@
+namespace	key	en	ja	status
+documentMarkdown	viewer.label	Markdown	Markdown	ok
+documentMarkdown	code.copy	Copy	コピー	ok
+documentMarkdown	code.copied	Copied	コピーしました	ok
+documentMarkdown	footnotes	Footnotes	脚注	ok

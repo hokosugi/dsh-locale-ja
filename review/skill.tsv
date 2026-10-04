@@ -1,0 +1,9 @@
+namespace	key	en	ja	status
+skill	row.title	Skill	スキル	ok
+skill	row.running	Loading skill	スキルを読み込み中	ok
+skill	row.preparing	Preparing to load a skill	スキルを読み込む準備をしています	ok
+skill	row.failed	Skill load failed	スキルの読み込みに失敗	ok
+skill	row.stopped	Skill load stopped	スキルの読み込みを停止	ok
+skill	row.instructions	Instructions	指示	ok
+skill	row.inspect	Inspect	呼び出しを確認	ok
+skill	menu.userOnly	user-only	ユーザー専用	ok

@@ -1,0 +1,11 @@
+{
+  "appearance.title": "外観",
+  "appearance.light": "ライト",
+  "appearance.dark": "ダーク",
+  "appearance.system": "システムに合わせる",
+  "fontSize.title": "文字サイズ",
+  "fontSize.description": "会話の内容にのみ反映されます",
+  "fontSize.unit": "px",
+  "fontSize.increase": "文字サイズを大きく",
+  "fontSize.decrease": "文字サイズを小さく"
+}

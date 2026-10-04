@@ -1,0 +1,6 @@
+namespace	key	en	ja	status
+sidebar	session.new	New Session	新しいセッション	ok
+sidebar	session.new.label	New session	新しいセッション	ok
+sidebar	toggle.open	Open sidebar	サイドバーを開く	ok
+sidebar	toggle.collapse	Collapse sidebar	サイドバーを折りたたむ	ok
+sidebar	panels.label	Global panels	グローバルパネル	ok

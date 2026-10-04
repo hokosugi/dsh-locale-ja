@@ -1,0 +1,41 @@
+namespace	key	en	ja	status
+settings.pluginInventory	tab	Plugin list	プラグイン一覧	ok
+settings.pluginInventory	loading	Reading plugins…	プラグインを読み込み中…	ok
+settings.pluginInventory	clientSyncing	Syncing plugins on this page…	このページのプラグインを同期しています…	ok
+settings.pluginInventory	clientSyncFailed	Some plugins could not sync on this page. Host enablement is unchanged.	このページでは一部のプラグインを同期できませんでした。ホスト側の有効状態は変わっていません。	ok
+settings.pluginInventory	clientSyncRetry	Retry this page	このページを再同期	ok
+settings.pluginInventory	error	Plugins are temporarily unavailable.	プラグインを一時的に読み込めません。	ok
+settings.pluginInventory	metadataError	Package metadata error: {error}	パッケージメタデータのエラー: {error}	ok
+settings.pluginInventory	retry	Retry	再試行	ok
+settings.pluginInventory	search	Search plugins	プラグインを検索	ok
+settings.pluginInventory	empty	No plugins are available.	利用できるプラグインがありません。	ok
+settings.pluginInventory	emptySearch	No matching plugins.	一致するプラグインがありません。	ok
+settings.pluginInventory	presetTitle	Session plugins	セッションプラグイン	ok
+settings.pluginInventory	presetSubtitle	Composed per session by agent presets	Agent プリセットがセッションごとに構成します	ok
+settings.pluginInventory	countUnit	plugins	件	ok
+settings.pluginInventory	switcherLabel	Choose the agent preset to inspect	確認する Agent プリセットを選択	ok
+settings.pluginInventory	presetOptionDefault	{name} (default)	{name} (既定)	ok
+settings.pluginInventory	presetOptionBroken	{name} (failed to load)	{name} (読み込み失敗)	ok
+settings.pluginInventory	globalTitle	Global plugins	グローバルプラグイン	ok
+settings.pluginInventory	globalSubtitle	Shared by the system and every session	システムとすべてのセッションで共有されます	ok
+settings.pluginInventory	presetProvidedDetail	Disabled globally; agent presets provide it per session	グローバルでは無効です。Agent プリセットがセッションごとに提供します	ok
+settings.pluginInventory	enabledIn	Enabled in	有効な場所	ok
+settings.pluginInventory	viewInPreset	View in the preset group	プリセットのグループで見る	ok
+settings.pluginInventory	matchesInOtherPresets	{count} more matches in other presets: 	ほかのプリセットにも {count} 件一致します: 	ok
+settings.pluginInventory	failedCountLabel	failed	件失敗	ok
+settings.pluginInventory	enabledTag	Enabled	有効	ok
+settings.pluginInventory	disabledTag	Disabled	無効	ok
+settings.pluginInventory	conditionalTag	Conditional	条件付き	ok
+settings.pluginInventory	presetEnabledTag	Via presets	プリセット経由	ok
+settings.pluginInventory	failedTag	Failed	失敗	ok
+settings.pluginInventory	moduleLabel	Module	完全名	ok
+settings.pluginInventory	fromPreset	From	提供元	ok
+settings.pluginInventory	condition	Disabled when	無効になる条件	ok
+settings.pluginInventory	configuration	Configuration	設定状態	ok
+settings.pluginInventory	runtime	Status	状態	ok
+settings.pluginInventory	unobserved	Not running	未実行	ok
+settings.pluginInventory	pending	Waiting for dependencies	依存関係を待機中	ok
+settings.pluginInventory	loadingPhase	Loading	読み込み中	ok
+settings.pluginInventory	active	Running	実行中	ok
+settings.pluginInventory	failed	Failed to start	起動に失敗	ok
+settings.pluginInventory	unloading	Unloading	アンロード中	ok

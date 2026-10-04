@@ -1,0 +1,57 @@
+{
+  "name": "dsh-locale-ja",
+  "version": "1.0.0",
+  "description": "Japanese locale pack for the DSH Web GUI — adds a 日本語 language and translates the whole shipped dictionary (56 namespaces / 2421 strings).",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "locale",
+    "i18n",
+    "japanese",
+    "ja"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "src/",
+    "tools/",
+    "data/",
+    "docs/",
+    "cordis.patch.yml",
+    "CHECKLIST.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "extract": "node tools/extract-dictionaries.mjs",
+    "build": "node tools/build.mjs",
+    "dev": "node --watch-path=src tools/build.mjs",
+    "audit": "node tools/audit.mjs",
+    "audit:strict": "node tools/audit.mjs --strict",
+    "verify": "node tools/verify-locale.mjs",
+    "review": "node tools/review.mjs export --split",
+    "review:apply": "node tools/review.mjs import",
+    "check": "node tools/build.mjs && node tools/audit.mjs --strict && node tools/verify-locale.mjs",
+    "prepublishOnly": "npm run check"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+namespace	key	en	ja	status
+settings.theme	appearance.title	Appearance	外観	ok
+settings.theme	appearance.light	Light	ライト	ok
+settings.theme	appearance.dark	Dark	ダーク	ok
+settings.theme	appearance.system	System	システムに合わせる	ok
+settings.theme	fontSize.title	Font size	文字サイズ	ok
+settings.theme	fontSize.description	Only affects conversation content	会話の内容にのみ反映されます	ok
+settings.theme	fontSize.unit	px	px	ok
+settings.theme	fontSize.increase	Increase font size	文字サイズを大きく	ok
+settings.theme	fontSize.decrease	Decrease font size	文字サイズを小さく	ok

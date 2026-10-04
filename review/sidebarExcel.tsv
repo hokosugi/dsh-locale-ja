@@ -1,0 +1,16 @@
+namespace	key	en	ja	status
+sidebarExcel	title	Spreadsheet	スプレッドシート	ok
+sidebarExcel	language	en	ja	ok
+sidebarExcel	loading	Rendering document...	ドキュメントを描画中…	ok
+sidebarExcel	invalid	This spreadsheet could not be opened. Check its format, contents, or password protection.	このスプレッドシートを開けませんでした。形式・内容・パスワード保護を確認してください。	ok
+sidebarExcel	tooLarge	This workbook exceeds the preview size limit.	このブックはプレビューのサイズ上限を超えています。	ok
+sidebarExcel	timeout	Opening this workbook timed out. Try a smaller file.	ブックを開く処理がタイムアウトしました。より小さいファイルをお試しください。	ok
+sidebarExcel	encoding	This text encoding could not be read. Save the file as UTF-8 or UTF-16 with a BOM and retry.	この文字コードを読み取れませんでした。BOM 付きの UTF-8 または UTF-16 で保存し直してから再試行してください。	ok
+sidebarExcel	formulaWarning	This workbook contains formulas. Displayed results may be missing or inaccurate.	このブックには数式が含まれています。表示される結果が欠けていたり不正確だったりする場合があります。	ok
+sidebarExcel	unsupportedNotice	This preview does not support {features} in this workbook. Open it in a system application for the full experience.	このプレビューでは、このブックの {features} を表示できません。すべての内容を見るにはシステムのアプリで開いてください。	ok
+sidebarExcel	charts	charts	グラフ	ok
+sidebarExcel	images	images	画像	ok
+sidebarExcel	shapes	shapes	図形	ok
+sidebarExcel	conditionalFormatting	conditional formatting	条件付き書式	ok
+sidebarExcel	featureSeparator	, 	、	ok
+sidebarExcel	retry	Retry	再試行	ok

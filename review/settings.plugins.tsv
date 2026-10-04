@@ -1,0 +1,6 @@
+namespace	key	en	ja	status
+settings.plugins	nav	Built-in plugins	組み込みプラグイン	ok
+settings.plugins	title	Built-in plugins	組み込みプラグイン	ok
+settings.plugins	intro	Inspect the plugins this deployment ships.	この環境に同梱されているプラグインを確認します。	ok
+settings.plugins	tabs	Plugin views	プラグインの表示	ok
+settings.plugins	empty	This deployment exposes no plugin views.	この環境は公開しているプラグイン表示がありません。	ok

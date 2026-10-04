@@ -1,0 +1,16 @@
+namespace	key	en	ja	status
+sidebarPdf	zoomControls	Zoom controls	ズーム操作	ok
+sidebarPdf	zoomMenu	Choose zoom	ズームを選択	ok
+sidebarPdf	zoomOut	Zoom out	縮小	ok
+sidebarPdf	zoomIn	Zoom in	拡大	ok
+sidebarPdf	zoomFitWidth	Fit width	幅に合わせる	ok
+sidebarPdf	zoomValue	{percent}%	{percent}%	ok
+sidebarPdf	title	PDF	PDF	ok
+sidebarPdf	pageImage	PDF page {page}	PDF {page} ページ	ok
+sidebarPdf	loading	Rendering document...	ドキュメントを描画中…	ok
+sidebarPdf	rendering	Rendering page…	ページを描画中…	ok
+sidebarPdf	failed	Cannot display PDF: {message}	PDF を表示できません: {message}	ok
+sidebarPdf	password	This PDF requires a password; password-protected previews are not supported.	この PDF にはパスワードが必要です。パスワード保護された PDF のプレビューには対応していません。	ok
+sidebarPdf	workerFailed	The PDF rendering process could not continue. Please retry.	PDF の描画処理を続行できませんでした。もう一度お試しください。	ok
+sidebarPdf	unsupported	PDF preview requires the complete file contents.	PDF のプレビューにはファイル全体の内容が必要です。	ok
+sidebarPdf	retry	Retry	再試行	ok

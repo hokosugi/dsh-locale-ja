@@ -1,0 +1,19 @@
+namespace	key	en	ja	status
+workflowRun	run.title	{name}	{name}	ok
+workflowRun	run.members.one	{count} member	メンバー {count} 件	ok
+workflowRun	run.members.other	{count} members	メンバー {count} 件	ok
+workflowRun	run.empty	No members started	開始されたメンバーはありません	ok
+workflowRun	phase.unassigned	Unphased	フェーズなし	ok
+workflowRun	phase.empty	Empty phase name	フェーズ名が空です	ok
+workflowRun	statusCount.running	Running {count}	実行中 {count}	ok
+workflowRun	statusCount.completed	Completed {count}	完了 {count}	ok
+workflowRun	statusCount.failed	Failed {count}	失敗 {count}	ok
+workflowRun	statusCount.cancelled	Cancelled {count}	キャンセル済み {count}	ok
+workflowRun	statusCount.interrupted	Interrupted {count}	中断 {count}	ok
+workflowRun	member.empty	Empty member name	メンバー名が空です	ok
+workflowRun	member.open	Open {name}	{name} を開く	ok
+workflowRun	status.running	Running	実行中	ok
+workflowRun	status.completed	Completed	完了	ok
+workflowRun	status.failed	Failed	失敗	ok
+workflowRun	status.cancelled	Cancelled	キャンセル済み	ok
+workflowRun	status.interrupted	Interrupted	中断	ok

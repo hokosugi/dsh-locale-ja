@@ -1,0 +1,190 @@
+namespace	key	en	ja	status
+pluginManager	panel	Plugins	プラグイン	ok
+pluginManager	title	Plugins	プラグイン	ok
+pluginManager	intro	Install, enable, and configure plugins	プラグインのインストール・有効化・設定	ok
+pluginManager	infoLabel	About plugins	プラグインについて	ok
+pluginManager	infoDescription	Configure official plugins and install or manage other plugins here. View the built-in plugin list and runtime status in Settings → Built-in plugins.	公式プラグインの設定と、その他のプラグインのインストール・管理はここで行います。組み込みプラグインの一覧と実行状態は「設定 → 組み込みプラグイン」で確認できます。	ok
+pluginManager	loading	Reading plugins…	プラグインを読み込み中…	ok
+pluginManager	error	Could not read all plugins, possibly due to a network problem	一部のプラグインを読み込めませんでした。ネットワークの問題が考えられます	ok
+pluginManager	unavailable	This deployment runs without a manageable profile, so plugins cannot be installed or switched here.	この環境には管理できるプロファイルがないため、ここではプラグインをインストールしたり切り替えたりできません。	ok
+pluginManager	retry	Retry	再試行	ok
+pluginManager	refresh	Refresh	更新	ok
+pluginManager	refreshError	Refresh failed. Please try again.	更新に失敗しました。もう一度お試しください。	ok
+pluginManager	empty	No plugins are installed yet.	プラグインがまだインストールされていません。	ok
+pluginManager	addPlugin	Add plugin	プラグインを追加	ok
+pluginManager	restartNotice	The change takes effect at the next start	変更は次回の起動時に反映されます	ok
+pluginManager	overriddenNotice	{name} was saved, but a higher-priority configuration overrides it, so it is not in effect	{name} は保存されましたが、より優先度の高い設定に上書きされるため反映されていません	ok
+pluginManager	bundlesTitle	Installed	インストール済み	ok
+pluginManager	officialTitle	Official	公式	ok
+pluginManager	statusProblem	Problem	問題	ok
+pluginManager	statusBeta	Experimental	実験的	ok
+pluginManager	reasonLabel	Reason	理由	ok
+pluginManager	metadataError	Package metadata error: {error}	パッケージメタデータのエラー: {error}	ok
+pluginManager	versionTag	v{version}	v{version}	ok
+pluginManager	partsLabel	Components	コンポーネント	ok
+pluginManager	partsEmpty	This plugin pack contains no components.	このプラグインパックにはコンポーネントが含まれていません。	ok
+pluginManager	partsCountTotal	{count} total	合計 {count}	ok
+pluginManager	partsCountRunning	{count} running	{count} 実行中	ok
+pluginManager	partsCountOff	{count} off	{count} オフ	ok
+pluginManager	partOff	Off	オフ	ok
+pluginManager	partsCountFailed	{count} failed	{count} 失敗	ok
+pluginManager	partsFilter	Filter components	コンポーネントを絞り込む	ok
+pluginManager	partsFilterEmpty	No component matches.	一致するコンポーネントがありません。	ok
+pluginManager	partToggle	Enable component {name}	コンポーネント {name} を有効にする	ok
+pluginManager	rowPhasePending	Waiting for dependencies	依存関係を待機中	ok
+pluginManager	rowPhaseLoading	Loading	読み込み中	ok
+pluginManager	rowPhaseActive	Running	実行中	ok
+pluginManager	rowPhaseFailed	Problem	問題	ok
+pluginManager	rowPhaseUnloading	Unloading	アンロード中	ok
+pluginManager	enableToggle	Enable {name}	{name} を有効にする	ok
+pluginManager	openDetail	View {name}	{name} を表示	ok
+pluginManager	backToList	Back to plugins	プラグイン一覧に戻る	ok
+pluginManager	crumbRoot	Plugins	プラグイン	ok
+pluginManager	backToPackage	Back to {name}	{name} に戻る	ok
+pluginManager	configureRow	Configure {name}	{name} を設定	ok
+pluginManager	rowStateIdle	Not running	未実行	ok
+pluginManager	uninstall	Uninstall	アンインストール	ok
+pluginManager	uninstallLabel	Uninstall {name}	{name} をアンインストール	ok
+pluginManager	installTitle	Add plugin	プラグインを追加	ok
+pluginManager	installDescription	Enter the plugin's package name, GitHub repository address, or local directory path.	プラグインのパッケージ名、GitHub リポジトリのアドレス、またはローカルディレクトリのパスを入力してください。	ok
+pluginManager	installSpecLabel	Package name or address	パッケージ名またはアドレス	ok
+pluginManager	installSpecPlaceholder	for example dsh-plugin-whale-pet	例: dsh-plugin-whale-pet	ok
+pluginManager	installGuideToggle	Install guide and examples	インストールのガイドと例	ok
+pluginManager	installGuideHide	Hide the guide	ガイドを閉じる	ok
+pluginManager	installGuideIdTitle	Enter the plugin's npm package name	プラグインの npm パッケージ名を入力	ok
+pluginManager	installGuideIdExample	dsh-plugin-whale-pet	dsh-plugin-whale-pet	ok
+pluginManager	installGuideIdHint	The plugin package name is the npm package name (like dsh-xxx or @author/plugin): the part after dsh plugin add or pnpm add in a community plugin's README install command.	プラグインのパッケージ名は npm のパッケージ名です (dsh-xxx や @作者/プラグイン名 のような形式)。コミュニティプラグインの README にあるインストール手順の、dsh plugin add または pnpm add の後ろの部分です。	ok
+pluginManager	installGuideExampleLabel	Example: 	例: 	ok
+pluginManager	installGitTemplateHint	Replace this with the actual Git repository address.	実際の Git リポジトリのアドレスに置き換えてください。	ok
+pluginManager	installPathTemplateHint	Replace this with the actual path to your local plugin directory.	ローカルのプラグインディレクトリの実際のパスに置き換えてください。	ok
+pluginManager	installGuideFill	Use example	例を入力	ok
+pluginManager	installGuideFillAria	Use the example {example}	例 {example} を入力	ok
+pluginManager	installGuideSafety	Install only plugins you trust: they run with your permissions and can damage DeepSeek Harness or leak your data.	信頼できるプラグインだけをインストールしてください。プラグインはあなたの権限で動作し、DeepSeek Harness を壊したり、データを外部に漏らしたりする可能性があります。	ok
+pluginManager	installUpgradeNotice	Installed plugins do not update automatically yet. To upgrade a plugin, uninstall it and install the new version. Later releases will keep improving the upgrade experience.	インストールしたプラグインはまだ自動更新されません。アップグレードするにはアンインストールしてから新しいバージョンをインストールしてください。今後のリリースで改善していきます。	ok
+pluginManager	registryToggle	Registry	レジストリ	ok
+pluginManager	registryLegend	The npm registry the plugin is downloaded from	プラグインのダウンロード元になる npm レジストリ	ok
+pluginManager	registryDefault	Default registry	既定のレジストリ	ok
+pluginManager	registryOfficial	Official npm registry	npm 公式レジストリ	ok
+pluginManager	registryNpmmirror	Mainland China mirror	中国本土のミラー	ok
+pluginManager	registryCustom	Custom address	カスタムアドレス	ok
+pluginManager	registryCustomPlaceholder	https://npm.example.com/	https://npm.example.com/	ok
+pluginManager	registryCustomHint	Enter an internal or private npm registry address starting with http:// or https://. If it requires a login, store the credentials in ~/.npmrc on this machine.	http:// または https:// で始まる、社内・プライベートな npm レジストリのアドレスを入力してください。ログインが必要な場合は、このマシンの ~/.npmrc に認証情報を保存してください。	ok
+pluginManager	registryCustomInvalid	Enter an address starting with http:// or https://	http:// または https:// で始まるアドレスを入力してください	ok
+pluginManager	registryListSeparator	, 	、	ok
+pluginManager	sentenceSeparator	 	 	ok
+pluginManager	installRun	Install	インストール	ok
+pluginManager	installChecking	Checking…	確認中…	ok
+pluginManager	installProblemInvalid	This is not a package name or address that can be installed: {reason}	インストールできるパッケージ名またはアドレスではありません: {reason}	ok
+pluginManager	installProblemInstalled	This plugin is already installed. To upgrade it, uninstall it and install it again	このプラグインはすでにインストールされています。アップグレードするにはアンインストールしてから再インストールしてください	ok
+pluginManager	installProblemShipped	This plugin ships with DSH; upgrading DSH updates it	このプラグインは DSH に同梱されています。DSH をアップグレードすると更新されます	ok
+pluginManager	installProblemNotFound	No such plugin was found	該当するプラグインが見つかりません	ok
+pluginManager	installProblemNotPackage	The path does not exist or is not a valid plugin package	そのパスが存在しないか、有効なプラグインパッケージではありません	ok
+pluginManager	installProblemNotBundle	This package declares no bundle, so it cannot be installed as a plugin: {reason}	このパッケージはバンドルを宣言していないため、プラグインとしてインストールできません: {reason}	ok
+pluginManager	installProblemNetwork	The plugin registry could not be reached; check the network and try again	プラグインのレジストリに接続できませんでした。ネットワークを確認してからもう一度お試しください	ok
+pluginManager	installProblemNetworkAll	No registry could be reached (tried: {registries}); check the network or proxy settings, or change the registry	どのレジストリにも接続できませんでした (試行: {registries})。ネットワークまたはプロキシの設定を確認するか、レジストリを変更してください	ok
+pluginManager	installProblemUnknown	The plugin could not be looked up: {reason}	プラグインの情報を取得できませんでした: {reason}	ok
+pluginManager	installingTitle	Installing the plugin…	プラグインをインストール中…	ok
+pluginManager	installedTitle	Installed	インストール済み	ok
+pluginManager	installFailedTitle	The plugin could not be installed	プラグインをインストールできませんでした	ok
+pluginManager	installGithubFailedTitle	Cannot access GitHub	GitHub にアクセスできません	ok
+pluginManager	installGithubTimeoutTitle	GitHub connection timed out	GitHub への接続がタイムアウトしました	ok
+pluginManager	installGithubFailedDescription	Try another installation source.	別のインストール元を試してください。	ok
+pluginManager	installUseGithubMirror	Use mainland China mirror	中国本土のミラーを使う	ok
+pluginManager	installTryAnotherWay	Try another way	別の方法を試す	ok
+pluginManager	installPackageLabel	Plugin package name	プラグインのパッケージ名	ok
+pluginManager	installEdit	Edit	編集	ok
+pluginManager	installEditAria	Back to editing	編集に戻る	ok
+pluginManager	installCancelAndEdit	Cancel installation and return to editing	インストールをキャンセルして編集に戻る	ok
+pluginManager	installApplyingCancellationError	Cancellation was not confirmed. Installation is being applied; wait for its result. {reason}	キャンセルを確認できませんでした。インストールは最終処理に入っているため、結果を待ってください。{reason}	ok
+pluginManager	installReconcile	Check installation status	インストール状態を確認	ok
+pluginManager	installUnknownTitle	Installation result unavailable	インストール結果を取得できません	ok
+pluginManager	installUnknownDescription	The Host has no active installation with this request id. Check the plugin list before trying again.	ホストにこの要求 ID のインストールがありません。プラグイン一覧を確認してからもう一度お試しください。	ok
+pluginManager	installResultUnconfirmed	The installation result was not received. Check installation status. {reason}	インストール結果を受信できませんでした。インストール状態を確認してください。{reason}	ok
+pluginManager	installAwaitingAcceptance	Waiting for the Host to accept installation. Cancellation will retry automatically after confirmation.	ホストがインストールを受け付けるのを待っています。確認後にキャンセルを自動で再試行します。	ok
+pluginManager	installBackgroundUnknown	Installation result unavailable. Check the plugin list.	インストール結果を取得できません。プラグイン一覧を確認してください。	ok
+pluginManager	installCancel	Cancel install	インストールをキャンセル	ok
+pluginManager	installCloseCancels	Cancel install and close	インストールをキャンセルして閉じる	ok
+pluginManager	installViewTask	View installation	インストールを表示	ok
+pluginManager	installUnconfirmedTitle	Installation status unconfirmed	インストール状態が未確認です	ok
+pluginManager	installBackgroundDone	Installation finished. View installation details.	インストールが完了しました。詳細を確認できます。	ok
+pluginManager	installBackgroundFailed	Installation failed. View installation details.	インストールに失敗しました。詳細を確認できます。	ok
+pluginManager	installBackgroundUnconfirmed	Installation status is unconfirmed. View the installation for details.	インストール状態が未確認です。詳細はインストールを開いて確認してください。	ok
+pluginManager	installBackgroundApplying	Installation is being applied and cannot be cancelled. View installation progress.	インストールは最終処理に入っていてキャンセルできません。進行状況を確認できます。	ok
+pluginManager	installStarting	Preparing installation…	インストールを準備中…	ok
+pluginManager	installCancelling	Stopping installation…	インストールを停止中…	ok
+pluginManager	installApplying	Applying configuration, please wait…	設定を反映しています。しばらくお待ちください…	ok
+pluginManager	installCancelledShort	Cancelled	キャンセル済み	ok
+pluginManager	installCancelled	Installation cancelled; the plugin is not enabled, and downloaded files may remain	インストールをキャンセルしました。プラグインは有効になっておらず、ダウンロードされたファイルが残っている場合があります	ok
+pluginManager	installCancelUnconfirmed	Installation has not been confirmed stopped. Retry cancellation or wait for the installation result. {reason}	インストールの停止を確認できませんでした。キャンセルを再試行するか、インストールの結果を待ってください。{reason}	ok
+pluginManager	installEnableNow	Enable now	今すぐ有効にする	ok
+pluginManager	installDetailsShow	Show install details	インストールの詳細を表示	ok
+pluginManager	installDetailsHide	Hide install details	インストールの詳細を隠す	ok
+pluginManager	installVersion	Version {version}	バージョン {version}	ok
+pluginManager	installSubjectPath	Local directory	ローカルディレクトリ	ok
+pluginManager	installSubjectGit	Git repository	Git リポジトリ	ok
+pluginManager	installSubjectTarball	Tarball	tarball	ok
+pluginManager	installLocation	Installs into {dir}	{dir} にインストールされます	ok
+pluginManager	installRetry	Retry	再試行	ok
+pluginManager	installChangeRegistry	Change registry	レジストリを変更	ok
+pluginManager	installAttempt	{previous} could not serve the package; retrying through {registry} (registry {index} of {total})	{previous} からパッケージを取得できなかったため、{registry} で再試行します ({total} 件中 {index} 件目のレジストリ)	ok
+pluginManager	installAttemptBadge	Attempt {index} · {registry}	第 {index} 回 · {registry}	ok
+pluginManager	installFailureNetwork	The network connection failed	ネットワーク接続に失敗しました	ok
+pluginManager	installFailureNetworkAll	No registry could be reached (tried: {registries}). Check the network or proxy settings, or change the registry and retry.	どのレジストリにも接続できませんでした (試行: {registries})。ネットワークまたはプロキシの設定を確認するか、レジストリを変更して再試行してください。	ok
+pluginManager	installFailureNetworkHost	{host} could not be reached. A GitHub address or a .tgz link is not fetched through the registry: this machine must reach it directly or through a proxy. If the plugin is also published to npm, enter its package name instead.	{host} に接続できませんでした。GitHub のアドレスや .tgz への直リンクはレジストリを経由しないため、このマシンから直接またはプロキシ経由で接続できる必要があります。プラグインが npm にも公開されている場合は、パッケージ名を入力してください。	ok
+pluginManager	installFailureNotFound	No such plugin was found	該当するプラグインが見つかりません	ok
+pluginManager	installFailureNoMatchingVersion	No version matches the request	条件に一致するバージョンがありません	ok
+pluginManager	installFailureDiskFull	The disk is full; the install stopped	ディスクの空き容量が足りないため、インストールを中止しました	ok
+pluginManager	installFailurePermission	No write permission; the plugin cannot be installed	書き込み権限がないため、プラグインをインストールできません	ok
+pluginManager	installFailureBuildBlocked	A dependency's install scripts need your permission before the install can continue	依存パッケージのインストールスクリプトを許可するまで、インストールを続行できません	ok
+pluginManager	installFailureBuildBlockedManual	pnpm blocked install scripts; allow them under allowBuilds in pnpm-workspace.yaml and retry	pnpm がインストールスクリプトをブロックしました。pnpm-workspace.yaml の allowBuilds で許可してから再試行してください	ok
+pluginManager	installFailureIntegrity	The downloaded package failed its integrity check	ダウンロードしたパッケージの整合性チェックに失敗しました	ok
+pluginManager	installFailureTimeout	The install timed out	インストールがタイムアウトしました	ok
+pluginManager	installFailurePnpmMissing	pnpm was not found, so nothing can be installed	pnpm が見つからないため、インストールできません	ok
+pluginManager	installFailureGeneric	Something went wrong during the install; the details say what	インストール中に問題が発生しました。詳細に原因が表示されます	ok
+pluginManager	terminalRunning	Running	実行中	ok
+pluginManager	terminalFailed	Failed	失敗	ok
+pluginManager	terminalDone	Done	完了	ok
+pluginManager	terminalCopy	Copy	コピー	ok
+pluginManager	terminalCopied	Copied	コピーしました	ok
+pluginManager	terminalNoOutput	No output	出力なし	ok
+pluginManager	terminalCollapseAria	Collapse output	出力を折りたたむ	ok
+pluginManager	terminalCollapse	Collapse	折りたたむ	ok
+pluginManager	terminalExpandAria	Expand the remaining {n} output lines	出力の残り {n} 行を展開	ok
+pluginManager	terminalExpand	… {n} more lines	… 残り {n} 行	ok
+pluginManager	terminalExitCode	exit code {code}	終了コード {code}	ok
+pluginManager	terminalSignal	signal {signal}	シグナル {signal}	ok
+pluginManager	terminalNoExitCode	no exit code	終了コードなし	ok
+pluginManager	installDoneNothing	Install finished with no new dependency.	インストールが完了しました。新しい依存パッケージはありません。	ok
+pluginManager	installDoneRestart	Installed; it loads at the next start.	インストールしました。次回の起動時に読み込まれます。	ok
+pluginManager	installDoneApproved	Install scripts allowed for {names}	{names} のインストールスクリプトを許可しました	ok
+pluginManager	installApprovalTitle	Install scripts need permission	インストールスクリプトの許可が必要です	ok
+pluginManager	installApprovalDescription	These packages have install scripts that pnpm did not run.	以下のパッケージには、pnpm が実行しなかったインストールスクリプトがあります。	ok
+pluginManager	installApprovalConsequence	Once allowed, the scripts run here with your permissions, and the permission is saved in this profile.	許可すると、スクリプトはこの環境であなたの権限で実行され、許可はこのプロファイルに保存されます。	ok
+pluginManager	installApprovalCaution	Allow only packages you trust.	信頼できるパッケージだけを許可してください。	ok
+pluginManager	installApproveAndRetry	Allow these scripts and retry	これらのスクリプトを許可して再試行	ok
+pluginManager	installClose	Done	完了	ok
+pluginManager	close	Close	閉じる	ok
+pluginManager	cancel	Cancel	キャンセル	ok
+pluginManager	confirmUninstallTitle	Uninstall "{name}"?	「{name}」をアンインストールしますか？	ok
+pluginManager	confirmUninstallDescription	What it provides goes away once it is uninstalled.	アンインストールすると、それが提供している機能は使えなくなります。	ok
+pluginManager	confirmUninstall	Uninstall	アンインストール	ok
+pluginManager	failedEnable	Could not enable: {reason}	有効にできませんでした: {reason}	ok
+pluginManager	failedDisable	Could not disable: {reason}	無効にできませんでした: {reason}	ok
+pluginManager	failedUninstall	Could not uninstall: {reason}	アンインストールできませんでした: {reason}	ok
+pluginManager	failedRowEnable	Could not enable the component: {reason}	コンポーネントを有効にできませんでした: {reason}	ok
+pluginManager	failedRowDisable	Could not disable the component: {reason}	コンポーネントを無効にできませんでした: {reason}	ok
+pluginManager	reasonManagementRequired	Plugin management needs it; it cannot be switched off or uninstalled.	プラグイン管理に必要なため、無効化もアンインストールもできません。	ok
+pluginManager	reasonUnaddressable	The profile patch cannot address this one uniquely.	プロファイルのパッチではこれを一意に指定できません。	ok
+pluginManager	reasonUnknownPlugin	No such plugin.	該当するプラグインがありません。	ok
+pluginManager	reasonInvalidSpec	Enter a valid package name or address.	有効なパッケージ名またはアドレスを入力してください。	ok
+pluginManager	reasonAmbiguousInstall	Which package was installed cannot be told from the dependency change.	依存関係の変化から、どのパッケージがインストールされたか判断できません。	ok
+pluginManager	reasonNotBundle	This package declares no bundle, so it cannot be managed as a plugin.	このパッケージはバンドルを宣言していないため、プラグインとして管理できません。	ok
+pluginManager	reasonNotRemovable	This package is not owned by the profile, or plugin management needs it.	このパッケージはプロファイルが所有していないか、プラグイン管理に必要です。	ok
+pluginManager	reasonStopProfile	This profile runs without HMR; stop it and uninstall the package with dsh plugin.	このプロファイルは HMR なしで動作しています。停止してから dsh plugin でアンインストールしてください。	ok
+pluginManager	reasonBundleInUse	Other configuration still uses this bundle's components; switch them off first.	ほかの設定がこのバンドルのコンポーネントをまだ使用しています。先にそれらを無効にしてください。	ok
+pluginManager	reasonStaleApproval	The pending script approvals changed; install again to refresh them.	許可待ちのインストールスクリプトが変わったため、再インストールして更新してください。	ok
+pluginManager	reasonIncompatibleVersion	{plugin} is incompatible with DSH {runtime} (requires {peers}); running it may cause crashes or data loss.	{plugin} は DSH {runtime} と互換性がありません (必要なバージョン: {peers})。実行するとクラッシュやデータ損失が起きる可能性があります。	ok
+pluginManager	reasonIncompatibleVersionUnnamed	This plugin is incompatible with the running DSH version; running it may cause crashes or data loss.	このプラグインは実行中の DSH のバージョンと互換性がありません。実行するとクラッシュやデータ損失が起きる可能性があります。	ok
+pluginManager	reasonIncompatibleInstall	Install a plugin version compatible with this DSH.	この DSH と互換性のあるバージョンのプラグインをインストールしてください。	ok
+pluginManager	reasonIncompatibleInstalled	Uninstall it and install a version compatible with this DSH.	アンインストールして、この DSH と互換性のあるバージョンをインストールしてください。	ok
+pluginManager	reasonOperationError	The Host reported an error.	ホストがエラーを報告しました。	ok

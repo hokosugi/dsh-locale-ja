@@ -1,0 +1,18 @@
+namespace	key	en	ja	status
+sidebarFiles	shortcut.noSession	Select a session first	先にセッションを選択してください	ok
+sidebarFiles	type.label	Files	ファイル	ok
+sidebarFiles	guide.title	Workspace files	ワークスペースのファイル	ok
+sidebarFiles	guide.description	Browse files in this session's workspace	このセッションのワークスペースにあるファイルを閲覧できます	ok
+sidebarFiles	loading	Reading…	読み込み中…	ok
+sidebarFiles	empty	Empty directory	空のディレクトリ	ok
+sidebarFiles	truncated	Too many entries, showing only some of them.	項目が多すぎるため、一部のみ表示しています。	ok
+sidebarFiles	noWorkspace	This session has no workspace directory.	このセッションにはワークスペースのディレクトリがありません。	ok
+sidebarFiles	reload	Reload	再読み込み	ok
+sidebarFiles	autoRefresh	Auto refresh	自動更新	ok
+sidebarFiles	autoRefresh.enable	Enable auto refresh	自動更新を有効にする	ok
+sidebarFiles	autoRefresh.disable	Disable auto refresh	自動更新を無効にする	ok
+sidebarFiles	entry.other	Not a file or a directory, so it cannot be opened.	ファイルでもディレクトリでもないため、開けません。	ok
+sidebarFiles	error.notFound	That directory is gone. It may have been moved or deleted.	そのディレクトリは存在しません。移動または削除された可能性があります。	ok
+sidebarFiles	error.outsideWorkspace	That directory is outside the workspace, so the sidebar will not read it.	そのディレクトリはワークスペースの外にあるため、サイドバーでは読み込みません。	ok
+sidebarFiles	error.notDirectory	That is not a directory.	ディレクトリではありません。	ok
+sidebarFiles	error.unavailable	Read failed: {message}	読み込みに失敗しました: {message}	ok

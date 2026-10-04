@@ -1,0 +1,13 @@
+{
+  "zoomControls": "ズーム操作",
+  "zoomMenu": "ズームを選択",
+  "zoomOut": "縮小",
+  "zoomIn": "拡大",
+  "zoomFitWidth": "幅に合わせる",
+  "zoomValue": "{percent}%",
+  "title": "画像",
+  "preview": "画像のプレビュー: {name}",
+  "loading": "ドキュメントを描画中…",
+  "failed": "この画像を表示できませんでした。",
+  "unsupported": "画像のプレビューにはファイル全体の内容が必要です。"
+}

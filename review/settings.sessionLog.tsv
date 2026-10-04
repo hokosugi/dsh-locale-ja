@@ -1,0 +1,5 @@
+namespace	key	en	ja	status
+settings.sessionLog	title	Upload Session Log when using the official model API	公式のモデル API を使うときにセッションログをアップロードする	ok
+settings.sessionLog	description	Help improve DeepSeek models and products.	DeepSeek のモデルと製品の改善に役立てます。	ok
+settings.sessionLog	saved	Preference saved	設定を保存しました	ok
+settings.sessionLog	failed	Could not save preference	設定を保存できませんでした	ok

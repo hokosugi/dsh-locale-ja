@@ -1,0 +1,12 @@
+namespace	key	en	ja	status
+sidebarImage	zoomControls	Zoom controls	ズーム操作	ok
+sidebarImage	zoomMenu	Choose zoom	ズームを選択	ok
+sidebarImage	zoomOut	Zoom out	縮小	ok
+sidebarImage	zoomIn	Zoom in	拡大	ok
+sidebarImage	zoomFitWidth	Fit width	幅に合わせる	ok
+sidebarImage	zoomValue	{percent}%	{percent}%	ok
+sidebarImage	title	Image	画像	ok
+sidebarImage	preview	Image preview: {name}	画像のプレビュー: {name}	ok
+sidebarImage	loading	Rendering document...	ドキュメントを描画中…	ok
+sidebarImage	failed	This image could not be displayed.	この画像を表示できませんでした。	ok
+sidebarImage	unsupported	Image preview requires the complete file contents.	画像のプレビューにはファイル全体の内容が必要です。	ok

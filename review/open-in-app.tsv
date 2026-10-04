@@ -1,0 +1,46 @@
+namespace	key	en	ja	status
+open-in-app	open.title	Open in {app}	{app} で開く	ok
+open-in-app	path.appDefault	{app} (default)	{app} (既定)	ok
+open-in-app	path.appsError	Could not load applications	アプリの一覧を読み込めませんでした	ok
+open-in-app	shortcut.busy	Opening workspace	ワークスペースを開いています	ok
+open-in-app	shortcut.unavailable	Current workspace or local application unavailable	現在のワークスペースまたはローカルアプリを利用できません	ok
+open-in-app	open.tooltip	Open locally	ローカルで開く	ok
+open-in-app	path.open	Open	開く	ok
+open-in-app	path.more	More ways to open	ほかの開き方	ok
+open-in-app	path.reveal	Show file location	ファイルの場所を表示	ok
+open-in-app	path.openError	Could not open. Try again.	開けませんでした。もう一度お試しください。	ok
+open-in-app	path.revealError	Could not show the file location. Try again.	ファイルの場所を表示できませんでした。もう一度お試しください。	ok
+open-in-app	app.cursor	Cursor	Cursor	ok
+open-in-app	app.vscode	VS Code	VS Code	ok
+open-in-app	app.vscodeinsiders	VS Code Insiders	VS Code Insiders	ok
+open-in-app	app.windsurf	Windsurf	Windsurf	ok
+open-in-app	app.zed	Zed	Zed	ok
+open-in-app	app.sublimetext	Sublime Text	Sublime Text	ok
+open-in-app	app.xcode	Xcode	Xcode	ok
+open-in-app	app.androidstudio	Android Studio	Android Studio	ok
+open-in-app	app.intellij	IntelliJ IDEA	IntelliJ IDEA	ok
+open-in-app	app.pycharm	PyCharm	PyCharm	ok
+open-in-app	app.webstorm	WebStorm	WebStorm	ok
+open-in-app	app.phpstorm	PhpStorm	PhpStorm	ok
+open-in-app	app.goland	GoLand	GoLand	ok
+open-in-app	app.rider	Rider	Rider	ok
+open-in-app	app.rustrover	RustRover	RustRover	ok
+open-in-app	app.fork	Fork	Fork	ok
+open-in-app	app.sourcetree	Sourcetree	Sourcetree	ok
+open-in-app	app.github	GitHub Desktop	GitHub Desktop	ok
+open-in-app	app.tower	Tower	Tower	ok
+open-in-app	app.gitkraken	GitKraken	GitKraken	ok
+open-in-app	app.smartgit	SmartGit	SmartGit	ok
+open-in-app	app.sublimemerge	Sublime Merge	Sublime Merge	ok
+open-in-app	app.ghostty	Ghostty	Ghostty	ok
+open-in-app	app.warp	Warp	Warp	ok
+open-in-app	app.iterm	iTerm2	iTerm2	ok
+open-in-app	app.kitty	kitty	kitty	ok
+open-in-app	app.windowsterminal	Windows Terminal	Windows Terminal	ok
+open-in-app	app.gitbash	Git Bash	Git Bash	ok
+open-in-app	app.gnometerminal	GNOME Terminal	GNOME Terminal	ok
+open-in-app	app.konsole	Konsole	Konsole	ok
+open-in-app	app.finder	Finder	Finder	ok
+open-in-app	app.explorer	File Explorer	エクスプローラー	ok
+open-in-app	app.filemanager	Files	ファイル	ok
+open-in-app	app.terminal	Terminal	ターミナル	ok

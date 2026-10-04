@@ -1,0 +1,6 @@
+namespace	key	en	ja	status
+approval	waiting	Waiting for approval	承認待ち	ok
+approval	detail.aria	Approval details	承認の詳細	ok
+approval	escalation	Tool {toolName} requests privileged execution	ツール {toolName} が特権実行を要求しています	ok
+approval	reject	Reject	拒否	ok
+approval	allowOnce	Allow once	1 回だけ許可	ok

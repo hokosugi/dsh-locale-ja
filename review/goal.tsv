@@ -1,0 +1,13 @@
+namespace	key	en	ja	status
+goal	phase.active	Ongoing Goal	実行中のゴール	ok
+goal	phase.active.disarmed	Inactive Goal	継続待ちのゴール	ok
+goal	phase.paused	Paused Goal	一時停止中のゴール	ok
+goal	phase.blocked	Blocked Goal	ブロック中のゴール	ok
+goal	objective.aria	Goal objective	ゴールの目的	ok
+goal	commandInput.aria	Command input	コマンド入力	ok
+goal	action.save	Save goal	ゴールを保存	ok
+goal	action.cancel	Cancel edit	編集をキャンセル	ok
+goal	action.pause	Pause goal	ゴールを一時停止	ok
+goal	action.resume	Resume goal	ゴールを再開	ok
+goal	action.edit	Edit goal	ゴールを編集	ok
+goal	action.clear	Clear goal	ゴールをクリア	ok

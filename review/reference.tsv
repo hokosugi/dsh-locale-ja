@@ -1,0 +1,12 @@
+namespace	key	en	ja	status
+reference	section.files	Files & folders	ファイルとフォルダー	ok
+reference	section.subagents	Subagents	サブエージェント	ok
+reference	section.sessions	Sessions	セッション	ok
+reference	candidate.noCwd	(no cwd)	(作業ディレクトリなし)	ok
+reference	crumb.root	Workspace	ワークスペース	ok
+reference	time.now	now	たった今	ok
+reference	time.minutes	{n}min	{n} 分	ok
+reference	time.hours	{n}h	{n} 時間	ok
+reference	time.days	{n}d	{n} 日	ok
+reference	time.months	{n}mo	{n} か月	ok
+reference	time.years	{n}y	{n} 年	ok

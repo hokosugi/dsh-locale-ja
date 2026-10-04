@@ -1,0 +1,24 @@
+namespace	key	en	ja	status
+model	provider.account	DeepSeek Account	DeepSeek アカウント	ok
+model	command.label	Model	モデル	ok
+model	command.description	Select the model for this conversation	この会話で使うモデルを選択	ok
+model	option.loadError	Catalog failed to load: {message}	カタログを読み込めませんでした: {message}	ok
+model	trigger.fallback	Select model	モデルを選択	ok
+model	trigger.loading	Loading models…	モデルを読み込み中…	ok
+model	trigger.selectAria	Select model	モデルを選択	ok
+model	trigger.aria	Select model, current {model}	モデルを選択 (現在: {model})	ok
+model	trigger.ariaEffort	Select model, current {model}, reasoning effort {effort}	モデルを選択 (現在: {model}、推論の強度: {effort})	ok
+model	menu.aria	Model and reasoning effort	モデルと推論の強度	ok
+model	menu.model	Model	モデル	ok
+model	menu.effort	Effort	推論の強度	ok
+model	effort.providerDefault	Default	既定	ok
+model	status.loading	Refreshing model list…	モデル一覧を更新中…	ok
+model	error.action	Model operation failed: {message}	モデルの操作に失敗しました: {message}	ok
+model	error.sessionInUse	This session is already in use, possibly by another running DSH instance (such as dsh web or the desktop app). Quit other running DSH instances and try again.	このセッションはすでに使用されています (別の dsh web やデスクトップアプリなど、実行中の DSH が原因の可能性があります)。ほかの DSH を終了してからもう一度お試しください。	ok
+model	action.reload	Reload	再読み込み	ok
+model	warning.groupLoad	{name} failed to load: {message}	{name} を読み込めませんでした: {message}	ok
+model	search.placeholder	Search models…	モデルを検索…	ok
+model	search.clear	Clear search	検索をクリア	ok
+model	search.empty	No matching models.	一致するモデルがありません。	ok
+model	empty.models	No models available.	利用できるモデルがありません。	ok
+model	empty.efforts	This model provides no reasoning effort levels.	このモデルには推論の強度の設定がありません。	ok

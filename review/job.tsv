@@ -1,0 +1,40 @@
+namespace	key	en	ja	status
+job	count.live.one	{count} background job running	{count} 件のジョブが実行中	ok
+job	count.live.other	{count} background jobs running	{count} 件のジョブが実行中	ok
+job	count.idle.one	{count} background job	{count} 件のジョブ	ok
+job	count.idle.other	{count} background jobs	{count} 件のジョブ	ok
+job	list.aria	Background jobs	バックグラウンドジョブ	ok
+job	section.live	Running	実行中	ok
+job	section.settledCount	Finished {count}	完了 {count} 件	ok
+job	section.clear	Clear	クリア	ok
+job	row.expandAria	Show live output of {label}	{label} のライブ出力を表示	ok
+job	row.collapseAria	Hide live output of {label}	{label} のライブ出力を隠す	ok
+job	kill.stop	Stop task {label}	タスク {label} を停止	ok
+job	kill.confirm	Click again to confirm	もう一度クリックして確定	ok
+job	kill.confirmAction	Confirm stop	停止を確定	ok
+job	kill.failed	Stop failed	停止に失敗	ok
+job	status.running	running	実行中	ok
+job	status.stopping	stopping	停止中	ok
+job	status.completed	completed	完了	ok
+job	status.killed	cancelled	キャンセル済み	ok
+job	status.failed	failed	失敗	ok
+job	duration.seconds	{seconds}s	{seconds} 秒	ok
+job	duration.minutes	{minutes}m {seconds}s	{minutes} 分 {seconds} 秒	ok
+job	duration.hours	{hours}h {minutes}m	{hours} 時間 {minutes} 分	ok
+job	duration.title.live	Running for {duration}	実行時間 {duration}	ok
+job	duration.title.done	Took {duration}	所要時間 {duration}	ok
+job	output.gap	… earlier output dropped …	… 以前の出力は破棄されました …	ok
+job	output.error	live output stream interrupted: {error}	ライブ出力が中断されました: {error}	ok
+job	terminal.signal	signal {signal}	シグナル {signal}	ok
+job	terminal.exitCode	exit {code}	終了コード {code}	ok
+job	terminal.noExitCode	no exit code	終了コードなし	ok
+job	terminal.running	running	実行中	ok
+job	terminal.failed	failed	失敗	ok
+job	terminal.done	done	完了	ok
+job	terminal.copy	Copy	コピー	ok
+job	terminal.copied	Copied	コピーしました	ok
+job	terminal.noOutput	(no output)	(出力なし)	ok
+job	terminal.collapse	Collapse	折りたたむ	ok
+job	terminal.collapseAria	Collapse output	出力を折りたたむ	ok
+job	terminal.expand	Show {n} more lines	残り {n} 行を表示	ok
+job	terminal.expandAria	Expand {n} collapsed output lines	折りたたまれた出力 {n} 行を展開	ok

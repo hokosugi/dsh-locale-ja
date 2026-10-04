@@ -1,0 +1,193 @@
+namespace	key	en	ja	status
+trajectory	view.trajectory	Trajectory	軌跡	ok
+trajectory	toolbar.aria	Trajectory toolbar	軌跡ツールバー	ok
+trajectory	toolbar.duration	Duration	期間	ok
+trajectory	toolbar.useActualDuration	Use actual duration	実際の所要時間で表示	ok
+trajectory	toolbar.useEqualWidth	Use equal-width operations	操作を等幅で表示	ok
+trajectory	toolbar.actualTime	Actual time	実時間	ok
+trajectory	toolbar.turns	Turns	ターン	ok
+trajectory	toolbar.expandTurns	Expand turns	ターンを展開	ok
+trajectory	toolbar.collapseTurns	Collapse turns	ターンを折りたたむ	ok
+trajectory	toolbar.calls	Calls	呼び出し	ok
+trajectory	toolbar.expandCalls	Expand calls	呼び出しを展開	ok
+trajectory	toolbar.collapseCalls	Collapse calls	呼び出しを折りたたむ	ok
+trajectory	toolbar.search	Search trajectory	軌跡を検索	ok
+trajectory	toolbar.searchPlaceholder	Search	検索	ok
+trajectory	kind.system	SYSTEM	システム	ok
+trajectory	kind.user	USER	ユーザー	ok
+trajectory	kind.context	CONTEXT	コンテキスト	ok
+trajectory	kind.compacted	COMPACTED	圧縮済み	ok
+trajectory	kind.message	Message	メッセージ	ok
+trajectory	kind.assistant	ASSISTANT	アシスタント	ok
+trajectory	kind.tool	TOOL	ツール	ok
+trajectory	kind.subtool	SUBTOOL	サブツール	ok
+trajectory	kind.sub	Sub	サブ	ok
+trajectory	column.input	Input	入力	ok
+trajectory	column.output	Output	出力	ok
+trajectory	column.think	Think	思考	ok
+trajectory	column.time	Time	時刻	ok
+trajectory	column.model	Model	生成	ok
+trajectory	column.tools	Tools	実行	ok
+trajectory	turn.label	Turn {turn}	ターン {turn}	ok
+trajectory	section.betweenTurns	Between turns	ターン間	ok
+trajectory	group.message	Message	メッセージ	ok
+trajectory	group.step	Step {step}	ステップ {step}	ok
+trajectory	group.compaction	Compaction {seq}	圧縮 {seq}	ok
+trajectory	status.failed	Failed	失敗	ok
+trajectory	status.pending	Pending	未着手	ok
+trajectory	status.completed	Completed	完了	ok
+trajectory	timing.notAvailable	Not available	利用できません	ok
+trajectory	timing.notRecorded	Not recorded	記録なし	ok
+trajectory	timing.stepStartUnavailable	Step start unavailable	ステップの開始時刻なし	ok
+trajectory	timing.firstTokenUnavailable	First token unavailable	初回トークンの時刻なし	ok
+trajectory	timing.usageUnavailable	Usage unavailable	使用量なし	ok
+trajectory	timing.outputTokensUnavailable	Output tokens unavailable	出力トークン数なし	ok
+trajectory	timing.durationTooShort	Duration too short	所要時間が短すぎます	ok
+trajectory	timing.showLocalTime	Show local time	ローカル時刻で表示	ok
+trajectory	timing.showUnixTimestamp	Show Unix timestamp	Unix タイムスタンプで表示	ok
+trajectory	timing.started	Started	開始	ok
+trajectory	timing.totalDuration	Total duration	合計時間	ok
+trajectory	timing.ttft	TTFT	TTFT	ok
+trajectory	timing.generation	Generation	生成	ok
+trajectory	timing.throughput	Throughput	スループット	ok
+trajectory	timing.duration	Duration	所要時間	ok
+trajectory	timing.source	Timing source	計測の出所	ok
+trajectory	timing.sessionTimestamps	Session timestamps	セッションのタイムスタンプ	ok
+trajectory	timing.sessionTimestampsRunning	Session timestamps (running)	セッションのタイムスタンプ (実行中)	ok
+trajectory	timing.request	Request Timing	リクエストの計測	ok
+trajectory	unit.milliseconds	{value} ms	{value} ms	ok
+trajectory	unit.seconds	{value} s	{value} 秒	ok
+trajectory	unit.tokens	{value} tok	{value} tok	ok
+trajectory	unit.tokensPerSecond	{value} tok/s	{value} tok/s	ok
+trajectory	usage.tokens	Tokens	トークン	ok
+trajectory	usage.reasoning	Reasoning	推論	ok
+trajectory	usage.content	Content	内容	ok
+trajectory	usage.notReported	Usage not reported	使用量は報告されていません	ok
+trajectory	usage.input	Input	入力	ok
+trajectory	usage.cached	Cached	キャッシュ済み	ok
+trajectory	usage.cacheCreated	Cache created	キャッシュ作成	ok
+trajectory	usage.other	Other	その他	ok
+trajectory	usage.output	Output	出力	ok
+trajectory	usage.thisRequest	This request	このリクエスト	ok
+trajectory	usage.sessionCumulative	Session cumulative	セッション累計	ok
+trajectory	options.notRecorded	Options not recorded	オプションは記録されていません	ok
+trajectory	options.json	Request options JSON	リクエストオプションの JSON	ok
+trajectory	source.unknown	Unknown	不明	ok
+trajectory	source.user	User	ユーザー	ok
+trajectory	source.plugin	Plugin	プラグイン	ok
+trajectory	source.pluginNamed	Plugin · {plugin}	プラグイン · {plugin}	ok
+trajectory	source.goal	Goal	ゴール	ok
+trajectory	source.goalRound	Goal · Round {round}	ゴール · ラウンド {round}	ok
+trajectory	source.notRecorded	Source not recorded	出所は記録されていません	ok
+trajectory	source.messageJson	Message source JSON	メッセージ出所の JSON	ok
+trajectory	tab.summary	Summary	要約	ok
+trajectory	tab.rawOutput	Raw Output	生の出力	ok
+trajectory	tab.preview	Preview	プレビュー	ok
+trajectory	tab.raw	Raw	生データ	ok
+trajectory	tab.source	Source	ソース	ok
+trajectory	tab.payload	Payload	ペイロード	ok
+trajectory	tab.result	Result	結果	ok
+trajectory	tab.schema	Schema	スキーマ	ok
+trajectory	tab.timing	Timing	計測	ok
+trajectory	tab.diff	Diff	差分	ok
+trajectory	tab.systemPrompt	System Prompt	システムプロンプト	ok
+trajectory	tab.tools	Tools	ツール	ok
+trajectory	tab.options	Options	オプション	ok
+trajectory	tab.usage	Usage	使用量	ok
+trajectory	record.toolCallOnly	(tool call only)	(ツール呼び出しのみ)	ok
+trajectory	record.noContent	No content	内容なし	ok
+trajectory	record.noPayload	No payload captured	ペイロードは取得されていません	ok
+trajectory	record.noResult	No result captured	結果は取得されていません	ok
+trajectory	record.noOutput	No output	出力なし	ok
+trajectory	record.schemaUnavailable	Schema unavailable	スキーマはありません	ok
+trajectory	record.parameters	Parameters	パラメーター	ok
+trajectory	record.resultJson	Result JSON	結果の JSON	ok
+trajectory	record.json	JSON	JSON	ok
+trajectory	record.parametersJson	parameters JSON	parameters の JSON	ok
+trajectory	record.namedParametersJson	{name} parameters JSON	{name} の parameters JSON	ok
+trajectory	record.payloadJson	Payload JSON	ペイロードの JSON	ok
+trajectory	record.outputJson	Result JSON	結果の JSON	ok
+trajectory	record.thinking	Thinking	思考	ok
+trajectory	record.wrapLines	Wrap lines	行を折り返す	ok
+trajectory	code.source	Code	コード	ok
+trajectory	code.output	Output	出力	ok
+trajectory	code.copySource	Copy code	コードをコピー	ok
+trajectory	code.copyOutput	Copy output	出力をコピー	ok
+trajectory	code.originalJson	Original JSON	元の JSON	ok
+trajectory	code.running	Running…	実行中…	ok
+trajectory	record.systemPromptMissing	No system prompt in this request	このリクエストにシステムプロンプトはありません	ok
+trajectory	record.toolsMissing	No tools in this request	このリクエストにツールはありません	ok
+trajectory	record.systemPrompt	System Prompt	システムプロンプト	ok
+trajectory	record.tools	Tools	ツール	ok
+trajectory	block.openSummary	Open Block #{index} tool call summary	ブロック #{index} のツール呼び出し要約を開く	ok
+trajectory	block.openSummaryTitle	Open tool call summary	ツール呼び出しの要約を開く	ok
+trajectory	block.label	Block #{index} {type}	ブロック #{index} {type}	ok
+trajectory	history.loadingTrajectory	Loading trajectory…	軌跡を読み込んでいます…	ok
+trajectory	history.loadingEarlier	Loading earlier history…	以前の履歴を読み込んでいます…	ok
+trajectory	history.loadingEarlierAria	Loading earlier history…	以前の履歴を読み込んでいます…	ok
+trajectory	history.loadEarlier	Load earlier history	以前の履歴を読み込む	ok
+trajectory	history.clickToLoadEarlier	Click to load earlier history	クリックで以前の履歴を読み込む	ok
+trajectory	request.label	Request #{request}	リクエスト #{request}	ok
+trajectory	request.labelCompaction	Request #{request} · Compaction	リクエスト #{request} · 圧縮	ok
+trajectory	request.compaction	Compaction · {section}	圧縮 · {section}	ok
+trajectory	request.compactionPurpose	Compaction	圧縮	ok
+trajectory	request.retryProgress	{retry} of {maximum}	{retry} / {maximum}	ok
+trajectory	request.collapsedSummary	Collapsed {kind} summary, {summary}	折りたたまれた {kind} の要約、{summary}	ok
+trajectory	request.collapsedTurn	turn	ターン	ok
+trajectory	request.collapsedAssistant	assistant	アシスタント	ok
+trajectory	request.rowAria	{request}{kind}, {content}	{request}{kind}、{content}	ok
+trajectory	request.rowPrefix	Request {request}, 	リクエスト {request}、	ok
+trajectory	request.rowAriaCompaction	Request {request}, compaction	リクエスト {request}、圧縮	ok
+trajectory	request.noContent	no content	内容なし	ok
+trajectory	summary.toolCalls.one	{count} tool call	ツール呼び出し {count} 回	ok
+trajectory	summary.toolCalls.other	{count} tool calls	ツール呼び出し {count} 回	ok
+trajectory	summary.steps.one	{count} step	ステップ {count}	ok
+trajectory	summary.steps.other	{count} steps	ステップ {count}	ok
+trajectory	details.event	Event details	イベントの詳細	ok
+trajectory	details.resize	Resize event details	イベント詳細のサイズを変更	ok
+trajectory	details.resizeTitle	Drag to resize. Double-click to reset.	ドラッグでサイズ変更。ダブルクリックでリセット。	ok
+trajectory	details.close	Close details	詳細を閉じる	ok
+trajectory	details.status	Status	状態	ok
+trajectory	details.purpose	Purpose	目的	ok
+trajectory	details.provider	Provider	プロバイダー	ok
+trajectory	details.model	Model	モデル	ok
+trajectory	details.toolCalls	Tool calls	ツール呼び出し	ok
+trajectory	details.subtoolCalls	Subtool calls	サブツール呼び出し	ok
+trajectory	details.error	Error	エラー	ok
+trajectory	details.failure.auth	API key is invalid	API キーが正しくありません	ok
+trajectory	details.retry	Retry	再試行	ok
+trajectory	details.scheduled	Scheduled	予約済み	ok
+trajectory	details.retryDelay	Retry delay	再試行まで	ok
+trajectory	details.result	Result	結果	ok
+trajectory	details.compacted	Compacted	圧縮済み	ok
+trajectory	details.assistantMessage	Assistant Message	アシスタントのメッセージ	ok
+trajectory	details.source	Source	ソース	ok
+trajectory	details.hierarchy	Hierarchy	階層	ok
+trajectory	details.toolCall	Tool Call	ツール呼び出し	ok
+trajectory	timeline.aria	Trajectory timeline	軌跡のタイムライン	ok
+trajectory	timeline.overviewAria	Timeline overview; drag horizontally to focus events	タイムラインの概観。横にドラッグするとイベントに注目できます	ok
+trajectory	timeline.noTimingData	No timing data	計測データなし	ok
+trajectory	timeline.total	Total {duration}	合計 {duration}	ok
+trajectory	timeline.started	Started {time}	開始 {time}	ok
+trajectory	timeline.ttftDecoding	TTFT {ttft} · Decoding {decoding}	TTFT {ttft} · デコード {decoding}	ok
+trajectory	layout.compacting	Compacting context…	コンテキストを圧縮しています…	ok
+trajectory	layout.compactionFailed	Compaction failed	圧縮に失敗しました	ok
+trajectory	layout.compacted	Context compacted	コンテキストを圧縮しました	ok
+trajectory	layout.toolCallOnly	Tool call only	ツール呼び出しのみ	ok
+trajectory	attachment.list	Attachments	添付	ok
+trajectory	attachment.imageName	Image {index}	画像 {index}	ok
+trajectory	layout.imageCount	Images ×{count}	画像 ×{count}	ok
+trajectory	layout.fileAttachments	Files ×{count}	ファイル ×{count}	ok
+trajectory	layout.initialSystemPrompt	Initial System Prompt	初期システムプロンプト	ok
+trajectory	layout.systemPromptUpdated	System Prompt Updated	システムプロンプトを更新	ok
+trajectory	layout.toolsUpdated	Tools Updated	ツールを更新	ok
+trajectory	layout.toolAdded	Tool added: {name}	ツールを追加: {name}	ok
+trajectory	layout.toolRemoved	Tool removed: {name}	ツールを削除: {name}	ok
+trajectory	layout.toolUpdateNotice	Tools updated	ツールを更新	ok
+trajectory	layout.toolsAdded	Added: {names}	追加: {names}	ok
+trajectory	layout.toolsAddedCount	{count} added	{count} 件追加	ok
+trajectory	layout.toolsChanged	{added} added, {removed} removed	{added} 件追加、{removed} 件削除	ok
+trajectory	layout.toolsRemoved	Removed: {names}	削除: {names}	ok
+trajectory	layout.toolsRemovedCount	{count} removed	{count} 件削除	ok
+trajectory	layout.systemPromptAndToolsUpdated	System Prompt and Tools Updated	システムプロンプトとツールを更新	ok
+trajectory	layout.compactionInterrupted	Compaction was interrupted before completion.	圧縮は完了する前に中断されました。	ok

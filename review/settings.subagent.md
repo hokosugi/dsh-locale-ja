@@ -1,0 +1,47 @@
+# settings.subagent — 日本語訳レビュー
+
+訳済み **35 / 35** キー / 要確認 0 件
+
+<!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
+
+## 一覧
+
+| 確認 | キー | 英語 | 日本語 |
+| --- | --- | --- | --- |
+| - [ ] | `overridden` | Overridden | 上書き済み |
+| - [ ] | `reset` | Reset to default | 既定に戻す |
+| - [ ] | `readOnly` | This deployment stores settings read-only. | この環境では設定は読み取り専用で保存されます。 |
+| - [ ] | `unavailable` | This plugin is not loaded, so it cannot be configured right now. | このプラグインは読み込まれていないため、現在は設定できません。 |
+| - [ ] | `save` | Save | 保存 |
+| - [ ] | `saving` | Saving… | 保存しています… |
+| - [ ] | `saveFailed` | The deployment did not accept these values; they were left for you to correct. | この環境が値を受け付けませんでした。修正できるよう入力は残しています。 |
+| - [ ] | `subagentTitle` | Subagent | サブエージェント |
+| - [ ] | `subagentDescription` | Set Subagent recursion depth, count, and models. | サブエージェントの再帰の深さ、同時数、モデルを設定します。 |
+| - [ ] | `subagentLimitsTitle` | Limits | 実行の上限 |
+| - [ ] | `subagentMaxDepth` | Maximum recursion depth | 再帰の最大の深さ |
+| - [ ] | `subagentDepthHelpLabel` | About maximum recursion depth | 再帰の最大の深さについて |
+| - [ ] | `subagentDepthHelp` | Limits how many levels of Subagents an Agent can create. | Agent がサブエージェントを作成できる階層の数を制限します。 |
+| - [ ] | `subagentDepthZero` | Disable Subagents | サブエージェントを無効にする |
+| - [ ] | `subagentDepthOne` | Only the main Agent can create Subagents | メイン Agent だけがサブエージェントを作成できる |
+| - [ ] | `subagentDepthOverride` | If a tool defines its own maximum recursion depth, that setting takes precedence. | ツール側で再帰の最大の深さが定義されている場合は、そちらの設定が優先されます。 |
+| - [ ] | `subagentMaxActive` | Subagent parallelism limit | サブエージェントの同時実行数の上限 |
+| - [ ] | `subagentCapacityHelpLabel` | About the Subagent parallelism limit | サブエージェントの同時実行数の上限について |
+| - [ ] | `subagentCapacityHelp` | Total live Subagents under the same main Agent, across all recursion levels. The main Agent is excluded. New start requests are rejected when the limit is reached. | 同じメイン Agent の下で、すべての階層を通じて同時に存在するサブエージェントの総数です。メイン Agent は含みません。上限に達すると、新たな起動要求は拒否されます。 |
+| - [ ] | `subagentDepthInvalid` | Enter a whole number of 0 or more. | 0 以上の整数を入力してください。 |
+| - [ ] | `subagentCapacityInvalid` | Enter a whole number of 1 or more. | 1 以上の整数を入力してください。 |
+| - [ ] | `subagentModelSelectionTitle` | Model selection | モデルの選択 |
+| - [ ] | `subagentModelSelectionToggle` | Allow agents to choose models for Subagents | Agent がサブエージェントのモデルを選べるようにする |
+| - [ ] | `subagentModelSelectionChoose` | When enabled, agents can choose a provider, model, and reasoning effort for each Subagent from the authorized models below. Applies only to new sessions. | 有効にすると、Agent は下の許可済みモデルから、サブエージェントごとにプロバイダー・モデル・推論の強度を選べます。新しいセッションにのみ適用されます。 |
+| - [ ] | `subagentModelSelectionAllowed` | Models agents may choose | Agent が選択できるモデル |
+| - [ ] | `subagentModelSelectionLoading` | Loading models… | モデルを読み込み中… |
+| - [ ] | `subagentModelSelectionLoadFailed` | Models could not be loaded. | モデルを読み込めませんでした。 |
+| - [ ] | `subagentModelSelectionRetry` | Retry | 再試行 |
+| - [ ] | `subagentModelSelectionPartial` | Some model providers could not be loaded; saved choices remain removable. | 一部のモデルプロバイダーを読み込めませんでした。保存済みの選択は引き続き削除できます。 |
+| - [ ] | `subagentModelSelectionUnavailable` | Currently unavailable | 現在は利用できません |
+| - [ ] | `subagentModelSelectionUnavailableGroup` | Saved but currently unavailable | 保存済みですが現在は利用できません |
+| - [ ] | `subagentModelSelectionEmpty` | No model provider currently advertises a model. | 現在、モデルを公開しているプロバイダーはありません。 |
+| - [ ] | `subagentModelSelectionRequired` | Select at least one model before saving. | 保存する前に、少なくとも 1 つのモデルを選んでください。 |
+| - [ ] | `subagentModelSelectionConflict` | Settings changed elsewhere. Discard your draft and try again. | 設定がほかの場所で更新されました。下書きを破棄してやり直してください。 |
+| - [ ] | `subagentModelSelectionOff` | Subagents use configured defaults or inherit the parent agent's model. Saved model choices are retained. | オフの場合、サブエージェントは設定済みの既定モデルを使うか、親 Agent のモデルを継承します。選択済みのモデルは保持されます。 |
+
+確認列: `- [ ]` は未確認、`- [!]` は要確認。レンダラーによってはチェックボックスとして表示されます。

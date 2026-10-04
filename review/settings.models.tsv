@@ -1,0 +1,114 @@
+namespace	key	en	ja	status
+settings.models	nav	Models	モデル	ok
+settings.models	deepSeekAccount	DeepSeek Account	DeepSeek アカウント	ok
+settings.models	title	Models	モデル	ok
+settings.models	intro	Enter your API keys to use models from the following providers.	次のプロバイダーの API キーを入力すると、そのモデルを利用できます。	ok
+settings.models	edit	Edit	編集	ok
+settings.models	editProvider	Edit {provider}	{provider} を編集	ok
+settings.models	remove	Delete	削除	ok
+settings.models	removeProvider	Delete {provider}	{provider} を削除	ok
+settings.models	deleteTitle	Delete {provider}?	{provider} を削除しますか？	ok
+settings.models	deleteDescription	Deleting {provider} removes its configuration. Any credential it uses is managed elsewhere and will be kept.	{provider} を削除すると、その設定が消えます。使用している認証情報は別の場所で管理されているため保持されます。	ok
+settings.models	deleteDescriptionWithCredential	Deleting {provider} removes its configuration and stored API key.	{provider} を削除すると、その設定と保存済みの API キーが消えます。	ok
+settings.models	deleteConfirm	Delete {provider}	{provider} を削除	ok
+settings.models	deleting	Deleting {provider}…	{provider} を削除しています…	ok
+settings.models	add	Add model provider	モデルプロバイダーを追加	ok
+settings.models	addMode	How to add	追加方法	ok
+settings.models	addCatalog	Third-party model provider	サードパーティのモデルプロバイダー	ok
+settings.models	addCustom	Custom model API	カスタムモデル API	ok
+settings.models	addCatalogHint	Pick OpenAI, Anthropic, Kimi, or another provider from the built-in catalog and enter its API key.	内蔵カタログから OpenAI、Anthropic、Kimi などのプロバイダーを選び、API キーを入力します。	ok
+settings.models	addCustomHint	Connect a relay, a self-hosted server, or any other OpenAI- or Anthropic-compatible endpoint by its base URL, protocol, and models.	中継サーバー、自前のサーバー、その他 OpenAI / Anthropic 互換のエンドポイントを、ベース URL・プロトコル・モデルを指定して接続します。	ok
+settings.models	addCatalogExhausted	Every catalog provider is already configured.	カタログ内のプロバイダーはすべて追加済みです。	ok
+settings.models	addCustomUnavailable	No API protocol is available to declare.	宣言できる API プロトコルがありません。	ok
+settings.models	provider	Provider	プロバイダー	ok
+settings.models	close	Close	閉じる	ok
+settings.models	cancel	Cancel	キャンセル	ok
+settings.models	apply	Apply	適用	ok
+settings.models	applying	Applying…	適用しています…	ok
+settings.models	savedProvider	Saved {provider}.	{provider} を保存しました。	ok
+settings.models	credentialConfigured	API key configured	API キー設定済み	ok
+settings.models	credentialMissing	API key missing	API キー未設定	ok
+settings.models	readOnly	The settings document is read-only in this deployment.	この環境では設定ファイルは読み取り専用です。	ok
+settings.models	loadFailed	Loading the provider directory failed	プロバイダー一覧の読み込みに失敗しました	ok
+settings.models	conflict	Someone else changed these settings while this card was open. Close it and reopen to edit the current values.	このカードを開いている間に、ほかの場所で設定が変更されました。閉じて開き直し、最新の値で編集してください。	ok
+settings.models	retry	Retry	再試行	ok
+settings.models	keyInput	API key	API キー	ok
+settings.models	keyPlaceholder	Enter your API key	API キーを入力	ok
+settings.models	keyPlaceholderNative	Enter an API key, or leave blank to use environment authentication	API キーを入力するか、空欄のまま環境の認証を使います	ok
+settings.models	keyStored	Configured — enter a new value to replace	設定済み — 変更するには新しい値を入力	ok
+settings.models	keyEnvLocked	Provided by the launch environment (read-only)	起動環境から提供されています (読み取り専用)	ok
+settings.models	customized	Customized settings	カスタム設定	ok
+settings.models	baseUrl	Base URL	ベース URL	ok
+settings.models	baseUrlDefault	Provider default	プロバイダーの既定値	ok
+settings.models	deepSeekBaseUrl	https://api.deepseek.com/anthropic	https://api.deepseek.com/anthropic	ok
+settings.models	deepSeekEndpointHint	Use an API endpoint compatible with Anthropic Messages.	Anthropic Messages 互換の API エンドポイントを指定してください。	ok
+settings.models	models	Models	モデル	ok
+settings.models	modelsInherited	Using the adapter defaults	アダプターの既定モデルを使用中	ok
+settings.models	modelsCustomized	Customized model catalog	モデルカタログをカスタマイズ済み	ok
+settings.models	resetModels	Restore defaults	既定のモデルに戻す	ok
+settings.models	model	Model	モデル	ok
+settings.models	modelId	Model ID	モデル ID	ok
+settings.models	modelName	Display name	表示名	ok
+settings.models	modelNamePlaceholder	Uses the model ID when empty	空欄のときはモデル ID を使用	ok
+settings.models	contextWindow	Context window	コンテキストウィンドウ	ok
+settings.models	contextWindowPlaceholder	Uses the provider default	プロバイダーの既定値を使用	ok
+settings.models	maxTokens	Max output tokens	最大出力トークン数	ok
+settings.models	maxTokensPlaceholder	Uses the provider default	プロバイダーの既定値を使用	ok
+settings.models	modelAdvanced	Model options	モデルのオプション	ok
+settings.models	modelInputTypes	Input types	入力の種類	ok
+settings.models	modelInputText	Text	テキスト	ok
+settings.models	modelInputImage	Image	画像	ok
+settings.models	addModel	Add model	モデルを追加	ok
+settings.models	removeModel	Delete model	モデルを削除	ok
+settings.models	modelsEmpty	No models will be shown in the selector. Unlisted IDs can still be sent directly.	モデル選択には何も表示されません。一覧にない ID も直接送信できます。	ok
+settings.models	keyBlank	Enter the API key, or leave the field empty to keep the stored one.	API キーを入力してください。空欄のままにすると保存済みのキーを維持します。	ok
+settings.models	keyBlankNew	Enter the API key, or leave the field empty if this provider authenticates another way.	API キーを入力してください。このプロバイダーが別の方法で認証する場合は空欄のままにできます。	ok
+settings.models	keyIllegalCharacters	This API key is not in a valid format. Please check it.	この API キーは形式が正しくありません。確認してください。	ok
+settings.models	modelIdRequired	Model ID is required.	モデル ID は必須です。	ok
+settings.models	modelIdDuplicate	Model ID must be unique.	モデル ID は重複できません。	ok
+settings.models	modelNameInvalid	Display name cannot be empty.	表示名は空にできません。	ok
+settings.models	modelContextInvalid	Context window must be a positive count, like 131072, 256K, or 1M.	コンテキストウィンドウは正の数値で指定してください (例: 131072、256K、1M)。	ok
+settings.models	modelMaxTokensInvalid	Max output tokens must be a positive count, like 8192, 64K, or 1M.	最大出力トークン数は正の数値で指定してください (例: 8192、64K、1M)。	ok
+settings.models	advancedHint	Other fields live in cordis.patch.yml; edit that section directly.	その他の項目は cordis.patch.yml にあります。該当箇所を直接編集してください。	ok
+settings.models	modelCapacityInvalid	A capacity must be a number, optionally suffixed K or M.	容量は数値で指定します。任意で K または M を付けられます。	ok
+settings.models	modelDuplicate	Each model ID may appear once.	同じモデル ID は 1 回だけ指定できます。	ok
+settings.models	fetchModels	Fetch available models	利用可能なモデルを取得	ok
+settings.models	fetching	Asking the provider…	プロバイダーに問い合わせています…	ok
+settings.models	fetchNeedsBaseUrl	Enter the base URL first, then fetch.	先にベース URL を入力してから取得してください。	ok
+settings.models	fetchEmpty	The provider listed no models. Add them by hand.	プロバイダーはモデルを 1 つも公開していません。手動で追加してください。	ok
+settings.models	fetchTitle	Choose models to add	追加するモデルを選択	ok
+settings.models	fetchDescription	These are the models this provider has available. Choose the ones to add.	このプロバイダーで利用可能なモデルです。追加するものを選んでください。	ok
+settings.models	fetchSearch	Search models	モデルを検索	ok
+settings.models	fetchNoMatches	No matching models.	一致するモデルがありません。	ok
+settings.models	fetchSelectAll	Select all	すべて選択	ok
+settings.models	fetchDeselectAll	Deselect all	選択を解除	ok
+settings.models	fetchAdopt	Add selected	選択したものを追加	ok
+settings.models	customTag	Custom	カスタム	ok
+settings.models	customRoute	Provider ID	プロバイダー ID	ok
+settings.models	customRouteHint	Lowercase identifier, starting with a letter, that uniquely names this provider in requests and as its credential name.	英小文字で始まる識別子です。リクエスト内でこのプロバイダーを一意に示し、認証情報の名前の元にもなります。	ok
+settings.models	customRouteInvalid	Start with a lowercase letter; then lowercase letters, digits, and dashes.	英小文字で始め、以降は英小文字・数字・ハイフンを使用してください。	ok
+settings.models	customRouteTaken	A provider already uses this ID.	この ID は既に別のプロバイダーが使用しています。	ok
+settings.models	customDisplayName	Display name	表示名	ok
+settings.models	customApi	API protocol	API プロトコル	ok
+settings.models	customApiUnset	Not selected	未選択	ok
+settings.models	protocolOpenAiCompletions	OpenAI Chat Completions	OpenAI Chat Completions	ok
+settings.models	protocolOpenAiResponses	OpenAI Responses	OpenAI Responses	ok
+settings.models	protocolAnthropicMessages	Anthropic Messages	Anthropic Messages	ok
+settings.models	customNeedsBaseUrl	A custom provider needs a base URL.	カスタムプロバイダーにはベース URL が必要です。	ok
+settings.models	customBaseUrlInvalid	Enter a valid HTTP or HTTPS URL.	有効な HTTP または HTTPS の URL を入力してください。	ok
+settings.models	customNeedsModels	A custom provider needs at least one model.	カスタムプロバイダーには少なくとも 1 つのモデルが必要です。	ok
+settings.models	customBaseUrlPlaceholder	https://gateway.example/v1	https://gateway.example/v1	ok
+settings.models	customAnthropicBaseUrlPlaceholder	https://gateway.example	https://gateway.example	ok
+settings.models	settingsPathUnresolvable	unresolvable settings path	設定パスを解決できません	ok
+settings.models	create	Create provider	プロバイダーを作成	ok
+settings.models	creating	Creating…	作成しています…	ok
+settings.models	welcomeTitle	Preview Notice	プレビュー版について	ok
+settings.models	welcomeBody	DeepSeek Harness 0.2 is still in preview, and many areas need continued improvement and refinement. We welcome feedback and suggestions from all developers and users. The new desktop app now targets a broad range of users, while developer-related advanced features can be enabled in the settings. DeepSeek Harness’s product features and plugin APIs are expected to continue rapid iteration and evolution, and will gradually stabilize over time.\n\nWe look forward to exploring the limits of intelligence together with users and developers around the world, building on open-source, reusable, and composable infrastructure. We welcome everyone to bring their ideas to life with DeepSeek Harness and participate in the community to enrich the plugin ecosystem.	DeepSeek Harness の 0.2 はまだプレビュー段階にあり、改善と作り込みが必要な箇所が数多く残っています。開発者と利用者のみなさまからのフィードバックや提案をお待ちしています。新しいデスクトップアプリは幅広い利用者を対象とし、開発者向けの高度な機能は設定から有効にできます。DeepSeek Harness の製品機能とプラグイン API は今後も速いペースで反復・進化し、時間をかけて安定していく見込みです。\n\nオープンで再利用可能、そして組み合わせ可能な基盤の上で、世界中の利用者と開発者とともに知能の限界を探っていきたいと考えています。DeepSeek Harness でアイデアを形にし、コミュニティと一緒にプラグインエコシステムを育てていってください。	ok
+settings.models	welcomeContinue	Continue	続ける	ok
+settings.models	welcomeError	The acknowledgement could not be saved. Please try again.	確認状態を保存できませんでした。再試行してください。	ok
+settings.models	onboardingTitle	Add an API key to get started	API キーを追加して始める	ok
+settings.models	onboardingDescription	Configure the official DeepSeek provider to start building.	公式の DeepSeek プロバイダーを設定すると、すぐに使い始められます。	ok
+settings.models	onboardingLater	Configure later	あとで設定する	ok
+settings.models	onboardingSave	Save and continue	保存して続ける	ok
+settings.models	onboardingSaving	Saving…	保存しています…	ok
+settings.models	keyRequired	Enter an API key to continue.	続けるには API キーを入力してください。	ok
