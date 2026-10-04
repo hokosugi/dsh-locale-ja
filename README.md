@@ -268,6 +268,52 @@ DSH を更新したときの差分確認もそのまま行えます。
 
 ---
 
+## 個人情報・秘密情報を混ぜない
+
+公開リポジトリと npm 配布物に、手元の環境や個人が特定できる情報を残さないための決まりごとです。
+詳しくは [SECURITY.md](SECURITY.md) にあります。
+
+### 守ること
+
+- **絶対パスを書かない。** `/Users/<名前>/...` や `C:\Users\<名前>\...` の代わりに `$HOME` / `os.homedir()` を使います。
+  DSH の場所は [tools/dsh-modules.mjs](tools/dsh-modules.mjs) の `findDshModules()` が自動で探すので、
+  パスを埋め込む必要はありません。
+- **コミットのメールアドレスは GitHub の noreply にする。**
+  ```sh
+  git config user.email "<GitHub のユーザー名>@users.noreply.github.com"
+  ```
+- **手元だけの語は `.personal-terms` に書く** (gitignore 済み)。人名・社内パス・固有 ID など、
+  点検で拾いたい語を 1 行ずつ書きます。
+- **秘密情報は置かない。** トークン・鍵・`.env` は入れません (`.gitignore` で除外済み)。
+- 配布物は `package.json` の `files` で絞ります (現在: `lib` / `src` / `tools` / `data` / `docs` /
+  README / CHECKLIST / LICENSE / cordis.patch.yml)。
+
+### 点検する
+
+```sh
+npm run scan                # 追跡ファイルを点検 (個人パス・メール・秘密情報 + 実行環境のユーザー名)
+npm run scan -- --all       # 未追跡ファイルも点検
+npm run scan -- --history   # git 履歴の中身も点検 (既定では警告のみ)
+npm run scan -- --identity  # コミットのメール設定も点検 (noreply 以外はエラー)
+```
+
+- パターンそのものを説明したい行（この節のように）には `personal-info-allow` と書くと点検から除外されます。
+- `npm publish` の直前に `prepublishOnly` が **`npm run check` と `npm run scan -- --identity` を
+  自動実行**するので、点検を通らない版は公開できません。
+- GitHub Actions ([.github/workflows/ci.yml](.github/workflows/ci.yml)) も push / PR ごとに
+  `npm run scan` と `npm run check` を実行します。
+- リポジトリ側では GitHub の **secret scanning / push protection** を有効にしてあります
+  (秘密情報を含む push は GitHub が拒否します)。
+
+### もし混ざって公開してしまったら
+
+1. 秘密情報なら**まず無効化・ローテーション** (公開を取り消しても、取得された可能性は消えません)。
+2. npm: **先に修正版を publish** → そのあと `npm unpublish <pkg>@<漏れた版>`。
+   逆順だとパッケージごと消えて**名前が 24 時間ロック**されます (`package@version` は再利用できません)。
+3. git 履歴: `git filter-branch` などで書き換えて `git push --force`
+   (GitHub 側のキャッシュや他者の clone には残りえます)。
+4. 再発防止に `npm run scan` のパターンを足すか、`.personal-terms` に語を追加します。
+
 ## DSH が更新されたとき
 
 このパックは DSH の**辞書のキー**に依存しています。DSH が変わったときに何が起きるかは、
