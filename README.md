@@ -3,12 +3,10 @@
 **Japanese locale pack for the [DSH](https://github.com/deepseek-ai/deepseek-harness) Web GUI.**
 It adds a `日本語` language and translates the whole shipped dictionary
 (56 namespaces / 2421 strings = 100%). No runtime dependencies; `lib/client.js` ships prebuilt.
-Published as [`dsh-locale-ja`](https://www.npmjs.com/package/dsh-locale-ja) (MIT); source at
-[hokosugi/dsh-locale-ja](https://github.com/hokosugi/dsh-locale-ja).
+Distributed from [GitHub](https://github.com/hokosugi/dsh-locale-ja) (MIT); not published to npm.
 
 ```sh
-dsh plugin --profile web add dsh-locale-ja                    # npm から (公開済み v1.0.0)
-dsh plugin --profile web add github:hokosugi/dsh-locale-ja    # GitHub から
+dsh plugin --profile web add github:hokosugi/dsh-locale-ja    # GitHub から (推奨)
 dsh plugin --profile web add /path/to/dsh-locale-ja           # ローカルのディレクトリから
 dsh web                                                       # 再起動で反映
 ```
@@ -109,9 +107,6 @@ window.__ModuleLoader__.load({
 
 ```sh
 # pnpm が必要 (未導入なら: npm install -g pnpm / corepack enable pnpm)
-
-# npm から (公開済み: v1.0.0) — これが一番手軽
-dsh plugin --profile web add dsh-locale-ja
 
 # GitHub から (インストール画面が受け付けるのは パッケージ名 / GitHub のアドレス / ローカルディレクトリ の 3 つ)
 dsh plugin --profile web add github:hokosugi/dsh-locale-ja
@@ -224,38 +219,38 @@ bash /tmp/move-out-of-icloud.sh ~/work   # 親ディレクトリを指定する�
 ワークスペースでセッションを作り直してください (言語設定 `ja` は `$DSH_HOME` 側なので維持されます)。
 
 ---
-## 公開 (publish)
+## 配布 (publish)
 
-**npm と GitHub で公開済みです。**
+**配布は GitHub のみです。npm には公開していません。**
 
-- npm: [`dsh-locale-ja`](https://www.npmjs.com/package/dsh-locale-ja) — v1.0.0 / MIT / `author: hokosugi`
-- GitHub: [hokosugi/dsh-locale-ja](https://github.com/hokosugi/dsh-locale-ja) — ソースと対照一覧 (`review/`)
+- GitHub: [hokosugi/dsh-locale-ja](https://github.com/hokosugi/dsh-locale-ja) — ソースと対照一覧
+  (`review/`)。`dsh plugin --profile web add github:hokosugi/dsh-locale-ja` で入ります。
+- npm: 2026-10-04 に `dsh-locale-ja@1.0.0` を公開しましたが、配布物に個人の絶対パスが
+  含まれていたため**取り下げました**。`1.0.0` という版番号は再利用できず、全版を取り下げたので
+  **24 時間は同名で再公開できません** (再開するなら `1.0.1` 以降)。
 
 `files` に `src` / `tools` / `data` を含めているので、受け取った人は `npm run check` で
 再検証・再ビルドできます (`review/` は生成物なので配布物には入れていません。`npm run review` で
 再生成できます)。`data/en-dictionaries.json` (抽出済みの英語辞書) は同梱しているので、
 DSH を更新したときの差分確認もそのまま行えます。
 
-### 新しいバージョンを出すとき
+### 版を上げて配布するとき (GitHub)
 
 1. 訳語やコードを直して `npm run check` を通す
-2. 版を上げてコミットし、タグと一緒に push する
+2. 版を上げて、タグと一緒に push する
    ```sh
    npm version patch        # 例: 1.0.1 (minor / major も可。タグも自動で付きます)
    git push && git push --tags
    ```
-3. 公開する (`prepublishOnly` が `npm run check` を走らせてから公開します。2FA はブラウザー +
-   Touch ID で承認)
-   ```sh
-   npm publish
-   ```
+   GitHub からのインストールは既定ブランチを見るので、push した時点で最新になります。
 
-注意点:
+### npm にも出す場合 (任意)
 
-- **同じ版は再公開できません。** 必ず `npm version` で上げてから `npm publish` します。
+- `npm publish` の直前に `prepublishOnly` が `npm run check` と `npm run scan -- --identity` を
+  実行します (**通らない版は公開できません**)。2FA はブラウザー + Touch ID で承認します。
+- **同じ版は再公開できません。** 必ず `npm version` で上げてから。
+- いったん全版を取り下げているため、同名で publish できるようになるまで **24 時間**かかります。
 - npm のキャッシュが root 所有で `EPERM` になるときは `--cache /tmp/npm-cache-ja` を付けます。
-- README は配布物にも入るため、**npm 側の README は次の publish で更新**されます (GitHub 側は
-  push した時点で更新)。
 
 ### 名前を変える場合
 
