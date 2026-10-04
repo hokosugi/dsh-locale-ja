@@ -8,10 +8,15 @@
  *
  * 使い方:
  *   node tools/extract-dictionaries.mjs [--dsh-modules <path>] [--out <path>]
+ *
+ * `--dsh-modules` を省略したときは、npm のグローバルルートと npx キャッシュから
+ * `@deepseek-ai` のパッケージ群を自動で探す (環境変数 `DSH_MODULES_ROOT` でも指定できる)。
  */
-import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 'node:fs'
+import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, statSync } from 'node:fs'
 import { join, dirname, basename } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { execFileSync } from 'node:child_process'
+import { homedir } from 'node:os'
 import { webcrypto } from 'node:crypto'
 import vm from 'node:vm'
 
@@ -22,9 +27,61 @@ const argOf = (name, fallback) => {
   return i >= 0 && args[i + 1] !== undefined ? args[i + 1] : fallback
 }
 
-const MODULES_ROOT =
-  argOf('--dsh-modules', process.env.DSH_MODULES_ROOT) ??
-  '-ai'
+/**
+ * DSH の `@deepseek-ai/*` パッケージ群を置いているディレクトリを探す。
+ *
+ * 1. `--dsh-modules <path>` / 環境変数 `DSH_MODULES_ROOT`
+ * 2. npm のグローバルルート (`npm root -g` + `/@deepseek-ai`)
+ * 3. npx キャッシュ (`~/.npm/_npx/<hash>/node_modules/@deepseek-ai`) の新しい順
+ *
+ * 見つからないときは、探した場所を並べてエラーにする。黙って空の辞書を書き出すと
+ * 「DSH が消えた」のか「辞書が空になった」のか区別できなくなるため。
+ * @returns 見つかったディレクトリの絶対パス。
+ */
+function discoverModulesRoot() {
+  const fromFlag = argOf('--dsh-modules', process.env.DSH_MODULES_ROOT)
+  if (fromFlag !== undefined) {
+    if (!existsSync(fromFlag)) throw new Error(`--dsh-modules の場所が見つかりません: ${fromFlag}`)
+    return fromFlag
+  }
+
+  const tried = []
+  const candidates = []
+
+  try {
+    const globalRoot = execFileSync('npm', ['root', '-g'], { encoding: 'utf8' }).trim()
+    if (globalRoot !== '') candidates.push(join(globalRoot, '@deepseek-ai'))
+  } catch {
+    /* npm が無い環境では飛ばす */
+  }
+
+  const npxRoot = join(homedir(), '.npm', '_npx')
+  if (existsSync(npxRoot)) {
+    const runs = readdirSync(npxRoot, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => join(npxRoot, entry.name))
+      .sort((left, right) => statSync(right).mtimeMs - statSync(left).mtimeMs)
+    for (const run of runs) candidates.push(join(run, 'node_modules', '@deepseek-ai'))
+  }
+
+  for (const candidate of candidates) {
+    tried.push(candidate)
+    if (existsSync(join(candidate, 'dsh', 'package.json'))) return candidate
+  }
+
+  throw new Error(
+    [
+      'DSH の @deepseek-ai パッケージが見つかりませんでした。',
+      '  次のどちらかで場所を指定してください:',
+      '    node tools/extract-dictionaries.mjs --dsh-modules /path/to/node_modules/@deepseek-ai',
+      '    DSH_MODULES_ROOT=/path/to/node_modules/@deepseek-ai npm run extract',
+      '  探した場所:',
+      ...tried.map((item) => `    ${item}`),
+    ].join('\n'),
+  )
+}
+
+const MODULES_ROOT = discoverModulesRoot()
 const OUT = argOf('--out', join(here, '..', 'data', 'en-dictionaries.json'))
 
 /**

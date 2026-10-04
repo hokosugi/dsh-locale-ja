@@ -45,7 +45,8 @@
     "review": "node tools/review.mjs export --split",
     "review:apply": "node tools/review.mjs import",
     "check": "node tools/build.mjs && node tools/audit.mjs --strict && node tools/verify-locale.mjs",
-    "prepublishOnly": "npm run check"
+    "prepublishOnly": "npm run check",
+    "drift": "node tools/drift-report.mjs"
   },
   "dsh": {
     "manifestVersion": 1,

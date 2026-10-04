@@ -90,7 +90,9 @@ window.__ModuleLoader__.load({
 | `tools/audit.mjs` | 訳抜け・存在しないキー・プレースホルダ不一致・複数行の構造不一致・幅の狭いラベルとカード見出しのバッジの長さ・用語の統一を点検 (`--strict` で未訳もエラー) |
 | `tools/verify-locale.mjs` | **実物の** `LocaleRuntime` に対する結合検証 |
 | `tools/review.mjs` | 対照一覧 (編集用 TSV / 閲覧用 Markdown) の出力と再取り込み |
-| `tools/extract-dictionaries.mjs` | インストール済みプラグインから英語辞書を抽出 (監査の基準データ) |
+| `tools/extract-dictionaries.mjs` | インストール済みプラグインから英語辞書を抽出 (監査の基準データ)。場所は `--dsh-modules` / `DSH_MODULES_ROOT` / 自動探索 |
+| `tools/drift-report.mjs` | DSH 側の辞書が変わったかを、直前のコミットと比べて報告 (`npm run drift`) |
+| `.github/workflows/dsh-drift.yml` | 毎日 1 回 DSH の辞書を再抽出して差分を確認し、変化があれば Issue を作って失敗する |
 | `data/en-dictionaries.json` | 抽出結果 (56 名前空間 / 2421 キー) |
 | `review/ja.md` | 索引。カバレッジ・要確認の一覧と各名前空間へのリンク |
 | `review/<名前空間>.md` | 閲覧用。長文は Markdown として展開して表示 |
@@ -266,6 +268,63 @@ DSH を更新したときの差分確認もそのまま行えます。
 
 ---
 
+## DSH が更新されたとき
+
+このパックは DSH の**辞書のキー**に依存しています。DSH が変わったときに何が起きるかは、
+変化の種類で分かれます。
+
+| DSH 側の変化 | `npm run check` | やること |
+| --- | --- | --- |
+| キーが**増えた** | **失敗する** (監査 `--strict` が未訳をエラーにする) | `npm run audit -- --missing <名前空間>` で原文を見て訳を足す |
+| キーが**消えた / 名前が変わった** | **失敗する** (`存在しないキー` エラー) | そのキーを辞書から消す (または名前を合わせる) |
+| **英語の文面だけ**変わった (キーは同じ) | 通ってしまう | `npm run drift` の差分を見て、訳語が古くなっていないか見直す |
+| プラグインの**画面レイアウト**が変わった | 通ってしまう | [CHECKLIST.md](CHECKLIST.md) の目視確認をもう一度 |
+| プラグイン **API (slot / locale)** が変わった | **失敗する** (実物 `LocaleRuntime` の検証) | 失敗メッセージに従って `src/client/plugin.js` を直す |
+
+つまり「全部やり直し」ではなく、**失敗した所だけ足す・消す・直す**で済みます。英語の文面だけの
+変更とレイアウトの変更は自動では検知できないので、下の通知と目視で拾います。
+
+### 更新に気づく方法
+
+1. **毎日 1 回の自動チェック (このリポジトリに設定済み)**
+   [`.github/workflows/dsh-drift.yml`](.github/workflows/dsh-drift.yml) が、GitHub のランナーで
+   最新の DSH を入れて辞書を再抽出し、コミット済みの `data/en-dictionaries.json` と比べます。
+   差分があれば **Issue を作り、ワークフローを失敗させます** (失敗は GitHub から通知が届き、
+   直って成功に戻ったときも通知されます)。手動で走らせるなら GitHub → Actions →
+   `DSH drift` → Run workflow。
+   先行版 (`alpha`) まで早く見たい場合は、ワークフローの `npm install -g @deepseek-ai/dsh` を
+   `@deepseek-ai/dsh@alpha` に変えます。
+
+   ローカルで同じ確認をするときは:
+
+   ```sh
+   npm run extract     # 最新の DSH から辞書を再抽出
+   npm run drift       # 直前のコミットとの差分を表示 (--fail-on-change で CI 向け)
+   ```
+
+2. **DSH のリリースを見る (早めの予告)**
+   [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) を
+   **Watch → Releases** にすると、新しいタグ (`dsh-v0.2.1-alpha.1` など) が出たときに通知が来ます。
+   RSS なら <https://github.com/deepseek-ai/deepseek-harness/releases.atom>。
+   リポジトリのタグは npm の `latest` より**先行**することがあるので、早めに気づけます
+   (例: タグは `dsh-v0.2.1-alpha.1` まで出ていますが、npm の `latest` は `0.2.0-rc.2` のまま)。
+
+### 訳を足す手順 (いつも同じ)
+
+```sh
+npm run extract      # 1. 最新の DSH から英語辞書を再抽出
+npm run drift        # 2. 何が変わったかを見る (任意)
+npm run audit        # 3. 未訳・存在しないキーを確認
+npm run review       # 4. 対照一覧を更新 → review/ja.tsv の ja 列を直して review:apply
+npm run check        # 5. ビルド + 監査 (--strict) + 実物ランタイム検証
+```
+
+訳を足したら [CHECKLIST.md](CHECKLIST.md) の目視確認も一度通し、`npm version patch` で
+[公開](README.md#公開-publish) します。
+
+`npm run check` の監査は `--strict` なので、**訳していないキーが 1 つでもあると失敗します**
+(どの名前空間に何キー残っているかをエラーに表示します)。
+
 ## 対照一覧で見直す
 
 英語原文と日本語訳を並べた一覧を出力し、**手で直して取り込めます**。用途別に 2 種類あります。
@@ -351,6 +410,8 @@ node tools/review.mjs import --prune    # TSV に無いキーは削除する
 ```sh
 cd dsh-locale-ja      # このパックのディレクトリ
 
+npm run extract                    # インストール済み DSH から英語辞書を再抽出 (更新時)
+npm run drift                      # DSH 側の差分を表示 (更新時)
 npm run audit                      # カバレッジ一覧と誤り検出 (未訳は許容)
 npm run audit:strict               # 未訳もエラーにする (--strict)
 npm run audit -- --all             # 未対象の名前空間も一覧
@@ -465,17 +526,6 @@ materialize し、スタブ `ctx` で `apply()` を走らせて `locale.register
 
 **未対象はありません** (`data/en-dictionaries.json` の 56 名前空間 / 2421 キー = 100%)。
 
-DSH 本体を更新したときは、次の順で差分を確認して訳を足してください。
-
-```sh
-npm run extract     # インストール済みプラグインから英語辞書を再抽出
-npm run audit       # 新キー・消えたキー・未訳を確認
-npm run review      # 対照一覧を再生成 (review/ja.tsv の ja 列を直して review:apply)
-npm run check       # ビルド + 監査 (--strict) + 実物ランタイムでの検証
-```
-
-`npm run check` の監査は `--strict` なので、**訳していないキーが 1 つでもあると失敗します**
-(どの名前空間に何キー残っているかをエラーに表示します)。DSH を更新してキーが増えたら、
-`npm run audit -- --missing <名前空間>` で原文を出して訳を足すまで `check` は通りません。
-
-現状のカバレッジは `npm run audit -- --all` で確認できます (全体 2421 / 2421 キー = 100%)。
+DSH 本体が更新されたときの進め方は [DSH が更新されたとき](#dsh-が更新されたとき) にまとめて
+あります (何が失敗するか / 通知の受け取り方 / 訳を足す手順)。現状のカバレッジは
+`npm run audit -- --all` で確認できます (全体 2421 / 2421 キー = 100%)。

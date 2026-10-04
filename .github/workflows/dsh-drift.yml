@@ -1,0 +1,66 @@
+name: DSH drift
+
+# DSH 本体の文言が変わっていないかを 1 日 1 回確認する。
+#   - GitHub のランナーに最新の DSH を入れ、tools/extract-dictionaries.mjs で辞書を再抽出する
+#   - コミット済みの data/en-dictionaries.json と比べる (tools/drift-report.mjs)
+#   - 差分があれば Issue を作り、ワークフローを失敗させる
+#     (定期実行の失敗は GitHub から通知が届く。成功に戻ったときも通知される)
+# 先行版 (alpha) まで早く見たい場合は、下の install を @deepseek-ai/dsh@alpha に変える。
+on:
+  schedule:
+    - cron: '0 22 * * *' # 07:00 JST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install DSH
+        run: npm install -g @deepseek-ai/dsh
+
+      - name: Show the installed version
+        run: npm ls -g --depth=0 @deepseek-ai/dsh || true
+
+      - name: Re-extract the English dictionaries
+        run: node tools/extract-dictionaries.mjs --dsh-modules "$(npm root -g)/@deepseek-ai"
+
+      - name: Compare with the committed dictionaries
+        id: drift
+        continue-on-error: true
+        run: node tools/drift-report.mjs --markdown --fail-on-change > /tmp/drift.md
+
+      - name: Show the report
+        run: cat /tmp/drift.md
+
+      - name: Open an issue when the dictionaries changed
+        if: steps.drift.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title='DSH の文言が更新されました'
+          existing=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq 'length')
+          if [ "$existing" != "0" ]; then
+            echo "既に同じタイトルの Issue が開いています。本文は上のレポートを参照してください。"
+            exit 0
+          fi
+          gh issue create --title "$title" --body-file /tmp/drift.md
+
+      - name: Fail so the scheduled notification fires
+        if: steps.drift.outcome == 'failure'
+        run: |
+          echo "DSH の文言が変わっています (Issue / 上のレポートを確認してください)"
+          exit 1
+
+      - name: Summary
+        if: steps.drift.outcome == 'success'
+        run: echo "DSH 側の辞書に差分はありません"
