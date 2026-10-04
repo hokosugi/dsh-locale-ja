@@ -3,11 +3,14 @@
 **Japanese locale pack for the [DSH](https://github.com/deepseek-ai/deepseek-harness) Web GUI.**
 It adds a `日本語` language and translates the whole shipped dictionary
 (56 namespaces / 2421 strings = 100%). No runtime dependencies; `lib/client.js` ships prebuilt.
+Published as [`dsh-locale-ja`](https://www.npmjs.com/package/dsh-locale-ja) (MIT); source at
+[hokosugi/dsh-locale-ja](https://github.com/hokosugi/dsh-locale-ja).
 
 ```sh
-dsh plugin --profile web add dsh-locale-ja        # npm から
-dsh plugin --profile web add /path/to/dsh-locale-ja  # ローカルのディレクトリから
-dsh web                                           # 再起動で反映
+dsh plugin --profile web add dsh-locale-ja                    # npm から (公開済み v1.0.0)
+dsh plugin --profile web add github:hokosugi/dsh-locale-ja    # GitHub から
+dsh plugin --profile web add /path/to/dsh-locale-ja           # ローカルのディレクトリから
+dsh web                                                       # 再起動で反映
 ```
 
 DSH (DeepSeek Harness) の Web GUI に **言語「日本語」を追加**するクライアントプラグインです。
@@ -105,14 +108,14 @@ window.__ModuleLoader__.load({
 ```sh
 # pnpm が必要 (未導入なら: npm install -g pnpm / corepack enable pnpm)
 
-# npm から (公開後)
+# npm から (公開済み: v1.0.0) — これが一番手軽
 dsh plugin --profile web add dsh-locale-ja
+
+# GitHub から (インストール画面が受け付けるのは パッケージ名 / GitHub のアドレス / ローカルディレクトリ の 3 つ)
+dsh plugin --profile web add github:hokosugi/dsh-locale-ja
 
 # 手元のディレクトリから (開発時)
 dsh plugin --profile web add /path/to/dsh-locale-ja
-
-# Git から (インストール画面が受け付けるのは パッケージ名 / GitHub のアドレス / ローカルディレクトリ の 3 つ)
-dsh plugin --profile web add https://github.com/hokosugi/dsh-locale-ja
 ```
 
 このコマンドはプロファイル側で pnpm を実行し、`dsh.bundle` を宣言しているパッケージを
@@ -219,30 +222,47 @@ bash /tmp/move-out-of-icloud.sh ~/work   # 親ディレクトリを指定する�
 ワークスペースでセッションを作り直してください (言語設定 `ja` は `$DSH_HOME` 側なので維持されます)。
 
 ---
-## 配布 (publish)
+## 公開 (publish)
 
-公開できる形にしてあります (`private` なし、`files` に `src` / `tools` / `data` を含むので
-受け取った人が `npm run check` で再検証・再ビルドできます)。`npm publish` の前に次を確認してください。
+**npm と GitHub で公開済みです。**
 
-- `package.json` の `version` (現在 **1.0.0**) と、必要なら `author` / `repository` の追加
-- `LICENSE` の著作権者 (現在 `dsh-locale-ja contributors`)
-- `npm run check` が通ること (`prepublishOnly` でも自動で走ります)
+- npm: [`dsh-locale-ja`](https://www.npmjs.com/package/dsh-locale-ja) — v1.0.0 / MIT / `author: hokosugi`
+- GitHub: [hokosugi/dsh-locale-ja](https://github.com/hokosugi/dsh-locale-ja) — ソースと対照一覧 (`review/`)
 
-```sh
-npm publish          # prepublishOnly → npm run check → 公開
-```
+`files` に `src` / `tools` / `data` を含めているので、受け取った人は `npm run check` で
+再検証・再ビルドできます (`review/` は生成物なので配布物には入れていません。`npm run review` で
+再生成できます)。`data/en-dictionaries.json` (抽出済みの英語辞書) は同梱しているので、
+DSH を更新したときの差分確認もそのまま行えます。
 
-**名前が npm で取られている場合**は、スコープ付き (`@you/dsh-locale-ja`) にするか別名にします。
-そのときは次の 3 か所を**同じ名前**に揃えてください (ローダー行の `id` / `name` はパッケージ名と
-一致している必要があります)。
+### 新しいバージョンを出すとき
+
+1. 訳語やコードを直して `npm run check` を通す
+2. 版を上げてコミットし、タグと一緒に push する
+   ```sh
+   npm version patch        # 例: 1.0.1 (minor / major も可。タグも自動で付きます)
+   git push && git push --tags
+   ```
+3. 公開する (`prepublishOnly` が `npm run check` を走らせてから公開します。2FA はブラウザー +
+   Touch ID で承認)
+   ```sh
+   npm publish
+   ```
+
+注意点:
+
+- **同じ版は再公開できません。** 必ず `npm version` で上げてから `npm publish` します。
+- npm のキャッシュが root 所有で `EPERM` になるときは `--cache /tmp/npm-cache-ja` を付けます。
+- README は配布物にも入るため、**npm 側の README は次の publish で更新**されます (GitHub 側は
+  push した時点で更新)。
+
+### 名前を変える場合
+
+`package.json` の `name` を変えるときは、次の 3 か所を**同じ名前**に揃えてください
+(ローダー行の `id` / `name` はパッケージ名と一致している必要があります)。
 
 - `package.json` の `name`
 - `cordis.patch.yml` の `insert[].id` と `insert[].name`
-- インストール先プロファイルの `node_modules/dsh-locale-ja` のリンク名
-
-配布物に `review/` は含めません (生成物で 1MB あるため)。受け取った側で `npm run review` を
-実行すれば再生成できます。`data/en-dictionaries.json` (抽出済みの英語辞書) は同梱しているので、
-DSH を更新したときの差分確認もそのまま行えます。
+- インストール先プロファイルの `node_modules/<名前>` のリンク名
 
 ---
 
