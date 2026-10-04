@@ -112,7 +112,7 @@ dsh plugin --profile web add dsh-locale-ja
 dsh plugin --profile web add /path/to/dsh-locale-ja
 
 # Git から (インストール画面が受け付けるのは パッケージ名 / GitHub のアドレス / ローカルディレクトリ の 3 つ)
-dsh plugin --profile web add https://github.com/you/dsh-locale-ja
+dsh plugin --profile web add https://github.com/hokosugi/dsh-locale-ja
 ```
 
 このコマンドはプロファイル側で pnpm を実行し、`dsh.bundle` を宣言しているパッケージを

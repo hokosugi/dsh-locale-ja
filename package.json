@@ -13,6 +13,11 @@
     "japanese",
     "ja"
   ],
+  "author": "hokosugi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hokosugi/dsh-locale-ja.git"
+  },
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
