@@ -13,6 +13,7 @@ import { readFileSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import vm from 'node:vm'
+import { findDshModules } from './dsh-modules.mjs'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const root = join(here, '..')
@@ -23,9 +24,13 @@ const argOf = (name, fallback) => {
   return index >= 0 && args[index + 1] !== undefined ? args[index + 1] : fallback
 }
 
-const MODULES_ROOT =
-  argOf('--dsh-modules', process.env.DSH_MODULES_ROOT) ??
-  '-ai'
+let MODULES_ROOT
+try {
+  MODULES_ROOT = findDshModules({ explicit: argOf('--dsh-modules', process.env.DSH_MODULES_ROOT) }).path
+} catch (error) {
+  console.warn(`DSH が見つからないため検証を省略します。\n${error.message}`)
+  process.exit(0)
+}
 
 const LOCALE_BUNDLE = join(MODULES_ROOT, 'dsh-client-locale', 'lib', 'client.js')
 const PACK_BUNDLE = join(root, 'lib', 'client.js')

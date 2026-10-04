@@ -11,11 +11,12 @@
 #
 # 使い方 (スクリプト自身が入っているフォルダを動かすので、必ず別の場所から実行する):
 #   cp /path/to/dsh-locale-ja/docs/move-out-of-icloud.sh /tmp/
-#   bash /tmp/move-out-of-icloud.sh              # 移動先は ~/dev/deepseek-harness
-#   bash /tmp/move-out-of-icloud.sh ~/work       # 移動先の親ディレクトリを指定する場合
+#   bash /tmp/move-out-of-icloud.sh                        # 移動先は ~/dev/deepseek-harness
+#   bash /tmp/move-out-of-icloud.sh ~/work                 # 移動先の親ディレクトリを指定する場合
+#   bash /tmp/move-out-of-icloud.sh ~/work ~/tmp/ws        # 移動元も指定する場合
 set -euo pipefail
 
-SRC="$HOME/Documents/deepseek-harness"
+SRC="${2:-$HOME/Documents/deepseek-harness}"
 PARENT="${1:-$HOME/dev}"
 DST="$PARENT/deepseek-harness"
 PROFILE="${DSH_PROFILE:-web}"

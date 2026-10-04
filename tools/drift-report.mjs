@@ -5,8 +5,8 @@
  * (既定) または `--base` で指定したファイルと比べて「名前空間の増減 / キーの増減 / 英文の変更」を
  * 名前空間ごとにまとめる。
  *
- * `generatedFrom` は実行したマシンのパスなので比較しない (CI では必ず変わるため。ここを比べると
- * 毎回「差分あり」になってしまう)。
+ * 比較するのは `namespaces` だけ。`generatedFrom` (npx-cache / npm-global などの見つけ方) や
+ * `problems` は環境で変わるため対象にしない。
  *
  * 使い方:
  *   node tools/drift-report.mjs                    概要を表示
