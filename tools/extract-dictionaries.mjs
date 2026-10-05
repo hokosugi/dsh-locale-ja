@@ -7,7 +7,11 @@
  * 渡された内容をすべて記録する。
  *
  * 使い方:
- *   node tools/extract-dictionaries.mjs [--dsh-modules <path>] [--out <path>]
+ *   node tools/extract-dictionaries.mjs [--dsh-modules <path>] [--out <path>] [--allow-partial]
+ *
+ * 抽出できた名前空間が 0 件、または既存の記録より極端に少ないときは、場所の指定ミスや
+ * 抽出の失敗を疑って**エラーで止まる** (空の辞書を書くと、DSH が消えたのか辞書が空に
+ * なったのか区別できなくなる)。意図的に減らすときは `--allow-partial` を付ける。
  *
  * `--dsh-modules` を省略したときは、npm のグローバルルートと npx キャッシュから
  * `@deepseek-ai` のパッケージ群を自動で探す (環境変数 `DSH_MODULES_ROOT` でも指定できる)。
@@ -435,6 +439,30 @@ function main() {
       ...(byPackage[fallback.package] ?? []),
       { ns: fallback.ns, locale: 'en', source: 'static' },
     ]
+  }
+
+  // 抽出の失敗を「DSH の文言が変わった」と取り違えないための歯止め
+  const namespaceCount = Object.keys(byNamespace).length
+  const previousCount = existsSync(OUT)
+    ? Object.keys(JSON.parse(readFileSync(OUT, 'utf8')).namespaces ?? {}).length
+    : 0
+  if (namespaceCount === 0) {
+    throw new Error(
+      [
+        `名前空間を 1 つも抽出できませんでした: ${MODULES_ROOT}`,
+        '  DSH の場所が正しいか確認してください (--dsh-modules / DSH_MODULES_ROOT)。',
+        '  グローバルインストール (-g) は依存が dsh/node_modules にネストするため、',
+        '  クライアントバンドルが見えません。プロジェクト内に入れてください。',
+      ].join('\n'),
+    )
+  }
+  if (!args.includes('--allow-partial') && previousCount > 0 && namespaceCount < previousCount / 2) {
+    throw new Error(
+      [
+        `抽出できた名前空間が ${namespaceCount} 件で、既存の記録 (${previousCount} 件) より極端に少ないです: ${MODULES_ROOT}`,
+        '  場所の指定ミスや抽出の失敗を疑ってください (意図的に減らすなら --allow-partial)。',
+      ].join('\n'),
+    )
   }
 
   const report = {

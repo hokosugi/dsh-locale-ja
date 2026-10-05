@@ -1,11 +1,13 @@
 name: DSH drift
 
 # DSH 本体の文言が変わっていないかを 1 日 1 回確認する。
-#   - GitHub のランナーに最新の DSH を入れ、tools/extract-dictionaries.mjs で辞書を再抽出する
+#   - リポジトリ内に DSH を入れて tools/extract-dictionaries.mjs で辞書を再抽出する
+#     (グローバルインストール -g は依存が dsh/node_modules にネストしてクライアント
+#      バンドルが見えず 0 件になるため使わない。プロジェクト内なら npx と同じ平坦な配置になる)
 #   - コミット済みの data/en-dictionaries.json と比べる (tools/drift-report.mjs)
-#   - 差分があれば Issue を作り、ワークフローを失敗させる
-#     (定期実行の失敗は GitHub から通知が届く。成功に戻ったときも通知される)
-# 先行版 (alpha) まで早く見たい場合は、下の install を @deepseek-ai/dsh@alpha に変える。
+#   - 差分があれば Issue を作り、ワークフローを失敗させる (定期実行の失敗は通知が届く)
+#   - 抽出自体に失敗した場合は別の Issue を作る (誤検知と区別するため)
+# 先行版 (alpha) まで早く見たい場合は、install を @deepseek-ai/dsh@alpha に変える。
 on:
   schedule:
     - cron: '0 22 * * *' # 07:00 JST
@@ -25,21 +27,25 @@ jobs:
         with:
           node-version: 24
 
-      - name: Install DSH
-        run: npm install -g @deepseek-ai/dsh
+      - name: Install DSH into the project
+        run: npm install --no-save --no-package-lock @deepseek-ai/dsh
 
       - name: Show the installed version
-        run: npm ls -g --depth=0 @deepseek-ai/dsh || true
+        run: node -p "require('./node_modules/@deepseek-ai/dsh/package.json').version"
 
       - name: Re-extract the English dictionaries
-        run: node tools/extract-dictionaries.mjs --dsh-modules "$(npm root -g)/@deepseek-ai"
+        id: extract
+        continue-on-error: true
+        run: node tools/extract-dictionaries.mjs --dsh-modules "$PWD/node_modules/@deepseek-ai" 2>&1 | tee /tmp/extract.log
 
       - name: Compare with the committed dictionaries
         id: drift
+        if: steps.extract.outcome == 'success'
         continue-on-error: true
         run: node tools/drift-report.mjs --markdown --fail-on-change > /tmp/drift.md
 
       - name: Show the report
+        if: steps.extract.outcome == 'success'
         run: cat /tmp/drift.md
 
       - name: Open an issue when the dictionaries changed
@@ -55,12 +61,36 @@ jobs:
           fi
           gh issue create --title "$title" --body-file /tmp/drift.md
 
-      - name: Fail so the scheduled notification fires
-        if: steps.drift.outcome == 'failure'
+      - name: Open an issue when the extraction failed
+        if: steps.extract.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "DSH の文言が変わっています (Issue / 上のレポートを確認してください)"
+          title='DSH の抽出に失敗しました'
+          existing=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq 'length')
+          if [ "$existing" != "0" ]; then
+            echo "既に同じタイトルの Issue が開いています。"
+            exit 0
+          fi
+          {
+            echo 'DSH の辞書を再抽出できませんでした (`npm run extract` が失敗しました)。'
+            echo
+            echo 'インストール方法の変化か、DSH 側の変更で抽出ツールが動かなくなった可能性があります。'
+            echo
+            echo "実行: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+            echo
+            echo '```'
+            tail -n 40 /tmp/extract.log 2>/dev/null || echo '(ログなし)'
+            echo '```'
+          } > /tmp/extract-issue.md
+          gh issue create --title "$title" --body-file /tmp/extract-issue.md
+
+      - name: Fail so the scheduled notification fires
+        if: steps.extract.outcome == 'failure' || steps.drift.outcome == 'failure'
+        run: |
+          echo "DSH の確認に失敗しました (上の Issue / ログを参照してください)"
           exit 1
 
       - name: Summary
-        if: steps.drift.outcome == 'success'
+        if: steps.extract.outcome == 'success' && steps.drift.outcome == 'success'
         run: echo "DSH 側の辞書に差分はありません"

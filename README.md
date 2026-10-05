@@ -331,8 +331,9 @@ npm run scan -- --identity  # コミットのメール設定も点検 (noreply �
    [`.github/workflows/dsh-drift.yml`](.github/workflows/dsh-drift.yml) が、GitHub のランナーで
    最新の DSH を入れて辞書を再抽出し、コミット済みの `data/en-dictionaries.json` と比べます。
    差分があれば **Issue を作り、ワークフローを失敗させます** (失敗は GitHub から通知が届き、
-   直って成功に戻ったときも通知されます)。手動で走らせるなら GitHub → Actions →
-   `DSH drift` → Run workflow。
+   直って成功に戻ったときも通知されます)。**抽出そのものに失敗した場合は別の Issue**
+   (`DSH の抽出に失敗しました`) を作るので、誤検知と区別できます。手動で走らせるなら
+   GitHub → Actions → `DSH drift` → Run workflow。
    先行版 (`alpha`) まで早く見たい場合は、ワークフローの `npm install -g @deepseek-ai/dsh` を
    `@deepseek-ai/dsh@alpha` に変えます。
 
