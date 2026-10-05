@@ -446,8 +446,10 @@ function main() {
   const previousCount = existsSync(OUT)
     ? Object.keys(JSON.parse(readFileSync(OUT, 'utf8')).namespaces ?? {}).length
     : 0
+  // ここは throw ではなく process.exit で止める: main() は抽出中の非同期例外を握りつぶす
+  // ハンドラ (uncaughtException) を付けているため、throw は無言で消えてしまう。
   if (namespaceCount === 0) {
-    throw new Error(
+    console.error(
       [
         `名前空間を 1 つも抽出できませんでした: ${MODULES_ROOT}`,
         '  DSH の場所が正しいか確認してください (--dsh-modules / DSH_MODULES_ROOT)。',
@@ -455,14 +457,16 @@ function main() {
         '  クライアントバンドルが見えません。プロジェクト内に入れてください。',
       ].join('\n'),
     )
+    process.exit(1)
   }
   if (!args.includes('--allow-partial') && previousCount > 0 && namespaceCount < previousCount / 2) {
-    throw new Error(
+    console.error(
       [
         `抽出できた名前空間が ${namespaceCount} 件で、既存の記録 (${previousCount} 件) より極端に少ないです: ${MODULES_ROOT}`,
         '  場所の指定ミスや抽出の失敗を疑ってください (意図的に減らすなら --allow-partial)。',
       ].join('\n'),
     )
+    process.exit(1)
   }
 
   const report = {
