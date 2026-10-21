@@ -1,6 +1,6 @@
 {
   "name": "dsh-locale-ja",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Japanese locale pack for the DSH Web GUI — adds a 日本語 language and translates the whole shipped dictionary (61 namespaces / 2760 strings).",
   "type": "module",
   "license": "MIT",
