@@ -28,6 +28,7 @@ job	output.error	live output stream interrupted: {error}	ライブ出力が中�
 job	terminal.signal	signal {signal}	シグナル {signal}	ok
 job	terminal.exitCode	exit {code}	終了コード {code}	ok
 job	terminal.noExitCode	no exit code	終了コードなし	ok
+job	terminal.commandLine	Command line {n}	コマンドライン {n}	ok
 job	terminal.running	running	実行中	ok
 job	terminal.failed	failed	失敗	ok
 job	terminal.done	done	完了	ok

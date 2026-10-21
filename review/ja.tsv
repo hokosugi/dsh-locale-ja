@@ -79,7 +79,7 @@ conversation	todo.rowTitle	Update to-do list	ToDo リストを更新	ok
 conversation	tool.title.createGoal	Create goal	ゴールを作成	ok
 conversation	tool.title.getGoal	View goal	ゴールを表示	ok
 conversation	tool.title.updateGoal	Update goal	ゴールを更新	ok
-conversation	tool.preparing.content	Preparing content {kilobytes}KB	コンテンツを準備しています {kilobytes}KB	ok
+conversation	tool.preparing.content	{kilobytes}KB	{kilobytes}KB	ok
 conversation	tool.title.createSchedule	Create reminder	リマインダーを作成	ok
 conversation	tool.title.listSchedules	List reminders	リマインダー一覧	ok
 conversation	tool.title.deleteSchedule	Delete reminder	リマインダーを削除	ok
@@ -298,9 +298,12 @@ conversation	row.running	Running	実行中	ok
 conversation	row.preparing	Preparing tool call	ツール呼び出しを準備しています	ok
 conversation	row.failed	Failed	失敗	ok
 conversation	row.stopped	Stopped	停止	ok
+conversation	row.commandArguments	Command arguments	コマンドの引数	ok
 conversation	row.input	IN	入力	ok
 conversation	row.output	OUT	出力	ok
 conversation	row.inspect	Inspect	呼び出しを確認	ok
+conversation	row.imageSize	{width}x{height}px, {bytes} bytes	{width}x{height}px、{bytes} バイト	ok
+conversation	row.imageSizeDownscaled	{width}x{height}px (downscaled from {originalWidth}x{originalHeight}px), {bytes} bytes	{width}x{height}px（元 {originalWidth}x{originalHeight}px から縮小）、{bytes} バイト	ok
 conversation	tool.title.search	Search	検索	ok
 conversation	tool.title.read	Read	読み取り	ok
 conversation	tool.title.bash	Bash	Bash	ok
@@ -359,6 +362,7 @@ conversation	queue.steerFailed	Steering failed. Try again.	ステアに失敗し
 conversation	terminal.signal	signal {signal}	シグナル {signal}	ok
 conversation	terminal.exitCode	exit code {code}	終了コード {code}	ok
 conversation	terminal.noExitCode	no exit code	終了コードなし	ok
+conversation	terminal.commandLine	Command line {n}	コマンドライン {n}	ok
 conversation	terminal.running	Running	実行中	ok
 conversation	terminal.failed	Failed	失敗	ok
 conversation	terminal.done	Done	完了	ok
@@ -368,6 +372,227 @@ conversation	terminal.expandAria	Expand the remaining {n} output lines	出力の
 conversation	terminal.expandRest	… {n} more lines	… 残り {n} 行	ok
 conversation	terminal.sendInput	(send input)	(入力を送信)	ok
 conversation	terminal.session	Terminal {sessionId}	ターミナル {sessionId}	ok
+pluginManager	panel	Plugins	プラグイン	ok
+pluginManager	title	Plugins	プラグイン	ok
+pluginManager	intro	Install, enable, and configure plugins	プラグインのインストール・有効化・設定	ok
+pluginManager	infoLabel	About plugins	プラグインについて	ok
+pluginManager	infoDescription	Configure official plugins and install or manage other plugins here. View the built-in plugin list and runtime status in Settings → Built-in plugins.	公式プラグインの設定と、その他のプラグインのインストール・管理はここで行います。組み込みプラグインの一覧と実行状態は「設定 → 組み込みプラグイン」で確認できます。	ok
+pluginManager	loading	Reading plugins…	プラグインを読み込み中…	ok
+pluginManager	error	Could not read all plugins, possibly due to a network problem	一部のプラグインを読み込めませんでした。ネットワークの問題が考えられます	ok
+pluginManager	unavailable	This deployment runs without a manageable profile, so plugins cannot be installed or switched here.	この環境には管理できるプロファイルがないため、ここではプラグインをインストールしたり切り替えたりできません。	ok
+pluginManager	retry	Retry	再試行	ok
+pluginManager	refresh	Refresh	更新	ok
+pluginManager	refreshError	Refresh failed. Please try again.	更新に失敗しました。もう一度お試しください。	ok
+pluginManager	empty	No plugins are installed yet.	プラグインがまだインストールされていません。	ok
+pluginManager	addPlugin	Add plugin	プラグインを追加	ok
+pluginManager	chooseAddMethod	Choose how to add a plugin	プラグインの追加方法を選ぶ	ok
+pluginManager	installExisting	Install a third-party plugin	サードパーティのプラグインをインストール	ok
+pluginManager	installExistingDescription	Supports npm packages, Git repositories, and local directories	npm パッケージ・Git リポジトリ・ローカルディレクトリに対応	ok
+pluginManager	restartNotice	Restart DSH to apply the change. {reason}	DSH を再起動すると変更が反映されます。{reason}	ok
+pluginManager	restartReasonNoHmr	This profile applies changes only at startup.	このプロファイルは起動時にのみ変更を反映します。	ok
+pluginManager	restartReasonPackageMoved	An installed package now resolves to another directory, or the change replaces a package the DSH installation provides. Uninstall a package before installing it from another location.	インストール済みパッケージの解決先が別のディレクトリになったか、変更が DSH 本体の提供するパッケージを置き換えます。別の場所から入れる前に、いったんアンインストールしてください。	ok
+pluginManager	restartReasonHostModule	The change reaches modules DSH itself loaded.	変更が DSH 本体が読み込んだモジュールに及びます。	ok
+pluginManager	restartReasonUnmanagedPlugin	The change reaches a plugin running outside the plugin list.	変更がプラグイン一覧の外で動いているプラグインに及びます。	ok
+pluginManager	restartReasonModuleComparison	DSH could not compare the loaded plugins with their files.	読み込み済みプラグインとファイルを比較できませんでした。	ok
+pluginManager	overriddenNotice	{name} was saved, but a higher-priority configuration overrides it, so it is not in effect	{name} は保存されましたが、より優先度の高い設定に上書きされるため反映されていません	ok
+pluginManager	bundlesTitle	Installed plugins	インストール済みプラグイン	ok
+pluginManager	basicTitle	Built-in plugin settings	組み込みプラグインの設定	ok
+pluginManager	extensionsTitle	Experimental plugins	実験的プラグイン	ok
+pluginManager	moreTitle	Experimental plugins	実験的プラグイン	ok
+pluginManager	moreAction	More	その他	ok
+pluginManager	tabsLabel	Plugin views	プラグインの表示切替	ok
+pluginManager	installedTab	Installed	インストール済み	ok
+pluginManager	statusProblem	Problem	問題	ok
+pluginManager	statusBeta	Experimental	実験的	ok
+pluginManager	reasonLabel	Reason	理由	ok
+pluginManager	metadataError	Package metadata error: {error}	パッケージメタデータのエラー: {error}	ok
+pluginManager	previewAlt	{name} feature preview	{name} の機能プレビュー	ok
+pluginManager	previewUnavailable	Could not display feature preview	機能プレビューを表示できませんでした	ok
+pluginManager	versionTag	v{version}	v{version}	ok
+pluginManager	partsLabel	Components	コンポーネント	ok
+pluginManager	sourceTitle	Source	ソース	ok
+pluginManager	sourceSpec	Code source	コードの取得元	ok
+pluginManager	sourceBuiltIn	Built in	組み込み	ok
+pluginManager	sourceVersion	Current version	現在のバージョン	ok
+pluginManager	partsEmpty	This plugin pack contains no components.	このプラグインパックにはコンポーネントが含まれていません。	ok
+pluginManager	partsCountTotal	{count} total	合計 {count}	ok
+pluginManager	partsCountRunning	{count} running	{count} 実行中	ok
+pluginManager	partsCountOff	{count} off	{count} オフ	ok
+pluginManager	partOff	Off	オフ	ok
+pluginManager	partsCountFailed	{count} failed	{count} 失敗	ok
+pluginManager	partsFilter	Filter components	コンポーネントを絞り込む	ok
+pluginManager	partsFilterEmpty	No component matches.	一致するコンポーネントがありません。	ok
+pluginManager	partToggle	Enable component {name}	コンポーネント {name} を有効にする	ok
+pluginManager	rowPhasePending	Waiting for dependencies	依存関係を待機中	ok
+pluginManager	rowPhaseLoading	Loading	読み込み中	ok
+pluginManager	rowPhaseActive	Running	実行中	ok
+pluginManager	rowPhaseFailed	Problem	問題	ok
+pluginManager	rowPhaseUnloading	Unloading	アンロード中	ok
+pluginManager	enableToggle	Enable {name}	{name} を有効にする	ok
+pluginManager	openDetail	View {name}	{name} を表示	ok
+pluginManager	backToList	Back to plugins	プラグイン一覧に戻る	ok
+pluginManager	crumbRoot	Plugins	プラグイン	ok
+pluginManager	backToPackage	Back to {name}	{name} に戻る	ok
+pluginManager	configureRow	Configure {name}	{name} を設定	ok
+pluginManager	rowStateIdle	Not running	未実行	ok
+pluginManager	uninstall	Uninstall	アンインストール	ok
+pluginManager	uninstallLabel	Uninstall {name}	{name} をアンインストール	ok
+pluginManager	installTitle	Add plugin	プラグインを追加	ok
+pluginManager	installDescription	Enter the plugin's package name, GitHub repository address, or local directory path.	プラグインのパッケージ名、GitHub リポジトリのアドレス、またはローカルディレクトリのパスを入力してください。	ok
+pluginManager	installSpecLabel	Package name or address	パッケージ名またはアドレス	ok
+pluginManager	installSpecPlaceholder	for example dsh-plugin-whale-pet	例: dsh-plugin-whale-pet	ok
+pluginManager	installGuideToggle	Install guide and examples	インストールのガイドと例	ok
+pluginManager	installGuideHide	Hide the guide	ガイドを閉じる	ok
+pluginManager	installGuideIdTitle	Enter the plugin's npm package name	プラグインの npm パッケージ名を入力	ok
+pluginManager	installGuideIdExample	dsh-plugin-whale-pet	dsh-plugin-whale-pet	ok
+pluginManager	installGuideIdHint	The plugin package name is the npm package name (like dsh-xxx or @author/plugin): the part after dsh plugin add or pnpm add in a community plugin's README install command.	プラグインのパッケージ名は npm のパッケージ名です (dsh-xxx や @作者/プラグイン名 のような形式)。コミュニティプラグインの README にあるインストール手順の、dsh plugin add または pnpm add の後ろの部分です。	ok
+pluginManager	installGuideExampleLabel	Example: 	例: 	ok
+pluginManager	installGitTemplateHint	Replace this with the actual Git repository address.	実際の Git リポジトリのアドレスに置き換えてください。	ok
+pluginManager	installPathTemplateHint	Replace this with the actual path to your local plugin directory.	ローカルのプラグインディレクトリの実際のパスに置き換えてください。	ok
+pluginManager	installGuideFill	Use example	例を入力	ok
+pluginManager	installGuideFillAria	Use the example {example}	例 {example} を入力	ok
+pluginManager	installGuideSafety	Install only plugins you trust: they run with your permissions and can damage DeepSeek Harness or leak your data.	信頼できるプラグインだけをインストールしてください。プラグインはあなたの権限で動作し、DeepSeek Harness を壊したり、データを外部に漏らしたりする可能性があります。	ok
+pluginManager	installUpgradeNotice	On-demand Official plugins offer Update when their version differs from DSH. To update other plugins, uninstall and reinstall them.	オンデマンドの公式プラグインは、DSH のバージョンと異なるときに「更新」が表示されます。ほかのプラグインを更新するには、アンインストールしてから入れ直してください。	ok
+pluginManager	registryToggle	Registry	レジストリ	ok
+pluginManager	registryLegend	The npm registry the plugin is downloaded from	プラグインのダウンロード元になる npm レジストリ	ok
+pluginManager	registryDefault	Default registry	既定のレジストリ	ok
+pluginManager	registryOfficial	Official npm registry	npm 公式レジストリ	ok
+pluginManager	registryNpmmirror	Mainland China mirror	中国本土のミラー	ok
+pluginManager	registryCustom	Custom address	カスタムアドレス	ok
+pluginManager	registryCustomPlaceholder	https://npm.example.com/	https://npm.example.com/	ok
+pluginManager	registryCustomHint	Enter an internal or private npm registry address starting with http:// or https://. If it requires a login, store the credentials in ~/.npmrc on this machine.	http:// または https:// で始まる、社内・プライベートな npm レジストリのアドレスを入力してください。ログインが必要な場合は、このマシンの ~/.npmrc に認証情報を保存してください。	ok
+pluginManager	registryCustomInvalid	Enter an address starting with http:// or https://	http:// または https:// で始まるアドレスを入力してください	ok
+pluginManager	registryListSeparator	, 	、	ok
+pluginManager	sentenceSeparator	 	 	ok
+pluginManager	installRun	Install	インストール	ok
+pluginManager	installChecking	Checking…	確認中…	ok
+pluginManager	installConfirmedTitle	Install plugin	プラグインをインストール	ok
+pluginManager	installConfirmedRefused	This plugin cannot be installed	このプラグインはインストールできません	ok
+pluginManager	installProblemInvalid	This is not a package name or address that can be installed: {reason}	インストールできるパッケージ名またはアドレスではありません: {reason}	ok
+pluginManager	installProblemInstalled	This plugin is already installed. To upgrade it, uninstall it and install it again	このプラグインはすでにインストールされています。アップグレードするにはアンインストールしてから再インストールしてください	ok
+pluginManager	installProblemShipped	This plugin ships with DSH; upgrading DSH updates it	このプラグインは DSH に同梱されています。DSH をアップグレードすると更新されます	ok
+pluginManager	installProblemNotFound	No such plugin was found	該当するプラグインが見つかりません	ok
+pluginManager	installProblemNotPackage	The path does not exist or is not a valid plugin package	そのパスが存在しないか、有効なプラグインパッケージではありません	ok
+pluginManager	installProblemNotBundle	This package declares no bundle, so it cannot be installed as a plugin: {reason}	このパッケージはバンドルを宣言していないため、プラグインとしてインストールできません: {reason}	ok
+pluginManager	installProblemNetwork	The plugin registry could not be reached; check the network and try again	プラグインのレジストリに接続できませんでした。ネットワークを確認してからもう一度お試しください	ok
+pluginManager	installProblemNetworkAll	No registry could be reached (tried: {registries}); check the network or proxy settings, or change the registry	どのレジストリにも接続できませんでした (試行: {registries})。ネットワークまたはプロキシの設定を確認するか、レジストリを変更してください	ok
+pluginManager	installProblemUnknown	The plugin could not be looked up: {reason}	プラグインの情報を取得できませんでした: {reason}	ok
+pluginManager	installingTitle	Installing the plugin…	プラグインをインストール中…	ok
+pluginManager	installedTitle	Installed	インストール済み	ok
+pluginManager	statusNotInstalled	Not installed	未インストール	ok
+pluginManager	statusMissingFiles	Package unavailable	パッケージを利用できません	ok
+pluginManager	statusUpdateAvailable	Update available	更新があります	ok
+pluginManager	sourceNotInstalled	Not installed	未インストール	ok
+pluginManager	sourceTargetSpec	Source for this DSH	この DSH 向けのソース	ok
+pluginManager	sourceTargetVersion	Version for this DSH	この DSH 向けのバージョン	ok
+pluginManager	update	Update	更新	ok
+pluginManager	updateLabel	Update {name}	{name} を更新	ok
+pluginManager	installFailedTitle	The plugin could not be installed	プラグインをインストールできませんでした	ok
+pluginManager	installGithubFailedTitle	Cannot access GitHub	GitHub にアクセスできません	ok
+pluginManager	installGithubTimeoutTitle	GitHub connection timed out	GitHub への接続がタイムアウトしました	ok
+pluginManager	installGithubFailedDescription	Try another installation source.	別のインストール元を試してください。	ok
+pluginManager	installUseGithubMirror	Use mainland China mirror	中国本土のミラーを使う	ok
+pluginManager	installTryAnotherWay	Try another way	別の方法を試す	ok
+pluginManager	installPackageLabel	Plugin package name	プラグインのパッケージ名	ok
+pluginManager	installEdit	Edit	編集	ok
+pluginManager	installEditAria	Back to editing	編集に戻る	ok
+pluginManager	installCancelAndEdit	Cancel installation and return to editing	インストールをキャンセルして編集に戻る	ok
+pluginManager	installApplyingCancellationError	Cancellation was not confirmed. Installation is being applied; wait for its result. {reason}	キャンセルを確認できませんでした。インストールは最終処理に入っているため、結果を待ってください。{reason}	ok
+pluginManager	installReconcile	Check installation status	インストール状態を確認	ok
+pluginManager	installUnknownTitle	Installation result unavailable	インストール結果を取得できません	ok
+pluginManager	installUnknownDescription	The Host has no active installation with this request id. Check the plugin list before trying again.	ホストにこの要求 ID のインストールがありません。プラグイン一覧を確認してからもう一度お試しください。	ok
+pluginManager	installResultUnconfirmed	The installation result was not received. Check installation status. {reason}	インストール結果を受信できませんでした。インストール状態を確認してください。{reason}	ok
+pluginManager	installAwaitingAcceptance	Waiting for the Host to accept installation. Cancellation will retry automatically after confirmation.	ホストがインストールを受け付けるのを待っています。確認後にキャンセルを自動で再試行します。	ok
+pluginManager	installBackgroundUnknown	Installation result unavailable. Check the plugin list.	インストール結果を取得できません。プラグイン一覧を確認してください。	ok
+pluginManager	installCancel	Cancel install	インストールをキャンセル	ok
+pluginManager	installCloseCancels	Cancel install and close	インストールをキャンセルして閉じる	ok
+pluginManager	installViewTask	View installation	インストールを表示	ok
+pluginManager	installUnconfirmedTitle	Installation status unconfirmed	インストール状態が未確認です	ok
+pluginManager	installBackgroundDone	Installation finished. View installation details.	インストールが完了しました。詳細を確認できます。	ok
+pluginManager	installBackgroundFailed	Installation failed. View installation details.	インストールに失敗しました。詳細を確認できます。	ok
+pluginManager	installBackgroundUnconfirmed	Installation status is unconfirmed. View the installation for details.	インストール状態が未確認です。詳細はインストールを開いて確認してください。	ok
+pluginManager	installBackgroundApplying	Installation is being applied and cannot be cancelled. View installation progress.	インストールは最終処理に入っていてキャンセルできません。進行状況を確認できます。	ok
+pluginManager	installStarting	Preparing installation…	インストールを準備中…	ok
+pluginManager	installCancelling	Stopping installation…	インストールを停止中…	ok
+pluginManager	installApplying	Applying configuration, please wait…	設定を反映しています。しばらくお待ちください…	ok
+pluginManager	installCancelledShort	Cancelled	キャンセル済み	ok
+pluginManager	installCancelled	Installation cancelled; the plugin is not enabled, and downloaded files may remain	インストールをキャンセルしました。プラグインは有効になっておらず、ダウンロードされたファイルが残っている場合があります	ok
+pluginManager	installCancelUnconfirmed	Installation has not been confirmed stopped. Retry cancellation or wait for the installation result. {reason}	インストールの停止を確認できませんでした。キャンセルを再試行するか、インストールの結果を待ってください。{reason}	ok
+pluginManager	installEnableNow	Enable now	今すぐ有効にする	ok
+pluginManager	installDetailsShow	Show install details	インストールの詳細を表示	ok
+pluginManager	installDetailsHide	Hide install details	インストールの詳細を隠す	ok
+pluginManager	installVersion	Version {version}	バージョン {version}	ok
+pluginManager	installSubjectPath	Local directory	ローカルディレクトリ	ok
+pluginManager	installSubjectGit	Git repository	Git リポジトリ	ok
+pluginManager	installSubjectTarball	Tarball	tarball	ok
+pluginManager	installLocation	Installs into {dir}	{dir} にインストールされます	ok
+pluginManager	installRetry	Retry	再試行	ok
+pluginManager	installChangeRegistry	Change registry	レジストリを変更	ok
+pluginManager	installAttempt	{previous} could not serve the package; retrying through {registry} (registry {index} of {total})	{previous} からパッケージを取得できなかったため、{registry} で再試行します ({total} 件中 {index} 件目のレジストリ)	ok
+pluginManager	installAttemptBadge	Attempt {index} · {registry}	第 {index} 回 · {registry}	ok
+pluginManager	installFailureNetwork	The network connection failed	ネットワーク接続に失敗しました	ok
+pluginManager	installFailureNetworkAll	No registry could be reached (tried: {registries}). Check the network or proxy settings, or change the registry and retry.	どのレジストリにも接続できませんでした (試行: {registries})。ネットワークまたはプロキシの設定を確認するか、レジストリを変更して再試行してください。	ok
+pluginManager	installFailureNetworkHost	{host} could not be reached. A GitHub address or a .tgz link is not fetched through the registry: this machine must reach it directly or through a proxy. If the plugin is also published to npm, enter its package name instead.	{host} に接続できませんでした。GitHub のアドレスや .tgz への直リンクはレジストリを経由しないため、このマシンから直接またはプロキシ経由で接続できる必要があります。プラグインが npm にも公開されている場合は、パッケージ名を入力してください。	ok
+pluginManager	installFailureNotFound	No such plugin was found	該当するプラグインが見つかりません	ok
+pluginManager	installFailureNoMatchingVersion	No version matches the request	条件に一致するバージョンがありません	ok
+pluginManager	installFailureDiskFull	The disk is full; the install stopped	ディスクの空き容量が足りないため、インストールを中止しました	ok
+pluginManager	installFailurePermission	No write permission; the plugin cannot be installed	書き込み権限がないため、プラグインをインストールできません	ok
+pluginManager	installFailureBuildBlocked	A dependency's install scripts need your permission before the install can continue	依存パッケージのインストールスクリプトを許可するまで、インストールを続行できません	ok
+pluginManager	installFailureBuildBlockedManual	pnpm blocked install scripts; allow them under allowBuilds in pnpm-workspace.yaml and retry	pnpm がインストールスクリプトをブロックしました。pnpm-workspace.yaml の allowBuilds で許可してから再試行してください	ok
+pluginManager	installFailureIntegrity	The downloaded package failed its integrity check	ダウンロードしたパッケージの整合性チェックに失敗しました	ok
+pluginManager	installFailureTimeout	The install timed out	インストールがタイムアウトしました	ok
+pluginManager	installFailurePnpmMissing	pnpm was not found, so nothing can be installed	pnpm が見つからないため、インストールできません	ok
+pluginManager	installFailureGeneric	Something went wrong during the install; the details say what	インストール中に問題が発生しました。詳細に原因が表示されます	ok
+pluginManager	terminalCommandLine	Command line {n}	コマンドライン {n}	ok
+pluginManager	terminalRunning	Running	実行中	ok
+pluginManager	terminalFailed	Failed	失敗	ok
+pluginManager	terminalDone	Done	完了	ok
+pluginManager	terminalCopy	Copy	コピー	ok
+pluginManager	terminalCopied	Copied	コピーしました	ok
+pluginManager	terminalNoOutput	No output	出力なし	ok
+pluginManager	terminalCollapseAria	Collapse output	出力を折りたたむ	ok
+pluginManager	terminalCollapse	Collapse	折りたたむ	ok
+pluginManager	terminalExpandAria	Expand the remaining {n} output lines	出力の残り {n} 行を展開	ok
+pluginManager	terminalExpand	… {n} more lines	… 残り {n} 行	ok
+pluginManager	terminalExitCode	exit code {code}	終了コード {code}	ok
+pluginManager	terminalSignal	signal {signal}	シグナル {signal}	ok
+pluginManager	terminalNoExitCode	no exit code	終了コードなし	ok
+pluginManager	installDoneNothing	Install finished with no new dependency.	インストールが完了しました。新しい依存パッケージはありません。	ok
+pluginManager	installDoneRestart	Installed; restart DSH to load it. {reason}	インストールしました。DSH を再起動すると読み込まれます。{reason}	ok
+pluginManager	installDoneApproved	Install scripts allowed for {names}	{names} のインストールスクリプトを許可しました	ok
+pluginManager	installDoneOtherVersion	Under pnpm's supply-chain security policy (minimumReleaseAge), versions published more recently than the required age are not installed automatically, so this installation used {installed} instead of the latest version {version}. A newly published version has not completed this waiting period and may contain undetected malicious code or defects. If you need {version}, uninstall the current version and then install {exact} to request that version.	pnpm のサプライチェーン保護（minimumReleaseAge）により、公開から一定期間を経ていないバージョンは自動ではインストールされません。そのため今回のインストールでは、最新版 {version} ではなく {installed} を使用しました。公開されたばかりのバージョンはこの待機期間を終えておらず、検出されていない悪意のあるコードや不具合を含む可能性があります。{version} が必要な場合は、現在のバージョンをアンインストールしてから {exact} を指定してインストールしてください。	ok
+pluginManager	installApprovalTitle	Install scripts need permission	インストールスクリプトの許可が必要です	ok
+pluginManager	installApprovalDescription	These packages have install scripts that pnpm did not run.	以下のパッケージには、pnpm が実行しなかったインストールスクリプトがあります。	ok
+pluginManager	installApprovalConsequence	Once allowed, the scripts run here with your permissions, and the permission is saved in this profile.	許可すると、スクリプトはこの環境であなたの権限で実行され、許可はこのプロファイルに保存されます。	ok
+pluginManager	installApprovalCaution	Allow only packages you trust.	信頼できるパッケージだけを許可してください。	ok
+pluginManager	installApproveAndRetry	Allow these scripts and retry	これらのスクリプトを許可して再試行	ok
+pluginManager	installClose	Done	完了	ok
+pluginManager	close	Close	閉じる	ok
+pluginManager	cancel	Cancel	キャンセル	ok
+pluginManager	confirmUninstallTitle	Uninstall "{name}"?	「{name}」をアンインストールしますか？	ok
+pluginManager	confirmUninstallDescription	What it provides goes away once it is uninstalled.	アンインストールすると、それが提供している機能は使えなくなります。	ok
+pluginManager	confirmUninstall	Uninstall	アンインストール	ok
+pluginManager	failedEnable	Could not enable: {reason}	有効にできませんでした: {reason}	ok
+pluginManager	failedDisable	Could not disable: {reason}	無効にできませんでした: {reason}	ok
+pluginManager	failedUninstall	Could not uninstall: {reason}	アンインストールできませんでした: {reason}	ok
+pluginManager	failedRowEnable	Could not enable the component: {reason}	コンポーネントを有効にできませんでした: {reason}	ok
+pluginManager	failedRowDisable	Could not disable the component: {reason}	コンポーネントを無効にできませんでした: {reason}	ok
+pluginManager	reasonManagementRequired	Plugin management needs it; it cannot be switched off or uninstalled.	プラグイン管理に必要なため、無効化もアンインストールもできません。	ok
+pluginManager	reasonUnaddressable	The profile patch cannot address this one uniquely.	プロファイルのパッチではこれを一意に指定できません。	ok
+pluginManager	reasonUnknownPlugin	No such plugin.	該当するプラグインがありません。	ok
+pluginManager	reasonInvalidSpec	Enter a valid package name or address.	有効なパッケージ名またはアドレスを入力してください。	ok
+pluginManager	reasonAlreadyInstalled	This package is already installed; uninstall it before installing another version.	このパッケージはすでにインストールされています。別のバージョンを入れる前にアンインストールしてください。	ok
+pluginManager	reasonAmbiguousInstall	Which package was installed cannot be told from the dependency change.	依存関係の変化から、どのパッケージがインストールされたか判断できません。	ok
+pluginManager	reasonNotBundle	This package declares no bundle, so it cannot be managed as a plugin.	このパッケージはバンドルを宣言していないため、プラグインとして管理できません。	ok
+pluginManager	reasonNotRemovable	This package is not owned by the profile, or plugin management needs it.	このパッケージはプロファイルが所有していないか、プラグイン管理に必要です。	ok
+pluginManager	reasonStopProfile	This profile runs without HMR; stop it and uninstall the package with dsh plugin.	このプロファイルは HMR なしで動作しています。停止してから dsh plugin でアンインストールしてください。	ok
+pluginManager	reasonBundleInUse	Other configuration still uses this bundle's components; switch them off first.	ほかの設定がこのバンドルのコンポーネントをまだ使用しています。先にそれらを無効にしてください。	ok
+pluginManager	reasonStaleApproval	The pending script approvals changed; install again to refresh them.	許可待ちのインストールスクリプトが変わったため、再インストールして更新してください。	ok
+pluginManager	reasonIncompatibleVersion	{plugin} is incompatible with DSH {runtime} (requires {requirements}); running it may cause crashes or data loss.	{plugin} は DSH {runtime} と互換性がありません（{requirements} が必要）。実行するとクラッシュやデータ損失を起こす可能性があります。	ok
+pluginManager	reasonIncompatibleVersionUnnamed	This plugin is incompatible with the running DSH version; running it may cause crashes or data loss.	このプラグインは実行中の DSH のバージョンと互換性がありません。実行するとクラッシュやデータ損失が起きる可能性があります。	ok
+pluginManager	reasonIncompatibleInstall	Install a plugin version compatible with this DSH.	この DSH と互換性のあるバージョンのプラグインをインストールしてください。	ok
+pluginManager	reasonIncompatibleInstalled	Uninstall it and install a version compatible with this DSH.	アンインストールして、この DSH と互換性のあるバージョンをインストールしてください。	ok
+pluginManager	reasonOperationError	The Host reported an error.	ホストがエラーを報告しました。	ok
 trajectory	view.trajectory	Trajectory	軌跡	ok
 trajectory	toolbar.aria	Trajectory toolbar	軌跡ツールバー	ok
 trajectory	toolbar.duration	Duration	期間	ok
@@ -523,9 +748,9 @@ trajectory	details.model	Model	モデル	ok
 trajectory	details.toolCalls	Tool calls	ツール呼び出し	ok
 trajectory	details.subtoolCalls	Subtool calls	サブツール呼び出し	ok
 trajectory	details.error	Error	エラー	ok
+trajectory	details.lastAttemptError	Last attempt error	直近の試行のエラー	ok
 trajectory	details.failure.auth	API key is invalid	API キーが正しくありません	ok
 trajectory	details.retry	Retry	再試行	ok
-trajectory	details.scheduled	Scheduled	予約済み	ok
 trajectory	details.retryDelay	Retry delay	再試行まで	ok
 trajectory	details.result	Result	結果	ok
 trajectory	details.compacted	Compacted	圧縮済み	ok
@@ -560,195 +785,197 @@ trajectory	layout.toolsRemoved	Removed: {names}	削除: {names}	ok
 trajectory	layout.toolsRemovedCount	{count} removed	{count} 件削除	ok
 trajectory	layout.systemPromptAndToolsUpdated	System Prompt and Tools Updated	システムプロンプトとツールを更新	ok
 trajectory	layout.compactionInterrupted	Compaction was interrupted before completion.	圧縮は完了する前に中断されました。	ok
-pluginManager	panel	Plugins	プラグイン	ok
-pluginManager	title	Plugins	プラグイン	ok
-pluginManager	intro	Install, enable, and configure plugins	プラグインのインストール・有効化・設定	ok
-pluginManager	infoLabel	About plugins	プラグインについて	ok
-pluginManager	infoDescription	Configure official plugins and install or manage other plugins here. View the built-in plugin list and runtime status in Settings → Built-in plugins.	公式プラグインの設定と、その他のプラグインのインストール・管理はここで行います。組み込みプラグインの一覧と実行状態は「設定 → 組み込みプラグイン」で確認できます。	ok
-pluginManager	loading	Reading plugins…	プラグインを読み込み中…	ok
-pluginManager	error	Could not read all plugins, possibly due to a network problem	一部のプラグインを読み込めませんでした。ネットワークの問題が考えられます	ok
-pluginManager	unavailable	This deployment runs without a manageable profile, so plugins cannot be installed or switched here.	この環境には管理できるプロファイルがないため、ここではプラグインをインストールしたり切り替えたりできません。	ok
-pluginManager	retry	Retry	再試行	ok
-pluginManager	refresh	Refresh	更新	ok
-pluginManager	refreshError	Refresh failed. Please try again.	更新に失敗しました。もう一度お試しください。	ok
-pluginManager	empty	No plugins are installed yet.	プラグインがまだインストールされていません。	ok
-pluginManager	addPlugin	Add plugin	プラグインを追加	ok
-pluginManager	restartNotice	The change takes effect at the next start	変更は次回の起動時に反映されます	ok
-pluginManager	overriddenNotice	{name} was saved, but a higher-priority configuration overrides it, so it is not in effect	{name} は保存されましたが、より優先度の高い設定に上書きされるため反映されていません	ok
-pluginManager	bundlesTitle	Installed	インストール済み	ok
-pluginManager	officialTitle	Official	公式	ok
-pluginManager	statusProblem	Problem	問題	ok
-pluginManager	statusBeta	Experimental	実験的	ok
-pluginManager	reasonLabel	Reason	理由	ok
-pluginManager	metadataError	Package metadata error: {error}	パッケージメタデータのエラー: {error}	ok
-pluginManager	versionTag	v{version}	v{version}	ok
-pluginManager	partsLabel	Components	コンポーネント	ok
-pluginManager	partsEmpty	This plugin pack contains no components.	このプラグインパックにはコンポーネントが含まれていません。	ok
-pluginManager	partsCountTotal	{count} total	合計 {count}	ok
-pluginManager	partsCountRunning	{count} running	{count} 実行中	ok
-pluginManager	partsCountOff	{count} off	{count} オフ	ok
-pluginManager	partOff	Off	オフ	ok
-pluginManager	partsCountFailed	{count} failed	{count} 失敗	ok
-pluginManager	partsFilter	Filter components	コンポーネントを絞り込む	ok
-pluginManager	partsFilterEmpty	No component matches.	一致するコンポーネントがありません。	ok
-pluginManager	partToggle	Enable component {name}	コンポーネント {name} を有効にする	ok
-pluginManager	rowPhasePending	Waiting for dependencies	依存関係を待機中	ok
-pluginManager	rowPhaseLoading	Loading	読み込み中	ok
-pluginManager	rowPhaseActive	Running	実行中	ok
-pluginManager	rowPhaseFailed	Problem	問題	ok
-pluginManager	rowPhaseUnloading	Unloading	アンロード中	ok
-pluginManager	enableToggle	Enable {name}	{name} を有効にする	ok
-pluginManager	openDetail	View {name}	{name} を表示	ok
-pluginManager	backToList	Back to plugins	プラグイン一覧に戻る	ok
-pluginManager	crumbRoot	Plugins	プラグイン	ok
-pluginManager	backToPackage	Back to {name}	{name} に戻る	ok
-pluginManager	configureRow	Configure {name}	{name} を設定	ok
-pluginManager	rowStateIdle	Not running	未実行	ok
-pluginManager	uninstall	Uninstall	アンインストール	ok
-pluginManager	uninstallLabel	Uninstall {name}	{name} をアンインストール	ok
-pluginManager	installTitle	Add plugin	プラグインを追加	ok
-pluginManager	installDescription	Enter the plugin's package name, GitHub repository address, or local directory path.	プラグインのパッケージ名、GitHub リポジトリのアドレス、またはローカルディレクトリのパスを入力してください。	ok
-pluginManager	installSpecLabel	Package name or address	パッケージ名またはアドレス	ok
-pluginManager	installSpecPlaceholder	for example dsh-plugin-whale-pet	例: dsh-plugin-whale-pet	ok
-pluginManager	installGuideToggle	Install guide and examples	インストールのガイドと例	ok
-pluginManager	installGuideHide	Hide the guide	ガイドを閉じる	ok
-pluginManager	installGuideIdTitle	Enter the plugin's npm package name	プラグインの npm パッケージ名を入力	ok
-pluginManager	installGuideIdExample	dsh-plugin-whale-pet	dsh-plugin-whale-pet	ok
-pluginManager	installGuideIdHint	The plugin package name is the npm package name (like dsh-xxx or @author/plugin): the part after dsh plugin add or pnpm add in a community plugin's README install command.	プラグインのパッケージ名は npm のパッケージ名です (dsh-xxx や @作者/プラグイン名 のような形式)。コミュニティプラグインの README にあるインストール手順の、dsh plugin add または pnpm add の後ろの部分です。	ok
-pluginManager	installGuideExampleLabel	Example: 	例: 	ok
-pluginManager	installGitTemplateHint	Replace this with the actual Git repository address.	実際の Git リポジトリのアドレスに置き換えてください。	ok
-pluginManager	installPathTemplateHint	Replace this with the actual path to your local plugin directory.	ローカルのプラグインディレクトリの実際のパスに置き換えてください。	ok
-pluginManager	installGuideFill	Use example	例を入力	ok
-pluginManager	installGuideFillAria	Use the example {example}	例 {example} を入力	ok
-pluginManager	installGuideSafety	Install only plugins you trust: they run with your permissions and can damage DeepSeek Harness or leak your data.	信頼できるプラグインだけをインストールしてください。プラグインはあなたの権限で動作し、DeepSeek Harness を壊したり、データを外部に漏らしたりする可能性があります。	ok
-pluginManager	installUpgradeNotice	Installed plugins do not update automatically yet. To upgrade a plugin, uninstall it and install the new version. Later releases will keep improving the upgrade experience.	インストールしたプラグインはまだ自動更新されません。アップグレードするにはアンインストールしてから新しいバージョンをインストールしてください。今後のリリースで改善していきます。	ok
-pluginManager	registryToggle	Registry	レジストリ	ok
-pluginManager	registryLegend	The npm registry the plugin is downloaded from	プラグインのダウンロード元になる npm レジストリ	ok
-pluginManager	registryDefault	Default registry	既定のレジストリ	ok
-pluginManager	registryOfficial	Official npm registry	npm 公式レジストリ	ok
-pluginManager	registryNpmmirror	Mainland China mirror	中国本土のミラー	ok
-pluginManager	registryCustom	Custom address	カスタムアドレス	ok
-pluginManager	registryCustomPlaceholder	https://npm.example.com/	https://npm.example.com/	ok
-pluginManager	registryCustomHint	Enter an internal or private npm registry address starting with http:// or https://. If it requires a login, store the credentials in ~/.npmrc on this machine.	http:// または https:// で始まる、社内・プライベートな npm レジストリのアドレスを入力してください。ログインが必要な場合は、このマシンの ~/.npmrc に認証情報を保存してください。	ok
-pluginManager	registryCustomInvalid	Enter an address starting with http:// or https://	http:// または https:// で始まるアドレスを入力してください	ok
-pluginManager	registryListSeparator	, 	、	ok
-pluginManager	sentenceSeparator	 	 	ok
-pluginManager	installRun	Install	インストール	ok
-pluginManager	installChecking	Checking…	確認中…	ok
-pluginManager	installProblemInvalid	This is not a package name or address that can be installed: {reason}	インストールできるパッケージ名またはアドレスではありません: {reason}	ok
-pluginManager	installProblemInstalled	This plugin is already installed. To upgrade it, uninstall it and install it again	このプラグインはすでにインストールされています。アップグレードするにはアンインストールしてから再インストールしてください	ok
-pluginManager	installProblemShipped	This plugin ships with DSH; upgrading DSH updates it	このプラグインは DSH に同梱されています。DSH をアップグレードすると更新されます	ok
-pluginManager	installProblemNotFound	No such plugin was found	該当するプラグインが見つかりません	ok
-pluginManager	installProblemNotPackage	The path does not exist or is not a valid plugin package	そのパスが存在しないか、有効なプラグインパッケージではありません	ok
-pluginManager	installProblemNotBundle	This package declares no bundle, so it cannot be installed as a plugin: {reason}	このパッケージはバンドルを宣言していないため、プラグインとしてインストールできません: {reason}	ok
-pluginManager	installProblemNetwork	The plugin registry could not be reached; check the network and try again	プラグインのレジストリに接続できませんでした。ネットワークを確認してからもう一度お試しください	ok
-pluginManager	installProblemNetworkAll	No registry could be reached (tried: {registries}); check the network or proxy settings, or change the registry	どのレジストリにも接続できませんでした (試行: {registries})。ネットワークまたはプロキシの設定を確認するか、レジストリを変更してください	ok
-pluginManager	installProblemUnknown	The plugin could not be looked up: {reason}	プラグインの情報を取得できませんでした: {reason}	ok
-pluginManager	installingTitle	Installing the plugin…	プラグインをインストール中…	ok
-pluginManager	installedTitle	Installed	インストール済み	ok
-pluginManager	installFailedTitle	The plugin could not be installed	プラグインをインストールできませんでした	ok
-pluginManager	installGithubFailedTitle	Cannot access GitHub	GitHub にアクセスできません	ok
-pluginManager	installGithubTimeoutTitle	GitHub connection timed out	GitHub への接続がタイムアウトしました	ok
-pluginManager	installGithubFailedDescription	Try another installation source.	別のインストール元を試してください。	ok
-pluginManager	installUseGithubMirror	Use mainland China mirror	中国本土のミラーを使う	ok
-pluginManager	installTryAnotherWay	Try another way	別の方法を試す	ok
-pluginManager	installPackageLabel	Plugin package name	プラグインのパッケージ名	ok
-pluginManager	installEdit	Edit	編集	ok
-pluginManager	installEditAria	Back to editing	編集に戻る	ok
-pluginManager	installCancelAndEdit	Cancel installation and return to editing	インストールをキャンセルして編集に戻る	ok
-pluginManager	installApplyingCancellationError	Cancellation was not confirmed. Installation is being applied; wait for its result. {reason}	キャンセルを確認できませんでした。インストールは最終処理に入っているため、結果を待ってください。{reason}	ok
-pluginManager	installReconcile	Check installation status	インストール状態を確認	ok
-pluginManager	installUnknownTitle	Installation result unavailable	インストール結果を取得できません	ok
-pluginManager	installUnknownDescription	The Host has no active installation with this request id. Check the plugin list before trying again.	ホストにこの要求 ID のインストールがありません。プラグイン一覧を確認してからもう一度お試しください。	ok
-pluginManager	installResultUnconfirmed	The installation result was not received. Check installation status. {reason}	インストール結果を受信できませんでした。インストール状態を確認してください。{reason}	ok
-pluginManager	installAwaitingAcceptance	Waiting for the Host to accept installation. Cancellation will retry automatically after confirmation.	ホストがインストールを受け付けるのを待っています。確認後にキャンセルを自動で再試行します。	ok
-pluginManager	installBackgroundUnknown	Installation result unavailable. Check the plugin list.	インストール結果を取得できません。プラグイン一覧を確認してください。	ok
-pluginManager	installCancel	Cancel install	インストールをキャンセル	ok
-pluginManager	installCloseCancels	Cancel install and close	インストールをキャンセルして閉じる	ok
-pluginManager	installViewTask	View installation	インストールを表示	ok
-pluginManager	installUnconfirmedTitle	Installation status unconfirmed	インストール状態が未確認です	ok
-pluginManager	installBackgroundDone	Installation finished. View installation details.	インストールが完了しました。詳細を確認できます。	ok
-pluginManager	installBackgroundFailed	Installation failed. View installation details.	インストールに失敗しました。詳細を確認できます。	ok
-pluginManager	installBackgroundUnconfirmed	Installation status is unconfirmed. View the installation for details.	インストール状態が未確認です。詳細はインストールを開いて確認してください。	ok
-pluginManager	installBackgroundApplying	Installation is being applied and cannot be cancelled. View installation progress.	インストールは最終処理に入っていてキャンセルできません。進行状況を確認できます。	ok
-pluginManager	installStarting	Preparing installation…	インストールを準備中…	ok
-pluginManager	installCancelling	Stopping installation…	インストールを停止中…	ok
-pluginManager	installApplying	Applying configuration, please wait…	設定を反映しています。しばらくお待ちください…	ok
-pluginManager	installCancelledShort	Cancelled	キャンセル済み	ok
-pluginManager	installCancelled	Installation cancelled; the plugin is not enabled, and downloaded files may remain	インストールをキャンセルしました。プラグインは有効になっておらず、ダウンロードされたファイルが残っている場合があります	ok
-pluginManager	installCancelUnconfirmed	Installation has not been confirmed stopped. Retry cancellation or wait for the installation result. {reason}	インストールの停止を確認できませんでした。キャンセルを再試行するか、インストールの結果を待ってください。{reason}	ok
-pluginManager	installEnableNow	Enable now	今すぐ有効にする	ok
-pluginManager	installDetailsShow	Show install details	インストールの詳細を表示	ok
-pluginManager	installDetailsHide	Hide install details	インストールの詳細を隠す	ok
-pluginManager	installVersion	Version {version}	バージョン {version}	ok
-pluginManager	installSubjectPath	Local directory	ローカルディレクトリ	ok
-pluginManager	installSubjectGit	Git repository	Git リポジトリ	ok
-pluginManager	installSubjectTarball	Tarball	tarball	ok
-pluginManager	installLocation	Installs into {dir}	{dir} にインストールされます	ok
-pluginManager	installRetry	Retry	再試行	ok
-pluginManager	installChangeRegistry	Change registry	レジストリを変更	ok
-pluginManager	installAttempt	{previous} could not serve the package; retrying through {registry} (registry {index} of {total})	{previous} からパッケージを取得できなかったため、{registry} で再試行します ({total} 件中 {index} 件目のレジストリ)	ok
-pluginManager	installAttemptBadge	Attempt {index} · {registry}	第 {index} 回 · {registry}	ok
-pluginManager	installFailureNetwork	The network connection failed	ネットワーク接続に失敗しました	ok
-pluginManager	installFailureNetworkAll	No registry could be reached (tried: {registries}). Check the network or proxy settings, or change the registry and retry.	どのレジストリにも接続できませんでした (試行: {registries})。ネットワークまたはプロキシの設定を確認するか、レジストリを変更して再試行してください。	ok
-pluginManager	installFailureNetworkHost	{host} could not be reached. A GitHub address or a .tgz link is not fetched through the registry: this machine must reach it directly or through a proxy. If the plugin is also published to npm, enter its package name instead.	{host} に接続できませんでした。GitHub のアドレスや .tgz への直リンクはレジストリを経由しないため、このマシンから直接またはプロキシ経由で接続できる必要があります。プラグインが npm にも公開されている場合は、パッケージ名を入力してください。	ok
-pluginManager	installFailureNotFound	No such plugin was found	該当するプラグインが見つかりません	ok
-pluginManager	installFailureNoMatchingVersion	No version matches the request	条件に一致するバージョンがありません	ok
-pluginManager	installFailureDiskFull	The disk is full; the install stopped	ディスクの空き容量が足りないため、インストールを中止しました	ok
-pluginManager	installFailurePermission	No write permission; the plugin cannot be installed	書き込み権限がないため、プラグインをインストールできません	ok
-pluginManager	installFailureBuildBlocked	A dependency's install scripts need your permission before the install can continue	依存パッケージのインストールスクリプトを許可するまで、インストールを続行できません	ok
-pluginManager	installFailureBuildBlockedManual	pnpm blocked install scripts; allow them under allowBuilds in pnpm-workspace.yaml and retry	pnpm がインストールスクリプトをブロックしました。pnpm-workspace.yaml の allowBuilds で許可してから再試行してください	ok
-pluginManager	installFailureIntegrity	The downloaded package failed its integrity check	ダウンロードしたパッケージの整合性チェックに失敗しました	ok
-pluginManager	installFailureTimeout	The install timed out	インストールがタイムアウトしました	ok
-pluginManager	installFailurePnpmMissing	pnpm was not found, so nothing can be installed	pnpm が見つからないため、インストールできません	ok
-pluginManager	installFailureGeneric	Something went wrong during the install; the details say what	インストール中に問題が発生しました。詳細に原因が表示されます	ok
-pluginManager	terminalRunning	Running	実行中	ok
-pluginManager	terminalFailed	Failed	失敗	ok
-pluginManager	terminalDone	Done	完了	ok
-pluginManager	terminalCopy	Copy	コピー	ok
-pluginManager	terminalCopied	Copied	コピーしました	ok
-pluginManager	terminalNoOutput	No output	出力なし	ok
-pluginManager	terminalCollapseAria	Collapse output	出力を折りたたむ	ok
-pluginManager	terminalCollapse	Collapse	折りたたむ	ok
-pluginManager	terminalExpandAria	Expand the remaining {n} output lines	出力の残り {n} 行を展開	ok
-pluginManager	terminalExpand	… {n} more lines	… 残り {n} 行	ok
-pluginManager	terminalExitCode	exit code {code}	終了コード {code}	ok
-pluginManager	terminalSignal	signal {signal}	シグナル {signal}	ok
-pluginManager	terminalNoExitCode	no exit code	終了コードなし	ok
-pluginManager	installDoneNothing	Install finished with no new dependency.	インストールが完了しました。新しい依存パッケージはありません。	ok
-pluginManager	installDoneRestart	Installed; it loads at the next start.	インストールしました。次回の起動時に読み込まれます。	ok
-pluginManager	installDoneApproved	Install scripts allowed for {names}	{names} のインストールスクリプトを許可しました	ok
-pluginManager	installApprovalTitle	Install scripts need permission	インストールスクリプトの許可が必要です	ok
-pluginManager	installApprovalDescription	These packages have install scripts that pnpm did not run.	以下のパッケージには、pnpm が実行しなかったインストールスクリプトがあります。	ok
-pluginManager	installApprovalConsequence	Once allowed, the scripts run here with your permissions, and the permission is saved in this profile.	許可すると、スクリプトはこの環境であなたの権限で実行され、許可はこのプロファイルに保存されます。	ok
-pluginManager	installApprovalCaution	Allow only packages you trust.	信頼できるパッケージだけを許可してください。	ok
-pluginManager	installApproveAndRetry	Allow these scripts and retry	これらのスクリプトを許可して再試行	ok
-pluginManager	installClose	Done	完了	ok
-pluginManager	close	Close	閉じる	ok
-pluginManager	cancel	Cancel	キャンセル	ok
-pluginManager	confirmUninstallTitle	Uninstall "{name}"?	「{name}」をアンインストールしますか？	ok
-pluginManager	confirmUninstallDescription	What it provides goes away once it is uninstalled.	アンインストールすると、それが提供している機能は使えなくなります。	ok
-pluginManager	confirmUninstall	Uninstall	アンインストール	ok
-pluginManager	failedEnable	Could not enable: {reason}	有効にできませんでした: {reason}	ok
-pluginManager	failedDisable	Could not disable: {reason}	無効にできませんでした: {reason}	ok
-pluginManager	failedUninstall	Could not uninstall: {reason}	アンインストールできませんでした: {reason}	ok
-pluginManager	failedRowEnable	Could not enable the component: {reason}	コンポーネントを有効にできませんでした: {reason}	ok
-pluginManager	failedRowDisable	Could not disable the component: {reason}	コンポーネントを無効にできませんでした: {reason}	ok
-pluginManager	reasonManagementRequired	Plugin management needs it; it cannot be switched off or uninstalled.	プラグイン管理に必要なため、無効化もアンインストールもできません。	ok
-pluginManager	reasonUnaddressable	The profile patch cannot address this one uniquely.	プロファイルのパッチではこれを一意に指定できません。	ok
-pluginManager	reasonUnknownPlugin	No such plugin.	該当するプラグインがありません。	ok
-pluginManager	reasonInvalidSpec	Enter a valid package name or address.	有効なパッケージ名またはアドレスを入力してください。	ok
-pluginManager	reasonAmbiguousInstall	Which package was installed cannot be told from the dependency change.	依存関係の変化から、どのパッケージがインストールされたか判断できません。	ok
-pluginManager	reasonNotBundle	This package declares no bundle, so it cannot be managed as a plugin.	このパッケージはバンドルを宣言していないため、プラグインとして管理できません。	ok
-pluginManager	reasonNotRemovable	This package is not owned by the profile, or plugin management needs it.	このパッケージはプロファイルが所有していないか、プラグイン管理に必要です。	ok
-pluginManager	reasonStopProfile	This profile runs without HMR; stop it and uninstall the package with dsh plugin.	このプロファイルは HMR なしで動作しています。停止してから dsh plugin でアンインストールしてください。	ok
-pluginManager	reasonBundleInUse	Other configuration still uses this bundle's components; switch them off first.	ほかの設定がこのバンドルのコンポーネントをまだ使用しています。先にそれらを無効にしてください。	ok
-pluginManager	reasonStaleApproval	The pending script approvals changed; install again to refresh them.	許可待ちのインストールスクリプトが変わったため、再インストールして更新してください。	ok
-pluginManager	reasonIncompatibleVersion	{plugin} is incompatible with DSH {runtime} (requires {peers}); running it may cause crashes or data loss.	{plugin} は DSH {runtime} と互換性がありません (必要なバージョン: {peers})。実行するとクラッシュやデータ損失が起きる可能性があります。	ok
-pluginManager	reasonIncompatibleVersionUnnamed	This plugin is incompatible with the running DSH version; running it may cause crashes or data loss.	このプラグインは実行中の DSH のバージョンと互換性がありません。実行するとクラッシュやデータ損失が起きる可能性があります。	ok
-pluginManager	reasonIncompatibleInstall	Install a plugin version compatible with this DSH.	この DSH と互換性のあるバージョンのプラグインをインストールしてください。	ok
-pluginManager	reasonIncompatibleInstalled	Uninstall it and install a version compatible with this DSH.	アンインストールして、この DSH と互換性のあるバージョンをインストールしてください。	ok
-pluginManager	reasonOperationError	The Host reported an error.	ホストがエラーを報告しました。	ok
+chat	message.stepProcess.thinking	Analyzing the request	リクエストを解析中	ok
+chat	message.stepProcess.read	Reading files	ファイルを読み取り中	ok
+chat	message.stepProcess.readImage	Reading images	画像を読み取り中	ok
+chat	message.stepProcess.write	Writing files	ファイルを書き込み中	ok
+chat	message.stepProcess.search	Searching code	コードを検索中	ok
+chat	message.stepProcess.edit	Editing files	ファイルを編集中	ok
+chat	message.stepProcess.commands	Running commands	コマンドを実行中	ok
+chat	message.stepProcess.code	Running code	コードを実行中	ok
+chat	message.stepProcess.webSearch	Searching the web	Web を検索中	ok
+chat	message.stepProcess.webFetch	Visiting web pages	Web ページを閲覧中	ok
+chat	message.stepProcess.subagents	Coordinating subagents	サブエージェントを調整中	ok
+chat	message.stepProcess.plan	Updating the plan	計画を更新中	ok
+chat	message.stepProcess.questions	Waiting for your action	操作を待っています	ok
+chat	message.stepProcess.tools	Calling tools	ツールを呼び出し中	ok
+chat	message.stepProcess.prepare.read	Preparing to read files	ファイルの読み取りを準備中	ok
+chat	message.stepProcess.prepare.readImage	Preparing to read images	画像の読み取りを準備中	ok
+chat	message.stepProcess.prepare.write	Preparing to write files	ファイルの書き込みを準備中	ok
+chat	message.stepProcess.prepare.search	Preparing to search code	コードの検索を準備中	ok
+chat	message.stepProcess.prepare.edit	Preparing to edit files	ファイルの編集を準備中	ok
+chat	message.stepProcess.prepare.commands	Preparing to run commands	コマンドの実行を準備中	ok
+chat	message.stepProcess.prepare.code	Preparing to run code	コードの実行を準備中	ok
+chat	message.stepProcess.prepare.webSearch	Preparing to search the web	Web 検索を準備中	ok
+chat	message.stepProcess.prepare.webFetch	Preparing to visit web pages	Web ページの閲覧を準備中	ok
+chat	message.stepProcess.prepare.subagents	Preparing to coordinate subagents	サブエージェントの調整を準備中	ok
+chat	message.stepProcess.prepare.plan	Preparing to update the plan	計画の更新を準備中	ok
+chat	message.stepProcess.prepare.questions	Preparing questions	質問を準備中	ok
+chat	message.stepProcess.prepare.tools	Preparing tool calls	ツール呼び出しを準備中	ok
+chat	message.stepProcess.done.thinking	Analysis completed	解析が完了しました	ok
+chat	message.stepProcess.done.read	Read files	ファイルを読み取りました	ok
+chat	message.stepProcess.done.readImage	Read images	画像を読み取りました	ok
+chat	message.stepProcess.done.write	Wrote files	ファイルを書き込みました	ok
+chat	message.stepProcess.done.search	Searched code	コードを検索しました	ok
+chat	message.stepProcess.done.edit	Edited files	ファイルを編集しました	ok
+chat	message.stepProcess.done.commands	Ran commands	コマンドを実行しました	ok
+chat	message.stepProcess.done.code	Ran code	コードを実行しました	ok
+chat	message.stepProcess.done.webSearch	Searched the web	Web を検索しました	ok
+chat	message.stepProcess.done.webFetch	Visited web pages	Web ページを閲覧しました	ok
+chat	message.stepProcess.done.subagents	Coordinated subagents	サブエージェントを調整しました	ok
+chat	message.stepProcess.done.plan	Updated the plan	計画を更新しました	ok
+chat	message.stepProcess.done.questions	Asked questions	質問しました	ok
+chat	message.stepProcess.done.tools	Called tools	ツールを呼び出しました	ok
+chat	message.stepProcess.joinTwo	{first} and {second}	{first}、{second}	ok
+chat	message.stepProcess.comma	, 	、	ok
+chat	message.stepProcess.sharedPrefix			ok
+chat	message.stepProcess.more	{title}, etc.	{title} など	ok
+chat	message.trigger.request	Execution requested	実行を要求	ok
+chat	message.trigger.goal	Continuing goal	ゴールを継続	ok
+chat	message.trigger.agent	Task message received	タスクメッセージを受信	ok
+chat	message.trigger.team	Team message received	チームメッセージを受信	ok
+chat	message.trigger.subagent	Subtask status updated	サブタスクの状態が更新	ok
+chat	message.trigger.github	GitHub event received	GitHub イベントを受信	ok
+chat	message.trigger.webhook	External event received	外部イベントを受信	ok
+chat	message.trigger.schedule	Automation task	自動化タスク	ok
+chat	message.trigger.job	Background task updated	バックグラウンドタスクが更新	ok
+chat	message.trigger.plugin	Plugin status updated	プラグインの状態が更新	ok
+chat	message.trigger.explanation	This notification triggered this response.	この通知がこの応答のきっかけです。	ok
+chat	message.turnProcess.worked	Completed	完了	ok
+chat	message.turnProcess.took	Completed in 	所要時間 	ok
+chat	message.turnProcess.failed	Failed	失敗	ok
+chat	view.chat	Chat	チャット	ok
+chat	image.open	View full image	画像全体を表示	ok
+chat	image.loading	Loading image…	画像を読み込んでいます…	ok
+chat	image.failed	Image preview unavailable	画像をプレビューできません	ok
+chat	image.dialog	Image preview	画像のプレビュー	ok
+chat	image.close	Close image preview	画像のプレビューを閉じる	ok
+chat	number.groupSeparator	,	,	ok
+chat	duration.compactSeconds	{seconds}s	{seconds} 秒	ok
+chat	duration.compactMinutes	{minutes}m{seconds}s	{minutes} 分 {seconds} 秒	ok
+chat	duration.milliseconds	{milliseconds}ms	{milliseconds}ms	ok
+chat	stats.counts	{turns} turns {steps} steps	{turns} ターン {steps} ステップ	ok
+chat	stats.cacheHit	Cache hit {percent}%	キャッシュヒット {percent}%	ok
+chat	stats.dialog.title	Session statistics	セッション統計	ok
+chat	stats.dialog.usageTitle	Token usage	トークン使用量	ok
+chat	stats.dialog.llmTime	LLM time	LLM の時間	ok
+chat	stats.dialog.toolTime	Tool time	ツールの時間	ok
+chat	stats.dialog.ttft	Avg time to first token (TTFT)	初回トークンまでの平均時間 (TTFT)	ok
+chat	stats.dialog.speed	Tokens per second (TPS)	1 秒あたりのトークン数 (TPS)	ok
+chat	chat.loadingHistory	Loading history…	履歴を読み込んでいます…	ok
+chat	chat.loadError	Failed to load history: {message} ({code})	履歴を読み込めませんでした: {message} ({code})	ok
+chat	chat.loadOlder	Load earlier	以前を読み込む	ok
+chat	chat.toBottom	Back to bottom	最下部へ戻る	ok
+chat	chat.deepDiving	Deep diving	深掘り中	ok
+chat	chat.deepDivingFor	Deep diving for {duration} ···	{duration} 深掘り中 ···	ok
+chat	chat.turnNavigation.label	Turn navigation	ターン移動	ok
+chat	chat.turnNavigation.jump	Jump to turn {turn}	ターン {turn} へ移動	ok
+chat	chat.turnNavigation.jumpLoad	Load and jump to turn {turn}	読み込んでターン {turn} へ移動	ok
+chat	chat.turnNavigation.turn	Turn {turn}	ターン {turn}	ok
+chat	settings.performance.title	Performance & usage	パフォーマンスと使用状況	ok
+chat	settings.performance.description	Choose how much performance and usage information to show	表示するパフォーマンスと使用状況の情報量を選択します	ok
+chat	settings.performance.compact	Compact	コンパクト	ok
+chat	settings.performance.detailed	Detailed	詳細	ok
+chat	settings.links.title	Open chat links in	チャットのリンクを開く場所	ok
+chat	settings.links.description	Choose where to open web links	Web リンクを開く場所を選択します	ok
+chat	settings.links.sidebar	In-App Sidebar	アプリ内サイドバー	ok
+chat	settings.links.newTab	Default Browser	既定のブラウザー	ok
+chat	settings.transcript.title	Work details	作業の詳細	ok
+chat	settings.transcript.description	Choose how much detail to show for tool calls	ツール呼び出しをどこまで詳しく表示するかを選択します	ok
+chat	settings.collapse.title	When to Collapse Work Details	作業詳細を折りたたむタイミング	ok
+chat	settings.collapse.description	Choose when to automatically collapse work details	作業詳細を自動で折りたたむタイミングを選びます	ok
+chat	settings.collapse.completion	On completion	完了時	ok
+chat	settings.collapse.nextInput	On next message	次のメッセージ時	ok
+chat	settings.transcript.compact	Compact	コンパクト	ok
+chat	settings.transcript.standard	Standard	標準	ok
+chat	settings.transcript.detailed	Detailed	詳細	ok
+chat	settings.transcript.verbose	Verbose	とても詳細	ok
+chat	fileOpen.title	Couldn’t open file	ファイルを開けませんでした	ok
+chat	fileOpen.unknown	Couldn’t open this file	このファイルを開けませんでした	ok
+chat	message.extraBlock	Extra content block	追加のコンテンツブロック	ok
+chat	message.systemPrompt	System prompt	システムプロンプト	ok
+chat	message.systemPromptUpdate	System prompt update	システムプロンプトの更新	ok
+chat	message.toolAdded	Tool added: {name}	ツールを追加: {name}	ok
+chat	message.toolRemoved	Tool removed: {name}	ツールを削除: {name}	ok
+chat	message.toolsAdded	Added: {names}	追加: {names}	ok
+chat	message.toolsAddedCount	{count} added	{count} 件追加	ok
+chat	message.toolsChanged	{added} added, {removed} removed	{added} 件追加、{removed} 件削除	ok
+chat	message.toolsRemoved	Removed: {names}	削除: {names}	ok
+chat	message.toolsRemovedCount	{count} removed	{count} 件削除	ok
+chat	message.toolsUpdated	Tools updated	ツールを更新	ok
+chat	message.contextInjection	Context injection	コンテキストの注入	ok
+chat	message.contextRecall	Session recall	セッションの呼び戻し	ok
+chat	message.referenceSummary	Referenced session · {labels}	参照したセッション · {labels}	ok
+chat	message.referenceSeparator	, 	、	ok
+chat	message.context.instructions.loaded	loaded	読み込み	ok
+chat	message.context.instructions.added	added	追加	ok
+chat	message.context.instructions.updated	updated	更新	ok
+chat	message.context.instructions.removed	removed	削除	ok
+chat	message.context.catalog.replaced	Replacement catalog	置き換え後のカタログ	ok
+chat	message.context.catalog.more	… {count} more	… 他 {count} 件	ok
+chat	message.context.snapshot.supersedes	Supersedes earlier snapshots	以前のスナップショットを置き換えます	ok
+chat	message.context.relay.from	From session {session}	セッション {session} から	ok
+chat	message.context.recall.counts	{retained} kept · {omitted} omitted	{retained} 件保持 · {omitted} 件省略	ok
+chat	message.context.recall.truncated	truncated	省略	ok
+chat	message.compaction	Context compacted	コンテキストを圧縮しました	ok
+chat	message.compaction.running	Compacting context…	コンテキストを圧縮しています…	ok
+chat	message.compaction.completed	Compacted {items} history items (~{tokens} tokens)	履歴 {items} 件を圧縮しました (約 {tokens} トークン)	ok
+chat	message.compaction.expand	View compaction summary	圧縮の要約を表示	ok
+chat	message.compaction.unavailable	Compaction summary unavailable	圧縮の要約はありません	ok
+chat	message.compaction.commandTitle	compact	compact	ok
+chat	message.think	Think	思考	ok
+chat	message.unknownSurface	Unknown surface event: {type}	不明なイベント: {type}	ok
+chat	message.unknownBlock	Unknown content block	不明なコンテンツブロック	ok
+chat	message.turnProcess.toolCalls.one	{count} tool call	ツール呼び出し {count} 回	ok
+chat	message.turnProcess.toolCalls.other	{count} tool calls	ツール呼び出し {count} 回	ok
+chat	message.turnProcess.messages.one	{count} message	メッセージ {count} 件	ok
+chat	message.turnProcess.messages.other	{count} messages	メッセージ {count} 件	ok
+chat	message.turnProcess.subagents.one	{count} subagent	サブエージェント {count} 件	ok
+chat	message.turnProcess.subagents.other	{count} subagents	サブエージェント {count} 件	ok
+chat	message.turnProcess.thoughtForAWhile	Thought for a while	しばらく思考しました	ok
+chat	message.turnProcess.separator	 · 	 · 	ok
+chat	message.stopped	Stopped	停止しました	ok
+chat	message.branch	Branch into a new conversation	新しい会話に分岐	ok
+chat	message.branchUnavailable	Available only on the last message of a completed turn	完了したターンの最後のメッセージでのみ利用できます	ok
+chat	message.retry.active	Retrying model request	モデルリクエストを再試行しています	ok
+chat	message.retry.cancelled	Model request retry cancelled	モデルリクエストの再試行をキャンセルしました	ok
+chat	message.retry.started	Retried model request	モデルリクエストを再試行しました	ok
+chat	message.retry.scheduled	Waiting to retry model request	モデルリクエストの再試行を待機中	ok
+chat	message.retry.status	{label} ({retry}/{maximum}) · {seconds}s	{label} ({retry}/{maximum}) · {seconds} 秒	ok
+chat	message.retry.delay	Retry delay: 	再試行まで: 	ok
+chat	message.retry.failure	Failure reason: 	失敗の理由: 	ok
+chat	message.failure.auth	API key is invalid	API キーが正しくありません	ok
+chat	message.taskStopped	Task stopped	タスクを停止しました	ok
+chat	message.failure.accountSignedOut	Stopped because you signed out of DeepSeek.	DeepSeek からサインアウトしたため停止しました。	ok
+chat	message.failure.interrupted	The DSH process exited before this turn finished (for example, it was killed, crashed, or timed out while shutting down), so the turn was closed when DSH restarted. Unfinished tool calls have unknown outcomes.	DSH プロセスがこのターンの完了前に終了したため（強制終了・クラッシュ・終了時のタイムアウトなど）、DSH の再起動時にこのターンは終了扱いになりました。未完了のツール呼び出しの結果は不明です。	ok
+chat	message.failure.accountSignInRequired	Sign in to DeepSeek and ensure the request destination supports account authentication.	DeepSeek にサインインし、リクエスト先がアカウント認証に対応していることを確認してください。	ok
+chat	message.failure.quota	Request quota exhausted.	リクエストの上限に達しました。	ok
+chat	message.turnError	This turn failed	このターンは失敗しました	ok
+chat	message.maxTokens	Output token limit reached	出力トークンの上限に達しました	ok
+chat	message.maxTokens.hint	The reply was cut off; earlier output is preserved in the conversation. Send "continue" to let the model resume.	返答が途中で切れました。ここまでの出力は会話に残っています。「続けて」と送るとモデルが再開します。	ok
+chat	message.tokensPerSecond	{tps} tok/s	{tps} tok/s	ok
+chat	message.turnUsage.title	Turn usage	ターンの使用量	ok
+chat	message.turnUsage.consumed	Usage {total}	使用量 {total}	ok
+chat	message.turnUsage.model	Provider / model	プロバイダー / モデル	ok
+chat	message.turnUsage.cacheHit	Cache hit	キャッシュヒット	ok
+chat	message.turnUsage.input	Uncached input	未キャッシュの入力	ok
+chat	message.turnUsage.cacheRead	Cached input	キャッシュの読み取り	ok
+chat	message.turnUsage.cacheWrite	Cache write	キャッシュの書き込み	ok
+chat	message.turnUsage.output	Output	出力	ok
+chat	message.turnUsage.reasoning	 ({tokens} reasoning)	 (推論 {tokens})	ok
+chat	message.turnUsage.count	{count} tok	{count} tok	ok
+chat	duration.secondUnit	s	秒	ok
+chat	duration.minuteUnit	m 	分 	ok
+chat	duration.hourUnit	h 	時間 	ok
+chat	command.running	Running…	実行中…	ok
+chat	command.failed	Command failed	コマンドが失敗しました	ok
+chat	command.done	Completed	完了	ok
+chat	command.title	Command	コマンド	ok
+chat	row.running	Running	実行中	ok
+chat	row.failed	Failed	失敗	ok
+chat	json.truncated	… truncated, {total} characters total	… 全 {total} 文字で省略	ok
+chat	clock.md	{m}/{d}	{m}/{d}	ok
+chat	clock.ymd	{y}-{m}-{d}	{y}-{m}-{d}	ok
 schedule.manager	panel	Automation tasks	自動化タスク	ok
 schedule.manager	title	Automation tasks	自動化タスク	ok
 schedule.manager	new.action	New	新規	ok
@@ -774,7 +1001,7 @@ schedule.manager	detail.more	Automation task actions	自動化タスクの操作
 schedule.manager	detail.nextRun	Next run	次回の実行	ok
 schedule.manager	detail.tabs	Task detail views	タスク詳細の表示	ok
 schedule.manager	detail.rule	Rules	ルール	ok
-schedule.manager	detail.records	Delivery records	実行記録	ok
+schedule.manager	detail.records	Records	記録	ok
 schedule.manager	delivery.empty	No delivery record available	実行記録がありません	ok
 schedule.manager	delivery.loading	Loading delivery records…	実行記録を読み込み中…	ok
 schedule.manager	delivery.error	Could not load delivery records.	実行記録を読み込めませんでした。	ok
@@ -882,6 +1109,7 @@ schedule.manager	timing.zoneNoStored	A one-time task stores only its target mome
 schedule.manager	timing.inactive	Inactive tasks are read-only. Their timing cannot be edited.	終了したタスクは読み取り専用です。実行時刻は編集できません。	ok
 schedule.manager	timing.conflict	This task changed while you were editing. Your draft is retained. Cancel and reopen after refresh to edit the latest rule.	編集中にタスクが変更されました。下書きは保持されています。最新のルールを編集するには、更新後にキャンセルして開き直してください。	ok
 schedule.manager	timing.notFound	This task is no longer available. Your draft is retained; cancel to close the editor.	このタスクは利用できません。下書きは保持されています。キャンセルすると編集画面を閉じます。	ok
+schedule.manager	timing.subagentSession	This session belongs to a sub-agent, which never receives delivered reminders.	このセッションはサブエージェントのものです。サブエージェントには配信リマインダーは届きません。	ok
 schedule.manager	timing.invalid	Enter a valid date and time, or check the timing fields.	有効な日付と時刻を入力するか、時間の項目を確認してください。	ok
 schedule.manager	timing.invalidZone	Enter a valid IANA time zone, for example Asia/Shanghai.	有効な IANA タイムゾーンを入力してください (例: Asia/Tokyo)。	ok
 schedule.manager	timing.notFuture	Choose a date and time in the future.	未来の日付と時刻を指定してください。	ok
@@ -936,192 +1164,6 @@ schedule.manager	card.open	Open	開く	ok
 schedule.manager	card.openLabel	Open task details: {title}	タスクの詳細を開く: {title}	ok
 schedule.manager	card.deleted	Deleted	削除済み	ok
 schedule.manager	tool.invoked	Invoked {name}	{name} を呼び出しました	ok
-chat	message.stepProcess.thinking	Analyzing the request	リクエストを解析中	ok
-chat	message.stepProcess.read	Reading files	ファイルを読み取り中	ok
-chat	message.stepProcess.readImage	Reading images	画像を読み取り中	ok
-chat	message.stepProcess.write	Writing files	ファイルを書き込み中	ok
-chat	message.stepProcess.search	Searching code	コードを検索中	ok
-chat	message.stepProcess.edit	Editing files	ファイルを編集中	ok
-chat	message.stepProcess.commands	Running commands	コマンドを実行中	ok
-chat	message.stepProcess.code	Running code	コードを実行中	ok
-chat	message.stepProcess.webSearch	Searching the web	Web を検索中	ok
-chat	message.stepProcess.webFetch	Visiting web pages	Web ページを閲覧中	ok
-chat	message.stepProcess.subagents	Coordinating subagents	サブエージェントを調整中	ok
-chat	message.stepProcess.plan	Updating the plan	計画を更新中	ok
-chat	message.stepProcess.questions	Waiting for your action	操作を待っています	ok
-chat	message.stepProcess.tools	Calling tools	ツールを呼び出し中	ok
-chat	message.stepProcess.prepare.read	Preparing to read files	ファイルの読み取りを準備中	ok
-chat	message.stepProcess.prepare.readImage	Preparing to read images	画像の読み取りを準備中	ok
-chat	message.stepProcess.prepare.write	Preparing to write files	ファイルの書き込みを準備中	ok
-chat	message.stepProcess.prepare.search	Preparing to search code	コードの検索を準備中	ok
-chat	message.stepProcess.prepare.edit	Preparing to edit files	ファイルの編集を準備中	ok
-chat	message.stepProcess.prepare.commands	Preparing to run commands	コマンドの実行を準備中	ok
-chat	message.stepProcess.prepare.code	Preparing to run code	コードの実行を準備中	ok
-chat	message.stepProcess.prepare.webSearch	Preparing to search the web	Web 検索を準備中	ok
-chat	message.stepProcess.prepare.webFetch	Preparing to visit web pages	Web ページの閲覧を準備中	ok
-chat	message.stepProcess.prepare.subagents	Preparing to coordinate subagents	サブエージェントの調整を準備中	ok
-chat	message.stepProcess.prepare.plan	Preparing to update the plan	計画の更新を準備中	ok
-chat	message.stepProcess.prepare.questions	Preparing questions	質問を準備中	ok
-chat	message.stepProcess.prepare.tools	Preparing tool calls	ツール呼び出しを準備中	ok
-chat	message.stepProcess.done.thinking	Analysis completed	解析が完了しました	ok
-chat	message.stepProcess.done.read	Read files	ファイルを読み取りました	ok
-chat	message.stepProcess.done.readImage	Read images	画像を読み取りました	ok
-chat	message.stepProcess.done.write	Wrote files	ファイルを書き込みました	ok
-chat	message.stepProcess.done.search	Searched code	コードを検索しました	ok
-chat	message.stepProcess.done.edit	Edited files	ファイルを編集しました	ok
-chat	message.stepProcess.done.commands	Ran commands	コマンドを実行しました	ok
-chat	message.stepProcess.done.code	Ran code	コードを実行しました	ok
-chat	message.stepProcess.done.webSearch	Searched the web	Web を検索しました	ok
-chat	message.stepProcess.done.webFetch	Visited web pages	Web ページを閲覧しました	ok
-chat	message.stepProcess.done.subagents	Coordinated subagents	サブエージェントを調整しました	ok
-chat	message.stepProcess.done.plan	Updated the plan	計画を更新しました	ok
-chat	message.stepProcess.done.questions	Asked questions	質問しました	ok
-chat	message.stepProcess.done.tools	Called tools	ツールを呼び出しました	ok
-chat	message.stepProcess.joinTwo	{first} and {second}	{first}、{second}	ok
-chat	message.stepProcess.comma	, 	、	ok
-chat	message.stepProcess.sharedPrefix			ok
-chat	message.stepProcess.more	{title}, etc.	{title} など	ok
-chat	message.trigger.request	Execution requested	実行を要求	ok
-chat	message.trigger.goal	Continuing goal	ゴールを継続	ok
-chat	message.trigger.agent	Task message received	タスクメッセージを受信	ok
-chat	message.trigger.team	Team message received	チームメッセージを受信	ok
-chat	message.trigger.subagent	Subtask status updated	サブタスクの状態が更新	ok
-chat	message.trigger.github	GitHub event received	GitHub イベントを受信	ok
-chat	message.trigger.webhook	External event received	外部イベントを受信	ok
-chat	message.trigger.schedule	Automation task	自動化タスク	ok
-chat	message.trigger.job	Background task updated	バックグラウンドタスクが更新	ok
-chat	message.trigger.plugin	Plugin status updated	プラグインの状態が更新	ok
-chat	message.trigger.explanation	This notification triggered this response.	この通知がこの応答のきっかけです。	ok
-chat	message.turnProcess.worked	Completed	完了	ok
-chat	message.turnProcess.took	Completed in 	所要時間 	ok
-chat	message.turnProcess.failed	Failed	失敗	ok
-chat	view.chat	Chat	チャット	ok
-chat	image.open	View full image	画像全体を表示	ok
-chat	image.loading	Loading image…	画像を読み込んでいます…	ok
-chat	image.failed	Image preview unavailable	画像をプレビューできません	ok
-chat	image.dialog	Image preview	画像のプレビュー	ok
-chat	image.close	Close image preview	画像のプレビューを閉じる	ok
-chat	number.groupSeparator	,	,	ok
-chat	duration.compactSeconds	{seconds}s	{seconds} 秒	ok
-chat	duration.compactMinutes	{minutes}m{seconds}s	{minutes} 分 {seconds} 秒	ok
-chat	duration.milliseconds	{milliseconds}ms	{milliseconds}ms	ok
-chat	stats.counts	{turns} turns {steps} steps	{turns} ターン {steps} ステップ	ok
-chat	stats.cacheHit	Cache hit {percent}%	キャッシュヒット {percent}%	ok
-chat	stats.dialog.title	Session statistics	セッション統計	ok
-chat	stats.dialog.usageTitle	Token usage	トークン使用量	ok
-chat	stats.dialog.llmTime	LLM time	LLM の時間	ok
-chat	stats.dialog.toolTime	Tool time	ツールの時間	ok
-chat	stats.dialog.ttft	Avg time to first token (TTFT)	初回トークンまでの平均時間 (TTFT)	ok
-chat	stats.dialog.speed	Tokens per second (TPS)	1 秒あたりのトークン数 (TPS)	ok
-chat	chat.loadingHistory	Loading history…	履歴を読み込んでいます…	ok
-chat	chat.loadError	Failed to load history: {message} ({code})	履歴を読み込めませんでした: {message} ({code})	ok
-chat	chat.loadOlder	Load earlier	以前を読み込む	ok
-chat	chat.toBottom	Back to bottom	最下部へ戻る	ok
-chat	chat.deepDiving	Deep diving	深掘り中	ok
-chat	chat.deepDivingFor	Deep diving for {duration} ···	{duration} 深掘り中 ···	ok
-chat	chat.turnNavigation.label	Turn navigation	ターン移動	ok
-chat	chat.turnNavigation.jump	Jump to turn {turn}	ターン {turn} へ移動	ok
-chat	chat.turnNavigation.jumpLoad	Load and jump to turn {turn}	読み込んでターン {turn} へ移動	ok
-chat	chat.turnNavigation.turn	Turn {turn}	ターン {turn}	ok
-chat	settings.performance.title	Performance & usage	パフォーマンスと使用状況	ok
-chat	settings.performance.description	Choose how much performance and usage information to show	表示するパフォーマンスと使用状況の情報量を選択します	ok
-chat	settings.performance.compact	Compact	コンパクト	ok
-chat	settings.performance.detailed	Detailed	詳細	ok
-chat	settings.links.title	Open chat links in	チャットのリンクを開く場所	ok
-chat	settings.links.description	Choose where to open web links	Web リンクを開く場所を選択します	ok
-chat	settings.links.sidebar	In-App Sidebar	アプリ内サイドバー	ok
-chat	settings.links.newTab	Default Browser	既定のブラウザー	ok
-chat	settings.transcript.title	Work details	作業の詳細	ok
-chat	settings.transcript.description	Choose how much detail to show for tool calls	ツール呼び出しをどこまで詳しく表示するかを選択します	ok
-chat	settings.transcript.compact	Compact	コンパクト	ok
-chat	settings.transcript.standard	Standard	標準	ok
-chat	settings.transcript.detailed	Detailed	詳細	ok
-chat	settings.transcript.verbose	Verbose	とても詳細	ok
-chat	fileOpen.title	Couldn’t open file	ファイルを開けませんでした	ok
-chat	fileOpen.unknown	Couldn’t open this file	このファイルを開けませんでした	ok
-chat	message.extraBlock	Extra content block	追加のコンテンツブロック	ok
-chat	message.systemPrompt	System prompt	システムプロンプト	ok
-chat	message.systemPromptUpdate	System prompt update	システムプロンプトの更新	ok
-chat	message.toolAdded	Tool added: {name}	ツールを追加: {name}	ok
-chat	message.toolRemoved	Tool removed: {name}	ツールを削除: {name}	ok
-chat	message.toolsAdded	Added: {names}	追加: {names}	ok
-chat	message.toolsAddedCount	{count} added	{count} 件追加	ok
-chat	message.toolsChanged	{added} added, {removed} removed	{added} 件追加、{removed} 件削除	ok
-chat	message.toolsRemoved	Removed: {names}	削除: {names}	ok
-chat	message.toolsRemovedCount	{count} removed	{count} 件削除	ok
-chat	message.toolsUpdated	Tools updated	ツールを更新	ok
-chat	message.contextInjection	Context injection	コンテキストの注入	ok
-chat	message.contextRecall	Session recall	セッションの呼び戻し	ok
-chat	message.referenceSummary	Referenced session · {labels}	参照したセッション · {labels}	ok
-chat	message.referenceSeparator	, 	、	ok
-chat	message.context.instructions.loaded	loaded	読み込み	ok
-chat	message.context.instructions.added	added	追加	ok
-chat	message.context.instructions.updated	updated	更新	ok
-chat	message.context.instructions.removed	removed	削除	ok
-chat	message.context.catalog.replaced	Replacement catalog	置き換え後のカタログ	ok
-chat	message.context.catalog.more	… {count} more	… 他 {count} 件	ok
-chat	message.context.snapshot.supersedes	Supersedes earlier snapshots	以前のスナップショットを置き換えます	ok
-chat	message.context.relay.from	From session {session}	セッション {session} から	ok
-chat	message.context.recall.counts	{retained} kept · {omitted} omitted	{retained} 件保持 · {omitted} 件省略	ok
-chat	message.context.recall.truncated	truncated	省略	ok
-chat	message.compaction	Context compacted	コンテキストを圧縮しました	ok
-chat	message.compaction.running	Compacting context…	コンテキストを圧縮しています…	ok
-chat	message.compaction.completed	Compacted {items} history items (~{tokens} tokens)	履歴 {items} 件を圧縮しました (約 {tokens} トークン)	ok
-chat	message.compaction.expand	View compaction summary	圧縮の要約を表示	ok
-chat	message.compaction.unavailable	Compaction summary unavailable	圧縮の要約はありません	ok
-chat	message.compaction.commandTitle	compact	compact	ok
-chat	message.think	Think	思考	ok
-chat	message.unknownSurface	Unknown surface event: {type}	不明なイベント: {type}	ok
-chat	message.unknownBlock	Unknown content block	不明なコンテンツブロック	ok
-chat	message.turnProcess.toolCalls.one	{count} tool call	ツール呼び出し {count} 回	ok
-chat	message.turnProcess.toolCalls.other	{count} tool calls	ツール呼び出し {count} 回	ok
-chat	message.turnProcess.messages.one	{count} message	メッセージ {count} 件	ok
-chat	message.turnProcess.messages.other	{count} messages	メッセージ {count} 件	ok
-chat	message.turnProcess.subagents.one	{count} subagent	サブエージェント {count} 件	ok
-chat	message.turnProcess.subagents.other	{count} subagents	サブエージェント {count} 件	ok
-chat	message.turnProcess.thoughtForAWhile	Thought for a while	しばらく思考しました	ok
-chat	message.turnProcess.separator	 · 	 · 	ok
-chat	message.stopped	Stopped	停止しました	ok
-chat	message.branch	Branch into a new conversation	新しい会話に分岐	ok
-chat	message.branchUnavailable	Available only on the last message of a completed turn	完了したターンの最後のメッセージでのみ利用できます	ok
-chat	message.retry.active	Retrying model request	モデルリクエストを再試行しています	ok
-chat	message.retry.cancelled	Model request retry cancelled	モデルリクエストの再試行をキャンセルしました	ok
-chat	message.retry.started	Retried model request	モデルリクエストを再試行しました	ok
-chat	message.retry.scheduled	Waiting to retry model request	モデルリクエストの再試行を待機中	ok
-chat	message.retry.status	{label} ({retry}/{maximum}) · {seconds}s	{label} ({retry}/{maximum}) · {seconds} 秒	ok
-chat	message.retry.delay	Retry delay: 	再試行まで: 	ok
-chat	message.retry.failure	Failure reason: 	失敗の理由: 	ok
-chat	message.failure.auth	API key is invalid	API キーが正しくありません	ok
-chat	message.accountStopped	Task stopped	タスクを停止しました	ok
-chat	message.failure.accountSignedOut	Stopped because you signed out of DeepSeek.	DeepSeek からサインアウトしたため停止しました。	ok
-chat	message.failure.accountSignInRequired	Sign in to DeepSeek and ensure the request destination supports account authentication.	DeepSeek にサインインし、リクエスト先がアカウント認証に対応していることを確認してください。	ok
-chat	message.failure.quota	Request quota exhausted.	リクエストの上限に達しました。	ok
-chat	message.turnError	This turn failed	このターンは失敗しました	ok
-chat	message.maxTokens	Output token limit reached	出力トークンの上限に達しました	ok
-chat	message.maxTokens.hint	The reply was cut off; earlier output is preserved in the conversation. Send "continue" to let the model resume.	返答が途中で切れました。ここまでの出力は会話に残っています。「続けて」と送るとモデルが再開します。	ok
-chat	message.tokensPerSecond	{tps} tok/s	{tps} tok/s	ok
-chat	message.turnUsage.title	Turn usage	ターンの使用量	ok
-chat	message.turnUsage.consumed	Usage {total}	使用量 {total}	ok
-chat	message.turnUsage.model	Provider / model	プロバイダー / モデル	ok
-chat	message.turnUsage.cacheHit	Cache hit	キャッシュヒット	ok
-chat	message.turnUsage.input	Uncached input	未キャッシュの入力	ok
-chat	message.turnUsage.cacheRead	Cached input	キャッシュの読み取り	ok
-chat	message.turnUsage.cacheWrite	Cache write	キャッシュの書き込み	ok
-chat	message.turnUsage.output	Output	出力	ok
-chat	message.turnUsage.reasoning	 ({tokens} reasoning)	 (推論 {tokens})	ok
-chat	message.turnUsage.count	{count} tok	{count} tok	ok
-chat	duration.secondUnit	s	秒	ok
-chat	duration.minuteUnit	m 	分 	ok
-chat	duration.hourUnit	h 	時間 	ok
-chat	command.running	Running…	実行中…	ok
-chat	command.failed	Command failed	コマンドが失敗しました	ok
-chat	command.done	Completed	完了	ok
-chat	command.title	Command	コマンド	ok
-chat	row.running	Running	実行中	ok
-chat	row.failed	Failed	失敗	ok
-chat	json.truncated	… truncated, {total} characters total	… 全 {total} 文字で省略	ok
-chat	clock.md	{m}/{d}	{m}/{d}	ok
-chat	clock.ymd	{y}-{m}-{d}	{y}-{m}-{d}	ok
 settings.models	nav	Models	モデル	ok
 settings.models	deepSeekAccount	DeepSeek Account	DeepSeek アカウント	ok
 settings.models	title	Models	モデル	ok
@@ -1151,19 +1193,30 @@ settings.models	applying	Applying…	適用しています…	ok
 settings.models	savedProvider	Saved {provider}.	{provider} を保存しました。	ok
 settings.models	credentialConfigured	API key configured	API キー設定済み	ok
 settings.models	credentialMissing	API key missing	API キー未設定	ok
+settings.models	accountSignedIn	Signed in	サインイン済み	ok
 settings.models	readOnly	The settings document is read-only in this deployment.	この環境では設定ファイルは読み取り専用です。	ok
 settings.models	loadFailed	Loading the provider directory failed	プロバイダー一覧の読み込みに失敗しました	ok
 settings.models	conflict	Someone else changed these settings while this card was open. Close it and reopen to edit the current values.	このカードを開いている間に、ほかの場所で設定が変更されました。閉じて開き直し、最新の値で編集してください。	ok
 settings.models	retry	Retry	再試行	ok
 settings.models	keyInput	API key	API キー	ok
+settings.models	keyReveal	Show secret	シークレットを表示	ok
+settings.models	keyHide	Hide secret	シークレットを隠す	ok
 settings.models	keyPlaceholder	Enter your API key	API キーを入力	ok
-settings.models	keyPlaceholderNative	Enter an API key, or leave blank to use environment authentication	API キーを入力するか、空欄のまま環境の認証を使います	ok
-settings.models	keyStored	Configured — enter a new value to replace	設定済み — 変更するには新しい値を入力	ok
-settings.models	keyEnvLocked	Provided by the launch environment (read-only)	起動環境から提供されています (読み取り専用)	ok
+settings.models	keyPlaceholderFallback	Leave blank to use env as auth ({hint})	空欄にすると環境変数を認証に使います（{hint}）	ok
+settings.models	keyPlaceholderSaved	Leave blank to use saved credentials	空欄にすると保存済みの認証情報を使います	ok
+settings.models	keyFallbackMissing	Env var not detected. Enter an API key, or configure {hint} in your env.	環境変数が見つかりません。API キーを入力するか、環境に {hint} を設定してください。	ok
+settings.models	keyFallbackDetected	Env var detected. ({hint})	環境変数が見つかりました（{hint}）。	ok
+settings.models	keyFallbackDetectedHidden	Env var detected.	環境変数が見つかりました。	ok
+settings.models	keyFallbackUnchecked	Environment credential status has not been confirmed.	環境の認証情報の状態はまだ確認できていません。	ok
+settings.models	keyHelp	Saved credentials are used first. Environment fallbacks shown here, in order: {env}. Sources are launch environment, $cwd/.env, then $DSH_HOME/.env.	保存済みの認証情報が先に使われます。環境変数のフォールバックはこの順です: {env}。参照先は起動時の環境、$cwd/.env、$DSH_HOME/.env の順です。	ok
+settings.models	authHelp	Authentication details	認証の詳細	ok
 settings.models	customized	Customized settings	カスタム設定	ok
 settings.models	baseUrl	Base URL	ベース URL	ok
-settings.models	baseUrlDefault	Provider default	プロバイダーの既定値	ok
-settings.models	deepSeekBaseUrl	https://api.deepseek.com/anthropic	https://api.deepseek.com/anthropic	ok
+settings.models	baseUrlDefault	No default endpoint	既定のエンドポイントなし	ok
+settings.models	baseUrlEnvironment	Provider endpoint configuration: {env}	プロバイダーのエンドポイント設定: {env}	ok
+settings.models	baseUrlConfigured	Provider-configured endpoint	プロバイダーが設定したエンドポイント	ok
+settings.models	baseUrlPlaceholder	{url}	{url}	ok
+settings.models	deepSeekBaseUrl	https://api.deepseek.com/anthropic (Default to use DEEPSEEK_BASE_URL)	https://api.deepseek.com/anthropic（既定では DEEPSEEK_BASE_URL を使用）	ok
 settings.models	deepSeekEndpointHint	Use an API endpoint compatible with Anthropic Messages.	Anthropic Messages 互換の API エンドポイントを指定してください。	ok
 settings.models	models	Models	モデル	ok
 settings.models	modelsInherited	Using the adapter defaults	アダプターの既定モデルを使用中	ok
@@ -1181,6 +1234,16 @@ settings.models	modelAdvanced	Model options	モデルのオプション	ok
 settings.models	modelInputTypes	Input types	入力の種類	ok
 settings.models	modelInputText	Text	テキスト	ok
 settings.models	modelInputImage	Image	画像	ok
+settings.models	modelReasoning	Reasoning levels	推論レベルの設定	ok
+settings.models	modelReasoningLevel	Level	レベル	ok
+settings.models	modelReasoningValue	API value	API の値	ok
+settings.models	modelReasoningHelp	About reasoning levels	推論レベルについて	ok
+settings.models	modelReasoningHelpText	The API value is sent in the request's reasoning-effort field, such as OpenAI's reasoning_effort. It defaults to the level name; where the model provider's API documentation specifies a different value, follow it. Off turns reasoning off and needs no value; a value already written in the configuration is kept and sent.	API の値は、リクエストの reasoning-effort フィールド（OpenAI の reasoning_effort など）で送られます。既定ではレベルの名前を使います。モデルプロバイダーの API ドキュメントで別の値が指定されている場合はそれに従ってください。「オフ」は推論を無効にし、値は不要です。設定にすでに書かれている値は保持され、送信されます。	ok
+settings.models	modelReasoningNeedsLevel	Add at least one level besides Off, or turn reasoning levels off.	「オフ」以外のレベルを 1 つ以上追加するか、推論レベルをオフにしてください。	ok
+settings.models	modelReasoningValueRequired	Every level besides Off needs an API value, and no value can be empty.	「オフ」以外のすべてのレベルに API の値が必要です。空の値は使えません。	ok
+settings.models	modelReasoningAdd	Add level	レベルを追加	ok
+settings.models	modelReasoningRemove	Delete level	レベルを削除	ok
+settings.models	modelReasoningOffValuePlaceholder	Turns reasoning off	推論をオフにします	ok
 settings.models	addModel	Add model	モデルを追加	ok
 settings.models	removeModel	Delete model	モデルを削除	ok
 settings.models	modelsEmpty	No models will be shown in the selector. Unlisted IDs can still be sent directly.	モデル選択には何も表示されません。一覧にない ID も直接送信できます。	ok
@@ -1236,6 +1299,8 @@ settings.models	onboardingSave	Save and continue	保存して続ける	ok
 settings.models	onboardingSaving	Saving…	保存しています…	ok
 settings.models	keyRequired	Enter an API key to continue.	続けるには API キーを入力してください。	ok
 workspace	defaultWorkspace.failed	Unable to create default workspace. Use Choose workspace to select a folder.	既定のワークスペースを作成できませんでした。「ワークスペースを選択」でフォルダーを選んでください。	ok
+workspace	draft.workspaceRequired	Choose a workspace first.	先にワークスペースを選択してください。	ok
+workspace	draft.initializationFailed	Could not fill the draft. Please try again shortly.	下書きを入力できませんでした。しばらくしてからもう一度お試しください。	ok
 workspace	group.ungrouped	Ungrouped	未分類	ok
 workspace	session.new	New Session	新しいセッション	ok
 workspace	session.untitled	Untitled	無題	ok
@@ -1290,6 +1355,9 @@ workspace	menu.archiveSession	Archive session	セッションをアーカイブ	
 workspace	menu.unarchiveSession	Unarchive session	セッションのアーカイブを解除	ok
 workspace	menu.pinSession	Pin session	セッションをピン留め	ok
 workspace	menu.unpinSession	Unpin session	セッションのピン留めを解除	ok
+workspace	menu.sessionId	Copy Session ID	セッション ID をコピー	ok
+workspace	toast.sessionIdCopied	Session ID copied	セッション ID をコピーしました	ok
+workspace	toast.sessionIdCopyFailed	Copy failed. Try again.	コピーできませんでした。もう一度お試しください。	ok
 workspace	row.archived	Archived	アーカイブ済み	ok
 workspace	row.pinned	Pinned	ピン留め済み	ok
 workspace	toast.archivedNotOpenable	Archived sessions cannot be opened. Unarchive it to view.	アーカイブ済みのセッションは開けません。表示するにはアーカイブを解除してください。	ok
@@ -1316,6 +1384,8 @@ workspace	toast.archivedFilter	filter archived sessions	アーカイブ済みセ
 workspace	toast.pinFailed	Pin failed. Try again later.	ピン留めに失敗しました。しばらくしてからもう一度お試しください。	ok
 workspace	toast.unpinFailed	Unpin failed. Try again later.	ピン留めの解除に失敗しました。しばらくしてからもう一度お試しください。	ok
 workspace	toast.createFailed	New session failed: {message}	新しいセッションを作成できませんでした: {message}	ok
+workspace	toast.forkRequiresOpen	Open the original session to complete migration before creating a branch.	分岐を作る前に、移行を完了するため元のセッションを開いてください。	ok
+workspace	toast.openForkSource	Open original session	元のセッションを開く	ok
 workspace	sessions.count.one	{n} session	{n} 件のセッション	ok
 workspace	sessions.count.other	{n} sessions	{n} 件のセッション	ok
 workspace	actions.workspace.aria	Workspace actions for {name}	{name} のワークスペース操作	ok
@@ -1347,6 +1417,178 @@ workspace	time.days	{n}d	{n} 日	ok
 workspace	time.months	{n}mo	{n} か月	ok
 workspace	time.years	{n}y	{n} 年	ok
 workspace	time.ago	{t} ago	{t}前	ok
+settings.account	modelSignInRequired	Model unavailable. Please sign in and try again.	モデルを利用できません。サインインして再試行してください。	ok
+settings.account	sessionExpired	You have signed out of your account, please log in again.	アカウントからサインアウトしました。もう一度サインインしてください。	ok
+settings.account	onboardingArtworkLocale	en	ja	ok
+settings.account	onboardingWelcome	Welcome to	ようこそ	ok
+settings.account	onboardingBrand	DeepSeek Harness	DeepSeek Harness	ok
+settings.account	onboardingIntroduction	DeepSeek Harness works in a local folder and uses tools to read and write files on your computer. It can help you research and organize information, create documents and spreadsheets, write code, troubleshoot issues, and more.	DeepSeek Harness はローカルのフォルダーで動作し、ツールを使ってあなたのコンピューター上のファイルを読み書きします。調査や情報整理、文書や表計算の作成、コードの記述、問題の調査などに役立ちます。	ok
+settings.account	onboardingStart	Get started	はじめる	ok
+settings.account	onboardingCredit	Add credits	クレジットを追加	ok
+settings.account	onboardingCreditDescription	DeepSeek Harness charges credits based on the tokens used by models and tools. Add credits in advance to keep your tasks running without interruption. Your balance is only used while the agent is working on a task.	DeepSeek Harness は、モデルとツールが使ったトークンに応じてクレジットを消費します。事前にクレジットを追加しておくと、タスクを中断せずに続けられます。残高が使われるのは、Agent がタスクを処理している間だけです。	ok
+settings.account	onboardingTopUp	Add credits	クレジットを追加	ok
+settings.account	onboardingLater	Next	次へ	ok
+settings.account	onboardingFundedTopUp	Add credits	クレジットを追加	ok
+settings.account	onboardingPurposePrefix	What would you like	何を	ok
+settings.account	onboardingPurposeSuffix	to help with?	手伝いましょうか？	ok
+settings.account	onboardingPurposeDescription	We’ll tailor the interface and tools to fit the way you work.	あなたの働き方に合わせて、インターフェースとツールを調整します。	ok
+settings.account	onboardingOffice	Office & creative work	オフィス作業・創作	ok
+settings.account	onboardingOfficeDescription	Edit documents, organize data, create presentations, and more	文書の編集、データ整理、プレゼンテーション作成など	ok
+settings.account	onboardingDevelopment	Coding & development	コーディング・開発	ok
+settings.account	onboardingDevelopmentDescription	Edit code, debug issues, run commands, manage project files, and more	コードの編集、デバッグ、コマンド実行、プロジェクトファイルの管理など	ok
+settings.account	onboardingContinue	Continue	続ける	ok
+settings.account	onboardingProcess	How much detail would you like to see?	どこまで詳しく表示しますか？	ok
+settings.account	onboardingProcessDescription	This only changes how progress is shown, not what DeepSeek Harness can do.	変わるのは進捗の表示方法だけです。DeepSeek Harness の機能は変わりません。	ok
+settings.account	onboardingCompact	Results only	結果だけ	ok
+settings.account	onboardingCompactDescription	See just the results in a clean, simple interface	シンプルな画面で結果だけを表示します	ok
+settings.account	onboardingStandard	Key details	要点	ok
+settings.account	onboardingStandardDescription	Focus on results, with only the most important steps and actions shown	結果を中心に、重要なステップと操作だけを表示します	ok
+settings.account	onboardingDetailed	Full details	すべての詳細	ok
+settings.account	onboardingDetailedDescription	See the full process for easier debugging and troubleshooting	プロセス全体を表示するので、デバッグや問題調査がしやすくなります	ok
+settings.account	onboardingEnter	Open app	アプリを開く	ok
+settings.account	onboardingBack	Back	戻る	ok
+settings.account	onboardingSkip	Skip	スキップ	ok
+settings.account	onboardingSkipTitle	Skip setup?	セットアップをスキップしますか？	ok
+settings.account	onboardingSkipDescription	You can change how progress, performance, and usage are displayed, or enable Coding Tools, anytime in Settings → General.	進捗・パフォーマンス・使用量の表示方法や、コーディングツールの有効化は、いつでも設定 → 一般で変更できます。	ok
+settings.account	onboardingKeepSetting	Continue setup	セットアップを続ける	ok
+settings.account	onboardingNoCreditTitle	Skip adding credits?	クレジットの追加をスキップしますか？	ok
+settings.account	onboardingNoCreditDescription	DeepSeek Harness can’t start new tasks without credits. You can add them later in Settings → Account.	クレジットがないと DeepSeek Harness は新しいタスクを開始できません。あとから設定 → アカウントで追加できます。	ok
+settings.account	onboardingUnderstood	Got it	了解	ok
+settings.account	onboardingGoTopUp	Add credits	クレジットを追加	ok
+settings.account	onboardingSaveFailed	Could not save settings. Try again.	設定を保存できませんでした。もう一度お試しください。	ok
+settings.account	onboardingRetry	Retry	再試行	ok
+settings.account	onboardingLoading	Loading settings…	設定を読み込み中…	ok
+settings.account	close	Close	閉じる	ok
+settings.account	addApiKey	Add API Key	API キーを追加	ok
+settings.account	retry	Sign in again	もう一度サインイン	ok
+settings.account	loginTitle	Get started	はじめる	ok
+settings.account	loginDescription	Sign in to your DeepSeek account or add an API Key to get started. Your projects and files are stored locally.	DeepSeek アカウントでサインインするか、API キーを追加して始めます。プロジェクトとファイルはローカルに保存されます。	ok
+settings.account	browserTitle	Waiting for sign in	サインインを待っています	ok
+settings.account	browserPrompt	Page did not open automatically? 	ページが自動で開かない場合は、	ok
+settings.account	copyLink	Copy sign-in link	サインインリンクをコピー	ok
+settings.account	copiedLink	Link copied	リンクをコピーしました	ok
+settings.account	copyFailed	Copy failed	コピーできませんでした	ok
+settings.account	browserDescription	, then open it in your browser to finish signing in.	を押し、ブラウザーで開いてサインインを完了してください。	ok
+settings.account	timeoutTitle	Sign in timed out	サインインがタイムアウトしました	ok
+settings.account	timeoutDescription	Sign in again to continue.	続けるにはもう一度サインインしてください。	ok
+settings.account	failureTitle	Could not sign in	サインインできませんでした	ok
+settings.account	platformFailed	Could not complete the operation. Try again.	操作を完了できませんでした。もう一度お試しください。	ok
+settings.account	platformRetry	Retry	再試行	ok
+settings.account	loading	Loading…	読み込み中…	ok
+settings.account	backToHarness	Back to DeepSeek Harness	DeepSeek Harness に戻る	ok
+settings.account	settings	Settings	設定	ok
+settings.account	contactUs	Feedback	フィードバック	ok
+settings.account	menu	Account menu	アカウントメニュー	ok
+settings.account	nav	Account	アカウント	ok
+settings.account	signedIn	Signed in to DeepSeek	DeepSeek にサインイン済み	ok
+settings.account	signedOut	Not signed in	未サインイン	ok
+settings.account	signIn	Sign in	サインイン	ok
+settings.account	signOut	Sign out	サインアウト	ok
+settings.account	signOutUnknownDescription	Could not check running tasks. Signing out may interrupt tasks using this account. Sign out now?	実行中のタスクを確認できませんでした。サインアウトすると、このアカウントを使っているタスクが中断される可能性があります。今すぐサインアウトしますか？	ok
+settings.account	signOutDescription	Signing out will not delete any data. You can sign in to this account again.	サインアウトしてもデータは削除されません。このアカウントには再びサインインできます。	ok
+settings.account	signOutRunningDescription	Tasks are currently running. Signing out will interrupt them. Sign out now?	現在タスクが実行中です。サインアウトすると中断されます。今すぐサインアウトしますか？	ok
+settings.account	cancel	Cancel	キャンセル	ok
+settings.account	open	Open browser	ブラウザーで開く	ok
+settings.account	initializing	Starting sign in…	サインインを開始しています…	ok
+settings.account	waiting	Continue in your browser	ブラウザーで続けてください	ok
+settings.account	completing	Completing sign in…	サインインを完了しています…	ok
+settings.account	expired	Sign in expired. Try again.	サインインの有効期限が切れました。もう一度お試しください。	ok
+settings.account	failed	Could not complete the operation. Try again.	操作を完了できませんでした。もう一度お試しください。	ok
+settings.account	noResponse	Something went wrong. Please check your network connection and try again.	問題が発生しました。ネットワーク接続を確認して、もう一度お試しください。	ok
+settings.account	settingsSignedOutTitle	You are not signed in to DeepSeek Harness	DeepSeek Harness にサインインしていません	ok
+settings.account	settingsSignedOutDescription	Sign in to DeepSeek Harness to get your dedicated API Key	DeepSeek Harness にサインインすると、専用の API キーを取得できます	ok
+settings.account	signInDescription	Use your DeepSeek account to get started.	DeepSeek アカウントで始めます。	ok
+settings.account	profileUnavailable	Account details are not available yet.	アカウントの詳細はまだ取得できません。	ok
+settings.account	balance	Topped-up balance	チャージ残高	ok
+settings.account	bonusBalance	Granted balance	付与残高	ok
+settings.account	balanceUnavailable	View on Platform	プラットフォームで表示	ok
+settings.account	balanceSignedOut	Sign in to view	サインインして表示	ok
+settings.account	accountInfo	More account information	アカウント情報の詳細	ok
+settings.account	more	More	その他	ok
+settings.account	usage	View usage	使用量を表示	ok
+settings.account	topUp	Top up	チャージする	ok
+settings.account	quotaTitle	No balance available	残高がありません	ok
+settings.account	quotaDescription	DeepSeek Harness cannot start a new task with this account when no balance is available. Would you like to top up? You can also top up later in Settings → Account.	残高がない状態では、このアカウントで新しいタスクを開始できません。チャージしますか？あとから設定 → アカウントでチャージすることもできます。	ok
+settings.account	quotaTopUp	Top up	チャージする	ok
+settings.account	bonusNoticeTitle	Bonus credited	ボーナスが付与されました	ok
+pluginMarket	title	Discover	プラグインを探す	ok
+pluginMarket	refresh	Refresh	更新	ok
+pluginMarket	loading	Reading the index	インデックスを読み込み中	ok
+pluginMarket	retry	Retry	再試行	ok
+pluginMarket	close	Close	閉じる	ok
+pluginMarket	cancel	Cancel	キャンセル	ok
+pluginMarket	emptyTitle	No plugin markets yet	プラグインマーケットがまだありません	ok
+pluginMarket	emptyDescription	Add a plugin market index to browse and install its plugins here.	プラグインマーケットのインデックスを追加すると、ここで一覧からインストールできます。	ok
+pluginMarket	addFirstSource	Add index source	インデックスの参照元を追加	ok
+pluginMarket	sourcesFailed	Could not read the index sources.	インデックスの参照元を読み込めませんでした。	ok
+pluginMarket	manageSources	Manage index sources…	インデックスの参照元を管理…	ok
+pluginMarket	marketMenu	Switch plugin market, currently {market}	プラグインマーケットを切り替え（現在: {market}）	ok
+pluginMarket	sourcesTitle	Index sources	インデックスの参照元	ok
+pluginMarket	sourcesDescription	A plugin market is published as the URL of one index file. Discover browses the indexes listed here.	プラグインマーケットは 1 つのインデックスファイルの URL として公開されています。「プラグインを探す」では、ここに登録されたインデックスを参照します。	ok
+pluginMarket	sourcesLabel	Added index sources	追加済みの参照元	ok
+pluginMarket	sourceUrl	Index URL	インデックスの URL	ok
+pluginMarket	sourcePlaceholder	https://example.com/index.json	https://example.com/index.json	ok
+pluginMarket	addSource	Add	追加	ok
+pluginMarket	removeSource	Remove	削除	ok
+pluginMarket	removeSourceNamed	Remove {url}	{url} を削除	ok
+pluginMarket	sourcesTrust	Indexes come from third parties. Add only sources you trust: their plugins run with your permissions once installed.	インデックスは第三者によるものです。信頼できる参照元だけを追加してください。インストールしたプラグインはあなたの権限で実行されます。	ok
+pluginMarket	sourceInvalid	Use an http or https address without a user name, password, or # fragment.	ユーザー名・パスワード・# フラグメントを含まない http または https のアドレスを使ってください。	ok
+pluginMarket	sourceDuplicate	This index source is already added.	この参照元はすでに追加されています。	ok
+pluginMarket	sourceUnavailable	Index sources cannot be saved here.	ここでは参照元を保存できません。	ok
+pluginMarket	sourceFailed	Could not save the index sources.	参照元を保存できませんでした。	ok
+pluginMarket	readFailed	Could not read this index.	このインデックスを読み込めませんでした。	ok
+pluginMarket	readInvalid	This index is not in a valid format.	このインデックスの形式が正しくありません。	ok
+pluginMarket	readChanged	This index changed while loading.	読み込み中にインデックスが変更されました。	ok
+pluginMarket	search	Search plugins	プラグインを検索	ok
+pluginMarket	filter	Labels	ラベル	ok
+pluginMarket	filterCount	Labels · {count}	ラベル · {count}	ok
+pluginMarket	sortBy	Sort: {sort}	並べ替え: {sort}	ok
+pluginMarket	sortRelevance	Best match	一致度順	ok
+pluginMarket	sortDefault	Default order	既定の順序	ok
+pluginMarket	sortPublished	Publish date	公開日順	ok
+pluginMarket	switchToAscending	Sort ascending	昇順に並べ替え	ok
+pluginMarket	switchToDescending	Sort descending	降順に並べ替え	ok
+pluginMarket	categoriesLabel	Categories	カテゴリ	ok
+pluginMarket	allCategories	All	すべて	ok
+pluginMarket	emptyIndex	This index lists no plugins.	このインデックスにはプラグインがありません。	ok
+pluginMarket	noMatches	No plugins match.	一致するプラグインはありません。	ok
+pluginMarket	showMore	Show more	さらに表示	ok
+pluginMarket	entryMeta	{version} · {date}	{version} · {date}	ok
+pluginMarket	entryMetaAuthor	{version} · {author} · {date}	{version} · {author} · {date}	ok
+pluginMarket	openEntry	View {name}	{name} を表示	ok
+pluginMarket	install	Install	インストール	ok
+pluginMarket	installTitle	Install {name}	{name} をインストール	ok
+pluginMarket	installVersionTitle	Install {name} {version}	{name} {version} をインストール	ok
+pluginMarket	openInstalled	View {name} in Installed	インストール済みで {name} を表示	ok
+pluginMarket	statusInstalled	Installed	インストール済み	ok
+pluginMarket	statusUpdate	Update available	更新があります	ok
+pluginMarket	statusProvided	Provided by DSH	DSH が提供	ok
+pluginMarket	incompatible	This version is not compatible with the running DSH {runtime}; it requires DSH {range}.	このバージョンは実行中の DSH {runtime} と互換性がありません。DSH {range} が必要です。	ok
+pluginMarket	noCompatibleVersion	No version is compatible with DSH {runtime}	DSH {runtime} と互換性のあるバージョンがありません	ok
+pluginMarket	exempted	This version is not compatible with the running DSH, but you set a compatibility exemption for it.	このバージョンは実行中の DSH と互換性がありませんが、互換性の例外が設定されています。	ok
+pluginMarket	backToList	Discover	プラグインを探す	ok
+pluginMarket	factSource	Source	ソース	ok
+pluginMarket	factPackage	Package	パッケージ	ok
+pluginMarket	factRegistry	Registry	レジストリ	ok
+pluginMarket	factRepository	Repository	リポジトリ	ok
+pluginMarket	factCommit	Commit	コミット	ok
+pluginMarket	factDirectory	Directory	ディレクトリ	ok
+pluginMarket	factPublished	Published	公開日	ok
+pluginMarket	factAuthor	Author	作者	ok
+pluginMarket	factHomepage	Homepage	ホームページ	ok
+pluginMarket	factSourceCode	Source code	ソースコード	ok
+pluginMarket	factCategory	Category	カテゴリ	ok
+pluginMarket	factLabels	Labels	ラベル	ok
+pluginMarket	factMarket	Plugin market	プラグインマーケット	ok
+pluginMarket	versionsTitle	Versions	バージョン	ok
+pluginMarket	versionsLabel	Versions of {name}	{name} のバージョン	ok
+pluginMarket	versionDefault	Recommended	推奨	ok
+pluginMarket	versionInstalled	Installed	インストール済み	ok
+pluginMarket	versionIncompatible	Incompatible	互換性なし	ok
+pluginMarket	versionExempted	Exempted	例外あり	ok
+pluginMarket	versionPrerelease	Prerelease	プレリリース	ok
+pluginMarket	confirmTitle	Install "{name}"?	「{name}」をインストールしますか？	ok
+pluginMarket	installTrust	Plugins run on this machine with your permissions. Make sure you trust where this one comes from.	プラグインはこのマシンであなたの権限で実行されます。このプラグインの入手元が信頼できるか確認してください。	ok
 schedule.catalog	trigger.label	Reminders	リマインダー	ok
 schedule.catalog	list.loading	Loading reminders…	リマインダーを読み込み中…	ok
 schedule.catalog	list.error	Could not load reminders.	リマインダーを読み込めませんでした。	ok
@@ -1533,6 +1775,58 @@ shortcuts	empty	No matching shortcuts	一致するショートカットはあり
 shortcuts	move	Move menu selection	メニューの選択を移動	ok
 shortcuts	select	Select menu item	メニュー項目を選択	ok
 shortcuts	dismiss	Close menu or top dialog	メニューまたは最前面のダイアログを閉じる	ok
+session-inspector	tab.title	Session Log	セッションログ	ok
+session-inspector	tab.description	Analyze raw logs and grouped chat messages for the current session in the sidebar.	サイドバーで、現在のセッションの生ログとグループ化されたチャットメッセージを分析します。	ok
+session-inspector	view.presentation	Presentation	表示形式	ok
+session-inspector	view.sessionLog	Raw Log	生ログ	ok
+session-inspector	view.chatNode	Chat Group	チャットのグループ	ok
+session-inspector	picker.pick	Pick an element in Chat View	チャット表示で要素を選択	ok
+session-inspector	picker.cancel	Cancel picking (Esc)	選択をキャンセル (Esc)	ok
+session-inspector	picker.instructions	Hover in the main Chat to preview, then click to select. Esc cancels.	メインのチャット上でホバーするとプレビューされ、クリックで選択します。Esc でキャンセルします。	ok
+session-inspector	picker.noMatch	No matching record in this table. Pick another element or press Esc to cancel.	この表に一致する記録はありません。別の要素を選ぶか、Esc でキャンセルしてください。	ok
+session-inspector	picker.noChat	Open this Session in the main Chat before picking.	選択する前に、このセッションをメインのチャットで開いてください。	ok
+session-inspector	table.id	Index	番号	ok
+session-inspector	table.type	Type	種類	ok
+session-inspector	filter.title	Filter types	種類を絞り込む	ok
+session-inspector	filter.input	Type keyword	キーワードを入力	ok
+session-inspector	filter.placeholder	Type a fragment, e.g. delta	断片を入力（例: delta）	ok
+session-inspector	filter.help	Contains matching (*keyword*). Enter confirms; Esc cancels.	部分一致（*キーワード*）。Enter で確定、Esc でキャンセル。	ok
+session-inspector	filter.candidates	Type suggestions	種類の候補	ok
+session-inspector	filter.loading	Finding suggestions…	候補を検索中…	ok
+session-inspector	filter.failed	Type suggestions could not be loaded.	種類の候補を読み込めませんでした。	ok
+session-inspector	filter.noCandidates	No suggestions. You can still apply this keyword.	候補はありません。このキーワードはそのまま適用できます。	ok
+session-inspector	filter.clear	Clear	クリア	ok
+session-inspector	filter.cancel	Cancel	キャンセル	ok
+session-inspector	filter.apply	Apply filter	絞り込みを適用	ok
+session-inspector	filter.context	Parent context of a matching record	一致した記録の親コンテキスト	ok
+session-inspector	table.location	T/S	T/S	ok
+session-inspector	table.time	Time (UTC)	時刻 (UTC)	ok
+session-inspector	table.data	Data	データ	ok
+session-inspector	table.older	Load earlier	以前の記録を読み込む	ok
+session-inspector	table.loading	Loading…	読み込み中…	ok
+session-inspector	table.latest	Follow Latest	最新に追従	ok
+session-inspector	table.empty	No records	記録なし	ok
+session-inspector	table.raw	Raw data	生データ	ok
+session-inspector	table.rawError	This record could not be serialized. Select another record to continue.	この記録はシリアライズできませんでした。続けるには別の記録を選んでください。	ok
+session-inspector	table.resizeDetails	Resize raw data panel	生データパネルのサイズを変更	ok
+session-inspector	table.close	Close	閉じる	ok
+session-inspector	table.expand	Expand children	子を展開	ok
+session-inspector	table.collapse	Collapse children	子を折りたたむ	ok
+session-inspector	table.removed	This record was removed or settled. Select a current record.	この記録は削除または確定済みです。現在の記録を選んでください。	ok
+session-inspector	object.node	Node	ノード	ok
+session-inspector	object.nodeData	Node Data	ノードのデータ	ok
+session-inspector	object.group	Group	グループ	ok
+session-inspector	object.groupData	Group Data	グループのデータ	ok
+session-inspector	object.turn	Turn	ターン	ok
+session-inspector	object.turnData	Turn Data	ターンのデータ	ok
+session-inspector	object.step	Step	ステップ	ok
+session-inspector	object.stepData	Step Data	ステップのデータ	ok
+session-inspector	object.accessor	[Getter / Setter, not evaluated]	[ゲッター / セッター、未評価]	ok
+session-inspector	object.empty	Empty	空	ok
+session-inspector	object.absent	[Empty slot]	[空きスロット]	ok
+session-inspector	object.properties	Other properties	その他のプロパティ	ok
+session-inspector	object.more	Show more	さらに表示	ok
+session-inspector	object.navigation	Raw data navigation	生データの移動	ok
 cordis	row.defineTitle	Register Cordis Plugin	Cordis プラグインを登録	ok
 cordis	a11y.preparing	Preparing a Cordis tool call	Cordis ツール呼び出しを準備しています	ok
 cordis	row.runTitle	Run Cordis Plugin	Cordis プラグインを実行	ok
@@ -1584,6 +1878,53 @@ cordis	body.clientCode	Client	クライアント	ok
 cordis	body.output	Result	結果	ok
 cordis	body.copy	Copy	コピー	ok
 cordis	body.copied	Copied	コピーしました	ok
+settings.agentPreset	modeExplanation	Mode details	モードの説明	ok
+settings.agentPreset	howToUse	How to use	使い方	ok
+settings.agentPreset	guideSections	Guide sections	ガイドの内容	ok
+settings.agentPreset	guideExampleTask	Example task	タスク例	ok
+settings.agentPreset	guideCopy	Copy	コピー	ok
+settings.agentPreset	guideCopied	Copied	コピーしました	ok
+settings.agentPreset	guideFootnotes	Footnotes	脚注	ok
+settings.agentPreset	guideStandardIntro	Choose Standard mode when starting a new task. Describe what you want to accomplish, point to the relevant files, and explain how to check the result.	新しいタスクを始めるときは標準モードを選びます。達成したいことを説明し、関連するファイルを示し、結果の確認方法を伝えてください。	ok
+settings.agentPreset	guideStandardExplanation	### How it works\n\nThe agent calls tools directly to read and edit files, search, and run terminal commands. It includes Skills, planning, goals, subagents, workflows, and context compaction.\n\n### When to choose it\n\nStart here for everyday coding, file work, and research. Standard mode can also write scripts and process files in batches. PTC changes how tool calls are organized; it is not required for batch tasks.	### 仕組み\n\nAgent はツールを直接呼び出して、ファイルの読み書き・検索・ターミナルコマンドの実行を行います。スキル、計画、ゴール、サブエージェント、ワークフロー、コンテキスト圧縮を利用できます。\n\n### どんなときに選ぶか\n\n日々のコーディング、ファイル作業、調査はここから始めるとよいでしょう。標準モードでもスクリプトを書いてファイルを一括処理できます。PTC が変えるのはツール呼び出しの組み立て方であり、一括処理に必須のものではありません。	ok
+settings.agentPreset	guideStandardUsage	### Fix a bug\n\n> Find out why submitting the search form twice makes the results disappear. Fix it and run the relevant tests. Explain the cause and what changed.\n\nExpected output: a code change, the relevant test results, and an explanation of the cause.\n\n### Organize project notes\n\n> Read the Markdown notes in this project. Summarize the agreed decisions and open questions, with links to the source files.\n\nExpected output: a summary with references that you can check against the original notes.	### バグを修正する\n\n> 検索フォームを続けて 2 回送信すると結果が消える原因を突き止めて修正し、関連するテストを実行してください。原因と変更内容も説明してください。\n\n期待する成果: コードの変更、関連テストの結果、原因の説明。\n\n### プロジェクトの記録を整理する\n\n> このプロジェクトの Markdown の記録を読み、合意済みの決定事項と未解決の論点を、参照元ファイルへのリンク付きでまとめてください。\n\n期待する成果: 元の記録と突き合わせられる、出典付きの要約。	ok
+settings.agentPreset	guidePtcIntro	Choose PTC mode when starting a new task. Specify the input files, processing rules, and output format. The agent writes the code.	新しいタスクを始めるときは PTC モードを選びます。入力ファイル、処理ルール、出力形式を指定してください。コードは Agent が書きます。	ok
+settings.agentPreset	guidePtcExplanation	### How tools are called\n\nPTC means Programmatic Tool Calling. In this built-in preset, the agent uses run_code to write a TypeScript program that calls tools through a generated SDK. The program can use loops, conditions, error handling, and concurrent calls where appropriate.\n\n### What reaches the model\n\nTool results first reach the program, which can filter and combine them. The model receives what the program prints or returns; image results are attached separately. Nested tool calls are still recorded and remain subject to tool permissions.\n\n### Compared with Standard mode\n\nBoth modes can handle coding and batch tasks. Standard mode exposes individual tools directly; PTC organizes tool calls in code. The current PTC preset leaves the workflow tool disabled. Speed and token use depend on the task and how the program handles its results.	### ツールの呼び出され方\n\nPTC は Programmatic Tool Calling、つまりプログラムからツールを呼び出す方式です。この内蔵プリセットでは、Agent が run_code で TypeScript プログラムを書き、生成された SDK を通してツールを呼び出します。プログラムではループ、条件分岐、エラー処理、並行呼び出しを適切に使えます。\n\n### モデルに届くもの\n\nツールの結果はいったんプログラムに渡り、そこで絞り込みや合成ができます。モデルが受け取るのは、プログラムが出力または返した内容です。画像の結果は別途添付されます。プログラム内のツール呼び出しも記録され、ツールの権限設定に従います。\n\n### 標準モードとの違い\n\nどちらのモードもコーディングや一括処理を扱えます。標準モードは個々のツールをそのままモデルに渡し、PTC はツール呼び出しをコードで組み立てます。現在の PTC プリセットでは workflow ツールが無効になっています。速度とトークン消費は、タスクと結果の扱い方によって変わります。	ok
+settings.agentPreset	guidePtcUsage	### Check a set of configuration files\n\n> Check all JSON files in configs/. List missing required fields and invalid values against schema.json. Save a CSV with one row per issue. Include unreadable files in the report and keep checking the rest. Leave the original files unchanged.\n\nExpected output: an issue summary and a CSV report. The program can repeat the same checks, handle individual failures, and collect the results.\n\n### Summarize error logs\n\n> Analyze the log files in logs/. Group errors by service and error type. Show the ten most frequent groups and one example from each. Save the full counts to a CSV.\n\nExpected output: the top error groups and a complete count table. Intermediate data can be aggregated in the program before the summary reaches the model.	### 設定ファイルを一括で検査する\n\n> configs/ 配下の JSON をすべて検査し、schema.json と照らして不足している必須項目と不正な値を挙げてください。問題ごとに CSV の 1 行として保存してください。読めなかったファイルも報告に含め、残りの検査は続けてください。元のファイルは変更しないでください。\n\n期待する成果: 問題の要約と CSV レポート。同じ検査を繰り返し実行し、個々の失敗に対処して結果を集約できます。\n\n### エラーログを集計する\n\n> logs/ のログを解析し、サービスとエラー種別ごとに件数をまとめてください。出現回数の多い上位 10 グループと、それぞれ 1 件の例を示してください。完全な件数は CSV に保存してください。\n\n期待する成果: 頻出エラーの要約と完全な件数表。中間データはプログラム側で集約してから、要約だけをモデルに渡せます。	ok
+settings.agentPreset	guideMinimalIntro	Choose Minimal mode for a new task. For a comparison, hold the model, permissions, input, and starting workspace state constant across runs.	新しいタスクでは最小モードを選びます。比較実験をするときは、モデル・権限・入力・ワークスペースの初期状態を実行間でそろえてください。	ok
+settings.agentPreset	guideMinimalExplanation	### What is included\n\nOne persistent shell tool, read_image, and a fixed system prompt. Image reading requires an image-capable model. Older history is compacted automatically under context pressure; use /compact while the agent is idle to compact it manually. The built-in preset does not load Skills, planning, or the standard runtime context.\n\n### When to choose it\n\nUse it as a baseline for experiments and comparisons. It can still read files and execute scripts through shell commands, but offers fewer built-in ways to manage a long task. Fewer tools does not necessarily make it easier for a beginner.	### 含まれるもの\n\n永続シェルツールが 1 つ、read_image、固定のシステムプロンプトです。画像の読み取りには画像対応モデルが必要です。コンテキストが逼迫すると古い履歴は自動で圧縮されます。Agent が待機中のときに /compact を使えば手動で圧縮できます。この内蔵プリセットはスキル、計画、標準のランタイムコンテキストを読み込みません。\n\n### どんなときに選ぶか\n\n実験や比較の基準として使います。シェルコマンドを通してファイルを読み、スクリプトを実行することはできますが、長いタスクを管理するための組み込みの手段は少なくなります。ツールが少ないことが、初心者にとって簡単という意味ではありません。	ok
+settings.agentPreset	guideMinimalUsage	### Compare performance on a small bug fix\n\n> Run the tests for this project, find the cause of the failure, and make the smallest fix. Run the relevant tests again and report the result.\n\nRun the same task separately in Standard and Minimal modes from the same starting state. Compare task completion, tool calls, and the resulting changes. Minimal mode performs the work through terminal commands.	### 小さな修正での性能を比較する\n\n> このプロジェクトのテストを実行し、失敗の原因を特定して最小限の修正を加えてください。関連するテストをもう一度実行し、結果を報告してください。\n\n同じ初期状態から、同じタスクを標準モードと最小モードで別々に実行します。完了状況、ツール呼び出し、最終的な変更を比較してください。最小モードはターミナルコマンドを通して作業します。	ok
+settings.agentPreset	guideCordisIntro	Choose Creator mode for a new task. Describe the capability you want, where it should appear, and how you will verify it.	新しいタスクを始めるときは創造モードを選びます。追加したい機能、それをどこから使うか、どう検証するかを説明してください。	ok
+settings.agentPreset	guideCordisExplanation	### What you can create\n\nCreator mode includes the standard task tools plus runtime inspection, persistent plugin management, and guidance for authoring Cordis plugins and agent presets. It can create a plugin that adds a capability or UI, or a preset that combines tools and prompts for a particular job.\n\n### Plugins and modes\n\nA plugin adds capabilities to DSH, such as a tool, a service connection, or a UI entry. A mode is an agent preset that selects tools and defines how the agent works in a task. A plugin can be included in a custom preset.\n\n### How the result takes effect\n\nAsk the agent to install and verify the result, not just generate source code. A plugin may load immediately or require a restart, depending on what it changes. A newly created preset is selected when starting a new task.	### 何を作れるか\n\n創造モードには標準のタスク用ツールに加えて、実行時の調査、プラグインの永続的な管理、Cordis プラグインと Agent プリセットを作るためのガイドが含まれます。機能や UI を追加するプラグインも、特定の作業向けにツールとプロンプトを組み合わせたプリセットも作れます。\n\n### プラグインとモード\n\nプラグインは DSH に機能を追加します (ツール、サービス接続、UI の入口など)。モードは Agent プリセットであり、タスクで使うツールを選び、Agent の動き方を決めます。自作のプラグインをカスタムプリセットに含めることもできます。\n\n### 成果を反映させるには\n\nソースコードを生成させるだけでなく、インストールと動作確認まで Agent に依頼してください。変更内容によっては即座に読み込まれる場合と再起動が必要な場合があります。新しく作ったプリセットは、新しいタスクを始めるときに選べます。	ok
+settings.agentPreset	guideCordisUsage	### Add a UI\n\n> Create a DSH plugin that adds a project notes entry to the sidebar. Let me browse the Markdown files in this workspace and preview a selected note. Install it and verify that the page opens.\n\nExpected output: an installed plugin with a working entry and preview page, plus any remaining activation steps.\n\n### Add a tool\n\n> Create a plugin with a tool that reads this project’s test report and summarizes the failed tests. Register it and verify it with a sample report.\n\nExpected output: a plugin with a callable tool and a verified sample call.\n\n### Create my own mode\n\n> Create a “Code review” mode based on Standard mode. Have it prioritize potential bugs and test gaps, cite file paths and lines, and ask before modifying files. Save it as a selectable preset.\n\nExpected output: a custom preset for new tasks. These review instructions guide the agent; permission settings determine which actions it can execute.	### UI を追加する\n\n> サイドバーに「プロジェクトノート」の入口を追加する DSH プラグインを作ってください。このワークスペースの Markdown ファイルを一覧でき、選んだノートをプレビューできるようにしてください。インストールまで行い、ページが開くことを確認してください。\n\n期待する成果: 動作する入口とプレビューページを備えた、インストール済みのプラグイン。残っている有効化手順があればそれも示します。\n\n### ツールを追加する\n\n> このプロジェクトのテストレポートを読み、失敗したテストを要約するツールを提供するプラグインを作ってください。登録し、サンプルのレポートで動作を確認してください。\n\n期待する成果: 呼び出せるツールを持つプラグインと、サンプル呼び出しの確認結果。\n\n### 自分のモードを作る\n\n> 標準モードを基に「コードレビュー」モードを作ってください。潜在的なバグとテストの不足を優先して確認し、ファイルパスと行番号を示し、ファイルを変更する前に確認するようにしてください。選択できるプリセットとして保存してください。\n\n期待する成果: 新しいタスクで選べるカスタムプリセット。レビューの指示は Agent を導くもので、実際に実行できる操作は権限設定で決まります。	ok
+settings.agentPreset	builtInGroup	Built-in	組み込み	ok
+settings.agentPreset	customGroup	Custom	カスタム	ok
+settings.agentPreset	sectionIntro	Choose the agent’s tools and how it works. Use Standard mode for everyday tasks, or Creator mode to add capabilities to DSH.	Agent が使うツールと動き方を選びます。日常的なタスクには標準モード、DSH に機能を足すなら創造モードです。	ok
+settings.agentPreset	seatHint	Choose the agent preset for your new task	新しいタスクで使う Agent プリセットを選択	ok
+settings.agentPreset	headerHint	The agent preset chosen when this task started	このタスクの Agent プリセット (タスク開始時に確定します)	ok
+settings.agentPreset	nav	Agent presets	Agent プリセット	ok
+settings.agentPreset	setDefault	Set as new task default	新しいタスクの既定にする	ok
+settings.agentPreset	view	View configuration	設定を見る	ok
+settings.agentPreset	presetStandardName	Standard mode	標準モード	ok
+settings.agentPreset	presetStandardDescription	Work with code, files, and information. Suitable for most tasks, with search, editing, terminal commands, and other tools available as needed.	コード、ファイル、資料を扱います。ほとんどのタスクに適しており、必要に応じて検索・編集・ターミナルなどのツールを使えます。	ok
+settings.agentPreset	presetPtcName	PTC mode	PTC モード	ok
+settings.agentPreset	presetPtcDescription	Includes all Standard mode capabilities. Better suited to tasks that call tools in batches and then filter, organize, deduplicate, count, or summarize the results.	標準モードのすべての機能を含みます。ツールをまとめて呼び出し、その結果を絞り込み・整理・重複排除・集計・要約するタスクに向いています。	ok
+settings.agentPreset	presetMinimalName	Minimal mode	最小モード	ok
+settings.agentPreset	presetMinimalDescription	The agent uses a terminal and image reading, with context compaction. Useful for testing and comparing its basic performance.	Agent はターミナルと画像読み取りを使い、コンテキスト圧縮も行います。基本性能のテストや比較に便利です。	ok
+settings.agentPreset	presetCordisName	Creator mode	創造モード	ok
+settings.agentPreset	presetCordisDescription	Customize DSH through conversation. Let the agent write plugins that add features or UI, or combine tools and prompts to create your own mode.	会話を通して DSH をカスタマイズします。機能や UI を追加するプラグインを Agent に書かせたり、ツールとプロンプトを組み合わせて自分のモードを作ったりできます。	ok
+settings.agentPreset	inUse	New task default	既定	ok
+settings.agentPreset	noDescription	No description.	説明はありません。	ok
+settings.agentPreset	brokenBadge	Failed to load	読み込みに失敗	ok
+settings.agentPreset	switchRefused	Could not switch to {name}: {reason}	{name} に切り替えられませんでした: {reason}	ok
+settings.agentPreset	standardUnavailable	Standard mode is unavailable. Restore it or choose another available mode.	標準モードは利用できません。復元するか、利用可能な別のモードを選んでください。	ok
+settings.agentPreset	close	Close	閉じる	ok
+settings.agentPreset	creatorDraft	Let the agent help me create a preset	Agent にプリセット作成を手伝ってもらう	ok
+settings.agentPreset	createPlugin	Let the agent create a plugin	Agent にプラグインを作らせる	ok
+settings.agentPreset	createPluginDescription	Enter Creator mode and make your own DSH plugin	創造モードに入り、独自の DSH プラグインを作ります	ok
+settings.agentPreset	createPluginChecking	Checking whether Creator mode is available	創造モードが利用できるか確認中	ok
+settings.agentPreset	createPluginUnavailable	Temporarily unavailable. Reopen this menu to retry	一時的に利用できません。このメニューを開き直して再試行してください	ok
+settings.agentPreset	createPluginMissing	Creator mode is not included in this configuration	この構成には創造モードが含まれていません	ok
 open-in-app	open.title	Open in {app}	{app} で開く	ok
 open-in-app	path.appDefault	{app} (default)	{app} (既定)	ok
 open-in-app	path.appsError	Could not load applications	アプリの一覧を読み込めませんでした	ok
@@ -1629,47 +1970,88 @@ open-in-app	app.finder	Finder	Finder	ok
 open-in-app	app.explorer	File Explorer	エクスプローラー	ok
 open-in-app	app.filemanager	Files	ファイル	ok
 open-in-app	app.terminal	Terminal	ターミナル	ok
-settings.agentPreset	modeExplanation	Mode details	モードの説明	ok
-settings.agentPreset	howToUse	How to use	使い方	ok
-settings.agentPreset	guideSections	Guide sections	ガイドの内容	ok
-settings.agentPreset	guideExampleTask	Example task	タスク例	ok
-settings.agentPreset	guideCopy	Copy	コピー	ok
-settings.agentPreset	guideCopied	Copied	コピーしました	ok
-settings.agentPreset	guideFootnotes	Footnotes	脚注	ok
-settings.agentPreset	guideStandardIntro	Choose Standard mode when starting a new task. Describe what you want to accomplish, point to the relevant files, and explain how to check the result.	新しいタスクを始めるときは標準モードを選びます。達成したいことを説明し、関連するファイルを示し、結果の確認方法を伝えてください。	ok
-settings.agentPreset	guideStandardExplanation	### How it works\n\nThe agent calls tools directly to read and edit files, search, and run terminal commands. It includes Skills, planning, goals, subagents, workflows, and context compaction.\n\n### When to choose it\n\nStart here for everyday coding, file work, and research. Standard mode can also write scripts and process files in batches. PTC changes how tool calls are organized; it is not required for batch tasks.	### 仕組み\n\nAgent はツールを直接呼び出して、ファイルの読み書き・検索・ターミナルコマンドの実行を行います。スキル、計画、ゴール、サブエージェント、ワークフロー、コンテキスト圧縮を利用できます。\n\n### どんなときに選ぶか\n\n日々のコーディング、ファイル作業、調査はここから始めるとよいでしょう。標準モードでもスクリプトを書いてファイルを一括処理できます。PTC が変えるのはツール呼び出しの組み立て方であり、一括処理に必須のものではありません。	ok
-settings.agentPreset	guideStandardUsage	### Fix a bug\n\n> Find out why submitting the search form twice makes the results disappear. Fix it and run the relevant tests. Explain the cause and what changed.\n\nExpected output: a code change, the relevant test results, and an explanation of the cause.\n\n### Organize project notes\n\n> Read the Markdown notes in this project. Summarize the agreed decisions and open questions, with links to the source files.\n\nExpected output: a summary with references that you can check against the original notes.	### バグを修正する\n\n> 検索フォームを続けて 2 回送信すると結果が消える原因を突き止めて修正し、関連するテストを実行してください。原因と変更内容も説明してください。\n\n期待する成果: コードの変更、関連テストの結果、原因の説明。\n\n### プロジェクトの記録を整理する\n\n> このプロジェクトの Markdown の記録を読み、合意済みの決定事項と未解決の論点を、参照元ファイルへのリンク付きでまとめてください。\n\n期待する成果: 元の記録と突き合わせられる、出典付きの要約。	ok
-settings.agentPreset	guidePtcIntro	Choose PTC mode when starting a new task. Specify the input files, processing rules, and output format. The agent writes the code.	新しいタスクを始めるときは PTC モードを選びます。入力ファイル、処理ルール、出力形式を指定してください。コードは Agent が書きます。	ok
-settings.agentPreset	guidePtcExplanation	### How tools are called\n\nPTC means Programmatic Tool Calling. In this built-in preset, the agent uses run_code to write a TypeScript program that calls tools through a generated SDK. The program can use loops, conditions, error handling, and concurrent calls where appropriate.\n\n### What reaches the model\n\nTool results first reach the program, which can filter and combine them. The model receives what the program prints or returns; image results are attached separately. Nested tool calls are still recorded and remain subject to tool permissions.\n\n### Compared with Standard mode\n\nBoth modes can handle coding and batch tasks. Standard mode exposes individual tools directly; PTC organizes tool calls in code. The current PTC preset leaves the workflow tool disabled. Speed and token use depend on the task and how the program handles its results.	### ツールの呼び出され方\n\nPTC は Programmatic Tool Calling、つまりプログラムからツールを呼び出す方式です。この内蔵プリセットでは、Agent が run_code で TypeScript プログラムを書き、生成された SDK を通してツールを呼び出します。プログラムではループ、条件分岐、エラー処理、並行呼び出しを適切に使えます。\n\n### モデルに届くもの\n\nツールの結果はいったんプログラムに渡り、そこで絞り込みや合成ができます。モデルが受け取るのは、プログラムが出力または返した内容です。画像の結果は別途添付されます。プログラム内のツール呼び出しも記録され、ツールの権限設定に従います。\n\n### 標準モードとの違い\n\nどちらのモードもコーディングや一括処理を扱えます。標準モードは個々のツールをそのままモデルに渡し、PTC はツール呼び出しをコードで組み立てます。現在の PTC プリセットでは workflow ツールが無効になっています。速度とトークン消費は、タスクと結果の扱い方によって変わります。	ok
-settings.agentPreset	guidePtcUsage	### Check a set of configuration files\n\n> Check all JSON files in configs/. List missing required fields and invalid values against schema.json. Save a CSV with one row per issue. Include unreadable files in the report and keep checking the rest. Leave the original files unchanged.\n\nExpected output: an issue summary and a CSV report. The program can repeat the same checks, handle individual failures, and collect the results.\n\n### Summarize error logs\n\n> Analyze the log files in logs/. Group errors by service and error type. Show the ten most frequent groups and one example from each. Save the full counts to a CSV.\n\nExpected output: the top error groups and a complete count table. Intermediate data can be aggregated in the program before the summary reaches the model.	### 設定ファイルを一括で検査する\n\n> configs/ 配下の JSON をすべて検査し、schema.json と照らして不足している必須項目と不正な値を挙げてください。問題ごとに CSV の 1 行として保存してください。読めなかったファイルも報告に含め、残りの検査は続けてください。元のファイルは変更しないでください。\n\n期待する成果: 問題の要約と CSV レポート。同じ検査を繰り返し実行し、個々の失敗に対処して結果を集約できます。\n\n### エラーログを集計する\n\n> logs/ のログを解析し、サービスとエラー種別ごとに件数をまとめてください。出現回数の多い上位 10 グループと、それぞれ 1 件の例を示してください。完全な件数は CSV に保存してください。\n\n期待する成果: 頻出エラーの要約と完全な件数表。中間データはプログラム側で集約してから、要約だけをモデルに渡せます。	ok
-settings.agentPreset	guideMinimalIntro	Choose Minimal mode for a new task. For a comparison, hold the model, permissions, input, and starting workspace state constant across runs.	新しいタスクでは最小モードを選びます。比較実験をするときは、モデル・権限・入力・ワークスペースの初期状態を実行間でそろえてください。	ok
-settings.agentPreset	guideMinimalExplanation	### What is included\n\nOne persistent shell tool and a fixed system prompt. The built-in preset does not load Skills, planning, context compaction, or the standard runtime context.\n\n### When to choose it\n\nUse it as a baseline for experiments and comparisons. It can still read files and execute scripts through shell commands, but offers fewer built-in ways to manage a long task. Fewer tools does not necessarily make it easier for a beginner.	### 含まれるもの\n\n永続シェルツールが 1 つと、固定のシステムプロンプトだけです。この内蔵プリセットはスキル、計画、コンテキスト圧縮、標準のランタイムコンテキストを読み込みません。\n\n### どんなときに選ぶか\n\n実験や比較の基準として使います。シェルコマンドを通してファイルを読み、スクリプトを実行することはできますが、長いタスクを管理するための組み込みの手段は少なくなります。ツールが少ないことが、初心者にとって簡単という意味ではありません。	ok
-settings.agentPreset	guideMinimalUsage	### Compare performance on a small bug fix\n\n> Run the tests for this project, find the cause of the failure, and make the smallest fix. Run the relevant tests again and report the result.\n\nRun the same task separately in Standard and Minimal modes from the same starting state. Compare task completion, tool calls, and the resulting changes. Minimal mode performs the work through terminal commands.	### 小さな修正での性能を比較する\n\n> このプロジェクトのテストを実行し、失敗の原因を特定して最小限の修正を加えてください。関連するテストをもう一度実行し、結果を報告してください。\n\n同じ初期状態から、同じタスクを標準モードと最小モードで別々に実行します。完了状況、ツール呼び出し、最終的な変更を比較してください。最小モードはターミナルコマンドを通して作業します。	ok
-settings.agentPreset	guideCordisIntro	Choose Creator mode for a new task. Describe the capability you want, where it should appear, and how you will verify it.	新しいタスクを始めるときは創造モードを選びます。追加したい機能、それをどこから使うか、どう検証するかを説明してください。	ok
-settings.agentPreset	guideCordisExplanation	### What you can create\n\nCreator mode includes the standard task tools plus runtime inspection, persistent plugin management, and guidance for authoring Cordis plugins and agent presets. It can create a plugin that adds a capability or UI, or a preset that combines tools and prompts for a particular job.\n\n### Plugins and modes\n\nA plugin adds capabilities to DSH, such as a tool, a service connection, or a UI entry. A mode is an agent preset that selects tools and defines how the agent works in a task. A plugin can be included in a custom preset.\n\n### How the result takes effect\n\nAsk the agent to install and verify the result, not just generate source code. A plugin may load immediately or require a restart, depending on what it changes. A newly created preset is selected when starting a new task.	### 何を作れるか\n\n創造モードには標準のタスク用ツールに加えて、実行時の調査、プラグインの永続的な管理、Cordis プラグインと Agent プリセットを作るためのガイドが含まれます。機能や UI を追加するプラグインも、特定の作業向けにツールとプロンプトを組み合わせたプリセットも作れます。\n\n### プラグインとモード\n\nプラグインは DSH に機能を追加します (ツール、サービス接続、UI の入口など)。モードは Agent プリセットであり、タスクで使うツールを選び、Agent の動き方を決めます。自作のプラグインをカスタムプリセットに含めることもできます。\n\n### 成果を反映させるには\n\nソースコードを生成させるだけでなく、インストールと動作確認まで Agent に依頼してください。変更内容によっては即座に読み込まれる場合と再起動が必要な場合があります。新しく作ったプリセットは、新しいタスクを始めるときに選べます。	ok
-settings.agentPreset	guideCordisUsage	### Add a UI\n\n> Create a DSH plugin that adds a project notes entry to the sidebar. Let me browse the Markdown files in this workspace and preview a selected note. Install it and verify that the page opens.\n\nExpected output: an installed plugin with a working entry and preview page, plus any remaining activation steps.\n\n### Add a tool\n\n> Create a plugin with a tool that reads this project’s test report and summarizes the failed tests. Register it and verify it with a sample report.\n\nExpected output: a plugin with a callable tool and a verified sample call.\n\n### Create my own mode\n\n> Create a “Code review” mode based on Standard mode. Have it prioritize potential bugs and test gaps, cite file paths and lines, and ask before modifying files. Save it as a selectable preset.\n\nExpected output: a custom preset for new tasks. These review instructions guide the agent; permission settings determine which actions it can execute.	### UI を追加する\n\n> サイドバーに「プロジェクトノート」の入口を追加する DSH プラグインを作ってください。このワークスペースの Markdown ファイルを一覧でき、選んだノートをプレビューできるようにしてください。インストールまで行い、ページが開くことを確認してください。\n\n期待する成果: 動作する入口とプレビューページを備えた、インストール済みのプラグイン。残っている有効化手順があればそれも示します。\n\n### ツールを追加する\n\n> このプロジェクトのテストレポートを読み、失敗したテストを要約するツールを提供するプラグインを作ってください。登録し、サンプルのレポートで動作を確認してください。\n\n期待する成果: 呼び出せるツールを持つプラグインと、サンプル呼び出しの確認結果。\n\n### 自分のモードを作る\n\n> 標準モードを基に「コードレビュー」モードを作ってください。潜在的なバグとテストの不足を優先して確認し、ファイルパスと行番号を示し、ファイルを変更する前に確認するようにしてください。選択できるプリセットとして保存してください。\n\n期待する成果: 新しいタスクで選べるカスタムプリセット。レビューの指示は Agent を導くもので、実際に実行できる操作は権限設定で決まります。	ok
-settings.agentPreset	builtInGroup	Built-in	組み込み	ok
-settings.agentPreset	customGroup	Custom	カスタム	ok
-settings.agentPreset	sectionIntro	Choose the agent’s tools and how it works. Use Standard mode for everyday tasks, or Creator mode to add capabilities to DSH.	Agent が使うツールと動き方を選びます。日常的なタスクには標準モード、DSH に機能を足すなら創造モードです。	ok
-settings.agentPreset	seatHint	Choose the agent preset for your new task	新しいタスクで使う Agent プリセットを選択	ok
-settings.agentPreset	headerHint	The agent preset chosen when this task started	このタスクの Agent プリセット (タスク開始時に確定します)	ok
-settings.agentPreset	nav	Agent presets	Agent プリセット	ok
-settings.agentPreset	setDefault	Set as new task default	新しいタスクの既定にする	ok
-settings.agentPreset	view	View configuration	設定を見る	ok
-settings.agentPreset	presetStandardName	Standard mode	標準モード	ok
-settings.agentPreset	presetStandardDescription	Work with code, files, and information. Suitable for most tasks, with search, editing, terminal commands, and other tools available as needed.	コード、ファイル、資料を扱います。ほとんどのタスクに適しており、必要に応じて検索・編集・ターミナルなどのツールを使えます。	ok
-settings.agentPreset	presetPtcName	PTC mode	PTC モード	ok
-settings.agentPreset	presetPtcDescription	Includes all Standard mode capabilities. Better suited to tasks that call tools in batches and then filter, organize, deduplicate, count, or summarize the results.	標準モードのすべての機能を含みます。ツールをまとめて呼び出し、その結果を絞り込み・整理・重複排除・集計・要約するタスクに向いています。	ok
-settings.agentPreset	presetMinimalName	Minimal mode	最小モード	ok
-settings.agentPreset	presetMinimalDescription	The agent works using only a terminal tool. Useful for testing and comparing its basic performance.	Agent はターミナルツールだけを使って作業します。基本的な性能の測定や比較に適しています。	ok
-settings.agentPreset	presetCordisName	Creator mode	創造モード	ok
-settings.agentPreset	presetCordisDescription	Customize DSH through conversation. Let the agent write plugins that add features or UI, or combine tools and prompts to create your own mode.	会話を通して DSH をカスタマイズします。機能や UI を追加するプラグインを Agent に書かせたり、ツールとプロンプトを組み合わせて自分のモードを作ったりできます。	ok
-settings.agentPreset	inUse	New task default	既定	ok
-settings.agentPreset	noDescription	No description.	説明はありません。	ok
-settings.agentPreset	brokenBadge	Failed to load	読み込みに失敗	ok
-settings.agentPreset	switchRefused	Could not switch to {name}: {reason}	{name} に切り替えられませんでした: {reason}	ok
-settings.agentPreset	close	Close	閉じる	ok
-settings.agentPreset	creatorDraft	Let the agent help me create a preset	Agent にプリセット作成を手伝ってもらう	ok
+settings	trigger	Settings	設定	ok
+settings	shortcut.open	Open settings	設定を開く	ok
+settings	desktop.update.available	Update	更新	ok
+settings	desktop.update.checking	Checking for updates…	更新を確認しています…	ok
+settings	desktop.update.progress	{percent}%	{percent}%	ok
+settings	desktop.update.verifying	Verifying update files…	更新ファイルを検証しています…	ok
+settings	desktop.update.installing	Preparing to restart…	再起動の準備をしています…	ok
+settings	desktop.update.ready	Install and Restart	インストールして再起動	ok
+settings	desktop.update.retry	Retry update	更新を再試行	ok
+settings	desktop.update.versionDetail	{label}: {version}	{label}: {version}	ok
+settings	desktop.update.downloadDetail	Downloading update: {percent}%\nTarget version: {version}	更新をダウンロード中: {percent}%\n対象バージョン: {version}	ok
+settings	desktop.update.checkFailed	Could not check for updates. Please try again later.	更新を確認できませんでした。しばらくしてから再試行してください。	ok
+settings	desktop.update.downloadFailed	Could not download the update. Please try again.	更新をダウンロードできませんでした。再試行してください。	ok
+settings	desktop.update.installFailed	Could not install the update. Please try again later.	更新をインストールできませんでした。しばらくしてから再試行してください。	ok
+settings	desktop.update.checkNetworkFailed	Could not check for updates. Check your connection and try again.	更新を確認できませんでした。接続を確認して再試行してください。	ok
+settings	desktop.update.downloadNetworkFailed	Could not download the update. Check your connection and try again.	更新をダウンロードできませんでした。接続を確認して再試行してください。	ok
+settings	desktop.update.installNetworkFailed	Could not install the update. Check your connection and try again.	更新をインストールできませんでした。接続を確認して再試行してください。	ok
+settings	desktop.update.stopFailed	Could not safely stop the tasks. The update has not been installed. Please try again later.	タスクを安全に停止できなかったため、更新はインストールされていません。しばらくしてから再試行してください。	ok
+settings	desktop.update.tasksChanged	New tasks have started. Confirm again to stop the tasks and update.	新しいタスクが始まりました。タスクを停止して更新するか、もう一度確認してください。	ok
+settings	desktop.update.tasksUnavailable	Task status is unavailable. Try updating again when the workspace is ready.	タスクの状態を取得できません。ワークスペースが準備できてから更新を再試行してください。	ok
+settings	title	Settings	設定	ok
+settings	close	Close	閉じる	ok
+settings	openDocument	Open configuration file	設定ファイルを開く	ok
+settings	openDocument.error	Could not open configuration file	設定ファイルを開けませんでした	ok
+settings	general.nav	General	一般	ok
+settings	general.currentVersion	Current version: {version}	現在のバージョン: {version}	ok
+settings	developerTools.title	Show coding view	コーディングビューを表示	ok
+settings	developerTools.error	Could not save. Please try again.	保存できませんでした。再試行してください。	ok
+settings	developerTools.description	Shows trajectory, code diffs, and all Agent presets	軌跡、コード差分、すべての Agent プリセットを表示します	ok
+settings	connection.error	Disconnected	切断されました	ok
+settings	connection.connecting	Reconnecting	再接続しています	ok
+settings	connection.connected	Connected	接続済み	ok
+settings	connection.reconnect	Disconnected, reconnect now	切断されました。クリックで再接続	ok
+settings	connection.restart	Reconnecting, reconnect now	再接続しています。クリックで今すぐ再接続	ok
+settings	hostRelease.title	Service version changed	サービスのバージョンが変わりました	ok
+settings	hostRelease.description	The service version changed. This page paused live updates; reload to load the new version.	サービスのバージョンが変わりました。このページはライブ更新を停止しています。再読み込みすると新しいバージョンが読み込まれます。	ok
+settings	hostRelease.service	Service	サービス	ok
+settings	hostRelease.page	Page	ページ	ok
+settings	hostRelease.unknown	Unknown	不明	ok
+settings	hostRelease.reload	Reload to load the new version	再読み込みして新しいバージョンを読み込む	ok
+settings	hostRelease.later	Not now	あとで	ok
+subagent	duration.seconds	{seconds}s	{seconds} 秒	ok
+subagent	duration.minutes	{minutes}m {seconds}s	{minutes} 分 {seconds} 秒	ok
+subagent	duration.hours	{hours}h {minutes}m {seconds}s	{hours} 時間 {minutes} 分 {seconds} 秒	ok
+subagent	duration.days	{days}d	{days} 日	ok
+subagent	duration.daysHours	{days}d {hours}h	{days} 日 {hours} 時間	ok
+subagent	duration.months	~{months}mo	約 {months} か月	ok
+subagent	duration.monthsDays	~{months}mo {days}d	約 {months} か月 {days} 日	ok
+subagent	duration.years	~{years}y	約 {years} 年	ok
+subagent	duration.yearsMonths	~{years}y {months}mo	約 {years} 年 {months} か月	ok
+subagent	duration.exactDays	{days}d {hours}h {minutes}m {seconds}s	{days} 日 {hours} 時間 {minutes} 分 {seconds} 秒	ok
+subagent	duration.exactTitle	Total active duration: {duration}	合計実行時間: {duration}	ok
+subagent	tokens.thousand	{value}K	{value}K	ok
+subagent	tokens.million	{value}M	{value}M	ok
+subagent	tokens.total	{value} tok	{value} tok	ok
+subagent	loading.label	Loading subagents…	サブエージェントを読み込み中…	ok
+subagent	load.error	Unable to load subagents	サブエージェントを読み込めませんでした	ok
+subagent	catalog.migrationRequired	Migration required	移行が必要です	ok
+subagent	retry	Retry	再試行	ok
+subagent	mode.external	External task	外部タスク	ok
+subagent	mode.oneShot	one-shot	単発	ok
+subagent	mode.continuable	continuable	継続可	ok
+subagent	mode.unknown	unknown mode	不明なモード	ok
+subagent	readonly.unknown.body	Read the child session to determine whether it can be continued.	続行できるかどうかを判断するには、子セッションを読んでください。	ok
+subagent	activity.running	running	実行中	ok
+subagent	activity.completed	completed	完了	ok
+subagent	activity.inactive	not running	停止	ok
+subagent	branch.collapse	Collapse {label} descendants	{label} の子孫を折りたたむ	ok
+subagent	branch.expand	Expand {label} descendants	{label} の子孫を展開する	ok
+subagent	count.total.one	{count} subagent	サブエージェント {count} 件	ok
+subagent	count.total.other	{count} subagents	サブエージェント {count} 件	ok
+subagent	count.running.one	{count} subagent running	サブエージェント {count} 件が実行中	ok
+subagent	count.running.other	{count} subagents running	サブエージェント {count} 件が実行中	ok
+subagent	switcher.aria	Switch subagent: {title}	サブエージェントを切り替え: {title}	ok
+subagent	tree.aria	Subagent sessions	サブエージェントのセッション	ok
+subagent	open.sidebar	Open in sidebar	サイドバーで開く	ok
+subagent	open.sidebar.aria	Open {label} in sidebar	{label} をサイドバーで開く	ok
+subagent	sidebar.chat	Chat	チャット	ok
+subagent	readonly.oneShot.title	One-shot subagent record	単発サブエージェントの記録	ok
+subagent	readonly.title	This subagent is read-only for now	このサブエージェントは現在読み取り専用です	ok
+subagent	readonly.oneShot.body	One-shot tasks do not accept follow-ups; review the full execution record here.	単発のタスクには追加のメッセージを送れません。ここで実行記録の全体を確認してください。	ok
+subagent	readonly.body	The parent session is offline; reopen it to continue sending messages.	親セッションがオフラインです。再度開くと、メッセージを送信できます。	ok
 common	ok	OK	OK	ok
 common	cancel	Cancel	キャンセル	ok
 common	close	Close	閉じる	ok
@@ -1711,46 +2093,6 @@ common	markdown.footnotes	Footnotes	脚注	ok
 common	markdown.truncatedCharacters	… truncated at {total} characters	… 全 {total} 文字で省略	ok
 common	number.thousand	{value}K	{value}K	ok
 common	number.million	{value}M	{value}M	ok
-settings.pluginInventory	tab	Plugin list	プラグイン一覧	ok
-settings.pluginInventory	loading	Reading plugins…	プラグインを読み込み中…	ok
-settings.pluginInventory	clientSyncing	Syncing plugins on this page…	このページのプラグインを同期しています…	ok
-settings.pluginInventory	clientSyncFailed	Some plugins could not sync on this page. Host enablement is unchanged.	このページでは一部のプラグインを同期できませんでした。ホスト側の有効状態は変わっていません。	ok
-settings.pluginInventory	clientSyncRetry	Retry this page	このページを再同期	ok
-settings.pluginInventory	error	Plugins are temporarily unavailable.	プラグインを一時的に読み込めません。	ok
-settings.pluginInventory	metadataError	Package metadata error: {error}	パッケージメタデータのエラー: {error}	ok
-settings.pluginInventory	retry	Retry	再試行	ok
-settings.pluginInventory	search	Search plugins	プラグインを検索	ok
-settings.pluginInventory	empty	No plugins are available.	利用できるプラグインがありません。	ok
-settings.pluginInventory	emptySearch	No matching plugins.	一致するプラグインがありません。	ok
-settings.pluginInventory	presetTitle	Session plugins	セッションプラグイン	ok
-settings.pluginInventory	presetSubtitle	Composed per session by agent presets	Agent プリセットがセッションごとに構成します	ok
-settings.pluginInventory	countUnit	plugins	件	ok
-settings.pluginInventory	switcherLabel	Choose the agent preset to inspect	確認する Agent プリセットを選択	ok
-settings.pluginInventory	presetOptionDefault	{name} (default)	{name} (既定)	ok
-settings.pluginInventory	presetOptionBroken	{name} (failed to load)	{name} (読み込み失敗)	ok
-settings.pluginInventory	globalTitle	Global plugins	グローバルプラグイン	ok
-settings.pluginInventory	globalSubtitle	Shared by the system and every session	システムとすべてのセッションで共有されます	ok
-settings.pluginInventory	presetProvidedDetail	Disabled globally; agent presets provide it per session	グローバルでは無効です。Agent プリセットがセッションごとに提供します	ok
-settings.pluginInventory	enabledIn	Enabled in	有効な場所	ok
-settings.pluginInventory	viewInPreset	View in the preset group	プリセットのグループで見る	ok
-settings.pluginInventory	matchesInOtherPresets	{count} more matches in other presets: 	ほかのプリセットにも {count} 件一致します: 	ok
-settings.pluginInventory	failedCountLabel	failed	件失敗	ok
-settings.pluginInventory	enabledTag	Enabled	有効	ok
-settings.pluginInventory	disabledTag	Disabled	無効	ok
-settings.pluginInventory	conditionalTag	Conditional	条件付き	ok
-settings.pluginInventory	presetEnabledTag	Via presets	プリセット経由	ok
-settings.pluginInventory	failedTag	Failed	失敗	ok
-settings.pluginInventory	moduleLabel	Module	完全名	ok
-settings.pluginInventory	fromPreset	From	提供元	ok
-settings.pluginInventory	condition	Disabled when	無効になる条件	ok
-settings.pluginInventory	configuration	Configuration	設定状態	ok
-settings.pluginInventory	runtime	Status	状態	ok
-settings.pluginInventory	unobserved	Not running	未実行	ok
-settings.pluginInventory	pending	Waiting for dependencies	依存関係を待機中	ok
-settings.pluginInventory	loadingPhase	Loading	読み込み中	ok
-settings.pluginInventory	active	Running	実行中	ok
-settings.pluginInventory	failed	Failed to start	起動に失敗	ok
-settings.pluginInventory	unloading	Unloading	アンロード中	ok
 job	count.live.one	{count} background job running	{count} 件のジョブが実行中	ok
 job	count.live.other	{count} background jobs running	{count} 件のジョブが実行中	ok
 job	count.idle.one	{count} background job	{count} 件のジョブ	ok
@@ -1780,6 +2122,7 @@ job	output.error	live output stream interrupted: {error}	ライブ出力が中�
 job	terminal.signal	signal {signal}	シグナル {signal}	ok
 job	terminal.exitCode	exit {code}	終了コード {code}	ok
 job	terminal.noExitCode	no exit code	終了コードなし	ok
+job	terminal.commandLine	Command line {n}	コマンドライン {n}	ok
 job	terminal.running	running	実行中	ok
 job	terminal.failed	failed	失敗	ok
 job	terminal.done	done	完了	ok
@@ -1790,45 +2133,43 @@ job	terminal.collapse	Collapse	折りたたむ	ok
 job	terminal.collapseAria	Collapse output	出力を折りたたむ	ok
 job	terminal.expand	Show {n} more lines	残り {n} 行を表示	ok
 job	terminal.expandAria	Expand {n} collapsed output lines	折りたたまれた出力 {n} 行を展開	ok
-subagent	duration.seconds	{seconds}s	{seconds} 秒	ok
-subagent	duration.minutes	{minutes}m {seconds}s	{minutes} 分 {seconds} 秒	ok
-subagent	duration.hours	{hours}h {minutes}m {seconds}s	{hours} 時間 {minutes} 分 {seconds} 秒	ok
-subagent	duration.days	{days}d	{days} 日	ok
-subagent	duration.daysHours	{days}d {hours}h	{days} 日 {hours} 時間	ok
-subagent	duration.months	~{months}mo	約 {months} か月	ok
-subagent	duration.monthsDays	~{months}mo {days}d	約 {months} か月 {days} 日	ok
-subagent	duration.years	~{years}y	約 {years} 年	ok
-subagent	duration.yearsMonths	~{years}y {months}mo	約 {years} 年 {months} か月	ok
-subagent	duration.exactDays	{days}d {hours}h {minutes}m {seconds}s	{days} 日 {hours} 時間 {minutes} 分 {seconds} 秒	ok
-subagent	duration.exactTitle	Total active duration: {duration}	合計実行時間: {duration}	ok
-subagent	tokens.thousand	{value}K	{value}K	ok
-subagent	tokens.million	{value}M	{value}M	ok
-subagent	tokens.total	{value} tok	{value} tok	ok
-subagent	loading.label	Loading subagents…	サブエージェントを読み込み中…	ok
-subagent	load.error	Unable to load subagents	サブエージェントを読み込めませんでした	ok
-subagent	retry	Retry	再試行	ok
-subagent	mode.oneShot	one-shot	単発	ok
-subagent	mode.continuable	continuable	継続可	ok
-subagent	mode.unknown	unknown mode	不明なモード	ok
-subagent	readonly.unknown.body	Read the child session to determine whether it can be continued.	続行できるかどうかを判断するには、子セッションを読んでください。	ok
-subagent	activity.running	running	実行中	ok
-subagent	activity.completed	completed	完了	ok
-subagent	activity.inactive	not running	停止	ok
-subagent	branch.collapse	Collapse {label} descendants	{label} の子孫を折りたたむ	ok
-subagent	branch.expand	Expand {label} descendants	{label} の子孫を展開する	ok
-subagent	count.total.one	{count} subagent	サブエージェント {count} 件	ok
-subagent	count.total.other	{count} subagents	サブエージェント {count} 件	ok
-subagent	count.running.one	{count} subagent running	サブエージェント {count} 件が実行中	ok
-subagent	count.running.other	{count} subagents running	サブエージェント {count} 件が実行中	ok
-subagent	switcher.aria	Switch subagent: {title}	サブエージェントを切り替え: {title}	ok
-subagent	tree.aria	Subagent sessions	サブエージェントのセッション	ok
-subagent	open.sidebar	Open in sidebar	サイドバーで開く	ok
-subagent	open.sidebar.aria	Open {label} in sidebar	{label} をサイドバーで開く	ok
-subagent	sidebar.chat	Chat	チャット	ok
-subagent	readonly.oneShot.title	One-shot subagent record	単発サブエージェントの記録	ok
-subagent	readonly.title	This subagent is read-only for now	このサブエージェントは現在読み取り専用です	ok
-subagent	readonly.oneShot.body	One-shot tasks do not accept follow-ups; review the full execution record here.	単発のタスクには追加のメッセージを送れません。ここで実行記録の全体を確認してください。	ok
-subagent	readonly.body	The parent session is offline; reopen it to continue sending messages.	親セッションがオフラインです。再度開くと、メッセージを送信できます。	ok
+settings.pluginInventory	tab	Plugin list	プラグイン一覧	ok
+settings.pluginInventory	loading	Reading plugins…	プラグインを読み込み中…	ok
+settings.pluginInventory	clientSyncing	Syncing plugins on this page…	このページのプラグインを同期しています…	ok
+settings.pluginInventory	clientSyncFailed	Some plugins could not sync on this page. Host enablement is unchanged.	このページでは一部のプラグインを同期できませんでした。ホスト側の有効状態は変わっていません。	ok
+settings.pluginInventory	clientSyncRetry	Retry this page	このページを再同期	ok
+settings.pluginInventory	error	Plugins are temporarily unavailable.	プラグインを一時的に読み込めません。	ok
+settings.pluginInventory	metadataError	Package metadata error: {error}	パッケージメタデータのエラー: {error}	ok
+settings.pluginInventory	retry	Retry	再試行	ok
+settings.pluginInventory	search	Search plugins	プラグインを検索	ok
+settings.pluginInventory	empty	No plugins are available.	利用できるプラグインがありません。	ok
+settings.pluginInventory	emptySearch	No matching plugins.	一致するプラグインがありません。	ok
+settings.pluginInventory	presetTitle	Session plugins	セッションプラグイン	ok
+settings.pluginInventory	presetSubtitle	Composed per session by agent presets	Agent プリセットがセッションごとに構成します	ok
+settings.pluginInventory	switcherLabel	Choose the agent preset to inspect	確認する Agent プリセットを選択	ok
+settings.pluginInventory	presetOptionDefault	{name} (default)	{name} (既定)	ok
+settings.pluginInventory	presetOptionBroken	{name} (failed to load)	{name} (読み込み失敗)	ok
+settings.pluginInventory	globalTitle	Global plugins	グローバルプラグイン	ok
+settings.pluginInventory	globalSubtitle	Shared by the system and every session	システムとすべてのセッションで共有されます	ok
+settings.pluginInventory	presetProvidedDetail	Disabled globally; agent presets provide it per session	グローバルでは無効です。Agent プリセットがセッションごとに提供します	ok
+settings.pluginInventory	enabledIn	Enabled in	有効な場所	ok
+settings.pluginInventory	matchesInOtherPresets	{count} more matches in other presets: 	ほかのプリセットにも {count} 件一致します: 	ok
+settings.pluginInventory	enabledTag	Enabled	有効	ok
+settings.pluginInventory	disabledTag	Disabled	無効	ok
+settings.pluginInventory	conditionalTag	Conditional	条件付き	ok
+settings.pluginInventory	presetEnabledTag	Via presets	プリセット経由	ok
+settings.pluginInventory	failedTag	Failed	失敗	ok
+settings.pluginInventory	moduleLabel	Module	完全名	ok
+settings.pluginInventory	fromPreset	From	提供元	ok
+settings.pluginInventory	condition	Disabled when	無効になる条件	ok
+settings.pluginInventory	configuration	Configuration	設定状態	ok
+settings.pluginInventory	runtime	Status	状態	ok
+settings.pluginInventory	unobserved	Not running	未実行	ok
+settings.pluginInventory	pending	Waiting for dependencies	依存関係を待機中	ok
+settings.pluginInventory	loadingPhase	Loading	読み込み中	ok
+settings.pluginInventory	active	Running	実行中	ok
+settings.pluginInventory	failed	Failed to start	起動に失敗	ok
+settings.pluginInventory	unloading	Unloading	アンロード中	ok
 settings.subagent	overridden	Overridden	上書き済み	ok
 settings.subagent	reset	Reset to default	既定に戻す	ok
 settings.subagent	readOnly	This deployment stores settings read-only.	この環境では設定は読み取り専用で保存されます。	ok
@@ -1864,40 +2205,6 @@ settings.subagent	subagentModelSelectionEmpty	No model provider currently advert
 settings.subagent	subagentModelSelectionRequired	Select at least one model before saving.	保存する前に、少なくとも 1 つのモデルを選んでください。	ok
 settings.subagent	subagentModelSelectionConflict	Settings changed elsewhere. Discard your draft and try again.	設定がほかの場所で更新されました。下書きを破棄してやり直してください。	ok
 settings.subagent	subagentModelSelectionOff	Subagents use configured defaults or inherit the parent agent's model. Saved model choices are retained.	オフの場合、サブエージェントは設定済みの既定モデルを使うか、親 Agent のモデルを継承します。選択済みのモデルは保持されます。	ok
-settings	trigger	Settings	設定	ok
-settings	shortcut.open	Open settings	設定を開く	ok
-settings	desktop.update.available	Update	更新	ok
-settings	desktop.update.checking	Checking for updates…	更新を確認しています…	ok
-settings	desktop.update.progress	{percent}%	{percent}%	ok
-settings	desktop.update.verifying	Verifying update files…	更新ファイルを検証しています…	ok
-settings	desktop.update.installing	Preparing to restart…	再起動の準備をしています…	ok
-settings	desktop.update.ready	Install and Restart	インストールして再起動	ok
-settings	desktop.update.retry	Retry update	更新を再試行	ok
-settings	desktop.update.versionDetail	{label}: {version}	{label}: {version}	ok
-settings	desktop.update.downloadDetail	Downloading update: {percent}%\nTarget version: {version}	更新をダウンロード中: {percent}%\n対象バージョン: {version}	ok
-settings	desktop.update.checkFailed	Could not check for updates. Please try again later.	更新を確認できませんでした。しばらくしてから再試行してください。	ok
-settings	desktop.update.downloadFailed	Could not download the update. Please try again.	更新をダウンロードできませんでした。再試行してください。	ok
-settings	desktop.update.installFailed	Could not install the update. Please try again later.	更新をインストールできませんでした。しばらくしてから再試行してください。	ok
-settings	desktop.update.checkNetworkFailed	Could not check for updates. Check your connection and try again.	更新を確認できませんでした。接続を確認して再試行してください。	ok
-settings	desktop.update.downloadNetworkFailed	Could not download the update. Check your connection and try again.	更新をダウンロードできませんでした。接続を確認して再試行してください。	ok
-settings	desktop.update.installNetworkFailed	Could not install the update. Check your connection and try again.	更新をインストールできませんでした。接続を確認して再試行してください。	ok
-settings	desktop.update.stopFailed	Could not safely stop the tasks. The update has not been installed. Please try again later.	タスクを安全に停止できなかったため、更新はインストールされていません。しばらくしてから再試行してください。	ok
-settings	desktop.update.tasksChanged	New tasks have started. Confirm again to stop the tasks and update.	新しいタスクが始まりました。タスクを停止して更新するか、もう一度確認してください。	ok
-settings	desktop.update.tasksUnavailable	Task status is unavailable. Try updating again when the workspace is ready.	タスクの状態を取得できません。ワークスペースが準備できてから更新を再試行してください。	ok
-settings	title	Settings	設定	ok
-settings	close	Close	閉じる	ok
-settings	openDocument	Open configuration file	設定ファイルを開く	ok
-settings	openDocument.error	Could not open configuration file	設定ファイルを開けませんでした	ok
-settings	general.nav	General	一般	ok
-settings	general.currentVersion	Current version: {version}	現在のバージョン: {version}	ok
-settings	developerTools.title	Show coding view	コーディングビューを表示	ok
-settings	developerTools.error	Could not save. Please try again.	保存できませんでした。再試行してください。	ok
-settings	developerTools.description	Shows trajectory, code diffs, and all Agent presets	軌跡、コード差分、すべての Agent プリセットを表示します	ok
-settings	connection.error	Disconnected	切断されました	ok
-settings	connection.connecting	Reconnecting	再接続しています	ok
-settings	connection.connected	Connected	接続済み	ok
-settings	connection.reconnect	Disconnected, reconnect now	切断されました。クリックで再接続	ok
-settings	connection.restart	Reconnecting, reconnect now	再接続しています。クリックで今すぐ再接続	ok
 sidebarRight	command.close	Close current page or window	現在のページまたはウィンドウを閉じる	ok
 sidebarRight	command.refresh	Refresh current page	現在のページを更新	ok
 sidebarRight	command.noRefresh	This page cannot be refreshed	このページは更新できません	ok
@@ -2019,6 +2326,33 @@ sidebarTerminal	inputFull	The input buffer is full. Reconnect and try again.	入
 sidebarTerminal	attachmentEnded	The terminal connection ended. Reconnect to continue.	ターミナルの接続が終了しました。続けるには再接続してください。	ok
 sidebarTerminal	invalidOutput	The terminal screen could not be received. Reconnect to recover it.	ターミナル画面を受信できませんでした。再接続して復元してください。	ok
 sidebarTerminal	terminalLimit	The terminal limit has been reached. Close unused terminals and try again. Exited terminals also count toward the limit.	ターミナルの上限に達しました。使っていないターミナルを閉じてから再試行してください。終了済みのターミナルも上限に含まれます。	ok
+settings.webSearch	title	Web search	Web 検索	ok
+settings.webSearch	description	Set up the DeepSeek search provider.	DeepSeek の検索プロバイダーを設定します。	ok
+settings.webSearch	useSearchApi	Use the new Web Search API	新しい Web Search API を使う	ok
+settings.webSearch	useSearchApiHint	Off by default: search runs through DeepSeek Messages. For the new Web Search API's features and pricing, see the 	既定はオフです。検索は DeepSeek Messages 経由で実行されます。新しい Web Search API の機能と料金は次を参照してください: 	ok
+settings.webSearch	searchGuide	Search & Fetch guide	Search & Fetch ガイド	ok
+settings.webSearch	searchGuideUrl	https://api-docs.deepseek.com/guides/search	https://api-docs.deepseek.com/guides/search	ok
+settings.webSearch	apiKey	API key	API キー	ok
+settings.webSearch	apiKeyHint	Stored outside the settings file. Leave blank to keep the current key.	設定ファイルには保存されません。空欄のままにすると現在のキーを維持します。	ok
+settings.webSearch	apiKeySet	A key is configured.	キーは設定済みです。	ok
+settings.webSearch	apiKeyUnset	No key is configured; only conversations using a DeepSeek Account model can search, through the default endpoint.	キーが未設定です。DeepSeek アカウントのモデルを使う会話だけが、既定のエンドポイント経由で検索できます。	ok
+settings.webSearch	baseUrl	Messages API base URL	Messages API のベース URL	ok
+settings.webSearch	baseUrlHint	Include the API prefix, such as https://api.deepseek.com/anthropic/v1. The provider appends /messages. Leave blank to restore the default.	API プレフィックスを含めてください（例: https://api.deepseek.com/anthropic/v1）。プロバイダーが /messages を付けます。空欄にすると既定に戻ります。	ok
+settings.webSearch	searchApiBaseUrl	Search / Fetch API base URL	Search / Fetch API のベース URL	ok
+settings.webSearch	searchApiBaseUrlHint	Include the API prefix, such as https://api.deepseek.com/v1/tools. The provider appends /search or /fetch. Leave blank to restore the default.	API プレフィックスを含めてください（例: https://api.deepseek.com/v1/tools）。プロバイダーが /search または /fetch を付けます。空欄にすると既定に戻ります。	ok
+settings.webSearch	maxUses	Max searches per request	1 リクエストあたりの最大検索回数	ok
+settings.webSearch	maxUsesHint	How many searches the auxiliary model may run within one Messages request. Applies only to the Messages API.	補助モデルが 1 回の Messages リクエスト内で実行できる検索回数です。Messages API のみに適用されます。	ok
+settings.webSearch	count	Results per search	検索あたりの結果数	ok
+settings.webSearch	countHint	Results returned per query: an integer from 1 to 50, default 10. This controls result count, not search calls. web_search keeps no more sources than its own result limit.	クエリあたりに返す結果数です。1〜50 の整数で、既定は 10 です。これは検索回数ではなく結果数を決めます。web_search は自身の結果上限を超えるソースを保持しません。	ok
+settings.webSearch	overridden	Overridden	上書き済み	ok
+settings.webSearch	reset	Reset to default	既定に戻す	ok
+settings.webSearch	readOnly	This deployment stores settings read-only.	この環境では設定は読み取り専用で保存されます。	ok
+settings.webSearch	unavailable	This plugin is not loaded, so it cannot be configured right now.	このプラグインは読み込まれていないため、現在は設定できません。	ok
+settings.webSearch	save	Save	保存	ok
+settings.webSearch	saving	Saving…	保存しています…	ok
+settings.webSearch	saveFailed	The deployment did not accept these values; they were left for you to correct.	この環境が値を受け付けませんでした。修正できるよう入力は残しています。	ok
+settings.webSearch	invalidNumber	Enter a number, or leave blank to use the default.	数値を入力してください。空欄のままにすると既定値を使います。	ok
+settings.webSearch	invalidCount	Enter an integer from 1 to 50, or leave blank to use the default.	1〜50 の整数を入力するか、空欄にして既定を使ってください。	ok
 sidebarBrowser	type.label	Browser	ブラウザー	ok
 sidebarBrowser	guide.title	Browser	ブラウザー	ok
 sidebarBrowser	guide.description	Browse web pages	Web ページを閲覧できます	ok
@@ -2045,6 +2379,31 @@ sidebarBrowser	error.application-origin	The embedded browser cannot open the DSH
 sidebarBrowser	load.failed	The page could not load; reload or open it in the system browser.	ページを読み込めませんでした。再読み込みするか、システムのブラウザーで開いてください。	ok
 sidebarBrowser	load.failed.detail	Page load failed ({code}): {description}	ページの読み込みに失敗しました ({code}): {description}	ok
 sidebarBrowser	address.unknown	The page navigated; this carrier cannot read its new URL.	ページが遷移しました。この表示では新しい URL を読み取れません。	ok
+settings.theme	appearance.title	Appearance	外観	ok
+settings.theme	appearance.light	Light	ライト	ok
+settings.theme	appearance.dark	Dark	ダーク	ok
+settings.theme	appearance.system	System	システムに合わせる	ok
+settings.theme	fontSize.text.title	Font size	文字サイズ	ok
+settings.theme	fontSize.text.description	Only affects conversation content	会話の内容だけに適用されます	ok
+settings.theme	fontSize.text.increase	Increase font size	文字サイズを大きくする	ok
+settings.theme	fontSize.text.decrease	Decrease font size	文字サイズを小さくする	ok
+settings.theme	fontSize.code.title	Code font size	コードの文字サイズ	ok
+settings.theme	fontSize.code.description	Used for code blocks, inline code, and tool output	コードブロック・インラインコード・ツール出力に使われます	ok
+settings.theme	fontSize.code.increase	Increase code font size	コードの文字サイズを大きくする	ok
+settings.theme	fontSize.code.decrease	Decrease code font size	コードの文字サイズを小さくする	ok
+settings.theme	fontSize.terminal.title	Terminal font size	ターミナルの文字サイズ	ok
+settings.theme	fontSize.terminal.description	Used for the sidebar terminal	サイドバーのターミナルに使われます	ok
+settings.theme	fontSize.terminal.increase	Increase terminal font size	ターミナルの文字サイズを大きくする	ok
+settings.theme	fontSize.terminal.decrease	Decrease terminal font size	ターミナルの文字サイズを小さくする	ok
+settings.theme	fontSize.unit	px	px	ok
+settings.theme	fontFamily.text.title	Text font	テキストのフォント	ok
+settings.theme	fontFamily.text.description	Used for the interface and conversation text. Separate fonts with commas; leave empty for the default	UI と会話のテキストに使われます。フォントはカンマで区切ります。空欄にすると既定になります	ok
+settings.theme	fontFamily.code.title	Code font	コードのフォント	ok
+settings.theme	fontFamily.code.description	Used for code blocks, inline code, and tool output. Separate fonts with commas; leave empty for the default	コードブロック・インラインコード・ツール出力に使われます。フォントはカンマで区切ります。空欄にすると既定になります	ok
+settings.theme	fontFamily.terminal.title	Terminal font	ターミナルのフォント	ok
+settings.theme	fontFamily.terminal.description	Used for the sidebar terminal. Separate fonts with commas; leave empty for the default	サイドバーのターミナルに使われます。フォントはカンマで区切ります。空欄にすると既定になります	ok
+settings.theme	fontFamily.placeholder	Default	既定	ok
+settings.theme	fontSize.more	More font settings	その他の文字設定	ok
 agent-team	trigger	Agent Team	Agent チーム	ok
 agent-team	loading	Loading Team…	チームを読み込み中…	ok
 agent-team	unavailable	Team is unavailable	チームを利用できません	ok
@@ -2135,24 +2494,6 @@ feedback	error.conflict	This feedback changed elsewhere; the latest state is sho
 feedback	error.load	Could not load feedback	フィードバックを読み込めませんでした	ok
 feedback	error.generic	Could not save feedback	フィードバックを保存できませんでした	ok
 feedback	error.noteTooLarge	The description is too long; shorten it and submit again	説明が長すぎます。短くしてからもう一度送信してください	ok
-settings.webSearch	title	Web search	Web 検索	ok
-settings.webSearch	description	Set up the DeepSeek search provider.	DeepSeek の検索プロバイダーを設定します。	ok
-settings.webSearch	apiKey	API key	API キー	ok
-settings.webSearch	apiKeyHint	Stored outside the settings file. Leave blank to keep the current key.	設定ファイルには保存されません。空欄のままにすると現在のキーを維持します。	ok
-settings.webSearch	apiKeySet	A key is configured.	キーは設定済みです。	ok
-settings.webSearch	apiKeyUnset	No key is configured; only conversations using a DeepSeek Account model can search, through the default endpoint.	キーが未設定です。DeepSeek アカウントのモデルを使う会話だけが、既定のエンドポイント経由で検索できます。	ok
-settings.webSearch	baseUrl	Endpoint	エンドポイント	ok
-settings.webSearch	baseUrlHint	Leave blank to use the provider default.	空欄のままにするとプロバイダーの既定値を使います。	ok
-settings.webSearch	maxUses	Max searches per request	1 リクエストあたりの最大検索回数	ok
-settings.webSearch	maxUsesHint	How many times one request may search before it must answer.	1 回のリクエストが、回答するまでに何回まで検索できるか。	ok
-settings.webSearch	overridden	Overridden	上書き済み	ok
-settings.webSearch	reset	Reset to default	既定に戻す	ok
-settings.webSearch	readOnly	This deployment stores settings read-only.	この環境では設定は読み取り専用で保存されます。	ok
-settings.webSearch	unavailable	This plugin is not loaded, so it cannot be configured right now.	このプラグインは読み込まれていないため、現在は設定できません。	ok
-settings.webSearch	save	Save	保存	ok
-settings.webSearch	saving	Saving…	保存しています…	ok
-settings.webSearch	saveFailed	The deployment did not accept these values; they were left for you to correct.	この環境が値を受け付けませんでした。修正できるよう入力は残しています。	ok
-settings.webSearch	invalidNumber	Enter a number, or leave blank to use the default.	数値を入力してください。空欄のままにすると既定値を使います。	ok
 workflowRun	run.title	{name}	{name}	ok
 workflowRun	run.members.one	{count} member	メンバー {count} 件	ok
 workflowRun	run.members.other	{count} members	メンバー {count} 件	ok
@@ -2222,6 +2563,21 @@ sidebarFiles	error.notFound	That directory is gone. It may have been moved or de
 sidebarFiles	error.outsideWorkspace	That directory is outside the workspace, so the sidebar will not read it.	そのディレクトリはワークスペースの外にあるため、サイドバーでは読み込みません。	ok
 sidebarFiles	error.notDirectory	That is not a directory.	ディレクトリではありません。	ok
 sidebarFiles	error.unavailable	Read failed: {message}	読み込みに失敗しました: {message}	ok
+reference	section.files	Files & folders	ファイルとフォルダー	ok
+reference	section.subagents	Subagents	サブエージェント	ok
+reference	section.sessions	Sessions	セッション	ok
+reference	candidate.noCwd	(no cwd)	(作業ディレクトリなし)	ok
+reference	crumb.root	Workspace	ワークスペース	ok
+reference	fileOpen.title	Couldn’t open file	ファイルを開けませんでした	ok
+reference	fileOpen.failed	Couldn’t open “{path}”. Try again or close this message.	「{path}」を開けませんでした。もう一度試すか、このメッセージを閉じてください。	ok
+reference	fileOpen.close	Close	閉じる	ok
+reference	fileOpen.retry	Retry	再試行	ok
+reference	time.now	now	たった今	ok
+reference	time.minutes	{n}min	{n} 分	ok
+reference	time.hours	{n}h	{n} 時間	ok
+reference	time.days	{n}d	{n} 日	ok
+reference	time.months	{n}mo	{n} か月	ok
+reference	time.years	{n}y	{n} 年	ok
 sidebarPdf	zoomControls	Zoom controls	ズーム操作	ok
 sidebarPdf	zoomMenu	Choose zoom	ズームを選択	ok
 sidebarPdf	zoomOut	Zoom out	縮小	ok
@@ -2330,17 +2686,6 @@ settings.permission	confirm.description	Full access lets new sessions reduce con
 settings.permission	confirm.acknowledge	I understand the risks and want to continue	リスクを理解したうえで続けます	ok
 settings.permission	confirm.cancel	Cancel	キャンセル	ok
 settings.permission	confirm.enable	Enable Full access	完全なアクセスを有効にする	ok
-reference	section.files	Files & folders	ファイルとフォルダー	ok
-reference	section.subagents	Subagents	サブエージェント	ok
-reference	section.sessions	Sessions	セッション	ok
-reference	candidate.noCwd	(no cwd)	(作業ディレクトリなし)	ok
-reference	crumb.root	Workspace	ワークスペース	ok
-reference	time.now	now	たった今	ok
-reference	time.minutes	{n}min	{n} 分	ok
-reference	time.hours	{n}h	{n} 時間	ok
-reference	time.days	{n}d	{n} 日	ok
-reference	time.months	{n}mo	{n} か月	ok
-reference	time.years	{n}y	{n} 年	ok
 sidebarImage	zoomControls	Zoom controls	ズーム操作	ok
 sidebarImage	zoomMenu	Choose zoom	ズームを選択	ok
 sidebarImage	zoomOut	Zoom out	縮小	ok
@@ -2371,15 +2716,6 @@ slash.menu	drill.hint	Browse folder	フォルダーを参照	ok
 slash.menu	drill.key	Tab	Tab	ok
 slash.menu	crumbs.aria	Folder navigation	フォルダーの移動	ok
 slash.menu	suggestions.aria	Trigger suggestions	候補を表示	ok
-settings.theme	appearance.title	Appearance	外観	ok
-settings.theme	appearance.light	Light	ライト	ok
-settings.theme	appearance.dark	Dark	ダーク	ok
-settings.theme	appearance.system	System	システムに合わせる	ok
-settings.theme	fontSize.title	Font size	文字サイズ	ok
-settings.theme	fontSize.description	Only affects conversation content	会話の内容にのみ反映されます	ok
-settings.theme	fontSize.unit	px	px	ok
-settings.theme	fontSize.increase	Increase font size	文字サイズを大きく	ok
-settings.theme	fontSize.decrease	Decrease font size	文字サイズを小さく	ok
 skill	row.title	Skill	スキル	ok
 skill	row.running	Loading skill	スキルを読み込み中	ok
 skill	row.preparing	Preparing to load a skill	スキルを読み込む準備をしています	ok
@@ -2418,5 +2754,8 @@ documentHtml	failed	This HTML document could not be previewed.	この HTML ド�
 sidebarCodePreview	title	Code	コード	ok
 sidebarCodePreview	copy	Copy	コピー	ok
 sidebarCodePreview	copied	Copied	コピーしました	ok
+secretMask	secret.reveal	Show secret	シークレットを表示	ok
+secretMask	secret.hide	Hide secret	シークレットを隠す	ok
+deepseek-model-label-1017	badge.label	1017	1017	ok
 shortcuts.layout	toggle	Toggle left sidebar	左サイドバーを切り替え	ok
 settings.locale	language.title	Language	言語	ok

@@ -1,6 +1,6 @@
 # schedule.manager — 日本語訳レビュー
 
-訳済み **187 / 187** キー / 要確認 0 件
+訳済み **188 / 188** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -33,7 +33,7 @@
 | - [ ] | `detail.nextRun` | Next run | 次回の実行 |
 | - [ ] | `detail.tabs` | Task detail views | タスク詳細の表示 |
 | - [ ] | `detail.rule` | Rules | ルール |
-| - [ ] | `detail.records` | Delivery records | 実行記録 |
+| - [ ] | `detail.records` | Records | 記録 |
 | - [ ] | `delivery.empty` | No delivery record available | 実行記録がありません |
 | - [ ] | `delivery.loading` | Loading delivery records… | 実行記録を読み込み中… |
 | - [ ] | `delivery.error` | Could not load delivery records. | 実行記録を読み込めませんでした。 |
@@ -141,6 +141,7 @@
 | - [ ] | `timing.inactive` | Inactive tasks are read-only. Their timing cannot be edited. | 終了したタスクは読み取り専用です。実行時刻は編集できません。 |
 | - [ ] | `timing.conflict` | This task changed while you were editing. Your draft is retained. Cancel and reopen after refresh to edit the latest rule. | 編集中にタスクが変更されました。下書きは保持されています。最新のルールを編集するには、更新後にキャンセルして開き直してください。 |
 | - [ ] | `timing.notFound` | This task is no longer available. Your draft is retained; cancel to close the editor. | このタスクは利用できません。下書きは保持されています。キャンセルすると編集画面を閉じます。 |
+| - [ ] | `timing.subagentSession` | This session belongs to a sub-agent, which never receives delivered reminders. | このセッションはサブエージェントのものです。サブエージェントには配信リマインダーは届きません。 |
 | - [ ] | `timing.invalid` | Enter a valid date and time, or check the timing fields. | 有効な日付と時刻を入力するか、時間の項目を確認してください。 |
 | - [ ] | `timing.invalidZone` | Enter a valid IANA time zone, for example Asia/Shanghai. | 有効な IANA タイムゾーンを入力してください (例: Asia/Tokyo)。 |
 | - [ ] | `timing.notFuture` | Choose a date and time in the future. | 未来の日付と時刻を指定してください。 |

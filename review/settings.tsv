@@ -33,3 +33,10 @@ settings	connection.connecting	Reconnecting	再接続しています	ok
 settings	connection.connected	Connected	接続済み	ok
 settings	connection.reconnect	Disconnected, reconnect now	切断されました。クリックで再接続	ok
 settings	connection.restart	Reconnecting, reconnect now	再接続しています。クリックで今すぐ再接続	ok
+settings	hostRelease.title	Service version changed	サービスのバージョンが変わりました	ok
+settings	hostRelease.description	The service version changed. This page paused live updates; reload to load the new version.	サービスのバージョンが変わりました。このページはライブ更新を停止しています。再読み込みすると新しいバージョンが読み込まれます。	ok
+settings	hostRelease.service	Service	サービス	ok
+settings	hostRelease.page	Page	ページ	ok
+settings	hostRelease.unknown	Unknown	不明	ok
+settings	hostRelease.reload	Reload to load the new version	再読み込みして新しいバージョンを読み込む	ok
+settings	hostRelease.later	Not now	あとで	ok

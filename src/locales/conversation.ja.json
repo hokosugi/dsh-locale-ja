@@ -79,7 +79,7 @@
   "tool.title.createGoal": "ゴールを作成",
   "tool.title.getGoal": "ゴールを表示",
   "tool.title.updateGoal": "ゴールを更新",
-  "tool.preparing.content": "コンテンツを準備しています {kilobytes}KB",
+  "tool.preparing.content": "{kilobytes}KB",
   "tool.title.createSchedule": "リマインダーを作成",
   "tool.title.listSchedules": "リマインダー一覧",
   "tool.title.deleteSchedule": "リマインダーを削除",
@@ -367,5 +367,9 @@
   "terminal.expandAria": "出力の残り {n} 行を展開",
   "terminal.expandRest": "… 残り {n} 行",
   "terminal.sendInput": "(入力を送信)",
-  "terminal.session": "ターミナル {sessionId}"
+  "terminal.session": "ターミナル {sessionId}",
+  "row.commandArguments": "コマンドの引数",
+  "row.imageSize": "{width}x{height}px、{bytes} バイト",
+  "row.imageSizeDownscaled": "{width}x{height}px（元 {originalWidth}x{originalHeight}px から縮小）、{bytes} バイト",
+  "terminal.commandLine": "コマンドライン {n}"
 }

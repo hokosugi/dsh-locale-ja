@@ -1,6 +1,6 @@
 # settings — 日本語訳レビュー
 
-訳済み **34 / 34** キー / 要確認 0 件
+訳済み **41 / 41** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -59,5 +59,12 @@ Target version: {version}
 | - [ ] | `connection.connected` | Connected | 接続済み |
 | - [ ] | `connection.reconnect` | Disconnected, reconnect now | 切断されました。クリックで再接続 |
 | - [ ] | `connection.restart` | Reconnecting, reconnect now | 再接続しています。クリックで今すぐ再接続 |
+| - [ ] | `hostRelease.title` | Service version changed | サービスのバージョンが変わりました |
+| - [ ] | `hostRelease.description` | The service version changed. This page paused live updates; reload to load the new version. | サービスのバージョンが変わりました。このページはライブ更新を停止しています。再読み込みすると新しいバージョンが読み込まれます。 |
+| - [ ] | `hostRelease.service` | Service | サービス |
+| - [ ] | `hostRelease.page` | Page | ページ |
+| - [ ] | `hostRelease.unknown` | Unknown | 不明 |
+| - [ ] | `hostRelease.reload` | Reload to load the new version | 再読み込みして新しいバージョンを読み込む |
+| - [ ] | `hostRelease.later` | Not now | あとで |
 
 確認列: `- [ ]` は未確認、`- [!]` は要確認。レンダラーによってはチェックボックスとして表示されます。

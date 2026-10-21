@@ -32,5 +32,12 @@
   "connection.connecting": "再接続しています",
   "connection.connected": "接続済み",
   "connection.reconnect": "切断されました。クリックで再接続",
-  "connection.restart": "再接続しています。クリックで今すぐ再接続"
+  "connection.restart": "再接続しています。クリックで今すぐ再接続",
+  "hostRelease.title": "サービスのバージョンが変わりました",
+  "hostRelease.description": "サービスのバージョンが変わりました。このページはライブ更新を停止しています。再読み込みすると新しいバージョンが読み込まれます。",
+  "hostRelease.service": "サービス",
+  "hostRelease.page": "ページ",
+  "hostRelease.unknown": "不明",
+  "hostRelease.reload": "再読み込みして新しいバージョンを読み込む",
+  "hostRelease.later": "あとで"
 }

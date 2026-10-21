@@ -12,16 +12,35 @@ pluginManager	refresh	Refresh	更新	ok
 pluginManager	refreshError	Refresh failed. Please try again.	更新に失敗しました。もう一度お試しください。	ok
 pluginManager	empty	No plugins are installed yet.	プラグインがまだインストールされていません。	ok
 pluginManager	addPlugin	Add plugin	プラグインを追加	ok
-pluginManager	restartNotice	The change takes effect at the next start	変更は次回の起動時に反映されます	ok
+pluginManager	chooseAddMethod	Choose how to add a plugin	プラグインの追加方法を選ぶ	ok
+pluginManager	installExisting	Install a third-party plugin	サードパーティのプラグインをインストール	ok
+pluginManager	installExistingDescription	Supports npm packages, Git repositories, and local directories	npm パッケージ・Git リポジトリ・ローカルディレクトリに対応	ok
+pluginManager	restartNotice	Restart DSH to apply the change. {reason}	DSH を再起動すると変更が反映されます。{reason}	ok
+pluginManager	restartReasonNoHmr	This profile applies changes only at startup.	このプロファイルは起動時にのみ変更を反映します。	ok
+pluginManager	restartReasonPackageMoved	An installed package now resolves to another directory, or the change replaces a package the DSH installation provides. Uninstall a package before installing it from another location.	インストール済みパッケージの解決先が別のディレクトリになったか、変更が DSH 本体の提供するパッケージを置き換えます。別の場所から入れる前に、いったんアンインストールしてください。	ok
+pluginManager	restartReasonHostModule	The change reaches modules DSH itself loaded.	変更が DSH 本体が読み込んだモジュールに及びます。	ok
+pluginManager	restartReasonUnmanagedPlugin	The change reaches a plugin running outside the plugin list.	変更がプラグイン一覧の外で動いているプラグインに及びます。	ok
+pluginManager	restartReasonModuleComparison	DSH could not compare the loaded plugins with their files.	読み込み済みプラグインとファイルを比較できませんでした。	ok
 pluginManager	overriddenNotice	{name} was saved, but a higher-priority configuration overrides it, so it is not in effect	{name} は保存されましたが、より優先度の高い設定に上書きされるため反映されていません	ok
-pluginManager	bundlesTitle	Installed	インストール済み	ok
-pluginManager	officialTitle	Official	公式	ok
+pluginManager	bundlesTitle	Installed plugins	インストール済みプラグイン	ok
+pluginManager	basicTitle	Built-in plugin settings	組み込みプラグインの設定	ok
+pluginManager	extensionsTitle	Experimental plugins	実験的プラグイン	ok
+pluginManager	moreTitle	Experimental plugins	実験的プラグイン	ok
+pluginManager	moreAction	More	その他	ok
+pluginManager	tabsLabel	Plugin views	プラグインの表示切替	ok
+pluginManager	installedTab	Installed	インストール済み	ok
 pluginManager	statusProblem	Problem	問題	ok
 pluginManager	statusBeta	Experimental	実験的	ok
 pluginManager	reasonLabel	Reason	理由	ok
 pluginManager	metadataError	Package metadata error: {error}	パッケージメタデータのエラー: {error}	ok
+pluginManager	previewAlt	{name} feature preview	{name} の機能プレビュー	ok
+pluginManager	previewUnavailable	Could not display feature preview	機能プレビューを表示できませんでした	ok
 pluginManager	versionTag	v{version}	v{version}	ok
 pluginManager	partsLabel	Components	コンポーネント	ok
+pluginManager	sourceTitle	Source	ソース	ok
+pluginManager	sourceSpec	Code source	コードの取得元	ok
+pluginManager	sourceBuiltIn	Built in	組み込み	ok
+pluginManager	sourceVersion	Current version	現在のバージョン	ok
 pluginManager	partsEmpty	This plugin pack contains no components.	このプラグインパックにはコンポーネントが含まれていません。	ok
 pluginManager	partsCountTotal	{count} total	合計 {count}	ok
 pluginManager	partsCountRunning	{count} running	{count} 実行中	ok
@@ -60,7 +79,7 @@ pluginManager	installPathTemplateHint	Replace this with the actual path to your 
 pluginManager	installGuideFill	Use example	例を入力	ok
 pluginManager	installGuideFillAria	Use the example {example}	例 {example} を入力	ok
 pluginManager	installGuideSafety	Install only plugins you trust: they run with your permissions and can damage DeepSeek Harness or leak your data.	信頼できるプラグインだけをインストールしてください。プラグインはあなたの権限で動作し、DeepSeek Harness を壊したり、データを外部に漏らしたりする可能性があります。	ok
-pluginManager	installUpgradeNotice	Installed plugins do not update automatically yet. To upgrade a plugin, uninstall it and install the new version. Later releases will keep improving the upgrade experience.	インストールしたプラグインはまだ自動更新されません。アップグレードするにはアンインストールしてから新しいバージョンをインストールしてください。今後のリリースで改善していきます。	ok
+pluginManager	installUpgradeNotice	On-demand Official plugins offer Update when their version differs from DSH. To update other plugins, uninstall and reinstall them.	オンデマンドの公式プラグインは、DSH のバージョンと異なるときに「更新」が表示されます。ほかのプラグインを更新するには、アンインストールしてから入れ直してください。	ok
 pluginManager	registryToggle	Registry	レジストリ	ok
 pluginManager	registryLegend	The npm registry the plugin is downloaded from	プラグインのダウンロード元になる npm レジストリ	ok
 pluginManager	registryDefault	Default registry	既定のレジストリ	ok
@@ -74,6 +93,8 @@ pluginManager	registryListSeparator	, 	、	ok
 pluginManager	sentenceSeparator	 	 	ok
 pluginManager	installRun	Install	インストール	ok
 pluginManager	installChecking	Checking…	確認中…	ok
+pluginManager	installConfirmedTitle	Install plugin	プラグインをインストール	ok
+pluginManager	installConfirmedRefused	This plugin cannot be installed	このプラグインはインストールできません	ok
 pluginManager	installProblemInvalid	This is not a package name or address that can be installed: {reason}	インストールできるパッケージ名またはアドレスではありません: {reason}	ok
 pluginManager	installProblemInstalled	This plugin is already installed. To upgrade it, uninstall it and install it again	このプラグインはすでにインストールされています。アップグレードするにはアンインストールしてから再インストールしてください	ok
 pluginManager	installProblemShipped	This plugin ships with DSH; upgrading DSH updates it	このプラグインは DSH に同梱されています。DSH をアップグレードすると更新されます	ok
@@ -85,6 +106,14 @@ pluginManager	installProblemNetworkAll	No registry could be reached (tried: {reg
 pluginManager	installProblemUnknown	The plugin could not be looked up: {reason}	プラグインの情報を取得できませんでした: {reason}	ok
 pluginManager	installingTitle	Installing the plugin…	プラグインをインストール中…	ok
 pluginManager	installedTitle	Installed	インストール済み	ok
+pluginManager	statusNotInstalled	Not installed	未インストール	ok
+pluginManager	statusMissingFiles	Package unavailable	パッケージを利用できません	ok
+pluginManager	statusUpdateAvailable	Update available	更新があります	ok
+pluginManager	sourceNotInstalled	Not installed	未インストール	ok
+pluginManager	sourceTargetSpec	Source for this DSH	この DSH 向けのソース	ok
+pluginManager	sourceTargetVersion	Version for this DSH	この DSH 向けのバージョン	ok
+pluginManager	update	Update	更新	ok
+pluginManager	updateLabel	Update {name}	{name} を更新	ok
 pluginManager	installFailedTitle	The plugin could not be installed	プラグインをインストールできませんでした	ok
 pluginManager	installGithubFailedTitle	Cannot access GitHub	GitHub にアクセスできません	ok
 pluginManager	installGithubTimeoutTitle	GitHub connection timed out	GitHub への接続がタイムアウトしました	ok
@@ -141,6 +170,7 @@ pluginManager	installFailureIntegrity	The downloaded package failed its integrit
 pluginManager	installFailureTimeout	The install timed out	インストールがタイムアウトしました	ok
 pluginManager	installFailurePnpmMissing	pnpm was not found, so nothing can be installed	pnpm が見つからないため、インストールできません	ok
 pluginManager	installFailureGeneric	Something went wrong during the install; the details say what	インストール中に問題が発生しました。詳細に原因が表示されます	ok
+pluginManager	terminalCommandLine	Command line {n}	コマンドライン {n}	ok
 pluginManager	terminalRunning	Running	実行中	ok
 pluginManager	terminalFailed	Failed	失敗	ok
 pluginManager	terminalDone	Done	完了	ok
@@ -155,8 +185,9 @@ pluginManager	terminalExitCode	exit code {code}	終了コード {code}	ok
 pluginManager	terminalSignal	signal {signal}	シグナル {signal}	ok
 pluginManager	terminalNoExitCode	no exit code	終了コードなし	ok
 pluginManager	installDoneNothing	Install finished with no new dependency.	インストールが完了しました。新しい依存パッケージはありません。	ok
-pluginManager	installDoneRestart	Installed; it loads at the next start.	インストールしました。次回の起動時に読み込まれます。	ok
+pluginManager	installDoneRestart	Installed; restart DSH to load it. {reason}	インストールしました。DSH を再起動すると読み込まれます。{reason}	ok
 pluginManager	installDoneApproved	Install scripts allowed for {names}	{names} のインストールスクリプトを許可しました	ok
+pluginManager	installDoneOtherVersion	Under pnpm's supply-chain security policy (minimumReleaseAge), versions published more recently than the required age are not installed automatically, so this installation used {installed} instead of the latest version {version}. A newly published version has not completed this waiting period and may contain undetected malicious code or defects. If you need {version}, uninstall the current version and then install {exact} to request that version.	pnpm のサプライチェーン保護（minimumReleaseAge）により、公開から一定期間を経ていないバージョンは自動ではインストールされません。そのため今回のインストールでは、最新版 {version} ではなく {installed} を使用しました。公開されたばかりのバージョンはこの待機期間を終えておらず、検出されていない悪意のあるコードや不具合を含む可能性があります。{version} が必要な場合は、現在のバージョンをアンインストールしてから {exact} を指定してインストールしてください。	ok
 pluginManager	installApprovalTitle	Install scripts need permission	インストールスクリプトの許可が必要です	ok
 pluginManager	installApprovalDescription	These packages have install scripts that pnpm did not run.	以下のパッケージには、pnpm が実行しなかったインストールスクリプトがあります。	ok
 pluginManager	installApprovalConsequence	Once allowed, the scripts run here with your permissions, and the permission is saved in this profile.	許可すると、スクリプトはこの環境であなたの権限で実行され、許可はこのプロファイルに保存されます。	ok
@@ -177,13 +208,14 @@ pluginManager	reasonManagementRequired	Plugin management needs it; it cannot be 
 pluginManager	reasonUnaddressable	The profile patch cannot address this one uniquely.	プロファイルのパッチではこれを一意に指定できません。	ok
 pluginManager	reasonUnknownPlugin	No such plugin.	該当するプラグインがありません。	ok
 pluginManager	reasonInvalidSpec	Enter a valid package name or address.	有効なパッケージ名またはアドレスを入力してください。	ok
+pluginManager	reasonAlreadyInstalled	This package is already installed; uninstall it before installing another version.	このパッケージはすでにインストールされています。別のバージョンを入れる前にアンインストールしてください。	ok
 pluginManager	reasonAmbiguousInstall	Which package was installed cannot be told from the dependency change.	依存関係の変化から、どのパッケージがインストールされたか判断できません。	ok
 pluginManager	reasonNotBundle	This package declares no bundle, so it cannot be managed as a plugin.	このパッケージはバンドルを宣言していないため、プラグインとして管理できません。	ok
 pluginManager	reasonNotRemovable	This package is not owned by the profile, or plugin management needs it.	このパッケージはプロファイルが所有していないか、プラグイン管理に必要です。	ok
 pluginManager	reasonStopProfile	This profile runs without HMR; stop it and uninstall the package with dsh plugin.	このプロファイルは HMR なしで動作しています。停止してから dsh plugin でアンインストールしてください。	ok
 pluginManager	reasonBundleInUse	Other configuration still uses this bundle's components; switch them off first.	ほかの設定がこのバンドルのコンポーネントをまだ使用しています。先にそれらを無効にしてください。	ok
 pluginManager	reasonStaleApproval	The pending script approvals changed; install again to refresh them.	許可待ちのインストールスクリプトが変わったため、再インストールして更新してください。	ok
-pluginManager	reasonIncompatibleVersion	{plugin} is incompatible with DSH {runtime} (requires {peers}); running it may cause crashes or data loss.	{plugin} は DSH {runtime} と互換性がありません (必要なバージョン: {peers})。実行するとクラッシュやデータ損失が起きる可能性があります。	ok
+pluginManager	reasonIncompatibleVersion	{plugin} is incompatible with DSH {runtime} (requires {requirements}); running it may cause crashes or data loss.	{plugin} は DSH {runtime} と互換性がありません（{requirements} が必要）。実行するとクラッシュやデータ損失を起こす可能性があります。	ok
 pluginManager	reasonIncompatibleVersionUnnamed	This plugin is incompatible with the running DSH version; running it may cause crashes or data loss.	このプラグインは実行中の DSH のバージョンと互換性がありません。実行するとクラッシュやデータ損失が起きる可能性があります。	ok
 pluginManager	reasonIncompatibleInstall	Install a plugin version compatible with this DSH.	この DSH と互換性のあるバージョンのプラグインをインストールしてください。	ok
 pluginManager	reasonIncompatibleInstalled	Uninstall it and install a version compatible with this DSH.	アンインストールして、この DSH と互換性のあるバージョンをインストールしてください。	ok

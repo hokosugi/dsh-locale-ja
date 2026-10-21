@@ -79,7 +79,7 @@ conversation	todo.rowTitle	Update to-do list	ToDo リストを更新	ok
 conversation	tool.title.createGoal	Create goal	ゴールを作成	ok
 conversation	tool.title.getGoal	View goal	ゴールを表示	ok
 conversation	tool.title.updateGoal	Update goal	ゴールを更新	ok
-conversation	tool.preparing.content	Preparing content {kilobytes}KB	コンテンツを準備しています {kilobytes}KB	ok
+conversation	tool.preparing.content	{kilobytes}KB	{kilobytes}KB	ok
 conversation	tool.title.createSchedule	Create reminder	リマインダーを作成	ok
 conversation	tool.title.listSchedules	List reminders	リマインダー一覧	ok
 conversation	tool.title.deleteSchedule	Delete reminder	リマインダーを削除	ok
@@ -298,9 +298,12 @@ conversation	row.running	Running	実行中	ok
 conversation	row.preparing	Preparing tool call	ツール呼び出しを準備しています	ok
 conversation	row.failed	Failed	失敗	ok
 conversation	row.stopped	Stopped	停止	ok
+conversation	row.commandArguments	Command arguments	コマンドの引数	ok
 conversation	row.input	IN	入力	ok
 conversation	row.output	OUT	出力	ok
 conversation	row.inspect	Inspect	呼び出しを確認	ok
+conversation	row.imageSize	{width}x{height}px, {bytes} bytes	{width}x{height}px、{bytes} バイト	ok
+conversation	row.imageSizeDownscaled	{width}x{height}px (downscaled from {originalWidth}x{originalHeight}px), {bytes} bytes	{width}x{height}px（元 {originalWidth}x{originalHeight}px から縮小）、{bytes} バイト	ok
 conversation	tool.title.search	Search	検索	ok
 conversation	tool.title.read	Read	読み取り	ok
 conversation	tool.title.bash	Bash	Bash	ok
@@ -359,6 +362,7 @@ conversation	queue.steerFailed	Steering failed. Try again.	ステアに失敗し
 conversation	terminal.signal	signal {signal}	シグナル {signal}	ok
 conversation	terminal.exitCode	exit code {code}	終了コード {code}	ok
 conversation	terminal.noExitCode	no exit code	終了コードなし	ok
+conversation	terminal.commandLine	Command line {n}	コマンドライン {n}	ok
 conversation	terminal.running	Running	実行中	ok
 conversation	terminal.failed	Failed	失敗	ok
 conversation	terminal.done	Done	完了	ok

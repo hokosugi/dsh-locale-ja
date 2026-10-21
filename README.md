@@ -2,7 +2,7 @@
 
 **Japanese locale pack for the [DSH](https://github.com/deepseek-ai/deepseek-harness) Web GUI.**
 It adds a `日本語` language and translates the whole shipped dictionary
-(56 namespaces / 2421 strings = 100%). No runtime dependencies; `lib/client.js` ships prebuilt.
+(61 namespaces / 2760 strings = 100%). No runtime dependencies; `lib/client.js` ships prebuilt.
 Distributed from [GitHub](https://github.com/hokosugi/dsh-locale-ja) (MIT); not published to npm.
 
 ```sh
@@ -19,7 +19,7 @@ DSH (DeepSeek Harness) の Web GUI に **言語「日本語」を追加**する�
 
 - 設定 → 一般 → 言語 に「日本語」が並び、選ぶと即座に切り替わります。
 - 日本語の訳語が無いキーは英語にフォールバックするので、**未訳の場所があっても表示は壊れません**。
-- 対象は 56 名前空間 **2421 キー = 抽出した全文言** (カバレッジ 100%、訳語キーの誤りは 0 件)。
+- 対象は 61 名前空間 **2760 キー = 抽出した全文言** (カバレッジ 100%、訳語キーの誤りは 0 件)。
 - 依存パッケージはありません (`npm install` 不要)。`lib/client.js` はビルド済みで同梱しています。
 - 英語原文と日本語訳の**対照一覧 (TSV) を出力して手で直せる**ようにしてあります → [対照一覧で見直す](#対照一覧で見直す)
 
@@ -91,10 +91,10 @@ window.__ModuleLoader__.load({
 | `tools/extract-dictionaries.mjs` | インストール済みプラグインから英語辞書を抽出 (監査の基準データ)。場所は `--dsh-modules` / `DSH_MODULES_ROOT` / 自動探索 |
 | `tools/drift-report.mjs` | DSH 側の辞書が変わったかを、直前のコミットと比べて報告 (`npm run drift`) |
 | `.github/workflows/dsh-drift.yml` | 毎日 1 回 DSH の辞書を再抽出して差分を確認し、変化があれば Issue を作って失敗する |
-| `data/en-dictionaries.json` | 抽出結果 (56 名前空間 / 2421 キー) |
+| `data/en-dictionaries.json` | 抽出結果 (61 名前空間 / 2760 キー) |
 | `review/ja.md` | 索引。カバレッジ・要確認の一覧と各名前空間へのリンク |
 | `review/<名前空間>.md` | 閲覧用。長文は Markdown として展開して表示 |
-| `review/ja.tsv` | 編集用の対照一覧 (全 2421 行)。`ja` 列を直して取り込む |
+| `review/ja.tsv` | 編集用の対照一覧 (全 2760 行)。`ja` 列を直して取り込む |
 | `review/<名前空間>.tsv` | 編集用 (名前空間ごと) |
 
 ---
@@ -566,8 +566,8 @@ materialize し、スタブ `ctx` で `apply()` を走らせて `locale.register
 
 ## 今後の拡張候補
 
-**未対象はありません** (`data/en-dictionaries.json` の 56 名前空間 / 2421 キー = 100%)。
+**未対象はありません** (`data/en-dictionaries.json` の 61 名前空間 / 2760 キー = 100%)。
 
 DSH 本体が更新されたときの進め方は [DSH が更新されたとき](#dsh-が更新されたとき) にまとめて
 あります (何が失敗するか / 通知の受け取り方 / 訳を足す手順)。現状のカバレッジは
-`npm run audit -- --all` で確認できます (全体 2421 / 2421 キー = 100%)。
+`npm run audit -- --all` で確認できます (全体 2760 / 2760 キー = 100%)。

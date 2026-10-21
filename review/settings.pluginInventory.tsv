@@ -12,7 +12,6 @@ settings.pluginInventory	empty	No plugins are available.	利用できるプラ�
 settings.pluginInventory	emptySearch	No matching plugins.	一致するプラグインがありません。	ok
 settings.pluginInventory	presetTitle	Session plugins	セッションプラグイン	ok
 settings.pluginInventory	presetSubtitle	Composed per session by agent presets	Agent プリセットがセッションごとに構成します	ok
-settings.pluginInventory	countUnit	plugins	件	ok
 settings.pluginInventory	switcherLabel	Choose the agent preset to inspect	確認する Agent プリセットを選択	ok
 settings.pluginInventory	presetOptionDefault	{name} (default)	{name} (既定)	ok
 settings.pluginInventory	presetOptionBroken	{name} (failed to load)	{name} (読み込み失敗)	ok
@@ -20,9 +19,7 @@ settings.pluginInventory	globalTitle	Global plugins	グローバルプラグイ�
 settings.pluginInventory	globalSubtitle	Shared by the system and every session	システムとすべてのセッションで共有されます	ok
 settings.pluginInventory	presetProvidedDetail	Disabled globally; agent presets provide it per session	グローバルでは無効です。Agent プリセットがセッションごとに提供します	ok
 settings.pluginInventory	enabledIn	Enabled in	有効な場所	ok
-settings.pluginInventory	viewInPreset	View in the preset group	プリセットのグループで見る	ok
 settings.pluginInventory	matchesInOtherPresets	{count} more matches in other presets: 	ほかのプリセットにも {count} 件一致します: 	ok
-settings.pluginInventory	failedCountLabel	failed	件失敗	ok
 settings.pluginInventory	enabledTag	Enabled	有効	ok
 settings.pluginInventory	disabledTag	Disabled	無効	ok
 settings.pluginInventory	conditionalTag	Conditional	条件付き	ok

@@ -1,6 +1,6 @@
 # settings.models — 日本語訳レビュー
 
-訳済み **113 / 113** キー / 要確認 0 件
+訳済み **134 / 134** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -57,19 +57,30 @@ We look forward to exploring the limits of intelligence together with users and 
 | - [ ] | `savedProvider` | Saved {provider}. | {provider} を保存しました。 |
 | - [ ] | `credentialConfigured` | API key configured | API キー設定済み |
 | - [ ] | `credentialMissing` | API key missing | API キー未設定 |
+| - [ ] | `accountSignedIn` | Signed in | サインイン済み |
 | - [ ] | `readOnly` | The settings document is read-only in this deployment. | この環境では設定ファイルは読み取り専用です。 |
 | - [ ] | `loadFailed` | Loading the provider directory failed | プロバイダー一覧の読み込みに失敗しました |
 | - [ ] | `conflict` | Someone else changed these settings while this card was open. Close it and reopen to edit the current values. | このカードを開いている間に、ほかの場所で設定が変更されました。閉じて開き直し、最新の値で編集してください。 |
 | - [ ] | `retry` | Retry | 再試行 |
 | - [ ] | `keyInput` | API key | API キー |
+| - [ ] | `keyReveal` | Show secret | シークレットを表示 |
+| - [ ] | `keyHide` | Hide secret | シークレットを隠す |
 | - [ ] | `keyPlaceholder` | Enter your API key | API キーを入力 |
-| - [ ] | `keyPlaceholderNative` | Enter an API key, or leave blank to use environment authentication | API キーを入力するか、空欄のまま環境の認証を使います |
-| - [ ] | `keyStored` | Configured — enter a new value to replace | 設定済み — 変更するには新しい値を入力 |
-| - [ ] | `keyEnvLocked` | Provided by the launch environment (read-only) | 起動環境から提供されています (読み取り専用) |
+| - [ ] | `keyPlaceholderFallback` | Leave blank to use env as auth ({hint}) | 空欄にすると環境変数を認証に使います（{hint}） |
+| - [ ] | `keyPlaceholderSaved` | Leave blank to use saved credentials | 空欄にすると保存済みの認証情報を使います |
+| - [ ] | `keyFallbackMissing` | Env var not detected. Enter an API key, or configure {hint} in your env. | 環境変数が見つかりません。API キーを入力するか、環境に {hint} を設定してください。 |
+| - [ ] | `keyFallbackDetected` | Env var detected. ({hint}) | 環境変数が見つかりました（{hint}）。 |
+| - [ ] | `keyFallbackDetectedHidden` | Env var detected. | 環境変数が見つかりました。 |
+| - [ ] | `keyFallbackUnchecked` | Environment credential status has not been confirmed. | 環境の認証情報の状態はまだ確認できていません。 |
+| - [ ] | `keyHelp` | Saved credentials are used first. Environment fallbacks shown here, in order: {env}. Sources are launch environment, $cwd/.env, then $DSH_HOME/.env. | 保存済みの認証情報が先に使われます。環境変数のフォールバックはこの順です: {env}。参照先は起動時の環境、$cwd/.env、$DSH_HOME/.env の順です。 |
+| - [ ] | `authHelp` | Authentication details | 認証の詳細 |
 | - [ ] | `customized` | Customized settings | カスタム設定 |
 | - [ ] | `baseUrl` | Base URL | ベース URL |
-| - [ ] | `baseUrlDefault` | Provider default | プロバイダーの既定値 |
-| - [ ] | `deepSeekBaseUrl` | https://api.deepseek.com/anthropic | https://api.deepseek.com/anthropic |
+| - [ ] | `baseUrlDefault` | No default endpoint | 既定のエンドポイントなし |
+| - [ ] | `baseUrlEnvironment` | Provider endpoint configuration: {env} | プロバイダーのエンドポイント設定: {env} |
+| - [ ] | `baseUrlConfigured` | Provider-configured endpoint | プロバイダーが設定したエンドポイント |
+| - [ ] | `baseUrlPlaceholder` | {url} | {url} |
+| - [ ] | `deepSeekBaseUrl` | https://api.deepseek.com/anthropic (Default to use DEEPSEEK_BASE_URL) | https://api.deepseek.com/anthropic（既定では DEEPSEEK_BASE_URL を使用） |
 | - [ ] | `deepSeekEndpointHint` | Use an API endpoint compatible with Anthropic Messages. | Anthropic Messages 互換の API エンドポイントを指定してください。 |
 | - [ ] | `models` | Models | モデル |
 | - [ ] | `modelsInherited` | Using the adapter defaults | アダプターの既定モデルを使用中 |
@@ -87,6 +98,16 @@ We look forward to exploring the limits of intelligence together with users and 
 | - [ ] | `modelInputTypes` | Input types | 入力の種類 |
 | - [ ] | `modelInputText` | Text | テキスト |
 | - [ ] | `modelInputImage` | Image | 画像 |
+| - [ ] | `modelReasoning` | Reasoning levels | 推論レベルの設定 |
+| - [ ] | `modelReasoningLevel` | Level | レベル |
+| - [ ] | `modelReasoningValue` | API value | API の値 |
+| - [ ] | `modelReasoningHelp` | About reasoning levels | 推論レベルについて |
+| - [ ] | `modelReasoningHelpText` | The API value is sent in the request's reasoning-effort field, such as OpenAI's reasoning_effort. It defaults to the level name; where the model provider's API documentation specifies a different value, follow it. Off turns reasoning off and needs no value; a value already written in the configuration is kept and sent. | API の値は、リクエストの reasoning-effort フィールド（OpenAI の reasoning_effort など）で送られます。既定ではレベルの名前を使います。モデルプロバイダーの API ドキュメントで別の値が指定されている場合はそれに従ってください。「オフ」は推論を無効にし、値は不要です。設定にすでに書かれている値は保持され、送信されます。 |
+| - [ ] | `modelReasoningNeedsLevel` | Add at least one level besides Off, or turn reasoning levels off. | 「オフ」以外のレベルを 1 つ以上追加するか、推論レベルをオフにしてください。 |
+| - [ ] | `modelReasoningValueRequired` | Every level besides Off needs an API value, and no value can be empty. | 「オフ」以外のすべてのレベルに API の値が必要です。空の値は使えません。 |
+| - [ ] | `modelReasoningAdd` | Add level | レベルを追加 |
+| - [ ] | `modelReasoningRemove` | Delete level | レベルを削除 |
+| - [ ] | `modelReasoningOffValuePlaceholder` | Turns reasoning off | 推論をオフにします |
 | - [ ] | `addModel` | Add model | モデルを追加 |
 | - [ ] | `removeModel` | Delete model | モデルを削除 |
 | - [ ] | `modelsEmpty` | No models will be shown in the selector. Unlisted IDs can still be sent directly. | モデル選択には何も表示されません。一覧にない ID も直接送信できます。 |

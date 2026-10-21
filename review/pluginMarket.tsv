@@ -1,0 +1,79 @@
+namespace	key	en	ja	status
+pluginMarket	title	Discover	プラグインを探す	ok
+pluginMarket	refresh	Refresh	更新	ok
+pluginMarket	loading	Reading the index	インデックスを読み込み中	ok
+pluginMarket	retry	Retry	再試行	ok
+pluginMarket	close	Close	閉じる	ok
+pluginMarket	cancel	Cancel	キャンセル	ok
+pluginMarket	emptyTitle	No plugin markets yet	プラグインマーケットがまだありません	ok
+pluginMarket	emptyDescription	Add a plugin market index to browse and install its plugins here.	プラグインマーケットのインデックスを追加すると、ここで一覧からインストールできます。	ok
+pluginMarket	addFirstSource	Add index source	インデックスの参照元を追加	ok
+pluginMarket	sourcesFailed	Could not read the index sources.	インデックスの参照元を読み込めませんでした。	ok
+pluginMarket	manageSources	Manage index sources…	インデックスの参照元を管理…	ok
+pluginMarket	marketMenu	Switch plugin market, currently {market}	プラグインマーケットを切り替え（現在: {market}）	ok
+pluginMarket	sourcesTitle	Index sources	インデックスの参照元	ok
+pluginMarket	sourcesDescription	A plugin market is published as the URL of one index file. Discover browses the indexes listed here.	プラグインマーケットは 1 つのインデックスファイルの URL として公開されています。「プラグインを探す」では、ここに登録されたインデックスを参照します。	ok
+pluginMarket	sourcesLabel	Added index sources	追加済みの参照元	ok
+pluginMarket	sourceUrl	Index URL	インデックスの URL	ok
+pluginMarket	sourcePlaceholder	https://example.com/index.json	https://example.com/index.json	ok
+pluginMarket	addSource	Add	追加	ok
+pluginMarket	removeSource	Remove	削除	ok
+pluginMarket	removeSourceNamed	Remove {url}	{url} を削除	ok
+pluginMarket	sourcesTrust	Indexes come from third parties. Add only sources you trust: their plugins run with your permissions once installed.	インデックスは第三者によるものです。信頼できる参照元だけを追加してください。インストールしたプラグインはあなたの権限で実行されます。	ok
+pluginMarket	sourceInvalid	Use an http or https address without a user name, password, or # fragment.	ユーザー名・パスワード・# フラグメントを含まない http または https のアドレスを使ってください。	ok
+pluginMarket	sourceDuplicate	This index source is already added.	この参照元はすでに追加されています。	ok
+pluginMarket	sourceUnavailable	Index sources cannot be saved here.	ここでは参照元を保存できません。	ok
+pluginMarket	sourceFailed	Could not save the index sources.	参照元を保存できませんでした。	ok
+pluginMarket	readFailed	Could not read this index.	このインデックスを読み込めませんでした。	ok
+pluginMarket	readInvalid	This index is not in a valid format.	このインデックスの形式が正しくありません。	ok
+pluginMarket	readChanged	This index changed while loading.	読み込み中にインデックスが変更されました。	ok
+pluginMarket	search	Search plugins	プラグインを検索	ok
+pluginMarket	filter	Labels	ラベル	ok
+pluginMarket	filterCount	Labels · {count}	ラベル · {count}	ok
+pluginMarket	sortBy	Sort: {sort}	並べ替え: {sort}	ok
+pluginMarket	sortRelevance	Best match	一致度順	ok
+pluginMarket	sortDefault	Default order	既定の順序	ok
+pluginMarket	sortPublished	Publish date	公開日順	ok
+pluginMarket	switchToAscending	Sort ascending	昇順に並べ替え	ok
+pluginMarket	switchToDescending	Sort descending	降順に並べ替え	ok
+pluginMarket	categoriesLabel	Categories	カテゴリ	ok
+pluginMarket	allCategories	All	すべて	ok
+pluginMarket	emptyIndex	This index lists no plugins.	このインデックスにはプラグインがありません。	ok
+pluginMarket	noMatches	No plugins match.	一致するプラグインはありません。	ok
+pluginMarket	showMore	Show more	さらに表示	ok
+pluginMarket	entryMeta	{version} · {date}	{version} · {date}	ok
+pluginMarket	entryMetaAuthor	{version} · {author} · {date}	{version} · {author} · {date}	ok
+pluginMarket	openEntry	View {name}	{name} を表示	ok
+pluginMarket	install	Install	インストール	ok
+pluginMarket	installTitle	Install {name}	{name} をインストール	ok
+pluginMarket	installVersionTitle	Install {name} {version}	{name} {version} をインストール	ok
+pluginMarket	openInstalled	View {name} in Installed	インストール済みで {name} を表示	ok
+pluginMarket	statusInstalled	Installed	インストール済み	ok
+pluginMarket	statusUpdate	Update available	更新があります	ok
+pluginMarket	statusProvided	Provided by DSH	DSH が提供	ok
+pluginMarket	incompatible	This version is not compatible with the running DSH {runtime}; it requires DSH {range}.	このバージョンは実行中の DSH {runtime} と互換性がありません。DSH {range} が必要です。	ok
+pluginMarket	noCompatibleVersion	No version is compatible with DSH {runtime}	DSH {runtime} と互換性のあるバージョンがありません	ok
+pluginMarket	exempted	This version is not compatible with the running DSH, but you set a compatibility exemption for it.	このバージョンは実行中の DSH と互換性がありませんが、互換性の例外が設定されています。	ok
+pluginMarket	backToList	Discover	プラグインを探す	ok
+pluginMarket	factSource	Source	ソース	ok
+pluginMarket	factPackage	Package	パッケージ	ok
+pluginMarket	factRegistry	Registry	レジストリ	ok
+pluginMarket	factRepository	Repository	リポジトリ	ok
+pluginMarket	factCommit	Commit	コミット	ok
+pluginMarket	factDirectory	Directory	ディレクトリ	ok
+pluginMarket	factPublished	Published	公開日	ok
+pluginMarket	factAuthor	Author	作者	ok
+pluginMarket	factHomepage	Homepage	ホームページ	ok
+pluginMarket	factSourceCode	Source code	ソースコード	ok
+pluginMarket	factCategory	Category	カテゴリ	ok
+pluginMarket	factLabels	Labels	ラベル	ok
+pluginMarket	factMarket	Plugin market	プラグインマーケット	ok
+pluginMarket	versionsTitle	Versions	バージョン	ok
+pluginMarket	versionsLabel	Versions of {name}	{name} のバージョン	ok
+pluginMarket	versionDefault	Recommended	推奨	ok
+pluginMarket	versionInstalled	Installed	インストール済み	ok
+pluginMarket	versionIncompatible	Incompatible	互換性なし	ok
+pluginMarket	versionExempted	Exempted	例外あり	ok
+pluginMarket	versionPrerelease	Prerelease	プレリリース	ok
+pluginMarket	confirmTitle	Install "{name}"?	「{name}」をインストールしますか？	ok
+pluginMarket	installTrust	Plugins run on this machine with your permissions. Make sure you trust where this one comes from.	プラグインはこのマシンであなたの権限で実行されます。このプラグインの入手元が信頼できるか確認してください。	ok

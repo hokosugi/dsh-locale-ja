@@ -1,6 +1,6 @@
 # workspace — 日本語訳レビュー
 
-訳済み **112 / 112** キー / 要確認 0 件
+訳済み **119 / 119** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -9,6 +9,8 @@
 | 確認 | キー | 英語 | 日本語 |
 | --- | --- | --- | --- |
 | - [ ] | `defaultWorkspace.failed` | Unable to create default workspace. Use Choose workspace to select a folder. | 既定のワークスペースを作成できませんでした。「ワークスペースを選択」でフォルダーを選んでください。 |
+| - [ ] | `draft.workspaceRequired` | Choose a workspace first. | 先にワークスペースを選択してください。 |
+| - [ ] | `draft.initializationFailed` | Could not fill the draft. Please try again shortly. | 下書きを入力できませんでした。しばらくしてからもう一度お試しください。 |
 | - [ ] | `group.ungrouped` | Ungrouped | 未分類 |
 | - [ ] | `session.new` | New Session | 新しいセッション |
 | - [ ] | `session.untitled` | Untitled | 無題 |
@@ -63,6 +65,9 @@
 | - [ ] | `menu.unarchiveSession` | Unarchive session | セッションのアーカイブを解除 |
 | - [ ] | `menu.pinSession` | Pin session | セッションをピン留め |
 | - [ ] | `menu.unpinSession` | Unpin session | セッションのピン留めを解除 |
+| - [ ] | `menu.sessionId` | Copy Session ID | セッション ID をコピー |
+| - [ ] | `toast.sessionIdCopied` | Session ID copied | セッション ID をコピーしました |
+| - [ ] | `toast.sessionIdCopyFailed` | Copy failed. Try again. | コピーできませんでした。もう一度お試しください。 |
 | - [ ] | `row.archived` | Archived | アーカイブ済み |
 | - [ ] | `row.pinned` | Pinned | ピン留め済み |
 | - [ ] | `toast.archivedNotOpenable` | Archived sessions cannot be opened. Unarchive it to view. | アーカイブ済みのセッションは開けません。表示するにはアーカイブを解除してください。 |
@@ -89,6 +94,8 @@
 | - [ ] | `toast.pinFailed` | Pin failed. Try again later. | ピン留めに失敗しました。しばらくしてからもう一度お試しください。 |
 | - [ ] | `toast.unpinFailed` | Unpin failed. Try again later. | ピン留めの解除に失敗しました。しばらくしてからもう一度お試しください。 |
 | - [ ] | `toast.createFailed` | New session failed: {message} | 新しいセッションを作成できませんでした: {message} |
+| - [ ] | `toast.forkRequiresOpen` | Open the original session to complete migration before creating a branch. | 分岐を作る前に、移行を完了するため元のセッションを開いてください。 |
+| - [ ] | `toast.openForkSource` | Open original session | 元のセッションを開く |
 | - [ ] | `sessions.count.one` | {n} session | {n} 件のセッション |
 | - [ ] | `sessions.count.other` | {n} sessions | {n} 件のセッション |
 | - [ ] | `actions.workspace.aria` | Workspace actions for {name} | {name} のワークスペース操作 |

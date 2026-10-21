@@ -1,6 +1,6 @@
 # conversation — 日本語訳レビュー
 
-訳済み **369 / 369** キー / 要確認 0 件
+訳済み **373 / 373** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -88,7 +88,7 @@
 | - [ ] | `tool.title.createGoal` | Create goal | ゴールを作成 |
 | - [ ] | `tool.title.getGoal` | View goal | ゴールを表示 |
 | - [ ] | `tool.title.updateGoal` | Update goal | ゴールを更新 |
-| - [ ] | `tool.preparing.content` | Preparing content {kilobytes}KB | コンテンツを準備しています {kilobytes}KB |
+| - [ ] | `tool.preparing.content` | {kilobytes}KB | {kilobytes}KB |
 | - [ ] | `tool.title.createSchedule` | Create reminder | リマインダーを作成 |
 | - [ ] | `tool.title.listSchedules` | List reminders | リマインダー一覧 |
 | - [ ] | `tool.title.deleteSchedule` | Delete reminder | リマインダーを削除 |
@@ -307,9 +307,12 @@
 | - [ ] | `row.preparing` | Preparing tool call | ツール呼び出しを準備しています |
 | - [ ] | `row.failed` | Failed | 失敗 |
 | - [ ] | `row.stopped` | Stopped | 停止 |
+| - [ ] | `row.commandArguments` | Command arguments | コマンドの引数 |
 | - [ ] | `row.input` | IN | 入力 |
 | - [ ] | `row.output` | OUT | 出力 |
 | - [ ] | `row.inspect` | Inspect | 呼び出しを確認 |
+| - [ ] | `row.imageSize` | {width}x{height}px, {bytes} bytes | {width}x{height}px、{bytes} バイト |
+| - [ ] | `row.imageSizeDownscaled` | {width}x{height}px (downscaled from {originalWidth}x{originalHeight}px), {bytes} bytes | {width}x{height}px（元 {originalWidth}x{originalHeight}px から縮小）、{bytes} バイト |
 | - [ ] | `tool.title.search` | Search | 検索 |
 | - [ ] | `tool.title.read` | Read | 読み取り |
 | - [ ] | `tool.title.bash` | Bash | Bash |
@@ -368,6 +371,7 @@
 | - [ ] | `terminal.signal` | signal {signal} | シグナル {signal} |
 | - [ ] | `terminal.exitCode` | exit code {code} | 終了コード {code} |
 | - [ ] | `terminal.noExitCode` | no exit code | 終了コードなし |
+| - [ ] | `terminal.commandLine` | Command line {n} | コマンドライン {n} |
 | - [ ] | `terminal.running` | Running | 実行中 |
 | - [ ] | `terminal.failed` | Failed | 失敗 |
 | - [ ] | `terminal.done` | Done | 完了 |

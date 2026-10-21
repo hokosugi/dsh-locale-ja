@@ -37,5 +37,6 @@
   "terminal.collapse": "折りたたむ",
   "terminal.collapseAria": "出力を折りたたむ",
   "terminal.expand": "残り {n} 行を表示",
-  "terminal.expandAria": "折りたたまれた出力 {n} 行を展開"
+  "terminal.expandAria": "折りたたまれた出力 {n} 行を展開",
+  "terminal.commandLine": "コマンドライン {n}"
 }

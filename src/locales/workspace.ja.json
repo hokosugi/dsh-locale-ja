@@ -110,5 +110,12 @@
   "time.days": "{n} 日",
   "time.months": "{n} か月",
   "time.years": "{n} 年",
-  "time.ago": "{t}前"
+  "time.ago": "{t}前",
+  "draft.workspaceRequired": "先にワークスペースを選択してください。",
+  "draft.initializationFailed": "下書きを入力できませんでした。しばらくしてからもう一度お試しください。",
+  "menu.sessionId": "セッション ID をコピー",
+  "toast.sessionIdCopied": "セッション ID をコピーしました",
+  "toast.sessionIdCopyFailed": "コピーできませんでした。もう一度お試しください。",
+  "toast.forkRequiresOpen": "分岐を作る前に、移行を完了するため元のセッションを開いてください。",
+  "toast.openForkSource": "元のセッションを開く"
 }

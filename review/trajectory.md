@@ -163,9 +163,9 @@
 | - [ ] | `details.toolCalls` | Tool calls | ツール呼び出し |
 | - [ ] | `details.subtoolCalls` | Subtool calls | サブツール呼び出し |
 | - [ ] | `details.error` | Error | エラー |
+| - [ ] | `details.lastAttemptError` | Last attempt error | 直近の試行のエラー |
 | - [ ] | `details.failure.auth` | API key is invalid | API キーが正しくありません |
 | - [ ] | `details.retry` | Retry | 再試行 |
-| - [ ] | `details.scheduled` | Scheduled | 予約済み |
 | - [ ] | `details.retryDelay` | Retry delay | 再試行まで |
 | - [ ] | `details.result` | Result | 結果 |
 | - [ ] | `details.compacted` | Compacted | 圧縮済み |

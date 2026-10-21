@@ -15,7 +15,9 @@ subagent	tokens.million	{value}M	{value}M	ok
 subagent	tokens.total	{value} tok	{value} tok	ok
 subagent	loading.label	Loading subagents…	サブエージェントを読み込み中…	ok
 subagent	load.error	Unable to load subagents	サブエージェントを読み込めませんでした	ok
+subagent	catalog.migrationRequired	Migration required	移行が必要です	ok
 subagent	retry	Retry	再試行	ok
+subagent	mode.external	External task	外部タスク	ok
 subagent	mode.oneShot	one-shot	単発	ok
 subagent	mode.continuable	continuable	継続可	ok
 subagent	mode.unknown	unknown mode	不明なモード	ok

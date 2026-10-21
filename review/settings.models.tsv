@@ -28,19 +28,30 @@ settings.models	applying	Applying…	適用しています…	ok
 settings.models	savedProvider	Saved {provider}.	{provider} を保存しました。	ok
 settings.models	credentialConfigured	API key configured	API キー設定済み	ok
 settings.models	credentialMissing	API key missing	API キー未設定	ok
+settings.models	accountSignedIn	Signed in	サインイン済み	ok
 settings.models	readOnly	The settings document is read-only in this deployment.	この環境では設定ファイルは読み取り専用です。	ok
 settings.models	loadFailed	Loading the provider directory failed	プロバイダー一覧の読み込みに失敗しました	ok
 settings.models	conflict	Someone else changed these settings while this card was open. Close it and reopen to edit the current values.	このカードを開いている間に、ほかの場所で設定が変更されました。閉じて開き直し、最新の値で編集してください。	ok
 settings.models	retry	Retry	再試行	ok
 settings.models	keyInput	API key	API キー	ok
+settings.models	keyReveal	Show secret	シークレットを表示	ok
+settings.models	keyHide	Hide secret	シークレットを隠す	ok
 settings.models	keyPlaceholder	Enter your API key	API キーを入力	ok
-settings.models	keyPlaceholderNative	Enter an API key, or leave blank to use environment authentication	API キーを入力するか、空欄のまま環境の認証を使います	ok
-settings.models	keyStored	Configured — enter a new value to replace	設定済み — 変更するには新しい値を入力	ok
-settings.models	keyEnvLocked	Provided by the launch environment (read-only)	起動環境から提供されています (読み取り専用)	ok
+settings.models	keyPlaceholderFallback	Leave blank to use env as auth ({hint})	空欄にすると環境変数を認証に使います（{hint}）	ok
+settings.models	keyPlaceholderSaved	Leave blank to use saved credentials	空欄にすると保存済みの認証情報を使います	ok
+settings.models	keyFallbackMissing	Env var not detected. Enter an API key, or configure {hint} in your env.	環境変数が見つかりません。API キーを入力するか、環境に {hint} を設定してください。	ok
+settings.models	keyFallbackDetected	Env var detected. ({hint})	環境変数が見つかりました（{hint}）。	ok
+settings.models	keyFallbackDetectedHidden	Env var detected.	環境変数が見つかりました。	ok
+settings.models	keyFallbackUnchecked	Environment credential status has not been confirmed.	環境の認証情報の状態はまだ確認できていません。	ok
+settings.models	keyHelp	Saved credentials are used first. Environment fallbacks shown here, in order: {env}. Sources are launch environment, $cwd/.env, then $DSH_HOME/.env.	保存済みの認証情報が先に使われます。環境変数のフォールバックはこの順です: {env}。参照先は起動時の環境、$cwd/.env、$DSH_HOME/.env の順です。	ok
+settings.models	authHelp	Authentication details	認証の詳細	ok
 settings.models	customized	Customized settings	カスタム設定	ok
 settings.models	baseUrl	Base URL	ベース URL	ok
-settings.models	baseUrlDefault	Provider default	プロバイダーの既定値	ok
-settings.models	deepSeekBaseUrl	https://api.deepseek.com/anthropic	https://api.deepseek.com/anthropic	ok
+settings.models	baseUrlDefault	No default endpoint	既定のエンドポイントなし	ok
+settings.models	baseUrlEnvironment	Provider endpoint configuration: {env}	プロバイダーのエンドポイント設定: {env}	ok
+settings.models	baseUrlConfigured	Provider-configured endpoint	プロバイダーが設定したエンドポイント	ok
+settings.models	baseUrlPlaceholder	{url}	{url}	ok
+settings.models	deepSeekBaseUrl	https://api.deepseek.com/anthropic (Default to use DEEPSEEK_BASE_URL)	https://api.deepseek.com/anthropic（既定では DEEPSEEK_BASE_URL を使用）	ok
 settings.models	deepSeekEndpointHint	Use an API endpoint compatible with Anthropic Messages.	Anthropic Messages 互換の API エンドポイントを指定してください。	ok
 settings.models	models	Models	モデル	ok
 settings.models	modelsInherited	Using the adapter defaults	アダプターの既定モデルを使用中	ok
@@ -58,6 +69,16 @@ settings.models	modelAdvanced	Model options	モデルのオプション	ok
 settings.models	modelInputTypes	Input types	入力の種類	ok
 settings.models	modelInputText	Text	テキスト	ok
 settings.models	modelInputImage	Image	画像	ok
+settings.models	modelReasoning	Reasoning levels	推論レベルの設定	ok
+settings.models	modelReasoningLevel	Level	レベル	ok
+settings.models	modelReasoningValue	API value	API の値	ok
+settings.models	modelReasoningHelp	About reasoning levels	推論レベルについて	ok
+settings.models	modelReasoningHelpText	The API value is sent in the request's reasoning-effort field, such as OpenAI's reasoning_effort. It defaults to the level name; where the model provider's API documentation specifies a different value, follow it. Off turns reasoning off and needs no value; a value already written in the configuration is kept and sent.	API の値は、リクエストの reasoning-effort フィールド（OpenAI の reasoning_effort など）で送られます。既定ではレベルの名前を使います。モデルプロバイダーの API ドキュメントで別の値が指定されている場合はそれに従ってください。「オフ」は推論を無効にし、値は不要です。設定にすでに書かれている値は保持され、送信されます。	ok
+settings.models	modelReasoningNeedsLevel	Add at least one level besides Off, or turn reasoning levels off.	「オフ」以外のレベルを 1 つ以上追加するか、推論レベルをオフにしてください。	ok
+settings.models	modelReasoningValueRequired	Every level besides Off needs an API value, and no value can be empty.	「オフ」以外のすべてのレベルに API の値が必要です。空の値は使えません。	ok
+settings.models	modelReasoningAdd	Add level	レベルを追加	ok
+settings.models	modelReasoningRemove	Delete level	レベルを削除	ok
+settings.models	modelReasoningOffValuePlaceholder	Turns reasoning off	推論をオフにします	ok
 settings.models	addModel	Add model	モデルを追加	ok
 settings.models	removeModel	Delete model	モデルを削除	ok
 settings.models	modelsEmpty	No models will be shown in the selector. Unlisted IDs can still be sent directly.	モデル選択には何も表示されません。一覧にない ID も直接送信できます。	ok

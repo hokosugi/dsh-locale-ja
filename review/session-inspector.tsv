@@ -1,0 +1,53 @@
+namespace	key	en	ja	status
+session-inspector	tab.title	Session Log	セッションログ	ok
+session-inspector	tab.description	Analyze raw logs and grouped chat messages for the current session in the sidebar.	サイドバーで、現在のセッションの生ログとグループ化されたチャットメッセージを分析します。	ok
+session-inspector	view.presentation	Presentation	表示形式	ok
+session-inspector	view.sessionLog	Raw Log	生ログ	ok
+session-inspector	view.chatNode	Chat Group	チャットのグループ	ok
+session-inspector	picker.pick	Pick an element in Chat View	チャット表示で要素を選択	ok
+session-inspector	picker.cancel	Cancel picking (Esc)	選択をキャンセル (Esc)	ok
+session-inspector	picker.instructions	Hover in the main Chat to preview, then click to select. Esc cancels.	メインのチャット上でホバーするとプレビューされ、クリックで選択します。Esc でキャンセルします。	ok
+session-inspector	picker.noMatch	No matching record in this table. Pick another element or press Esc to cancel.	この表に一致する記録はありません。別の要素を選ぶか、Esc でキャンセルしてください。	ok
+session-inspector	picker.noChat	Open this Session in the main Chat before picking.	選択する前に、このセッションをメインのチャットで開いてください。	ok
+session-inspector	table.id	Index	番号	ok
+session-inspector	table.type	Type	種類	ok
+session-inspector	filter.title	Filter types	種類を絞り込む	ok
+session-inspector	filter.input	Type keyword	キーワードを入力	ok
+session-inspector	filter.placeholder	Type a fragment, e.g. delta	断片を入力（例: delta）	ok
+session-inspector	filter.help	Contains matching (*keyword*). Enter confirms; Esc cancels.	部分一致（*キーワード*）。Enter で確定、Esc でキャンセル。	ok
+session-inspector	filter.candidates	Type suggestions	種類の候補	ok
+session-inspector	filter.loading	Finding suggestions…	候補を検索中…	ok
+session-inspector	filter.failed	Type suggestions could not be loaded.	種類の候補を読み込めませんでした。	ok
+session-inspector	filter.noCandidates	No suggestions. You can still apply this keyword.	候補はありません。このキーワードはそのまま適用できます。	ok
+session-inspector	filter.clear	Clear	クリア	ok
+session-inspector	filter.cancel	Cancel	キャンセル	ok
+session-inspector	filter.apply	Apply filter	絞り込みを適用	ok
+session-inspector	filter.context	Parent context of a matching record	一致した記録の親コンテキスト	ok
+session-inspector	table.location	T/S	T/S	ok
+session-inspector	table.time	Time (UTC)	時刻 (UTC)	ok
+session-inspector	table.data	Data	データ	ok
+session-inspector	table.older	Load earlier	以前の記録を読み込む	ok
+session-inspector	table.loading	Loading…	読み込み中…	ok
+session-inspector	table.latest	Follow Latest	最新に追従	ok
+session-inspector	table.empty	No records	記録なし	ok
+session-inspector	table.raw	Raw data	生データ	ok
+session-inspector	table.rawError	This record could not be serialized. Select another record to continue.	この記録はシリアライズできませんでした。続けるには別の記録を選んでください。	ok
+session-inspector	table.resizeDetails	Resize raw data panel	生データパネルのサイズを変更	ok
+session-inspector	table.close	Close	閉じる	ok
+session-inspector	table.expand	Expand children	子を展開	ok
+session-inspector	table.collapse	Collapse children	子を折りたたむ	ok
+session-inspector	table.removed	This record was removed or settled. Select a current record.	この記録は削除または確定済みです。現在の記録を選んでください。	ok
+session-inspector	object.node	Node	ノード	ok
+session-inspector	object.nodeData	Node Data	ノードのデータ	ok
+session-inspector	object.group	Group	グループ	ok
+session-inspector	object.groupData	Group Data	グループのデータ	ok
+session-inspector	object.turn	Turn	ターン	ok
+session-inspector	object.turnData	Turn Data	ターンのデータ	ok
+session-inspector	object.step	Step	ステップ	ok
+session-inspector	object.stepData	Step Data	ステップのデータ	ok
+session-inspector	object.accessor	[Getter / Setter, not evaluated]	[ゲッター / セッター、未評価]	ok
+session-inspector	object.empty	Empty	空	ok
+session-inspector	object.absent	[Empty slot]	[空きスロット]	ok
+session-inspector	object.properties	Other properties	その他のプロパティ	ok
+session-inspector	object.more	Show more	さらに表示	ok
+session-inspector	object.navigation	Raw data navigation	生データの移動	ok

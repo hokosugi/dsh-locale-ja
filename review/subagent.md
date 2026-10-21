@@ -1,6 +1,6 @@
 # subagent — 日本語訳レビュー
 
-訳済み **39 / 39** キー / 要確認 0 件
+訳済み **41 / 41** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -24,7 +24,9 @@
 | - [ ] | `tokens.total` | {value} tok | {value} tok |
 | - [ ] | `loading.label` | Loading subagents… | サブエージェントを読み込み中… |
 | - [ ] | `load.error` | Unable to load subagents | サブエージェントを読み込めませんでした |
+| - [ ] | `catalog.migrationRequired` | Migration required | 移行が必要です |
 | - [ ] | `retry` | Retry | 再試行 |
+| - [ ] | `mode.external` | External task | 外部タスク |
 | - [ ] | `mode.oneShot` | one-shot | 単発 |
 | - [ ] | `mode.continuable` | continuable | 継続可 |
 | - [ ] | `mode.unknown` | unknown mode | 不明なモード |

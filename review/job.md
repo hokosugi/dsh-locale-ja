@@ -1,6 +1,6 @@
 # job — 日本語訳レビュー
 
-訳済み **39 / 39** キー / 要確認 0 件
+訳済み **40 / 40** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -37,6 +37,7 @@
 | - [ ] | `terminal.signal` | signal {signal} | シグナル {signal} |
 | - [ ] | `terminal.exitCode` | exit {code} | 終了コード {code} |
 | - [ ] | `terminal.noExitCode` | no exit code | 終了コードなし |
+| - [ ] | `terminal.commandLine` | Command line {n} | コマンドライン {n} |
 | - [ ] | `terminal.running` | running | 実行中 |
 | - [ ] | `terminal.failed` | failed | 失敗 |
 | - [ ] | `terminal.done` | done | 完了 |

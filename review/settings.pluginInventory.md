@@ -1,6 +1,6 @@
 # settings.pluginInventory — 日本語訳レビュー
 
-訳済み **40 / 40** キー / 要確認 0 件
+訳済み **37 / 37** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -21,7 +21,6 @@
 | - [ ] | `emptySearch` | No matching plugins. | 一致するプラグインがありません。 |
 | - [ ] | `presetTitle` | Session plugins | セッションプラグイン |
 | - [ ] | `presetSubtitle` | Composed per session by agent presets | Agent プリセットがセッションごとに構成します |
-| - [ ] | `countUnit` | plugins | 件 |
 | - [ ] | `switcherLabel` | Choose the agent preset to inspect | 確認する Agent プリセットを選択 |
 | - [ ] | `presetOptionDefault` | {name} (default) | {name} (既定) |
 | - [ ] | `presetOptionBroken` | {name} (failed to load) | {name} (読み込み失敗) |
@@ -29,9 +28,7 @@
 | - [ ] | `globalSubtitle` | Shared by the system and every session | システムとすべてのセッションで共有されます |
 | - [ ] | `presetProvidedDetail` | Disabled globally; agent presets provide it per session | グローバルでは無効です。Agent プリセットがセッションごとに提供します |
 | - [ ] | `enabledIn` | Enabled in | 有効な場所 |
-| - [ ] | `viewInPreset` | View in the preset group | プリセットのグループで見る |
 | - [ ] | `matchesInOtherPresets` | {count} more matches in other presets:  | ほかのプリセットにも {count} 件一致します:  |
-| - [ ] | `failedCountLabel` | failed | 件失敗 |
 | - [ ] | `enabledTag` | Enabled | 有効 |
 | - [ ] | `disabledTag` | Disabled | 無効 |
 | - [ ] | `conditionalTag` | Conditional | 条件付き |

@@ -24,7 +24,7 @@
   "detail.nextRun": "次回の実行",
   "detail.tabs": "タスク詳細の表示",
   "detail.rule": "ルール",
-  "detail.records": "実行記録",
+  "detail.records": "記録",
   "delivery.empty": "実行記録がありません",
   "delivery.loading": "実行記録を読み込み中…",
   "delivery.error": "実行記録を読み込めませんでした。",
@@ -185,5 +185,6 @@
   "card.open": "開く",
   "card.openLabel": "タスクの詳細を開く: {title}",
   "card.deleted": "削除済み",
-  "tool.invoked": "{name} を呼び出しました"
+  "tool.invoked": "{name} を呼び出しました",
+  "timing.subagentSession": "このセッションはサブエージェントのものです。サブエージェントには配信リマインダーは届きません。"
 }

@@ -1,6 +1,6 @@
 # settings.agentPreset — 日本語訳レビュー
 
-訳済み **41 / 41** キー / 要確認 0 件
+訳済み **47 / 47** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -140,7 +140,7 @@ Expected output: the top error groups and a complete count table. Intermediate d
 
 > ### 含まれるもの
 >
-> 永続シェルツールが 1 つと、固定のシステムプロンプトだけです。この内蔵プリセットはスキル、計画、コンテキスト圧縮、標準のランタイムコンテキストを読み込みません。
+> 永続シェルツールが 1 つ、read_image、固定のシステムプロンプトです。画像の読み取りには画像対応モデルが必要です。コンテキストが逼迫すると古い履歴は自動で圧縮されます。Agent が待機中のときに /compact を使えば手動で圧縮できます。この内蔵プリセットはスキル、計画、標準のランタイムコンテキストを読み込みません。
 >
 > ### どんなときに選ぶか
 >
@@ -151,7 +151,7 @@ Expected output: the top error groups and a complete count table. Intermediate d
 ```markdown
 ### What is included
 
-One persistent shell tool and a fixed system prompt. The built-in preset does not load Skills, planning, context compaction, or the standard runtime context.
+One persistent shell tool, read_image, and a fixed system prompt. Image reading requires an image-capable model. Older history is compacted automatically under context pressure; use /compact while the agent is idle to compact it manually. The built-in preset does not load Skills, planning, or the standard runtime context.
 
 ### When to choose it
 
@@ -290,14 +290,20 @@ Expected output: a custom preset for new tasks. These review instructions guide 
 | - [ ] | `presetPtcName` | PTC mode | PTC モード |
 | - [ ] | `presetPtcDescription` | Includes all Standard mode capabilities. Better suited to tasks that call tools in batches and then filter, organize, deduplicate, count, or summarize the results. | 標準モードのすべての機能を含みます。ツールをまとめて呼び出し、その結果を絞り込み・整理・重複排除・集計・要約するタスクに向いています。 |
 | - [ ] | `presetMinimalName` | Minimal mode | 最小モード |
-| - [ ] | `presetMinimalDescription` | The agent works using only a terminal tool. Useful for testing and comparing its basic performance. | Agent はターミナルツールだけを使って作業します。基本的な性能の測定や比較に適しています。 |
+| - [ ] | `presetMinimalDescription` | The agent uses a terminal and image reading, with context compaction. Useful for testing and comparing its basic performance. | Agent はターミナルと画像読み取りを使い、コンテキスト圧縮も行います。基本性能のテストや比較に便利です。 |
 | - [ ] | `presetCordisName` | Creator mode | 創造モード |
 | - [ ] | `presetCordisDescription` | Customize DSH through conversation. Let the agent write plugins that add features or UI, or combine tools and prompts to create your own mode. | 会話を通して DSH をカスタマイズします。機能や UI を追加するプラグインを Agent に書かせたり、ツールとプロンプトを組み合わせて自分のモードを作ったりできます。 |
 | - [ ] | `inUse` | New task default | 既定 |
 | - [ ] | `noDescription` | No description. | 説明はありません。 |
 | - [ ] | `brokenBadge` | Failed to load | 読み込みに失敗 |
 | - [ ] | `switchRefused` | Could not switch to {name}: {reason} | {name} に切り替えられませんでした: {reason} |
+| - [ ] | `standardUnavailable` | Standard mode is unavailable. Restore it or choose another available mode. | 標準モードは利用できません。復元するか、利用可能な別のモードを選んでください。 |
 | - [ ] | `close` | Close | 閉じる |
 | - [ ] | `creatorDraft` | Let the agent help me create a preset | Agent にプリセット作成を手伝ってもらう |
+| - [ ] | `createPlugin` | Let the agent create a plugin | Agent にプラグインを作らせる |
+| - [ ] | `createPluginDescription` | Enter Creator mode and make your own DSH plugin | 創造モードに入り、独自の DSH プラグインを作ります |
+| - [ ] | `createPluginChecking` | Checking whether Creator mode is available | 創造モードが利用できるか確認中 |
+| - [ ] | `createPluginUnavailable` | Temporarily unavailable. Reopen this menu to retry | 一時的に利用できません。このメニューを開き直して再試行してください |
+| - [ ] | `createPluginMissing` | Creator mode is not included in this configuration | この構成には創造モードが含まれていません |
 
 確認列: `- [ ]` は未確認、`- [!]` は要確認。レンダラーによってはチェックボックスとして表示されます。

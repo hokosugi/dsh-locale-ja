@@ -1,0 +1,95 @@
+namespace	key	en	ja	status
+settings.account	modelSignInRequired	Model unavailable. Please sign in and try again.	モデルを利用できません。サインインして再試行してください。	ok
+settings.account	sessionExpired	You have signed out of your account, please log in again.	アカウントからサインアウトしました。もう一度サインインしてください。	ok
+settings.account	onboardingArtworkLocale	en	ja	ok
+settings.account	onboardingWelcome	Welcome to	ようこそ	ok
+settings.account	onboardingBrand	DeepSeek Harness	DeepSeek Harness	ok
+settings.account	onboardingIntroduction	DeepSeek Harness works in a local folder and uses tools to read and write files on your computer. It can help you research and organize information, create documents and spreadsheets, write code, troubleshoot issues, and more.	DeepSeek Harness はローカルのフォルダーで動作し、ツールを使ってあなたのコンピューター上のファイルを読み書きします。調査や情報整理、文書や表計算の作成、コードの記述、問題の調査などに役立ちます。	ok
+settings.account	onboardingStart	Get started	はじめる	ok
+settings.account	onboardingCredit	Add credits	クレジットを追加	ok
+settings.account	onboardingCreditDescription	DeepSeek Harness charges credits based on the tokens used by models and tools. Add credits in advance to keep your tasks running without interruption. Your balance is only used while the agent is working on a task.	DeepSeek Harness は、モデルとツールが使ったトークンに応じてクレジットを消費します。事前にクレジットを追加しておくと、タスクを中断せずに続けられます。残高が使われるのは、Agent がタスクを処理している間だけです。	ok
+settings.account	onboardingTopUp	Add credits	クレジットを追加	ok
+settings.account	onboardingLater	Next	次へ	ok
+settings.account	onboardingFundedTopUp	Add credits	クレジットを追加	ok
+settings.account	onboardingPurposePrefix	What would you like	何を	ok
+settings.account	onboardingPurposeSuffix	to help with?	手伝いましょうか？	ok
+settings.account	onboardingPurposeDescription	We’ll tailor the interface and tools to fit the way you work.	あなたの働き方に合わせて、インターフェースとツールを調整します。	ok
+settings.account	onboardingOffice	Office & creative work	オフィス作業・創作	ok
+settings.account	onboardingOfficeDescription	Edit documents, organize data, create presentations, and more	文書の編集、データ整理、プレゼンテーション作成など	ok
+settings.account	onboardingDevelopment	Coding & development	コーディング・開発	ok
+settings.account	onboardingDevelopmentDescription	Edit code, debug issues, run commands, manage project files, and more	コードの編集、デバッグ、コマンド実行、プロジェクトファイルの管理など	ok
+settings.account	onboardingContinue	Continue	続ける	ok
+settings.account	onboardingProcess	How much detail would you like to see?	どこまで詳しく表示しますか？	ok
+settings.account	onboardingProcessDescription	This only changes how progress is shown, not what DeepSeek Harness can do.	変わるのは進捗の表示方法だけです。DeepSeek Harness の機能は変わりません。	ok
+settings.account	onboardingCompact	Results only	結果だけ	ok
+settings.account	onboardingCompactDescription	See just the results in a clean, simple interface	シンプルな画面で結果だけを表示します	ok
+settings.account	onboardingStandard	Key details	要点	ok
+settings.account	onboardingStandardDescription	Focus on results, with only the most important steps and actions shown	結果を中心に、重要なステップと操作だけを表示します	ok
+settings.account	onboardingDetailed	Full details	すべての詳細	ok
+settings.account	onboardingDetailedDescription	See the full process for easier debugging and troubleshooting	プロセス全体を表示するので、デバッグや問題調査がしやすくなります	ok
+settings.account	onboardingEnter	Open app	アプリを開く	ok
+settings.account	onboardingBack	Back	戻る	ok
+settings.account	onboardingSkip	Skip	スキップ	ok
+settings.account	onboardingSkipTitle	Skip setup?	セットアップをスキップしますか？	ok
+settings.account	onboardingSkipDescription	You can change how progress, performance, and usage are displayed, or enable Coding Tools, anytime in Settings → General.	進捗・パフォーマンス・使用量の表示方法や、コーディングツールの有効化は、いつでも設定 → 一般で変更できます。	ok
+settings.account	onboardingKeepSetting	Continue setup	セットアップを続ける	ok
+settings.account	onboardingNoCreditTitle	Skip adding credits?	クレジットの追加をスキップしますか？	ok
+settings.account	onboardingNoCreditDescription	DeepSeek Harness can’t start new tasks without credits. You can add them later in Settings → Account.	クレジットがないと DeepSeek Harness は新しいタスクを開始できません。あとから設定 → アカウントで追加できます。	ok
+settings.account	onboardingUnderstood	Got it	了解	ok
+settings.account	onboardingGoTopUp	Add credits	クレジットを追加	ok
+settings.account	onboardingSaveFailed	Could not save settings. Try again.	設定を保存できませんでした。もう一度お試しください。	ok
+settings.account	onboardingRetry	Retry	再試行	ok
+settings.account	onboardingLoading	Loading settings…	設定を読み込み中…	ok
+settings.account	close	Close	閉じる	ok
+settings.account	addApiKey	Add API Key	API キーを追加	ok
+settings.account	retry	Sign in again	もう一度サインイン	ok
+settings.account	loginTitle	Get started	はじめる	ok
+settings.account	loginDescription	Sign in to your DeepSeek account or add an API Key to get started. Your projects and files are stored locally.	DeepSeek アカウントでサインインするか、API キーを追加して始めます。プロジェクトとファイルはローカルに保存されます。	ok
+settings.account	browserTitle	Waiting for sign in	サインインを待っています	ok
+settings.account	browserPrompt	Page did not open automatically? 	ページが自動で開かない場合は、	ok
+settings.account	copyLink	Copy sign-in link	サインインリンクをコピー	ok
+settings.account	copiedLink	Link copied	リンクをコピーしました	ok
+settings.account	copyFailed	Copy failed	コピーできませんでした	ok
+settings.account	browserDescription	, then open it in your browser to finish signing in.	を押し、ブラウザーで開いてサインインを完了してください。	ok
+settings.account	timeoutTitle	Sign in timed out	サインインがタイムアウトしました	ok
+settings.account	timeoutDescription	Sign in again to continue.	続けるにはもう一度サインインしてください。	ok
+settings.account	failureTitle	Could not sign in	サインインできませんでした	ok
+settings.account	platformFailed	Could not complete the operation. Try again.	操作を完了できませんでした。もう一度お試しください。	ok
+settings.account	platformRetry	Retry	再試行	ok
+settings.account	loading	Loading…	読み込み中…	ok
+settings.account	backToHarness	Back to DeepSeek Harness	DeepSeek Harness に戻る	ok
+settings.account	settings	Settings	設定	ok
+settings.account	contactUs	Feedback	フィードバック	ok
+settings.account	menu	Account menu	アカウントメニュー	ok
+settings.account	nav	Account	アカウント	ok
+settings.account	signedIn	Signed in to DeepSeek	DeepSeek にサインイン済み	ok
+settings.account	signedOut	Not signed in	未サインイン	ok
+settings.account	signIn	Sign in	サインイン	ok
+settings.account	signOut	Sign out	サインアウト	ok
+settings.account	signOutUnknownDescription	Could not check running tasks. Signing out may interrupt tasks using this account. Sign out now?	実行中のタスクを確認できませんでした。サインアウトすると、このアカウントを使っているタスクが中断される可能性があります。今すぐサインアウトしますか？	ok
+settings.account	signOutDescription	Signing out will not delete any data. You can sign in to this account again.	サインアウトしてもデータは削除されません。このアカウントには再びサインインできます。	ok
+settings.account	signOutRunningDescription	Tasks are currently running. Signing out will interrupt them. Sign out now?	現在タスクが実行中です。サインアウトすると中断されます。今すぐサインアウトしますか？	ok
+settings.account	cancel	Cancel	キャンセル	ok
+settings.account	open	Open browser	ブラウザーで開く	ok
+settings.account	initializing	Starting sign in…	サインインを開始しています…	ok
+settings.account	waiting	Continue in your browser	ブラウザーで続けてください	ok
+settings.account	completing	Completing sign in…	サインインを完了しています…	ok
+settings.account	expired	Sign in expired. Try again.	サインインの有効期限が切れました。もう一度お試しください。	ok
+settings.account	failed	Could not complete the operation. Try again.	操作を完了できませんでした。もう一度お試しください。	ok
+settings.account	noResponse	Something went wrong. Please check your network connection and try again.	問題が発生しました。ネットワーク接続を確認して、もう一度お試しください。	ok
+settings.account	settingsSignedOutTitle	You are not signed in to DeepSeek Harness	DeepSeek Harness にサインインしていません	ok
+settings.account	settingsSignedOutDescription	Sign in to DeepSeek Harness to get your dedicated API Key	DeepSeek Harness にサインインすると、専用の API キーを取得できます	ok
+settings.account	signInDescription	Use your DeepSeek account to get started.	DeepSeek アカウントで始めます。	ok
+settings.account	profileUnavailable	Account details are not available yet.	アカウントの詳細はまだ取得できません。	ok
+settings.account	balance	Topped-up balance	チャージ残高	ok
+settings.account	bonusBalance	Granted balance	付与残高	ok
+settings.account	balanceUnavailable	View on Platform	プラットフォームで表示	ok
+settings.account	balanceSignedOut	Sign in to view	サインインして表示	ok
+settings.account	accountInfo	More account information	アカウント情報の詳細	ok
+settings.account	more	More	その他	ok
+settings.account	usage	View usage	使用量を表示	ok
+settings.account	topUp	Top up	チャージする	ok
+settings.account	quotaTitle	No balance available	残高がありません	ok
+settings.account	quotaDescription	DeepSeek Harness cannot start a new task with this account when no balance is available. Would you like to top up? You can also top up later in Settings → Account.	残高がない状態では、このアカウントで新しいタスクを開始できません。チャージしますか？あとから設定 → アカウントでチャージすることもできます。	ok
+settings.account	quotaTopUp	Top up	チャージする	ok
+settings.account	bonusNoticeTitle	Bonus credited	ボーナスが付与されました	ok

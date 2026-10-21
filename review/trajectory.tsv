@@ -154,9 +154,9 @@ trajectory	details.model	Model	モデル	ok
 trajectory	details.toolCalls	Tool calls	ツール呼び出し	ok
 trajectory	details.subtoolCalls	Subtool calls	サブツール呼び出し	ok
 trajectory	details.error	Error	エラー	ok
+trajectory	details.lastAttemptError	Last attempt error	直近の試行のエラー	ok
 trajectory	details.failure.auth	API key is invalid	API キーが正しくありません	ok
 trajectory	details.retry	Retry	再試行	ok
-trajectory	details.scheduled	Scheduled	予約済み	ok
 trajectory	details.retryDelay	Retry delay	再試行まで	ok
 trajectory	details.result	Result	結果	ok
 trajectory	details.compacted	Compacted	圧縮済み	ok

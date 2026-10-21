@@ -155,7 +155,6 @@
   "message.retry.delay": "再試行まで: ",
   "message.retry.failure": "失敗の理由: ",
   "message.failure.auth": "API キーが正しくありません",
-  "message.accountStopped": "タスクを停止しました",
   "message.failure.accountSignedOut": "DeepSeek からサインアウトしたため停止しました。",
   "message.failure.accountSignInRequired": "DeepSeek にサインインし、リクエスト先がアカウント認証に対応していることを確認してください。",
   "message.failure.quota": "リクエストの上限に達しました。",
@@ -184,5 +183,11 @@
   "row.failed": "失敗",
   "json.truncated": "… 全 {total} 文字で省略",
   "clock.md": "{m}/{d}",
-  "clock.ymd": "{y}-{m}-{d}"
+  "clock.ymd": "{y}-{m}-{d}",
+  "settings.collapse.title": "作業詳細を折りたたむタイミング",
+  "settings.collapse.description": "作業詳細を自動で折りたたむタイミングを選びます",
+  "settings.collapse.completion": "完了時",
+  "settings.collapse.nextInput": "次のメッセージ時",
+  "message.taskStopped": "タスクを停止しました",
+  "message.failure.interrupted": "DSH プロセスがこのターンの完了前に終了したため（強制終了・クラッシュ・終了時のタイムアウトなど）、DSH の再起動時にこのターンは終了扱いになりました。未完了のツール呼び出しの結果は不明です。"
 }

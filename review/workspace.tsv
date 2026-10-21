@@ -1,5 +1,7 @@
 namespace	key	en	ja	status
 workspace	defaultWorkspace.failed	Unable to create default workspace. Use Choose workspace to select a folder.	既定のワークスペースを作成できませんでした。「ワークスペースを選択」でフォルダーを選んでください。	ok
+workspace	draft.workspaceRequired	Choose a workspace first.	先にワークスペースを選択してください。	ok
+workspace	draft.initializationFailed	Could not fill the draft. Please try again shortly.	下書きを入力できませんでした。しばらくしてからもう一度お試しください。	ok
 workspace	group.ungrouped	Ungrouped	未分類	ok
 workspace	session.new	New Session	新しいセッション	ok
 workspace	session.untitled	Untitled	無題	ok
@@ -54,6 +56,9 @@ workspace	menu.archiveSession	Archive session	セッションをアーカイブ	
 workspace	menu.unarchiveSession	Unarchive session	セッションのアーカイブを解除	ok
 workspace	menu.pinSession	Pin session	セッションをピン留め	ok
 workspace	menu.unpinSession	Unpin session	セッションのピン留めを解除	ok
+workspace	menu.sessionId	Copy Session ID	セッション ID をコピー	ok
+workspace	toast.sessionIdCopied	Session ID copied	セッション ID をコピーしました	ok
+workspace	toast.sessionIdCopyFailed	Copy failed. Try again.	コピーできませんでした。もう一度お試しください。	ok
 workspace	row.archived	Archived	アーカイブ済み	ok
 workspace	row.pinned	Pinned	ピン留め済み	ok
 workspace	toast.archivedNotOpenable	Archived sessions cannot be opened. Unarchive it to view.	アーカイブ済みのセッションは開けません。表示するにはアーカイブを解除してください。	ok
@@ -80,6 +85,8 @@ workspace	toast.archivedFilter	filter archived sessions	アーカイブ済みセ
 workspace	toast.pinFailed	Pin failed. Try again later.	ピン留めに失敗しました。しばらくしてからもう一度お試しください。	ok
 workspace	toast.unpinFailed	Unpin failed. Try again later.	ピン留めの解除に失敗しました。しばらくしてからもう一度お試しください。	ok
 workspace	toast.createFailed	New session failed: {message}	新しいセッションを作成できませんでした: {message}	ok
+workspace	toast.forkRequiresOpen	Open the original session to complete migration before creating a branch.	分岐を作る前に、移行を完了するため元のセッションを開いてください。	ok
+workspace	toast.openForkSource	Open original session	元のセッションを開く	ok
 workspace	sessions.count.one	{n} session	{n} 件のセッション	ok
 workspace	sessions.count.other	{n} sessions	{n} 件のセッション	ok
 workspace	actions.workspace.aria	Workspace actions for {name}	{name} のワークスペース操作	ok

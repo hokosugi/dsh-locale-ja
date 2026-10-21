@@ -37,5 +37,7 @@
   "readonly.oneShot.title": "単発サブエージェントの記録",
   "readonly.title": "このサブエージェントは現在読み取り専用です",
   "readonly.oneShot.body": "単発のタスクには追加のメッセージを送れません。ここで実行記録の全体を確認してください。",
-  "readonly.body": "親セッションがオフラインです。再度開くと、メッセージを送信できます。"
+  "readonly.body": "親セッションがオフラインです。再度開くと、メッセージを送信できます。",
+  "catalog.migrationRequired": "移行が必要です",
+  "mode.external": "外部タスク"
 }

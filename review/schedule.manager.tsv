@@ -24,7 +24,7 @@ schedule.manager	detail.more	Automation task actions	自動化タスクの操作
 schedule.manager	detail.nextRun	Next run	次回の実行	ok
 schedule.manager	detail.tabs	Task detail views	タスク詳細の表示	ok
 schedule.manager	detail.rule	Rules	ルール	ok
-schedule.manager	detail.records	Delivery records	実行記録	ok
+schedule.manager	detail.records	Records	記録	ok
 schedule.manager	delivery.empty	No delivery record available	実行記録がありません	ok
 schedule.manager	delivery.loading	Loading delivery records…	実行記録を読み込み中…	ok
 schedule.manager	delivery.error	Could not load delivery records.	実行記録を読み込めませんでした。	ok
@@ -132,6 +132,7 @@ schedule.manager	timing.zoneNoStored	A one-time task stores only its target mome
 schedule.manager	timing.inactive	Inactive tasks are read-only. Their timing cannot be edited.	終了したタスクは読み取り専用です。実行時刻は編集できません。	ok
 schedule.manager	timing.conflict	This task changed while you were editing. Your draft is retained. Cancel and reopen after refresh to edit the latest rule.	編集中にタスクが変更されました。下書きは保持されています。最新のルールを編集するには、更新後にキャンセルして開き直してください。	ok
 schedule.manager	timing.notFound	This task is no longer available. Your draft is retained; cancel to close the editor.	このタスクは利用できません。下書きは保持されています。キャンセルすると編集画面を閉じます。	ok
+schedule.manager	timing.subagentSession	This session belongs to a sub-agent, which never receives delivered reminders.	このセッションはサブエージェントのものです。サブエージェントには配信リマインダーは届きません。	ok
 schedule.manager	timing.invalid	Enter a valid date and time, or check the timing fields.	有効な日付と時刻を入力するか、時間の項目を確認してください。	ok
 schedule.manager	timing.invalidZone	Enter a valid IANA time zone, for example Asia/Shanghai.	有効な IANA タイムゾーンを入力してください (例: Asia/Tokyo)。	ok
 schedule.manager	timing.notFuture	Choose a date and time in the future.	未来の日付と時刻を指定してください。	ok

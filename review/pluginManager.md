@@ -1,6 +1,6 @@
 # pluginManager — 日本語訳レビュー
 
-訳済み **189 / 189** キー / 要確認 0 件
+訳済み **221 / 221** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -21,16 +21,35 @@
 | - [ ] | `refreshError` | Refresh failed. Please try again. | 更新に失敗しました。もう一度お試しください。 |
 | - [ ] | `empty` | No plugins are installed yet. | プラグインがまだインストールされていません。 |
 | - [ ] | `addPlugin` | Add plugin | プラグインを追加 |
-| - [ ] | `restartNotice` | The change takes effect at the next start | 変更は次回の起動時に反映されます |
+| - [ ] | `chooseAddMethod` | Choose how to add a plugin | プラグインの追加方法を選ぶ |
+| - [ ] | `installExisting` | Install a third-party plugin | サードパーティのプラグインをインストール |
+| - [ ] | `installExistingDescription` | Supports npm packages, Git repositories, and local directories | npm パッケージ・Git リポジトリ・ローカルディレクトリに対応 |
+| - [ ] | `restartNotice` | Restart DSH to apply the change. {reason} | DSH を再起動すると変更が反映されます。{reason} |
+| - [ ] | `restartReasonNoHmr` | This profile applies changes only at startup. | このプロファイルは起動時にのみ変更を反映します。 |
+| - [ ] | `restartReasonPackageMoved` | An installed package now resolves to another directory, or the change replaces a package the DSH installation provides. Uninstall a package before installing it from another location. | インストール済みパッケージの解決先が別のディレクトリになったか、変更が DSH 本体の提供するパッケージを置き換えます。別の場所から入れる前に、いったんアンインストールしてください。 |
+| - [ ] | `restartReasonHostModule` | The change reaches modules DSH itself loaded. | 変更が DSH 本体が読み込んだモジュールに及びます。 |
+| - [ ] | `restartReasonUnmanagedPlugin` | The change reaches a plugin running outside the plugin list. | 変更がプラグイン一覧の外で動いているプラグインに及びます。 |
+| - [ ] | `restartReasonModuleComparison` | DSH could not compare the loaded plugins with their files. | 読み込み済みプラグインとファイルを比較できませんでした。 |
 | - [ ] | `overriddenNotice` | {name} was saved, but a higher-priority configuration overrides it, so it is not in effect | {name} は保存されましたが、より優先度の高い設定に上書きされるため反映されていません |
-| - [ ] | `bundlesTitle` | Installed | インストール済み |
-| - [ ] | `officialTitle` | Official | 公式 |
+| - [ ] | `bundlesTitle` | Installed plugins | インストール済みプラグイン |
+| - [ ] | `basicTitle` | Built-in plugin settings | 組み込みプラグインの設定 |
+| - [ ] | `extensionsTitle` | Experimental plugins | 実験的プラグイン |
+| - [ ] | `moreTitle` | Experimental plugins | 実験的プラグイン |
+| - [ ] | `moreAction` | More | その他 |
+| - [ ] | `tabsLabel` | Plugin views | プラグインの表示切替 |
+| - [ ] | `installedTab` | Installed | インストール済み |
 | - [ ] | `statusProblem` | Problem | 問題 |
 | - [ ] | `statusBeta` | Experimental | 実験的 |
 | - [ ] | `reasonLabel` | Reason | 理由 |
 | - [ ] | `metadataError` | Package metadata error: {error} | パッケージメタデータのエラー: {error} |
+| - [ ] | `previewAlt` | {name} feature preview | {name} の機能プレビュー |
+| - [ ] | `previewUnavailable` | Could not display feature preview | 機能プレビューを表示できませんでした |
 | - [ ] | `versionTag` | v{version} | v{version} |
 | - [ ] | `partsLabel` | Components | コンポーネント |
+| - [ ] | `sourceTitle` | Source | ソース |
+| - [ ] | `sourceSpec` | Code source | コードの取得元 |
+| - [ ] | `sourceBuiltIn` | Built in | 組み込み |
+| - [ ] | `sourceVersion` | Current version | 現在のバージョン |
 | - [ ] | `partsEmpty` | This plugin pack contains no components. | このプラグインパックにはコンポーネントが含まれていません。 |
 | - [ ] | `partsCountTotal` | {count} total | 合計 {count} |
 | - [ ] | `partsCountRunning` | {count} running | {count} 実行中 |
@@ -69,7 +88,7 @@
 | - [ ] | `installGuideFill` | Use example | 例を入力 |
 | - [ ] | `installGuideFillAria` | Use the example {example} | 例 {example} を入力 |
 | - [ ] | `installGuideSafety` | Install only plugins you trust: they run with your permissions and can damage DeepSeek Harness or leak your data. | 信頼できるプラグインだけをインストールしてください。プラグインはあなたの権限で動作し、DeepSeek Harness を壊したり、データを外部に漏らしたりする可能性があります。 |
-| - [ ] | `installUpgradeNotice` | Installed plugins do not update automatically yet. To upgrade a plugin, uninstall it and install the new version. Later releases will keep improving the upgrade experience. | インストールしたプラグインはまだ自動更新されません。アップグレードするにはアンインストールしてから新しいバージョンをインストールしてください。今後のリリースで改善していきます。 |
+| - [ ] | `installUpgradeNotice` | On-demand Official plugins offer Update when their version differs from DSH. To update other plugins, uninstall and reinstall them. | オンデマンドの公式プラグインは、DSH のバージョンと異なるときに「更新」が表示されます。ほかのプラグインを更新するには、アンインストールしてから入れ直してください。 |
 | - [ ] | `registryToggle` | Registry | レジストリ |
 | - [ ] | `registryLegend` | The npm registry the plugin is downloaded from | プラグインのダウンロード元になる npm レジストリ |
 | - [ ] | `registryDefault` | Default registry | 既定のレジストリ |
@@ -83,6 +102,8 @@
 | - [ ] | `sentenceSeparator` |   |   |
 | - [ ] | `installRun` | Install | インストール |
 | - [ ] | `installChecking` | Checking… | 確認中… |
+| - [ ] | `installConfirmedTitle` | Install plugin | プラグインをインストール |
+| - [ ] | `installConfirmedRefused` | This plugin cannot be installed | このプラグインはインストールできません |
 | - [ ] | `installProblemInvalid` | This is not a package name or address that can be installed: {reason} | インストールできるパッケージ名またはアドレスではありません: {reason} |
 | - [ ] | `installProblemInstalled` | This plugin is already installed. To upgrade it, uninstall it and install it again | このプラグインはすでにインストールされています。アップグレードするにはアンインストールしてから再インストールしてください |
 | - [ ] | `installProblemShipped` | This plugin ships with DSH; upgrading DSH updates it | このプラグインは DSH に同梱されています。DSH をアップグレードすると更新されます |
@@ -94,6 +115,14 @@
 | - [ ] | `installProblemUnknown` | The plugin could not be looked up: {reason} | プラグインの情報を取得できませんでした: {reason} |
 | - [ ] | `installingTitle` | Installing the plugin… | プラグインをインストール中… |
 | - [ ] | `installedTitle` | Installed | インストール済み |
+| - [ ] | `statusNotInstalled` | Not installed | 未インストール |
+| - [ ] | `statusMissingFiles` | Package unavailable | パッケージを利用できません |
+| - [ ] | `statusUpdateAvailable` | Update available | 更新があります |
+| - [ ] | `sourceNotInstalled` | Not installed | 未インストール |
+| - [ ] | `sourceTargetSpec` | Source for this DSH | この DSH 向けのソース |
+| - [ ] | `sourceTargetVersion` | Version for this DSH | この DSH 向けのバージョン |
+| - [ ] | `update` | Update | 更新 |
+| - [ ] | `updateLabel` | Update {name} | {name} を更新 |
 | - [ ] | `installFailedTitle` | The plugin could not be installed | プラグインをインストールできませんでした |
 | - [ ] | `installGithubFailedTitle` | Cannot access GitHub | GitHub にアクセスできません |
 | - [ ] | `installGithubTimeoutTitle` | GitHub connection timed out | GitHub への接続がタイムアウトしました |
@@ -150,6 +179,7 @@
 | - [ ] | `installFailureTimeout` | The install timed out | インストールがタイムアウトしました |
 | - [ ] | `installFailurePnpmMissing` | pnpm was not found, so nothing can be installed | pnpm が見つからないため、インストールできません |
 | - [ ] | `installFailureGeneric` | Something went wrong during the install; the details say what | インストール中に問題が発生しました。詳細に原因が表示されます |
+| - [ ] | `terminalCommandLine` | Command line {n} | コマンドライン {n} |
 | - [ ] | `terminalRunning` | Running | 実行中 |
 | - [ ] | `terminalFailed` | Failed | 失敗 |
 | - [ ] | `terminalDone` | Done | 完了 |
@@ -164,8 +194,9 @@
 | - [ ] | `terminalSignal` | signal {signal} | シグナル {signal} |
 | - [ ] | `terminalNoExitCode` | no exit code | 終了コードなし |
 | - [ ] | `installDoneNothing` | Install finished with no new dependency. | インストールが完了しました。新しい依存パッケージはありません。 |
-| - [ ] | `installDoneRestart` | Installed; it loads at the next start. | インストールしました。次回の起動時に読み込まれます。 |
+| - [ ] | `installDoneRestart` | Installed; restart DSH to load it. {reason} | インストールしました。DSH を再起動すると読み込まれます。{reason} |
 | - [ ] | `installDoneApproved` | Install scripts allowed for {names} | {names} のインストールスクリプトを許可しました |
+| - [ ] | `installDoneOtherVersion` | Under pnpm's supply-chain security policy (minimumReleaseAge), versions published more recently than the required age are not installed automatically, so this installation used {installed} instead of the latest version {version}. A newly published version has not completed this waiting period and may contain undetected malicious code or defects. If you need {version}, uninstall the current version and then install {exact} to request that version. | pnpm のサプライチェーン保護（minimumReleaseAge）により、公開から一定期間を経ていないバージョンは自動ではインストールされません。そのため今回のインストールでは、最新版 {version} ではなく {installed} を使用しました。公開されたばかりのバージョンはこの待機期間を終えておらず、検出されていない悪意のあるコードや不具合を含む可能性があります。{version} が必要な場合は、現在のバージョンをアンインストールしてから {exact} を指定してインストールしてください。 |
 | - [ ] | `installApprovalTitle` | Install scripts need permission | インストールスクリプトの許可が必要です |
 | - [ ] | `installApprovalDescription` | These packages have install scripts that pnpm did not run. | 以下のパッケージには、pnpm が実行しなかったインストールスクリプトがあります。 |
 | - [ ] | `installApprovalConsequence` | Once allowed, the scripts run here with your permissions, and the permission is saved in this profile. | 許可すると、スクリプトはこの環境であなたの権限で実行され、許可はこのプロファイルに保存されます。 |
@@ -186,13 +217,14 @@
 | - [ ] | `reasonUnaddressable` | The profile patch cannot address this one uniquely. | プロファイルのパッチではこれを一意に指定できません。 |
 | - [ ] | `reasonUnknownPlugin` | No such plugin. | 該当するプラグインがありません。 |
 | - [ ] | `reasonInvalidSpec` | Enter a valid package name or address. | 有効なパッケージ名またはアドレスを入力してください。 |
+| - [ ] | `reasonAlreadyInstalled` | This package is already installed; uninstall it before installing another version. | このパッケージはすでにインストールされています。別のバージョンを入れる前にアンインストールしてください。 |
 | - [ ] | `reasonAmbiguousInstall` | Which package was installed cannot be told from the dependency change. | 依存関係の変化から、どのパッケージがインストールされたか判断できません。 |
 | - [ ] | `reasonNotBundle` | This package declares no bundle, so it cannot be managed as a plugin. | このパッケージはバンドルを宣言していないため、プラグインとして管理できません。 |
 | - [ ] | `reasonNotRemovable` | This package is not owned by the profile, or plugin management needs it. | このパッケージはプロファイルが所有していないか、プラグイン管理に必要です。 |
 | - [ ] | `reasonStopProfile` | This profile runs without HMR; stop it and uninstall the package with dsh plugin. | このプロファイルは HMR なしで動作しています。停止してから dsh plugin でアンインストールしてください。 |
 | - [ ] | `reasonBundleInUse` | Other configuration still uses this bundle's components; switch them off first. | ほかの設定がこのバンドルのコンポーネントをまだ使用しています。先にそれらを無効にしてください。 |
 | - [ ] | `reasonStaleApproval` | The pending script approvals changed; install again to refresh them. | 許可待ちのインストールスクリプトが変わったため、再インストールして更新してください。 |
-| - [ ] | `reasonIncompatibleVersion` | {plugin} is incompatible with DSH {runtime} (requires {peers}); running it may cause crashes or data loss. | {plugin} は DSH {runtime} と互換性がありません (必要なバージョン: {peers})。実行するとクラッシュやデータ損失が起きる可能性があります。 |
+| - [ ] | `reasonIncompatibleVersion` | {plugin} is incompatible with DSH {runtime} (requires {requirements}); running it may cause crashes or data loss. | {plugin} は DSH {runtime} と互換性がありません（{requirements} が必要）。実行するとクラッシュやデータ損失を起こす可能性があります。 |
 | - [ ] | `reasonIncompatibleVersionUnnamed` | This plugin is incompatible with the running DSH version; running it may cause crashes or data loss. | このプラグインは実行中の DSH のバージョンと互換性がありません。実行するとクラッシュやデータ損失が起きる可能性があります。 |
 | - [ ] | `reasonIncompatibleInstall` | Install a plugin version compatible with this DSH. | この DSH と互換性のあるバージョンのプラグインをインストールしてください。 |
 | - [ ] | `reasonIncompatibleInstalled` | Uninstall it and install a version compatible with this DSH. | アンインストールして、この DSH と互換性のあるバージョンをインストールしてください。 |

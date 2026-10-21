@@ -1,6 +1,6 @@
 # chat — 日本語訳レビュー
 
-訳済み **186 / 186** キー / 要確認 0 件
+訳済み **191 / 191** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -105,6 +105,10 @@
 | - [ ] | `settings.links.newTab` | Default Browser | 既定のブラウザー |
 | - [ ] | `settings.transcript.title` | Work details | 作業の詳細 |
 | - [ ] | `settings.transcript.description` | Choose how much detail to show for tool calls | ツール呼び出しをどこまで詳しく表示するかを選択します |
+| - [ ] | `settings.collapse.title` | When to Collapse Work Details | 作業詳細を折りたたむタイミング |
+| - [ ] | `settings.collapse.description` | Choose when to automatically collapse work details | 作業詳細を自動で折りたたむタイミングを選びます |
+| - [ ] | `settings.collapse.completion` | On completion | 完了時 |
+| - [ ] | `settings.collapse.nextInput` | On next message | 次のメッセージ時 |
 | - [ ] | `settings.transcript.compact` | Compact | コンパクト |
 | - [ ] | `settings.transcript.standard` | Standard | 標準 |
 | - [ ] | `settings.transcript.detailed` | Detailed | 詳細 |
@@ -164,8 +168,9 @@
 | - [ ] | `message.retry.delay` | Retry delay:  | 再試行まで:  |
 | - [ ] | `message.retry.failure` | Failure reason:  | 失敗の理由:  |
 | - [ ] | `message.failure.auth` | API key is invalid | API キーが正しくありません |
-| - [ ] | `message.accountStopped` | Task stopped | タスクを停止しました |
+| - [ ] | `message.taskStopped` | Task stopped | タスクを停止しました |
 | - [ ] | `message.failure.accountSignedOut` | Stopped because you signed out of DeepSeek. | DeepSeek からサインアウトしたため停止しました。 |
+| - [ ] | `message.failure.interrupted` | The DSH process exited before this turn finished (for example, it was killed, crashed, or timed out while shutting down), so the turn was closed when DSH restarted. Unfinished tool calls have unknown outcomes. | DSH プロセスがこのターンの完了前に終了したため（強制終了・クラッシュ・終了時のタイムアウトなど）、DSH の再起動時にこのターンは終了扱いになりました。未完了のツール呼び出しの結果は不明です。 |
 | - [ ] | `message.failure.accountSignInRequired` | Sign in to DeepSeek and ensure the request destination supports account authentication. | DeepSeek にサインインし、リクエスト先がアカウント認証に対応していることを確認してください。 |
 | - [ ] | `message.failure.quota` | Request quota exhausted. | リクエストの上限に達しました。 |
 | - [ ] | `message.turnError` | This turn failed | このターンは失敗しました |

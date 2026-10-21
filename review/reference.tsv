@@ -4,6 +4,10 @@ reference	section.subagents	Subagents	サブエージェント	ok
 reference	section.sessions	Sessions	セッション	ok
 reference	candidate.noCwd	(no cwd)	(作業ディレクトリなし)	ok
 reference	crumb.root	Workspace	ワークスペース	ok
+reference	fileOpen.title	Couldn’t open file	ファイルを開けませんでした	ok
+reference	fileOpen.failed	Couldn’t open “{path}”. Try again or close this message.	「{path}」を開けませんでした。もう一度試すか、このメッセージを閉じてください。	ok
+reference	fileOpen.close	Close	閉じる	ok
+reference	fileOpen.retry	Retry	再試行	ok
 reference	time.now	now	たった今	ok
 reference	time.minutes	{n}min	{n} 分	ok
 reference	time.hours	{n}h	{n} 時間	ok

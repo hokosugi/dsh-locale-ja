@@ -156,7 +156,6 @@
   "details.error": "エラー",
   "details.failure.auth": "API キーが正しくありません",
   "details.retry": "再試行",
-  "details.scheduled": "予約済み",
   "details.retryDelay": "再試行まで",
   "details.result": "結果",
   "details.compacted": "圧縮済み",
@@ -190,5 +189,6 @@
   "layout.toolsRemoved": "削除: {names}",
   "layout.toolsRemovedCount": "{count} 件削除",
   "layout.systemPromptAndToolsUpdated": "システムプロンプトとツールを更新",
-  "layout.compactionInterrupted": "圧縮は完了する前に中断されました。"
+  "layout.compactionInterrupted": "圧縮は完了する前に中断されました。",
+  "details.lastAttemptError": "直近の試行のエラー"
 }
