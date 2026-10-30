@@ -1,0 +1,6 @@
+namespace	key	en	ja	status
+entryCustomization	install	Browse other plugins	ほかのプラグインを探す	ok
+entryCustomization	create	Create your plugin	プラグインを作成	ok
+entryCustomization	createPrompt.sidebar	Create a DSH plugin with a left sidebar entry.	左サイドバーに項目を追加する DSH プラグインを作成します。	ok
+entryCustomization	createPrompt.conversation	Create a DSH conversation view plugin.	会話ビューを追加する DSH プラグインを作成します。	ok
+entryCustomization	createPrompt.rightbar	Create a DSH plugin with a right sidebar entry.	右サイドバーに項目を追加する DSH プラグインを作成します。	ok

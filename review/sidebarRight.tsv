@@ -32,4 +32,5 @@ sidebarRight	dock.drop.right	Add right split	右に分割	ok
 sidebarRight	dock.drop.top	Add top split	上に分割	ok
 sidebarRight	dock.drop.bottom	Add bottom split	下に分割	ok
 sidebarRight	tab.guide.title	Start	スタート	ok
+sidebarRight	tab.guide.more	More tools	その他のツール	ok
 sidebarRight	tab.unavailable	Nothing here can view this kind of content yet.	この種類の内容を表示できるものがまだありません。	ok

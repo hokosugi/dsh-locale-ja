@@ -32,5 +32,6 @@
   "dock.drop.top": "上に分割",
   "dock.drop.bottom": "下に分割",
   "tab.guide.title": "スタート",
-  "tab.unavailable": "この種類の内容を表示できるものがまだありません。"
+  "tab.unavailable": "この種類の内容を表示できるものがまだありません。",
+  "tab.guide.more": "その他のツール"
 }

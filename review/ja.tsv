@@ -68,6 +68,7 @@ conversation	hero.headline	Into the Unknown	未知へ	ok
 conversation	hero.preview	Preview	プレビュー	ok
 conversation	hero.chooseWorkspace	Choose workspace	ワークスペースを選択	ok
 conversation	session.hierarchy	Session hierarchy	セッション階層	ok
+conversation	session.moreViews	More conversation views	その他の会話ビュー	ok
 conversation	todo.title	To-dos	ToDo	ok
 conversation	todo.progress.done	{done} completed	{done} 件完了	ok
 conversation	todo.progress.active	{active} in progress	{active} 件進行中	ok
@@ -2238,6 +2239,7 @@ sidebarRight	dock.drop.right	Add right split	右に分割	ok
 sidebarRight	dock.drop.top	Add top split	上に分割	ok
 sidebarRight	dock.drop.bottom	Add bottom split	下に分割	ok
 sidebarRight	tab.guide.title	Start	スタート	ok
+sidebarRight	tab.guide.more	More tools	その他のツール	ok
 sidebarRight	tab.unavailable	Nothing here can view this kind of content yet.	この種類の内容を表示できるものがまだありません。	ok
 question	error.incomplete	Please complete this question first.	先にこの質問に回答してください。	ok
 question	error.unanswered	Please select an option or enter a custom answer.	選択肢を選ぶか、自由入力で回答してください。	ok
@@ -2724,21 +2726,27 @@ skill	row.stopped	Skill load stopped	スキルの読み込みを停止	ok
 skill	row.instructions	Instructions	指示	ok
 skill	row.inspect	Inspect	呼び出しを確認	ok
 skill	menu.userOnly	user-only	ユーザー専用	ok
-approval	waiting	Waiting for approval	承認待ち	ok
-approval	detail.aria	Approval details	承認の詳細	ok
-approval	escalation	Tool {toolName} requests privileged execution	ツール {toolName} が特権実行を要求しています	ok
-approval	reject	Reject	拒否	ok
-approval	allowOnce	Allow once	1 回だけ許可	ok
-settings.plugins	nav	Built-in plugins	組み込みプラグイン	ok
-settings.plugins	title	Built-in plugins	組み込みプラグイン	ok
-settings.plugins	intro	Inspect the plugins this deployment ships.	この環境に同梱されているプラグインを確認します。	ok
-settings.plugins	tabs	Plugin views	プラグインの表示	ok
-settings.plugins	empty	This deployment exposes no plugin views.	この環境は公開しているプラグイン表示がありません。	ok
 sidebar	session.new	New Session	新しいセッション	ok
 sidebar	session.new.label	New session	新しいセッション	ok
 sidebar	toggle.open	Open sidebar	サイドバーを開く	ok
 sidebar	toggle.collapse	Collapse sidebar	サイドバーを折りたたむ	ok
 sidebar	panels.label	Global panels	グローバルパネル	ok
+sidebar	panels.more	More	その他	ok
+approval	waiting	Waiting for approval	承認待ち	ok
+approval	detail.aria	Approval details	承認の詳細	ok
+approval	escalation	Tool {toolName} requests privileged execution	ツール {toolName} が特権実行を要求しています	ok
+approval	reject	Reject	拒否	ok
+approval	allowOnce	Allow once	1 回だけ許可	ok
+entryCustomization	install	Browse other plugins	ほかのプラグインを探す	ok
+entryCustomization	create	Create your plugin	プラグインを作成	ok
+entryCustomization	createPrompt.sidebar	Create a DSH plugin with a left sidebar entry.	左サイドバーに項目を追加する DSH プラグインを作成します。	ok
+entryCustomization	createPrompt.conversation	Create a DSH conversation view plugin.	会話ビューを追加する DSH プラグインを作成します。	ok
+entryCustomization	createPrompt.rightbar	Create a DSH plugin with a right sidebar entry.	右サイドバーに項目を追加する DSH プラグインを作成します。	ok
+settings.plugins	nav	Built-in plugins	組み込みプラグイン	ok
+settings.plugins	title	Built-in plugins	組み込みプラグイン	ok
+settings.plugins	intro	Inspect the plugins this deployment ships.	この環境に同梱されているプラグインを確認します。	ok
+settings.plugins	tabs	Plugin views	プラグインの表示	ok
+settings.plugins	empty	This deployment exposes no plugin views.	この環境は公開しているプラグイン表示がありません。	ok
 settings.sessionLog	title	Upload Session Log when using the official model API	公式のモデル API を使うときにセッションログをアップロードする	ok
 settings.sessionLog	description	Help improve DeepSeek models and products.	DeepSeek のモデルと製品の改善に役立てます。	ok
 settings.sessionLog	saved	Preference saved	設定を保存しました	ok

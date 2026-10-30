@@ -68,6 +68,7 @@ conversation	hero.headline	Into the Unknown	未知へ	ok
 conversation	hero.preview	Preview	プレビュー	ok
 conversation	hero.chooseWorkspace	Choose workspace	ワークスペースを選択	ok
 conversation	session.hierarchy	Session hierarchy	セッション階層	ok
+conversation	session.moreViews	More conversation views	その他の会話ビュー	ok
 conversation	todo.title	To-dos	ToDo	ok
 conversation	todo.progress.done	{done} completed	{done} 件完了	ok
 conversation	todo.progress.active	{active} in progress	{active} 件進行中	ok

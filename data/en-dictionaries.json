@@ -1,6 +1,6 @@
 {
-  "generatedFrom": "explicit",
-  "packageCount": 51,
+  "generatedFrom": "npx-cache",
+  "packageCount": 52,
   "namespaces": {
     "settings.agentPreset": {
       "zh": {
@@ -639,6 +639,7 @@
         "hero.preview": "预览版",
         "hero.chooseWorkspace": "选择工作区",
         "session.hierarchy": "会话层级",
+        "session.moreViews": "更多会话视图",
         "todo.title": "任务",
         "todo.progress.done": "{done} 已完成",
         "todo.progress.active": "{active} 进行中",
@@ -1014,6 +1015,7 @@
         "hero.preview": "Preview",
         "hero.chooseWorkspace": "Choose workspace",
         "session.hierarchy": "Session hierarchy",
+        "session.moreViews": "More conversation views",
         "todo.title": "To-dos",
         "todo.progress.done": "{done} completed",
         "todo.progress.active": "{active} in progress",
@@ -1592,6 +1594,22 @@
         "browser.loading": "Loading…",
         "browser.truncated": "Too many folders to list; only the beginning is shown.",
         "browser.showHidden": "Show hidden files"
+      }
+    },
+    "entryCustomization": {
+      "en": {
+        "install": "Browse other plugins",
+        "create": "Create your plugin",
+        "createPrompt.sidebar": "Create a DSH plugin with a left sidebar entry.",
+        "createPrompt.conversation": "Create a DSH conversation view plugin.",
+        "createPrompt.rightbar": "Create a DSH plugin with a right sidebar entry."
+      },
+      "zh": {
+        "install": "浏览更多插件",
+        "create": "创建你的插件",
+        "createPrompt.sidebar": "创建一个带左侧栏入口的 DSH 插件。",
+        "createPrompt.conversation": "创建一个 DSH 会话视图插件。",
+        "createPrompt.rightbar": "创建一个带右侧栏入口的 DSH 插件。"
       }
     },
     "goal": {
@@ -4190,14 +4208,16 @@
         "session.new.label": "新建会话",
         "toggle.open": "打开侧边栏",
         "toggle.collapse": "收起侧边栏",
-        "panels.label": "全局面板"
+        "panels.label": "全局面板",
+        "panels.more": "更多"
       },
       "en": {
         "session.new": "New Session",
         "session.new.label": "New session",
         "toggle.open": "Open sidebar",
         "toggle.collapse": "Collapse sidebar",
-        "panels.label": "Global panels"
+        "panels.label": "Global panels",
+        "panels.more": "More"
       }
     },
     "sidebarBrowser": {
@@ -4559,6 +4579,7 @@
         "dock.drop.top": "上分栏",
         "dock.drop.bottom": "下分栏",
         "tab.guide.title": "开始",
+        "tab.guide.more": "更多工具",
         "tab.unavailable": "这类内容还没有可用的查看方式。"
       },
       "en": {
@@ -4595,6 +4616,7 @@
         "dock.drop.top": "Add top split",
         "dock.drop.bottom": "Add bottom split",
         "tab.guide.title": "Start",
+        "tab.guide.more": "More tools",
         "tab.unavailable": "Nothing here can view this kind of content yet."
       }
     },

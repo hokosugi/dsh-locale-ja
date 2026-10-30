@@ -2,8 +2,8 @@
 
 生成物。編集するのは `src/locales/*.ja.json`、または `review/ja.tsv` の `ja` 列。
 
-- 対象: **61 名前空間 / 2760 キー**
-- 訳済み: **2760 / 2760** (100%)
+- 対象: **62 名前空間 / 2768 キー**
+- 訳済み: **2768 / 2768** (100%)
 - 未訳 (英語のまま表示): 0 キー — 訳していない名前空間は英語にフォールバックします
 - 要確認: **0 件**
 
@@ -11,7 +11,7 @@
 
 | 名前空間 | 訳済み / 全体 | 読み物 | 編集用 |
 | --- | --- | --- | --- |
-| conversation | 373 / 373 (100%) | [conversation.md](./conversation.md) | [conversation.tsv](./conversation.tsv) |
+| conversation | 374 / 374 (100%) | [conversation.md](./conversation.md) | [conversation.tsv](./conversation.tsv) |
 | pluginManager | 221 / 221 (100%) | [pluginManager.md](./pluginManager.md) | [pluginManager.tsv](./pluginManager.tsv) |
 | trajectory | 192 / 192 (100%) | [trajectory.md](./trajectory.md) | [trajectory.tsv](./trajectory.tsv) |
 | chat | 191 / 191 (100%) | [chat.md](./chat.md) | [chat.tsv](./chat.tsv) |
@@ -33,7 +33,7 @@
 | job | 40 / 40 (100%) | [job.md](./job.md) | [job.tsv](./job.tsv) |
 | settings.pluginInventory | 37 / 37 (100%) | [settings.pluginInventory.md](./settings.pluginInventory.md) | [settings.pluginInventory.tsv](./settings.pluginInventory.tsv) |
 | settings.subagent | 35 / 35 (100%) | [settings.subagent.md](./settings.subagent.md) | [settings.subagent.tsv](./settings.subagent.tsv) |
-| sidebarRight | 34 / 34 (100%) | [sidebarRight.md](./sidebarRight.md) | [sidebarRight.tsv](./sidebarRight.tsv) |
+| sidebarRight | 35 / 35 (100%) | [sidebarRight.md](./sidebarRight.md) | [sidebarRight.tsv](./sidebarRight.tsv) |
 | question | 31 / 31 (100%) | [question.md](./question.md) | [question.tsv](./question.tsv) |
 | command | 28 / 28 (100%) | [command.md](./command.md) | [command.tsv](./command.tsv) |
 | sidebarTerminal | 28 / 28 (100%) | [sidebarTerminal.md](./sidebarTerminal.md) | [sidebarTerminal.tsv](./sidebarTerminal.tsv) |
@@ -61,9 +61,10 @@
 | session-log-download | 10 / 10 (100%) | [session-log-download.md](./session-log-download.md) | [session-log-download.tsv](./session-log-download.tsv) |
 | slash.menu | 9 / 9 (100%) | [slash.menu.md](./slash.menu.md) | [slash.menu.tsv](./slash.menu.tsv) |
 | skill | 8 / 8 (100%) | [skill.md](./skill.md) | [skill.tsv](./skill.tsv) |
+| sidebar | 6 / 6 (100%) | [sidebar.md](./sidebar.md) | [sidebar.tsv](./sidebar.tsv) |
 | approval | 5 / 5 (100%) | [approval.md](./approval.md) | [approval.tsv](./approval.tsv) |
+| entryCustomization | 5 / 5 (100%) | [entryCustomization.md](./entryCustomization.md) | [entryCustomization.tsv](./entryCustomization.tsv) |
 | settings.plugins | 5 / 5 (100%) | [settings.plugins.md](./settings.plugins.md) | [settings.plugins.tsv](./settings.plugins.tsv) |
-| sidebar | 5 / 5 (100%) | [sidebar.md](./sidebar.md) | [sidebar.tsv](./sidebar.tsv) |
 | settings.sessionLog | 4 / 4 (100%) | [settings.sessionLog.md](./settings.sessionLog.md) | [settings.sessionLog.tsv](./settings.sessionLog.tsv) |
 | documentMarkdown | 4 / 4 (100%) | [documentMarkdown.md](./documentMarkdown.md) | [documentMarkdown.tsv](./documentMarkdown.tsv) |
 | documentHtml | 4 / 4 (100%) | [documentHtml.md](./documentHtml.md) | [documentHtml.tsv](./documentHtml.tsv) |

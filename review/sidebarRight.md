@@ -1,6 +1,6 @@
 # sidebarRight — 日本語訳レビュー
 
-訳済み **34 / 34** キー / 要確認 0 件
+訳済み **35 / 35** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -41,6 +41,7 @@
 | - [ ] | `dock.drop.top` | Add top split | 上に分割 |
 | - [ ] | `dock.drop.bottom` | Add bottom split | 下に分割 |
 | - [ ] | `tab.guide.title` | Start | スタート |
+| - [ ] | `tab.guide.more` | More tools | その他のツール |
 | - [ ] | `tab.unavailable` | Nothing here can view this kind of content yet. | この種類の内容を表示できるものがまだありません。 |
 
 確認列: `- [ ]` は未確認、`- [!]` は要確認。レンダラーによってはチェックボックスとして表示されます。

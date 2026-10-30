@@ -371,5 +371,6 @@
   "row.commandArguments": "コマンドの引数",
   "row.imageSize": "{width}x{height}px、{bytes} バイト",
   "row.imageSizeDownscaled": "{width}x{height}px（元 {originalWidth}x{originalHeight}px から縮小）、{bytes} バイト",
-  "terminal.commandLine": "コマンドライン {n}"
+  "terminal.commandLine": "コマンドライン {n}",
+  "session.moreViews": "その他の会話ビュー"
 }

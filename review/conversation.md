@@ -1,6 +1,6 @@
 # conversation — 日本語訳レビュー
 
-訳済み **373 / 373** キー / 要確認 0 件
+訳済み **374 / 374** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -77,6 +77,7 @@
 | - [ ] | `hero.preview` | Preview | プレビュー |
 | - [ ] | `hero.chooseWorkspace` | Choose workspace | ワークスペースを選択 |
 | - [ ] | `session.hierarchy` | Session hierarchy | セッション階層 |
+| - [ ] | `session.moreViews` | More conversation views | その他の会話ビュー |
 | - [ ] | `todo.title` | To-dos | ToDo |
 | - [ ] | `todo.progress.done` | {done} completed | {done} 件完了 |
 | - [ ] | `todo.progress.active` | {active} in progress | {active} 件進行中 |
