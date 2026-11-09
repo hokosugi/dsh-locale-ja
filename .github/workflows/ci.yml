@@ -22,8 +22,10 @@ jobs:
         with:
           node-version: 24
 
-      - name: Install DSH (実物ランタイム検証のため)
-        run: npm install -g @deepseek-ai/dsh
+      - name: Install DSH into the project (実物ランタイム検証のため)
+        # グローバルインストール (-g) は依存がネストしてクライアントバンドルが見えないため、
+        # プロジェクト内に入れる (drift ワークフローと同じ理由)
+        run: npm install --no-save --no-package-lock @deepseek-ai/dsh
 
       - name: Scan for personal data and secrets
         run: npm run scan
