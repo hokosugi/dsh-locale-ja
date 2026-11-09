@@ -108,16 +108,30 @@ function listFiles(includeIgnored) {
 }
 
 /**
+ * CI のランナーが使う汎用的なユーザー名。個人を特定できないため語にしない
+ * (例: GitHub Actions の "runner" が cordis-host-runner のようなコード上の語に誤って当たる)。
+ */
+const GENERIC_NAMES = new Set([
+  'runner', 'root', 'admin', 'user', 'ubuntu', 'node', 'ci', 'github', 'actions',
+  'vscode', 'codespace', 'build', 'builder', 'docker', 'jenkins', 'agent',
+])
+
+/**
  * 走査する語 (実行環境から作る + .personal-terms)。
- * @returns {string[]} 4 文字以上の語。
+ * @returns {string[]} 4 文字以上で、汎用的でない語。
  */
 function machineTerms() {
   const terms = new Set()
   const add = (value) => {
-    if (typeof value === 'string' && value.length >= 4) terms.add(value)
+    if (typeof value !== 'string' || value.length < 4) return
+    if (GENERIC_NAMES.has(value.toLowerCase())) return
+    terms.add(value)
   }
-  add(userInfo().username)
-  add(basename(homedir()))
+  // CI 上の実行ユーザーは作者本人ではないので、ユーザー名とホーム名は語にしない
+  if (!process.env.CI) {
+    add(userInfo().username)
+    add(basename(homedir()))
+  }
   const file = join(root, '.personal-terms')
   if (existsSync(file)) {
     for (const line of readFileSync(file, 'utf8').split('\n')) {
