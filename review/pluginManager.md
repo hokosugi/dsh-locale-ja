@@ -1,6 +1,6 @@
 # pluginManager — 日本語訳レビュー
 
-訳済み **221 / 221** キー / 要確認 0 件
+訳済み **291 / 291** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -42,8 +42,6 @@
 | - [ ] | `statusBeta` | Experimental | 実験的 |
 | - [ ] | `reasonLabel` | Reason | 理由 |
 | - [ ] | `metadataError` | Package metadata error: {error} | パッケージメタデータのエラー: {error} |
-| - [ ] | `previewAlt` | {name} feature preview | {name} の機能プレビュー |
-| - [ ] | `previewUnavailable` | Could not display feature preview | 機能プレビューを表示できませんでした |
 | - [ ] | `versionTag` | v{version} | v{version} |
 | - [ ] | `partsLabel` | Components | コンポーネント |
 | - [ ] | `sourceTitle` | Source | ソース |
@@ -65,6 +63,7 @@
 | - [ ] | `rowPhaseFailed` | Problem | 問題 |
 | - [ ] | `rowPhaseUnloading` | Unloading | アンロード中 |
 | - [ ] | `enableToggle` | Enable {name} | {name} を有効にする |
+| - [ ] | `applyingChange` | Applying changes to {name} | {name} に変更を適用中 |
 | - [ ] | `openDetail` | View {name} | {name} を表示 |
 | - [ ] | `backToList` | Back to plugins | プラグイン一覧に戻る |
 | - [ ] | `crumbRoot` | Plugins | プラグイン |
@@ -88,7 +87,7 @@
 | - [ ] | `installGuideFill` | Use example | 例を入力 |
 | - [ ] | `installGuideFillAria` | Use the example {example} | 例 {example} を入力 |
 | - [ ] | `installGuideSafety` | Install only plugins you trust: they run with your permissions and can damage DeepSeek Harness or leak your data. | 信頼できるプラグインだけをインストールしてください。プラグインはあなたの権限で動作し、DeepSeek Harness を壊したり、データを外部に漏らしたりする可能性があります。 |
-| - [ ] | `installUpgradeNotice` | On-demand Official plugins offer Update when their version differs from DSH. To update other plugins, uninstall and reinstall them. | オンデマンドの公式プラグインは、DSH のバージョンと異なるときに「更新」が表示されます。ほかのプラグインを更新するには、アンインストールしてから入れ直してください。 |
+| - [ ] | `installUpgradeNotice` | On-demand official plugins offer Update when their version differs from DSH. To update other plugins, uninstall and reinstall them. | オンデマンドの公式プラグインは、DSH のバージョンと異なるときに「更新」が表示されます。ほかのプラグインを更新するには、アンインストールしてから入れ直してください。 |
 | - [ ] | `registryToggle` | Registry | レジストリ |
 | - [ ] | `registryLegend` | The npm registry the plugin is downloaded from | プラグインのダウンロード元になる npm レジストリ |
 | - [ ] | `registryDefault` | Default registry | 既定のレジストリ |
@@ -107,6 +106,8 @@
 | - [ ] | `installProblemInvalid` | This is not a package name or address that can be installed: {reason} | インストールできるパッケージ名またはアドレスではありません: {reason} |
 | - [ ] | `installProblemInstalled` | This plugin is already installed. To upgrade it, uninstall it and install it again | このプラグインはすでにインストールされています。アップグレードするにはアンインストールしてから再インストールしてください |
 | - [ ] | `installProblemShipped` | This plugin ships with DSH; upgrading DSH updates it | このプラグインは DSH に同梱されています。DSH をアップグレードすると更新されます |
+| - [ ] | `installBundledTitle` | This plugin ships with DSH | このプラグインは DSH に同梱されています |
+| - [ ] | `installBundledDescription` | Enable it without downloading another copy | 別のコピーをダウンロードせずに有効にできます |
 | - [ ] | `installProblemNotFound` | No such plugin was found | 該当するプラグインが見つかりません |
 | - [ ] | `installProblemNotPackage` | The path does not exist or is not a valid plugin package | そのパスが存在しないか、有効なプラグインパッケージではありません |
 | - [ ] | `installProblemNotBundle` | This package declares no bundle, so it cannot be installed as a plugin: {reason} | このパッケージはバンドルを宣言していないため、プラグインとしてインストールできません: {reason} |
@@ -123,6 +124,64 @@
 | - [ ] | `sourceTargetVersion` | Version for this DSH | この DSH 向けのバージョン |
 | - [ ] | `update` | Update | 更新 |
 | - [ ] | `updateLabel` | Update {name} | {name} を更新 |
+| - [ ] | `versionsTitle` | Versions | バージョン |
+| - [ ] | `versionsRecheck` | Check again | もう一度確認 |
+| - [ ] | `versionsChecking` | Checking for updates | 更新を確認中 |
+| - [ ] | `versionsAvailable` | Update to {version} available | {version} への更新があります |
+| - [ ] | `versionsPublished` | Published {date} | 公開日 {date} |
+| - [ ] | `versionsLatest` | Up to date | 最新です |
+| - [ ] | `versionsCheckedAt` | Last checked at {time} | 最終確認 {time} |
+| - [ ] | `versionsBlocked` | Newer versions need a DSH update | 新しいバージョンには DSH の更新が必要です |
+| - [ ] | `versionsBlockedDetail` | {version} needs {peers}; this DSH is {runtime} | {version} には {peers} が必要です。この DSH は {runtime} です |
+| - [ ] | `versionsNoneInstallable` | No newer version to install directly | 直接インストールできる新しいバージョンはありません |
+| - [ ] | `versionsNoneInstallableDetail` | The newer versions are deprecated, prereleases, or declare no bundle. Expand to see them | 新しいバージョンは非推奨・プレリリース・またはバンドル未宣言のいずれかです。展開すると表示されます |
+| - [ ] | `versionsFailedNetwork` | Could not reach the registry | レジストリに接続できませんでした |
+| - [ ] | `versionsFailedOther` | Could not check for updates | 更新を確認できませんでした |
+| - [ ] | `versionsDetails` | Details | 詳細 |
+| - [ ] | `versionsNewerCount` | {count} newer | 新しいバージョン {count} 件 |
+| - [ ] | `versionsCollapse` | Collapse | 折りたたむ |
+| - [ ] | `versionsInstalledTag` | Installed | インストール済み |
+| - [ ] | `versionsPrereleaseTag` | Prerelease | プレリリース |
+| - [ ] | `versionsDeprecatedTag` | Deprecated | 非推奨 |
+| - [ ] | `versionsNeedsDsh` | Needs {peers} | {peers} が必要 |
+| - [ ] | `versionsNotBundle` | This version declares no bundle and cannot be installed | このバージョンはバンドルを宣言していないためインストールできません |
+| - [ ] | `versionsUpdateLabel` | Update to {version} | {version} に更新 |
+| - [ ] | `versionsRegistry` | Registry | レジストリ |
+| - [ ] | `versionsCheckedAtLabel` | Checked at | 確認日時 |
+| - [ ] | `versionsFallbackTag` | Fallback | フォールバック |
+| - [ ] | `versionsFallbackHint` | {registry} could not be reached; the list comes from a fallback registry | {registry} に接続できなかったため、フォールバックのレジストリから取得した一覧です |
+| - [ ] | `versionsPrimaryTag` | First | 先頭 |
+| - [ ] | `versionsShowPrerelease` | Show prereleases | プレリリースを表示 |
+| - [ ] | `versionsOmitted` | {count} more versions newer than the installed one are not listed | インストール済みより新しいバージョンが {count} 件あります（未表示） |
+| - [ ] | `versionsProblemNetwork` | Unreachable | 接続不可 |
+| - [ ] | `versionsProblemNotFound` | Not found | 見つかりません |
+| - [ ] | `versionsProblemUnknown` | Failed | 失敗 |
+| - [ ] | `updatesAvailable` | Updates available: {count} | 更新があります: {count} |
+| - [ ] | `updatesNone` | All plugins are up to date | すべてのプラグインが最新です |
+| - [ ] | `updatesFailed` | Some plugins could not be checked | 一部のプラグインを確認できませんでした |
+| - [ ] | `updateTitle` | Update {name} | {name} を更新 |
+| - [ ] | `updateSource` | Install from | インストール元 |
+| - [ ] | `updateDescription` | The update replaces {from} with {to}; the plugin may stop briefly. If the installation fails, {from} is kept or installed again. | 更新は {from} を {to} に置き換えます。プラグインは一時的に停止する場合があります。インストールに失敗した場合は {from} を保持するか、入れ直します。 |
+| - [ ] | `updateRunning` | Updating | 更新中 |
+| - [ ] | `updateStepChecking` | Check {version} | {version} を確認 |
+| - [ ] | `updateStepRemoving` | Stop and remove {version} | {version} を停止して削除 |
+| - [ ] | `updateStepInstalling` | Install {version} from {registry} | {registry} から {version} をインストール |
+| - [ ] | `updateStepRestoring` | Install {version} again | {version} を入れ直す |
+| - [ ] | `updateDone` | Updated to {version} | {version} に更新しました |
+| - [ ] | `updateDoneDetail` | The new version is running. | 新しいバージョンが動作しています。 |
+| - [ ] | `updateRestart` | {version} installed; it takes effect after a restart | {version} をインストールしました。再起動後に反映されます |
+| - [ ] | `updateRefused` | Cannot update to {version} | {version} に更新できません |
+| - [ ] | `updateRemoveFailed` | Could not remove {version} | {version} を削除できませんでした |
+| - [ ] | `updateRestored` | Update failed; restored {version} | 更新に失敗したため、{version} を復元しました |
+| - [ ] | `updateRestoredDetail` | {to} failed to install; {from} was installed again. | {to} のインストールに失敗したため、{from} を入れ直しました。 |
+| - [ ] | `updateKept` | Could not update to {version} | {version} に更新できませんでした |
+| - [ ] | `updateKeptDetail` | {from} was not removed and stays in use. {reason} | {from} は削除されず、そのまま使われます。{reason} |
+| - [ ] | `updateBroken` | Update failed; the plugin is not installed | 更新に失敗し、プラグインはインストールされていません |
+| - [ ] | `updateBrokenDetail` | {to} failed to install, and installing {from} again failed too. Install {name} again from Add plugin. | {to} のインストールに失敗し、{from} の再インストールにも失敗しました。プラグインを追加から {name} を入れ直してください。 |
+| - [ ] | `updateLost` | The update result is unknown | 更新の結果が不明です |
+| - [ ] | `updateLostDetail` | The connection to DSH was interrupted: {reason}. Refresh the plugin list to see the installed version. | DSH との接続が中断されました: {reason}。プラグイン一覧を更新してインストール済みのバージョンを確認してください。 |
+| - [ ] | `updateOutput` | Show installation output | インストールの出力を表示 |
+| - [ ] | `updateFinish` | Done | 完了 |
 | - [ ] | `installFailedTitle` | The plugin could not be installed | プラグインをインストールできませんでした |
 | - [ ] | `installGithubFailedTitle` | Cannot access GitHub | GitHub にアクセスできません |
 | - [ ] | `installGithubTimeoutTitle` | GitHub connection timed out | GitHub への接続がタイムアウトしました |
@@ -157,11 +216,13 @@
 | - [ ] | `installEnableNow` | Enable now | 今すぐ有効にする |
 | - [ ] | `installDetailsShow` | Show install details | インストールの詳細を表示 |
 | - [ ] | `installDetailsHide` | Hide install details | インストールの詳細を隠す |
+| - [ ] | `installDetailsNoOutput` | No terminal output from this install reached the details | このインストールの端末出力は詳細に届いていません |
 | - [ ] | `installVersion` | Version {version} | バージョン {version} |
 | - [ ] | `installSubjectPath` | Local directory | ローカルディレクトリ |
 | - [ ] | `installSubjectGit` | Git repository | Git リポジトリ |
 | - [ ] | `installSubjectTarball` | Tarball | tarball |
 | - [ ] | `installLocation` | Installs into {dir} | {dir} にインストールされます |
+| - [ ] | `installLogPath` | Full log: {path} | 完全なログ: {path} |
 | - [ ] | `installRetry` | Retry | 再試行 |
 | - [ ] | `installChangeRegistry` | Change registry | レジストリを変更 |
 | - [ ] | `installAttempt` | {previous} could not serve the package; retrying through {registry} (registry {index} of {total}) | {previous} からパッケージを取得できなかったため、{registry} で再試行します ({total} 件中 {index} 件目のレジストリ) |
@@ -178,7 +239,8 @@
 | - [ ] | `installFailureIntegrity` | The downloaded package failed its integrity check | ダウンロードしたパッケージの整合性チェックに失敗しました |
 | - [ ] | `installFailureTimeout` | The install timed out | インストールがタイムアウトしました |
 | - [ ] | `installFailurePnpmMissing` | pnpm was not found, so nothing can be installed | pnpm が見つからないため、インストールできません |
-| - [ ] | `installFailureGeneric` | Something went wrong during the install; the details say what | インストール中に問題が発生しました。詳細に原因が表示されます |
+| - [ ] | `installFailureGeneric` | The install command failed; the details say why | インストールコマンドが失敗しました。詳細に理由があります |
+| - [ ] | `installFailedEnabling` | The install finished; enabling the plugin is what failed | インストールは完了しました。失敗したのはプラグインの有効化です |
 | - [ ] | `terminalCommandLine` | Command line {n} | コマンドライン {n} |
 | - [ ] | `terminalRunning` | Running | 実行中 |
 | - [ ] | `terminalFailed` | Failed | 失敗 |
@@ -226,8 +288,16 @@
 | - [ ] | `reasonStaleApproval` | The pending script approvals changed; install again to refresh them. | 許可待ちのインストールスクリプトが変わったため、再インストールして更新してください。 |
 | - [ ] | `reasonIncompatibleVersion` | {plugin} is incompatible with DSH {runtime} (requires {requirements}); running it may cause crashes or data loss. | {plugin} は DSH {runtime} と互換性がありません（{requirements} が必要）。実行するとクラッシュやデータ損失を起こす可能性があります。 |
 | - [ ] | `reasonIncompatibleVersionUnnamed` | This plugin is incompatible with the running DSH version; running it may cause crashes or data loss. | このプラグインは実行中の DSH のバージョンと互換性がありません。実行するとクラッシュやデータ損失が起きる可能性があります。 |
+| - [ ] | `reasonUnsupportedPlatform` | This plugin does not support the operating system running DSH. | このプラグインは DSH が動作している OS に対応していません。 |
 | - [ ] | `reasonIncompatibleInstall` | Install a plugin version compatible with this DSH. | この DSH と互換性のあるバージョンのプラグインをインストールしてください。 |
 | - [ ] | `reasonIncompatibleInstalled` | Uninstall it and install a version compatible with this DSH. | アンインストールして、この DSH と互換性のあるバージョンをインストールしてください。 |
 | - [ ] | `reasonOperationError` | The Host reported an error. | ホストがエラーを報告しました。 |
+| - [ ] | `detailTitle` | Details | 詳細 |
+| - [ ] | `detailLoading` | Reading details | 詳細を読み込み中 |
+| - [ ] | `detailTooLarge` | The details exceed the size limit and were not loaded. | 詳細がサイズ上限を超えているため、読み込みませんでした。 |
+| - [ ] | `detailNetwork` | Could not reach the source of the details. | 詳細の取得元に接続できませんでした。 |
+| - [ ] | `detailInvalid` | The plugin declares an invalid details file. | プラグインが宣言している詳細ファイルが正しくありません。 |
+| - [ ] | `detailFailed` | Could not read the details. | 詳細を読み込めませんでした。 |
+| - [ ] | `detailFootnotes` | Footnotes | 脚注 |
 
 確認列: `- [ ]` は未確認、`- [!]` は要確認。レンダラーによってはチェックボックスとして表示されます。

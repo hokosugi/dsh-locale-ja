@@ -1,0 +1,13 @@
+namespace	key	en	ja	status
+fileActions	menu.finder	Show in Finder	Finder で表示	ok
+fileActions	menu.reveal	Show in folder	フォルダーで表示	ok
+fileActions	menu.saveAs	Save as…	名前を付けて保存…	ok
+fileActions	menu.copied	Copied	コピーしました	ok
+fileActions	menu.copyImage	Copy image	画像をコピー	ok
+fileActions	menu.download	Download	ダウンロード	ok
+fileActions	menu.saveFailed	Could not save. Check the source and destination, then retry.	保存できませんでした。保存元と保存先を確認して、再試行してください。	ok
+fileActions	menu.copyFailed	Could not copy. Check that the content is available, then retry.	コピーできませんでした。内容が利用できるか確認して、再試行してください。	ok
+fileActions	menu.saved	Saved	保存しました	ok
+fileActions	menu.downloadStarted	Download started	ダウンロードを開始しました	ok
+fileActions	menu.downloaded	Download complete	ダウンロードが完了しました	ok
+fileActions	path.revealError	Could not show the file location. Try again.	ファイルの場所を表示できませんでした。もう一度お試しください。	ok

@@ -33,5 +33,8 @@
   "dock.drop.bottom": "下に分割",
   "tab.guide.title": "スタート",
   "tab.unavailable": "この種類の内容を表示できるものがまだありません。",
-  "tab.guide.more": "その他のツール"
+  "tab.guide.more": "その他のツール",
+  "menu.close": "閉じる",
+  "menu.closeOthers": "ほかのタブを閉じる",
+  "menu.closeRight": "右側のタブを閉じる"
 }

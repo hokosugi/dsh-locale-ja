@@ -1,6 +1,6 @@
 # trajectory — 日本語訳レビュー
 
-訳済み **192 / 192** キー / 要確認 0 件
+訳済み **199 / 199** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -20,6 +20,9 @@
 | - [ ] | `toolbar.calls` | Calls | 呼び出し |
 | - [ ] | `toolbar.expandCalls` | Expand calls | 呼び出しを展開 |
 | - [ ] | `toolbar.collapseCalls` | Collapse calls | 呼び出しを折りたたむ |
+| - [ ] | `toolbar.subCalls` | Subcalls | サブ呼び出し |
+| - [ ] | `toolbar.expandSubCalls` | Expand subcalls | サブ呼び出しを展開 |
+| - [ ] | `toolbar.collapseSubCalls` | Collapse subcalls | サブ呼び出しを折りたたむ |
 | - [ ] | `toolbar.search` | Search trajectory | 軌跡を検索 |
 | - [ ] | `toolbar.searchPlaceholder` | Search | 検索 |
 | - [ ] | `kind.system` | SYSTEM | システム |
@@ -111,6 +114,9 @@
 | - [ ] | `record.schemaUnavailable` | Schema unavailable | スキーマはありません |
 | - [ ] | `record.parameters` | Parameters | パラメーター |
 | - [ ] | `record.resultJson` | Result JSON | 結果の JSON |
+| - [ ] | `record.rawResult` | Raw result | 生の結果 |
+| - [ ] | `record.renderedResult` | Rendered result | 整形された結果 |
+| - [ ] | `record.rawResultUnavailable` | Raw results are only available for live tool calls | 生の結果は実行中のツール呼び出しでのみ利用できます |
 | - [ ] | `record.json` | JSON | JSON |
 | - [ ] | `record.parametersJson` | parameters JSON | parameters の JSON |
 | - [ ] | `record.namedParametersJson` | {name} parameters JSON | {name} の parameters JSON |
@@ -144,6 +150,7 @@
 | - [ ] | `request.collapsedSummary` | Collapsed {kind} summary, {summary} | 折りたたまれた {kind} の要約、{summary} |
 | - [ ] | `request.collapsedTurn` | turn | ターン |
 | - [ ] | `request.collapsedAssistant` | assistant | アシスタント |
+| - [ ] | `request.collapsedTool` | subcalls | サブ呼び出し |
 | - [ ] | `request.rowAria` | {request}{kind}, {content} | {request}{kind}、{content} |
 | - [ ] | `request.rowPrefix` | Request {request},  | リクエスト {request}、 |
 | - [ ] | `request.rowAriaCompaction` | Request {request}, compaction | リクエスト {request}、圧縮 |

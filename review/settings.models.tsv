@@ -81,6 +81,8 @@ settings.models	modelReasoningRemove	Delete level	レベルを削除	ok
 settings.models	modelReasoningOffValuePlaceholder	Turns reasoning off	推論をオフにします	ok
 settings.models	addModel	Add model	モデルを追加	ok
 settings.models	removeModel	Delete model	モデルを削除	ok
+settings.models	reorderModel	Reorder model	モデルを並べ替え	ok
+settings.models	reorderModelHelp	Drag to reorder, or use the up and down arrow keys.	ドラッグするか、上下の矢印キーで並べ替えます。	ok
 settings.models	modelsEmpty	No models will be shown in the selector. Unlisted IDs can still be sent directly.	モデル選択には何も表示されません。一覧にない ID も直接送信できます。	ok
 settings.models	keyBlank	Enter the API key, or leave the field empty to keep the stored one.	API キーを入力してください。空欄のままにすると保存済みのキーを維持します。	ok
 settings.models	keyBlankNew	Enter the API key, or leave the field empty if this provider authenticates another way.	API キーを入力してください。このプロバイダーが別の方法で認証する場合は空欄のままにできます。	ok
@@ -97,13 +99,14 @@ settings.models	fetchModels	Fetch available models	利用可能なモデルを�
 settings.models	fetching	Asking the provider…	プロバイダーに問い合わせています…	ok
 settings.models	fetchNeedsBaseUrl	Enter the base URL first, then fetch.	先にベース URL を入力してから取得してください。	ok
 settings.models	fetchEmpty	The provider listed no models. Add them by hand.	プロバイダーはモデルを 1 つも公開していません。手動で追加してください。	ok
-settings.models	fetchTitle	Choose models to add	追加するモデルを選択	ok
-settings.models	fetchDescription	These are the models this provider has available. Choose the ones to add.	このプロバイダーで利用可能なモデルです。追加するものを選んでください。	ok
+settings.models	fetchTitle	Choose models	モデルを選択	ok
+settings.models	fetchDescription	These are the models this provider has available. Checked models make up the list.	このプロバイダーが利用できるモデルです。チェックしたモデルが一覧になります。	ok
 settings.models	fetchSearch	Search models	モデルを検索	ok
 settings.models	fetchNoMatches	No matching models.	一致するモデルがありません。	ok
 settings.models	fetchSelectAll	Select all	すべて選択	ok
 settings.models	fetchDeselectAll	Deselect all	選択を解除	ok
-settings.models	fetchAdopt	Add selected	選択したものを追加	ok
+settings.models	fetchAdopt	Update list	一覧を更新	ok
+settings.models	fetchKeepOne	Keep at least one model checked.	少なくとも 1 つのモデルを選択したままにしてください。	ok
 settings.models	customTag	Custom	カスタム	ok
 settings.models	customRoute	Provider ID	プロバイダー ID	ok
 settings.models	customRouteHint	Lowercase identifier, starting with a letter, that uniquely names this provider in requests and as its credential name.	英小文字で始まる識別子です。リクエスト内でこのプロバイダーを一意に示し、認証情報の名前の元にもなります。	ok

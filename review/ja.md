@@ -2,8 +2,8 @@
 
 生成物。編集するのは `src/locales/*.ja.json`、または `review/ja.tsv` の `ja` 列。
 
-- 対象: **62 名前空間 / 2768 キー**
-- 訳済み: **2768 / 2768** (100%)
+- 対象: **66 名前空間 / 3111 キー**
+- 訳済み: **3111 / 3111** (100%)
 - 未訳 (英語のまま表示): 0 キー — 訳していない名前空間は英語にフォールバックします
 - 要確認: **0 件**
 
@@ -11,29 +11,30 @@
 
 | 名前空間 | 訳済み / 全体 | 読み物 | 編集用 |
 | --- | --- | --- | --- |
-| conversation | 374 / 374 (100%) | [conversation.md](./conversation.md) | [conversation.tsv](./conversation.tsv) |
-| pluginManager | 221 / 221 (100%) | [pluginManager.md](./pluginManager.md) | [pluginManager.tsv](./pluginManager.tsv) |
-| trajectory | 192 / 192 (100%) | [trajectory.md](./trajectory.md) | [trajectory.tsv](./trajectory.tsv) |
-| chat | 191 / 191 (100%) | [chat.md](./chat.md) | [chat.tsv](./chat.tsv) |
-| schedule.manager | 188 / 188 (100%) | [schedule.manager.md](./schedule.manager.md) | [schedule.manager.tsv](./schedule.manager.tsv) |
-| settings.models | 134 / 134 (100%) | [settings.models.md](./settings.models.md) | [settings.models.tsv](./settings.models.tsv) |
+| conversation | 383 / 383 (100%) | [conversation.md](./conversation.md) | [conversation.tsv](./conversation.tsv) |
+| pluginManager | 291 / 291 (100%) | [pluginManager.md](./pluginManager.md) | [pluginManager.tsv](./pluginManager.tsv) |
+| liveshare | 225 / 225 (100%) | [liveshare.md](./liveshare.md) | [liveshare.tsv](./liveshare.tsv) |
+| schedule.manager | 215 / 215 (100%) | [schedule.manager.md](./schedule.manager.md) | [schedule.manager.tsv](./schedule.manager.tsv) |
+| trajectory | 199 / 199 (100%) | [trajectory.md](./trajectory.md) | [trajectory.tsv](./trajectory.tsv) |
+| stats | 177 / 177 (100%) | [stats.md](./stats.md) | [stats.tsv](./stats.tsv) |
+| settings.models | 137 / 137 (100%) | [settings.models.md](./settings.models.md) | [settings.models.tsv](./settings.models.tsv) |
 | workspace | 119 / 119 (100%) | [workspace.md](./workspace.md) | [workspace.tsv](./workspace.tsv) |
-| settings.account | 94 / 94 (100%) | [settings.account.md](./settings.account.md) | [settings.account.tsv](./settings.account.tsv) |
-| pluginMarket | 78 / 78 (100%) | [pluginMarket.md](./pluginMarket.md) | [pluginMarket.tsv](./pluginMarket.tsv) |
-| schedule.catalog | 70 / 70 (100%) | [schedule.catalog.md](./schedule.catalog.md) | [schedule.catalog.tsv](./schedule.catalog.tsv) |
-| deliverables | 60 / 60 (100%) | [deliverables.md](./deliverables.md) | [deliverables.tsv](./deliverables.tsv) |
+| pluginMarket | 87 / 87 (100%) | [pluginMarket.md](./pluginMarket.md) | [pluginMarket.tsv](./pluginMarket.tsv) |
+| schedule.catalog | 76 / 76 (100%) | [schedule.catalog.md](./schedule.catalog.md) | [schedule.catalog.tsv](./schedule.catalog.tsv) |
+| open-in-app | 58 / 58 (100%) | [open-in-app.md](./open-in-app.md) | [open-in-app.tsv](./open-in-app.tsv) |
+| deliverables | 57 / 57 (100%) | [deliverables.md](./deliverables.md) | [deliverables.tsv](./deliverables.tsv) |
 | shortcuts | 56 / 56 (100%) | [shortcuts.md](./shortcuts.md) | [shortcuts.tsv](./shortcuts.tsv) |
+| creationRecommendations | 55 / 55 (100%) | [creationRecommendations.md](./creationRecommendations.md) | [creationRecommendations.tsv](./creationRecommendations.tsv) |
 | session-inspector | 52 / 52 (100%) | [session-inspector.md](./session-inspector.md) | [session-inspector.tsv](./session-inspector.tsv) |
 | cordis | 51 / 51 (100%) | [cordis.md](./cordis.md) | [cordis.tsv](./cordis.tsv) |
 | settings.agentPreset | 47 / 47 (100%) | [settings.agentPreset.md](./settings.agentPreset.md) | [settings.agentPreset.tsv](./settings.agentPreset.tsv) |
-| open-in-app | 45 / 45 (100%) | [open-in-app.md](./open-in-app.md) | [open-in-app.tsv](./open-in-app.tsv) |
-| settings | 41 / 41 (100%) | [settings.md](./settings.md) | [settings.tsv](./settings.tsv) |
-| subagent | 41 / 41 (100%) | [subagent.md](./subagent.md) | [subagent.tsv](./subagent.tsv) |
+| settings | 42 / 42 (100%) | [settings.md](./settings.md) | [settings.tsv](./settings.tsv) |
+| subagent | 42 / 42 (100%) | [subagent.md](./subagent.md) | [subagent.tsv](./subagent.tsv) |
 | common | 41 / 41 (100%) | [common.md](./common.md) | [common.tsv](./common.tsv) |
 | job | 40 / 40 (100%) | [job.md](./job.md) | [job.tsv](./job.tsv) |
+| sidebarRight | 38 / 38 (100%) | [sidebarRight.md](./sidebarRight.md) | [sidebarRight.tsv](./sidebarRight.tsv) |
 | settings.pluginInventory | 37 / 37 (100%) | [settings.pluginInventory.md](./settings.pluginInventory.md) | [settings.pluginInventory.tsv](./settings.pluginInventory.tsv) |
 | settings.subagent | 35 / 35 (100%) | [settings.subagent.md](./settings.subagent.md) | [settings.subagent.tsv](./settings.subagent.tsv) |
-| sidebarRight | 35 / 35 (100%) | [sidebarRight.md](./sidebarRight.md) | [sidebarRight.tsv](./sidebarRight.tsv) |
 | question | 31 / 31 (100%) | [question.md](./question.md) | [question.tsv](./question.tsv) |
 | command | 28 / 28 (100%) | [command.md](./command.md) | [command.tsv](./command.tsv) |
 | sidebarTerminal | 28 / 28 (100%) | [sidebarTerminal.md](./sidebarTerminal.md) | [sidebarTerminal.tsv](./sidebarTerminal.tsv) |
@@ -43,26 +44,27 @@
 | agent-team | 25 / 25 (100%) | [agent-team.md](./agent-team.md) | [agent-team.tsv](./agent-team.tsv) |
 | model | 23 / 23 (100%) | [model.md](./model.md) | [model.tsv](./model.tsv) |
 | sidebarDocumentPreview | 22 / 22 (100%) | [sidebarDocumentPreview.md](./sidebarDocumentPreview.md) | [sidebarDocumentPreview.tsv](./sidebarDocumentPreview.tsv) |
+| sidebarFiles | 21 / 21 (100%) | [sidebarFiles.md](./sidebarFiles.md) | [sidebarFiles.tsv](./sidebarFiles.tsv) |
 | feedback | 20 / 20 (100%) | [feedback.md](./feedback.md) | [feedback.tsv](./feedback.tsv) |
 | workflowRun | 18 / 18 (100%) | [workflowRun.md](./workflowRun.md) | [workflowRun.tsv](./workflowRun.tsv) |
 | permission.access | 17 / 17 (100%) | [permission.access.md](./permission.access.md) | [permission.access.tsv](./permission.access.tsv) |
-| plan | 17 / 17 (100%) | [plan.md](./plan.md) | [plan.tsv](./plan.tsv) |
-| sidebarFiles | 17 / 17 (100%) | [sidebarFiles.md](./sidebarFiles.md) | [sidebarFiles.tsv](./sidebarFiles.tsv) |
+| plan | 16 / 16 (100%) | [plan.md](./plan.md) | [plan.tsv](./plan.tsv) |
 | reference | 15 / 15 (100%) | [reference.md](./reference.md) | [reference.tsv](./reference.tsv) |
 | sidebarPdf | 15 / 15 (100%) | [sidebarPdf.md](./sidebarPdf.md) | [sidebarPdf.tsv](./sidebarPdf.tsv) |
 | sidebarOffice | 15 / 15 (100%) | [sidebarOffice.md](./sidebarOffice.md) | [sidebarOffice.tsv](./sidebarOffice.tsv) |
 | sidebarExcel | 15 / 15 (100%) | [sidebarExcel.md](./sidebarExcel.md) | [sidebarExcel.tsv](./sidebarExcel.tsv) |
 | settings.shell | 14 / 14 (100%) | [settings.shell.md](./settings.shell.md) | [settings.shell.tsv](./settings.shell.tsv) |
+| session-log-download | 14 / 14 (100%) | [session-log-download.md](./session-log-download.md) | [session-log-download.tsv](./session-log-download.tsv) |
 | directory-browser | 13 / 13 (100%) | [directory-browser.md](./directory-browser.md) | [directory-browser.tsv](./directory-browser.tsv) |
+| fileActions | 12 / 12 (100%) | [fileActions.md](./fileActions.md) | [fileActions.tsv](./fileActions.tsv) |
 | goal | 12 / 12 (100%) | [goal.md](./goal.md) | [goal.tsv](./goal.tsv) |
 | settings.agentLoop | 12 / 12 (100%) | [settings.agentLoop.md](./settings.agentLoop.md) | [settings.agentLoop.tsv](./settings.agentLoop.tsv) |
 | settings.permission | 12 / 12 (100%) | [settings.permission.md](./settings.permission.md) | [settings.permission.tsv](./settings.permission.tsv) |
 | sidebarImage | 11 / 11 (100%) | [sidebarImage.md](./sidebarImage.md) | [sidebarImage.tsv](./sidebarImage.tsv) |
-| session-log-download | 10 / 10 (100%) | [session-log-download.md](./session-log-download.md) | [session-log-download.tsv](./session-log-download.tsv) |
 | slash.menu | 9 / 9 (100%) | [slash.menu.md](./slash.menu.md) | [slash.menu.tsv](./slash.menu.tsv) |
+| sidebar | 8 / 8 (100%) | [sidebar.md](./sidebar.md) | [sidebar.tsv](./sidebar.tsv) |
 | skill | 8 / 8 (100%) | [skill.md](./skill.md) | [skill.tsv](./skill.tsv) |
-| sidebar | 6 / 6 (100%) | [sidebar.md](./sidebar.md) | [sidebar.tsv](./sidebar.tsv) |
-| approval | 5 / 5 (100%) | [approval.md](./approval.md) | [approval.tsv](./approval.tsv) |
+| approval | 7 / 7 (100%) | [approval.md](./approval.md) | [approval.tsv](./approval.tsv) |
 | entryCustomization | 5 / 5 (100%) | [entryCustomization.md](./entryCustomization.md) | [entryCustomization.tsv](./entryCustomization.tsv) |
 | settings.plugins | 5 / 5 (100%) | [settings.plugins.md](./settings.plugins.md) | [settings.plugins.tsv](./settings.plugins.tsv) |
 | settings.sessionLog | 4 / 4 (100%) | [settings.sessionLog.md](./settings.sessionLog.md) | [settings.sessionLog.tsv](./settings.sessionLog.tsv) |
@@ -70,8 +72,10 @@
 | documentHtml | 4 / 4 (100%) | [documentHtml.md](./documentHtml.md) | [documentHtml.tsv](./documentHtml.tsv) |
 | sidebarCodePreview | 3 / 3 (100%) | [sidebarCodePreview.md](./sidebarCodePreview.md) | [sidebarCodePreview.tsv](./sidebarCodePreview.tsv) |
 | secretMask | 2 / 2 (100%) | [secretMask.md](./secretMask.md) | [secretMask.tsv](./secretMask.tsv) |
-| deepseek-model-label-1017 | 1 / 1 (100%) | [deepseek-model-label-1017.md](./deepseek-model-label-1017.md) | [deepseek-model-label-1017.tsv](./deepseek-model-label-1017.tsv) |
+| contextMenu | 1 / 1 (100%) | [contextMenu.md](./contextMenu.md) | [contextMenu.tsv](./contextMenu.tsv) |
+| fileDrag | 1 / 1 (100%) | [fileDrag.md](./fileDrag.md) | [fileDrag.tsv](./fileDrag.tsv) |
 | shortcuts.layout | 1 / 1 (100%) | [shortcuts.layout.md](./shortcuts.layout.md) | [shortcuts.layout.tsv](./shortcuts.layout.tsv) |
+| messageQuotes | 1 / 1 (100%) | [messageQuotes.md](./messageQuotes.md) | [messageQuotes.tsv](./messageQuotes.tsv) |
 | settings.locale | 1 / 1 (100%) | [settings.locale.md](./settings.locale.md) | [settings.locale.tsv](./settings.locale.tsv) |
 
 ---

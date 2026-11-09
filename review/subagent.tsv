@@ -34,6 +34,7 @@ subagent	count.running.other	{count} subagents running	サブエージェント 
 subagent	switcher.aria	Switch subagent: {title}	サブエージェントを切り替え: {title}	ok
 subagent	tree.aria	Subagent sessions	サブエージェントのセッション	ok
 subagent	open.sidebar	Open in sidebar	サイドバーで開く	ok
+subagent	open.floatWindow	Open in floating panel	フローティングパネルで開く	ok
 subagent	open.sidebar.aria	Open {label} in sidebar	{label} をサイドバーで開く	ok
 subagent	sidebar.chat	Chat	チャット	ok
 subagent	readonly.oneShot.title	One-shot subagent record	単発サブエージェントの記録	ok

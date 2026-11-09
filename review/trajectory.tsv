@@ -11,6 +11,9 @@ trajectory	toolbar.collapseTurns	Collapse turns	ターンを折りたたむ	ok
 trajectory	toolbar.calls	Calls	呼び出し	ok
 trajectory	toolbar.expandCalls	Expand calls	呼び出しを展開	ok
 trajectory	toolbar.collapseCalls	Collapse calls	呼び出しを折りたたむ	ok
+trajectory	toolbar.subCalls	Subcalls	サブ呼び出し	ok
+trajectory	toolbar.expandSubCalls	Expand subcalls	サブ呼び出しを展開	ok
+trajectory	toolbar.collapseSubCalls	Collapse subcalls	サブ呼び出しを折りたたむ	ok
 trajectory	toolbar.search	Search trajectory	軌跡を検索	ok
 trajectory	toolbar.searchPlaceholder	Search	検索	ok
 trajectory	kind.system	SYSTEM	システム	ok
@@ -102,6 +105,9 @@ trajectory	record.noOutput	No output	出力なし	ok
 trajectory	record.schemaUnavailable	Schema unavailable	スキーマはありません	ok
 trajectory	record.parameters	Parameters	パラメーター	ok
 trajectory	record.resultJson	Result JSON	結果の JSON	ok
+trajectory	record.rawResult	Raw result	生の結果	ok
+trajectory	record.renderedResult	Rendered result	整形された結果	ok
+trajectory	record.rawResultUnavailable	Raw results are only available for live tool calls	生の結果は実行中のツール呼び出しでのみ利用できます	ok
 trajectory	record.json	JSON	JSON	ok
 trajectory	record.parametersJson	parameters JSON	parameters の JSON	ok
 trajectory	record.namedParametersJson	{name} parameters JSON	{name} の parameters JSON	ok
@@ -135,6 +141,7 @@ trajectory	request.retryProgress	{retry} of {maximum}	{retry} / {maximum}	ok
 trajectory	request.collapsedSummary	Collapsed {kind} summary, {summary}	折りたたまれた {kind} の要約、{summary}	ok
 trajectory	request.collapsedTurn	turn	ターン	ok
 trajectory	request.collapsedAssistant	assistant	アシスタント	ok
+trajectory	request.collapsedTool	subcalls	サブ呼び出し	ok
 trajectory	request.rowAria	{request}{kind}, {content}	{request}{kind}、{content}	ok
 trajectory	request.rowPrefix	Request {request}, 	リクエスト {request}、	ok
 trajectory	request.rowAriaCompaction	Request {request}, compaction	リクエスト {request}、圧縮	ok

@@ -1,4 +1,5 @@
 namespace	key	en	ja	status
+conversation	quote.remove	Remove quote	引用を削除	ok
 conversation	shortcut.newline	New line	改行	ok
 conversation	shortcut.complementary	Use the complementary Queue / Steer action	もう一方のキュー / ステア操作を使う	ok
 conversation	shortcut.slash	Open command menu	コマンドメニューを開く	ok
@@ -17,6 +18,7 @@ conversation	input.commands	Add files or run commands	ファイルを追加ま�
 conversation	input.file	File	ファイル	ok
 conversation	input.stop	Stop generating	生成を停止	ok
 conversation	input.send	Send message	メッセージを送信	ok
+conversation	input.sending	Sending message	メッセージを送信中	ok
 conversation	input.send.queue	Queue message	メッセージをキューに追加	ok
 conversation	input.send.steer	Steer message	メッセージをステア	ok
 conversation	attachment.pending	Pending attachments	未送信の添付	ok
@@ -81,10 +83,12 @@ conversation	tool.title.createGoal	Create goal	ゴールを作成	ok
 conversation	tool.title.getGoal	View goal	ゴールを表示	ok
 conversation	tool.title.updateGoal	Update goal	ゴールを更新	ok
 conversation	tool.preparing.content	{kilobytes}KB	{kilobytes}KB	ok
-conversation	tool.title.createSchedule	Create reminder	リマインダーを作成	ok
-conversation	tool.title.listSchedules	List reminders	リマインダー一覧	ok
-conversation	tool.title.deleteSchedule	Delete reminder	リマインダーを削除	ok
-conversation	tool.title.updateSchedule	Update reminder	リマインダーを更新	ok
+conversation	tool.title.createSchedule	Create automation task	自動化タスクを作成	ok
+conversation	tool.title.listSchedules	List automation tasks	自動化タスク一覧	ok
+conversation	tool.title.viewSchedule	View automation task	自動化タスクを表示	ok
+conversation	tool.title.editSchedule	Edit automation task	自動化タスクを編集	ok
+conversation	tool.title.deleteSchedule	Delete automation task	自動化タスクを削除	ok
+conversation	tool.title.updateSchedule	Update automation task	自動化タスクを更新	ok
 conversation	detail.state	Status	状態	ok
 conversation	detail.todo.completed	Completed	完了	ok
 conversation	detail.todo.in_progress	In progress	進行中	ok
@@ -120,12 +124,16 @@ conversation	detail.schedule.when	Scheduled for	実行予定	ok
 conversation	detail.schedule.frequency	Repeat	繰り返し	ok
 conversation	detail.schedule.scheduled	Scheduled	予約済み	ok
 conversation	detail.schedule.overdue	Overdue, awaiting session resume	期限超過。セッションの再開待ち	ok
-conversation	detail.schedule.empty	No reminders	リマインダーはありません	ok
+conversation	detail.schedule.active	Enabled	有効	ok
+conversation	detail.schedule.paused	Paused	一時停止中	ok
+conversation	detail.schedule.ended	Ended	終了	ok
+conversation	detail.schedule.empty	No automation tasks	自動化タスクはありません	ok
 conversation	detail.schedule.deleted	Deleted	削除済み	ok
-conversation	detail.schedule.count	{count} reminders	リマインダー {count} 件	ok
+conversation	detail.schedule.count	{count} automation tasks	自動化タスク {count} 件	ok
 conversation	detail.schedule.daily	Every day at {time} ({zone})	毎日 {time} ({zone})	ok
 conversation	detail.schedule.weekly	Weekly on {days} at {time} ({zone})	毎週 {days} の {time} ({zone})	ok
 conversation	detail.schedule.cron	Cron {expression} ({zone})	Cron {expression} ({zone})	ok
+conversation	detail.schedule.custom	Custom	カスタム	ok
 conversation	detail.weekday.1	Mon	月	ok
 conversation	detail.weekday.2	Tue	火	ok
 conversation	detail.weekday.3	Wed	水	ok
@@ -310,6 +318,7 @@ conversation	tool.title.read	Read	読み取り	ok
 conversation	tool.title.bash	Bash	Bash	ok
 conversation	tool.title.write	Write	書き込み	ok
 conversation	tool.title.edit	Edit	編集	ok
+conversation	tool.title.applyPatch	Apply patch	パッチを適用	ok
 conversation	tool.title.code	Code	コード	ok
 conversation	tool.title.generic	Tool call	ツール呼び出し	ok
 conversation	tool.title.inspect	Query Cordis environment	Cordis 環境を照会	ok

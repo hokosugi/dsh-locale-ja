@@ -1,6 +1,6 @@
 # deliverables — 日本語訳レビュー
 
-訳済み **60 / 60** キー / 要確認 0 件
+訳済み **57 / 57** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -12,8 +12,6 @@
 | - [ ] | `presented.revealError` | Could not show in file manager. Try again. | ファイルマネージャーに表示できませんでした。もう一度お試しください。 |
 | - [ ] | `presented.directoryError` | Could not open containing folder. Try again. | ファイルのあるフォルダーを開けませんでした。もう一度お試しください。 |
 | - [ ] | `presented.directoryOpening` | Opening containing folder… | フォルダーを開いています… |
-| - [ ] | `presented.directoryOpened` | Requested opening containing folder | フォルダーを開くよう要求しました |
-| - [ ] | `presented.revealed` | Requested display in file manager | ファイルマネージャーでの表示を要求しました |
 | - [ ] | `presented.revealing` | Showing in file manager… | ファイルマネージャーに表示しています… |
 | - [ ] | `presented.unavailable` | This Host has no desktop available to open files or folders in external apps. Files can still be previewed in the sidebar. | このホストにはデスクトップがないため、外部アプリでファイルやフォルダーを開けません。ファイルはサイドバーでプレビューできます。 |
 | - [ ] | `presented.retry` | Retry | 再試行 |
@@ -26,7 +24,6 @@
 | - [ ] | `presented.collapse` | Collapse | 折りたたむ |
 | - [ ] | `presented.collapseAria` | Collapse delivered files | 提示されたファイルを折りたたむ |
 | - [ ] | `presented.opening` | Opening… | 開いています… |
-| - [ ] | `presented.opened` | Open requested | 開くよう要求しました |
 | - [ ] | `presented.error` | Could not open. Click to retry. | 開けませんでした。クリックして再試行してください。 |
 | - [ ] | `presented.file` | File | ファイル |
 | - [ ] | `row.title` | Present files | ファイルを提示 |

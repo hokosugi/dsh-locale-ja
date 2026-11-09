@@ -3,8 +3,6 @@ deliverables	presented.nativeUnavailable	This file has no available Host path. P
 deliverables	presented.revealError	Could not show in file manager. Try again.	ファイルマネージャーに表示できませんでした。もう一度お試しください。	ok
 deliverables	presented.directoryError	Could not open containing folder. Try again.	ファイルのあるフォルダーを開けませんでした。もう一度お試しください。	ok
 deliverables	presented.directoryOpening	Opening containing folder…	フォルダーを開いています…	ok
-deliverables	presented.directoryOpened	Requested opening containing folder	フォルダーを開くよう要求しました	ok
-deliverables	presented.revealed	Requested display in file manager	ファイルマネージャーでの表示を要求しました	ok
 deliverables	presented.revealing	Showing in file manager…	ファイルマネージャーに表示しています…	ok
 deliverables	presented.unavailable	This Host has no desktop available to open files or folders in external apps. Files can still be previewed in the sidebar.	このホストにはデスクトップがないため、外部アプリでファイルやフォルダーを開けません。ファイルはサイドバーでプレビューできます。	ok
 deliverables	presented.retry	Retry	再試行	ok
@@ -17,7 +15,6 @@ deliverables	presented.expandAria	Show all {count} delivered files	提示され�
 deliverables	presented.collapse	Collapse	折りたたむ	ok
 deliverables	presented.collapseAria	Collapse delivered files	提示されたファイルを折りたたむ	ok
 deliverables	presented.opening	Opening…	開いています…	ok
-deliverables	presented.opened	Open requested	開くよう要求しました	ok
 deliverables	presented.error	Could not open. Click to retry.	開けませんでした。クリックして再試行してください。	ok
 deliverables	presented.file	File	ファイル	ok
 deliverables	row.title	Present files	ファイルを提示	ok

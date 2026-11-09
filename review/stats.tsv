@@ -1,0 +1,178 @@
+namespace	key	en	ja	status
+stats	view.stats	Statistics	統計	ok
+stats	column.scope	Turn / step	ターン / ステップ	ok
+stats	column.scope.title	A turn row holds the turn total; click a row to expand or collapse its steps	ターンの行はそのターンの合計です。行をクリックするとステップを展開・折りたたみできます	ok
+stats	column.prompt	Trigger	きっかけ	ok
+stats	column.prompt.title	What opened this turn: a human prompt shows its text, automation shows a source badge	このターンが何で始まったか。人の入力ならその文面、自動化なら種類のバッジを表示します	ok
+stats	trigger.agent-message	Agent message	Agent のメッセージ	ok
+stats	trigger.team-message	Team message	チームのメッセージ	ok
+stats	trigger.schedule	Scheduled	スケジュール	ok
+stats	trigger.webhook	Webhook	Webhook	ok
+stats	trigger.tool-jobs	Background job	バックグラウンドジョブ	ok
+stats	trigger.cordis-host-runner	Plugin run	プラグインの実行	ok
+stats	trigger.subagent-settled	Subagent finished	サブエージェントの完了	ok
+stats	trigger.goal	Goal round	ゴールのラウンド	ok
+stats	trigger.context	Context wake	コンテキストの再開	ok
+stats	trigger.other	Automated turn	自動化されたターン	ok
+stats	column.did	Execution	実行内容	ok
+stats	column.did.title	Tools this step called and how often; a step without tool calls previews its answer text	このステップが呼んだツールと回数。ツール呼び出しのないステップは回答の文面を表示します	ok
+stats	column.context	Context	コンテキスト	ok
+stats	column.context.title	usage input tokens + cache read + cache write	使用量の入力トークン + キャッシュ読み込み + キャッシュ書き込み	ok
+stats	column.output	Output	出力	ok
+stats	column.output.title	usage output tokens of the step	ステップの出力トークン（使用量）	ok
+stats	column.cache	Cache hit	キャッシュヒット	ok
+stats	column.cache.title	cache read ÷ (input + cache read + cache write): the share of the prompt served from cache	キャッシュ読み込み ÷（入力 + キャッシュ読み込み + キャッシュ書き込み）。プロンプトのうちキャッシュから供給された割合	ok
+stats	cache.detail	cache read {read} · input {input} · cache write {write}	キャッシュ読み込み {read} · 入力 {input} · キャッシュ書き込み {write}	ok
+stats	column.ttft	First token	最初のトークン	ok
+stats	column.ttft.title	step start to the first output fragment (TTFT)	ステップ開始から最初の出力断片まで（TTFT）	ok
+stats	column.model	Model time	モデル時間	ok
+stats	column.model.title	step start to the settled reply (includes the first-token delay)	ステップ開始から応答確定まで（最初のトークン待ちを含む）	ok
+stats	column.tps	Output speed	出力速度	ok
+stats	column.tps.title	output tokens ÷ generation seconds (TPS, tok/s)	出力トークン ÷ 生成秒数（TPS、tok/s）	ok
+stats	column.tool	Tool time	ツール時間	ok
+stats	column.tool.title	sum of every tool call up to its result inside the step; calls without a result are excluded	ステップ内のツール呼び出しごとに、結果が出るまでの時間の合計。結果のない呼び出しは除外	ok
+stats	column.time	Total time	合計時間	ok
+stats	column.time.title	total split: light blue first token, blue generation, orange tool calls, gray everything else. Bar length uses a square-root scale; steps compare only with steps of the same turn, turns with turns	合計の内訳: 水色が最初のトークン、青が生成、オレンジがツール呼び出し、灰色がその他。バーの長さは平方根スケールで、ステップ同士・ターン同士でのみ比較できます	ok
+stats	turn.label	Turn {turn}	ターン {turn}	ok
+stats	step.label	Step {step}	ステップ {step}	ok
+stats	step.toggle.aria	Expand or collapse the tool details of step {step}	ステップ {step} のツール詳細を展開・折りたたむ	ok
+stats	step.partial	start unknown	開始不明	ok
+stats	step.started.title	Step started at {time}	ステップの開始 {time}	ok
+stats	compaction.label	Compaction	圧縮	ok
+stats	compaction.running	Compacting…	圧縮しています…	ok
+stats	compaction.shadowed	Pruned {tokens} tokens of history	履歴から {tokens} トークンを削除しました	ok
+stats	compaction.summary	Summary {chars} chars	要約 {chars} 文字	ok
+stats	compaction.title	Compaction runs are shown separately and excluded from the turn's step totals	圧縮の実行は別に表示され、ターンのステップ合計には含まれません	ok
+stats	event.show	Show event rows (incl. compaction)	イベント行を表示（圧縮を含む）	ok
+stats	context.delta.show	Show context delta	コンテキストの増減を表示	ok
+stats	context.delta.title	Prompt delta against the previous measured step in the turn; negative means the context shrank (for example after compaction)	ターン内の直前の計測ステップに対するプロンプトの増減。負の値はコンテキストが減ったことを意味します（圧縮後など）	ok
+stats	event.request-header	Request header	リクエストヘッダー	ok
+stats	event.system-prompt	System prompt	システムプロンプト	ok
+stats	event.tool-set	Tool set change	ツール構成の変更	ok
+stats	event.context-prune	Context prune	コンテキストの削除	ok
+stats	event.request-context	Request context	リクエストのコンテキスト	ok
+stats	event.model-retry	Model retry	モデルの再試行	ok
+stats	event.model-attempt	Model attempt	モデルの試行	ok
+stats	event.context-refresh	Context refresh	コンテキストの更新	ok
+stats	event.approval	Approval	承認	ok
+stats	event.context.detail	{provider} / {model} · prompt mode {mode}	{provider} / {model} · プロンプトモード {mode}	ok
+stats	event.retry.detail	retry {retry} · wait {delay}	再試行 {retry} · 待機 {delay}	ok
+stats	event.attempt.detail	Model attempt without a committed message	メッセージを確定しないモデルの試行	ok
+stats	event.refresh.detail	{source} · {chars} chars	{source} · {chars} 文字	ok
+stats	event.approval.detail	{tool} · {status}	{tool} · {status}	ok
+stats	event.source.runtime	runtime context	実行時コンテキスト	ok
+stats	event.source.time	time context	時刻コンテキスト	ok
+stats	event.approval.asked	waiting	待機中	ok
+stats	event.approval.allowed	allowed once	1 回許可	ok
+stats	event.approval.rejected	rejected	拒否	ok
+stats	event.approval.cancelled	cancelled	キャンセル済み	ok
+stats	event.approval.unavailable	unavailable	利用できません	ok
+stats	event.title	Non-step event rows: request, prompt, tool-set, retry, context-refresh, approval, and prune changes excluded from the turn step totals	ステップ以外のイベント行: リクエスト・プロンプト・ツール構成・再試行・コンテキスト更新・承認・削除の変更で、ターンのステップ合計には含まれません	ok
+stats	event.reason.initial	initial	初回	ok
+stats	event.reason.resume	resume	再開	ok
+stats	event.reason.change	change	変更	ok
+stats	event.reason.series	new series	新しい連続	ok
+stats	event.header.detail	{reason} · {tools} tools	{reason} · ツール {tools} 個	ok
+stats	event.series	new series	新しい連続	ok
+stats	event.system.append	append	追記	ok
+stats	event.system.replace	replace	置換	ok
+stats	event.system.clear	clear	クリア	ok
+stats	event.system.detail	{action} · {chars} chars	{action} · {chars} 文字	ok
+stats	event.tools.added	added {tools}	追加 {tools}	ok
+stats	event.tools.removed	removed {tools}	削除 {tools}	ok
+stats	event.prune.detail	pruned {tokens} tokens	{tokens} トークンを削除	ok
+stats	step.partial.title	This step's start and end events are not in the current event window (trimmed while the tab reconnected or the window was rebuilt), so first-token, model time and total have no start to subtract from; reloading the tab reassembles from the full window	このステップの開始・終了イベントが現在のイベント範囲に含まれていないため（タブの再接続や範囲の再構築で切り捨て）、最初のトークン・モデル時間・合計時間は起点がありません。タブを再読み込みすると完全な範囲から再構成されます	ok
+stats	state.running	running	実行中	ok
+stats	state.interrupted	interrupted	中断	ok
+stats	state.cacheMiss	cache miss	キャッシュミス	ok
+stats	state.cacheMiss.title	The prompt barely hit the cache: usually the first request after a restart or a session resume, paid at full input price	プロンプトがほとんどキャッシュに当たらなかった状態。再起動直後やセッション再開後の最初のリクエストで起きやすく、入力の全額が課金されます	ok
+stats	state.aborted	unsettled	未確定	ok
+stats	state.aborted.title	The step closed without a settled reply (usually cancelled or failed)	応答を確定せずにステップが終了しました（通常はキャンセルまたは失敗）	ok
+stats	unknown	not recorded	記録なし	ok
+stats	partial	{count} tool calls have no result yet; this is the lower bound of known time	{count} 件のツール呼び出しにまだ結果がありません。判明している時間の下限です	ok
+stats	empty	No measurable step in the current window.	現在の範囲に計測できるステップがありません。	ok
+stats	loadOlder	Load earlier	以前を読み込む	ok
+stats	loadOlder.loading	Loading earlier turns…	以前のターンを読み込み中…	ok
+stats	loadOlder.done	Beginning of history reached	履歴の先頭まで到達しました	ok
+stats	loadOlder.failed	Load failed, retry	読み込みに失敗しました。再試行してください	ok
+stats	summary	{turns} turns · {steps} steps	{turns} ターン · {steps} ステップ	ok
+stats	table.showTotals	Show total row	合計行を表示	ok
+stats	contextMode.label	Context basis	コンテキストの基準	ok
+stats	contextMode.latest	Latest	最新	ok
+stats	contextMode.latest.title	Turn rows show the last measured step's prompt size (final context); the total row stays cumulative	ターンの行は最後に計測したステップのプロンプトサイズ（最終コンテキスト）を表示し、合計行は累積のままです	ok
+stats	contextMode.cumulative	Cumulative	累積	ok
+stats	contextMode.cumulative.title	Turn rows show the sum of prompt sizes across the turn's steps (cumulative processing); the total row stays cumulative	ターンの行はターン内のステップごとのプロンプトサイズの合計（累積処理）を表示し、合計行は累積のままです	ok
+stats	totals.full	Whole-session total	セッション全体の合計	ok
+stats	totals.full.title	Totals for the complete session; total time is model time + tool time (no inter-turn gaps)	セッション全体の合計。合計時間はモデル時間 + ツール時間（ターン間の空白は含まない）	ok
+stats	totals.window	Window total	表示範囲の合計	ok
+stats	totals.window.title	Totals for the turns loaded in this window; the context cell is cumulative across steps	この範囲に読み込まれたターンの合計。コンテキストの値はステップ間の累積です	ok
+stats	expand.all	Expand all	すべて展開	ok
+stats	collapse.all	Collapse all	すべて折りたたむ	ok
+stats	turn.expand	Show	表示	ok
+stats	turn.collapse	Hide	非表示	ok
+stats	turn.toggle.title	Expand or collapse the steps of this turn	このターンのステップを展開・折りたたみ	ok
+stats	turn.toggle.aria	Expand or collapse turn {turn}	ターン {turn} を展開・折りたたみ	ok
+stats	did.answer	answer	回答	ok
+stats	did.working	generating	生成中	ok
+stats	did.aborted	no answer	回答なし	ok
+stats	did.more	{count} more	ほか {count} 件	ok
+stats	did.rest	{count} more calls	ほか {count} 回の呼び出し	ok
+stats	did.title	{calls} calls: {tools}	{calls} 回の呼び出し: {tools}	ok
+stats	did.retry	retried {count}×	{count} 回再試行	ok
+stats	did.lines	{lines} lines	{lines} 行	ok
+stats	did.lines.unit	lines	行	ok
+stats	did.chars	{chars} chars	{chars} 文字	ok
+stats	did.output	→ {chars} chars	→ {chars} 文字	ok
+stats	did.total	{chars} characters of tool output in this step; they become part of the next prompt	このステップのツール出力 {chars} 文字。次のプロンプトの一部になります	ok
+stats	detail.show	details	詳細	ok
+stats	detail.hide	hide	隠す	ok
+stats	detail.title	Click this row to expand or collapse the tool details	この行をクリックするとツールの詳細を展開・折りたたみます	ok
+stats	detail.calls	{count} tool calls	ツール呼び出し {count} 件	ok
+stats	detail.answer	Answer	回答	ok
+stats	detail.answer.truncated	Answer is long; only the first 16,000 chars are kept	回答が長いため、先頭 16,000 文字だけを保持しています	ok
+stats	detail.code.title	Code block	コードブロック	ok
+stats	detail.code.wrap	Wrap lines	行を折り返す	ok
+stats	detail.code.unwrap	Do not wrap	折り返さない	ok
+stats	detail.footnotes	Footnotes	脚注	ok
+stats	detail.copy	Copy	コピー	ok
+stats	detail.copy.title	Copy this text	このテキストをコピー	ok
+stats	detail.copied	Copied	コピーしました	ok
+stats	detail.copyFailed	Copy failed	コピーできませんでした	ok
+stats	detail.chars	{chars} chars	{chars} 文字	ok
+stats	detail.lines	{lines} lines	{lines} 行	ok
+stats	detail.file	file	ファイル	ok
+stats	detail.diff	change	変更	ok
+stats	detail.emptyBody	This call left no text	この呼び出しにはテキストがありません	ok
+stats	detail.hidden	{count} more calls are not listed (at most {limit} per step)	ほか {count} 件の呼び出しは表示していません（1 ステップあたり最大 {limit} 件）	ok
+stats	detail.args	raw arguments	生の引数	ok
+stats	detail.wrap	Wrap	折り返す	ok
+stats	detail.wrap.title	Wrap long lines instead of scrolling sideways	横スクロールの代わりに長い行を折り返します	ok
+stats	detail.raw.title	Show the raw JSON arguments	生の JSON 引数を表示	ok
+stats	detail.lineCap	Showing the first {shown} of {total} lines	{total} 行中、先頭 {shown} 行を表示	ok
+stats	detail.truncated	Too long: only the first {chars} characters are kept	長すぎるため、先頭 {chars} 文字だけを保持しています	ok
+stats	tool.failed	{count} failed	{count} 件失敗	ok
+stats	tool.failed.title	{count} tool calls in this step returned an error result	このステップの {count} 件のツール呼び出しがエラーを返しました	ok
+stats	bar.ttft	first token {value}	最初のトークン {value}	ok
+stats	bar.gen	generation {value}	生成 {value}	ok
+stats	bar.tool	tool calls {value}	ツール呼び出し {value}	ok
+stats	bar.rest	other {value}	その他 {value}	ok
+stats	bar.wall	total {value}	合計 {value}	ok
+stats	bar.running	not finished yet: this is elapsed time	未完了のため経過時間です	ok
+stats	bar.gap	gap since previous step {value}	前のステップからの空白 {value}	ok
+stats	bar.start	started {clock}	開始 {clock}	ok
+stats	turn.started	this turn started at {time}	このターンの開始 {time}	ok
+stats	turn.images	{count} images	画像 {count} 枚	ok
+stats	imagePreview.hint	Hover or focus to preview this turn's images; click to open the full image	ホバーまたはフォーカスでこのターンの画像をプレビューします。クリックで全体を開きます	ok
+stats	imagePreview.dialog	Image preview	画像プレビュー	ok
+stats	imagePreview.open	View image {index} of {count}	画像 {count} 枚中 {index} 枚目を表示	ok
+stats	imagePreview.alt	Image {index}	画像 {index}	ok
+stats	imagePreview.loading	Loading image…	画像を読み込み中…	ok
+stats	imagePreview.failed	Image failed to load	画像を読み込めませんでした	ok
+stats	imagePreview.retry	Retry	再試行	ok
+stats	imagePreview.close	Close image preview	画像プレビューを閉じる	ok
+stats	steps.total	{total} steps	{total} ステップ	ok
+stats	steps.tail	newest {limit} only	最新 {limit} 件のみ	ok
+stats	steps.all	Show all {total} steps	{total} ステップをすべて表示	ok
+stats	steps.filter	Only {tool}	{tool} のみ	ok
+stats	steps.clear	Clear filter	絞り込みを解除	ok
+stats	steps.matched	{count} steps used {tool}	{tool} を使った {count} ステップ	ok

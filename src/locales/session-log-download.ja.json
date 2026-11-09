@@ -8,5 +8,9 @@
   "dialog.successDescription": "ブラウザーがセッションの ZIP をダウンロードしています。",
   "dialog.errorTitle": "セッションのエクスポートに失敗しました",
   "dialog.close": "閉じる",
-  "dialog.commandFailed": "セッションのエクスポートを開始できませんでした。"
+  "dialog.commandFailed": "セッションのエクスポートを開始できませんでした。",
+  "menu.copyMarkdown": "セッションを Markdown としてコピー",
+  "toast.copied": "セッションを Markdown としてコピーしました。",
+  "toast.preparationFailed": "コピー用にセッションを読み込めませんでした。もう一度お試しください。",
+  "toast.clipboardFailed": "クリップボードに書き込めませんでした。クリップボードの権限を確認して、もう一度お試しください。"
 }

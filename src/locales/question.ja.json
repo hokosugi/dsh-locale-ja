@@ -11,9 +11,7 @@
   "wait.continued": "作業は続行されました — 回答はまだできます",
   "review.status": "回答済み",
   "review.skipped": "この質問はスキップされました。",
-  "reply.label": "以前の未回答の質問に回答",
-  "reply.open": "質問の詳細を開く",
-  "reply.close": "質問の詳細を閉じる",
+  "reply.label": "質問と回答",
   "reply.answerLabel": "回答: ",
   "reply.skipped": "スキップ",
   "nav.prev": "前の質問",
@@ -29,5 +27,7 @@
   "plan.header": "計画のレビュー",
   "plan.approve": "承認",
   "plan.decline": "拒否",
-  "plan.discuss": "変更を依頼"
+  "plan.discuss": "変更を依頼",
+  "text.expand": "展開する",
+  "text.collapse": "折りたたむ"
 }

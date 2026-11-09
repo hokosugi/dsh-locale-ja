@@ -1,6 +1,6 @@
 # sidebarRight — 日本語訳レビュー
 
-訳済み **35 / 35** キー / 要確認 0 件
+訳済み **38 / 38** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -8,6 +8,9 @@
 
 | 確認 | キー | 英語 | 日本語 |
 | --- | --- | --- | --- |
+| - [ ] | `menu.close` | Close | 閉じる |
+| - [ ] | `menu.closeOthers` | Close Other Tabs | ほかのタブを閉じる |
+| - [ ] | `menu.closeRight` | Close Tabs to the Right | 右側のタブを閉じる |
 | - [ ] | `command.close` | Close current page or window | 現在のページまたはウィンドウを閉じる |
 | - [ ] | `command.refresh` | Refresh current page | 現在のページを更新 |
 | - [ ] | `command.noRefresh` | This page cannot be refreshed | このページは更新できません |

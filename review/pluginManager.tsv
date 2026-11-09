@@ -33,8 +33,6 @@ pluginManager	statusProblem	Problem	問題	ok
 pluginManager	statusBeta	Experimental	実験的	ok
 pluginManager	reasonLabel	Reason	理由	ok
 pluginManager	metadataError	Package metadata error: {error}	パッケージメタデータのエラー: {error}	ok
-pluginManager	previewAlt	{name} feature preview	{name} の機能プレビュー	ok
-pluginManager	previewUnavailable	Could not display feature preview	機能プレビューを表示できませんでした	ok
 pluginManager	versionTag	v{version}	v{version}	ok
 pluginManager	partsLabel	Components	コンポーネント	ok
 pluginManager	sourceTitle	Source	ソース	ok
@@ -56,6 +54,7 @@ pluginManager	rowPhaseActive	Running	実行中	ok
 pluginManager	rowPhaseFailed	Problem	問題	ok
 pluginManager	rowPhaseUnloading	Unloading	アンロード中	ok
 pluginManager	enableToggle	Enable {name}	{name} を有効にする	ok
+pluginManager	applyingChange	Applying changes to {name}	{name} に変更を適用中	ok
 pluginManager	openDetail	View {name}	{name} を表示	ok
 pluginManager	backToList	Back to plugins	プラグイン一覧に戻る	ok
 pluginManager	crumbRoot	Plugins	プラグイン	ok
@@ -79,7 +78,7 @@ pluginManager	installPathTemplateHint	Replace this with the actual path to your 
 pluginManager	installGuideFill	Use example	例を入力	ok
 pluginManager	installGuideFillAria	Use the example {example}	例 {example} を入力	ok
 pluginManager	installGuideSafety	Install only plugins you trust: they run with your permissions and can damage DeepSeek Harness or leak your data.	信頼できるプラグインだけをインストールしてください。プラグインはあなたの権限で動作し、DeepSeek Harness を壊したり、データを外部に漏らしたりする可能性があります。	ok
-pluginManager	installUpgradeNotice	On-demand Official plugins offer Update when their version differs from DSH. To update other plugins, uninstall and reinstall them.	オンデマンドの公式プラグインは、DSH のバージョンと異なるときに「更新」が表示されます。ほかのプラグインを更新するには、アンインストールしてから入れ直してください。	ok
+pluginManager	installUpgradeNotice	On-demand official plugins offer Update when their version differs from DSH. To update other plugins, uninstall and reinstall them.	オンデマンドの公式プラグインは、DSH のバージョンと異なるときに「更新」が表示されます。ほかのプラグインを更新するには、アンインストールしてから入れ直してください。	ok
 pluginManager	registryToggle	Registry	レジストリ	ok
 pluginManager	registryLegend	The npm registry the plugin is downloaded from	プラグインのダウンロード元になる npm レジストリ	ok
 pluginManager	registryDefault	Default registry	既定のレジストリ	ok
@@ -98,6 +97,8 @@ pluginManager	installConfirmedRefused	This plugin cannot be installed	このプ�
 pluginManager	installProblemInvalid	This is not a package name or address that can be installed: {reason}	インストールできるパッケージ名またはアドレスではありません: {reason}	ok
 pluginManager	installProblemInstalled	This plugin is already installed. To upgrade it, uninstall it and install it again	このプラグインはすでにインストールされています。アップグレードするにはアンインストールしてから再インストールしてください	ok
 pluginManager	installProblemShipped	This plugin ships with DSH; upgrading DSH updates it	このプラグインは DSH に同梱されています。DSH をアップグレードすると更新されます	ok
+pluginManager	installBundledTitle	This plugin ships with DSH	このプラグインは DSH に同梱されています	ok
+pluginManager	installBundledDescription	Enable it without downloading another copy	別のコピーをダウンロードせずに有効にできます	ok
 pluginManager	installProblemNotFound	No such plugin was found	該当するプラグインが見つかりません	ok
 pluginManager	installProblemNotPackage	The path does not exist or is not a valid plugin package	そのパスが存在しないか、有効なプラグインパッケージではありません	ok
 pluginManager	installProblemNotBundle	This package declares no bundle, so it cannot be installed as a plugin: {reason}	このパッケージはバンドルを宣言していないため、プラグインとしてインストールできません: {reason}	ok
@@ -114,6 +115,64 @@ pluginManager	sourceTargetSpec	Source for this DSH	この DSH 向けのソース
 pluginManager	sourceTargetVersion	Version for this DSH	この DSH 向けのバージョン	ok
 pluginManager	update	Update	更新	ok
 pluginManager	updateLabel	Update {name}	{name} を更新	ok
+pluginManager	versionsTitle	Versions	バージョン	ok
+pluginManager	versionsRecheck	Check again	もう一度確認	ok
+pluginManager	versionsChecking	Checking for updates	更新を確認中	ok
+pluginManager	versionsAvailable	Update to {version} available	{version} への更新があります	ok
+pluginManager	versionsPublished	Published {date}	公開日 {date}	ok
+pluginManager	versionsLatest	Up to date	最新です	ok
+pluginManager	versionsCheckedAt	Last checked at {time}	最終確認 {time}	ok
+pluginManager	versionsBlocked	Newer versions need a DSH update	新しいバージョンには DSH の更新が必要です	ok
+pluginManager	versionsBlockedDetail	{version} needs {peers}; this DSH is {runtime}	{version} には {peers} が必要です。この DSH は {runtime} です	ok
+pluginManager	versionsNoneInstallable	No newer version to install directly	直接インストールできる新しいバージョンはありません	ok
+pluginManager	versionsNoneInstallableDetail	The newer versions are deprecated, prereleases, or declare no bundle. Expand to see them	新しいバージョンは非推奨・プレリリース・またはバンドル未宣言のいずれかです。展開すると表示されます	ok
+pluginManager	versionsFailedNetwork	Could not reach the registry	レジストリに接続できませんでした	ok
+pluginManager	versionsFailedOther	Could not check for updates	更新を確認できませんでした	ok
+pluginManager	versionsDetails	Details	詳細	ok
+pluginManager	versionsNewerCount	{count} newer	新しいバージョン {count} 件	ok
+pluginManager	versionsCollapse	Collapse	折りたたむ	ok
+pluginManager	versionsInstalledTag	Installed	インストール済み	ok
+pluginManager	versionsPrereleaseTag	Prerelease	プレリリース	ok
+pluginManager	versionsDeprecatedTag	Deprecated	非推奨	ok
+pluginManager	versionsNeedsDsh	Needs {peers}	{peers} が必要	ok
+pluginManager	versionsNotBundle	This version declares no bundle and cannot be installed	このバージョンはバンドルを宣言していないためインストールできません	ok
+pluginManager	versionsUpdateLabel	Update to {version}	{version} に更新	ok
+pluginManager	versionsRegistry	Registry	レジストリ	ok
+pluginManager	versionsCheckedAtLabel	Checked at	確認日時	ok
+pluginManager	versionsFallbackTag	Fallback	フォールバック	ok
+pluginManager	versionsFallbackHint	{registry} could not be reached; the list comes from a fallback registry	{registry} に接続できなかったため、フォールバックのレジストリから取得した一覧です	ok
+pluginManager	versionsPrimaryTag	First	先頭	ok
+pluginManager	versionsShowPrerelease	Show prereleases	プレリリースを表示	ok
+pluginManager	versionsOmitted	{count} more versions newer than the installed one are not listed	インストール済みより新しいバージョンが {count} 件あります（未表示）	ok
+pluginManager	versionsProblemNetwork	Unreachable	接続不可	ok
+pluginManager	versionsProblemNotFound	Not found	見つかりません	ok
+pluginManager	versionsProblemUnknown	Failed	失敗	ok
+pluginManager	updatesAvailable	Updates available: {count}	更新があります: {count}	ok
+pluginManager	updatesNone	All plugins are up to date	すべてのプラグインが最新です	ok
+pluginManager	updatesFailed	Some plugins could not be checked	一部のプラグインを確認できませんでした	ok
+pluginManager	updateTitle	Update {name}	{name} を更新	ok
+pluginManager	updateSource	Install from	インストール元	ok
+pluginManager	updateDescription	The update replaces {from} with {to}; the plugin may stop briefly. If the installation fails, {from} is kept or installed again.	更新は {from} を {to} に置き換えます。プラグインは一時的に停止する場合があります。インストールに失敗した場合は {from} を保持するか、入れ直します。	ok
+pluginManager	updateRunning	Updating	更新中	ok
+pluginManager	updateStepChecking	Check {version}	{version} を確認	ok
+pluginManager	updateStepRemoving	Stop and remove {version}	{version} を停止して削除	ok
+pluginManager	updateStepInstalling	Install {version} from {registry}	{registry} から {version} をインストール	ok
+pluginManager	updateStepRestoring	Install {version} again	{version} を入れ直す	ok
+pluginManager	updateDone	Updated to {version}	{version} に更新しました	ok
+pluginManager	updateDoneDetail	The new version is running.	新しいバージョンが動作しています。	ok
+pluginManager	updateRestart	{version} installed; it takes effect after a restart	{version} をインストールしました。再起動後に反映されます	ok
+pluginManager	updateRefused	Cannot update to {version}	{version} に更新できません	ok
+pluginManager	updateRemoveFailed	Could not remove {version}	{version} を削除できませんでした	ok
+pluginManager	updateRestored	Update failed; restored {version}	更新に失敗したため、{version} を復元しました	ok
+pluginManager	updateRestoredDetail	{to} failed to install; {from} was installed again.	{to} のインストールに失敗したため、{from} を入れ直しました。	ok
+pluginManager	updateKept	Could not update to {version}	{version} に更新できませんでした	ok
+pluginManager	updateKeptDetail	{from} was not removed and stays in use. {reason}	{from} は削除されず、そのまま使われます。{reason}	ok
+pluginManager	updateBroken	Update failed; the plugin is not installed	更新に失敗し、プラグインはインストールされていません	ok
+pluginManager	updateBrokenDetail	{to} failed to install, and installing {from} again failed too. Install {name} again from Add plugin.	{to} のインストールに失敗し、{from} の再インストールにも失敗しました。プラグインを追加から {name} を入れ直してください。	ok
+pluginManager	updateLost	The update result is unknown	更新の結果が不明です	ok
+pluginManager	updateLostDetail	The connection to DSH was interrupted: {reason}. Refresh the plugin list to see the installed version.	DSH との接続が中断されました: {reason}。プラグイン一覧を更新してインストール済みのバージョンを確認してください。	ok
+pluginManager	updateOutput	Show installation output	インストールの出力を表示	ok
+pluginManager	updateFinish	Done	完了	ok
 pluginManager	installFailedTitle	The plugin could not be installed	プラグインをインストールできませんでした	ok
 pluginManager	installGithubFailedTitle	Cannot access GitHub	GitHub にアクセスできません	ok
 pluginManager	installGithubTimeoutTitle	GitHub connection timed out	GitHub への接続がタイムアウトしました	ok
@@ -148,11 +207,13 @@ pluginManager	installCancelUnconfirmed	Installation has not been confirmed stopp
 pluginManager	installEnableNow	Enable now	今すぐ有効にする	ok
 pluginManager	installDetailsShow	Show install details	インストールの詳細を表示	ok
 pluginManager	installDetailsHide	Hide install details	インストールの詳細を隠す	ok
+pluginManager	installDetailsNoOutput	No terminal output from this install reached the details	このインストールの端末出力は詳細に届いていません	ok
 pluginManager	installVersion	Version {version}	バージョン {version}	ok
 pluginManager	installSubjectPath	Local directory	ローカルディレクトリ	ok
 pluginManager	installSubjectGit	Git repository	Git リポジトリ	ok
 pluginManager	installSubjectTarball	Tarball	tarball	ok
 pluginManager	installLocation	Installs into {dir}	{dir} にインストールされます	ok
+pluginManager	installLogPath	Full log: {path}	完全なログ: {path}	ok
 pluginManager	installRetry	Retry	再試行	ok
 pluginManager	installChangeRegistry	Change registry	レジストリを変更	ok
 pluginManager	installAttempt	{previous} could not serve the package; retrying through {registry} (registry {index} of {total})	{previous} からパッケージを取得できなかったため、{registry} で再試行します ({total} 件中 {index} 件目のレジストリ)	ok
@@ -169,7 +230,8 @@ pluginManager	installFailureBuildBlockedManual	pnpm blocked install scripts; all
 pluginManager	installFailureIntegrity	The downloaded package failed its integrity check	ダウンロードしたパッケージの整合性チェックに失敗しました	ok
 pluginManager	installFailureTimeout	The install timed out	インストールがタイムアウトしました	ok
 pluginManager	installFailurePnpmMissing	pnpm was not found, so nothing can be installed	pnpm が見つからないため、インストールできません	ok
-pluginManager	installFailureGeneric	Something went wrong during the install; the details say what	インストール中に問題が発生しました。詳細に原因が表示されます	ok
+pluginManager	installFailureGeneric	The install command failed; the details say why	インストールコマンドが失敗しました。詳細に理由があります	ok
+pluginManager	installFailedEnabling	The install finished; enabling the plugin is what failed	インストールは完了しました。失敗したのはプラグインの有効化です	ok
 pluginManager	terminalCommandLine	Command line {n}	コマンドライン {n}	ok
 pluginManager	terminalRunning	Running	実行中	ok
 pluginManager	terminalFailed	Failed	失敗	ok
@@ -217,6 +279,14 @@ pluginManager	reasonBundleInUse	Other configuration still uses this bundle's com
 pluginManager	reasonStaleApproval	The pending script approvals changed; install again to refresh them.	許可待ちのインストールスクリプトが変わったため、再インストールして更新してください。	ok
 pluginManager	reasonIncompatibleVersion	{plugin} is incompatible with DSH {runtime} (requires {requirements}); running it may cause crashes or data loss.	{plugin} は DSH {runtime} と互換性がありません（{requirements} が必要）。実行するとクラッシュやデータ損失を起こす可能性があります。	ok
 pluginManager	reasonIncompatibleVersionUnnamed	This plugin is incompatible with the running DSH version; running it may cause crashes or data loss.	このプラグインは実行中の DSH のバージョンと互換性がありません。実行するとクラッシュやデータ損失が起きる可能性があります。	ok
+pluginManager	reasonUnsupportedPlatform	This plugin does not support the operating system running DSH.	このプラグインは DSH が動作している OS に対応していません。	ok
 pluginManager	reasonIncompatibleInstall	Install a plugin version compatible with this DSH.	この DSH と互換性のあるバージョンのプラグインをインストールしてください。	ok
 pluginManager	reasonIncompatibleInstalled	Uninstall it and install a version compatible with this DSH.	アンインストールして、この DSH と互換性のあるバージョンをインストールしてください。	ok
 pluginManager	reasonOperationError	The Host reported an error.	ホストがエラーを報告しました。	ok
+pluginManager	detailTitle	Details	詳細	ok
+pluginManager	detailLoading	Reading details	詳細を読み込み中	ok
+pluginManager	detailTooLarge	The details exceed the size limit and were not loaded.	詳細がサイズ上限を超えているため、読み込みませんでした。	ok
+pluginManager	detailNetwork	Could not reach the source of the details.	詳細の取得元に接続できませんでした。	ok
+pluginManager	detailInvalid	The plugin declares an invalid details file.	プラグインが宣言している詳細ファイルが正しくありません。	ok
+pluginManager	detailFailed	Could not read the details.	詳細を読み込めませんでした。	ok
+pluginManager	detailFootnotes	Footnotes	脚注	ok

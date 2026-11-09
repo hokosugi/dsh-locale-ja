@@ -1,6 +1,6 @@
 # conversation — 日本語訳レビュー
 
-訳済み **374 / 374** キー / 要確認 0 件
+訳済み **383 / 383** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -8,6 +8,7 @@
 
 | 確認 | キー | 英語 | 日本語 |
 | --- | --- | --- | --- |
+| - [ ] | `quote.remove` | Remove quote | 引用を削除 |
 | - [ ] | `shortcut.newline` | New line | 改行 |
 | - [ ] | `shortcut.complementary` | Use the complementary Queue / Steer action | もう一方のキュー / ステア操作を使う |
 | - [ ] | `shortcut.slash` | Open command menu | コマンドメニューを開く |
@@ -26,6 +27,7 @@
 | - [ ] | `input.file` | File | ファイル |
 | - [ ] | `input.stop` | Stop generating | 生成を停止 |
 | - [ ] | `input.send` | Send message | メッセージを送信 |
+| - [ ] | `input.sending` | Sending message | メッセージを送信中 |
 | - [ ] | `input.send.queue` | Queue message | メッセージをキューに追加 |
 | - [ ] | `input.send.steer` | Steer message | メッセージをステア |
 | - [ ] | `attachment.pending` | Pending attachments | 未送信の添付 |
@@ -90,10 +92,12 @@
 | - [ ] | `tool.title.getGoal` | View goal | ゴールを表示 |
 | - [ ] | `tool.title.updateGoal` | Update goal | ゴールを更新 |
 | - [ ] | `tool.preparing.content` | {kilobytes}KB | {kilobytes}KB |
-| - [ ] | `tool.title.createSchedule` | Create reminder | リマインダーを作成 |
-| - [ ] | `tool.title.listSchedules` | List reminders | リマインダー一覧 |
-| - [ ] | `tool.title.deleteSchedule` | Delete reminder | リマインダーを削除 |
-| - [ ] | `tool.title.updateSchedule` | Update reminder | リマインダーを更新 |
+| - [ ] | `tool.title.createSchedule` | Create automation task | 自動化タスクを作成 |
+| - [ ] | `tool.title.listSchedules` | List automation tasks | 自動化タスク一覧 |
+| - [ ] | `tool.title.viewSchedule` | View automation task | 自動化タスクを表示 |
+| - [ ] | `tool.title.editSchedule` | Edit automation task | 自動化タスクを編集 |
+| - [ ] | `tool.title.deleteSchedule` | Delete automation task | 自動化タスクを削除 |
+| - [ ] | `tool.title.updateSchedule` | Update automation task | 自動化タスクを更新 |
 | - [ ] | `detail.state` | Status | 状態 |
 | - [ ] | `detail.todo.completed` | Completed | 完了 |
 | - [ ] | `detail.todo.in_progress` | In progress | 進行中 |
@@ -129,12 +133,16 @@
 | - [ ] | `detail.schedule.frequency` | Repeat | 繰り返し |
 | - [ ] | `detail.schedule.scheduled` | Scheduled | 予約済み |
 | - [ ] | `detail.schedule.overdue` | Overdue, awaiting session resume | 期限超過。セッションの再開待ち |
-| - [ ] | `detail.schedule.empty` | No reminders | リマインダーはありません |
+| - [ ] | `detail.schedule.active` | Enabled | 有効 |
+| - [ ] | `detail.schedule.paused` | Paused | 一時停止中 |
+| - [ ] | `detail.schedule.ended` | Ended | 終了 |
+| - [ ] | `detail.schedule.empty` | No automation tasks | 自動化タスクはありません |
 | - [ ] | `detail.schedule.deleted` | Deleted | 削除済み |
-| - [ ] | `detail.schedule.count` | {count} reminders | リマインダー {count} 件 |
+| - [ ] | `detail.schedule.count` | {count} automation tasks | 自動化タスク {count} 件 |
 | - [ ] | `detail.schedule.daily` | Every day at {time} ({zone}) | 毎日 {time} ({zone}) |
 | - [ ] | `detail.schedule.weekly` | Weekly on {days} at {time} ({zone}) | 毎週 {days} の {time} ({zone}) |
 | - [ ] | `detail.schedule.cron` | Cron {expression} ({zone}) | Cron {expression} ({zone}) |
+| - [ ] | `detail.schedule.custom` | Custom | カスタム |
 | - [ ] | `detail.weekday.1` | Mon | 月 |
 | - [ ] | `detail.weekday.2` | Tue | 火 |
 | - [ ] | `detail.weekday.3` | Wed | 水 |
@@ -319,6 +327,7 @@
 | - [ ] | `tool.title.bash` | Bash | Bash |
 | - [ ] | `tool.title.write` | Write | 書き込み |
 | - [ ] | `tool.title.edit` | Edit | 編集 |
+| - [ ] | `tool.title.applyPatch` | Apply patch | パッチを適用 |
 | - [ ] | `tool.title.code` | Code | コード |
 | - [ ] | `tool.title.generic` | Tool call | ツール呼び出し |
 | - [ ] | `tool.title.inspect` | Query Cordis environment | Cordis 環境を照会 |

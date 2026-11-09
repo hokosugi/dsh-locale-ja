@@ -43,5 +43,18 @@
   "app.finder": "Finder",
   "app.explorer": "エクスプローラー",
   "app.filemanager": "ファイル",
-  "app.terminal": "ターミナル"
+  "app.terminal": "ターミナル",
+  "menu.openInSidebar": "サイドバーで開く",
+  "menu.openInFloat": "フローティングパネルで開く",
+  "menu.finder": "Finder で表示",
+  "menu.reveal": "フォルダーで表示",
+  "menu.defaultApp": "既定のアプリで開く",
+  "menu.external": "外部ブラウザーで開く",
+  "menu.copyLink": "リンクのアドレスをコピー",
+  "menu.copyPath": "ファイルパスをコピー",
+  "menu.copyDirectoryPath": "フォルダーパスをコピー",
+  "menu.copied": "コピーしました",
+  "menu.copyFailed": "コピーできませんでした。内容が利用できるか確認して、再試行してください。",
+  "path.opened": "別のデバイスで開きました",
+  "path.revealed": "別のデバイスでファイルの場所を表示しました"
 }

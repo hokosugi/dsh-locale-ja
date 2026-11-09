@@ -1,6 +1,6 @@
 # approval — 日本語訳レビュー
 
-訳済み **5 / 5** キー / 要確認 0 件
+訳済み **7 / 7** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -12,6 +12,8 @@
 | - [ ] | `detail.aria` | Approval details | 承認の詳細 |
 | - [ ] | `escalation` | Tool {toolName} requests privileged execution | ツール {toolName} が特権実行を要求しています |
 | - [ ] | `reject` | Reject | 拒否 |
+| - [ ] | `allow` | Allow | 許可 |
 | - [ ] | `allowOnce` | Allow once | 1 回だけ許可 |
+| - [ ] | `allowAlways` | Always allow | 常に許可 |
 
 確認列: `- [ ]` は未確認、`- [!]` は要確認。レンダラーによってはチェックボックスとして表示されます。

@@ -73,13 +73,13 @@
   "fetching": "プロバイダーに問い合わせています…",
   "fetchNeedsBaseUrl": "先にベース URL を入力してから取得してください。",
   "fetchEmpty": "プロバイダーはモデルを 1 つも公開していません。手動で追加してください。",
-  "fetchTitle": "追加するモデルを選択",
-  "fetchDescription": "このプロバイダーで利用可能なモデルです。追加するものを選んでください。",
+  "fetchTitle": "モデルを選択",
+  "fetchDescription": "このプロバイダーが利用できるモデルです。チェックしたモデルが一覧になります。",
   "fetchSearch": "モデルを検索",
   "fetchNoMatches": "一致するモデルがありません。",
   "fetchSelectAll": "すべて選択",
   "fetchDeselectAll": "選択を解除",
-  "fetchAdopt": "選択したものを追加",
+  "fetchAdopt": "一覧を更新",
   "customTag": "カスタム",
   "customRoute": "プロバイダー ID",
   "customRouteHint": "英小文字で始まる識別子です。リクエスト内でこのプロバイダーを一意に示し、認証情報の名前の元にもなります。",
@@ -132,5 +132,8 @@
   "modelReasoningValueRequired": "「オフ」以外のすべてのレベルに API の値が必要です。空の値は使えません。",
   "modelReasoningAdd": "レベルを追加",
   "modelReasoningRemove": "レベルを削除",
-  "modelReasoningOffValuePlaceholder": "推論をオフにします"
+  "modelReasoningOffValuePlaceholder": "推論をオフにします",
+  "reorderModel": "モデルを並べ替え",
+  "reorderModelHelp": "ドラッグするか、上下の矢印キーで並べ替えます。",
+  "fetchKeepOne": "少なくとも 1 つのモデルを選択したままにしてください。"
 }

@@ -1,4 +1,7 @@
 namespace	key	en	ja	status
+sidebarRight	menu.close	Close	閉じる	ok
+sidebarRight	menu.closeOthers	Close Other Tabs	ほかのタブを閉じる	ok
+sidebarRight	menu.closeRight	Close Tabs to the Right	右側のタブを閉じる	ok
 sidebarRight	command.close	Close current page or window	現在のページまたはウィンドウを閉じる	ok
 sidebarRight	command.refresh	Refresh current page	現在のページを更新	ok
 sidebarRight	command.noRefresh	This page cannot be refreshed	このページは更新できません	ok

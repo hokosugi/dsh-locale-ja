@@ -1,6 +1,6 @@
 # pluginMarket — 日本語訳レビュー
 
-訳済み **78 / 78** キー / 要確認 0 件
+訳済み **87 / 87** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -14,14 +14,14 @@
 | - [ ] | `retry` | Retry | 再試行 |
 | - [ ] | `close` | Close | 閉じる |
 | - [ ] | `cancel` | Cancel | キャンセル |
-| - [ ] | `emptyTitle` | No plugin markets yet | プラグインマーケットがまだありません |
-| - [ ] | `emptyDescription` | Add a plugin market index to browse and install its plugins here. | プラグインマーケットのインデックスを追加すると、ここで一覧からインストールできます。 |
+| - [ ] | `emptyTitle` | No plugin indexes yet | プラグインインデックスがまだありません |
+| - [ ] | `emptyDescription` | Add a plugin index to browse and install its plugins here. | プラグインインデックスのインデックスを追加すると、ここで一覧からインストールできます。 |
 | - [ ] | `addFirstSource` | Add index source | インデックスの参照元を追加 |
 | - [ ] | `sourcesFailed` | Could not read the index sources. | インデックスの参照元を読み込めませんでした。 |
 | - [ ] | `manageSources` | Manage index sources… | インデックスの参照元を管理… |
-| - [ ] | `marketMenu` | Switch plugin market, currently {market} | プラグインマーケットを切り替え（現在: {market}） |
+| - [ ] | `marketMenu` | Switch plugin index, currently {market} | プラグインインデックスを切り替え（現在: {market}） |
 | - [ ] | `sourcesTitle` | Index sources | インデックスの参照元 |
-| - [ ] | `sourcesDescription` | A plugin market is published as the URL of one index file. Discover browses the indexes listed here. | プラグインマーケットは 1 つのインデックスファイルの URL として公開されています。「プラグインを探す」では、ここに登録されたインデックスを参照します。 |
+| - [ ] | `sourcesDescription` | A plugin index is published as the URL of one index file. Discover browses the indexes listed here. | プラグインインデックスは 1 つのインデックスファイルの URL として公開されています。「プラグインを探す」では、ここに登録されたインデックスを参照します。 |
 | - [ ] | `sourcesLabel` | Added index sources | 追加済みの参照元 |
 | - [ ] | `sourceUrl` | Index URL | インデックスの URL |
 | - [ ] | `sourcePlaceholder` | https://example.com/index.json | https://example.com/index.json |
@@ -76,7 +76,7 @@
 | - [ ] | `factSourceCode` | Source code | ソースコード |
 | - [ ] | `factCategory` | Category | カテゴリ |
 | - [ ] | `factLabels` | Labels | ラベル |
-| - [ ] | `factMarket` | Plugin market | プラグインマーケット |
+| - [ ] | `factMarket` | Plugin index | プラグインインデックス |
 | - [ ] | `versionsTitle` | Versions | バージョン |
 | - [ ] | `versionsLabel` | Versions of {name} | {name} のバージョン |
 | - [ ] | `versionDefault` | Recommended | 推奨 |
@@ -86,5 +86,14 @@
 | - [ ] | `versionPrerelease` | Prerelease | プレリリース |
 | - [ ] | `confirmTitle` | Install "{name}"? | 「{name}」をインストールしますか？ |
 | - [ ] | `installTrust` | Plugins run on this machine with your permissions. Make sure you trust where this one comes from. | プラグインはこのマシンであなたの権限で実行されます。このプラグインの入手元が信頼できるか確認してください。 |
+| - [ ] | `detailTitle` | Details | 詳細 |
+| - [ ] | `detailLoading` | Reading details | 詳細を読み込み中 |
+| - [ ] | `detailTooLarge` | The details or their repository exceed the size limit and were not loaded. | 詳細またはそのリポジトリがサイズ上限を超えているため、読み込みませんでした。 |
+| - [ ] | `detailNetwork` | Could not reach the source of the details. | 詳細の取得元に接続できませんでした。 |
+| - [ ] | `detailDenied` | Could not access the repository of the details. Check your Git credentials. | 詳細のリポジトリにアクセスできませんでした。Git の認証情報を確認してください。 |
+| - [ ] | `detailGitUnavailable` | The details are in a repository that must be read with Git, and Git could not run. Install Git, then retry. | 詳細は Git で読む必要があるリポジトリにありますが、Git を実行できませんでした。Git をインストールしてから再試行してください。 |
+| - [ ] | `detailInvalid` | The plugin declares an invalid details file. | プラグインが宣言している詳細ファイルが正しくありません。 |
+| - [ ] | `detailFailed` | Could not read the details. | 詳細を読み込めませんでした。 |
+| - [ ] | `footnotes` | Footnotes | 脚注 |
 
 確認列: `- [ ]` は未確認、`- [!]` は要確認。レンダラーによってはチェックボックスとして表示されます。

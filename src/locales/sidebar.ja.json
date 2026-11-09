@@ -4,5 +4,7 @@
   "toggle.open": "サイドバーを開く",
   "toggle.collapse": "サイドバーを折りたたむ",
   "panels.label": "グローバルパネル",
-  "panels.more": "その他"
+  "panels.more": "その他",
+  "navigation.label": "ナビゲーション",
+  "version.copied": "バージョンをコピーしました"
 }

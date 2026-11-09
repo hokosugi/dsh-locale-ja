@@ -1,0 +1,14 @@
+{
+  "menu.finder": "Finder で表示",
+  "menu.reveal": "フォルダーで表示",
+  "menu.saveAs": "名前を付けて保存…",
+  "menu.copied": "コピーしました",
+  "menu.copyImage": "画像をコピー",
+  "menu.download": "ダウンロード",
+  "menu.saveFailed": "保存できませんでした。保存元と保存先を確認して、再試行してください。",
+  "menu.copyFailed": "コピーできませんでした。内容が利用できるか確認して、再試行してください。",
+  "menu.saved": "保存しました",
+  "menu.downloadStarted": "ダウンロードを開始しました",
+  "menu.downloaded": "ダウンロードが完了しました",
+  "path.revealError": "ファイルの場所を表示できませんでした。もう一度お試しください。"
+}

@@ -12,7 +12,7 @@
 
 > ### 仕組み
 >
-> Agent はツールを直接呼び出して、ファイルの読み書き・検索・ターミナルコマンドの実行を行います。スキル、計画、ゴール、サブエージェント、ワークフロー、コンテキスト圧縮を利用できます。
+> Agent はツールを直接呼び出して、ファイルの読み書き・検索・ターミナルコマンドの実行を行います。スキル、計画、ゴール、サブエージェント、ワークフロー、プラグイン管理、コンテキスト圧縮を利用できます。
 >
 > ### どんなときに選ぶか
 >
@@ -23,7 +23,7 @@
 ```markdown
 ### How it works
 
-The agent calls tools directly to read and edit files, search, and run terminal commands. It includes Skills, planning, goals, subagents, workflows, and context compaction.
+The agent calls tools directly to read and edit files, search, and run terminal commands. It includes Skills, planning, goals, subagents, workflows, plugin management, and context compaction.
 
 ### When to choose it
 
@@ -80,7 +80,7 @@ Expected output: a summary with references that you can check against the origin
 >
 > ### 標準モードとの違い
 >
-> どちらのモードもコーディングや一括処理を扱えます。標準モードは個々のツールをそのままモデルに渡し、PTC はツール呼び出しをコードで組み立てます。現在の PTC プリセットでは workflow ツールが無効になっています。速度とトークン消費は、タスクと結果の扱い方によって変わります。
+> どちらのモードもコーディングや一括処理を扱えます。標準モードは個々のツールをそのままモデルに渡し、PTC はツール呼び出しをコードで組み立てます。現在の PTC プリセットではワークフローとプラグイン管理のツールが無効になっています。速度とトークン消費は、タスクと結果の扱い方によって変わります。
 
 <details><summary>英語原文</summary>
 
@@ -95,7 +95,7 @@ Tool results first reach the program, which can filter and combine them. The mod
 
 ### Compared with Standard mode
 
-Both modes can handle coding and batch tasks. Standard mode exposes individual tools directly; PTC organizes tool calls in code. The current PTC preset leaves the workflow tool disabled. Speed and token use depend on the task and how the program handles its results.
+Both modes can handle coding and batch tasks. Standard mode exposes individual tools directly; PTC organizes tool calls in code. The current PTC preset leaves the workflow and plugin management tools disabled. Speed and token use depend on the task and how the program handles its results.
 ```
 
 </details>
@@ -188,7 +188,7 @@ Run the same task separately in Standard and Minimal modes from the same startin
 
 > ### 何を作れるか
 >
-> 創造モードには標準のタスク用ツールに加えて、実行時の調査、プラグインの永続的な管理、Cordis プラグインと Agent プリセットを作るためのガイドが含まれます。機能や UI を追加するプラグインも、特定の作業向けにツールとプロンプトを組み合わせたプリセットも作れます。
+> 創造モードには標準のタスク用ツールに加えて、実行時の調査、Cordis プラグインと Agent プリセットを作るためのガイドが含まれます。機能や UI を追加するプラグインも、特定の作業向けにツールとプロンプトを組み合わせたプリセットも作れます。
 >
 > ### プラグインとモード
 >
@@ -203,7 +203,7 @@ Run the same task separately in Standard and Minimal modes from the same startin
 ```markdown
 ### What you can create
 
-Creator mode includes the standard task tools plus runtime inspection, persistent plugin management, and guidance for authoring Cordis plugins and agent presets. It can create a plugin that adds a capability or UI, or a preset that combines tools and prompts for a particular job.
+Creator mode includes the standard task tools plus runtime inspection and guidance for authoring Cordis plugins and agent presets. It can create a plugin that adds a capability or UI, or a preset that combines tools and prompts for a particular job.
 
 ### Plugins and modes
 

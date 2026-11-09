@@ -1,26 +1,32 @@
 namespace	key	en	ja	status
-schedule.catalog	trigger.label	Reminders	リマインダー	ok
-schedule.catalog	list.loading	Loading reminders…	リマインダーを読み込み中…	ok
-schedule.catalog	list.error	Could not load reminders.	リマインダーを読み込めませんでした。	ok
+schedule.catalog	trigger.label	Automation tasks	自動化タスク	ok
+schedule.catalog	list.loading	Loading automation tasks…	自動化タスクを読み込み中…	ok
+schedule.catalog	list.error	Could not load automation tasks.	自動化タスクを読み込めませんでした。	ok
 schedule.catalog	list.retry	Retry	再試行	ok
 schedule.catalog	delete.action	Delete	削除	ok
 schedule.catalog	delete.pending	Deleting…	削除中…	ok
-schedule.catalog	delete.label	Delete reminder: {title}	リマインダーを削除: {title}	ok
-schedule.catalog	list.open	Open reminder details: {title}	リマインダーの詳細を開く: {title}	ok
-schedule.catalog	trigger.one	{count} reminder	リマインダー {count} 件	ok
-schedule.catalog	trigger.other	{count} reminders	リマインダー {count} 件	ok
-schedule.catalog	list.aria	Active reminders	有効なリマインダー	ok
+schedule.catalog	delete.label	Delete automation task: {title}	自動化タスクを削除: {title}	ok
+schedule.catalog	list.open	Open automation task details: {title}	自動化タスクの詳細を開く: {title}	ok
+schedule.catalog	trigger.one	{count} automation task	自動化タスク {count} 件	ok
+schedule.catalog	trigger.other	{count} automation tasks	自動化タスク {count} 件	ok
+schedule.catalog	list.aria	Enabled automation tasks	有効な自動化タスク	ok
 schedule.catalog	list.nextRun	Next run	次回の実行	ok
 schedule.catalog	frequency.once	Once	1 回のみ	ok
 schedule.catalog	frequency.every	Every {value} {unit}	{value} {unit}ごと	ok
+schedule.catalog	frequency.hostMonthly	Monthly on day {days} at {time}, or month end	毎月 {days} 日 {time}（存在しない場合は月末）	ok
+schedule.catalog	frequency.hostDailyInterval	Every {interval} days at {time}	{interval} 日ごと {time}	ok
+schedule.catalog	frequency.hostWeeklyInterval	Every {interval} weeks on {weekdays} at {time}	{interval} 週ごと {weekdays} {time}	ok
+schedule.catalog	frequency.hostMonthlyInterval	Every {interval} months on day {days} at {time}, or month end	{interval} か月ごと {days} 日 {time}（存在しない場合は月末）	ok
+schedule.catalog	frequency.hostZone	{rule} ({timeZone})	{rule}（{timeZone}）	ok
+schedule.catalog	frequency.hostCustom	Custom	カスタム	ok
 schedule.catalog	time.locale	en	ja	ok
 schedule.catalog	time.utcPrefix	UTC	UTC	ok
 schedule.catalog	frequency.daily	Daily at {time} ({timeZone})	毎日 {time} ({timeZone})	ok
 schedule.catalog	frequency.dailyLocal	Daily at {time}	毎日 {time}	ok
 schedule.catalog	frequency.weekly	Weekly on {weekdays} at {time} ({timeZone})	毎週 {weekdays} の {time} ({timeZone})	ok
 schedule.catalog	frequency.weeklyLocal	Weekly on {weekdays} at {time}	毎週 {weekdays} の {time}	ok
-schedule.catalog	frequency.cron	Cron {expression} ({timeZone})	Cron {expression} ({timeZone})	ok
-schedule.catalog	frequency.cronLocal	Cron {expression}	Cron {expression}	ok
+schedule.catalog	frequency.cron	Custom ({timeZone})	カスタム（{timeZone}）	ok
+schedule.catalog	frequency.cronLocal	Custom	カスタム	ok
 schedule.catalog	frequency.cronRule	{rule} ({timeZone})	{rule} ({timeZone})	ok
 schedule.catalog	cron.list.join	, 	、	ok
 schedule.catalog	cron.part.join	 	 	ok
@@ -67,5 +73,5 @@ schedule.catalog	unit.second.other	seconds	秒	ok
 schedule.catalog	relative.now	Due now	まもなく実行	ok
 schedule.catalog	relative.future	in {value} {unit}	{value} {unit}後	ok
 schedule.catalog	relative.overdue	{value} {unit} overdue	{value} {unit}超過	ok
-schedule.catalog	mark.aria	{count} scheduled tasks	スケジュールされたタスク {count} 件	ok
+schedule.catalog	mark.aria	{count} automation tasks	スケジュールされたタスク {count} 件	ok
 schedule.catalog	hover.more	{count} more	ほか {count} 件	ok

@@ -8,10 +8,10 @@
 
 | 確認 | キー | 英語 | 日本語 |
 | --- | --- | --- | --- |
-| - [ ] | `trigger` | Agent Team | Agent チーム |
-| - [ ] | `loading` | Loading Team… | チームを読み込み中… |
+| - [ ] | `trigger` | Agent team | Agent チーム |
+| - [ ] | `loading` | Loading team… | チームを読み込み中… |
 | - [ ] | `unavailable` | Team is unavailable | チームを利用できません |
-| - [ ] | `failure` | Invalid persisted Team record: {message} | 保存されたチームの記録が無効です: {message} |
+| - [ ] | `failure` | Invalid persisted team record: {message} | 保存されたチームの記録が無効です: {message} |
 | - [ ] | `empty` | No shared tasks yet. Create them through the conversation. | 共有タスクはまだありません。会話から作成してください。 |
 | - [ ] | `roster` | Members | メンバー |
 | - [ ] | `tasks` | Shared tasks | 共有タスク |

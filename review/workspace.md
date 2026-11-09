@@ -81,8 +81,8 @@
 | - [ ] | `archive.confirm.subagents.other` | {n} running subagents: {names} | 実行中のサブエージェント {n} 件: {names} |
 | - [ ] | `archive.confirm.jobs.one` | {n} background job: {names} | バックグラウンドジョブ {n} 件: {names} |
 | - [ ] | `archive.confirm.jobs.other` | {n} background jobs: {names} | バックグラウンドジョブ {n} 件: {names} |
-| - [ ] | `archive.confirm.schedules.one` | {n} scheduled reminder: {names} | スケジュールされたリマインダー {n} 件: {names} |
-| - [ ] | `archive.confirm.schedules.other` | {n} scheduled reminders: {names} | スケジュールされたリマインダー {n} 件: {names} |
+| - [ ] | `archive.confirm.schedules.one` | {n} scheduled reminder: {names} | スケジュールされた自動化タスク {n} 件: {names} |
+| - [ ] | `archive.confirm.schedules.other` | {n} scheduled reminders: {names} | スケジュールされた自動化タスク {n} 件: {names} |
 | - [ ] | `archive.confirm.other.one` | {n} other item of work ({kind}) | その他の作業 {n} 件 ({kind}) |
 | - [ ] | `archive.confirm.other.other` | {n} other items of work ({kind}) | その他の作業 {n} 件 ({kind}) |
 | - [ ] | `archive.confirm.listSeparator` | ,  | 、 |

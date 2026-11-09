@@ -1,4 +1,5 @@
 namespace	key	en	ja	status
+conversation	quote.remove	Remove quote	引用を削除	ok
 conversation	shortcut.newline	New line	改行	ok
 conversation	shortcut.complementary	Use the complementary Queue / Steer action	もう一方のキュー / ステア操作を使う	ok
 conversation	shortcut.slash	Open command menu	コマンドメニューを開く	ok
@@ -17,6 +18,7 @@ conversation	input.commands	Add files or run commands	ファイルを追加ま�
 conversation	input.file	File	ファイル	ok
 conversation	input.stop	Stop generating	生成を停止	ok
 conversation	input.send	Send message	メッセージを送信	ok
+conversation	input.sending	Sending message	メッセージを送信中	ok
 conversation	input.send.queue	Queue message	メッセージをキューに追加	ok
 conversation	input.send.steer	Steer message	メッセージをステア	ok
 conversation	attachment.pending	Pending attachments	未送信の添付	ok
@@ -81,10 +83,12 @@ conversation	tool.title.createGoal	Create goal	ゴールを作成	ok
 conversation	tool.title.getGoal	View goal	ゴールを表示	ok
 conversation	tool.title.updateGoal	Update goal	ゴールを更新	ok
 conversation	tool.preparing.content	{kilobytes}KB	{kilobytes}KB	ok
-conversation	tool.title.createSchedule	Create reminder	リマインダーを作成	ok
-conversation	tool.title.listSchedules	List reminders	リマインダー一覧	ok
-conversation	tool.title.deleteSchedule	Delete reminder	リマインダーを削除	ok
-conversation	tool.title.updateSchedule	Update reminder	リマインダーを更新	ok
+conversation	tool.title.createSchedule	Create automation task	自動化タスクを作成	ok
+conversation	tool.title.listSchedules	List automation tasks	自動化タスク一覧	ok
+conversation	tool.title.viewSchedule	View automation task	自動化タスクを表示	ok
+conversation	tool.title.editSchedule	Edit automation task	自動化タスクを編集	ok
+conversation	tool.title.deleteSchedule	Delete automation task	自動化タスクを削除	ok
+conversation	tool.title.updateSchedule	Update automation task	自動化タスクを更新	ok
 conversation	detail.state	Status	状態	ok
 conversation	detail.todo.completed	Completed	完了	ok
 conversation	detail.todo.in_progress	In progress	進行中	ok
@@ -120,12 +124,16 @@ conversation	detail.schedule.when	Scheduled for	実行予定	ok
 conversation	detail.schedule.frequency	Repeat	繰り返し	ok
 conversation	detail.schedule.scheduled	Scheduled	予約済み	ok
 conversation	detail.schedule.overdue	Overdue, awaiting session resume	期限超過。セッションの再開待ち	ok
-conversation	detail.schedule.empty	No reminders	リマインダーはありません	ok
+conversation	detail.schedule.active	Enabled	有効	ok
+conversation	detail.schedule.paused	Paused	一時停止中	ok
+conversation	detail.schedule.ended	Ended	終了	ok
+conversation	detail.schedule.empty	No automation tasks	自動化タスクはありません	ok
 conversation	detail.schedule.deleted	Deleted	削除済み	ok
-conversation	detail.schedule.count	{count} reminders	リマインダー {count} 件	ok
+conversation	detail.schedule.count	{count} automation tasks	自動化タスク {count} 件	ok
 conversation	detail.schedule.daily	Every day at {time} ({zone})	毎日 {time} ({zone})	ok
 conversation	detail.schedule.weekly	Weekly on {days} at {time} ({zone})	毎週 {days} の {time} ({zone})	ok
 conversation	detail.schedule.cron	Cron {expression} ({zone})	Cron {expression} ({zone})	ok
+conversation	detail.schedule.custom	Custom	カスタム	ok
 conversation	detail.weekday.1	Mon	月	ok
 conversation	detail.weekday.2	Tue	火	ok
 conversation	detail.weekday.3	Wed	水	ok
@@ -310,6 +318,7 @@ conversation	tool.title.read	Read	読み取り	ok
 conversation	tool.title.bash	Bash	Bash	ok
 conversation	tool.title.write	Write	書き込み	ok
 conversation	tool.title.edit	Edit	編集	ok
+conversation	tool.title.applyPatch	Apply patch	パッチを適用	ok
 conversation	tool.title.code	Code	コード	ok
 conversation	tool.title.generic	Tool call	ツール呼び出し	ok
 conversation	tool.title.inspect	Query Cordis environment	Cordis 環境を照会	ok
@@ -407,8 +416,6 @@ pluginManager	statusProblem	Problem	問題	ok
 pluginManager	statusBeta	Experimental	実験的	ok
 pluginManager	reasonLabel	Reason	理由	ok
 pluginManager	metadataError	Package metadata error: {error}	パッケージメタデータのエラー: {error}	ok
-pluginManager	previewAlt	{name} feature preview	{name} の機能プレビュー	ok
-pluginManager	previewUnavailable	Could not display feature preview	機能プレビューを表示できませんでした	ok
 pluginManager	versionTag	v{version}	v{version}	ok
 pluginManager	partsLabel	Components	コンポーネント	ok
 pluginManager	sourceTitle	Source	ソース	ok
@@ -430,6 +437,7 @@ pluginManager	rowPhaseActive	Running	実行中	ok
 pluginManager	rowPhaseFailed	Problem	問題	ok
 pluginManager	rowPhaseUnloading	Unloading	アンロード中	ok
 pluginManager	enableToggle	Enable {name}	{name} を有効にする	ok
+pluginManager	applyingChange	Applying changes to {name}	{name} に変更を適用中	ok
 pluginManager	openDetail	View {name}	{name} を表示	ok
 pluginManager	backToList	Back to plugins	プラグイン一覧に戻る	ok
 pluginManager	crumbRoot	Plugins	プラグイン	ok
@@ -453,7 +461,7 @@ pluginManager	installPathTemplateHint	Replace this with the actual path to your 
 pluginManager	installGuideFill	Use example	例を入力	ok
 pluginManager	installGuideFillAria	Use the example {example}	例 {example} を入力	ok
 pluginManager	installGuideSafety	Install only plugins you trust: they run with your permissions and can damage DeepSeek Harness or leak your data.	信頼できるプラグインだけをインストールしてください。プラグインはあなたの権限で動作し、DeepSeek Harness を壊したり、データを外部に漏らしたりする可能性があります。	ok
-pluginManager	installUpgradeNotice	On-demand Official plugins offer Update when their version differs from DSH. To update other plugins, uninstall and reinstall them.	オンデマンドの公式プラグインは、DSH のバージョンと異なるときに「更新」が表示されます。ほかのプラグインを更新するには、アンインストールしてから入れ直してください。	ok
+pluginManager	installUpgradeNotice	On-demand official plugins offer Update when their version differs from DSH. To update other plugins, uninstall and reinstall them.	オンデマンドの公式プラグインは、DSH のバージョンと異なるときに「更新」が表示されます。ほかのプラグインを更新するには、アンインストールしてから入れ直してください。	ok
 pluginManager	registryToggle	Registry	レジストリ	ok
 pluginManager	registryLegend	The npm registry the plugin is downloaded from	プラグインのダウンロード元になる npm レジストリ	ok
 pluginManager	registryDefault	Default registry	既定のレジストリ	ok
@@ -472,6 +480,8 @@ pluginManager	installConfirmedRefused	This plugin cannot be installed	このプ�
 pluginManager	installProblemInvalid	This is not a package name or address that can be installed: {reason}	インストールできるパッケージ名またはアドレスではありません: {reason}	ok
 pluginManager	installProblemInstalled	This plugin is already installed. To upgrade it, uninstall it and install it again	このプラグインはすでにインストールされています。アップグレードするにはアンインストールしてから再インストールしてください	ok
 pluginManager	installProblemShipped	This plugin ships with DSH; upgrading DSH updates it	このプラグインは DSH に同梱されています。DSH をアップグレードすると更新されます	ok
+pluginManager	installBundledTitle	This plugin ships with DSH	このプラグインは DSH に同梱されています	ok
+pluginManager	installBundledDescription	Enable it without downloading another copy	別のコピーをダウンロードせずに有効にできます	ok
 pluginManager	installProblemNotFound	No such plugin was found	該当するプラグインが見つかりません	ok
 pluginManager	installProblemNotPackage	The path does not exist or is not a valid plugin package	そのパスが存在しないか、有効なプラグインパッケージではありません	ok
 pluginManager	installProblemNotBundle	This package declares no bundle, so it cannot be installed as a plugin: {reason}	このパッケージはバンドルを宣言していないため、プラグインとしてインストールできません: {reason}	ok
@@ -488,6 +498,64 @@ pluginManager	sourceTargetSpec	Source for this DSH	この DSH 向けのソース
 pluginManager	sourceTargetVersion	Version for this DSH	この DSH 向けのバージョン	ok
 pluginManager	update	Update	更新	ok
 pluginManager	updateLabel	Update {name}	{name} を更新	ok
+pluginManager	versionsTitle	Versions	バージョン	ok
+pluginManager	versionsRecheck	Check again	もう一度確認	ok
+pluginManager	versionsChecking	Checking for updates	更新を確認中	ok
+pluginManager	versionsAvailable	Update to {version} available	{version} への更新があります	ok
+pluginManager	versionsPublished	Published {date}	公開日 {date}	ok
+pluginManager	versionsLatest	Up to date	最新です	ok
+pluginManager	versionsCheckedAt	Last checked at {time}	最終確認 {time}	ok
+pluginManager	versionsBlocked	Newer versions need a DSH update	新しいバージョンには DSH の更新が必要です	ok
+pluginManager	versionsBlockedDetail	{version} needs {peers}; this DSH is {runtime}	{version} には {peers} が必要です。この DSH は {runtime} です	ok
+pluginManager	versionsNoneInstallable	No newer version to install directly	直接インストールできる新しいバージョンはありません	ok
+pluginManager	versionsNoneInstallableDetail	The newer versions are deprecated, prereleases, or declare no bundle. Expand to see them	新しいバージョンは非推奨・プレリリース・またはバンドル未宣言のいずれかです。展開すると表示されます	ok
+pluginManager	versionsFailedNetwork	Could not reach the registry	レジストリに接続できませんでした	ok
+pluginManager	versionsFailedOther	Could not check for updates	更新を確認できませんでした	ok
+pluginManager	versionsDetails	Details	詳細	ok
+pluginManager	versionsNewerCount	{count} newer	新しいバージョン {count} 件	ok
+pluginManager	versionsCollapse	Collapse	折りたたむ	ok
+pluginManager	versionsInstalledTag	Installed	インストール済み	ok
+pluginManager	versionsPrereleaseTag	Prerelease	プレリリース	ok
+pluginManager	versionsDeprecatedTag	Deprecated	非推奨	ok
+pluginManager	versionsNeedsDsh	Needs {peers}	{peers} が必要	ok
+pluginManager	versionsNotBundle	This version declares no bundle and cannot be installed	このバージョンはバンドルを宣言していないためインストールできません	ok
+pluginManager	versionsUpdateLabel	Update to {version}	{version} に更新	ok
+pluginManager	versionsRegistry	Registry	レジストリ	ok
+pluginManager	versionsCheckedAtLabel	Checked at	確認日時	ok
+pluginManager	versionsFallbackTag	Fallback	フォールバック	ok
+pluginManager	versionsFallbackHint	{registry} could not be reached; the list comes from a fallback registry	{registry} に接続できなかったため、フォールバックのレジストリから取得した一覧です	ok
+pluginManager	versionsPrimaryTag	First	先頭	ok
+pluginManager	versionsShowPrerelease	Show prereleases	プレリリースを表示	ok
+pluginManager	versionsOmitted	{count} more versions newer than the installed one are not listed	インストール済みより新しいバージョンが {count} 件あります（未表示）	ok
+pluginManager	versionsProblemNetwork	Unreachable	接続不可	ok
+pluginManager	versionsProblemNotFound	Not found	見つかりません	ok
+pluginManager	versionsProblemUnknown	Failed	失敗	ok
+pluginManager	updatesAvailable	Updates available: {count}	更新があります: {count}	ok
+pluginManager	updatesNone	All plugins are up to date	すべてのプラグインが最新です	ok
+pluginManager	updatesFailed	Some plugins could not be checked	一部のプラグインを確認できませんでした	ok
+pluginManager	updateTitle	Update {name}	{name} を更新	ok
+pluginManager	updateSource	Install from	インストール元	ok
+pluginManager	updateDescription	The update replaces {from} with {to}; the plugin may stop briefly. If the installation fails, {from} is kept or installed again.	更新は {from} を {to} に置き換えます。プラグインは一時的に停止する場合があります。インストールに失敗した場合は {from} を保持するか、入れ直します。	ok
+pluginManager	updateRunning	Updating	更新中	ok
+pluginManager	updateStepChecking	Check {version}	{version} を確認	ok
+pluginManager	updateStepRemoving	Stop and remove {version}	{version} を停止して削除	ok
+pluginManager	updateStepInstalling	Install {version} from {registry}	{registry} から {version} をインストール	ok
+pluginManager	updateStepRestoring	Install {version} again	{version} を入れ直す	ok
+pluginManager	updateDone	Updated to {version}	{version} に更新しました	ok
+pluginManager	updateDoneDetail	The new version is running.	新しいバージョンが動作しています。	ok
+pluginManager	updateRestart	{version} installed; it takes effect after a restart	{version} をインストールしました。再起動後に反映されます	ok
+pluginManager	updateRefused	Cannot update to {version}	{version} に更新できません	ok
+pluginManager	updateRemoveFailed	Could not remove {version}	{version} を削除できませんでした	ok
+pluginManager	updateRestored	Update failed; restored {version}	更新に失敗したため、{version} を復元しました	ok
+pluginManager	updateRestoredDetail	{to} failed to install; {from} was installed again.	{to} のインストールに失敗したため、{from} を入れ直しました。	ok
+pluginManager	updateKept	Could not update to {version}	{version} に更新できませんでした	ok
+pluginManager	updateKeptDetail	{from} was not removed and stays in use. {reason}	{from} は削除されず、そのまま使われます。{reason}	ok
+pluginManager	updateBroken	Update failed; the plugin is not installed	更新に失敗し、プラグインはインストールされていません	ok
+pluginManager	updateBrokenDetail	{to} failed to install, and installing {from} again failed too. Install {name} again from Add plugin.	{to} のインストールに失敗し、{from} の再インストールにも失敗しました。プラグインを追加から {name} を入れ直してください。	ok
+pluginManager	updateLost	The update result is unknown	更新の結果が不明です	ok
+pluginManager	updateLostDetail	The connection to DSH was interrupted: {reason}. Refresh the plugin list to see the installed version.	DSH との接続が中断されました: {reason}。プラグイン一覧を更新してインストール済みのバージョンを確認してください。	ok
+pluginManager	updateOutput	Show installation output	インストールの出力を表示	ok
+pluginManager	updateFinish	Done	完了	ok
 pluginManager	installFailedTitle	The plugin could not be installed	プラグインをインストールできませんでした	ok
 pluginManager	installGithubFailedTitle	Cannot access GitHub	GitHub にアクセスできません	ok
 pluginManager	installGithubTimeoutTitle	GitHub connection timed out	GitHub への接続がタイムアウトしました	ok
@@ -522,11 +590,13 @@ pluginManager	installCancelUnconfirmed	Installation has not been confirmed stopp
 pluginManager	installEnableNow	Enable now	今すぐ有効にする	ok
 pluginManager	installDetailsShow	Show install details	インストールの詳細を表示	ok
 pluginManager	installDetailsHide	Hide install details	インストールの詳細を隠す	ok
+pluginManager	installDetailsNoOutput	No terminal output from this install reached the details	このインストールの端末出力は詳細に届いていません	ok
 pluginManager	installVersion	Version {version}	バージョン {version}	ok
 pluginManager	installSubjectPath	Local directory	ローカルディレクトリ	ok
 pluginManager	installSubjectGit	Git repository	Git リポジトリ	ok
 pluginManager	installSubjectTarball	Tarball	tarball	ok
 pluginManager	installLocation	Installs into {dir}	{dir} にインストールされます	ok
+pluginManager	installLogPath	Full log: {path}	完全なログ: {path}	ok
 pluginManager	installRetry	Retry	再試行	ok
 pluginManager	installChangeRegistry	Change registry	レジストリを変更	ok
 pluginManager	installAttempt	{previous} could not serve the package; retrying through {registry} (registry {index} of {total})	{previous} からパッケージを取得できなかったため、{registry} で再試行します ({total} 件中 {index} 件目のレジストリ)	ok
@@ -543,7 +613,8 @@ pluginManager	installFailureBuildBlockedManual	pnpm blocked install scripts; all
 pluginManager	installFailureIntegrity	The downloaded package failed its integrity check	ダウンロードしたパッケージの整合性チェックに失敗しました	ok
 pluginManager	installFailureTimeout	The install timed out	インストールがタイムアウトしました	ok
 pluginManager	installFailurePnpmMissing	pnpm was not found, so nothing can be installed	pnpm が見つからないため、インストールできません	ok
-pluginManager	installFailureGeneric	Something went wrong during the install; the details say what	インストール中に問題が発生しました。詳細に原因が表示されます	ok
+pluginManager	installFailureGeneric	The install command failed; the details say why	インストールコマンドが失敗しました。詳細に理由があります	ok
+pluginManager	installFailedEnabling	The install finished; enabling the plugin is what failed	インストールは完了しました。失敗したのはプラグインの有効化です	ok
 pluginManager	terminalCommandLine	Command line {n}	コマンドライン {n}	ok
 pluginManager	terminalRunning	Running	実行中	ok
 pluginManager	terminalFailed	Failed	失敗	ok
@@ -591,9 +662,457 @@ pluginManager	reasonBundleInUse	Other configuration still uses this bundle's com
 pluginManager	reasonStaleApproval	The pending script approvals changed; install again to refresh them.	許可待ちのインストールスクリプトが変わったため、再インストールして更新してください。	ok
 pluginManager	reasonIncompatibleVersion	{plugin} is incompatible with DSH {runtime} (requires {requirements}); running it may cause crashes or data loss.	{plugin} は DSH {runtime} と互換性がありません（{requirements} が必要）。実行するとクラッシュやデータ損失を起こす可能性があります。	ok
 pluginManager	reasonIncompatibleVersionUnnamed	This plugin is incompatible with the running DSH version; running it may cause crashes or data loss.	このプラグインは実行中の DSH のバージョンと互換性がありません。実行するとクラッシュやデータ損失が起きる可能性があります。	ok
+pluginManager	reasonUnsupportedPlatform	This plugin does not support the operating system running DSH.	このプラグインは DSH が動作している OS に対応していません。	ok
 pluginManager	reasonIncompatibleInstall	Install a plugin version compatible with this DSH.	この DSH と互換性のあるバージョンのプラグインをインストールしてください。	ok
 pluginManager	reasonIncompatibleInstalled	Uninstall it and install a version compatible with this DSH.	アンインストールして、この DSH と互換性のあるバージョンをインストールしてください。	ok
 pluginManager	reasonOperationError	The Host reported an error.	ホストがエラーを報告しました。	ok
+pluginManager	detailTitle	Details	詳細	ok
+pluginManager	detailLoading	Reading details	詳細を読み込み中	ok
+pluginManager	detailTooLarge	The details exceed the size limit and were not loaded.	詳細がサイズ上限を超えているため、読み込みませんでした。	ok
+pluginManager	detailNetwork	Could not reach the source of the details.	詳細の取得元に接続できませんでした。	ok
+pluginManager	detailInvalid	The plugin declares an invalid details file.	プラグインが宣言している詳細ファイルが正しくありません。	ok
+pluginManager	detailFailed	Could not read the details.	詳細を読み込めませんでした。	ok
+pluginManager	detailFootnotes	Footnotes	脚注	ok
+liveshare	header.action	Share	共有	ok
+liveshare	inputOrigin.sharedSession	From a shared session [{subjectId}]	共有セッションから（{subjectId}）	ok
+liveshare	dialog.title	Share session	セッションを共有	ok
+liveshare	dialog.done	Done	完了	ok
+liveshare	dialog.shareLink	Share link	共有リンク	ok
+liveshare	dialog.sessionMode	Session permission	セッションの権限	ok
+liveshare	dialog.sessionMode.view	Read only	読み取り専用	ok
+liveshare	dialog.sessionMode.write	Workspace write	ワークスペースへの書き込み	ok
+liveshare	dialog.sessionMode.hint.view	Read only: viewers read files and the session record within the share's scope and can message the session, but every tool runs in a read-only sandbox and no file can be written.	読み取り専用: 閲覧者は共有の範囲内でファイルとセッション記録を読み、セッションにメッセージを送れます。ただしすべてのツールは読み取り専用のサンドボックスで実行され、ファイルは書き込めません。	ok
+liveshare	dialog.sessionMode.hint.write	Workspace write: the viewer works in a bounded writable sandbox — it modifies files inside the share’s scope under the writable ceiling; reads and writes beyond that scope are refused, and your global settings, credentials, and other Sessions stay closed.	ワークスペースへの書き込み: 閲覧者は制限付きの書き込み可能サンドボックスで作業し、書き込み上限の範囲内で共有のスコープ内のファイルを変更します。その範囲外の読み書きは拒否され、全体設定・認証情報・ほかのセッションは閉じたままです。	ok
+liveshare	dialog.allowsFork	Allow viewers to fork the session	閲覧者にセッションの分岐を許可する	ok
+liveshare	dialog.allowsForkHint	Forked sessions keep the same permissions as the source session.	分岐したセッションは元のセッションと同じ権限を引き継ぎます。	ok
+liveshare	dialog.sessionMode.notGranted	This Harness did not report the session permission back: an older owner build needs an upgrade before the share can carry it.	この Harness はセッションの権限を返さなかったため、共有に引き継げません。所有者のビルドが古い場合は更新が必要です。	ok
+liveshare	dialog.permissions	Share permissions	共有の権限	ok
+liveshare	dialog.permissions.save	Save changes	変更を保存	ok
+liveshare	dialog.permissions.saving	Saving…	保存しています…	ok
+liveshare	dialog.permissions.saved	Share permissions and plugin endpoints saved.	共有の権限とプラグインのエンドポイントを保存しました。	ok
+liveshare	dialog.permissions.failed	The share permissions were not saved. Try again.	共有の権限を保存できませんでした。もう一度お試しください。	ok
+liveshare	dialog.permissions.partial	The session permission was updated, but the plugin endpoints were not saved. Try again.	セッションの権限は更新されましたが、プラグインのエンドポイントは保存されませんでした。もう一度お試しください。	ok
+liveshare	dialog.permissions.modeUnsupported	This Harness did not report a session permission, so it cannot be changed here.	この Harness はセッションの権限を返さないため、ここでは変更できません。	ok
+liveshare	dialog.permissions.unsaved	Unsaved changes.	未保存の変更があります。	ok
+liveshare	dialog.permissions.discard	Unsaved changes; choosing Done again discards them.	未保存の変更があります。「完了」をもう一度押すと破棄されます。	ok
+liveshare	dialog.capabilities	Plugin endpoints	プラグインのエンドポイント	ok
+liveshare	dialog.capabilities.description	Choose one tier for this share; the tier expands at save time into the endpoints the plugins declare now, so endpoints they add later stay closed.	この共有に 1 つの段階を選びます。段階は保存時に、プラグインが現在宣言しているエンドポイントへ展開されるため、後から追加されたエンドポイントは閉じたままです。	ok
+liveshare	dialog.capabilities.none	Not open to viewers	閲覧者に公開しない	ok
+liveshare	dialog.capabilities.count	Endpoints open to viewers: {count}	閲覧者に公開するエンドポイント: {count}	ok
+liveshare	dialog.capabilities.tier.none	Unavailable	利用不可	ok
+liveshare	dialog.capabilities.tier.read	Read-only	読み取り専用	ok
+liveshare	dialog.capabilities.tier.write	Writable	書き込み可能	ok
+liveshare	dialog.capabilities.summary.read	Read-only · {count} endpoints	読み取り専用 · エンドポイント {count} 件	ok
+liveshare	dialog.capabilities.summary.write	Writable · {readable} read-only + {writable} writable	書き込み可能 · 読み取り専用 {readable} 件 + 書き込み可能 {writable} 件	ok
+liveshare	dialog.capabilities.stale	The saved selection is not one whole tier; saving again replaces it with the tier you pick.	保存済みの選択が 1 つの段階になっていません。もう一度保存すると、選んだ段階で置き換えます。	ok
+liveshare	dialog.capabilities.noReadable	No plugin offers a read-only endpoint, so Read-only cannot be chosen.	読み取り専用のエンドポイントを提供するプラグインがないため、「読み取り専用」は選べません。	ok
+liveshare	dialog.capabilities.noWritable	No plugin offers a writable endpoint, so Writable cannot be chosen.	書き込み可能なエンドポイントを提供するプラグインがないため、「書き込み可能」は選べません。	ok
+liveshare	dialog.capabilities.writeHint	A writable endpoint takes effect only when the shared Session allows writing, and is destructive inside a writable share.	書き込み可能なエンドポイントは、共有セッションが書き込みを許可している場合にのみ有効になり、書き込み可能な共有では破壊的な操作ができます。	ok
+liveshare	dialog.capabilities.empty	No plugin currently declares endpoints to share.	共有するエンドポイントを宣言しているプラグインはありません。	ok
+liveshare	dialog.capabilities.createFailed	The share was created, but its plugin endpoints were not saved; retry in Share permissions.	共有は作成されましたが、プラグインのエンドポイントは保存されませんでした。共有の権限でもう一度お試しください。	ok
+liveshare	dialog.linkHelp	Closing this panel does not stop the share.	このパネルを閉じても共有は停止しません。	ok
+liveshare	dialog.copyFailed	Could not copy the link. Select the share link and copy it manually.	リンクをコピーできませんでした。共有リンクを選択して手動でコピーしてください。	ok
+liveshare	dialog.diagnostics	Connection details	接続の詳細	ok
+liveshare	dialog.accessUnavailable	Access details for this share are unavailable. Existing permissions are unchanged.	この共有のアクセス情報を取得できません。既存の権限は変更されていません。	ok
+liveshare	dialog.selectedCount	Selected people confirmed: {count}.	選択した人数の確認済み: {count} 人。	ok
+liveshare	dialog.deploymentAccess	Deployment-authorized identities: {count}. Selection is not the only access rule.	デプロイで許可された識別情報: {count} 件。選択だけがアクセス条件ではありません。	ok
+liveshare	dialog.selectedRetired	This share keeps its older "specific colleagues" scope; new shares offer only the two modes above.	この共有は以前の「特定の同僚」スコープのままです。新しい共有では上の 2 つのモードだけを選べます。	ok
+liveshare	dialog.description	Create a read-only Liveshare link for {title}	{title} の読み取り専用 Liveshare リンクを作成	ok
+liveshare	dialog.relay	Share service address	共有サービスのアドレス	ok
+liveshare	dialog.relaySaved	Saved. New shares use this address.	保存しました。新しい共有はこのアドレスを使います。	ok
+liveshare	dialog.relayInvalid	Enter a full address starting with http:// or https://.	http:// または https:// で始まる完全なアドレスを入力してください。	ok
+liveshare	dialog.relayCurrent	Current address	現在のアドレス	ok
+liveshare	dialog.relayUnset	No address set	アドレス未設定	ok
+liveshare	dialog.relaySource.unset	Not set	未設定	ok
+liveshare	dialog.relaySource.saved	Saved address	保存済みのアドレス	ok
+liveshare	dialog.relayVerified	Verified on this address	このアドレスで確認済み	ok
+liveshare	dialog.relayUnverified	Not verified on this address	このアドレスでは未確認	ok
+liveshare	dialog.relayReverify	The address changed; sign in again on the new address.	アドレスが変わりました。新しいアドレスでサインインし直してください。	ok
+liveshare	dialog.relayUnsavedHint	This address is not saved yet; save it to put it in force.	このアドレスはまだ保存されていません。保存すると有効になります。	ok
+liveshare	dialog.identity.expired	Your sign-in has expired. Sign in again before creating a share.	サインインの有効期限が切れました。共有を作成する前にサインインし直してください。	ok
+liveshare	dialog.identity.unverified	You are not signed in, so you cannot create a share.	サインインしていないため、共有を作成できません。	ok
+liveshare	dialog.identity.relayChanged	The current sign-in belongs to another Relay address. Sign in again on this address.	現在のサインインは別の Relay アドレスのものです。このアドレスでサインインし直してください。	ok
+liveshare	dialog.identity.unknown	Sign-in status is unavailable right now. Try again later; no share is created before you sign in.	サインインの状態を取得できません。しばらくしてからもう一度お試しください。サインインするまで共有は作成されません。	ok
+liveshare	dialog.identity.retry	Retry	再試行	ok
+liveshare	dialog.identity.verify	Sign in	サインイン	ok
+liveshare	dialog.identity.reverify	Sign in again	サインインし直す	ok
+liveshare	dialog.identity.verifyBlocked	Save the address and confirm it answers before signing in.	サインインする前に、アドレスを保存し、応答することを確認してください。	ok
+liveshare	dialog.identity.loginOpening	Starting sign-in…	サインインを開始しています…	ok
+liveshare	dialog.identity.loginWaiting	Finish signing in in the window that opened.	開いたウィンドウでサインインを完了してください。	ok
+liveshare	dialog.identity.loginVerifying	Confirming the sign-in result…	サインインの結果を確認しています…	ok
+liveshare	dialog.identity.loginDone	Signed in; reading the account state.	サインインしました。アカウントの状態を読み込んでいます。	ok
+liveshare	dialog.identity.loginCancelled	Sign-in cancelled; no credential was saved.	サインインをキャンセルしました。認証情報は保存されていません。	ok
+liveshare	dialog.identity.loginExpired	This sign-in expired; start again.	サインインの有効期限が切れました。もう一度やり直してください。	ok
+liveshare	dialog.identity.loginMismatch	The sign-in answer did not belong to this request and was ignored.	サインインの応答がこのリクエストのものではないため、無視しました。	ok
+liveshare	dialog.identity.loginReplayed	This sign-in was already used; start again.	このサインインはすでに使われています。もう一度やり直してください。	ok
+liveshare	dialog.identity.loginUnavailable	Cannot start sign-in: the Relay is unavailable or this address does not support it.	サインインを開始できません。Relay が利用できないか、このアドレスが対応していません。	ok
+liveshare	dialog.identity.loginBlocked	Cannot open the sign-in window (the browser may have blocked it). Allow pop-ups and try again.	サインインのウィンドウを開けません（ブラウザーがブロックした可能性があります）。ポップアップを許可して再試行してください。	ok
+liveshare	dialog.identity.loginFailed	Sign-in did not finish. Try again.	サインインが完了しませんでした。もう一度お試しください。	ok
+liveshare	dialog.identity.expires	Valid until {time}	{time} まで有効	ok
+liveshare	dialog.identity.renewed	Renewed automatically within the granted authorization.	許可された範囲内で自動的に更新されました。	ok
+liveshare	dialog.identity.relayUnsupported	The Relay at this address does not verify identities yet. Upgrade it before creating a share; this page will not create an anonymous one.	このアドレスの Relay はまだ識別情報を検証しません。共有を作成する前に更新してください。このページでは匿名の共有は作成しません。	ok
+liveshare	dialog.expiry	Expires	有効期限	ok
+liveshare	dialog.expiry.never	Never	無期限	ok
+liveshare	dialog.expiry.hour	In 1 hour	1 時間後	ok
+liveshare	dialog.expiry.day	In 24 hours	24 時間後	ok
+liveshare	dialog.expiry.week	In 7 days	7 日後	ok
+liveshare	dialog.expiry.until	Until {time}	{time} まで	ok
+liveshare	dialog.linkSharing	Link sharing	リンク共有	ok
+liveshare	dialog.help	Shares this Session only; the session permission decides what the viewer may do, and you can stop it any time in Manage shares.	このセッションだけを共有します。閲覧者ができることはセッションの権限で決まり、共有の管理でいつでも停止できます。	ok
+liveshare	dialog.mode.open	Anyone in the organization with the link	リンクを知っている組織内の全員	ok
+liveshare	dialog.mode.selected	Specific colleagues	特定の同僚	ok
+liveshare	dialog.expiry.clear	Never expires	無期限	ok
+liveshare	dialog.create	Create share	共有を作成	ok
+liveshare	dialog.creating	Creating…	作成しています…	ok
+liveshare	dialog.cancel	Cancel	キャンセル	ok
+liveshare	dialog.copy	Copy link	リンクをコピー	ok
+liveshare	dialog.copied	Copied	コピーしました	ok
+liveshare	dialog.manage	Manage shares	共有を管理	ok
+liveshare	dialog.hostUnavailable	Cannot reach the DSH Liveshare share service.	DSH Liveshare の共有サービスに接続できません。	ok
+liveshare	dialog.testing	Connecting to the share service…	共有サービスに接続しています…	ok
+liveshare	dialog.testOk	Relay connection OK	Relay への接続は正常です	ok
+liveshare	dialog.testWarn	Relay HTTP is reachable but registration did not finish and the Host reported no reason. You can still create the share; the gateway retries.	Relay の HTTP には到達できますが、登録が完了せず Host から理由の報告もありません。共有は作成できます。ゲートウェイが再試行します。	ok
+liveshare	dialog.testFail	Relay connection failed (the Host reported no reason).	Relay への接続に失敗しました（Host から理由の報告はありません）。	ok
+liveshare	dialog.addressHint	Save the share service address first.	先に共有サービスのアドレスを保存してください。	ok
+liveshare	dialog.connectivityChecking	Testing whether the share service address answers…	共有サービスのアドレスが応答するか確認しています…	ok
+liveshare	dialog.permissionChecking	Checking whether this host may publish at this address…	このホストがこのアドレスで公開できるか確認しています…	ok
+liveshare	dialog.permissionOk	Signed in; this host can publish shares.	サインイン済みです。このホストは共有を公開できます。	ok
+liveshare	dialog.permissionPending	This address must be checked before a share can be created.	共有を作成する前にこのアドレスを確認する必要があります。	ok
+liveshare	dialog.permissionFailed	The permission check did not finish (the Host reported no reason).	権限の確認が完了しませんでした（Host から理由の報告はありません）。	ok
+liveshare	dialog.outgoing	Shared by me	自分が共有したもの	ok
+liveshare	dialog.noOutgoing	No shared sessions yet	共有中のセッションはありません	ok
+liveshare	dialog.share.online	Online	オンライン	ok
+liveshare	dialog.share.offline	Offline	オフライン	ok
+liveshare	dialog.open	Open	開く	ok
+liveshare	dialog.stop	Stop sharing	共有を停止	ok
+liveshare	dialog.stopFailed	Failed to stop sharing. Try again.	共有を停止できませんでした。もう一度お試しください。	ok
+liveshare	manage.title	Share management	共有の管理	ok
+liveshare	manage.open	Manage	管理	ok
+liveshare	manage.cancelShare	Cancel share	共有をキャンセル	ok
+liveshare	manage.description	View the online state and access scope of every share.	すべての共有のオンライン状態とアクセス範囲を表示します。	ok
+liveshare	manage.stop.title	Stop sharing?	共有を停止しますか？	ok
+liveshare	manage.stop.description	The published link stops working immediately, and anyone viewing it loses access.	公開したリンクはすぐに無効になり、閲覧中の人もアクセスできなくなります。	ok
+liveshare	manage.stop.acknowledge	I understand the published link stops working immediately	公開したリンクがすぐに無効になることを理解しました	ok
+liveshare	manage.identityExpired	This sign-in has expired, which blocks creating new shares only. The shares published below are unaffected: their links still copy and stay manageable.	サインインの有効期限が切れていますが、影響するのは新しい共有の作成だけです。下に表示される共有は影響を受けず、リンクのコピーと管理は引き続き行えます。	ok
+liveshare	manage.loading	Loading shares…	共有を読み込み中…	ok
+liveshare	manage.empty	No shared sessions yet.	共有中のセッションはまだありません。	ok
+liveshare	manage.unavailable	Could not load shares. Showing the last known state.	共有を読み込めませんでした。最後に判明した状態を表示しています。	ok
+liveshare	manage.refresh	Reload	再読み込み	ok
+liveshare	manage.history	History	履歴	ok
+liveshare	manage.historyLoading	Loading history…	履歴を読み込み中…	ok
+liveshare	manage.historyFailed	Could not load history. Try again.	履歴を読み込めませんでした。もう一度お試しください。	ok
+liveshare	manage.expiresAt	Expires {time}	有効期限 {time}	ok
+liveshare	manage.expiredAt	Expired {time}	{time} に期限切れ	ok
+liveshare	manage.sessionMode	Session permission	セッションの権限	ok
+liveshare	manage.sessionModeSwitch	Session permission for “{title}”	「{title}」のセッション権限	ok
+liveshare	manage.allowsForkSwitch	Whether viewers may fork “{title}”	閲覧者が「{title}」を分岐できるか	ok
+liveshare	manage.sessionModeUnsupported	This Harness did not report a session permission, so it cannot be set here.	この Harness はセッションの権限を返さないため、ここでは設定できません。	ok
+liveshare	manage.sessionModeFailed	The session permission was not saved. Try again.	セッションの権限を保存できませんでした。もう一度お試しください。	ok
+liveshare	manage.capabilities	Plugin endpoints	プラグインのエンドポイント	ok
+liveshare	manage.audit.shareCreate	Share created	共有を作成	ok
+liveshare	manage.audit.accessRequest	View access requested	閲覧アクセスをリクエスト	ok
+liveshare	manage.audit.accessApproved	Request approved	リクエストを承認	ok
+liveshare	manage.audit.accessGrant	View access granted	閲覧アクセスを許可	ok
+liveshare	manage.audit.accessRevoke	View access revoked	閲覧アクセスを取り消し	ok
+liveshare	manage.audit.shareStop	Sharing stopped	共有を停止	ok
+liveshare	manage.done	Done	完了	ok
+liveshare	viewer.title	Liveshare read-only session	Liveshare の読み取り専用セッション	ok
+liveshare	viewer.sharedBy	Shared by {owner} · {title}	{owner} が共有 · {title}	ok
+liveshare	viewer.readonlyNote	Read only: you can drive this Session, but you read files inside the share’s scope only and modify nothing.	読み取り専用: このセッションを操作できますが、共有のスコープ内のファイルを読むだけで、何も変更できません。	ok
+liveshare	viewer.writeUnavailableNote	The owner granted writing, but this session cannot be driven right now; sending becomes available once it is prepared.	所有者が書き込みを許可していますが、このセッションは現在操作できません。準備が整うと送信できるようになります。	ok
+liveshare	viewer.model.title	The model this Session runs on, chosen by the owner who shared it	このセッションが使うモデル（共有した所有者が選択）	ok
+liveshare	viewer.model.locked	Viewers cannot switch the model	閲覧者はモデルを切り替えられません	ok
+liveshare	viewer.permission.title	The session permission this share carries, set by the owner	この共有に付与されたセッション権限（所有者が設定）	ok
+liveshare	viewer.permission.locked	Viewers cannot change this themselves	閲覧者はこれを自分では変更できません	ok
+liveshare	viewer.permission.unconfirmed	Not confirmed yet	未確認	ok
+liveshare	viewer.transcriptLabel	Session content (read-only)	セッションの内容（読み取り専用）	ok
+liveshare	viewer.role.user	User	ユーザー	ok
+liveshare	viewer.role.assistant	Assistant	アシスタント	ok
+liveshare	viewer.role.tool	Tool	ツール	ok
+liveshare	viewer.loading	Connecting to the session…	セッションに接続しています…	ok
+liveshare	viewer.empty	This session has no content to show yet.	このセッションにはまだ表示できる内容がありません。	ok
+liveshare	viewer.reconnecting	Connection dropped, retrying…	接続が切れました。再試行しています…	ok
+liveshare	viewer.offline	The share is offline. It reconnects automatically.	共有はオフラインです。自動的に再接続します。	ok
+liveshare	viewer.retry	Retry now	今すぐ再試行	ok
+liveshare	viewer.expired	This share expired and no longer grants access. Ask the owner to share again.	この共有は期限切れで、アクセスできません。所有者にもう一度共有を依頼してください。	ok
+liveshare	viewer.revoked	The owner stopped sharing or revoked your access.	所有者が共有を停止したか、あなたのアクセスを取り消しました。	ok
+liveshare	viewer.reauthenticate	Your sign-in expired. Please sign in again.	サインインの有効期限が切れました。もう一度サインインしてください。	ok
+liveshare	viewer.reauthenticateAction	Sign in again	サインインし直す	ok
+liveshare	viewer.status.connecting	Connecting to the share…	共有に接続しています…	ok
+liveshare	viewer.status.invalid	This link is not valid, or that share was deleted.	このリンクは無効か、共有が削除されています。	ok
+liveshare	viewer.status.invalidHint	Check that the link is complete, or ask the owner for a new one.	リンクが完全か確認するか、所有者に新しいリンクを依頼してください。	ok
+liveshare	viewer.status.offline	The owner is offline right now; this page reconnects automatically.	所有者がオフラインです。このページは自動的に再接続します。	ok
+liveshare	viewer.status.offlineHint	Wait a moment or choose Retry; if it stays offline, contact the owner.	少し待つか「再試行」を選んでください。オフラインが続く場合は所有者に連絡してください。	ok
+liveshare	viewer.status.stopped	The owner stopped this share.	所有者がこの共有を停止しました。	ok
+liveshare	viewer.status.stoppedHint	Ask the owner to turn it back on if you still need access.	まだアクセスが必要なら、所有者に再開を依頼してください。	ok
+liveshare	viewer.status.expired	This share expired.	この共有は期限切れです。	ok
+liveshare	viewer.status.expiredHint	Ask the owner to share the session again.	所有者にセッションの再共有を依頼してください。	ok
+liveshare	viewer.status.reauthenticate	Your sign-in expired.	サインインの有効期限が切れました。	ok
+liveshare	viewer.status.unavailable	The share service is unavailable right now; retrying.	共有サービスが現在利用できません。再試行しています。	ok
+liveshare	viewer.status.unavailableHint	Try again shortly; if it stays unavailable, come back later.	しばらくしてから再試行してください。利用できない状態が続く場合は、後で開き直してください。	ok
+liveshare	viewer.action.reload	Reload	再読み込み	ok
+liveshare	viewer.action.retry	Retry	再試行	ok
+liveshare	viewer.action.signIn	Sign in again	サインインし直す	ok
+liveshare	viewer.action.directory	Back to shares	共有一覧に戻る	ok
+liveshare	viewer.expiresAt	Access until {time}	{time} までアクセス可能	ok
+liveshare	viewer.picker.ownerUnknown	Unknown owner	所有者不明	ok
+liveshare	viewer.picker.version	DSH	DSH	ok
+liveshare	viewer.picker.groupCount	{count} shares	共有 {count} 件	ok
+liveshare	viewer.picker.online	Online	オンライン	ok
+liveshare	viewer.picker.offline	Offline	オフライン	ok
+liveshare	viewer.picker.subjectLabel	subject …{label}	subject …{label}	ok
+liveshare	viewer.picker.historical	Unverified history	未確認の履歴	ok
+liveshare	viewer.picker.historicalNote	These shares predate verified identities; their access is unchanged.	これらの共有は識別情報の検証より前のもので、アクセスは変わりません。	ok
+liveshare	viewer.brand	LiveShare	LiveShare	ok
+liveshare	viewer.home	Back to LiveShare home	LiveShare のホームに戻る	ok
+liveshare	viewer.sharedByShort	Shared by {owner}	{owner} が共有	ok
+liveshare	viewer.relayVersion	relay {release}	relay {release}	ok
+liveshare	viewer.refused	liveshare: {subject} was refused with {status}	liveshare: {subject} は {status} で拒否されました	ok
+liveshare	viewer.relayAnswered	liveshare: the Relay answered {status}	liveshare: Relay が {status} を返しました	ok
+liveshare	viewer.relaySilent	liveshare: the Relay answered nothing for {subject}	liveshare: {subject} に対して Relay から応答がありません	ok
+liveshare	viewer.unreachable	liveshare: {subject} did not reach the Relay, retrying	liveshare: {subject} が Relay に到達しません。再試行しています	ok
+liveshare	viewer.noAnswer	no answer	応答なし	ok
+liveshare	viewer.row.fork	Fork session	セッションを分岐	ok
+liveshare	viewer.row.forkSource	Forked from “{title}”	「{title}」から分岐	ok
+liveshare	viewer.row.branchRefused	Could not complete the branch: {reason}	分岐を完了できませんでした: {reason}	ok
+liveshare	viewer.sharePath.unavailable	This page cannot open workspace files: a share hands over file paths, not file contents.	このページではワークスペースのファイルを開けません。共有されるのはファイルの内容ではなくパスです。	ok
+liveshare	viewer.reason.fork-not-permitted	The owner does not allow branching this Session	所有者がこのセッションの分岐を許可していません	ok
+liveshare	viewer.reason.fork-not-implemented	This deployment does not support branching yet	この配備はまだ分岐に対応していません	ok
+liveshare	viewer.reason.write-not-implemented	This deployment does not support writing yet	この配備はまだ書き込みに対応していません	ok
+liveshare	viewer.reason.share-not-found	That share no longer exists	その共有はもう存在しません	ok
+liveshare	viewer.reason.share-stopped	Sharing stopped	共有が停止されました	ok
+liveshare	viewer.reason.share-expired	The share expired	共有の期限が切れました	ok
+liveshare	viewer.reason.source-session-mismatch	The branch named a different Session than the share carries	分岐が共有のセッションと異なるセッションを指定しました	ok
+liveshare	viewer.reason.fork-operation-conflict	This branch request named a different prefix than the earlier one, so no new Session was created	この分岐リクエストは以前と異なるプレフィックスを指定したため、新しいセッションは作成されませんでした	ok
+liveshare	viewer.reason.fork-enforcement-failed	The branch Session was created, but its sandbox limits could not be installed, so it cannot be used	分岐セッションは作成されましたが、サンドボックスの制限を設定できなかったため使えません	ok
+liveshare	viewer.reason.mode-view	The owner set this share to read only	所有者がこの共有を読み取り専用に設定しています	ok
+liveshare	viewer.reason.unconfirmed	This share’s current state could not be confirmed; it stays read-only until it is	この共有の現在の状態を確認できませんでした。確認できるまで読み取り専用のままです	ok
+liveshare	viewer.reason.fork-viewer-unknown	The Relay did not confirm your identity, so the branch cannot be created	Relay があなたの識別情報を確認できなかったため、分岐を作成できません	ok
+liveshare	viewer.reason.fork-unknown-child	This Session is not a branch of a share	このセッションは共有の分岐ではありません	ok
+liveshare	viewer.reason.fork-viewer-mismatch	That branch belongs to another viewer	その分岐は別の閲覧者のものです	ok
+liveshare	viewer.reason.fork-source-revoked	The share this branch came from is no longer active	この分岐の元になった共有はもう有効ではありません	ok
+liveshare	viewer.reason.fork-ceiling-uninstalled	This Host has not installed the read-only execution limits	この Host は読み取り専用の実行制限を設定していません	ok
+liveshare	viewer.reason.fork-prepare-failed	The Host could not prepare this branch, so this action did not run	Host がこの分岐を準備できなかったため、この操作は実行されませんでした	ok
+liveshare	viewer.reason.share-not-writable	The owner does not allow writing this Session	所有者がこのセッションへの書き込みを許可していません	ok
+liveshare	viewer.reason.source-write-unavailable	This Host could not confine the shared Session, so it cannot drive it	この Host は共有セッションを制限できなかったため、操作できません	ok
+liveshare	viewer.reason.prompt-identity-missing	This send carried no request identity to attribute, so the Host did not run it	この送信には帰属先となるリクエスト識別情報がなかったため、Host は実行しませんでした	ok
+liveshare	viewer.reason.viewer-not-authorized	Your account no longer has access to this share	あなたのアカウントはもうこの共有にアクセスできません	ok
+liveshare	viewer.reason.liveshare/read-only	This Session is outside the share you hold, so it was not written	このセッションはあなたの共有の範囲外のため、書き込みませんでした	ok
+schedule.manager	host.create	Create	作成	ok
+schedule.manager	host.createMethod	Choose a creation method	作成方法を選ぶ	ok
+schedule.manager	host.chatCreate	Create in a session	セッションで作成	ok
+schedule.manager	host.createPrompt	Please create an automation task based on the requirements.	要件に基づいて自動化タスクを作成してください。	ok
+schedule.manager	host.manualCreate	Create manually	手動で作成	ok
+schedule.manager	host.closeCreate	Close creation form	作成フォームを閉じる	ok
+schedule.manager	host.creating	Creating…	作成しています…	ok
+schedule.manager	host.createError	Could not create the task. Your input is preserved; try again.	タスクを作成できませんでした。入力は保持されています。もう一度お試しください。	ok
+schedule.manager	host.notFuture	Choose a future schedule; edit the task timing before resuming	未来のスケジュールを選んでください。再開する前にタスクの時刻を編集してください	ok
+schedule.manager	host.invalidRule	Check the rule and time zone	ルールとタイムゾーンを確認してください	ok
+schedule.manager	host.target	Run in	実行場所	ok
+schedule.manager	host.targetNewOnce	Create a session and reuse it	セッションを 1 つ作成して再利用	ok
+schedule.manager	host.targetNew	New session for every run	実行ごとに新しいセッション	ok
+schedule.manager	host.latestConversation	Latest run session	直近の実行セッション	ok
+schedule.manager	host.currentConversation	Current linked session	現在リンクされているセッション	ok
+schedule.manager	host.targetNewOnceHelp	Create it on the first run and keep using it	初回の実行時に作成し、そのまま使い続けます	ok
+schedule.manager	host.targetNewHelp	Create a separate session for each run	実行ごとに別のセッションを作成します	ok
+schedule.manager	host.project	Linked workspace	リンクするワークスペース	ok
+schedule.manager	host.defaultProject	Default workspace	既定のワークスペース	ok
+schedule.manager	host.ungrouped	Ungrouped	未分類	ok
+schedule.manager	host.interval	Interval	間隔	ok
+schedule.manager	host.monthDay	Day of the month	日	ok
+schedule.manager	host.customRule	Customize	カスタマイズ	ok
+schedule.manager	host.newSessionInterval	Minimum run interval: {interval}	最短の実行間隔: {interval}	ok
+schedule.manager	host.limitsLoading	Loading the run interval limit	実行間隔の上限を読み込み中	ok
+schedule.manager	host.limitsError	Could not load the run interval limit. Try again before saving.	実行間隔の上限を読み込めませんでした。保存する前にもう一度お試しください。	ok
+schedule.manager	host.pause	Pause	一時停止	ok
+schedule.manager	host.resume	Resume	再開	ok
+schedule.manager	host.run	Run now	今すぐ実行	ok
+schedule.manager	host.runAfterInterval	The minimum run interval has not passed. Run now is available at {time}.	最短の実行間隔がまだ経過していません。「今すぐ実行」は {time} から使えます。	ok
+schedule.manager	host.saveError	Could not save. Your changes are preserved; try again.	保存できませんでした。変更は保持されています。もう一度お試しください。	ok
+schedule.manager	host.conflict	This task changed elsewhere. Review the latest values with your edits, or discard your changes.	このタスクは別の場所で変更されました。最新の値とあなたの編集を確認するか、変更を破棄してください。	ok
+schedule.manager	host.reapply	Review with my edits	自分の編集と比較して確認	ok
+schedule.manager	host.runError	Could not queue the task. Try again.	タスクをキューに入れられませんでした。もう一度お試しください。	ok
+schedule.manager	host.executionPending	This task is queued, running, or was just delivered. Try again later.	このタスクはキュー待ち・実行中・または配信直後です。しばらくしてからもう一度お試しください。	ok
+schedule.manager	host.executionActive	This task is queued or running. Manage it in the session.	このタスクはキュー待ちまたは実行中です。セッションで管理してください。	ok
+schedule.manager	host.sessionAfterFirstRun	Pending creation	作成待ち	ok
+schedule.manager	status.paused	Paused	一時停止中	ok
+schedule.manager	status.ended	Ended	終了	ok
+schedule.manager	host.openDeliverySession	Open session	セッションを開く	ok
+schedule.manager	host.frequency.monthly	Every month	毎月	ok
+schedule.manager	host.frequency.advanced	Custom	カスタム	ok
+schedule.manager	panel	Automation tasks	自動化タスク	ok
+schedule.manager	title	Automation tasks	自動化タスク	ok
+schedule.manager	new.action	New	新規	ok
+schedule.manager	list.label	Task catalog	タスク一覧	ok
+schedule.manager	list.nextPrefix	Next scheduled time: 	次回の実行予定: 	ok
+schedule.manager	list.loading	Loading tasks…	タスクを読み込み中…	ok
+schedule.manager	list.error	Could not load tasks.	タスクを読み込めませんでした。	ok
+schedule.manager	list.retry	Retry	再試行	ok
+schedule.manager	list.empty	No tasks yet. Tasks created in your sessions appear here.	タスクはまだありません。セッションで作成したタスクがここに表示されます。	ok
+schedule.manager	list.emptyActive	No active automation tasks	有効な自動化タスクはありません	ok
+schedule.manager	list.emptyPaused	No paused automation tasks	一時停止中の自動化タスクはありません	ok
+schedule.manager	list.emptyInactive	No ended automation tasks	終了した自動化タスクはありません	ok
+schedule.manager	list.noMatches	No matching tasks	一致するタスクがありません	ok
+schedule.manager	search.label	Search tasks	タスクを検索	ok
+schedule.manager	search.placeholder	Search automation tasks	自動化タスクを検索	ok
+schedule.manager	search.clear	Clear search	検索をクリア	ok
+schedule.manager	empty.action	New automation task	自動化タスクを作成	ok
+schedule.manager	statusFilter.label	Task status	タスクの状態	ok
+schedule.manager	statusFilter.all	All	すべて	ok
+schedule.manager	status.active	Enabled	有効	ok
+schedule.manager	detail.label	Task details	タスクの詳細	ok
+schedule.manager	detail.close	Close details	詳細を閉じる	ok
+schedule.manager	detail.more	Automation task actions	自動化タスクの操作	ok
+schedule.manager	detail.nextRun	Next run	次回の実行	ok
+schedule.manager	detail.tabs	Task detail views	タスク詳細の表示	ok
+schedule.manager	detail.rule	Rules	ルール	ok
+schedule.manager	detail.records	Records	記録	ok
+schedule.manager	delivery.empty	No delivery record available	実行記録がありません	ok
+schedule.manager	delivery.loading	Loading delivery records…	実行記録を読み込み中…	ok
+schedule.manager	delivery.error	Could not load delivery records.	実行記録を読み込めませんでした。	ok
+schedule.manager	delivery.notFound	This task is no longer available.	このタスクは利用できません。	ok
+schedule.manager	delivery.cursorError	Records were updated.	記録が更新されました。	ok
+schedule.manager	delivery.retry	Retry	再試行	ok
+schedule.manager	delivery.refresh	Refresh	更新	ok
+schedule.manager	delivery.loadMore	Load more	さらに読み込む	ok
+schedule.manager	delivery.expand	Expand	展開する	ok
+schedule.manager	delivery.collapse	Collapse	折りたたむ	ok
+schedule.manager	delivery.pruned	Earlier delivery records have been cleared	以前の実行記録は削除されました	ok
+schedule.manager	delivery.retention	Retention rules	保存期間のルール	ok
+schedule.manager	delivery.retentionBounds	Each task keeps up to {records} delivery records from the last {days} days.	各タスクは直近 {days} 日間の実行記録を最大 {records} 件保持します。	ok
+schedule.manager	delivery.retentionExplanation	When a new record is saved, older records outside these limits are cleared automatically. Clearing records does not stop the task.	新しい記録が保存されると、この範囲を超えた古い記録は自動的に削除されます。記録を削除してもタスクは停止しません。	ok
+schedule.manager	detail.name	Automation task name	自動化タスクの名前	ok
+schedule.manager	detail.namePlaceholder	E.g. Daily reading digest	例: 毎日の読書ダイジェスト	ok
+schedule.manager	detail.instruction	Automation task instruction	自動化タスクの内容	ok
+schedule.manager	detail.instructionPlaceholder	Describe the task and result.\nE.g. Summarize my reading list with source links.	タスクと成果を説明してください。\n例: 読書リストを出典リンク付きで要約する。	ok
+schedule.manager	detail.session	Linked session	リンクされたセッション	ok
+schedule.manager	detail.openSession	Linked session: open linked session	リンクされたセッションを開く	ok
+schedule.manager	detail.openSessionTitle	Linked session {title}: open linked session	リンクされたセッション {title} を開く	ok
+schedule.manager	detail.sessionLoading	Loading linked session information.	リンクされたセッションの情報を読み込み中です。	ok
+schedule.manager	detail.sessionArchived	The linked session is archived.	リンクされたセッションはアーカイブされています。	ok
+schedule.manager	detail.sessionUnavailable	The linked session is unavailable.	リンクされたセッションは利用できません。	ok
+schedule.manager	detail.missing	Task unavailable. It may have been deleted.	タスクを利用できません。削除された可能性があります。	ok
+schedule.manager	delivery.label	Saved delivery record	保存された実行記録	ok
+schedule.manager	frequency.once	Once	1 回のみ	ok
+schedule.manager	frequency.every	Every {value} {unit}	{value} {unit}ごと	ok
+schedule.manager	frequency.hostMonthly	Monthly on day {days} at {time}, or month end	毎月 {days} 日 {time}（存在しない場合は月末）	ok
+schedule.manager	frequency.hostDailyInterval	Every {interval} days at {time}	{interval} 日ごと {time}	ok
+schedule.manager	frequency.hostWeeklyInterval	Every {interval} weeks on {weekdays} at {time}	{interval} 週ごと {weekdays} {time}	ok
+schedule.manager	frequency.hostMonthlyInterval	Every {interval} months on day {days} at {time}, or month end	{interval} か月ごと {days} 日 {time}（存在しない場合は月末）	ok
+schedule.manager	frequency.hostZone	{rule} ({timeZone})	{rule}（{timeZone}）	ok
+schedule.manager	frequency.hostCustom	Custom	カスタム	ok
+schedule.manager	time.locale	en	ja	ok
+schedule.manager	time.utcPrefix	UTC	UTC	ok
+schedule.manager	frequency.daily	Daily at {time} ({timeZone})	毎日 {time} ({timeZone})	ok
+schedule.manager	frequency.dailyLocal	Daily at {time}	毎日 {time}	ok
+schedule.manager	frequency.weekly	Weekly on {weekdays} at {time} ({timeZone})	毎週 {weekdays} の {time} ({timeZone})	ok
+schedule.manager	frequency.weeklyLocal	Weekly on {weekdays} at {time}	毎週 {weekdays} の {time}	ok
+schedule.manager	frequency.cron	Custom ({timeZone})	カスタム（{timeZone}）	ok
+schedule.manager	frequency.cronLocal	Custom	カスタム	ok
+schedule.manager	frequency.cronRule	{rule} ({timeZone})	{rule} ({timeZone})	ok
+schedule.manager	cron.list.join	, 	、	ok
+schedule.manager	cron.part.join	 	 	ok
+schedule.manager	cron.weekday.name	{weekday}	{weekday}曜日	ok
+schedule.manager	cron.weekday.range	{from}–{to}	{from}〜{to}	ok
+schedule.manager	cron.months	 in {months}	 ({months})	ok
+schedule.manager	cron.day.every	Every day{months}	毎日{months}	ok
+schedule.manager	cron.day.weekdays	{weekdays}{months}	{weekdays}{months}	ok
+schedule.manager	cron.day.monthDays	Day {days} of every month{months}	毎月 {days} 日{months}	ok
+schedule.manager	cron.day.both	Day {days} of every month or {weekdays}{months}	毎月 {days} 日または{weekdays}{months}	ok
+schedule.manager	cron.day.bothStarred	Day {days} of every month and {weekdays}{months}	毎月 {days} 日かつ{weekdays}{months}	ok
+schedule.manager	cron.hours.range	{from}–{to}	{from}〜{to}	ok
+schedule.manager	cron.hours.list	{hours}	{hours}	ok
+schedule.manager	cron.time.everyMinute	Every minute	毎分	ok
+schedule.manager	cron.time.everyMinutes	Every {step} minutes	{step} 分ごと	ok
+schedule.manager	cron.time.joinedEveryMinute	every minute	毎分	ok
+schedule.manager	cron.time.joinedEveryMinutes	every {step} minutes	{step} 分ごと	ok
+schedule.manager	cron.time.everyHour	Every hour	毎時	ok
+schedule.manager	cron.time.joinedEveryHour	every hour	毎時	ok
+schedule.manager	cron.time.everyNHours	Every {count} hours	{count} 時間ごと	ok
+schedule.manager	cron.time.joinedEveryNHours	every {count} hours	{count} 時間ごと	ok
+schedule.manager	cron.time.hourlyAt	Every hour at minute {minutes}	毎時 {minutes} 分	ok
+schedule.manager	cron.time.joinedHourlyAt	every hour at minute {minutes}	毎時 {minutes} 分	ok
+schedule.manager	cron.time.hoursEveryMinute	every minute during hours {hours}	{hours} 時の間は毎分	ok
+schedule.manager	cron.time.hoursEveryMinutes	every {step} minutes during hours {hours}	{hours} 時の間は {step} 分ごと	ok
+schedule.manager	cron.time.at	at {times}	{times} に	ok
+schedule.manager	cron.time.hoursAt	at minute {minutes} of hours {hours}	{hours} 時の {minutes} 分に	ok
+schedule.manager	frequency.weekday.join	, 	、	ok
+schedule.manager	frequency.weekday.1	Mon	月	ok
+schedule.manager	frequency.weekday.2	Tue	火	ok
+schedule.manager	frequency.weekday.3	Wed	水	ok
+schedule.manager	frequency.weekday.4	Thu	木	ok
+schedule.manager	frequency.weekday.5	Fri	金	ok
+schedule.manager	frequency.weekday.6	Sat	土	ok
+schedule.manager	frequency.weekday.7	Sun	日	ok
+schedule.manager	unit.day.one	day	日	ok
+schedule.manager	unit.day.other	days	日	ok
+schedule.manager	unit.hour.one	hour	時間	ok
+schedule.manager	unit.hour.other	hours	時間	ok
+schedule.manager	unit.minute.one	minute	分	ok
+schedule.manager	unit.minute.other	minutes	分	ok
+schedule.manager	unit.second.one	second	秒	ok
+schedule.manager	unit.second.other	seconds	秒	ok
+schedule.manager	relative.now	Due now	まもなく実行	ok
+schedule.manager	relative.future	in {value} {unit}	{value} {unit}後	ok
+schedule.manager	relative.overdue	{value} {unit} overdue	{value} {unit}超過	ok
+schedule.manager	timing.date	Date	日付	ok
+schedule.manager	timing.time	Time	時刻	ok
+schedule.manager	timing.hour	Hour	時	ok
+schedule.manager	timing.minute	Minute	分	ok
+schedule.manager	timing.second	Second	秒	ok
+schedule.manager	timing.prevMonth	Previous month	前の月	ok
+schedule.manager	timing.nextMonth	Next month	次の月	ok
+schedule.manager	timing.zone	Time zone	タイムゾーン	ok
+schedule.manager	timing.zoneSearch	Search by UTC offset, IANA ID, or city	UTC オフセット、IANA ID、都市名で検索	ok
+schedule.manager	timing.zoneNoResults	No matching time zones	一致するタイムゾーンがありません	ok
+schedule.manager	timing.intervalIncrease	Increase interval	間隔を増やす	ok
+schedule.manager	timing.intervalDecrease	Decrease interval	間隔を減らす	ok
+schedule.manager	rule.title	Run time	実行時刻	ok
+schedule.manager	rule.repeat	Repeat	繰り返し	ok
+schedule.manager	rule.weekday	Weekday	曜日	ok
+schedule.manager	rule.weekdayOption	Weekday {weekday}	{weekday}曜日	ok
+schedule.manager	rule.unsaved	Unsaved changes	未保存の変更	ok
+schedule.manager	rule.save	Save changes	変更を保存	ok
+schedule.manager	rule.saving	Saving…	保存しています…	ok
+schedule.manager	rule.invalid	Edit the custom rule, choose another repeat option, or ask the agent to correct it.	カスタムルールを編集するか、別の繰り返し方法を選ぶか、Agent に修正を依頼してください。	ok
+schedule.manager	rule.invalidTitle	Use a task name of 1–120 characters.	タスク名は 1〜120 文字にしてください。	ok
+schedule.manager	rule.invalidInterval	Enter a whole number of at least 1 for the interval.	間隔には 1 以上の整数を入力してください。	ok
+schedule.manager	rule.requiredWeekday	Select at least one weekday.	曜日を 1 つ以上選んでください。	ok
+schedule.manager	rule.invalidMonthDay	Enter a day of the month from 1 to 31.	1〜31 の日を入力してください。	ok
+schedule.manager	rule.invalidTime	Choose a valid date and time in the selected time zone.	選んだタイムゾーンで有効な日時を選んでください。	ok
+schedule.manager	rule.invalidZone	Choose a valid time zone.	有効なタイムゾーンを選んでください。	ok
+schedule.manager	rule.tooComplex	This rule is too frequent or complex. Choose a repeat option or ask the agent to simplify it.	このルールは頻度が高すぎるか複雑です。繰り返し方法を選ぶか、Agent に簡略化を依頼してください。	ok
+schedule.manager	rule.cancel	Discard	破棄	ok
+schedule.manager	rule.once	Once	1 回	ok
+schedule.manager	rule.everyMinutes	Every N minutes	N 分ごと	ok
+schedule.manager	rule.everyHours	Every N hours	N 時間ごと	ok
+schedule.manager	rule.daily	Every day	毎日	ok
+schedule.manager	rule.weekdays	Monday to Friday	月曜日から金曜日	ok
+schedule.manager	rule.weekly	Weekly	毎週	ok
+schedule.manager	rule.zone.system	 (system)	 (システム)	ok
+schedule.manager	delete.action	Delete task	タスクを削除	ok
+schedule.manager	delete.title	Delete this task?	このタスクを削除しますか？	ok
+schedule.manager	delete.description	This stops the task from triggering and deletes it together with its saved delivery records. The original session and its messages remain; queued messages are not withdrawn.	タスクの実行を停止し、保存された実行記録とともに削除します。元のセッションとそのメッセージは残ります。キューに入っているメッセージは取り消されません。	ok
+schedule.manager	delete.confirm	Confirm deletion	削除を確定	ok
+schedule.manager	delete.cancel	Cancel	キャンセル	ok
+schedule.manager	delete.close	Close deletion confirmation	削除の確認を閉じる	ok
+schedule.manager	delete.pending	Deleting…	削除中…	ok
+schedule.manager	list.more	More task actions	その他のタスク操作	ok
+schedule.manager	clear.action	Clear all ended tasks	終了したタスクをすべて消去	ok
+schedule.manager	clear.title	Clear ended tasks ({count})?	終了したタスクを消去しますか？（{count} 件）	ok
+schedule.manager	clear.description	These tasks and their saved delivery records will be permanently deleted. Active and paused tasks, original sessions, and queued messages are not affected.	これらのタスクと保存された配信記録は完全に削除されます。有効なタスク・一時停止中のタスク・元のセッション・キュー内のメッセージは影響を受けません。	ok
+schedule.manager	clear.confirm	Clear tasks	タスクを消去	ok
+schedule.manager	clear.pending	Clearing…	消去しています…	ok
+schedule.manager	clear.close	Close clear confirmation	消去の確認を閉じる	ok
+schedule.manager	toast.deleted	Task deleted.	タスクを削除しました。	ok
+schedule.manager	toast.deleteFailed	Could not delete the task.	タスクを削除できませんでした。	ok
+schedule.manager	toast.cleared.one	Cleared {count} ended task.	終了したタスクを {count} 件消去しました。	ok
+schedule.manager	toast.cleared.other	Cleared {count} ended tasks.	終了したタスクを {count} 件消去しました。	ok
+schedule.manager	toast.clearedNone	No ended tasks to clear.	消去する終了済みタスクはありません。	ok
+schedule.manager	toast.clearFailed	Could not clear tasks.	タスクを消去できませんでした。	ok
+schedule.manager	card.open	Open	開く	ok
+schedule.manager	card.openLabel	Open task details: {title}	タスクの詳細を開く: {title}	ok
+schedule.manager	card.deleted	Deleted	削除済み	ok
 trajectory	view.trajectory	Trajectory	軌跡	ok
 trajectory	toolbar.aria	Trajectory toolbar	軌跡ツールバー	ok
 trajectory	toolbar.duration	Duration	期間	ok
@@ -606,6 +1125,9 @@ trajectory	toolbar.collapseTurns	Collapse turns	ターンを折りたたむ	ok
 trajectory	toolbar.calls	Calls	呼び出し	ok
 trajectory	toolbar.expandCalls	Expand calls	呼び出しを展開	ok
 trajectory	toolbar.collapseCalls	Collapse calls	呼び出しを折りたたむ	ok
+trajectory	toolbar.subCalls	Subcalls	サブ呼び出し	ok
+trajectory	toolbar.expandSubCalls	Expand subcalls	サブ呼び出しを展開	ok
+trajectory	toolbar.collapseSubCalls	Collapse subcalls	サブ呼び出しを折りたたむ	ok
 trajectory	toolbar.search	Search trajectory	軌跡を検索	ok
 trajectory	toolbar.searchPlaceholder	Search	検索	ok
 trajectory	kind.system	SYSTEM	システム	ok
@@ -697,6 +1219,9 @@ trajectory	record.noOutput	No output	出力なし	ok
 trajectory	record.schemaUnavailable	Schema unavailable	スキーマはありません	ok
 trajectory	record.parameters	Parameters	パラメーター	ok
 trajectory	record.resultJson	Result JSON	結果の JSON	ok
+trajectory	record.rawResult	Raw result	生の結果	ok
+trajectory	record.renderedResult	Rendered result	整形された結果	ok
+trajectory	record.rawResultUnavailable	Raw results are only available for live tool calls	生の結果は実行中のツール呼び出しでのみ利用できます	ok
 trajectory	record.json	JSON	JSON	ok
 trajectory	record.parametersJson	parameters JSON	parameters の JSON	ok
 trajectory	record.namedParametersJson	{name} parameters JSON	{name} の parameters JSON	ok
@@ -730,6 +1255,7 @@ trajectory	request.retryProgress	{retry} of {maximum}	{retry} / {maximum}	ok
 trajectory	request.collapsedSummary	Collapsed {kind} summary, {summary}	折りたたまれた {kind} の要約、{summary}	ok
 trajectory	request.collapsedTurn	turn	ターン	ok
 trajectory	request.collapsedAssistant	assistant	アシスタント	ok
+trajectory	request.collapsedTool	subcalls	サブ呼び出し	ok
 trajectory	request.rowAria	{request}{kind}, {content}	{request}{kind}、{content}	ok
 trajectory	request.rowPrefix	Request {request}, 	リクエスト {request}、	ok
 trajectory	request.rowAriaCompaction	Request {request}, compaction	リクエスト {request}、圧縮	ok
@@ -786,385 +1312,183 @@ trajectory	layout.toolsRemoved	Removed: {names}	削除: {names}	ok
 trajectory	layout.toolsRemovedCount	{count} removed	{count} 件削除	ok
 trajectory	layout.systemPromptAndToolsUpdated	System Prompt and Tools Updated	システムプロンプトとツールを更新	ok
 trajectory	layout.compactionInterrupted	Compaction was interrupted before completion.	圧縮は完了する前に中断されました。	ok
-chat	message.stepProcess.thinking	Analyzing the request	リクエストを解析中	ok
-chat	message.stepProcess.read	Reading files	ファイルを読み取り中	ok
-chat	message.stepProcess.readImage	Reading images	画像を読み取り中	ok
-chat	message.stepProcess.write	Writing files	ファイルを書き込み中	ok
-chat	message.stepProcess.search	Searching code	コードを検索中	ok
-chat	message.stepProcess.edit	Editing files	ファイルを編集中	ok
-chat	message.stepProcess.commands	Running commands	コマンドを実行中	ok
-chat	message.stepProcess.code	Running code	コードを実行中	ok
-chat	message.stepProcess.webSearch	Searching the web	Web を検索中	ok
-chat	message.stepProcess.webFetch	Visiting web pages	Web ページを閲覧中	ok
-chat	message.stepProcess.subagents	Coordinating subagents	サブエージェントを調整中	ok
-chat	message.stepProcess.plan	Updating the plan	計画を更新中	ok
-chat	message.stepProcess.questions	Waiting for your action	操作を待っています	ok
-chat	message.stepProcess.tools	Calling tools	ツールを呼び出し中	ok
-chat	message.stepProcess.prepare.read	Preparing to read files	ファイルの読み取りを準備中	ok
-chat	message.stepProcess.prepare.readImage	Preparing to read images	画像の読み取りを準備中	ok
-chat	message.stepProcess.prepare.write	Preparing to write files	ファイルの書き込みを準備中	ok
-chat	message.stepProcess.prepare.search	Preparing to search code	コードの検索を準備中	ok
-chat	message.stepProcess.prepare.edit	Preparing to edit files	ファイルの編集を準備中	ok
-chat	message.stepProcess.prepare.commands	Preparing to run commands	コマンドの実行を準備中	ok
-chat	message.stepProcess.prepare.code	Preparing to run code	コードの実行を準備中	ok
-chat	message.stepProcess.prepare.webSearch	Preparing to search the web	Web 検索を準備中	ok
-chat	message.stepProcess.prepare.webFetch	Preparing to visit web pages	Web ページの閲覧を準備中	ok
-chat	message.stepProcess.prepare.subagents	Preparing to coordinate subagents	サブエージェントの調整を準備中	ok
-chat	message.stepProcess.prepare.plan	Preparing to update the plan	計画の更新を準備中	ok
-chat	message.stepProcess.prepare.questions	Preparing questions	質問を準備中	ok
-chat	message.stepProcess.prepare.tools	Preparing tool calls	ツール呼び出しを準備中	ok
-chat	message.stepProcess.done.thinking	Analysis completed	解析が完了しました	ok
-chat	message.stepProcess.done.read	Read files	ファイルを読み取りました	ok
-chat	message.stepProcess.done.readImage	Read images	画像を読み取りました	ok
-chat	message.stepProcess.done.write	Wrote files	ファイルを書き込みました	ok
-chat	message.stepProcess.done.search	Searched code	コードを検索しました	ok
-chat	message.stepProcess.done.edit	Edited files	ファイルを編集しました	ok
-chat	message.stepProcess.done.commands	Ran commands	コマンドを実行しました	ok
-chat	message.stepProcess.done.code	Ran code	コードを実行しました	ok
-chat	message.stepProcess.done.webSearch	Searched the web	Web を検索しました	ok
-chat	message.stepProcess.done.webFetch	Visited web pages	Web ページを閲覧しました	ok
-chat	message.stepProcess.done.subagents	Coordinated subagents	サブエージェントを調整しました	ok
-chat	message.stepProcess.done.plan	Updated the plan	計画を更新しました	ok
-chat	message.stepProcess.done.questions	Asked questions	質問しました	ok
-chat	message.stepProcess.done.tools	Called tools	ツールを呼び出しました	ok
-chat	message.stepProcess.joinTwo	{first} and {second}	{first}、{second}	ok
-chat	message.stepProcess.comma	, 	、	ok
-chat	message.stepProcess.sharedPrefix			ok
-chat	message.stepProcess.more	{title}, etc.	{title} など	ok
-chat	message.trigger.request	Execution requested	実行を要求	ok
-chat	message.trigger.goal	Continuing goal	ゴールを継続	ok
-chat	message.trigger.agent	Task message received	タスクメッセージを受信	ok
-chat	message.trigger.team	Team message received	チームメッセージを受信	ok
-chat	message.trigger.subagent	Subtask status updated	サブタスクの状態が更新	ok
-chat	message.trigger.github	GitHub event received	GitHub イベントを受信	ok
-chat	message.trigger.webhook	External event received	外部イベントを受信	ok
-chat	message.trigger.schedule	Automation task	自動化タスク	ok
-chat	message.trigger.job	Background task updated	バックグラウンドタスクが更新	ok
-chat	message.trigger.plugin	Plugin status updated	プラグインの状態が更新	ok
-chat	message.trigger.explanation	This notification triggered this response.	この通知がこの応答のきっかけです。	ok
-chat	message.turnProcess.worked	Completed	完了	ok
-chat	message.turnProcess.took	Completed in 	所要時間 	ok
-chat	message.turnProcess.failed	Failed	失敗	ok
-chat	view.chat	Chat	チャット	ok
-chat	image.open	View full image	画像全体を表示	ok
-chat	image.loading	Loading image…	画像を読み込んでいます…	ok
-chat	image.failed	Image preview unavailable	画像をプレビューできません	ok
-chat	image.dialog	Image preview	画像のプレビュー	ok
-chat	image.close	Close image preview	画像のプレビューを閉じる	ok
-chat	number.groupSeparator	,	,	ok
-chat	duration.compactSeconds	{seconds}s	{seconds} 秒	ok
-chat	duration.compactMinutes	{minutes}m{seconds}s	{minutes} 分 {seconds} 秒	ok
-chat	duration.milliseconds	{milliseconds}ms	{milliseconds}ms	ok
-chat	stats.counts	{turns} turns {steps} steps	{turns} ターン {steps} ステップ	ok
-chat	stats.cacheHit	Cache hit {percent}%	キャッシュヒット {percent}%	ok
-chat	stats.dialog.title	Session statistics	セッション統計	ok
-chat	stats.dialog.usageTitle	Token usage	トークン使用量	ok
-chat	stats.dialog.llmTime	LLM time	LLM の時間	ok
-chat	stats.dialog.toolTime	Tool time	ツールの時間	ok
-chat	stats.dialog.ttft	Avg time to first token (TTFT)	初回トークンまでの平均時間 (TTFT)	ok
-chat	stats.dialog.speed	Tokens per second (TPS)	1 秒あたりのトークン数 (TPS)	ok
-chat	chat.loadingHistory	Loading history…	履歴を読み込んでいます…	ok
-chat	chat.loadError	Failed to load history: {message} ({code})	履歴を読み込めませんでした: {message} ({code})	ok
-chat	chat.loadOlder	Load earlier	以前を読み込む	ok
-chat	chat.toBottom	Back to bottom	最下部へ戻る	ok
-chat	chat.deepDiving	Deep diving	深掘り中	ok
-chat	chat.deepDivingFor	Deep diving for {duration} ···	{duration} 深掘り中 ···	ok
-chat	chat.turnNavigation.label	Turn navigation	ターン移動	ok
-chat	chat.turnNavigation.jump	Jump to turn {turn}	ターン {turn} へ移動	ok
-chat	chat.turnNavigation.jumpLoad	Load and jump to turn {turn}	読み込んでターン {turn} へ移動	ok
-chat	chat.turnNavigation.turn	Turn {turn}	ターン {turn}	ok
-chat	settings.performance.title	Performance & usage	パフォーマンスと使用状況	ok
-chat	settings.performance.description	Choose how much performance and usage information to show	表示するパフォーマンスと使用状況の情報量を選択します	ok
-chat	settings.performance.compact	Compact	コンパクト	ok
-chat	settings.performance.detailed	Detailed	詳細	ok
-chat	settings.links.title	Open chat links in	チャットのリンクを開く場所	ok
-chat	settings.links.description	Choose where to open web links	Web リンクを開く場所を選択します	ok
-chat	settings.links.sidebar	In-App Sidebar	アプリ内サイドバー	ok
-chat	settings.links.newTab	Default Browser	既定のブラウザー	ok
-chat	settings.transcript.title	Work details	作業の詳細	ok
-chat	settings.transcript.description	Choose how much detail to show for tool calls	ツール呼び出しをどこまで詳しく表示するかを選択します	ok
-chat	settings.collapse.title	When to Collapse Work Details	作業詳細を折りたたむタイミング	ok
-chat	settings.collapse.description	Choose when to automatically collapse work details	作業詳細を自動で折りたたむタイミングを選びます	ok
-chat	settings.collapse.completion	On completion	完了時	ok
-chat	settings.collapse.nextInput	On next message	次のメッセージ時	ok
-chat	settings.transcript.compact	Compact	コンパクト	ok
-chat	settings.transcript.standard	Standard	標準	ok
-chat	settings.transcript.detailed	Detailed	詳細	ok
-chat	settings.transcript.verbose	Verbose	とても詳細	ok
-chat	fileOpen.title	Couldn’t open file	ファイルを開けませんでした	ok
-chat	fileOpen.unknown	Couldn’t open this file	このファイルを開けませんでした	ok
-chat	message.extraBlock	Extra content block	追加のコンテンツブロック	ok
-chat	message.systemPrompt	System prompt	システムプロンプト	ok
-chat	message.systemPromptUpdate	System prompt update	システムプロンプトの更新	ok
-chat	message.toolAdded	Tool added: {name}	ツールを追加: {name}	ok
-chat	message.toolRemoved	Tool removed: {name}	ツールを削除: {name}	ok
-chat	message.toolsAdded	Added: {names}	追加: {names}	ok
-chat	message.toolsAddedCount	{count} added	{count} 件追加	ok
-chat	message.toolsChanged	{added} added, {removed} removed	{added} 件追加、{removed} 件削除	ok
-chat	message.toolsRemoved	Removed: {names}	削除: {names}	ok
-chat	message.toolsRemovedCount	{count} removed	{count} 件削除	ok
-chat	message.toolsUpdated	Tools updated	ツールを更新	ok
-chat	message.contextInjection	Context injection	コンテキストの注入	ok
-chat	message.contextRecall	Session recall	セッションの呼び戻し	ok
-chat	message.referenceSummary	Referenced session · {labels}	参照したセッション · {labels}	ok
-chat	message.referenceSeparator	, 	、	ok
-chat	message.context.instructions.loaded	loaded	読み込み	ok
-chat	message.context.instructions.added	added	追加	ok
-chat	message.context.instructions.updated	updated	更新	ok
-chat	message.context.instructions.removed	removed	削除	ok
-chat	message.context.catalog.replaced	Replacement catalog	置き換え後のカタログ	ok
-chat	message.context.catalog.more	… {count} more	… 他 {count} 件	ok
-chat	message.context.snapshot.supersedes	Supersedes earlier snapshots	以前のスナップショットを置き換えます	ok
-chat	message.context.relay.from	From session {session}	セッション {session} から	ok
-chat	message.context.recall.counts	{retained} kept · {omitted} omitted	{retained} 件保持 · {omitted} 件省略	ok
-chat	message.context.recall.truncated	truncated	省略	ok
-chat	message.compaction	Context compacted	コンテキストを圧縮しました	ok
-chat	message.compaction.running	Compacting context…	コンテキストを圧縮しています…	ok
-chat	message.compaction.completed	Compacted {items} history items (~{tokens} tokens)	履歴 {items} 件を圧縮しました (約 {tokens} トークン)	ok
-chat	message.compaction.expand	View compaction summary	圧縮の要約を表示	ok
-chat	message.compaction.unavailable	Compaction summary unavailable	圧縮の要約はありません	ok
-chat	message.compaction.commandTitle	compact	compact	ok
-chat	message.think	Think	思考	ok
-chat	message.unknownSurface	Unknown surface event: {type}	不明なイベント: {type}	ok
-chat	message.unknownBlock	Unknown content block	不明なコンテンツブロック	ok
-chat	message.turnProcess.toolCalls.one	{count} tool call	ツール呼び出し {count} 回	ok
-chat	message.turnProcess.toolCalls.other	{count} tool calls	ツール呼び出し {count} 回	ok
-chat	message.turnProcess.messages.one	{count} message	メッセージ {count} 件	ok
-chat	message.turnProcess.messages.other	{count} messages	メッセージ {count} 件	ok
-chat	message.turnProcess.subagents.one	{count} subagent	サブエージェント {count} 件	ok
-chat	message.turnProcess.subagents.other	{count} subagents	サブエージェント {count} 件	ok
-chat	message.turnProcess.thoughtForAWhile	Thought for a while	しばらく思考しました	ok
-chat	message.turnProcess.separator	 · 	 · 	ok
-chat	message.stopped	Stopped	停止しました	ok
-chat	message.branch	Branch into a new conversation	新しい会話に分岐	ok
-chat	message.branchUnavailable	Available only on the last message of a completed turn	完了したターンの最後のメッセージでのみ利用できます	ok
-chat	message.retry.active	Retrying model request	モデルリクエストを再試行しています	ok
-chat	message.retry.cancelled	Model request retry cancelled	モデルリクエストの再試行をキャンセルしました	ok
-chat	message.retry.started	Retried model request	モデルリクエストを再試行しました	ok
-chat	message.retry.scheduled	Waiting to retry model request	モデルリクエストの再試行を待機中	ok
-chat	message.retry.status	{label} ({retry}/{maximum}) · {seconds}s	{label} ({retry}/{maximum}) · {seconds} 秒	ok
-chat	message.retry.delay	Retry delay: 	再試行まで: 	ok
-chat	message.retry.failure	Failure reason: 	失敗の理由: 	ok
-chat	message.failure.auth	API key is invalid	API キーが正しくありません	ok
-chat	message.taskStopped	Task stopped	タスクを停止しました	ok
-chat	message.failure.accountSignedOut	Stopped because you signed out of DeepSeek.	DeepSeek からサインアウトしたため停止しました。	ok
-chat	message.failure.interrupted	The DSH process exited before this turn finished (for example, it was killed, crashed, or timed out while shutting down), so the turn was closed when DSH restarted. Unfinished tool calls have unknown outcomes.	DSH プロセスがこのターンの完了前に終了したため（強制終了・クラッシュ・終了時のタイムアウトなど）、DSH の再起動時にこのターンは終了扱いになりました。未完了のツール呼び出しの結果は不明です。	ok
-chat	message.failure.accountSignInRequired	Sign in to DeepSeek and ensure the request destination supports account authentication.	DeepSeek にサインインし、リクエスト先がアカウント認証に対応していることを確認してください。	ok
-chat	message.failure.quota	Request quota exhausted.	リクエストの上限に達しました。	ok
-chat	message.turnError	This turn failed	このターンは失敗しました	ok
-chat	message.maxTokens	Output token limit reached	出力トークンの上限に達しました	ok
-chat	message.maxTokens.hint	The reply was cut off; earlier output is preserved in the conversation. Send "continue" to let the model resume.	返答が途中で切れました。ここまでの出力は会話に残っています。「続けて」と送るとモデルが再開します。	ok
-chat	message.tokensPerSecond	{tps} tok/s	{tps} tok/s	ok
-chat	message.turnUsage.title	Turn usage	ターンの使用量	ok
-chat	message.turnUsage.consumed	Usage {total}	使用量 {total}	ok
-chat	message.turnUsage.model	Provider / model	プロバイダー / モデル	ok
-chat	message.turnUsage.cacheHit	Cache hit	キャッシュヒット	ok
-chat	message.turnUsage.input	Uncached input	未キャッシュの入力	ok
-chat	message.turnUsage.cacheRead	Cached input	キャッシュの読み取り	ok
-chat	message.turnUsage.cacheWrite	Cache write	キャッシュの書き込み	ok
-chat	message.turnUsage.output	Output	出力	ok
-chat	message.turnUsage.reasoning	 ({tokens} reasoning)	 (推論 {tokens})	ok
-chat	message.turnUsage.count	{count} tok	{count} tok	ok
-chat	duration.secondUnit	s	秒	ok
-chat	duration.minuteUnit	m 	分 	ok
-chat	duration.hourUnit	h 	時間 	ok
-chat	command.running	Running…	実行中…	ok
-chat	command.failed	Command failed	コマンドが失敗しました	ok
-chat	command.done	Completed	完了	ok
-chat	command.title	Command	コマンド	ok
-chat	row.running	Running	実行中	ok
-chat	row.failed	Failed	失敗	ok
-chat	json.truncated	… truncated, {total} characters total	… 全 {total} 文字で省略	ok
-chat	clock.md	{m}/{d}	{m}/{d}	ok
-chat	clock.ymd	{y}-{m}-{d}	{y}-{m}-{d}	ok
-schedule.manager	panel	Automation tasks	自動化タスク	ok
-schedule.manager	title	Automation tasks	自動化タスク	ok
-schedule.manager	new.action	New	新規	ok
-schedule.manager	list.label	Task catalog	タスク一覧	ok
-schedule.manager	list.nextPrefix	Next scheduled time: 	次回の実行予定: 	ok
-schedule.manager	list.loading	Loading tasks…	タスクを読み込み中…	ok
-schedule.manager	list.error	Could not load tasks.	タスクを読み込めませんでした。	ok
-schedule.manager	list.retry	Retry	再試行	ok
-schedule.manager	list.empty	No tasks yet. Tasks created in your sessions appear here.	タスクはまだありません。セッションで作成したタスクがここに表示されます。	ok
-schedule.manager	list.emptyInactive	No inactive automation tasks	終了した自動化タスクはありません	ok
-schedule.manager	list.noMatches	No matching tasks	一致するタスクがありません	ok
-schedule.manager	search.label	Search tasks	タスクを検索	ok
-schedule.manager	search.placeholder	Search automation tasks	自動化タスクを検索	ok
-schedule.manager	search.clear	Clear search	検索をクリア	ok
-schedule.manager	empty.action	New automation task	自動化タスクを作成	ok
-schedule.manager	statusFilter.label	Task status	タスクの状態	ok
-schedule.manager	statusFilter.all	All	すべて	ok
-schedule.manager	status.active	Enabled	有効	ok
-schedule.manager	status.inactive	Inactive	終了	ok
-schedule.manager	detail.label	Task details	タスクの詳細	ok
-schedule.manager	detail.close	Close details	詳細を閉じる	ok
-schedule.manager	detail.more	Automation task actions	自動化タスクの操作	ok
-schedule.manager	detail.nextRun	Next run	次回の実行	ok
-schedule.manager	detail.tabs	Task detail views	タスク詳細の表示	ok
-schedule.manager	detail.rule	Rules	ルール	ok
-schedule.manager	detail.records	Records	記録	ok
-schedule.manager	delivery.empty	No delivery record available	実行記録がありません	ok
-schedule.manager	delivery.loading	Loading delivery records…	実行記録を読み込み中…	ok
-schedule.manager	delivery.error	Could not load delivery records.	実行記録を読み込めませんでした。	ok
-schedule.manager	delivery.notFound	This task is no longer available.	このタスクは利用できません。	ok
-schedule.manager	delivery.cursorError	Records were updated.	記録が更新されました。	ok
-schedule.manager	delivery.retry	Retry	再試行	ok
-schedule.manager	delivery.refresh	Refresh	更新	ok
-schedule.manager	delivery.loadMore	Load more	さらに読み込む	ok
-schedule.manager	delivery.expand	Expand	展開する	ok
-schedule.manager	delivery.collapse	Collapse	折りたたむ	ok
-schedule.manager	delivery.pruned	Earlier delivery records have been cleared	以前の実行記録は削除されました	ok
-schedule.manager	delivery.retention	Retention rules	保存期間のルール	ok
-schedule.manager	delivery.retentionBounds	Each task keeps up to {records} delivery records from the last {days} days.	各タスクは直近 {days} 日間の実行記録を最大 {records} 件保持します。	ok
-schedule.manager	delivery.retentionExplanation	When a new record is saved, older records outside these limits are cleared automatically. Clearing records does not stop the task.	新しい記録が保存されると、この範囲を超えた古い記録は自動的に削除されます。記録を削除してもタスクは停止しません。	ok
-schedule.manager	detail.name	Automation task name	自動化タスクの名前	ok
-schedule.manager	detail.instruction	Automation task instruction	自動化タスクの内容	ok
-schedule.manager	detail.status	Status	状態	ok
-schedule.manager	detail.next	Next scheduled time	次回の実行予定	ok
-schedule.manager	detail.frequency	Frequency	実行頻度	ok
-schedule.manager	detail.id	Task ID	タスク ID	ok
-schedule.manager	detail.session	Linked session	リンクされたセッション	ok
-schedule.manager	detail.openSession	Linked session: open original session	リンクされたセッション: 元のセッションを開く	ok
-schedule.manager	detail.openSessionTitle	Linked session {title}: open original session	リンクされたセッション {title}: 元のセッションを開く	ok
-schedule.manager	detail.sessionLoading	Loading original session information.	元のセッションの情報を読み込み中です。	ok
-schedule.manager	detail.sessionArchived	The original session is archived.	元のセッションはアーカイブされています。	ok
-schedule.manager	detail.sessionUnavailable	The original session is unavailable.	元のセッションは利用できません。	ok
-schedule.manager	detail.missing	Task unavailable. It may have been deleted.	タスクを利用できません。削除された可能性があります。	ok
-schedule.manager	delivery.label	Saved delivery record	保存された実行記録	ok
-schedule.manager	frequency.once	Once	1 回のみ	ok
-schedule.manager	frequency.every	Every {value} {unit}	{value} {unit}ごと	ok
-schedule.manager	time.locale	en	ja	ok
-schedule.manager	time.utcPrefix	UTC	UTC	ok
-schedule.manager	frequency.daily	Daily at {time} ({timeZone})	毎日 {time} ({timeZone})	ok
-schedule.manager	frequency.dailyLocal	Daily at {time}	毎日 {time}	ok
-schedule.manager	frequency.weekly	Weekly on {weekdays} at {time} ({timeZone})	毎週 {weekdays} の {time} ({timeZone})	ok
-schedule.manager	frequency.weeklyLocal	Weekly on {weekdays} at {time}	毎週 {weekdays} の {time}	ok
-schedule.manager	frequency.cron	Cron {expression} ({timeZone})	Cron {expression} ({timeZone})	ok
-schedule.manager	frequency.cronLocal	Cron {expression}	Cron {expression}	ok
-schedule.manager	frequency.cronRule	{rule} ({timeZone})	{rule} ({timeZone})	ok
-schedule.manager	cron.list.join	, 	、	ok
-schedule.manager	cron.part.join	 	 	ok
-schedule.manager	cron.weekday.name	{weekday}	{weekday}曜日	ok
-schedule.manager	cron.weekday.range	{from}–{to}	{from}〜{to}	ok
-schedule.manager	cron.months	 in {months}	 ({months})	ok
-schedule.manager	cron.day.every	Every day{months}	毎日{months}	ok
-schedule.manager	cron.day.weekdays	{weekdays}{months}	{weekdays}{months}	ok
-schedule.manager	cron.day.monthDays	Day {days} of every month{months}	毎月 {days} 日{months}	ok
-schedule.manager	cron.day.both	Day {days} of every month or {weekdays}{months}	毎月 {days} 日または{weekdays}{months}	ok
-schedule.manager	cron.day.bothStarred	Day {days} of every month and {weekdays}{months}	毎月 {days} 日かつ{weekdays}{months}	ok
-schedule.manager	cron.hours.range	{from}–{to}	{from}〜{to}	ok
-schedule.manager	cron.hours.list	{hours}	{hours}	ok
-schedule.manager	cron.time.everyMinute	Every minute	毎分	ok
-schedule.manager	cron.time.everyMinutes	Every {step} minutes	{step} 分ごと	ok
-schedule.manager	cron.time.joinedEveryMinute	every minute	毎分	ok
-schedule.manager	cron.time.joinedEveryMinutes	every {step} minutes	{step} 分ごと	ok
-schedule.manager	cron.time.everyHour	Every hour	毎時	ok
-schedule.manager	cron.time.joinedEveryHour	every hour	毎時	ok
-schedule.manager	cron.time.everyNHours	Every {count} hours	{count} 時間ごと	ok
-schedule.manager	cron.time.joinedEveryNHours	every {count} hours	{count} 時間ごと	ok
-schedule.manager	cron.time.hourlyAt	Every hour at minute {minutes}	毎時 {minutes} 分	ok
-schedule.manager	cron.time.joinedHourlyAt	every hour at minute {minutes}	毎時 {minutes} 分	ok
-schedule.manager	cron.time.hoursEveryMinute	every minute during hours {hours}	{hours} 時の間は毎分	ok
-schedule.manager	cron.time.hoursEveryMinutes	every {step} minutes during hours {hours}	{hours} 時の間は {step} 分ごと	ok
-schedule.manager	cron.time.at	at {times}	{times} に	ok
-schedule.manager	cron.time.hoursAt	at minute {minutes} of hours {hours}	{hours} 時の {minutes} 分に	ok
-schedule.manager	frequency.weekday.join	, 	、	ok
-schedule.manager	frequency.weekday.1	Mon	月	ok
-schedule.manager	frequency.weekday.2	Tue	火	ok
-schedule.manager	frequency.weekday.3	Wed	水	ok
-schedule.manager	frequency.weekday.4	Thu	木	ok
-schedule.manager	frequency.weekday.5	Fri	金	ok
-schedule.manager	frequency.weekday.6	Sat	土	ok
-schedule.manager	frequency.weekday.7	Sun	日	ok
-schedule.manager	unit.day.one	day	日	ok
-schedule.manager	unit.day.other	days	日	ok
-schedule.manager	unit.hour.one	hour	時間	ok
-schedule.manager	unit.hour.other	hours	時間	ok
-schedule.manager	unit.minute.one	minute	分	ok
-schedule.manager	unit.minute.other	minutes	分	ok
-schedule.manager	unit.second.one	second	秒	ok
-schedule.manager	unit.second.other	seconds	秒	ok
-schedule.manager	relative.now	Due now	まもなく実行	ok
-schedule.manager	relative.future	in {value} {unit}	{value} {unit}後	ok
-schedule.manager	relative.overdue	{value} {unit} overdue	{value} {unit}超過	ok
-schedule.manager	timing.date	Date	日付	ok
-schedule.manager	timing.time	Time	時刻	ok
-schedule.manager	timing.hour	Hour	時	ok
-schedule.manager	timing.minute	Minute	分	ok
-schedule.manager	timing.second	Second	秒	ok
-schedule.manager	timing.prevMonth	Previous month	前の月	ok
-schedule.manager	timing.nextMonth	Next month	次の月	ok
-schedule.manager	timing.zone	Time zone	タイムゾーン	ok
-schedule.manager	timing.zoneSearch	Search by UTC offset, IANA ID, or city	UTC オフセット、IANA ID、都市名で検索	ok
-schedule.manager	timing.zoneNoResults	No matching time zones	一致するタイムゾーンがありません	ok
-schedule.manager	timing.interval	Repeat every	繰り返し間隔	ok
-schedule.manager	timing.intervalIncrease	Increase interval	間隔を増やす	ok
-schedule.manager	timing.intervalDecrease	Decrease interval	間隔を減らす	ok
-schedule.manager	timing.unit.hour	hours	時間	ok
-schedule.manager	timing.unit.minute	minutes	分	ok
-schedule.manager	timing.unit.second	seconds	秒	ok
-schedule.manager	timing.intervalHint.hour	At least 1 hour. The interval counts from task creation or the last rule change and is independent of time zones.	1 時間以上。間隔はタスクの作成時または最後のルール変更時から数え、タイムゾーンには依存しません。	ok
-schedule.manager	timing.intervalHint.minute	At least 1 minute. The interval counts from task creation or the last rule change and is independent of time zones.	1 分以上。間隔はタスクの作成時または最後のルール変更時から数え、タイムゾーンには依存しません。	ok
-schedule.manager	timing.intervalHint.second	At least 60 seconds. The interval counts from task creation or the last rule change and is independent of time zones.	60 秒以上。間隔はタスクの作成時または最後のルール変更時から数え、タイムゾーンには依存しません。	ok
-schedule.manager	timing.zoneNoStored	A one-time task stores only its target moment, not a time zone. The date and time are interpreted in the selected time zone.	1 回だけのタスクは実行する時刻だけを保存し、タイムゾーンは保存しません。日付と時刻は選択したタイムゾーンで解釈されます。	ok
-schedule.manager	timing.inactive	Inactive tasks are read-only. Their timing cannot be edited.	終了したタスクは読み取り専用です。実行時刻は編集できません。	ok
-schedule.manager	timing.conflict	This task changed while you were editing. Your draft is retained. Cancel and reopen after refresh to edit the latest rule.	編集中にタスクが変更されました。下書きは保持されています。最新のルールを編集するには、更新後にキャンセルして開き直してください。	ok
-schedule.manager	timing.notFound	This task is no longer available. Your draft is retained; cancel to close the editor.	このタスクは利用できません。下書きは保持されています。キャンセルすると編集画面を閉じます。	ok
-schedule.manager	timing.subagentSession	This session belongs to a sub-agent, which never receives delivered reminders.	このセッションはサブエージェントのものです。サブエージェントには配信リマインダーは届きません。	ok
-schedule.manager	timing.invalid	Enter a valid date and time, or check the timing fields.	有効な日付と時刻を入力するか、時間の項目を確認してください。	ok
-schedule.manager	timing.invalidZone	Enter a valid IANA time zone, for example Asia/Shanghai.	有効な IANA タイムゾーンを入力してください (例: Asia/Tokyo)。	ok
-schedule.manager	timing.notFuture	Choose a date and time in the future.	未来の日付と時刻を指定してください。	ok
-schedule.manager	timing.invalidInterval	Enter an interval of at least 1 minute.	1 分以上の間隔を入力してください。	ok
-schedule.manager	timing.invalidInterval.hour	Enter an interval of at least 1 hour.	1 時間以上の間隔を入力してください。	ok
-schedule.manager	timing.invalidInterval.minute	Enter an interval of at least 1 minute.	1 分以上の間隔を入力してください。	ok
-schedule.manager	timing.invalidInterval.second	Enter an interval of at least 60 seconds.	60 秒以上の間隔を入力してください。	ok
-schedule.manager	timing.error	Could not confirm the timing update. Your draft is retained. Check the task before retrying.	時間の更新を確認できませんでした。下書きは保持されています。再試行する前にタスクを確認してください。	ok
-schedule.manager	rule.title	Run time	実行時刻	ok
-schedule.manager	rule.repeat	Repeat	繰り返し	ok
-schedule.manager	rule.weekday	Weekday	曜日	ok
-schedule.manager	rule.weekdayOption	Weekday {weekday}	{weekday}曜日	ok
-schedule.manager	rule.unsaved	Unsaved changes	未保存の変更	ok
-schedule.manager	rule.save	Save changes	変更を保存	ok
-schedule.manager	rule.saving	Saving…	保存しています…	ok
-schedule.manager	rule.cancel	Cancel	キャンセル	ok
-schedule.manager	rule.invalidTitle	Enter a task name of at most 120 characters.	タスク名は 120 文字以内で入力してください。	ok
-schedule.manager	rule.invalidPrompt	Enter a task instruction.	タスクの内容を入力してください。	ok
-schedule.manager	rule.once	Once	1 回	ok
-schedule.manager	rule.everyMinutes	Every N minutes	N 分ごと	ok
-schedule.manager	rule.everyHours	Every N hours	N 時間ごと	ok
-schedule.manager	rule.everySeconds	Every N seconds	N 秒ごと	ok
-schedule.manager	rule.daily	Every day	毎日	ok
-schedule.manager	rule.weekdays	Monday to Friday	月曜日から金曜日	ok
-schedule.manager	rule.weekly	Weekly	毎週	ok
-schedule.manager	rule.cron	Custom	カスタム	ok
-schedule.manager	rule.cronLabel	Cron expression	Cron 式	ok
-schedule.manager	rule.cronInvalid	Enter a five-field cron expression, for example 0 9 * * 1-5.	5 フィールドの Cron 式を入力してください (例: 0 9 * * 1-5)。	ok
-schedule.manager	cronForm.frequency	Frequency	頻度	ok
-schedule.manager	cronForm.monthly	Monthly	毎月	ok
-schedule.manager	cronForm.weekly	Weekly	毎週	ok
-schedule.manager	cronForm.daily	Every day	毎日	ok
-schedule.manager	cronForm.dates	On dates	日付で指定	ok
-schedule.manager	cronForm.dateOption	Day {day}	{day} 日	ok
-schedule.manager	cronForm.atMinute	At minute	毎時の分	ok
-schedule.manager	cronForm.minuteIncrease	Increase minute	分を増やす	ok
-schedule.manager	cronForm.minuteDecrease	Decrease minute	分を減らす	ok
-schedule.manager	rule.zone.system	 (system)	 (システム)	ok
-schedule.manager	rule.error.conflict	This task changed before the update was saved. The row shows the saved rule; try again.	更新が保存される前にタスクが変更されました。表示されているのは保存済みのルールです。もう一度お試しください。	ok
-schedule.manager	rule.error.notFound	This task is no longer available.	このタスクは利用できません。	ok
-schedule.manager	rule.error.unknown	Could not confirm the rule update. The row shows the saved rule.	ルールの更新を確認できませんでした。表示されているのは保存済みのルールです。	ok
-schedule.manager	delete.action	Delete task	タスクを削除	ok
-schedule.manager	delete.title	Delete this task?	このタスクを削除しますか？	ok
-schedule.manager	delete.description	This stops the task from triggering and deletes it together with its saved delivery records. The original session and its messages remain; queued messages are not withdrawn.	タスクの実行を停止し、保存された実行記録とともに削除します。元のセッションとそのメッセージは残ります。キューに入っているメッセージは取り消されません。	ok
-schedule.manager	delete.confirm	Confirm deletion	削除を確定	ok
-schedule.manager	delete.cancel	Cancel	キャンセル	ok
-schedule.manager	delete.close	Close deletion confirmation	削除の確認を閉じる	ok
-schedule.manager	delete.pending	Deleting…	削除中…	ok
-schedule.manager	toast.deleted	Task deleted.	タスクを削除しました。	ok
-schedule.manager	toast.deleteFailed	Could not delete the task.	タスクを削除できませんでした。	ok
-schedule.manager	card.open	Open	開く	ok
-schedule.manager	card.openLabel	Open task details: {title}	タスクの詳細を開く: {title}	ok
-schedule.manager	card.deleted	Deleted	削除済み	ok
-schedule.manager	tool.invoked	Invoked {name}	{name} を呼び出しました	ok
+stats	view.stats	Statistics	統計	ok
+stats	column.scope	Turn / step	ターン / ステップ	ok
+stats	column.scope.title	A turn row holds the turn total; click a row to expand or collapse its steps	ターンの行はそのターンの合計です。行をクリックするとステップを展開・折りたたみできます	ok
+stats	column.prompt	Trigger	きっかけ	ok
+stats	column.prompt.title	What opened this turn: a human prompt shows its text, automation shows a source badge	このターンが何で始まったか。人の入力ならその文面、自動化なら種類のバッジを表示します	ok
+stats	trigger.agent-message	Agent message	Agent のメッセージ	ok
+stats	trigger.team-message	Team message	チームのメッセージ	ok
+stats	trigger.schedule	Scheduled	スケジュール	ok
+stats	trigger.webhook	Webhook	Webhook	ok
+stats	trigger.tool-jobs	Background job	バックグラウンドジョブ	ok
+stats	trigger.cordis-host-runner	Plugin run	プラグインの実行	ok
+stats	trigger.subagent-settled	Subagent finished	サブエージェントの完了	ok
+stats	trigger.goal	Goal round	ゴールのラウンド	ok
+stats	trigger.context	Context wake	コンテキストの再開	ok
+stats	trigger.other	Automated turn	自動化されたターン	ok
+stats	column.did	Execution	実行内容	ok
+stats	column.did.title	Tools this step called and how often; a step without tool calls previews its answer text	このステップが呼んだツールと回数。ツール呼び出しのないステップは回答の文面を表示します	ok
+stats	column.context	Context	コンテキスト	ok
+stats	column.context.title	usage input tokens + cache read + cache write	使用量の入力トークン + キャッシュ読み込み + キャッシュ書き込み	ok
+stats	column.output	Output	出力	ok
+stats	column.output.title	usage output tokens of the step	ステップの出力トークン（使用量）	ok
+stats	column.cache	Cache hit	キャッシュヒット	ok
+stats	column.cache.title	cache read ÷ (input + cache read + cache write): the share of the prompt served from cache	キャッシュ読み込み ÷（入力 + キャッシュ読み込み + キャッシュ書き込み）。プロンプトのうちキャッシュから供給された割合	ok
+stats	cache.detail	cache read {read} · input {input} · cache write {write}	キャッシュ読み込み {read} · 入力 {input} · キャッシュ書き込み {write}	ok
+stats	column.ttft	First token	最初のトークン	ok
+stats	column.ttft.title	step start to the first output fragment (TTFT)	ステップ開始から最初の出力断片まで（TTFT）	ok
+stats	column.model	Model time	モデル時間	ok
+stats	column.model.title	step start to the settled reply (includes the first-token delay)	ステップ開始から応答確定まで（最初のトークン待ちを含む）	ok
+stats	column.tps	Output speed	出力速度	ok
+stats	column.tps.title	output tokens ÷ generation seconds (TPS, tok/s)	出力トークン ÷ 生成秒数（TPS、tok/s）	ok
+stats	column.tool	Tool time	ツール時間	ok
+stats	column.tool.title	sum of every tool call up to its result inside the step; calls without a result are excluded	ステップ内のツール呼び出しごとに、結果が出るまでの時間の合計。結果のない呼び出しは除外	ok
+stats	column.time	Total time	合計時間	ok
+stats	column.time.title	total split: light blue first token, blue generation, orange tool calls, gray everything else. Bar length uses a square-root scale; steps compare only with steps of the same turn, turns with turns	合計の内訳: 水色が最初のトークン、青が生成、オレンジがツール呼び出し、灰色がその他。バーの長さは平方根スケールで、ステップ同士・ターン同士でのみ比較できます	ok
+stats	turn.label	Turn {turn}	ターン {turn}	ok
+stats	step.label	Step {step}	ステップ {step}	ok
+stats	step.toggle.aria	Expand or collapse the tool details of step {step}	ステップ {step} のツール詳細を展開・折りたたむ	ok
+stats	step.partial	start unknown	開始不明	ok
+stats	step.started.title	Step started at {time}	ステップの開始 {time}	ok
+stats	compaction.label	Compaction	圧縮	ok
+stats	compaction.running	Compacting…	圧縮しています…	ok
+stats	compaction.shadowed	Pruned {tokens} tokens of history	履歴から {tokens} トークンを削除しました	ok
+stats	compaction.summary	Summary {chars} chars	要約 {chars} 文字	ok
+stats	compaction.title	Compaction runs are shown separately and excluded from the turn's step totals	圧縮の実行は別に表示され、ターンのステップ合計には含まれません	ok
+stats	event.show	Show event rows (incl. compaction)	イベント行を表示（圧縮を含む）	ok
+stats	context.delta.show	Show context delta	コンテキストの増減を表示	ok
+stats	context.delta.title	Prompt delta against the previous measured step in the turn; negative means the context shrank (for example after compaction)	ターン内の直前の計測ステップに対するプロンプトの増減。負の値はコンテキストが減ったことを意味します（圧縮後など）	ok
+stats	event.request-header	Request header	リクエストヘッダー	ok
+stats	event.system-prompt	System prompt	システムプロンプト	ok
+stats	event.tool-set	Tool set change	ツール構成の変更	ok
+stats	event.context-prune	Context prune	コンテキストの削除	ok
+stats	event.request-context	Request context	リクエストのコンテキスト	ok
+stats	event.model-retry	Model retry	モデルの再試行	ok
+stats	event.model-attempt	Model attempt	モデルの試行	ok
+stats	event.context-refresh	Context refresh	コンテキストの更新	ok
+stats	event.approval	Approval	承認	ok
+stats	event.context.detail	{provider} / {model} · prompt mode {mode}	{provider} / {model} · プロンプトモード {mode}	ok
+stats	event.retry.detail	retry {retry} · wait {delay}	再試行 {retry} · 待機 {delay}	ok
+stats	event.attempt.detail	Model attempt without a committed message	メッセージを確定しないモデルの試行	ok
+stats	event.refresh.detail	{source} · {chars} chars	{source} · {chars} 文字	ok
+stats	event.approval.detail	{tool} · {status}	{tool} · {status}	ok
+stats	event.source.runtime	runtime context	実行時コンテキスト	ok
+stats	event.source.time	time context	時刻コンテキスト	ok
+stats	event.approval.asked	waiting	待機中	ok
+stats	event.approval.allowed	allowed once	1 回許可	ok
+stats	event.approval.rejected	rejected	拒否	ok
+stats	event.approval.cancelled	cancelled	キャンセル済み	ok
+stats	event.approval.unavailable	unavailable	利用できません	ok
+stats	event.title	Non-step event rows: request, prompt, tool-set, retry, context-refresh, approval, and prune changes excluded from the turn step totals	ステップ以外のイベント行: リクエスト・プロンプト・ツール構成・再試行・コンテキスト更新・承認・削除の変更で、ターンのステップ合計には含まれません	ok
+stats	event.reason.initial	initial	初回	ok
+stats	event.reason.resume	resume	再開	ok
+stats	event.reason.change	change	変更	ok
+stats	event.reason.series	new series	新しい連続	ok
+stats	event.header.detail	{reason} · {tools} tools	{reason} · ツール {tools} 個	ok
+stats	event.series	new series	新しい連続	ok
+stats	event.system.append	append	追記	ok
+stats	event.system.replace	replace	置換	ok
+stats	event.system.clear	clear	クリア	ok
+stats	event.system.detail	{action} · {chars} chars	{action} · {chars} 文字	ok
+stats	event.tools.added	added {tools}	追加 {tools}	ok
+stats	event.tools.removed	removed {tools}	削除 {tools}	ok
+stats	event.prune.detail	pruned {tokens} tokens	{tokens} トークンを削除	ok
+stats	step.partial.title	This step's start and end events are not in the current event window (trimmed while the tab reconnected or the window was rebuilt), so first-token, model time and total have no start to subtract from; reloading the tab reassembles from the full window	このステップの開始・終了イベントが現在のイベント範囲に含まれていないため（タブの再接続や範囲の再構築で切り捨て）、最初のトークン・モデル時間・合計時間は起点がありません。タブを再読み込みすると完全な範囲から再構成されます	ok
+stats	state.running	running	実行中	ok
+stats	state.interrupted	interrupted	中断	ok
+stats	state.cacheMiss	cache miss	キャッシュミス	ok
+stats	state.cacheMiss.title	The prompt barely hit the cache: usually the first request after a restart or a session resume, paid at full input price	プロンプトがほとんどキャッシュに当たらなかった状態。再起動直後やセッション再開後の最初のリクエストで起きやすく、入力の全額が課金されます	ok
+stats	state.aborted	unsettled	未確定	ok
+stats	state.aborted.title	The step closed without a settled reply (usually cancelled or failed)	応答を確定せずにステップが終了しました（通常はキャンセルまたは失敗）	ok
+stats	unknown	not recorded	記録なし	ok
+stats	partial	{count} tool calls have no result yet; this is the lower bound of known time	{count} 件のツール呼び出しにまだ結果がありません。判明している時間の下限です	ok
+stats	empty	No measurable step in the current window.	現在の範囲に計測できるステップがありません。	ok
+stats	loadOlder	Load earlier	以前を読み込む	ok
+stats	loadOlder.loading	Loading earlier turns…	以前のターンを読み込み中…	ok
+stats	loadOlder.done	Beginning of history reached	履歴の先頭まで到達しました	ok
+stats	loadOlder.failed	Load failed, retry	読み込みに失敗しました。再試行してください	ok
+stats	summary	{turns} turns · {steps} steps	{turns} ターン · {steps} ステップ	ok
+stats	table.showTotals	Show total row	合計行を表示	ok
+stats	contextMode.label	Context basis	コンテキストの基準	ok
+stats	contextMode.latest	Latest	最新	ok
+stats	contextMode.latest.title	Turn rows show the last measured step's prompt size (final context); the total row stays cumulative	ターンの行は最後に計測したステップのプロンプトサイズ（最終コンテキスト）を表示し、合計行は累積のままです	ok
+stats	contextMode.cumulative	Cumulative	累積	ok
+stats	contextMode.cumulative.title	Turn rows show the sum of prompt sizes across the turn's steps (cumulative processing); the total row stays cumulative	ターンの行はターン内のステップごとのプロンプトサイズの合計（累積処理）を表示し、合計行は累積のままです	ok
+stats	totals.full	Whole-session total	セッション全体の合計	ok
+stats	totals.full.title	Totals for the complete session; total time is model time + tool time (no inter-turn gaps)	セッション全体の合計。合計時間はモデル時間 + ツール時間（ターン間の空白は含まない）	ok
+stats	totals.window	Window total	表示範囲の合計	ok
+stats	totals.window.title	Totals for the turns loaded in this window; the context cell is cumulative across steps	この範囲に読み込まれたターンの合計。コンテキストの値はステップ間の累積です	ok
+stats	expand.all	Expand all	すべて展開	ok
+stats	collapse.all	Collapse all	すべて折りたたむ	ok
+stats	turn.expand	Show	表示	ok
+stats	turn.collapse	Hide	非表示	ok
+stats	turn.toggle.title	Expand or collapse the steps of this turn	このターンのステップを展開・折りたたみ	ok
+stats	turn.toggle.aria	Expand or collapse turn {turn}	ターン {turn} を展開・折りたたみ	ok
+stats	did.answer	answer	回答	ok
+stats	did.working	generating	生成中	ok
+stats	did.aborted	no answer	回答なし	ok
+stats	did.more	{count} more	ほか {count} 件	ok
+stats	did.rest	{count} more calls	ほか {count} 回の呼び出し	ok
+stats	did.title	{calls} calls: {tools}	{calls} 回の呼び出し: {tools}	ok
+stats	did.retry	retried {count}×	{count} 回再試行	ok
+stats	did.lines	{lines} lines	{lines} 行	ok
+stats	did.lines.unit	lines	行	ok
+stats	did.chars	{chars} chars	{chars} 文字	ok
+stats	did.output	→ {chars} chars	→ {chars} 文字	ok
+stats	did.total	{chars} characters of tool output in this step; they become part of the next prompt	このステップのツール出力 {chars} 文字。次のプロンプトの一部になります	ok
+stats	detail.show	details	詳細	ok
+stats	detail.hide	hide	隠す	ok
+stats	detail.title	Click this row to expand or collapse the tool details	この行をクリックするとツールの詳細を展開・折りたたみます	ok
+stats	detail.calls	{count} tool calls	ツール呼び出し {count} 件	ok
+stats	detail.answer	Answer	回答	ok
+stats	detail.answer.truncated	Answer is long; only the first 16,000 chars are kept	回答が長いため、先頭 16,000 文字だけを保持しています	ok
+stats	detail.code.title	Code block	コードブロック	ok
+stats	detail.code.wrap	Wrap lines	行を折り返す	ok
+stats	detail.code.unwrap	Do not wrap	折り返さない	ok
+stats	detail.footnotes	Footnotes	脚注	ok
+stats	detail.copy	Copy	コピー	ok
+stats	detail.copy.title	Copy this text	このテキストをコピー	ok
+stats	detail.copied	Copied	コピーしました	ok
+stats	detail.copyFailed	Copy failed	コピーできませんでした	ok
+stats	detail.chars	{chars} chars	{chars} 文字	ok
+stats	detail.lines	{lines} lines	{lines} 行	ok
+stats	detail.file	file	ファイル	ok
+stats	detail.diff	change	変更	ok
+stats	detail.emptyBody	This call left no text	この呼び出しにはテキストがありません	ok
+stats	detail.hidden	{count} more calls are not listed (at most {limit} per step)	ほか {count} 件の呼び出しは表示していません（1 ステップあたり最大 {limit} 件）	ok
+stats	detail.args	raw arguments	生の引数	ok
+stats	detail.wrap	Wrap	折り返す	ok
+stats	detail.wrap.title	Wrap long lines instead of scrolling sideways	横スクロールの代わりに長い行を折り返します	ok
+stats	detail.raw.title	Show the raw JSON arguments	生の JSON 引数を表示	ok
+stats	detail.lineCap	Showing the first {shown} of {total} lines	{total} 行中、先頭 {shown} 行を表示	ok
+stats	detail.truncated	Too long: only the first {chars} characters are kept	長すぎるため、先頭 {chars} 文字だけを保持しています	ok
+stats	tool.failed	{count} failed	{count} 件失敗	ok
+stats	tool.failed.title	{count} tool calls in this step returned an error result	このステップの {count} 件のツール呼び出しがエラーを返しました	ok
+stats	bar.ttft	first token {value}	最初のトークン {value}	ok
+stats	bar.gen	generation {value}	生成 {value}	ok
+stats	bar.tool	tool calls {value}	ツール呼び出し {value}	ok
+stats	bar.rest	other {value}	その他 {value}	ok
+stats	bar.wall	total {value}	合計 {value}	ok
+stats	bar.running	not finished yet: this is elapsed time	未完了のため経過時間です	ok
+stats	bar.gap	gap since previous step {value}	前のステップからの空白 {value}	ok
+stats	bar.start	started {clock}	開始 {clock}	ok
+stats	turn.started	this turn started at {time}	このターンの開始 {time}	ok
+stats	turn.images	{count} images	画像 {count} 枚	ok
+stats	imagePreview.hint	Hover or focus to preview this turn's images; click to open the full image	ホバーまたはフォーカスでこのターンの画像をプレビューします。クリックで全体を開きます	ok
+stats	imagePreview.dialog	Image preview	画像プレビュー	ok
+stats	imagePreview.open	View image {index} of {count}	画像 {count} 枚中 {index} 枚目を表示	ok
+stats	imagePreview.alt	Image {index}	画像 {index}	ok
+stats	imagePreview.loading	Loading image…	画像を読み込み中…	ok
+stats	imagePreview.failed	Image failed to load	画像を読み込めませんでした	ok
+stats	imagePreview.retry	Retry	再試行	ok
+stats	imagePreview.close	Close image preview	画像プレビューを閉じる	ok
+stats	steps.total	{total} steps	{total} ステップ	ok
+stats	steps.tail	newest {limit} only	最新 {limit} 件のみ	ok
+stats	steps.all	Show all {total} steps	{total} ステップをすべて表示	ok
+stats	steps.filter	Only {tool}	{tool} のみ	ok
+stats	steps.clear	Clear filter	絞り込みを解除	ok
+stats	steps.matched	{count} steps used {tool}	{tool} を使った {count} ステップ	ok
 settings.models	nav	Models	モデル	ok
 settings.models	deepSeekAccount	DeepSeek Account	DeepSeek アカウント	ok
 settings.models	title	Models	モデル	ok
@@ -1247,6 +1571,8 @@ settings.models	modelReasoningRemove	Delete level	レベルを削除	ok
 settings.models	modelReasoningOffValuePlaceholder	Turns reasoning off	推論をオフにします	ok
 settings.models	addModel	Add model	モデルを追加	ok
 settings.models	removeModel	Delete model	モデルを削除	ok
+settings.models	reorderModel	Reorder model	モデルを並べ替え	ok
+settings.models	reorderModelHelp	Drag to reorder, or use the up and down arrow keys.	ドラッグするか、上下の矢印キーで並べ替えます。	ok
 settings.models	modelsEmpty	No models will be shown in the selector. Unlisted IDs can still be sent directly.	モデル選択には何も表示されません。一覧にない ID も直接送信できます。	ok
 settings.models	keyBlank	Enter the API key, or leave the field empty to keep the stored one.	API キーを入力してください。空欄のままにすると保存済みのキーを維持します。	ok
 settings.models	keyBlankNew	Enter the API key, or leave the field empty if this provider authenticates another way.	API キーを入力してください。このプロバイダーが別の方法で認証する場合は空欄のままにできます。	ok
@@ -1263,13 +1589,14 @@ settings.models	fetchModels	Fetch available models	利用可能なモデルを�
 settings.models	fetching	Asking the provider…	プロバイダーに問い合わせています…	ok
 settings.models	fetchNeedsBaseUrl	Enter the base URL first, then fetch.	先にベース URL を入力してから取得してください。	ok
 settings.models	fetchEmpty	The provider listed no models. Add them by hand.	プロバイダーはモデルを 1 つも公開していません。手動で追加してください。	ok
-settings.models	fetchTitle	Choose models to add	追加するモデルを選択	ok
-settings.models	fetchDescription	These are the models this provider has available. Choose the ones to add.	このプロバイダーで利用可能なモデルです。追加するものを選んでください。	ok
+settings.models	fetchTitle	Choose models	モデルを選択	ok
+settings.models	fetchDescription	These are the models this provider has available. Checked models make up the list.	このプロバイダーが利用できるモデルです。チェックしたモデルが一覧になります。	ok
 settings.models	fetchSearch	Search models	モデルを検索	ok
 settings.models	fetchNoMatches	No matching models.	一致するモデルがありません。	ok
 settings.models	fetchSelectAll	Select all	すべて選択	ok
 settings.models	fetchDeselectAll	Deselect all	選択を解除	ok
-settings.models	fetchAdopt	Add selected	選択したものを追加	ok
+settings.models	fetchAdopt	Update list	一覧を更新	ok
+settings.models	fetchKeepOne	Keep at least one model checked.	少なくとも 1 つのモデルを選択したままにしてください。	ok
 settings.models	customTag	Custom	カスタム	ok
 settings.models	customRoute	Provider ID	プロバイダー ID	ok
 settings.models	customRouteHint	Lowercase identifier, starting with a letter, that uniquely names this provider in requests and as its credential name.	英小文字で始まる識別子です。リクエスト内でこのプロバイダーを一意に示し、認証情報の名前の元にもなります。	ok
@@ -1372,8 +1699,8 @@ workspace	archive.confirm.subagents.one	{n} running subagent: {names}	実行中�
 workspace	archive.confirm.subagents.other	{n} running subagents: {names}	実行中のサブエージェント {n} 件: {names}	ok
 workspace	archive.confirm.jobs.one	{n} background job: {names}	バックグラウンドジョブ {n} 件: {names}	ok
 workspace	archive.confirm.jobs.other	{n} background jobs: {names}	バックグラウンドジョブ {n} 件: {names}	ok
-workspace	archive.confirm.schedules.one	{n} scheduled reminder: {names}	スケジュールされたリマインダー {n} 件: {names}	ok
-workspace	archive.confirm.schedules.other	{n} scheduled reminders: {names}	スケジュールされたリマインダー {n} 件: {names}	ok
+workspace	archive.confirm.schedules.one	{n} scheduled reminder: {names}	スケジュールされた自動化タスク {n} 件: {names}	ok
+workspace	archive.confirm.schedules.other	{n} scheduled reminders: {names}	スケジュールされた自動化タスク {n} 件: {names}	ok
 workspace	archive.confirm.other.one	{n} other item of work ({kind})	その他の作業 {n} 件 ({kind})	ok
 workspace	archive.confirm.other.other	{n} other items of work ({kind})	その他の作業 {n} 件 ({kind})	ok
 workspace	archive.confirm.listSeparator	, 	、	ok
@@ -1418,114 +1745,20 @@ workspace	time.days	{n}d	{n} 日	ok
 workspace	time.months	{n}mo	{n} か月	ok
 workspace	time.years	{n}y	{n} 年	ok
 workspace	time.ago	{t} ago	{t}前	ok
-settings.account	modelSignInRequired	Model unavailable. Please sign in and try again.	モデルを利用できません。サインインして再試行してください。	ok
-settings.account	sessionExpired	You have signed out of your account, please log in again.	アカウントからサインアウトしました。もう一度サインインしてください。	ok
-settings.account	onboardingArtworkLocale	en	ja	ok
-settings.account	onboardingWelcome	Welcome to	ようこそ	ok
-settings.account	onboardingBrand	DeepSeek Harness	DeepSeek Harness	ok
-settings.account	onboardingIntroduction	DeepSeek Harness works in a local folder and uses tools to read and write files on your computer. It can help you research and organize information, create documents and spreadsheets, write code, troubleshoot issues, and more.	DeepSeek Harness はローカルのフォルダーで動作し、ツールを使ってあなたのコンピューター上のファイルを読み書きします。調査や情報整理、文書や表計算の作成、コードの記述、問題の調査などに役立ちます。	ok
-settings.account	onboardingStart	Get started	はじめる	ok
-settings.account	onboardingCredit	Add credits	クレジットを追加	ok
-settings.account	onboardingCreditDescription	DeepSeek Harness charges credits based on the tokens used by models and tools. Add credits in advance to keep your tasks running without interruption. Your balance is only used while the agent is working on a task.	DeepSeek Harness は、モデルとツールが使ったトークンに応じてクレジットを消費します。事前にクレジットを追加しておくと、タスクを中断せずに続けられます。残高が使われるのは、Agent がタスクを処理している間だけです。	ok
-settings.account	onboardingTopUp	Add credits	クレジットを追加	ok
-settings.account	onboardingLater	Next	次へ	ok
-settings.account	onboardingFundedTopUp	Add credits	クレジットを追加	ok
-settings.account	onboardingPurposePrefix	What would you like	何を	ok
-settings.account	onboardingPurposeSuffix	to help with?	手伝いましょうか？	ok
-settings.account	onboardingPurposeDescription	We’ll tailor the interface and tools to fit the way you work.	あなたの働き方に合わせて、インターフェースとツールを調整します。	ok
-settings.account	onboardingOffice	Office & creative work	オフィス作業・創作	ok
-settings.account	onboardingOfficeDescription	Edit documents, organize data, create presentations, and more	文書の編集、データ整理、プレゼンテーション作成など	ok
-settings.account	onboardingDevelopment	Coding & development	コーディング・開発	ok
-settings.account	onboardingDevelopmentDescription	Edit code, debug issues, run commands, manage project files, and more	コードの編集、デバッグ、コマンド実行、プロジェクトファイルの管理など	ok
-settings.account	onboardingContinue	Continue	続ける	ok
-settings.account	onboardingProcess	How much detail would you like to see?	どこまで詳しく表示しますか？	ok
-settings.account	onboardingProcessDescription	This only changes how progress is shown, not what DeepSeek Harness can do.	変わるのは進捗の表示方法だけです。DeepSeek Harness の機能は変わりません。	ok
-settings.account	onboardingCompact	Results only	結果だけ	ok
-settings.account	onboardingCompactDescription	See just the results in a clean, simple interface	シンプルな画面で結果だけを表示します	ok
-settings.account	onboardingStandard	Key details	要点	ok
-settings.account	onboardingStandardDescription	Focus on results, with only the most important steps and actions shown	結果を中心に、重要なステップと操作だけを表示します	ok
-settings.account	onboardingDetailed	Full details	すべての詳細	ok
-settings.account	onboardingDetailedDescription	See the full process for easier debugging and troubleshooting	プロセス全体を表示するので、デバッグや問題調査がしやすくなります	ok
-settings.account	onboardingEnter	Open app	アプリを開く	ok
-settings.account	onboardingBack	Back	戻る	ok
-settings.account	onboardingSkip	Skip	スキップ	ok
-settings.account	onboardingSkipTitle	Skip setup?	セットアップをスキップしますか？	ok
-settings.account	onboardingSkipDescription	You can change how progress, performance, and usage are displayed, or enable Coding Tools, anytime in Settings → General.	進捗・パフォーマンス・使用量の表示方法や、コーディングツールの有効化は、いつでも設定 → 一般で変更できます。	ok
-settings.account	onboardingKeepSetting	Continue setup	セットアップを続ける	ok
-settings.account	onboardingNoCreditTitle	Skip adding credits?	クレジットの追加をスキップしますか？	ok
-settings.account	onboardingNoCreditDescription	DeepSeek Harness can’t start new tasks without credits. You can add them later in Settings → Account.	クレジットがないと DeepSeek Harness は新しいタスクを開始できません。あとから設定 → アカウントで追加できます。	ok
-settings.account	onboardingUnderstood	Got it	了解	ok
-settings.account	onboardingGoTopUp	Add credits	クレジットを追加	ok
-settings.account	onboardingSaveFailed	Could not save settings. Try again.	設定を保存できませんでした。もう一度お試しください。	ok
-settings.account	onboardingRetry	Retry	再試行	ok
-settings.account	onboardingLoading	Loading settings…	設定を読み込み中…	ok
-settings.account	close	Close	閉じる	ok
-settings.account	addApiKey	Add API Key	API キーを追加	ok
-settings.account	retry	Sign in again	もう一度サインイン	ok
-settings.account	loginTitle	Get started	はじめる	ok
-settings.account	loginDescription	Sign in to your DeepSeek account or add an API Key to get started. Your projects and files are stored locally.	DeepSeek アカウントでサインインするか、API キーを追加して始めます。プロジェクトとファイルはローカルに保存されます。	ok
-settings.account	browserTitle	Waiting for sign in	サインインを待っています	ok
-settings.account	browserPrompt	Page did not open automatically? 	ページが自動で開かない場合は、	ok
-settings.account	copyLink	Copy sign-in link	サインインリンクをコピー	ok
-settings.account	copiedLink	Link copied	リンクをコピーしました	ok
-settings.account	copyFailed	Copy failed	コピーできませんでした	ok
-settings.account	browserDescription	, then open it in your browser to finish signing in.	を押し、ブラウザーで開いてサインインを完了してください。	ok
-settings.account	timeoutTitle	Sign in timed out	サインインがタイムアウトしました	ok
-settings.account	timeoutDescription	Sign in again to continue.	続けるにはもう一度サインインしてください。	ok
-settings.account	failureTitle	Could not sign in	サインインできませんでした	ok
-settings.account	platformFailed	Could not complete the operation. Try again.	操作を完了できませんでした。もう一度お試しください。	ok
-settings.account	platformRetry	Retry	再試行	ok
-settings.account	loading	Loading…	読み込み中…	ok
-settings.account	backToHarness	Back to DeepSeek Harness	DeepSeek Harness に戻る	ok
-settings.account	settings	Settings	設定	ok
-settings.account	contactUs	Feedback	フィードバック	ok
-settings.account	menu	Account menu	アカウントメニュー	ok
-settings.account	nav	Account	アカウント	ok
-settings.account	signedIn	Signed in to DeepSeek	DeepSeek にサインイン済み	ok
-settings.account	signedOut	Not signed in	未サインイン	ok
-settings.account	signIn	Sign in	サインイン	ok
-settings.account	signOut	Sign out	サインアウト	ok
-settings.account	signOutUnknownDescription	Could not check running tasks. Signing out may interrupt tasks using this account. Sign out now?	実行中のタスクを確認できませんでした。サインアウトすると、このアカウントを使っているタスクが中断される可能性があります。今すぐサインアウトしますか？	ok
-settings.account	signOutDescription	Signing out will not delete any data. You can sign in to this account again.	サインアウトしてもデータは削除されません。このアカウントには再びサインインできます。	ok
-settings.account	signOutRunningDescription	Tasks are currently running. Signing out will interrupt them. Sign out now?	現在タスクが実行中です。サインアウトすると中断されます。今すぐサインアウトしますか？	ok
-settings.account	cancel	Cancel	キャンセル	ok
-settings.account	open	Open browser	ブラウザーで開く	ok
-settings.account	initializing	Starting sign in…	サインインを開始しています…	ok
-settings.account	waiting	Continue in your browser	ブラウザーで続けてください	ok
-settings.account	completing	Completing sign in…	サインインを完了しています…	ok
-settings.account	expired	Sign in expired. Try again.	サインインの有効期限が切れました。もう一度お試しください。	ok
-settings.account	failed	Could not complete the operation. Try again.	操作を完了できませんでした。もう一度お試しください。	ok
-settings.account	noResponse	Something went wrong. Please check your network connection and try again.	問題が発生しました。ネットワーク接続を確認して、もう一度お試しください。	ok
-settings.account	settingsSignedOutTitle	You are not signed in to DeepSeek Harness	DeepSeek Harness にサインインしていません	ok
-settings.account	settingsSignedOutDescription	Sign in to DeepSeek Harness to get your dedicated API Key	DeepSeek Harness にサインインすると、専用の API キーを取得できます	ok
-settings.account	signInDescription	Use your DeepSeek account to get started.	DeepSeek アカウントで始めます。	ok
-settings.account	profileUnavailable	Account details are not available yet.	アカウントの詳細はまだ取得できません。	ok
-settings.account	balance	Topped-up balance	チャージ残高	ok
-settings.account	bonusBalance	Granted balance	付与残高	ok
-settings.account	balanceUnavailable	View on Platform	プラットフォームで表示	ok
-settings.account	balanceSignedOut	Sign in to view	サインインして表示	ok
-settings.account	accountInfo	More account information	アカウント情報の詳細	ok
-settings.account	more	More	その他	ok
-settings.account	usage	View usage	使用量を表示	ok
-settings.account	topUp	Top up	チャージする	ok
-settings.account	quotaTitle	No balance available	残高がありません	ok
-settings.account	quotaDescription	DeepSeek Harness cannot start a new task with this account when no balance is available. Would you like to top up? You can also top up later in Settings → Account.	残高がない状態では、このアカウントで新しいタスクを開始できません。チャージしますか？あとから設定 → アカウントでチャージすることもできます。	ok
-settings.account	quotaTopUp	Top up	チャージする	ok
-settings.account	bonusNoticeTitle	Bonus credited	ボーナスが付与されました	ok
 pluginMarket	title	Discover	プラグインを探す	ok
 pluginMarket	refresh	Refresh	更新	ok
 pluginMarket	loading	Reading the index	インデックスを読み込み中	ok
 pluginMarket	retry	Retry	再試行	ok
 pluginMarket	close	Close	閉じる	ok
 pluginMarket	cancel	Cancel	キャンセル	ok
-pluginMarket	emptyTitle	No plugin markets yet	プラグインマーケットがまだありません	ok
-pluginMarket	emptyDescription	Add a plugin market index to browse and install its plugins here.	プラグインマーケットのインデックスを追加すると、ここで一覧からインストールできます。	ok
+pluginMarket	emptyTitle	No plugin indexes yet	プラグインインデックスがまだありません	ok
+pluginMarket	emptyDescription	Add a plugin index to browse and install its plugins here.	プラグインインデックスのインデックスを追加すると、ここで一覧からインストールできます。	ok
 pluginMarket	addFirstSource	Add index source	インデックスの参照元を追加	ok
 pluginMarket	sourcesFailed	Could not read the index sources.	インデックスの参照元を読み込めませんでした。	ok
 pluginMarket	manageSources	Manage index sources…	インデックスの参照元を管理…	ok
-pluginMarket	marketMenu	Switch plugin market, currently {market}	プラグインマーケットを切り替え（現在: {market}）	ok
+pluginMarket	marketMenu	Switch plugin index, currently {market}	プラグインインデックスを切り替え（現在: {market}）	ok
 pluginMarket	sourcesTitle	Index sources	インデックスの参照元	ok
-pluginMarket	sourcesDescription	A plugin market is published as the URL of one index file. Discover browses the indexes listed here.	プラグインマーケットは 1 つのインデックスファイルの URL として公開されています。「プラグインを探す」では、ここに登録されたインデックスを参照します。	ok
+pluginMarket	sourcesDescription	A plugin index is published as the URL of one index file. Discover browses the indexes listed here.	プラグインインデックスは 1 つのインデックスファイルの URL として公開されています。「プラグインを探す」では、ここに登録されたインデックスを参照します。	ok
 pluginMarket	sourcesLabel	Added index sources	追加済みの参照元	ok
 pluginMarket	sourceUrl	Index URL	インデックスの URL	ok
 pluginMarket	sourcePlaceholder	https://example.com/index.json	https://example.com/index.json	ok
@@ -1580,7 +1813,7 @@ pluginMarket	factHomepage	Homepage	ホームページ	ok
 pluginMarket	factSourceCode	Source code	ソースコード	ok
 pluginMarket	factCategory	Category	カテゴリ	ok
 pluginMarket	factLabels	Labels	ラベル	ok
-pluginMarket	factMarket	Plugin market	プラグインマーケット	ok
+pluginMarket	factMarket	Plugin index	プラグインインデックス	ok
 pluginMarket	versionsTitle	Versions	バージョン	ok
 pluginMarket	versionsLabel	Versions of {name}	{name} のバージョン	ok
 pluginMarket	versionDefault	Recommended	推奨	ok
@@ -1590,28 +1823,43 @@ pluginMarket	versionExempted	Exempted	例外あり	ok
 pluginMarket	versionPrerelease	Prerelease	プレリリース	ok
 pluginMarket	confirmTitle	Install "{name}"?	「{name}」をインストールしますか？	ok
 pluginMarket	installTrust	Plugins run on this machine with your permissions. Make sure you trust where this one comes from.	プラグインはこのマシンであなたの権限で実行されます。このプラグインの入手元が信頼できるか確認してください。	ok
-schedule.catalog	trigger.label	Reminders	リマインダー	ok
-schedule.catalog	list.loading	Loading reminders…	リマインダーを読み込み中…	ok
-schedule.catalog	list.error	Could not load reminders.	リマインダーを読み込めませんでした。	ok
+pluginMarket	detailTitle	Details	詳細	ok
+pluginMarket	detailLoading	Reading details	詳細を読み込み中	ok
+pluginMarket	detailTooLarge	The details or their repository exceed the size limit and were not loaded.	詳細またはそのリポジトリがサイズ上限を超えているため、読み込みませんでした。	ok
+pluginMarket	detailNetwork	Could not reach the source of the details.	詳細の取得元に接続できませんでした。	ok
+pluginMarket	detailDenied	Could not access the repository of the details. Check your Git credentials.	詳細のリポジトリにアクセスできませんでした。Git の認証情報を確認してください。	ok
+pluginMarket	detailGitUnavailable	The details are in a repository that must be read with Git, and Git could not run. Install Git, then retry.	詳細は Git で読む必要があるリポジトリにありますが、Git を実行できませんでした。Git をインストールしてから再試行してください。	ok
+pluginMarket	detailInvalid	The plugin declares an invalid details file.	プラグインが宣言している詳細ファイルが正しくありません。	ok
+pluginMarket	detailFailed	Could not read the details.	詳細を読み込めませんでした。	ok
+pluginMarket	footnotes	Footnotes	脚注	ok
+schedule.catalog	trigger.label	Automation tasks	自動化タスク	ok
+schedule.catalog	list.loading	Loading automation tasks…	自動化タスクを読み込み中…	ok
+schedule.catalog	list.error	Could not load automation tasks.	自動化タスクを読み込めませんでした。	ok
 schedule.catalog	list.retry	Retry	再試行	ok
 schedule.catalog	delete.action	Delete	削除	ok
 schedule.catalog	delete.pending	Deleting…	削除中…	ok
-schedule.catalog	delete.label	Delete reminder: {title}	リマインダーを削除: {title}	ok
-schedule.catalog	list.open	Open reminder details: {title}	リマインダーの詳細を開く: {title}	ok
-schedule.catalog	trigger.one	{count} reminder	リマインダー {count} 件	ok
-schedule.catalog	trigger.other	{count} reminders	リマインダー {count} 件	ok
-schedule.catalog	list.aria	Active reminders	有効なリマインダー	ok
+schedule.catalog	delete.label	Delete automation task: {title}	自動化タスクを削除: {title}	ok
+schedule.catalog	list.open	Open automation task details: {title}	自動化タスクの詳細を開く: {title}	ok
+schedule.catalog	trigger.one	{count} automation task	自動化タスク {count} 件	ok
+schedule.catalog	trigger.other	{count} automation tasks	自動化タスク {count} 件	ok
+schedule.catalog	list.aria	Enabled automation tasks	有効な自動化タスク	ok
 schedule.catalog	list.nextRun	Next run	次回の実行	ok
 schedule.catalog	frequency.once	Once	1 回のみ	ok
 schedule.catalog	frequency.every	Every {value} {unit}	{value} {unit}ごと	ok
+schedule.catalog	frequency.hostMonthly	Monthly on day {days} at {time}, or month end	毎月 {days} 日 {time}（存在しない場合は月末）	ok
+schedule.catalog	frequency.hostDailyInterval	Every {interval} days at {time}	{interval} 日ごと {time}	ok
+schedule.catalog	frequency.hostWeeklyInterval	Every {interval} weeks on {weekdays} at {time}	{interval} 週ごと {weekdays} {time}	ok
+schedule.catalog	frequency.hostMonthlyInterval	Every {interval} months on day {days} at {time}, or month end	{interval} か月ごと {days} 日 {time}（存在しない場合は月末）	ok
+schedule.catalog	frequency.hostZone	{rule} ({timeZone})	{rule}（{timeZone}）	ok
+schedule.catalog	frequency.hostCustom	Custom	カスタム	ok
 schedule.catalog	time.locale	en	ja	ok
 schedule.catalog	time.utcPrefix	UTC	UTC	ok
 schedule.catalog	frequency.daily	Daily at {time} ({timeZone})	毎日 {time} ({timeZone})	ok
 schedule.catalog	frequency.dailyLocal	Daily at {time}	毎日 {time}	ok
 schedule.catalog	frequency.weekly	Weekly on {weekdays} at {time} ({timeZone})	毎週 {weekdays} の {time} ({timeZone})	ok
 schedule.catalog	frequency.weeklyLocal	Weekly on {weekdays} at {time}	毎週 {weekdays} の {time}	ok
-schedule.catalog	frequency.cron	Cron {expression} ({timeZone})	Cron {expression} ({timeZone})	ok
-schedule.catalog	frequency.cronLocal	Cron {expression}	Cron {expression}	ok
+schedule.catalog	frequency.cron	Custom ({timeZone})	カスタム（{timeZone}）	ok
+schedule.catalog	frequency.cronLocal	Custom	カスタム	ok
 schedule.catalog	frequency.cronRule	{rule} ({timeZone})	{rule} ({timeZone})	ok
 schedule.catalog	cron.list.join	, 	、	ok
 schedule.catalog	cron.part.join	 	 	ok
@@ -1658,14 +1906,70 @@ schedule.catalog	unit.second.other	seconds	秒	ok
 schedule.catalog	relative.now	Due now	まもなく実行	ok
 schedule.catalog	relative.future	in {value} {unit}	{value} {unit}後	ok
 schedule.catalog	relative.overdue	{value} {unit} overdue	{value} {unit}超過	ok
-schedule.catalog	mark.aria	{count} scheduled tasks	スケジュールされたタスク {count} 件	ok
+schedule.catalog	mark.aria	{count} automation tasks	スケジュールされたタスク {count} 件	ok
 schedule.catalog	hover.more	{count} more	ほか {count} 件	ok
+open-in-app	menu.openInSidebar	Open in sidebar	サイドバーで開く	ok
+open-in-app	menu.openInFloat	Open in floating panel	フローティングパネルで開く	ok
+open-in-app	menu.finder	Show in Finder	Finder で表示	ok
+open-in-app	menu.reveal	Show in folder	フォルダーで表示	ok
+open-in-app	menu.defaultApp	Open in default application	既定のアプリで開く	ok
+open-in-app	menu.external	Open in external browser	外部ブラウザーで開く	ok
+open-in-app	menu.copyLink	Copy link address	リンクのアドレスをコピー	ok
+open-in-app	menu.copyPath	Copy file path	ファイルパスをコピー	ok
+open-in-app	menu.copyDirectoryPath	Copy folder path	フォルダーパスをコピー	ok
+open-in-app	menu.copied	Copied	コピーしました	ok
+open-in-app	menu.copyFailed	Could not copy. Check that the content is available, then retry.	コピーできませんでした。内容が利用できるか確認して、再試行してください。	ok
+open-in-app	open.title	Open in {app}	{app} で開く	ok
+open-in-app	path.appDefault	{app} (default)	{app} (既定)	ok
+open-in-app	path.appsError	Could not load applications	アプリの一覧を読み込めませんでした	ok
+open-in-app	shortcut.busy	Opening workspace	ワークスペースを開いています	ok
+open-in-app	shortcut.unavailable	Current workspace or local application unavailable	現在のワークスペースまたはローカルアプリを利用できません	ok
+open-in-app	open.tooltip	Open locally	ローカルで開く	ok
+open-in-app	path.open	Open	開く	ok
+open-in-app	path.more	More ways to open	ほかの開き方	ok
+open-in-app	path.reveal	Show file location	ファイルの場所を表示	ok
+open-in-app	path.opened	Opened on another device	別のデバイスで開きました	ok
+open-in-app	path.revealed	File location shown on another device	別のデバイスでファイルの場所を表示しました	ok
+open-in-app	path.openError	Could not open. Try again.	開けませんでした。もう一度お試しください。	ok
+open-in-app	path.revealError	Could not show the file location. Try again.	ファイルの場所を表示できませんでした。もう一度お試しください。	ok
+open-in-app	app.cursor	Cursor	Cursor	ok
+open-in-app	app.vscode	VS Code	VS Code	ok
+open-in-app	app.vscodeinsiders	VS Code Insiders	VS Code Insiders	ok
+open-in-app	app.windsurf	Windsurf	Windsurf	ok
+open-in-app	app.zed	Zed	Zed	ok
+open-in-app	app.sublimetext	Sublime Text	Sublime Text	ok
+open-in-app	app.xcode	Xcode	Xcode	ok
+open-in-app	app.androidstudio	Android Studio	Android Studio	ok
+open-in-app	app.intellij	IntelliJ IDEA	IntelliJ IDEA	ok
+open-in-app	app.pycharm	PyCharm	PyCharm	ok
+open-in-app	app.webstorm	WebStorm	WebStorm	ok
+open-in-app	app.phpstorm	PhpStorm	PhpStorm	ok
+open-in-app	app.goland	GoLand	GoLand	ok
+open-in-app	app.rider	Rider	Rider	ok
+open-in-app	app.rustrover	RustRover	RustRover	ok
+open-in-app	app.fork	Fork	Fork	ok
+open-in-app	app.sourcetree	Sourcetree	Sourcetree	ok
+open-in-app	app.github	GitHub Desktop	GitHub Desktop	ok
+open-in-app	app.tower	Tower	Tower	ok
+open-in-app	app.gitkraken	GitKraken	GitKraken	ok
+open-in-app	app.smartgit	SmartGit	SmartGit	ok
+open-in-app	app.sublimemerge	Sublime Merge	Sublime Merge	ok
+open-in-app	app.ghostty	Ghostty	Ghostty	ok
+open-in-app	app.warp	Warp	Warp	ok
+open-in-app	app.iterm	iTerm2	iTerm2	ok
+open-in-app	app.kitty	kitty	kitty	ok
+open-in-app	app.windowsterminal	Windows Terminal	Windows Terminal	ok
+open-in-app	app.gitbash	Git Bash	Git Bash	ok
+open-in-app	app.gnometerminal	GNOME Terminal	GNOME Terminal	ok
+open-in-app	app.konsole	Konsole	Konsole	ok
+open-in-app	app.finder	Finder	Finder	ok
+open-in-app	app.explorer	File Explorer	エクスプローラー	ok
+open-in-app	app.filemanager	Files	ファイル	ok
+open-in-app	app.terminal	Terminal	ターミナル	ok
 deliverables	presented.nativeUnavailable	This file has no available Host path. Preview it in the sidebar.	このファイルには利用できるホスト側のパスがありません。サイドバーでプレビューしてください。	ok
 deliverables	presented.revealError	Could not show in file manager. Try again.	ファイルマネージャーに表示できませんでした。もう一度お試しください。	ok
 deliverables	presented.directoryError	Could not open containing folder. Try again.	ファイルのあるフォルダーを開けませんでした。もう一度お試しください。	ok
 deliverables	presented.directoryOpening	Opening containing folder…	フォルダーを開いています…	ok
-deliverables	presented.directoryOpened	Requested opening containing folder	フォルダーを開くよう要求しました	ok
-deliverables	presented.revealed	Requested display in file manager	ファイルマネージャーでの表示を要求しました	ok
 deliverables	presented.revealing	Showing in file manager…	ファイルマネージャーに表示しています…	ok
 deliverables	presented.unavailable	This Host has no desktop available to open files or folders in external apps. Files can still be previewed in the sidebar.	このホストにはデスクトップがないため、外部アプリでファイルやフォルダーを開けません。ファイルはサイドバーでプレビューできます。	ok
 deliverables	presented.retry	Retry	再試行	ok
@@ -1678,7 +1982,6 @@ deliverables	presented.expandAria	Show all {count} delivered files	提示され�
 deliverables	presented.collapse	Collapse	折りたたむ	ok
 deliverables	presented.collapseAria	Collapse delivered files	提示されたファイルを折りたたむ	ok
 deliverables	presented.opening	Opening…	開いています…	ok
-deliverables	presented.opened	Open requested	開くよう要求しました	ok
 deliverables	presented.error	Could not open. Click to retry.	開けませんでした。クリックして再試行してください。	ok
 deliverables	presented.file	File	ファイル	ok
 deliverables	row.title	Present files	ファイルを提示	ok
@@ -1776,16 +2079,71 @@ shortcuts	empty	No matching shortcuts	一致するショートカットはあり
 shortcuts	move	Move menu selection	メニューの選択を移動	ok
 shortcuts	select	Select menu item	メニュー項目を選択	ok
 shortcuts	dismiss	Close menu or top dialog	メニューまたは最前面のダイアログを閉じる	ok
-session-inspector	tab.title	Session Log	セッションログ	ok
+creationRecommendations	heading	Personalized pages	パーソナライズされたページ	ok
+creationRecommendations	location	Add to	追加先	ok
+creationRecommendations	creationInfo	How creation works and token usage	作成の仕組みとトークン使用量	ok
+creationRecommendations	creationMethod	Creator mode builds a new page you can remove at any time.	創造モードは、いつでも削除できる新しいページを作ります。	ok
+creationRecommendations	creationCost	Creation may take a while and use a large number of tokens.	作成には時間がかかり、多くのトークンを使う場合があります。	ok
+creationRecommendations	creationBackground	Click Create to start in the background. You can keep chatting here.	「作成」を押すとバックグラウンドで開始します。ここでチャットを続けられます。	ok
+creationRecommendations	initialContent	Starts with	初期内容	ok
+creationRecommendations	expandContent	View all content	内容をすべて表示	ok
+creationRecommendations	collapseContent	Collapse content	内容を折りたたむ	ok
+creationRecommendations	sidebar-right	Right sidebar	右サイドバー	ok
+creationRecommendations	page	Session tab	セッションのタブ	ok
+creationRecommendations	sidebar-left	Global page	グローバルページ	ok
+creationRecommendations	custom	Write your own	自分で指定	ok
+creationRecommendations	sidebar-rightHint	View alongside this conversation	この会話と並べて表示	ok
+creationRecommendations	pageHint	Open beside Chat and Trajectory	チャットと軌跡の隣に開く	ok
+creationRecommendations	sidebar-leftHint	Open from the left sidebar	左サイドバーから開く	ok
+creationRecommendations	customHint	Describe where you want it	表示したい場所を説明	ok
+creationRecommendations	customLabel	Where should it appear?	どこに表示しますか？	ok
+creationRecommendations	customPlaceholder	For example, a left sidebar entry that opens a full-page calendar	例: 全画面のカレンダーを開く左サイドバーの項目	ok
+creationRecommendations	create	Create	作成	ok
+creationRecommendations	starting	Starting…	開始しています…	ok
+creationRecommendations	dismiss	Not now	あとで	ok
+creationRecommendations	retry	Create again	もう一度作成	ok
+creationRecommendations	keep	Keep	保持	ok
+creationRecommendations	undo	Undo	元に戻す	ok
+creationRecommendations	restore	Restore	復元	ok
+creationRecommendations	restoring	Restoring…	復元しています…	ok
+creationRecommendations	scope	You can remove it at any time	いつでも削除できます	ok
+creationRecommendations	dismissed	Dismissed	閉じました	ok
+creationRecommendations	replaced	Replaced	置き換えました	ok
+creationRecommendations	creating	Creating in the background	バックグラウンドで作成中	ok
+creationRecommendations	cancel	Cancel creation	作成をキャンセル	ok
+creationRecommendations	cancelling	Cancelling…	キャンセルしています…	ok
+creationRecommendations	installing	Installing…	インストールしています…	ok
+creationRecommendations	sourceRetained	Undo keeps the source files in the original workspace’s .dsh-created-plugins/ folder.	元に戻しても、ソースファイルは元のワークスペースの .dsh-created-plugins/ フォルダーに残ります。	ok
+creationRecommendations	installed	Installed	インストール済み	ok
+creationRecommendations	kept	Kept	保持しました	ok
+creationRecommendations	removed	Removed	削除しました	ok
+creationRecommendations	failed	Creation failed. Try again.	作成に失敗しました。もう一度お試しください。	ok
+creationRecommendations	interrupted	Creation interrupted. Try again.	作成が中断されました。もう一度お試しください。	ok
+creationRecommendations	unconfirmed	Result unconfirmed. Retry to check.	結果を確認できませんでした。再試行して確認してください。	ok
+creationRecommendations	invalid-location	Choose a location or describe it in up to 1,000 characters.	場所を選ぶか、1,000 文字以内で説明してください。	ok
+creationRecommendations	restart-required	The change is saved. Restart DSH to apply it.	変更は保存されました。DSH を再起動すると反映されます。	ok
+creationRecommendations	overridden	Another configuration overrides this change.	別の設定がこの変更を上書きしています。	ok
+creationRecommendations	cancelled	Cancelled	キャンセル済み	ok
+creationRecommendations	applicationFailed	The last change did not apply. Check Plugins.	直前の変更が反映されませんでした。プラグインを確認してください。	ok
+creationRecommendations	applicationCancelled	The last change was cancelled.	直前の変更はキャンセルされました。	ok
+creationRecommendations	transport	Could not confirm the result. Reconnect and check the card before retrying.	結果を確認できませんでした。再接続してカードを確認してから再試行してください。	ok
+creationRecommendations	unknown	This recommendation is no longer available.	この提案はもう利用できません。	ok
+creationRecommendations	unavailable	This action is unavailable. Check the plugin in Plugins.	この操作は利用できません。プラグインでプラグインを確認してください。	ok
+creationRecommendations	access-denied	This connection cannot change plugins.	この接続ではプラグインを変更できません。	ok
+creationRecommendations	not-live-root	Open the original conversation to use this card.	このカードを使うには、元の会話を開いてください。	ok
+creationRecommendations	closing	The creation plugin is stopping. Try again after it reloads.	作成プラグインが停止しています。再読み込み後にもう一度お試しください。	ok
+creationRecommendations	read-only	This Session is read-only. Switch the permission preset to create pages.	このセッションは読み取り専用です。ページを作成するには権限プリセットを切り替えてください。	ok
+creationRecommendations	source-missing	The page files are gone. Ask for a new proposal.	ページのファイルがなくなりました。新しい提案を依頼してください。	ok
+session-inspector	tab.title	Session log	セッションログ	ok
 session-inspector	tab.description	Analyze raw logs and grouped chat messages for the current session in the sidebar.	サイドバーで、現在のセッションの生ログとグループ化されたチャットメッセージを分析します。	ok
 session-inspector	view.presentation	Presentation	表示形式	ok
-session-inspector	view.sessionLog	Raw Log	生ログ	ok
-session-inspector	view.chatNode	Chat Group	チャットのグループ	ok
-session-inspector	picker.pick	Pick an element in Chat View	チャット表示で要素を選択	ok
+session-inspector	view.sessionLog	Raw log	生ログ	ok
+session-inspector	view.chatNode	Chat group	チャットのグループ	ok
+session-inspector	picker.pick	Pick an element in the chat view	チャット表示で要素を選択	ok
 session-inspector	picker.cancel	Cancel picking (Esc)	選択をキャンセル (Esc)	ok
-session-inspector	picker.instructions	Hover in the main Chat to preview, then click to select. Esc cancels.	メインのチャット上でホバーするとプレビューされ、クリックで選択します。Esc でキャンセルします。	ok
+session-inspector	picker.instructions	Hover in the main chat to preview, then click to select. Esc cancels.	メインのチャット上でホバーするとプレビューされ、クリックで選択します。Esc でキャンセルします。	ok
 session-inspector	picker.noMatch	No matching record in this table. Pick another element or press Esc to cancel.	この表に一致する記録はありません。別の要素を選ぶか、Esc でキャンセルしてください。	ok
-session-inspector	picker.noChat	Open this Session in the main Chat before picking.	選択する前に、このセッションをメインのチャットで開いてください。	ok
+session-inspector	picker.noChat	Open this session in the main chat before picking.	選択する前に、このセッションをメインのチャットで開いてください。	ok
 session-inspector	table.id	Index	番号	ok
 session-inspector	table.type	Type	種類	ok
 session-inspector	filter.title	Filter types	種類を絞り込む	ok
@@ -1805,7 +2163,7 @@ session-inspector	table.time	Time (UTC)	時刻 (UTC)	ok
 session-inspector	table.data	Data	データ	ok
 session-inspector	table.older	Load earlier	以前の記録を読み込む	ok
 session-inspector	table.loading	Loading…	読み込み中…	ok
-session-inspector	table.latest	Follow Latest	最新に追従	ok
+session-inspector	table.latest	Follow latest	最新に追従	ok
 session-inspector	table.empty	No records	記録なし	ok
 session-inspector	table.raw	Raw data	生データ	ok
 session-inspector	table.rawError	This record could not be serialized. Select another record to continue.	この記録はシリアライズできませんでした。続けるには別の記録を選んでください。	ok
@@ -1815,14 +2173,14 @@ session-inspector	table.expand	Expand children	子を展開	ok
 session-inspector	table.collapse	Collapse children	子を折りたたむ	ok
 session-inspector	table.removed	This record was removed or settled. Select a current record.	この記録は削除または確定済みです。現在の記録を選んでください。	ok
 session-inspector	object.node	Node	ノード	ok
-session-inspector	object.nodeData	Node Data	ノードのデータ	ok
+session-inspector	object.nodeData	Node data	ノードのデータ	ok
 session-inspector	object.group	Group	グループ	ok
-session-inspector	object.groupData	Group Data	グループのデータ	ok
+session-inspector	object.groupData	Group data	グループのデータ	ok
 session-inspector	object.turn	Turn	ターン	ok
-session-inspector	object.turnData	Turn Data	ターンのデータ	ok
+session-inspector	object.turnData	Turn data	ターンのデータ	ok
 session-inspector	object.step	Step	ステップ	ok
-session-inspector	object.stepData	Step Data	ステップのデータ	ok
-session-inspector	object.accessor	[Getter / Setter, not evaluated]	[ゲッター / セッター、未評価]	ok
+session-inspector	object.stepData	Step data	ステップのデータ	ok
+session-inspector	object.accessor	[Getter / setter, not evaluated]	[ゲッター / セッター、未評価]	ok
 session-inspector	object.empty	Empty	空	ok
 session-inspector	object.absent	[Empty slot]	[空きスロット]	ok
 session-inspector	object.properties	Other properties	その他のプロパティ	ok
@@ -1887,16 +2245,16 @@ settings.agentPreset	guideCopy	Copy	コピー	ok
 settings.agentPreset	guideCopied	Copied	コピーしました	ok
 settings.agentPreset	guideFootnotes	Footnotes	脚注	ok
 settings.agentPreset	guideStandardIntro	Choose Standard mode when starting a new task. Describe what you want to accomplish, point to the relevant files, and explain how to check the result.	新しいタスクを始めるときは標準モードを選びます。達成したいことを説明し、関連するファイルを示し、結果の確認方法を伝えてください。	ok
-settings.agentPreset	guideStandardExplanation	### How it works\n\nThe agent calls tools directly to read and edit files, search, and run terminal commands. It includes Skills, planning, goals, subagents, workflows, and context compaction.\n\n### When to choose it\n\nStart here for everyday coding, file work, and research. Standard mode can also write scripts and process files in batches. PTC changes how tool calls are organized; it is not required for batch tasks.	### 仕組み\n\nAgent はツールを直接呼び出して、ファイルの読み書き・検索・ターミナルコマンドの実行を行います。スキル、計画、ゴール、サブエージェント、ワークフロー、コンテキスト圧縮を利用できます。\n\n### どんなときに選ぶか\n\n日々のコーディング、ファイル作業、調査はここから始めるとよいでしょう。標準モードでもスクリプトを書いてファイルを一括処理できます。PTC が変えるのはツール呼び出しの組み立て方であり、一括処理に必須のものではありません。	ok
+settings.agentPreset	guideStandardExplanation	### How it works\n\nThe agent calls tools directly to read and edit files, search, and run terminal commands. It includes Skills, planning, goals, subagents, workflows, plugin management, and context compaction.\n\n### When to choose it\n\nStart here for everyday coding, file work, and research. Standard mode can also write scripts and process files in batches. PTC changes how tool calls are organized; it is not required for batch tasks.	### 仕組み\n\nAgent はツールを直接呼び出して、ファイルの読み書き・検索・ターミナルコマンドの実行を行います。スキル、計画、ゴール、サブエージェント、ワークフロー、プラグイン管理、コンテキスト圧縮を利用できます。\n\n### どんなときに選ぶか\n\n日々のコーディング、ファイル作業、調査はここから始めるとよいでしょう。標準モードでもスクリプトを書いてファイルを一括処理できます。PTC が変えるのはツール呼び出しの組み立て方であり、一括処理に必須のものではありません。	ok
 settings.agentPreset	guideStandardUsage	### Fix a bug\n\n> Find out why submitting the search form twice makes the results disappear. Fix it and run the relevant tests. Explain the cause and what changed.\n\nExpected output: a code change, the relevant test results, and an explanation of the cause.\n\n### Organize project notes\n\n> Read the Markdown notes in this project. Summarize the agreed decisions and open questions, with links to the source files.\n\nExpected output: a summary with references that you can check against the original notes.	### バグを修正する\n\n> 検索フォームを続けて 2 回送信すると結果が消える原因を突き止めて修正し、関連するテストを実行してください。原因と変更内容も説明してください。\n\n期待する成果: コードの変更、関連テストの結果、原因の説明。\n\n### プロジェクトの記録を整理する\n\n> このプロジェクトの Markdown の記録を読み、合意済みの決定事項と未解決の論点を、参照元ファイルへのリンク付きでまとめてください。\n\n期待する成果: 元の記録と突き合わせられる、出典付きの要約。	ok
 settings.agentPreset	guidePtcIntro	Choose PTC mode when starting a new task. Specify the input files, processing rules, and output format. The agent writes the code.	新しいタスクを始めるときは PTC モードを選びます。入力ファイル、処理ルール、出力形式を指定してください。コードは Agent が書きます。	ok
-settings.agentPreset	guidePtcExplanation	### How tools are called\n\nPTC means Programmatic Tool Calling. In this built-in preset, the agent uses run_code to write a TypeScript program that calls tools through a generated SDK. The program can use loops, conditions, error handling, and concurrent calls where appropriate.\n\n### What reaches the model\n\nTool results first reach the program, which can filter and combine them. The model receives what the program prints or returns; image results are attached separately. Nested tool calls are still recorded and remain subject to tool permissions.\n\n### Compared with Standard mode\n\nBoth modes can handle coding and batch tasks. Standard mode exposes individual tools directly; PTC organizes tool calls in code. The current PTC preset leaves the workflow tool disabled. Speed and token use depend on the task and how the program handles its results.	### ツールの呼び出され方\n\nPTC は Programmatic Tool Calling、つまりプログラムからツールを呼び出す方式です。この内蔵プリセットでは、Agent が run_code で TypeScript プログラムを書き、生成された SDK を通してツールを呼び出します。プログラムではループ、条件分岐、エラー処理、並行呼び出しを適切に使えます。\n\n### モデルに届くもの\n\nツールの結果はいったんプログラムに渡り、そこで絞り込みや合成ができます。モデルが受け取るのは、プログラムが出力または返した内容です。画像の結果は別途添付されます。プログラム内のツール呼び出しも記録され、ツールの権限設定に従います。\n\n### 標準モードとの違い\n\nどちらのモードもコーディングや一括処理を扱えます。標準モードは個々のツールをそのままモデルに渡し、PTC はツール呼び出しをコードで組み立てます。現在の PTC プリセットでは workflow ツールが無効になっています。速度とトークン消費は、タスクと結果の扱い方によって変わります。	ok
+settings.agentPreset	guidePtcExplanation	### How tools are called\n\nPTC means Programmatic Tool Calling. In this built-in preset, the agent uses run_code to write a TypeScript program that calls tools through a generated SDK. The program can use loops, conditions, error handling, and concurrent calls where appropriate.\n\n### What reaches the model\n\nTool results first reach the program, which can filter and combine them. The model receives what the program prints or returns; image results are attached separately. Nested tool calls are still recorded and remain subject to tool permissions.\n\n### Compared with Standard mode\n\nBoth modes can handle coding and batch tasks. Standard mode exposes individual tools directly; PTC organizes tool calls in code. The current PTC preset leaves the workflow and plugin management tools disabled. Speed and token use depend on the task and how the program handles its results.	### ツールの呼び出され方\n\nPTC は Programmatic Tool Calling、つまりプログラムからツールを呼び出す方式です。この内蔵プリセットでは、Agent が run_code で TypeScript プログラムを書き、生成された SDK を通してツールを呼び出します。プログラムではループ、条件分岐、エラー処理、並行呼び出しを適切に使えます。\n\n### モデルに届くもの\n\nツールの結果はいったんプログラムに渡り、そこで絞り込みや合成ができます。モデルが受け取るのは、プログラムが出力または返した内容です。画像の結果は別途添付されます。プログラム内のツール呼び出しも記録され、ツールの権限設定に従います。\n\n### 標準モードとの違い\n\nどちらのモードもコーディングや一括処理を扱えます。標準モードは個々のツールをそのままモデルに渡し、PTC はツール呼び出しをコードで組み立てます。現在の PTC プリセットではワークフローとプラグイン管理のツールが無効になっています。速度とトークン消費は、タスクと結果の扱い方によって変わります。	ok
 settings.agentPreset	guidePtcUsage	### Check a set of configuration files\n\n> Check all JSON files in configs/. List missing required fields and invalid values against schema.json. Save a CSV with one row per issue. Include unreadable files in the report and keep checking the rest. Leave the original files unchanged.\n\nExpected output: an issue summary and a CSV report. The program can repeat the same checks, handle individual failures, and collect the results.\n\n### Summarize error logs\n\n> Analyze the log files in logs/. Group errors by service and error type. Show the ten most frequent groups and one example from each. Save the full counts to a CSV.\n\nExpected output: the top error groups and a complete count table. Intermediate data can be aggregated in the program before the summary reaches the model.	### 設定ファイルを一括で検査する\n\n> configs/ 配下の JSON をすべて検査し、schema.json と照らして不足している必須項目と不正な値を挙げてください。問題ごとに CSV の 1 行として保存してください。読めなかったファイルも報告に含め、残りの検査は続けてください。元のファイルは変更しないでください。\n\n期待する成果: 問題の要約と CSV レポート。同じ検査を繰り返し実行し、個々の失敗に対処して結果を集約できます。\n\n### エラーログを集計する\n\n> logs/ のログを解析し、サービスとエラー種別ごとに件数をまとめてください。出現回数の多い上位 10 グループと、それぞれ 1 件の例を示してください。完全な件数は CSV に保存してください。\n\n期待する成果: 頻出エラーの要約と完全な件数表。中間データはプログラム側で集約してから、要約だけをモデルに渡せます。	ok
 settings.agentPreset	guideMinimalIntro	Choose Minimal mode for a new task. For a comparison, hold the model, permissions, input, and starting workspace state constant across runs.	新しいタスクでは最小モードを選びます。比較実験をするときは、モデル・権限・入力・ワークスペースの初期状態を実行間でそろえてください。	ok
 settings.agentPreset	guideMinimalExplanation	### What is included\n\nOne persistent shell tool, read_image, and a fixed system prompt. Image reading requires an image-capable model. Older history is compacted automatically under context pressure; use /compact while the agent is idle to compact it manually. The built-in preset does not load Skills, planning, or the standard runtime context.\n\n### When to choose it\n\nUse it as a baseline for experiments and comparisons. It can still read files and execute scripts through shell commands, but offers fewer built-in ways to manage a long task. Fewer tools does not necessarily make it easier for a beginner.	### 含まれるもの\n\n永続シェルツールが 1 つ、read_image、固定のシステムプロンプトです。画像の読み取りには画像対応モデルが必要です。コンテキストが逼迫すると古い履歴は自動で圧縮されます。Agent が待機中のときに /compact を使えば手動で圧縮できます。この内蔵プリセットはスキル、計画、標準のランタイムコンテキストを読み込みません。\n\n### どんなときに選ぶか\n\n実験や比較の基準として使います。シェルコマンドを通してファイルを読み、スクリプトを実行することはできますが、長いタスクを管理するための組み込みの手段は少なくなります。ツールが少ないことが、初心者にとって簡単という意味ではありません。	ok
 settings.agentPreset	guideMinimalUsage	### Compare performance on a small bug fix\n\n> Run the tests for this project, find the cause of the failure, and make the smallest fix. Run the relevant tests again and report the result.\n\nRun the same task separately in Standard and Minimal modes from the same starting state. Compare task completion, tool calls, and the resulting changes. Minimal mode performs the work through terminal commands.	### 小さな修正での性能を比較する\n\n> このプロジェクトのテストを実行し、失敗の原因を特定して最小限の修正を加えてください。関連するテストをもう一度実行し、結果を報告してください。\n\n同じ初期状態から、同じタスクを標準モードと最小モードで別々に実行します。完了状況、ツール呼び出し、最終的な変更を比較してください。最小モードはターミナルコマンドを通して作業します。	ok
 settings.agentPreset	guideCordisIntro	Choose Creator mode for a new task. Describe the capability you want, where it should appear, and how you will verify it.	新しいタスクを始めるときは創造モードを選びます。追加したい機能、それをどこから使うか、どう検証するかを説明してください。	ok
-settings.agentPreset	guideCordisExplanation	### What you can create\n\nCreator mode includes the standard task tools plus runtime inspection, persistent plugin management, and guidance for authoring Cordis plugins and agent presets. It can create a plugin that adds a capability or UI, or a preset that combines tools and prompts for a particular job.\n\n### Plugins and modes\n\nA plugin adds capabilities to DSH, such as a tool, a service connection, or a UI entry. A mode is an agent preset that selects tools and defines how the agent works in a task. A plugin can be included in a custom preset.\n\n### How the result takes effect\n\nAsk the agent to install and verify the result, not just generate source code. A plugin may load immediately or require a restart, depending on what it changes. A newly created preset is selected when starting a new task.	### 何を作れるか\n\n創造モードには標準のタスク用ツールに加えて、実行時の調査、プラグインの永続的な管理、Cordis プラグインと Agent プリセットを作るためのガイドが含まれます。機能や UI を追加するプラグインも、特定の作業向けにツールとプロンプトを組み合わせたプリセットも作れます。\n\n### プラグインとモード\n\nプラグインは DSH に機能を追加します (ツール、サービス接続、UI の入口など)。モードは Agent プリセットであり、タスクで使うツールを選び、Agent の動き方を決めます。自作のプラグインをカスタムプリセットに含めることもできます。\n\n### 成果を反映させるには\n\nソースコードを生成させるだけでなく、インストールと動作確認まで Agent に依頼してください。変更内容によっては即座に読み込まれる場合と再起動が必要な場合があります。新しく作ったプリセットは、新しいタスクを始めるときに選べます。	ok
+settings.agentPreset	guideCordisExplanation	### What you can create\n\nCreator mode includes the standard task tools plus runtime inspection and guidance for authoring Cordis plugins and agent presets. It can create a plugin that adds a capability or UI, or a preset that combines tools and prompts for a particular job.\n\n### Plugins and modes\n\nA plugin adds capabilities to DSH, such as a tool, a service connection, or a UI entry. A mode is an agent preset that selects tools and defines how the agent works in a task. A plugin can be included in a custom preset.\n\n### How the result takes effect\n\nAsk the agent to install and verify the result, not just generate source code. A plugin may load immediately or require a restart, depending on what it changes. A newly created preset is selected when starting a new task.	### 何を作れるか\n\n創造モードには標準のタスク用ツールに加えて、実行時の調査、Cordis プラグインと Agent プリセットを作るためのガイドが含まれます。機能や UI を追加するプラグインも、特定の作業向けにツールとプロンプトを組み合わせたプリセットも作れます。\n\n### プラグインとモード\n\nプラグインは DSH に機能を追加します (ツール、サービス接続、UI の入口など)。モードは Agent プリセットであり、タスクで使うツールを選び、Agent の動き方を決めます。自作のプラグインをカスタムプリセットに含めることもできます。\n\n### 成果を反映させるには\n\nソースコードを生成させるだけでなく、インストールと動作確認まで Agent に依頼してください。変更内容によっては即座に読み込まれる場合と再起動が必要な場合があります。新しく作ったプリセットは、新しいタスクを始めるときに選べます。	ok
 settings.agentPreset	guideCordisUsage	### Add a UI\n\n> Create a DSH plugin that adds a project notes entry to the sidebar. Let me browse the Markdown files in this workspace and preview a selected note. Install it and verify that the page opens.\n\nExpected output: an installed plugin with a working entry and preview page, plus any remaining activation steps.\n\n### Add a tool\n\n> Create a plugin with a tool that reads this project’s test report and summarizes the failed tests. Register it and verify it with a sample report.\n\nExpected output: a plugin with a callable tool and a verified sample call.\n\n### Create my own mode\n\n> Create a “Code review” mode based on Standard mode. Have it prioritize potential bugs and test gaps, cite file paths and lines, and ask before modifying files. Save it as a selectable preset.\n\nExpected output: a custom preset for new tasks. These review instructions guide the agent; permission settings determine which actions it can execute.	### UI を追加する\n\n> サイドバーに「プロジェクトノート」の入口を追加する DSH プラグインを作ってください。このワークスペースの Markdown ファイルを一覧でき、選んだノートをプレビューできるようにしてください。インストールまで行い、ページが開くことを確認してください。\n\n期待する成果: 動作する入口とプレビューページを備えた、インストール済みのプラグイン。残っている有効化手順があればそれも示します。\n\n### ツールを追加する\n\n> このプロジェクトのテストレポートを読み、失敗したテストを要約するツールを提供するプラグインを作ってください。登録し、サンプルのレポートで動作を確認してください。\n\n期待する成果: 呼び出せるツールを持つプラグインと、サンプル呼び出しの確認結果。\n\n### 自分のモードを作る\n\n> 標準モードを基に「コードレビュー」モードを作ってください。潜在的なバグとテストの不足を優先して確認し、ファイルパスと行番号を示し、ファイルを変更する前に確認するようにしてください。選択できるプリセットとして保存してください。\n\n期待する成果: 新しいタスクで選べるカスタムプリセット。レビューの指示は Agent を導くもので、実際に実行できる操作は権限設定で決まります。	ok
 settings.agentPreset	builtInGroup	Built-in	組み込み	ok
 settings.agentPreset	customGroup	Custom	カスタム	ok
@@ -1926,51 +2284,6 @@ settings.agentPreset	createPluginDescription	Enter Creator mode and make your ow
 settings.agentPreset	createPluginChecking	Checking whether Creator mode is available	創造モードが利用できるか確認中	ok
 settings.agentPreset	createPluginUnavailable	Temporarily unavailable. Reopen this menu to retry	一時的に利用できません。このメニューを開き直して再試行してください	ok
 settings.agentPreset	createPluginMissing	Creator mode is not included in this configuration	この構成には創造モードが含まれていません	ok
-open-in-app	open.title	Open in {app}	{app} で開く	ok
-open-in-app	path.appDefault	{app} (default)	{app} (既定)	ok
-open-in-app	path.appsError	Could not load applications	アプリの一覧を読み込めませんでした	ok
-open-in-app	shortcut.busy	Opening workspace	ワークスペースを開いています	ok
-open-in-app	shortcut.unavailable	Current workspace or local application unavailable	現在のワークスペースまたはローカルアプリを利用できません	ok
-open-in-app	open.tooltip	Open locally	ローカルで開く	ok
-open-in-app	path.open	Open	開く	ok
-open-in-app	path.more	More ways to open	ほかの開き方	ok
-open-in-app	path.reveal	Show file location	ファイルの場所を表示	ok
-open-in-app	path.openError	Could not open. Try again.	開けませんでした。もう一度お試しください。	ok
-open-in-app	path.revealError	Could not show the file location. Try again.	ファイルの場所を表示できませんでした。もう一度お試しください。	ok
-open-in-app	app.cursor	Cursor	Cursor	ok
-open-in-app	app.vscode	VS Code	VS Code	ok
-open-in-app	app.vscodeinsiders	VS Code Insiders	VS Code Insiders	ok
-open-in-app	app.windsurf	Windsurf	Windsurf	ok
-open-in-app	app.zed	Zed	Zed	ok
-open-in-app	app.sublimetext	Sublime Text	Sublime Text	ok
-open-in-app	app.xcode	Xcode	Xcode	ok
-open-in-app	app.androidstudio	Android Studio	Android Studio	ok
-open-in-app	app.intellij	IntelliJ IDEA	IntelliJ IDEA	ok
-open-in-app	app.pycharm	PyCharm	PyCharm	ok
-open-in-app	app.webstorm	WebStorm	WebStorm	ok
-open-in-app	app.phpstorm	PhpStorm	PhpStorm	ok
-open-in-app	app.goland	GoLand	GoLand	ok
-open-in-app	app.rider	Rider	Rider	ok
-open-in-app	app.rustrover	RustRover	RustRover	ok
-open-in-app	app.fork	Fork	Fork	ok
-open-in-app	app.sourcetree	Sourcetree	Sourcetree	ok
-open-in-app	app.github	GitHub Desktop	GitHub Desktop	ok
-open-in-app	app.tower	Tower	Tower	ok
-open-in-app	app.gitkraken	GitKraken	GitKraken	ok
-open-in-app	app.smartgit	SmartGit	SmartGit	ok
-open-in-app	app.sublimemerge	Sublime Merge	Sublime Merge	ok
-open-in-app	app.ghostty	Ghostty	Ghostty	ok
-open-in-app	app.warp	Warp	Warp	ok
-open-in-app	app.iterm	iTerm2	iTerm2	ok
-open-in-app	app.kitty	kitty	kitty	ok
-open-in-app	app.windowsterminal	Windows Terminal	Windows Terminal	ok
-open-in-app	app.gitbash	Git Bash	Git Bash	ok
-open-in-app	app.gnometerminal	GNOME Terminal	GNOME Terminal	ok
-open-in-app	app.konsole	Konsole	Konsole	ok
-open-in-app	app.finder	Finder	Finder	ok
-open-in-app	app.explorer	File Explorer	エクスプローラー	ok
-open-in-app	app.filemanager	Files	ファイル	ok
-open-in-app	app.terminal	Terminal	ターミナル	ok
 settings	trigger	Settings	設定	ok
 settings	shortcut.open	Open settings	設定を開く	ok
 settings	desktop.update.available	Update	更新	ok
@@ -1988,6 +2301,7 @@ settings	desktop.update.installFailed	Could not install the update. Please try a
 settings	desktop.update.checkNetworkFailed	Could not check for updates. Check your connection and try again.	更新を確認できませんでした。接続を確認して再試行してください。	ok
 settings	desktop.update.downloadNetworkFailed	Could not download the update. Check your connection and try again.	更新をダウンロードできませんでした。接続を確認して再試行してください。	ok
 settings	desktop.update.installNetworkFailed	Could not install the update. Check your connection and try again.	更新をインストールできませんでした。接続を確認して再試行してください。	ok
+settings	desktop.update.fullscreenTimeout	Could not exit fullscreen. Exit fullscreen, then retry the update.	全画面表示を終了できませんでした。全画面表示を終了してから、更新を再試行してください。	ok
 settings	desktop.update.stopFailed	Could not safely stop the tasks. The update has not been installed. Please try again later.	タスクを安全に停止できなかったため、更新はインストールされていません。しばらくしてから再試行してください。	ok
 settings	desktop.update.tasksChanged	New tasks have started. Confirm again to stop the tasks and update.	新しいタスクが始まりました。タスクを停止して更新するか、もう一度確認してください。	ok
 settings	desktop.update.tasksUnavailable	Task status is unavailable. Try updating again when the workspace is ready.	タスクの状態を取得できません。ワークスペースが準備できてから更新を再試行してください。	ok
@@ -2047,6 +2361,7 @@ subagent	count.running.other	{count} subagents running	サブエージェント 
 subagent	switcher.aria	Switch subagent: {title}	サブエージェントを切り替え: {title}	ok
 subagent	tree.aria	Subagent sessions	サブエージェントのセッション	ok
 subagent	open.sidebar	Open in sidebar	サイドバーで開く	ok
+subagent	open.floatWindow	Open in floating panel	フローティングパネルで開く	ok
 subagent	open.sidebar.aria	Open {label} in sidebar	{label} をサイドバーで開く	ok
 subagent	sidebar.chat	Chat	チャット	ok
 subagent	readonly.oneShot.title	One-shot subagent record	単発サブエージェントの記録	ok
@@ -2134,6 +2449,44 @@ job	terminal.collapse	Collapse	折りたたむ	ok
 job	terminal.collapseAria	Collapse output	出力を折りたたむ	ok
 job	terminal.expand	Show {n} more lines	残り {n} 行を表示	ok
 job	terminal.expandAria	Expand {n} collapsed output lines	折りたたまれた出力 {n} 行を展開	ok
+sidebarRight	menu.close	Close	閉じる	ok
+sidebarRight	menu.closeOthers	Close Other Tabs	ほかのタブを閉じる	ok
+sidebarRight	menu.closeRight	Close Tabs to the Right	右側のタブを閉じる	ok
+sidebarRight	command.close	Close current page or window	現在のページまたはウィンドウを閉じる	ok
+sidebarRight	command.refresh	Refresh current page	現在のページを更新	ok
+sidebarRight	command.noRefresh	This page cannot be refreshed	このページは更新できません	ok
+sidebarRight	command.toggle	Toggle right sidebar	右サイドバーを切り替え	ok
+sidebarRight	command.fullscreen	Toggle panel fullscreen	パネルの全画面表示を切り替え	ok
+sidebarRight	command.noSession	Select a session first	先にセッションを選択してください	ok
+sidebarRight	command.noFocus	Focus a right sidebar pane first	先に右サイドバーのペインにフォーカスしてください	ok
+sidebarRight	command.stale	The page changed; focus it again	ページが変わったため、もう一度フォーカスしてください	ok
+sidebarRight	command.collapsed	Expand the right sidebar first	先に右サイドバーを展開してください	ok
+sidebarRight	command.float	This action is unavailable in a floating panel	フローティングパネルではこの操作はできません	ok
+sidebarRight	command.empty	Open a page first	先にページを開いてください	ok
+sidebarRight	command.budget	Two panes is the limit	ペインは 2 つまでです	ok
+sidebarRight	command.width	Not enough width to split, widen the sidebar	幅が足りないため分割できません。サイドバーを広げてください	ok
+sidebarRight	chrome.expand	Open sidebar	サイドバーを開く	ok
+sidebarRight	chrome.expandAria	Open right sidebar	右サイドバーを開く	ok
+sidebarRight	chrome.collapse	Collapse sidebar	サイドバーを折りたたむ	ok
+sidebarRight	chrome.collapseAria	Collapse right sidebar	右サイドバーを折りたたむ	ok
+sidebarRight	chrome.toFullscreen	Fullscreen	全画面表示	ok
+sidebarRight	chrome.exitFullscreen	Exit fullscreen	全画面表示を終了	ok
+sidebarRight	dock.emptyPane	Empty pane	空のペイン	ok
+sidebarRight	dock.splitPane	Split	分割	ok
+sidebarRight	dock.splitPaneDisabled	Two panes is the limit	ペインは 2 つまでです	ok
+sidebarRight	dock.splitPaneNarrow	Not enough width to split, widen the sidebar	幅が足りないため分割できません。サイドバーを広げてください	ok
+sidebarRight	dock.closeTab	Close	閉じる	ok
+sidebarRight	dock.addTab	New tab	新しいタブ	ok
+sidebarRight	dock.dockFloat	Send back to the sidebar	サイドバーに戻す	ok
+sidebarRight	dock.closeFloat	Close	閉じる	ok
+sidebarRight	dock.drop.center	Move here	ここに移動	ok
+sidebarRight	dock.drop.left	Add left split	左に分割	ok
+sidebarRight	dock.drop.right	Add right split	右に分割	ok
+sidebarRight	dock.drop.top	Add top split	上に分割	ok
+sidebarRight	dock.drop.bottom	Add bottom split	下に分割	ok
+sidebarRight	tab.guide.title	Start	スタート	ok
+sidebarRight	tab.guide.more	More tools	その他のツール	ok
+sidebarRight	tab.unavailable	Nothing here can view this kind of content yet.	この種類の内容を表示できるものがまだありません。	ok
 settings.pluginInventory	tab	Plugin list	プラグイン一覧	ok
 settings.pluginInventory	loading	Reading plugins…	プラグインを読み込み中…	ok
 settings.pluginInventory	clientSyncing	Syncing plugins on this page…	このページのプラグインを同期しています…	ok
@@ -2206,41 +2559,6 @@ settings.subagent	subagentModelSelectionEmpty	No model provider currently advert
 settings.subagent	subagentModelSelectionRequired	Select at least one model before saving.	保存する前に、少なくとも 1 つのモデルを選んでください。	ok
 settings.subagent	subagentModelSelectionConflict	Settings changed elsewhere. Discard your draft and try again.	設定がほかの場所で更新されました。下書きを破棄してやり直してください。	ok
 settings.subagent	subagentModelSelectionOff	Subagents use configured defaults or inherit the parent agent's model. Saved model choices are retained.	オフの場合、サブエージェントは設定済みの既定モデルを使うか、親 Agent のモデルを継承します。選択済みのモデルは保持されます。	ok
-sidebarRight	command.close	Close current page or window	現在のページまたはウィンドウを閉じる	ok
-sidebarRight	command.refresh	Refresh current page	現在のページを更新	ok
-sidebarRight	command.noRefresh	This page cannot be refreshed	このページは更新できません	ok
-sidebarRight	command.toggle	Toggle right sidebar	右サイドバーを切り替え	ok
-sidebarRight	command.fullscreen	Toggle panel fullscreen	パネルの全画面表示を切り替え	ok
-sidebarRight	command.noSession	Select a session first	先にセッションを選択してください	ok
-sidebarRight	command.noFocus	Focus a right sidebar pane first	先に右サイドバーのペインにフォーカスしてください	ok
-sidebarRight	command.stale	The page changed; focus it again	ページが変わったため、もう一度フォーカスしてください	ok
-sidebarRight	command.collapsed	Expand the right sidebar first	先に右サイドバーを展開してください	ok
-sidebarRight	command.float	This action is unavailable in a floating panel	フローティングパネルではこの操作はできません	ok
-sidebarRight	command.empty	Open a page first	先にページを開いてください	ok
-sidebarRight	command.budget	Two panes is the limit	ペインは 2 つまでです	ok
-sidebarRight	command.width	Not enough width to split, widen the sidebar	幅が足りないため分割できません。サイドバーを広げてください	ok
-sidebarRight	chrome.expand	Open sidebar	サイドバーを開く	ok
-sidebarRight	chrome.expandAria	Open right sidebar	右サイドバーを開く	ok
-sidebarRight	chrome.collapse	Collapse sidebar	サイドバーを折りたたむ	ok
-sidebarRight	chrome.collapseAria	Collapse right sidebar	右サイドバーを折りたたむ	ok
-sidebarRight	chrome.toFullscreen	Fullscreen	全画面表示	ok
-sidebarRight	chrome.exitFullscreen	Exit fullscreen	全画面表示を終了	ok
-sidebarRight	dock.emptyPane	Empty pane	空のペイン	ok
-sidebarRight	dock.splitPane	Split	分割	ok
-sidebarRight	dock.splitPaneDisabled	Two panes is the limit	ペインは 2 つまでです	ok
-sidebarRight	dock.splitPaneNarrow	Not enough width to split, widen the sidebar	幅が足りないため分割できません。サイドバーを広げてください	ok
-sidebarRight	dock.closeTab	Close	閉じる	ok
-sidebarRight	dock.addTab	New tab	新しいタブ	ok
-sidebarRight	dock.dockFloat	Send back to the sidebar	サイドバーに戻す	ok
-sidebarRight	dock.closeFloat	Close	閉じる	ok
-sidebarRight	dock.drop.center	Move here	ここに移動	ok
-sidebarRight	dock.drop.left	Add left split	左に分割	ok
-sidebarRight	dock.drop.right	Add right split	右に分割	ok
-sidebarRight	dock.drop.top	Add top split	上に分割	ok
-sidebarRight	dock.drop.bottom	Add bottom split	下に分割	ok
-sidebarRight	tab.guide.title	Start	スタート	ok
-sidebarRight	tab.guide.more	More tools	その他のツール	ok
-sidebarRight	tab.unavailable	Nothing here can view this kind of content yet.	この種類の内容を表示できるものがまだありません。	ok
 question	error.incomplete	Please complete this question first.	先にこの質問に回答してください。	ok
 question	error.unanswered	Please select an option or enter a custom answer.	選択肢を選ぶか、自由入力で回答してください。	ok
 question	error.unavailable	Cannot submit right now; try again in a moment.	現在は送信できません。しばらくしてからもう一度お試しください。	ok
@@ -2253,9 +2571,7 @@ question	wait.held	Waiting until you answer	回答するまで待機します	ok
 question	wait.continued	Work continued — you can still answer	作業は続行されました — 回答はまだできます	ok
 question	review.status	Answered	回答済み	ok
 question	review.skipped	This question was skipped.	この質問はスキップされました。	ok
-question	reply.label	Reply to earlier pending questions	以前の未回答の質問に回答	ok
-question	reply.open	Open question details	質問の詳細を開く	ok
-question	reply.close	Close question details	質問の詳細を閉じる	ok
+question	reply.label	Questions and answers	質問と回答	ok
 question	reply.answerLabel	Answer: 	回答: 	ok
 question	reply.skipped	Skipped	スキップ	ok
 question	nav.prev	Previous question	前の質問	ok
@@ -2264,6 +2580,8 @@ question	nav.minimize	Collapse the question card	質問カードを折りたた�
 question	nav.maximize	Expand the question card	質問カードを展開する	ok
 question	nav.cancel	Dismiss all questions	すべての質問をキャンセル	ok
 question	nav.close	Close the panel — reopen it from the tool call	パネルを閉じる — ツール呼び出しから再度開けます	ok
+question	text.expand	Expand	展開する	ok
+question	text.collapse	Collapse	折りたたむ	ok
 question	option.recommended	Recommended	推奨	ok
 question	custom.placeholder	Type your answer	回答を入力	ok
 question	action.skip	Skip	スキップ	ok
@@ -2406,10 +2724,10 @@ settings.theme	fontFamily.terminal.title	Terminal font	ターミナルのフォ�
 settings.theme	fontFamily.terminal.description	Used for the sidebar terminal. Separate fonts with commas; leave empty for the default	サイドバーのターミナルに使われます。フォントはカンマで区切ります。空欄にすると既定になります	ok
 settings.theme	fontFamily.placeholder	Default	既定	ok
 settings.theme	fontSize.more	More font settings	その他の文字設定	ok
-agent-team	trigger	Agent Team	Agent チーム	ok
-agent-team	loading	Loading Team…	チームを読み込み中…	ok
+agent-team	trigger	Agent team	Agent チーム	ok
+agent-team	loading	Loading team…	チームを読み込み中…	ok
 agent-team	unavailable	Team is unavailable	チームを利用できません	ok
-agent-team	failure	Invalid persisted Team record: {message}	保存されたチームの記録が無効です: {message}	ok
+agent-team	failure	Invalid persisted team record: {message}	保存されたチームの記録が無効です: {message}	ok
 agent-team	empty	No shared tasks yet. Create them through the conversation.	共有タスクはまだありません。会話から作成してください。	ok
 agent-team	roster	Members	メンバー	ok
 agent-team	tasks	Shared tasks	共有タスク	ok
@@ -2476,6 +2794,27 @@ sidebarDocumentPreview	error.notText	Preview is not available for this file type
 sidebarDocumentPreview	error.notRegularFile	Not a regular file, nothing to display.	通常のファイルではないため、表示できる内容がありません。	ok
 sidebarDocumentPreview	error.unavailable	Read failed: {message}	読み込みに失敗しました: {message}	ok
 sidebarDocumentPreview	retry	Retry	再試行	ok
+sidebarFiles	shortcut.noSession	Select a session first	先にセッションを選択してください	ok
+sidebarFiles	type.label	Files	ファイル	ok
+sidebarFiles	guide.title	Workspace files	ワークスペースのファイル	ok
+sidebarFiles	guide.description	Browse files in this session's workspace	このセッションのワークスペースにあるファイルを閲覧できます	ok
+sidebarFiles	loading	Reading…	読み込み中…	ok
+sidebarFiles	empty	Empty directory	空のディレクトリ	ok
+sidebarFiles	truncated	Too many entries, showing only some of them.	項目が多すぎるため、一部のみ表示しています。	ok
+sidebarFiles	noWorkspace	This session has no workspace directory.	このセッションにはワークスペースのディレクトリがありません。	ok
+sidebarFiles	reload	Reload	再読み込み	ok
+sidebarFiles	autoRefresh	Auto refresh	自動更新	ok
+sidebarFiles	autoRefresh.enable	Enable auto refresh	自動更新を有効にする	ok
+sidebarFiles	autoRefresh.disable	Disable auto refresh	自動更新を無効にする	ok
+sidebarFiles	entry.other	Not a file or a directory, so it cannot be opened.	ファイルでもディレクトリでもないため、開けません。	ok
+sidebarFiles	entry.noViewer	No viewer can open this file.	このファイルを開けるビューアーがありません。	ok
+sidebarFiles	navigator.show	Show file tree	ファイルツリーを表示	ok
+sidebarFiles	navigator.hide	Hide file tree	ファイルツリーを隠す	ok
+sidebarFiles	navigator.resize	Resize file tree	ファイルツリーのサイズを変更	ok
+sidebarFiles	error.notFound	That directory is gone. It may have been moved or deleted.	そのディレクトリは存在しません。移動または削除された可能性があります。	ok
+sidebarFiles	error.outsideWorkspace	That directory is outside the workspace, so the sidebar will not read it.	そのディレクトリはワークスペースの外にあるため、サイドバーでは読み込みません。	ok
+sidebarFiles	error.notDirectory	That is not a directory.	ディレクトリではありません。	ok
+sidebarFiles	error.unavailable	Read failed: {message}	読み込みに失敗しました: {message}	ok
 feedback	action.like	Good response	良い回答	ok
 feedback	action.likeActive	Remove rating	評価を取り消す	ok
 feedback	action.dislike	Bad response	問題のある回答	ok
@@ -2541,30 +2880,12 @@ plan	preview.openNamed	Open plan: {title}	計画を開く: {title}	ok
 plan	preview.loading	Loading plan…	計画を読み込み中…	ok
 plan	preview.failed	Could not load plan	計画を読み込めませんでした	ok
 plan	preview.invalidAddress	Invalid plan address	計画のアドレスが無効です	ok
-plan	preview.historyUnavailable	Session history is unavailable	セッションの履歴を利用できません	ok
 plan	preview.notFound	This plan was not found	この計画が見つかりません	ok
 plan	preview.unavailable	Plan preview is unavailable	計画のプレビューを利用できません	ok
 plan	preview.expired	This temporary plan preview has expired. Reopen it from the pending review card.	この一時的な計画プレビューは期限切れです。承認待ちのカードから開き直してください。	ok
 plan	chip.on.aria	Plan mode on, press to turn off	計画モードはオンです。押すとオフになります	ok
 plan	chip.on.title	Plan mode on — click to turn off (/plan off)	計画モードはオンです — クリックでオフ (/plan off)	ok
 plan	chip.exitFailed	Failed to exit plan mode	計画モードを終了できませんでした	ok
-sidebarFiles	shortcut.noSession	Select a session first	先にセッションを選択してください	ok
-sidebarFiles	type.label	Files	ファイル	ok
-sidebarFiles	guide.title	Workspace files	ワークスペースのファイル	ok
-sidebarFiles	guide.description	Browse files in this session's workspace	このセッションのワークスペースにあるファイルを閲覧できます	ok
-sidebarFiles	loading	Reading…	読み込み中…	ok
-sidebarFiles	empty	Empty directory	空のディレクトリ	ok
-sidebarFiles	truncated	Too many entries, showing only some of them.	項目が多すぎるため、一部のみ表示しています。	ok
-sidebarFiles	noWorkspace	This session has no workspace directory.	このセッションにはワークスペースのディレクトリがありません。	ok
-sidebarFiles	reload	Reload	再読み込み	ok
-sidebarFiles	autoRefresh	Auto refresh	自動更新	ok
-sidebarFiles	autoRefresh.enable	Enable auto refresh	自動更新を有効にする	ok
-sidebarFiles	autoRefresh.disable	Disable auto refresh	自動更新を無効にする	ok
-sidebarFiles	entry.other	Not a file or a directory, so it cannot be opened.	ファイルでもディレクトリでもないため、開けません。	ok
-sidebarFiles	error.notFound	That directory is gone. It may have been moved or deleted.	そのディレクトリは存在しません。移動または削除された可能性があります。	ok
-sidebarFiles	error.outsideWorkspace	That directory is outside the workspace, so the sidebar will not read it.	そのディレクトリはワークスペースの外にあるため、サイドバーでは読み込みません。	ok
-sidebarFiles	error.notDirectory	That is not a directory.	ディレクトリではありません。	ok
-sidebarFiles	error.unavailable	Read failed: {message}	読み込みに失敗しました: {message}	ok
 reference	section.files	Files & folders	ファイルとフォルダー	ok
 reference	section.subagents	Subagents	サブエージェント	ok
 reference	section.sessions	Sessions	セッション	ok
@@ -2639,6 +2960,20 @@ settings.shell	save	Save	保存	ok
 settings.shell	saving	Saving…	保存しています…	ok
 settings.shell	saveFailed	The deployment did not accept these values; they were left for you to correct.	この環境が値を受け付けませんでした。修正できるよう入力は残しています。	ok
 settings.shell	invalidNumber	Enter a number, or leave blank to use the default.	数値を入力してください。空欄のままにすると既定値を使います。	ok
+session-log-download	header.more	More actions	その他の操作	ok
+session-log-download	menu.copyMarkdown	Copy Session as Markdown	セッションを Markdown としてコピー	ok
+session-log-download	menu.download	Download session log	セッションログをダウンロード	ok
+session-log-download	menu.feedback	Feedback	フィードバック	ok
+session-log-download	toast.copied	Session copied as Markdown.	セッションを Markdown としてコピーしました。	ok
+session-log-download	toast.preparationFailed	Could not read the Session for copying. Try again.	コピー用にセッションを読み込めませんでした。もう一度お試しください。	ok
+session-log-download	toast.clipboardFailed	Could not write to the clipboard. Check clipboard permission and try again.	クリップボードに書き込めませんでした。クリップボードの権限を確認して、もう一度お試しください。	ok
+session-log-download	dialog.preparingTitle	Exporting Session	セッションをエクスポート中	ok
+session-log-download	dialog.preparingDescription	Preparing a ZIP containing this Session, its sub-Sessions, and attachments.	このセッションと子セッション、添付ファイルを含む ZIP を準備しています。	ok
+session-log-download	dialog.successTitle	Session download started	セッションのダウンロードを開始しました	ok
+session-log-download	dialog.successDescription	The browser is downloading the Session ZIP.	ブラウザーがセッションの ZIP をダウンロードしています。	ok
+session-log-download	dialog.errorTitle	Session export failed	セッションのエクスポートに失敗しました	ok
+session-log-download	dialog.close	Close	閉じる	ok
+session-log-download	dialog.commandFailed	Could not start the Session export.	セッションのエクスポートを開始できませんでした。	ok
 directory-browser	browser.title	Select Workspace Directory	ワークスペースのディレクトリを選択	ok
 directory-browser	browser.home	Home	ホーム	ok
 directory-browser	browser.newFolder	New folder	新しいフォルダー	ok
@@ -2652,6 +2987,18 @@ directory-browser	browser.editPath	Edit path	パスを編集	ok
 directory-browser	browser.loading	Loading…	読み込み中…	ok
 directory-browser	browser.truncated	Too many folders to list; only the beginning is shown.	フォルダーが多すぎるため、先頭のみ表示しています。	ok
 directory-browser	browser.showHidden	Show hidden files	隠しファイルを表示	ok
+fileActions	menu.finder	Show in Finder	Finder で表示	ok
+fileActions	menu.reveal	Show in folder	フォルダーで表示	ok
+fileActions	menu.saveAs	Save as…	名前を付けて保存…	ok
+fileActions	menu.copied	Copied	コピーしました	ok
+fileActions	menu.copyImage	Copy image	画像をコピー	ok
+fileActions	menu.download	Download	ダウンロード	ok
+fileActions	menu.saveFailed	Could not save. Check the source and destination, then retry.	保存できませんでした。保存元と保存先を確認して、再試行してください。	ok
+fileActions	menu.copyFailed	Could not copy. Check that the content is available, then retry.	コピーできませんでした。内容が利用できるか確認して、再試行してください。	ok
+fileActions	menu.saved	Saved	保存しました	ok
+fileActions	menu.downloadStarted	Download started	ダウンロードを開始しました	ok
+fileActions	menu.downloaded	Download complete	ダウンロードが完了しました	ok
+fileActions	path.revealError	Could not show the file location. Try again.	ファイルの場所を表示できませんでした。もう一度お試しください。	ok
 goal	phase.active	Ongoing Goal	実行中のゴール	ok
 goal	phase.active.disarmed	Inactive Goal	継続待ちのゴール	ok
 goal	phase.paused	Paused Goal	一時停止中のゴール	ok
@@ -2699,16 +3046,6 @@ sidebarImage	preview	Image preview: {name}	画像のプレビュー: {name}	ok
 sidebarImage	loading	Rendering document...	ドキュメントを描画中…	ok
 sidebarImage	failed	This image could not be displayed.	この画像を表示できませんでした。	ok
 sidebarImage	unsupported	Image preview requires the complete file contents.	画像のプレビューにはファイル全体の内容が必要です。	ok
-session-log-download	header.more	More actions	その他の操作	ok
-session-log-download	menu.download	Download session log	セッションログをダウンロード	ok
-session-log-download	menu.feedback	Feedback	フィードバック	ok
-session-log-download	dialog.preparingTitle	Exporting Session	セッションをエクスポート中	ok
-session-log-download	dialog.preparingDescription	Preparing a ZIP containing this Session, its sub-Sessions, and attachments.	このセッションと子セッション、添付ファイルを含む ZIP を準備しています。	ok
-session-log-download	dialog.successTitle	Session download started	セッションのダウンロードを開始しました	ok
-session-log-download	dialog.successDescription	The browser is downloading the Session ZIP.	ブラウザーがセッションの ZIP をダウンロードしています。	ok
-session-log-download	dialog.errorTitle	Session export failed	セッションのエクスポートに失敗しました	ok
-session-log-download	dialog.close	Close	閉じる	ok
-session-log-download	dialog.commandFailed	Could not start the Session export.	セッションのエクスポートを開始できませんでした。	ok
 slash.menu	command	Commands	コマンド	ok
 slash.menu	skill	Skills	スキル	ok
 slash.menu	subagent	Subagents	サブエージェント	ok
@@ -2718,6 +3055,14 @@ slash.menu	drill.hint	Browse folder	フォルダーを参照	ok
 slash.menu	drill.key	Tab	Tab	ok
 slash.menu	crumbs.aria	Folder navigation	フォルダーの移動	ok
 slash.menu	suggestions.aria	Trigger suggestions	候補を表示	ok
+sidebar	session.new	New Session	新しいセッション	ok
+sidebar	session.new.label	New session	新しいセッション	ok
+sidebar	toggle.open	Open sidebar	サイドバーを開く	ok
+sidebar	toggle.collapse	Collapse sidebar	サイドバーを折りたたむ	ok
+sidebar	panels.label	Global panels	グローバルパネル	ok
+sidebar	navigation.label	Navigation	ナビゲーション	ok
+sidebar	panels.more	More	その他	ok
+sidebar	version.copied	Version copied	バージョンをコピーしました	ok
 skill	row.title	Skill	スキル	ok
 skill	row.running	Loading skill	スキルを読み込み中	ok
 skill	row.preparing	Preparing to load a skill	スキルを読み込む準備をしています	ok
@@ -2726,17 +3071,13 @@ skill	row.stopped	Skill load stopped	スキルの読み込みを停止	ok
 skill	row.instructions	Instructions	指示	ok
 skill	row.inspect	Inspect	呼び出しを確認	ok
 skill	menu.userOnly	user-only	ユーザー専用	ok
-sidebar	session.new	New Session	新しいセッション	ok
-sidebar	session.new.label	New session	新しいセッション	ok
-sidebar	toggle.open	Open sidebar	サイドバーを開く	ok
-sidebar	toggle.collapse	Collapse sidebar	サイドバーを折りたたむ	ok
-sidebar	panels.label	Global panels	グローバルパネル	ok
-sidebar	panels.more	More	その他	ok
 approval	waiting	Waiting for approval	承認待ち	ok
 approval	detail.aria	Approval details	承認の詳細	ok
 approval	escalation	Tool {toolName} requests privileged execution	ツール {toolName} が特権実行を要求しています	ok
 approval	reject	Reject	拒否	ok
+approval	allow	Allow	許可	ok
 approval	allowOnce	Allow once	1 回だけ許可	ok
+approval	allowAlways	Always allow	常に許可	ok
 entryCustomization	install	Browse other plugins	ほかのプラグインを探す	ok
 entryCustomization	create	Create your plugin	プラグインを作成	ok
 entryCustomization	createPrompt.sidebar	Create a DSH plugin with a left sidebar entry.	左サイドバーに項目を追加する DSH プラグインを作成します。	ok
@@ -2764,6 +3105,8 @@ sidebarCodePreview	copy	Copy	コピー	ok
 sidebarCodePreview	copied	Copied	コピーしました	ok
 secretMask	secret.reveal	Show secret	シークレットを表示	ok
 secretMask	secret.hide	Hide secret	シークレットを隠す	ok
-deepseek-model-label-1017	badge.label	1017	1017	ok
+contextMenu	failed	Could not complete the action. Try again.	操作を完了できませんでした。もう一度お試しください。	ok
+fileDrag	failed	Drag failed. Try again.	ドラッグできませんでした。もう一度お試しください。	ok
 shortcuts.layout	toggle	Toggle left sidebar	左サイドバーを切り替え	ok
+messageQuotes	quote.add	Quote text	テキストを引用	ok
 settings.locale	language.title	Language	言語	ok

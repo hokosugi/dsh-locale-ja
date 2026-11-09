@@ -1,6 +1,6 @@
 # schedule.catalog — 日本語訳レビュー
 
-訳済み **70 / 70** キー / 要確認 0 件
+訳済み **76 / 76** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -8,28 +8,34 @@
 
 | 確認 | キー | 英語 | 日本語 |
 | --- | --- | --- | --- |
-| - [ ] | `trigger.label` | Reminders | リマインダー |
-| - [ ] | `list.loading` | Loading reminders… | リマインダーを読み込み中… |
-| - [ ] | `list.error` | Could not load reminders. | リマインダーを読み込めませんでした。 |
+| - [ ] | `trigger.label` | Automation tasks | 自動化タスク |
+| - [ ] | `list.loading` | Loading automation tasks… | 自動化タスクを読み込み中… |
+| - [ ] | `list.error` | Could not load automation tasks. | 自動化タスクを読み込めませんでした。 |
 | - [ ] | `list.retry` | Retry | 再試行 |
 | - [ ] | `delete.action` | Delete | 削除 |
 | - [ ] | `delete.pending` | Deleting… | 削除中… |
-| - [ ] | `delete.label` | Delete reminder: {title} | リマインダーを削除: {title} |
-| - [ ] | `list.open` | Open reminder details: {title} | リマインダーの詳細を開く: {title} |
-| - [ ] | `trigger.one` | {count} reminder | リマインダー {count} 件 |
-| - [ ] | `trigger.other` | {count} reminders | リマインダー {count} 件 |
-| - [ ] | `list.aria` | Active reminders | 有効なリマインダー |
+| - [ ] | `delete.label` | Delete automation task: {title} | 自動化タスクを削除: {title} |
+| - [ ] | `list.open` | Open automation task details: {title} | 自動化タスクの詳細を開く: {title} |
+| - [ ] | `trigger.one` | {count} automation task | 自動化タスク {count} 件 |
+| - [ ] | `trigger.other` | {count} automation tasks | 自動化タスク {count} 件 |
+| - [ ] | `list.aria` | Enabled automation tasks | 有効な自動化タスク |
 | - [ ] | `list.nextRun` | Next run | 次回の実行 |
 | - [ ] | `frequency.once` | Once | 1 回のみ |
 | - [ ] | `frequency.every` | Every {value} {unit} | {value} {unit}ごと |
+| - [ ] | `frequency.hostMonthly` | Monthly on day {days} at {time}, or month end | 毎月 {days} 日 {time}（存在しない場合は月末） |
+| - [ ] | `frequency.hostDailyInterval` | Every {interval} days at {time} | {interval} 日ごと {time} |
+| - [ ] | `frequency.hostWeeklyInterval` | Every {interval} weeks on {weekdays} at {time} | {interval} 週ごと {weekdays} {time} |
+| - [ ] | `frequency.hostMonthlyInterval` | Every {interval} months on day {days} at {time}, or month end | {interval} か月ごと {days} 日 {time}（存在しない場合は月末） |
+| - [ ] | `frequency.hostZone` | {rule} ({timeZone}) | {rule}（{timeZone}） |
+| - [ ] | `frequency.hostCustom` | Custom | カスタム |
 | - [ ] | `time.locale` | en | ja |
 | - [ ] | `time.utcPrefix` | UTC | UTC |
 | - [ ] | `frequency.daily` | Daily at {time} ({timeZone}) | 毎日 {time} ({timeZone}) |
 | - [ ] | `frequency.dailyLocal` | Daily at {time} | 毎日 {time} |
 | - [ ] | `frequency.weekly` | Weekly on {weekdays} at {time} ({timeZone}) | 毎週 {weekdays} の {time} ({timeZone}) |
 | - [ ] | `frequency.weeklyLocal` | Weekly on {weekdays} at {time} | 毎週 {weekdays} の {time} |
-| - [ ] | `frequency.cron` | Cron {expression} ({timeZone}) | Cron {expression} ({timeZone}) |
-| - [ ] | `frequency.cronLocal` | Cron {expression} | Cron {expression} |
+| - [ ] | `frequency.cron` | Custom ({timeZone}) | カスタム（{timeZone}） |
+| - [ ] | `frequency.cronLocal` | Custom | カスタム |
 | - [ ] | `frequency.cronRule` | {rule} ({timeZone}) | {rule} ({timeZone}) |
 | - [ ] | `cron.list.join` | ,  | 、 |
 | - [ ] | `cron.part.join` |   |   |
@@ -76,7 +82,7 @@
 | - [ ] | `relative.now` | Due now | まもなく実行 |
 | - [ ] | `relative.future` | in {value} {unit} | {value} {unit}後 |
 | - [ ] | `relative.overdue` | {value} {unit} overdue | {value} {unit}超過 |
-| - [ ] | `mark.aria` | {count} scheduled tasks | スケジュールされたタスク {count} 件 |
+| - [ ] | `mark.aria` | {count} automation tasks | スケジュールされたタスク {count} 件 |
 | - [ ] | `hover.more` | {count} more | ほか {count} 件 |
 
 確認列: `- [ ]` は未確認、`- [!]` は要確認。レンダラーによってはチェックボックスとして表示されます。

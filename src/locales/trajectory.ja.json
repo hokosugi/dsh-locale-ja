@@ -190,5 +190,12 @@
   "layout.toolsRemovedCount": "{count} 件削除",
   "layout.systemPromptAndToolsUpdated": "システムプロンプトとツールを更新",
   "layout.compactionInterrupted": "圧縮は完了する前に中断されました。",
-  "details.lastAttemptError": "直近の試行のエラー"
+  "details.lastAttemptError": "直近の試行のエラー",
+  "toolbar.subCalls": "サブ呼び出し",
+  "toolbar.expandSubCalls": "サブ呼び出しを展開",
+  "toolbar.collapseSubCalls": "サブ呼び出しを折りたたむ",
+  "record.rawResult": "生の結果",
+  "record.renderedResult": "整形された結果",
+  "record.rawResultUnavailable": "生の結果は実行中のツール呼び出しでのみ利用できます",
+  "request.collapsedTool": "サブ呼び出し"
 }

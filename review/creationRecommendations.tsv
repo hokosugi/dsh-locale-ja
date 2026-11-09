@@ -1,0 +1,56 @@
+namespace	key	en	ja	status
+creationRecommendations	heading	Personalized pages	パーソナライズされたページ	ok
+creationRecommendations	location	Add to	追加先	ok
+creationRecommendations	creationInfo	How creation works and token usage	作成の仕組みとトークン使用量	ok
+creationRecommendations	creationMethod	Creator mode builds a new page you can remove at any time.	創造モードは、いつでも削除できる新しいページを作ります。	ok
+creationRecommendations	creationCost	Creation may take a while and use a large number of tokens.	作成には時間がかかり、多くのトークンを使う場合があります。	ok
+creationRecommendations	creationBackground	Click Create to start in the background. You can keep chatting here.	「作成」を押すとバックグラウンドで開始します。ここでチャットを続けられます。	ok
+creationRecommendations	initialContent	Starts with	初期内容	ok
+creationRecommendations	expandContent	View all content	内容をすべて表示	ok
+creationRecommendations	collapseContent	Collapse content	内容を折りたたむ	ok
+creationRecommendations	sidebar-right	Right sidebar	右サイドバー	ok
+creationRecommendations	page	Session tab	セッションのタブ	ok
+creationRecommendations	sidebar-left	Global page	グローバルページ	ok
+creationRecommendations	custom	Write your own	自分で指定	ok
+creationRecommendations	sidebar-rightHint	View alongside this conversation	この会話と並べて表示	ok
+creationRecommendations	pageHint	Open beside Chat and Trajectory	チャットと軌跡の隣に開く	ok
+creationRecommendations	sidebar-leftHint	Open from the left sidebar	左サイドバーから開く	ok
+creationRecommendations	customHint	Describe where you want it	表示したい場所を説明	ok
+creationRecommendations	customLabel	Where should it appear?	どこに表示しますか？	ok
+creationRecommendations	customPlaceholder	For example, a left sidebar entry that opens a full-page calendar	例: 全画面のカレンダーを開く左サイドバーの項目	ok
+creationRecommendations	create	Create	作成	ok
+creationRecommendations	starting	Starting…	開始しています…	ok
+creationRecommendations	dismiss	Not now	あとで	ok
+creationRecommendations	retry	Create again	もう一度作成	ok
+creationRecommendations	keep	Keep	保持	ok
+creationRecommendations	undo	Undo	元に戻す	ok
+creationRecommendations	restore	Restore	復元	ok
+creationRecommendations	restoring	Restoring…	復元しています…	ok
+creationRecommendations	scope	You can remove it at any time	いつでも削除できます	ok
+creationRecommendations	dismissed	Dismissed	閉じました	ok
+creationRecommendations	replaced	Replaced	置き換えました	ok
+creationRecommendations	creating	Creating in the background	バックグラウンドで作成中	ok
+creationRecommendations	cancel	Cancel creation	作成をキャンセル	ok
+creationRecommendations	cancelling	Cancelling…	キャンセルしています…	ok
+creationRecommendations	installing	Installing…	インストールしています…	ok
+creationRecommendations	sourceRetained	Undo keeps the source files in the original workspace’s .dsh-created-plugins/ folder.	元に戻しても、ソースファイルは元のワークスペースの .dsh-created-plugins/ フォルダーに残ります。	ok
+creationRecommendations	installed	Installed	インストール済み	ok
+creationRecommendations	kept	Kept	保持しました	ok
+creationRecommendations	removed	Removed	削除しました	ok
+creationRecommendations	failed	Creation failed. Try again.	作成に失敗しました。もう一度お試しください。	ok
+creationRecommendations	interrupted	Creation interrupted. Try again.	作成が中断されました。もう一度お試しください。	ok
+creationRecommendations	unconfirmed	Result unconfirmed. Retry to check.	結果を確認できませんでした。再試行して確認してください。	ok
+creationRecommendations	invalid-location	Choose a location or describe it in up to 1,000 characters.	場所を選ぶか、1,000 文字以内で説明してください。	ok
+creationRecommendations	restart-required	The change is saved. Restart DSH to apply it.	変更は保存されました。DSH を再起動すると反映されます。	ok
+creationRecommendations	overridden	Another configuration overrides this change.	別の設定がこの変更を上書きしています。	ok
+creationRecommendations	cancelled	Cancelled	キャンセル済み	ok
+creationRecommendations	applicationFailed	The last change did not apply. Check Plugins.	直前の変更が反映されませんでした。プラグインを確認してください。	ok
+creationRecommendations	applicationCancelled	The last change was cancelled.	直前の変更はキャンセルされました。	ok
+creationRecommendations	transport	Could not confirm the result. Reconnect and check the card before retrying.	結果を確認できませんでした。再接続してカードを確認してから再試行してください。	ok
+creationRecommendations	unknown	This recommendation is no longer available.	この提案はもう利用できません。	ok
+creationRecommendations	unavailable	This action is unavailable. Check the plugin in Plugins.	この操作は利用できません。プラグインでプラグインを確認してください。	ok
+creationRecommendations	access-denied	This connection cannot change plugins.	この接続ではプラグインを変更できません。	ok
+creationRecommendations	not-live-root	Open the original conversation to use this card.	このカードを使うには、元の会話を開いてください。	ok
+creationRecommendations	closing	The creation plugin is stopping. Try again after it reloads.	作成プラグインが停止しています。再読み込み後にもう一度お試しください。	ok
+creationRecommendations	read-only	This Session is read-only. Switch the permission preset to create pages.	このセッションは読み取り専用です。ページを作成するには権限プリセットを切り替えてください。	ok
+creationRecommendations	source-missing	The page files are gone. Ask for a new proposal.	ページのファイルがなくなりました。新しい提案を依頼してください。	ok

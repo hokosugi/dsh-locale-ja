@@ -9,7 +9,6 @@
   "preview.loading": "計画を読み込み中…",
   "preview.failed": "計画を読み込めませんでした",
   "preview.invalidAddress": "計画のアドレスが無効です",
-  "preview.historyUnavailable": "セッションの履歴を利用できません",
   "preview.notFound": "この計画が見つかりません",
   "preview.unavailable": "計画のプレビューを利用できません",
   "preview.expired": "この一時的な計画プレビューは期限切れです。承認待ちのカードから開き直してください。",

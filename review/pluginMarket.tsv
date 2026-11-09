@@ -5,14 +5,14 @@ pluginMarket	loading	Reading the index	インデックスを読み込み中	ok
 pluginMarket	retry	Retry	再試行	ok
 pluginMarket	close	Close	閉じる	ok
 pluginMarket	cancel	Cancel	キャンセル	ok
-pluginMarket	emptyTitle	No plugin markets yet	プラグインマーケットがまだありません	ok
-pluginMarket	emptyDescription	Add a plugin market index to browse and install its plugins here.	プラグインマーケットのインデックスを追加すると、ここで一覧からインストールできます。	ok
+pluginMarket	emptyTitle	No plugin indexes yet	プラグインインデックスがまだありません	ok
+pluginMarket	emptyDescription	Add a plugin index to browse and install its plugins here.	プラグインインデックスのインデックスを追加すると、ここで一覧からインストールできます。	ok
 pluginMarket	addFirstSource	Add index source	インデックスの参照元を追加	ok
 pluginMarket	sourcesFailed	Could not read the index sources.	インデックスの参照元を読み込めませんでした。	ok
 pluginMarket	manageSources	Manage index sources…	インデックスの参照元を管理…	ok
-pluginMarket	marketMenu	Switch plugin market, currently {market}	プラグインマーケットを切り替え（現在: {market}）	ok
+pluginMarket	marketMenu	Switch plugin index, currently {market}	プラグインインデックスを切り替え（現在: {market}）	ok
 pluginMarket	sourcesTitle	Index sources	インデックスの参照元	ok
-pluginMarket	sourcesDescription	A plugin market is published as the URL of one index file. Discover browses the indexes listed here.	プラグインマーケットは 1 つのインデックスファイルの URL として公開されています。「プラグインを探す」では、ここに登録されたインデックスを参照します。	ok
+pluginMarket	sourcesDescription	A plugin index is published as the URL of one index file. Discover browses the indexes listed here.	プラグインインデックスは 1 つのインデックスファイルの URL として公開されています。「プラグインを探す」では、ここに登録されたインデックスを参照します。	ok
 pluginMarket	sourcesLabel	Added index sources	追加済みの参照元	ok
 pluginMarket	sourceUrl	Index URL	インデックスの URL	ok
 pluginMarket	sourcePlaceholder	https://example.com/index.json	https://example.com/index.json	ok
@@ -67,7 +67,7 @@ pluginMarket	factHomepage	Homepage	ホームページ	ok
 pluginMarket	factSourceCode	Source code	ソースコード	ok
 pluginMarket	factCategory	Category	カテゴリ	ok
 pluginMarket	factLabels	Labels	ラベル	ok
-pluginMarket	factMarket	Plugin market	プラグインマーケット	ok
+pluginMarket	factMarket	Plugin index	プラグインインデックス	ok
 pluginMarket	versionsTitle	Versions	バージョン	ok
 pluginMarket	versionsLabel	Versions of {name}	{name} のバージョン	ok
 pluginMarket	versionDefault	Recommended	推奨	ok
@@ -77,3 +77,12 @@ pluginMarket	versionExempted	Exempted	例外あり	ok
 pluginMarket	versionPrerelease	Prerelease	プレリリース	ok
 pluginMarket	confirmTitle	Install "{name}"?	「{name}」をインストールしますか？	ok
 pluginMarket	installTrust	Plugins run on this machine with your permissions. Make sure you trust where this one comes from.	プラグインはこのマシンであなたの権限で実行されます。このプラグインの入手元が信頼できるか確認してください。	ok
+pluginMarket	detailTitle	Details	詳細	ok
+pluginMarket	detailLoading	Reading details	詳細を読み込み中	ok
+pluginMarket	detailTooLarge	The details or their repository exceed the size limit and were not loaded.	詳細またはそのリポジトリがサイズ上限を超えているため、読み込みませんでした。	ok
+pluginMarket	detailNetwork	Could not reach the source of the details.	詳細の取得元に接続できませんでした。	ok
+pluginMarket	detailDenied	Could not access the repository of the details. Check your Git credentials.	詳細のリポジトリにアクセスできませんでした。Git の認証情報を確認してください。	ok
+pluginMarket	detailGitUnavailable	The details are in a repository that must be read with Git, and Git could not run. Install Git, then retry.	詳細は Git で読む必要があるリポジトリにありますが、Git を実行できませんでした。Git をインストールしてから再試行してください。	ok
+pluginMarket	detailInvalid	The plugin declares an invalid details file.	プラグインが宣言している詳細ファイルが正しくありません。	ok
+pluginMarket	detailFailed	Could not read the details.	詳細を読み込めませんでした。	ok
+pluginMarket	footnotes	Footnotes	脚注	ok

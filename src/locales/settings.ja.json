@@ -39,5 +39,6 @@
   "hostRelease.page": "ページ",
   "hostRelease.unknown": "不明",
   "hostRelease.reload": "再読み込みして新しいバージョンを読み込む",
-  "hostRelease.later": "あとで"
+  "hostRelease.later": "あとで",
+  "desktop.update.fullscreenTimeout": "全画面表示を終了できませんでした。全画面表示を終了してから、更新を再試行してください。"
 }

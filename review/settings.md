@@ -1,6 +1,6 @@
 # settings — 日本語訳レビュー
 
-訳済み **41 / 41** キー / 要確認 0 件
+訳済み **42 / 42** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -42,6 +42,7 @@ Target version: {version}
 | - [ ] | `desktop.update.checkNetworkFailed` | Could not check for updates. Check your connection and try again. | 更新を確認できませんでした。接続を確認して再試行してください。 |
 | - [ ] | `desktop.update.downloadNetworkFailed` | Could not download the update. Check your connection and try again. | 更新をダウンロードできませんでした。接続を確認して再試行してください。 |
 | - [ ] | `desktop.update.installNetworkFailed` | Could not install the update. Check your connection and try again. | 更新をインストールできませんでした。接続を確認して再試行してください。 |
+| - [ ] | `desktop.update.fullscreenTimeout` | Could not exit fullscreen. Exit fullscreen, then retry the update. | 全画面表示を終了できませんでした。全画面表示を終了してから、更新を再試行してください。 |
 | - [ ] | `desktop.update.stopFailed` | Could not safely stop the tasks. The update has not been installed. Please try again later. | タスクを安全に停止できなかったため、更新はインストールされていません。しばらくしてから再試行してください。 |
 | - [ ] | `desktop.update.tasksChanged` | New tasks have started. Confirm again to stop the tasks and update. | 新しいタスクが始まりました。タスクを停止して更新するか、もう一度確認してください。 |
 | - [ ] | `desktop.update.tasksUnavailable` | Task status is unavailable. Try updating again when the workspace is ready. | タスクの状態を取得できません。ワークスペースが準備できてから更新を再試行してください。 |

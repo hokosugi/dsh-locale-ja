@@ -1,6 +1,6 @@
 # settings.models — 日本語訳レビュー
 
-訳済み **134 / 134** キー / 要確認 0 件
+訳済み **137 / 137** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -110,6 +110,8 @@ We look forward to exploring the limits of intelligence together with users and 
 | - [ ] | `modelReasoningOffValuePlaceholder` | Turns reasoning off | 推論をオフにします |
 | - [ ] | `addModel` | Add model | モデルを追加 |
 | - [ ] | `removeModel` | Delete model | モデルを削除 |
+| - [ ] | `reorderModel` | Reorder model | モデルを並べ替え |
+| - [ ] | `reorderModelHelp` | Drag to reorder, or use the up and down arrow keys. | ドラッグするか、上下の矢印キーで並べ替えます。 |
 | - [ ] | `modelsEmpty` | No models will be shown in the selector. Unlisted IDs can still be sent directly. | モデル選択には何も表示されません。一覧にない ID も直接送信できます。 |
 | - [ ] | `keyBlank` | Enter the API key, or leave the field empty to keep the stored one. | API キーを入力してください。空欄のままにすると保存済みのキーを維持します。 |
 | - [ ] | `keyBlankNew` | Enter the API key, or leave the field empty if this provider authenticates another way. | API キーを入力してください。このプロバイダーが別の方法で認証する場合は空欄のままにできます。 |
@@ -126,13 +128,14 @@ We look forward to exploring the limits of intelligence together with users and 
 | - [ ] | `fetching` | Asking the provider… | プロバイダーに問い合わせています… |
 | - [ ] | `fetchNeedsBaseUrl` | Enter the base URL first, then fetch. | 先にベース URL を入力してから取得してください。 |
 | - [ ] | `fetchEmpty` | The provider listed no models. Add them by hand. | プロバイダーはモデルを 1 つも公開していません。手動で追加してください。 |
-| - [ ] | `fetchTitle` | Choose models to add | 追加するモデルを選択 |
-| - [ ] | `fetchDescription` | These are the models this provider has available. Choose the ones to add. | このプロバイダーで利用可能なモデルです。追加するものを選んでください。 |
+| - [ ] | `fetchTitle` | Choose models | モデルを選択 |
+| - [ ] | `fetchDescription` | These are the models this provider has available. Checked models make up the list. | このプロバイダーが利用できるモデルです。チェックしたモデルが一覧になります。 |
 | - [ ] | `fetchSearch` | Search models | モデルを検索 |
 | - [ ] | `fetchNoMatches` | No matching models. | 一致するモデルがありません。 |
 | - [ ] | `fetchSelectAll` | Select all | すべて選択 |
 | - [ ] | `fetchDeselectAll` | Deselect all | 選択を解除 |
-| - [ ] | `fetchAdopt` | Add selected | 選択したものを追加 |
+| - [ ] | `fetchAdopt` | Update list | 一覧を更新 |
+| - [ ] | `fetchKeepOne` | Keep at least one model checked. | 少なくとも 1 つのモデルを選択したままにしてください。 |
 | - [ ] | `customTag` | Custom | カスタム |
 | - [ ] | `customRoute` | Provider ID | プロバイダー ID |
 | - [ ] | `customRouteHint` | Lowercase identifier, starting with a letter, that uniquely names this provider in requests and as its credential name. | 英小文字で始まる識別子です。リクエスト内でこのプロバイダーを一意に示し、認証情報の名前の元にもなります。 |

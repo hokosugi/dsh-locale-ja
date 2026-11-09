@@ -20,9 +20,7 @@
 | - [ ] | `wait.continued` | Work continued — you can still answer | 作業は続行されました — 回答はまだできます |
 | - [ ] | `review.status` | Answered | 回答済み |
 | - [ ] | `review.skipped` | This question was skipped. | この質問はスキップされました。 |
-| - [ ] | `reply.label` | Reply to earlier pending questions | 以前の未回答の質問に回答 |
-| - [ ] | `reply.open` | Open question details | 質問の詳細を開く |
-| - [ ] | `reply.close` | Close question details | 質問の詳細を閉じる |
+| - [ ] | `reply.label` | Questions and answers | 質問と回答 |
 | - [ ] | `reply.answerLabel` | Answer:  | 回答:  |
 | - [ ] | `reply.skipped` | Skipped | スキップ |
 | - [ ] | `nav.prev` | Previous question | 前の質問 |
@@ -31,6 +29,8 @@
 | - [ ] | `nav.maximize` | Expand the question card | 質問カードを展開する |
 | - [ ] | `nav.cancel` | Dismiss all questions | すべての質問をキャンセル |
 | - [ ] | `nav.close` | Close the panel — reopen it from the tool call | パネルを閉じる — ツール呼び出しから再度開けます |
+| - [ ] | `text.expand` | Expand | 展開する |
+| - [ ] | `text.collapse` | Collapse | 折りたたむ |
 | - [ ] | `option.recommended` | Recommended | 推奨 |
 | - [ ] | `custom.placeholder` | Type your answer | 回答を入力 |
 | - [ ] | `action.skip` | Skip | スキップ |

@@ -1,6 +1,6 @@
 # open-in-app — 日本語訳レビュー
 
-訳済み **45 / 45** キー / 要確認 0 件
+訳済み **58 / 58** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -8,6 +8,17 @@
 
 | 確認 | キー | 英語 | 日本語 |
 | --- | --- | --- | --- |
+| - [ ] | `menu.openInSidebar` | Open in sidebar | サイドバーで開く |
+| - [ ] | `menu.openInFloat` | Open in floating panel | フローティングパネルで開く |
+| - [ ] | `menu.finder` | Show in Finder | Finder で表示 |
+| - [ ] | `menu.reveal` | Show in folder | フォルダーで表示 |
+| - [ ] | `menu.defaultApp` | Open in default application | 既定のアプリで開く |
+| - [ ] | `menu.external` | Open in external browser | 外部ブラウザーで開く |
+| - [ ] | `menu.copyLink` | Copy link address | リンクのアドレスをコピー |
+| - [ ] | `menu.copyPath` | Copy file path | ファイルパスをコピー |
+| - [ ] | `menu.copyDirectoryPath` | Copy folder path | フォルダーパスをコピー |
+| - [ ] | `menu.copied` | Copied | コピーしました |
+| - [ ] | `menu.copyFailed` | Could not copy. Check that the content is available, then retry. | コピーできませんでした。内容が利用できるか確認して、再試行してください。 |
 | - [ ] | `open.title` | Open in {app} | {app} で開く |
 | - [ ] | `path.appDefault` | {app} (default) | {app} (既定) |
 | - [ ] | `path.appsError` | Could not load applications | アプリの一覧を読み込めませんでした |
@@ -17,6 +28,8 @@
 | - [ ] | `path.open` | Open | 開く |
 | - [ ] | `path.more` | More ways to open | ほかの開き方 |
 | - [ ] | `path.reveal` | Show file location | ファイルの場所を表示 |
+| - [ ] | `path.opened` | Opened on another device | 別のデバイスで開きました |
+| - [ ] | `path.revealed` | File location shown on another device | 別のデバイスでファイルの場所を表示しました |
 | - [ ] | `path.openError` | Could not open. Try again. | 開けませんでした。もう一度お試しください。 |
 | - [ ] | `path.revealError` | Could not show the file location. Try again. | ファイルの場所を表示できませんでした。もう一度お試しください。 |
 | - [ ] | `app.cursor` | Cursor | Cursor |

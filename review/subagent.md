@@ -1,6 +1,6 @@
 # subagent — 日本語訳レビュー
 
-訳済み **41 / 41** キー / 要確認 0 件
+訳済み **42 / 42** キー / 要確認 0 件
 
 <!-- 生成物: tools/review.mjs。編集するのは src/locales/*.ja.json か review/ja.tsv -->
 
@@ -43,6 +43,7 @@
 | - [ ] | `switcher.aria` | Switch subagent: {title} | サブエージェントを切り替え: {title} |
 | - [ ] | `tree.aria` | Subagent sessions | サブエージェントのセッション |
 | - [ ] | `open.sidebar` | Open in sidebar | サイドバーで開く |
+| - [ ] | `open.floatWindow` | Open in floating panel | フローティングパネルで開く |
 | - [ ] | `open.sidebar.aria` | Open {label} in sidebar | {label} をサイドバーで開く |
 | - [ ] | `sidebar.chat` | Chat | チャット |
 | - [ ] | `readonly.oneShot.title` | One-shot subagent record | 単発サブエージェントの記録 |

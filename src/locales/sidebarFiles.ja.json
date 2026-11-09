@@ -15,5 +15,9 @@
   "error.notFound": "そのディレクトリは存在しません。移動または削除された可能性があります。",
   "error.outsideWorkspace": "そのディレクトリはワークスペースの外にあるため、サイドバーでは読み込みません。",
   "error.notDirectory": "ディレクトリではありません。",
-  "error.unavailable": "読み込みに失敗しました: {message}"
+  "error.unavailable": "読み込みに失敗しました: {message}",
+  "entry.noViewer": "このファイルを開けるビューアーがありません。",
+  "navigator.show": "ファイルツリーを表示",
+  "navigator.hide": "ファイルツリーを隠す",
+  "navigator.resize": "ファイルツリーのサイズを変更"
 }
