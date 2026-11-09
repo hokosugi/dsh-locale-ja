@@ -182,7 +182,6 @@ check('settings.theme の訳語', t('settings.theme', 'appearance.dark'), 'ダ�
 check('settings.permission の訳語', t('settings.permission', 'preset.readOnly'), '読み取りのみ')
 check('conversation の訳語', t('conversation', 'input.send'), 'メッセージを送信')
 check('conversation の日付単位', t('conversation', 'detail.days', { count: 3 }), '3 日')
-check('chat の完了形', t('chat', 'message.stepProcess.done.read'), 'ファイルを読み取りました')
 check('trajectory の訳語', t('trajectory', 'view.trajectory'), '軌跡')
 check('job の訳語', t('job', 'status.running'), '実行中')
 check('subagent の訳語', t('subagent', 'mode.oneShot'), '単発')
