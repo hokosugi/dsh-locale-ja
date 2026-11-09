@@ -93,20 +93,27 @@ export function createPlugin({ React, h, dictionaries }) {
    * @param ctx - クライアントの cordis コンテキスト。
    */
   function apply(ctx) {
+    // 0. ホストが既に日本語 (ja) を提供している場合は、このパックは何もしない。
+    //    DSH 0.2.2 以降は本体が ja を同梱しており、二重登録はホスト側のロケール
+    //    サービスを壊して**他のプラグインの有効化まで失敗**させる (実測: 50 件)。
+    //    addLanguage は id が使用済みなら throw するので、それを検出に使う。
+    let languageDisposer
+    try {
+      languageDisposer = ctx.locale.addLanguage({
+        id: LOCALE_ID,
+        label: LOCALE_LABEL,
+        fallback: LOCALE_FALLBACK,
+      })
+    } catch (error) {
+      console.info(
+        '[dsh-locale-ja] ホストが既に日本語を提供しているため、このパックは無効になります',
+        error,
+      )
+      return
+    }
+
     // 1. 言語そのものを追加する (fallback は必ず登録済みの `en`)。
-    ctx.effect(() => {
-      try {
-        return ctx.locale.addLanguage({
-          id: LOCALE_ID,
-          label: LOCALE_LABEL,
-          fallback: LOCALE_FALLBACK,
-        })
-      } catch (error) {
-        // 既に別のパックが `ja` を登録している場合は、辞書だけ活かして続行する。
-        console.warn('[dsh-locale-ja] 言語 "ja" を追加できませんでした', error)
-        return () => {}
-      }
-    }, 'locale-ja: language')
+    ctx.effect(() => languageDisposer, 'locale-ja: language')
 
     // 2. 他パッケージが所有する名前空間に、日本語 (ja) だけを足す。
     //    register は (名前空間, 言語) の組で一意なので、zh/en の所有権は侵さない。
