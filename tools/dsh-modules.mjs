@@ -2,14 +2,16 @@
  * DSH の `@deepseek-ai/*` パッケージ群を置いているディレクトリを探す (抽出と検証で共用)。
  *
  * 1. `--dsh-modules <path>` / 環境変数 `DSH_MODULES_ROOT`
- * 2. npm のグローバルルート (`npm root -g` + `/@deepseek-ai`)
+ * 2. このリポジトリ内の `node_modules/@deepseek-ai` (CI で入れる場合はここ)
+ * 3. npm のグローバルルート (`npm root -g` + `/@deepseek-ai`)
  * 3. npx キャッシュ (`~/.npm/_npx/<hash>/node_modules/@deepseek-ai`) の新しい順
  *
  * 見つからないときは、探した場所を並べて例外を投げる。黙って空の辞書を書き出すと
  * 「DSH が消えた」のか「辞書が空になった」のか区別できなくなるため。
  */
 import { existsSync, readdirSync, statSync } from 'node:fs'
-import { join } from 'node:path'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { execFileSync } from 'node:child_process'
 import { homedir } from 'node:os'
 
@@ -19,7 +21,7 @@ export const MODULES_ROOT_ENV = 'DSH_MODULES_ROOT'
 /**
  * DSH のパッケージ群を探す。
  * @param {{ explicit?: string }} [options] - `--dsh-modules` などで指定された場所。
- * @returns {{ path: string, kind: 'explicit'|'npm-global'|'npx-cache', tried: string[] }} 見つかった場所と、その見つけ方。
+ * @returns {{ path: string, kind: 'explicit'|'project'|'npm-global'|'npx-cache', tried: string[] }} 見つかった場所と、その見つけ方。
  */
 export function findDshModules(options = {}) {
   const explicit = options.explicit
@@ -29,6 +31,11 @@ export function findDshModules(options = {}) {
   }
 
   const candidates = []
+
+  // このパッケージを入れたディレクトリ (CI は npm install --no-save でここに入れる)
+  const here = dirname(fileURLToPath(import.meta.url))
+  candidates.push({ path: join(here, '..', 'node_modules', '@deepseek-ai'), kind: 'project' })
+
   try {
     const globalRoot = execFileSync('npm', ['root', '-g'], { encoding: 'utf8' }).trim()
     if (globalRoot !== '') {
