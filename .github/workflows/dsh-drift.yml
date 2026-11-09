@@ -33,6 +33,9 @@ jobs:
       - name: Show the installed version
         run: node -p "require('./node_modules/@deepseek-ai/dsh/package.json').version"
 
+      - name: Save the committed dictionary as the comparison base
+        run: cp data/en-dictionaries.json /tmp/base-dictionaries.json
+
       - name: Re-extract the English dictionaries
         id: extract
         continue-on-error: true
@@ -42,14 +45,20 @@ jobs:
         id: drift
         if: steps.extract.outcome == 'success'
         continue-on-error: true
-        run: node tools/drift-report.mjs --markdown --fail-on-change > /tmp/drift.md
+        run: |
+          set +e
+          node tools/drift-report.mjs --markdown --fail-on-change --base /tmp/base-dictionaries.json > /tmp/drift.md
+          code=$?
+          echo "$code" > /tmp/drift.code
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          cat /tmp/drift.md
 
       - name: Show the report
         if: steps.extract.outcome == 'success'
         run: cat /tmp/drift.md
 
       - name: Open an issue when the dictionaries changed
-        if: steps.drift.outcome == 'failure'
+        if: steps.drift.outcome == 'failure' && steps.drift.outputs.code == '1'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -61,26 +70,29 @@ jobs:
           fi
           gh issue create --title "$title" --body-file /tmp/drift.md
 
-      - name: Open an issue when the extraction failed
-        if: steps.extract.outcome == 'failure'
+      - name: Open an issue when the check itself failed
+        if: steps.extract.outcome == 'failure' || (steps.drift.outcome == 'failure' && steps.drift.outputs.code != '1')
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          title='DSH の抽出に失敗しました'
+          title='DSH の抽出または比較に失敗しました'
           existing=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq 'length')
           if [ "$existing" != "0" ]; then
             echo "既に同じタイトルの Issue が開いています。"
             exit 0
           fi
           {
-            echo 'DSH の辞書を再抽出できませんでした (`npm run extract` が失敗しました)。'
+            echo 'DSH の辞書の抽出、または比較に失敗しました (差分の検出ではありません)。'
             echo
-            echo 'インストール方法の変化か、DSH 側の変更で抽出ツールが動かなくなった可能性があります。'
+            echo 'インストール方法の変化か、DSH 側の変更でツールが動かなくなった可能性があります。'
             echo
             echo "実行: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
             echo
             echo '```'
-            tail -n 40 /tmp/extract.log 2>/dev/null || echo '(ログなし)'
+            tail -n 40 /tmp/extract.log 2>/dev/null || echo '(抽出ログなし)'
+            echo
+            echo '--- 比較の出力 ---'
+            tail -n 40 /tmp/drift.md 2>/dev/null || echo '(比較の出力なし)'
             echo '```'
           } > /tmp/extract-issue.md
           gh issue create --title "$title" --body-file /tmp/extract-issue.md
